@@ -141,5 +141,26 @@ onMounted(() => {
         Save file integrity checker
       </NuxtLink>
     </div>
+
+    <details class="mt-8 max-w-lg w-full text-sm text-muted">
+      <summary class="cursor-pointer hover:text-primary transition-colors flex items-center gap-2">
+        <UIcon name="i-lucide-folder-open" class="size-4 shrink-0" />
+        Where are save files stored?
+      </summary>
+      <div class="mt-3 space-y-3 pl-6">
+        <div>
+          <p class="font-medium text-foreground/80">
+            Windows
+          </p>
+          <code class="text-xs break-all">%APPDATA%\Glaiel Games\Mewgenics\&lt;SteamID&gt;\saves\</code>
+        </div>
+        <div>
+          <p class="font-medium text-foreground/80">
+            Linux / Steam Deck
+          </p>
+          <code class="text-xs break-all">~/.local/share/Steam/steamapps/compatdata/&lt;AppID&gt;/pfx/drive_c/users/steamuser/Documents/My Games/Mewgenics/</code>
+        </div>
+      </div>
+    </details>
   </div>
 </template>

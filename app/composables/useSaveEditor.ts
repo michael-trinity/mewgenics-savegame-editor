@@ -126,6 +126,11 @@ export function useSaveEditor() {
   async function downloadModifiedSave(): Promise<void> {
     const blob = await exportSave()
     downloadBlob(blob, fileName.value || 'modified.sav')
+    // Clear dirty state after successful save
+    isDirty.value = false
+    dirtyCatKeys.value.clear()
+    dirtyPropertyKeys.value.clear()
+    dirtyInventoryContainers.value.clear()
   }
 
   function downloadBackup(): void {
