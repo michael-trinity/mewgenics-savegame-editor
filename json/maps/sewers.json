@@ -1,0 +1,87 @@
+{
+  "levels": {
+    "folder": "sewer",
+    "easy": [
+      "easy",
+      "bigsharklevels"
+    ],
+    "hard": [
+      "easy",
+      "bigsharklevels"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "sewer_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "Dip"
+    ],
+    "medium": [
+      "BabyShark",
+      "GassyCat",
+      "SharkyCat",
+      "BoomerCat",
+      "WaterKitten",
+      "Pile",
+      "Floater",
+      "WaterLeech",
+      "Fetus",
+      "FetusGusher"
+    ],
+    "large": [
+      "DaddyShark"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "seweritems"
+  },
+  "minibosses": {
+    "flushmaster": "auto",
+    "ratking": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "caves.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_Caves"
+    },
+    "hard_initial": {
+      "type": "hard",
+      "locked": "true"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "boris"
+    }
+  },
+  "flags": {
+    "HardPathUnlocked": {
+      "hard_initial": {
+        "locked": "false"
+      }
+    },
+    "CavesUnlocked": {
+      "exit0": {
+        "locked": "false"
+      }
+    }
+  }
+}

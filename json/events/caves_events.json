@@ -1,0 +1,673 @@
+{
+  "DyingFetus": {
+    "intro": {
+      "title": "EVENT_DYINGFETUS_NAME",
+      "title_resolved": "Dying Fetus",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dying_fetus",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DYINGFETUS_QUES",
+      "prompt_resolved": "{catname} finds a dying fetus, quivering in fright and pain.",
+      "options": {
+        "comfort": {
+          "label": "EVENT_COMFORT_ANSW",
+          "label_resolved": "Comfort",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DYINGFETUS_REW1",
+                "prompt_resolved": "Showing pity for the small thing, {catname} comforts it.\n\nThe fetus is pleased and joins the cats!",
+                "gain_familiar": "CharmedFetus"
+              },
+              "rare": {
+                "prompt": "EVENT_DYINGFETUS_REW2",
+                "prompt_resolved": "{catname}'s affection calms the fetus and it rests peacefully. Karma up!",
+                "permanent_stats": {
+                  "lck": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DYINGFETUS_REW3",
+                "prompt_resolved": "The fetus rejects {catname}'s attempts at comforting it, getting angry instead!\n\nIt attacks!",
+                "spawn_unit_next_fight": {
+                  "object": "Fetus",
+                  "count": "1",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DYINGFETUS_REW4",
+                "prompt_resolved": "{catname} tries to comfort the fetus, but it bites {him}!\n\n{catname}'s mouth deforms into a strange shape...",
+                "mutation": {
+                  "mouth": "705"
+                },
+                "permanent_stats": {
+                  "dex": "-1"
+                }
+              }
+            }
+          }
+        },
+        "patch_up": {
+          "label": "EVENT_PATCHUP_ANSW",
+          "label_resolved": "Patch up",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DYINGFETUS_REW5",
+                "prompt_resolved": "{catname} deftly patches up the fetus, saving its life!\n\nIt is grateful and joins in for the next battle!",
+                "gain_familiar": "CharmedFetus"
+              },
+              "rare": {
+                "prompt": "EVENT_DYINGFETUS_REW6",
+                "prompt_resolved": "As {catname} patches the fetus's wounds, it looks up gratefully at {him}.\n\nThe fetus joins {catname} on the adventure!",
+                "gain_familiar": "CharmedFetus2"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_DYINGFETUS_REW7",
+                "prompt_resolved": "{catname} tries to mend the fetus's wounds, but it thinks {he} is attacking and desperately swings at {catname}!",
+                "spawn_unit_next_fight": {
+                  "object": "Fetus",
+                  "count": "1",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_DYINGFETUS_REW8",
+                "prompt_resolved": "Not used to this kind of pressure, {catname} fumbles and accidentally stabs {himself}!",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              }
+            }
+          }
+        },
+        "put_out_of_misery": {
+          "label": "EVENT_PUTOUTOFMISERY_ANSW",
+          "label_resolved": "Put it out of its misery",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DYINGFETUS_REW9",
+                "prompt_resolved": "{catname} crushes the fetus's skull. It dies."
+              },
+              "rare": {
+                "prompt": "EVENT_DYINGFETUS_REW10",
+                "prompt_resolved": "{catname} squishes the fetus and its guts spill out!",
+                "get_item_from_pool": [
+                  "GutsHeart",
+                  "GutsLiver",
+                  "GutsIntestines"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_DYINGFETUS_REW11",
+                "prompt_resolved": "{catname} crushes the small fetus, killing it instantly."
+              },
+              "rare": {
+                "set_frame": "6",
+                "prompt": "EVENT_DYINGFETUS_REW12",
+                "prompt_resolved": "{catname} hears a loud thumping and sliding sound and looks up in horror!\n\nThe fetus's mom is coming, and it looks angry!",
+                "spawn_unit_next_fight": {
+                  "object": "MegaFetus",
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "StuckCorpse": {
+    "intro": {
+      "title": "EVENT_STUCKCORPSE_NAME",
+      "title_resolved": "Stuck Corpse",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "stuck_corpse",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_STUCKCORPSE_QUES",
+      "prompt_resolved": "The legs of a deceased human are sticking out of the ground.\n\n[i]What a terrible way to go, stuck in a hole like that![/i] thinks {catname}.",
+      "options": {
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "lck",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STUCKCORPSE_REW1",
+                "prompt_resolved": "{catname} manages to pull some coins out of the corpse's pockets.",
+                "gain_coins": [
+                  "4",
+                  "8"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_STUCKCORPSE_REW2",
+                "prompt_resolved": "{catname} searches in and around the hole and finds some gear left behind by the unlucky miner.",
+                "get_item_from_pool": [
+                  "MinerHat,",
+                  "MinerMask,",
+                  "MinerArmor"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STUCKCORPSE_REW3",
+                "prompt_resolved": "Spiders from inside the hole crawl out when {catname} approaches!\n\nThey bite {him} and spew sticky webs everywhere!",
+                "damage": [
+                  "3",
+                  "6"
+                ],
+                "self_status_next_fight": {
+                  "Webbed": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STUCKCORPSE_REW4",
+                "prompt_resolved": "{catname} digs into the hole looking for treasure, and a swarm of spiders fly out!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "TinySpider"
+                  ],
+                  "count": "5",
+                  "spawn_side": "cats"
+                }
+              }
+            }
+          }
+        },
+        "remove": {
+          "label": "EVENT_REMOVE_ANSW",
+          "label_resolved": "Remove",
+          "stat": "str",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STUCKCORPSE_REW5",
+                "prompt_resolved": "{catname} pulls the corpse out, disassembling it one bone at a time.",
+                "get_item_from_pool": "bone_equipment"
+              },
+              "rare": {
+                "prompt": "EVENT_STUCKCORPSE_REW6",
+                "prompt_resolved": "As {catname} pulls the corpse out, {he} discovers that it was holding something!",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_STUCKCORPSE_REW7",
+                "prompt_resolved": "This corpse looks like Butch??\n\nA chill goes down {catname}'s spine...\n\n[i]How could this be?[/i]",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_STUCKCORPSE_REW8",
+                "prompt_resolved": "{catname} pulls the corpse out of the hole.\n\nLooking at the hole now that it is unclogged, it appears to have an odd shape...",
+                "event_now_same_cat": "CatHole"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SomethingWhisperingFromTheDarkness": {
+    "intro": {
+      "title": "EVENT_SOMETHINGWHISPERING_NAME",
+      "title_resolved": "Something whispering from the darkness",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "whispering_from_darkness",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SOMETHINGWHISPERING_QUES",
+      "prompt_resolved": "{catname} hears something whispering from the darkness...\n\nShould the party keep on going forward?",
+      "options": {
+        "keep_going": {
+          "label": "EVENT_KEEPGOING_ANSW",
+          "label_resolved": "Keep going",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW1",
+                "prompt_resolved": "The cats carry on, their ears alert to signs of danger.\n\nAfter traveling for a time, the whispering fades into the distance."
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW2",
+                "prompt_resolved": "{catname} bravely leads on despite the ominous whispering.",
+                "gain_disorder": "Brave",
+                "permanent_stats": {
+                  "int": "1"
+                },
+                "play_result_animation": "resultVeryGood"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW3",
+                "prompt_resolved": "As {catname} moves forward, the whispering turns into chanting coming from beneath {his} feet!\n\n{catname} runs for {his} life in fear!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW4",
+                "prompt_resolved": "Suddenly, large red hands burst through the earth beneath the cats feet and grab hold of them!\n\nIt's an ambush!",
+                "party_damage": "2",
+                "ambush_next_basic_fights": "1",
+                "party_status_next_fight": {
+                  "Immobile": "1"
+                }
+              }
+            }
+          }
+        },
+        "find_another_way": {
+          "label": "EVENT_FINDANOTHERWAY_ANSW",
+          "label_resolved": "Find another way",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW5",
+                "prompt_resolved": "{catname} turns away from the path and finds a new one that is less disconcerting.",
+                "event_now_same_cat": "random",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW6",
+                "prompt_resolved": "{catname} finds a better way through the caves!",
+                "event_now_same_cat": "Blessing"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW7",
+                "prompt_resolved": "The cats wander lost through endless caves that all look alike...",
+                "next_event_bonus": "-1",
+                "event_now": "random",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_SOMETHINGWHISPERING_REW8",
+                "prompt_resolved": "Worried it is a bad omen, {catname} leads the party away.\n\nAs the party wanders through the caves, {catname} can't shake the feeling that {he} made a mistake...",
+                "next_event_bonus": "-2",
+                "event_now_same_cat": "random"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "CrackInTheWall": {
+    "intro": {
+      "title": "EVENT_CRACKINTHEWALL_NAME",
+      "title_resolved": "Crack in the wall",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item_slot_equipped": "weapon",
+      "subject_frame": "crack_in_the_wall",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "counter_minimum": [
+              "WorldEventLegacyCounter_CrackInTheWall",
+              "4"
+            ]
+          },
+          "reward": {
+            "prompt": "EVENT_CRACKINTHEWALL_QUES3",
+            "prompt_resolved": "{catname} finds a break in the wall as if someone has broken into it.\n\n{He} thinks {he} sees treasure hiding inside!",
+            "set_frame": "5"
+          }
+        }
+      },
+      "options": {
+        "use_weapon": {
+          "label": "EVENT_USE_WEAPON_ANSW",
+          "label_resolved": "Use equipped weapon",
+          "requirements": {
+            "counter_maximum": [
+              "WorldEventLegacyCounter_CrackInTheWall",
+              "3"
+            ],
+            "cat_has_item_slot_equipped": "weapon"
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW1",
+                "prompt_resolved": "{catname} slams {his} weapon into the crack and manages to break it open farther!",
+                "increment_legacy_counter": "WorldEventLegacyCounter_CrackInTheWall"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW2",
+                "prompt_resolved": "{catname} uses {his} weapon to pry off part of the wall.\n\nCoins spill out from widened the crack!",
+                "increment_legacy_counter": "WorldEventLegacyCounter_CrackInTheWall",
+                "gain_coins": [
+                  "10",
+                  "15"
+                ]
+              }
+            },
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_CrackInTheWall",
+                  "4"
+                ]
+              },
+              "reward": {
+                "set_frame": "5"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW3",
+                "prompt_resolved": "{catname} wedges {his} weapon into the gap in the wall and pulls.\n\n{His} weapon snaps and breaks!",
+                "decrement_legacy_counter": "WorldEventLegacyCounter_CrackInTheWall",
+                "lose_item": "weapon"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW4",
+                "prompt_resolved": "{catname} strikes the wall with {his} weapon...\n\nRocks from the ceiling collapse down atop {him} and the party! Debris wedges its way into the crack, sealing it up.",
+                "decrement_legacy_counter": "WorldEventLegacyCounter_CrackInTheWall",
+                "party_damage": [
+                  "5",
+                  "10"
+                ],
+                "party_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "RocksFallEvent"
+                }
+              }
+            },
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_CrackInTheWall",
+                  "4"
+                ]
+              },
+              "reward": {
+                "set_frame": "5"
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "requirements": {
+            "counter_maximum": [
+              "WorldEventLegacyCounter_CrackInTheWall",
+              "3"
+            ]
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW5",
+                "prompt_resolved": "{catname} swings at the crack in the wall but nothing happens so {he} walks off instead.",
+                "play_animation": "resultLeave"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW6",
+                "prompt_resolved": "{catname} strikes at the crack, breaking off pieces of the wall.\n\nSome coins tumble out of the widened gap!",
+                "increment_legacy_counter": "WorldEventLegacyCounter_CrackInTheWall",
+                "gain_coins": [
+                  "10",
+                  "15"
+                ]
+              }
+            },
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_CrackInTheWall",
+                  "4"
+                ]
+              },
+              "reward": {
+                "set_frame": "5"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW7",
+                "prompt_resolved": "{catname} punches the wall...\n\nIt hurts!",
+                "damage": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW8",
+                "prompt_resolved": "{catname} winds up and swings at the crack with all {his} strength...\n\n{He} howls in pain from the impact!",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "lck",
+          "animation": "choice_dex_alt",
+          "requirements": {
+            "counter_minimum": [
+              "WorldEventLegacyCounter_CrackInTheWall",
+              "4"
+            ]
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW9",
+                "prompt_resolved": "{catname} reaches through the crack in the wall and pulls out some loot!",
+                "gain_coins": [
+                  "5",
+                  "15"
+                ],
+                "get_item_from_pool": "chapter_common"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW10",
+                "prompt_resolved": "Jackpot! {catname} fishes out a bag of treasure that was stashed in the wall.",
+                "gain_coins": [
+                  "10",
+                  "30"
+                ],
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW11",
+                "prompt_resolved": "{catname} reaches through the crack looking for treasure, but all that is left is some old food.",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEWALL_REW12",
+                "prompt_resolved": "{catname} pokes his head through the wall looking for treasure...\n\nSomething large grabs onto {him} and pulls {catname} through the wall!",
+                "battle": "events/crackinthewall.lvl"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "LeakingMeat": {
+    "intro": {
+      "title": "EVENT_LEAKINGMEAT_NAME",
+      "title_resolved": "Hanging Meat",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "meat_leaking",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_LEAKINGMEAT_QUES",
+      "prompt_resolved": "{catname} finds a strange lump of pulsating meat hanging down from the ceiling.\n\nMaybe it leaked through from another floor?",
+      "options": {
+        "eat_meat": {
+          "label": "EVENT_LEAKINGMEAT_EAT_ANSW",
+          "label_resolved": "Eat the meat",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LEAKINGMEAT_REW1",
+                "prompt_resolved": "{catname} takes a large bite out of the hanging meat. It tastes strange, but good.\n\n{catname}'s body mutates!",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_LEAKINGMEAT_REW2",
+                "prompt_resolved": "Juices run down {catname}'s chin as {he} devours the meat. It tastes delicious!",
+                "random_mutation": "1",
+                "permanent_stats": {
+                  "con": "2"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LEAKINGMEAT_REW3",
+                "prompt_resolved": "{catname}'s body begins to shake and mutate after {he} bites into the strange meat...",
+                "random_mutation": "1",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_LEAKINGMEAT_REW4",
+                "prompt_resolved": "It tastes gross! {catname} spits out the rotting meat, but it is too late...",
+                "gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        },
+        "kiss_meat": {
+          "label": "EVENT_LEAKINGMEAT_KISS_ANSW",
+          "label_resolved": "Kiss the meat",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LEAKINGMEAT_REW5",
+                "prompt_resolved": "{catname} licks the meat, swallowing the moist juices on the outside of the flesh. {his} body mutates!",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_LEAKINGMEAT_REW6",
+                "prompt_resolved": "{catname} kisses the strange flesh. It begins to move!\n\nA large mouth opens up and greets {him}. It is friendly and wants to tag along!",
+                "random_mutation": "1",
+                "gain_familiar": "CharmedHeadTumor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LEAKINGMEAT_REW7",
+                "prompt_resolved": "As {catname}'s tongue meets the flesh, it awakens and latches onto {him}!",
+                "random_mutation": "1",
+                "get_parasite_from_pool": [
+                  "CrimsonMask_Cursed",
+                  "RedCap_Cursed",
+                  "PoundOfFlesh_Cursed"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_LEAKINGMEAT_REW8",
+                "prompt_resolved": "{catname} approaches the strange meat and brings {his} lips to touch it...\n\nTerror and confusion grips {catname}'s face as {his} mouth mutates into a horrifying shape!",
+                "random_mutation_from_set": {
+                  "mouth": "-1"
+                },
+                "self_status_next_fight": {
+                  "Fights": "99",
+                  "PermanentConfusion": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

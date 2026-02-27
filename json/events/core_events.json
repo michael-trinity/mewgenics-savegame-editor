@@ -1,0 +1,423 @@
+{
+  "DemonicIdol": {
+    "intro": {
+      "title": "EVENT_DEMONICIDOL_NAME",
+      "title_resolved": "Demonic Idol",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "demonic_idol",
+      "choose_cat_with_min_health": "75%",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DEMONICIDOL_QUES",
+      "prompt_resolved": "A large demonic statue sits before {catname}.\n\nIt clutches a large bowl in its hands and asks for a sacrifice!",
+      "options": {
+        "damage_1": {
+          "label": "EVENT_DEMONICIDOL_1DAMAGE_ANSW",
+          "label_resolved": "Donate blood (1hp)",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW1_B",
+                "prompt_resolved": "[i]\"What an insult, you call that mere pittance a sacrifice?\"[/i]",
+                "self_damage": "1",
+                "set_frame": "2",
+                "injury": "cha",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_DEMONICIDOL_REW2_B",
+                "prompt_resolved": "[i]\"At least you were quick about it.\"[/i] The terrifying figure looks pleased.",
+                "self_damage": "1",
+                "set_frame": "3",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW1_B",
+                "prompt_resolved": "[i]\"What an insult, you call that mere pittance a sacrifice?\"[/i]",
+                "self_damage": "1",
+                "injury": "cha"
+              },
+              "rare": {
+                "prompt": "EVENT_DEMONICIDOL_REW1_B",
+                "prompt_resolved": "[i]\"What an insult, you call that mere pittance a sacrifice?\"[/i]",
+                "self_damage": "1",
+                "injury": "cursed"
+              }
+            }
+          }
+        },
+        "damage_half": {
+          "label": "EVENT_DEMONICIDOL_HALFDAMAGE_ANSW",
+          "label_resolved": "Donate blood (1/2 hp)",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW3_B",
+                "prompt_resolved": "The demonic idol looks pleased!\n[i]\"Yes... more, more!\"[/i]",
+                "self_damage": "50%",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              },
+              "rare": {
+                "self_damage": "50%",
+                "prompt": "EVENT_DEMONICIDOL_REW4",
+                "prompt_resolved": "The demonic idol looks very pleased.\n\n[i]\"See? isn't that easy? You'll have to come back with the rest later...\"[/i]",
+                "permanent_stats": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "self_damage": "50%",
+                "prompt": "EVENT_DEMONICIDOL_REW5",
+                "prompt_resolved": "{catname}'s blood flows into the bowl and {he} stumbles away, dizzy with weakness.\n\nNothing seems to happen."
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_DEMONICIDOL_REW6",
+                "prompt_resolved": "{catname}'s blood stains the ground and the bowl is full almost to the brim...\n\n[i]Is that all you have to give? Insulting! I know you have much, much, more!\"[/i]",
+                "injury": "cha",
+                "self_damage": "50%"
+              }
+            }
+          }
+        },
+        "damage_full": {
+          "label": "EVENT_DEMONICIDOL_FULLDAMAGE_ANSW",
+          "label_resolved": "Donate blood (all but 1 hp)",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW7",
+                "prompt_resolved": "{catname} nearly passes out as {he} drains {his} blood into the bowl...\n\n[i]\"Yes, give it all! Perfect!\"[/i]  The demonic idol is grinning with pleasure at the sight of the full bowl of {catname}'s blood.",
+                "set_frame": "3",
+                "self_damage": "99%",
+                "permanent_stats": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                }
+              },
+              "rare": {
+                "self_damage": "99%",
+                "prompt": "EVENT_DEMONICIDOL_REW8",
+                "prompt_resolved": "[i]\"I am pleased by your commitment! A glorious sacrifice!\"[/i]\n\nThe bowl of {catname}'s blood coagulates and shifts into a strange shape. The statue pours the bowl over {catname}'s head.",
+                "set_frame": "4",
+                "gain_disorder": "DarkOne"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "self_damage": "99%",
+                "prompt": "EVENT_DEMONICIDOL_REW9",
+                "prompt_resolved": "{catname}'s blood drains into the bowl.\n\n{He} feels only a little stronger for how much that hurt!",
+                "set_frame": "2",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              },
+              "rare": {
+                "self_damage": "99%",
+                "prompt": "EVENT_DEMONICIDOL_REW5",
+                "prompt_resolved": "{catname}'s blood flows into the bowl and {he} stumbles away, dizzy with weakness.\n\nNothing seems to happen."
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW10",
+                "prompt_resolved": "{catname} leaves the statue alone.",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEMONICIDOL_REW11",
+                "prompt_resolved": "{catname} wants to leave but feels an overwhelming urge to please the statue...\n\n{He} grits {his} teeth and shakes {his} mind free of the feeling.",
+                "set_frame": "3",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEMONICIDOL_REW10",
+                "prompt_resolved": "{catname} leaves the statue alone.",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEMONICIDOL_REW12",
+                "prompt_resolved": "{catname} turns to leave...\n\n[i]\"How dare you deny me! What an insult! You think you can walk away unscathed?\"[/i]",
+                "set_frame": "2",
+                "injury": "cursed"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "JaggedPathway": {
+    "intro": {
+      "title": "EVENT_JAGGEDPATHWAY_NAME",
+      "title_resolved": "Jagged Pathway",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "jagged_pathway",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_JAGGEDPATHWAY_QUES",
+      "prompt_resolved": "A jagged pathway leads downward ahead, riddled with bones and sharp rocks...",
+      "options": {
+        "push_through": {
+          "label": "EVENT_JAGEDPATHWAY_ANSW_PUSH",
+          "label_resolved": "Push through",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_JAGGEDPATHWAY_REW1",
+                "prompt_resolved": "The cats push through the dim and twisted rocky path, careful to stay clear of danger.\n\nIt leads to a narrow passageway to the next area, leading them into an ambush!",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_JAGGEDPATHWAY_REW2",
+                "prompt_resolved": "{catname} makes {his} way carefully through the sharp rocks and scree...\n\n{He} finds several items laying behind a large stalagmite!",
+                "get_item_from_pool": "chapter_specific_item"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_JAGGEDPATHWAY_REW3",
+                "prompt_resolved": "{catname} tries to navigate through the dangerous caves, but slips and scratches {himself} on a sharp rocky outcrop...\n\n{catname} howls as blood starts spraying from {his} wounds!",
+                "self_status_next_fight": {
+                  "Bleed": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_JAGGEDPATHWAY_REW4",
+                "prompt_resolved": "The passageway is lined with sharp rocks and bones which tear into {catname} as {he} tries to push through...",
+                "gain_disorder": "DeepCut"
+              }
+            }
+          }
+        },
+        "find_another_way": {
+          "label": "EVENT_JAGEDPATHWAY_ANSW_AROUND",
+          "label_resolved": "Find another way around",
+          "stat": "lck",
+          "animation": "choice_leave",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_JAGGEDPATHWAY_REW5",
+                "prompt_resolved": "{catname} finds a different, less ominous looking path to carry on.",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_JAGGEDPATHWAY_REW6",
+                "prompt_resolved": "Backtracking a ways, {catname} discovers a hidden passageway that the party had missed on their way by!\n\nIt branches into several caverns farther on, allowing the party to ambush the next two battles!",
+                "ally_ambush_next_fights": "2"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_JAGGEDPATHWAY_REW7",
+                "prompt_resolved": "Doubling back, {catname} tries to find a better way forward but ends up getting hopelessly lost!",
+                "event_now_same_cat": "random"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_JAGGEDPATHWAY_REW8",
+                "prompt_resolved": "{catname} tries to climb back up the way {he} came, but accidentally dislodges a giant stalactite and it plummets downward, lodging into {his} skull!",
+                "get_parasite": "SlagTight",
+                "event_now_same_cat": "JaggedPathwayStalactite"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousStranger": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSSTRANGER_NAME",
+      "title_resolved": "Mysterious Stranger",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_stranger",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSSTRANGER_QUES",
+      "prompt_resolved": "[i]Would you like to play a game? Just place your paw right here and we shall begin...[/i]\n\n{catname} peers beneath the stranger's patchwork cloak but can't see what is hiding within. Cats are pretty fast though... {He} might win!",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "HasPlayedMysteriousStranger"
+          },
+          "reward": {
+            "prompt": "EVENT_MYSTERIOUSSTRANGER_QUES2",
+            "prompt_resolved": "[i]Want to play again? You could get lucky this time, if you're fast enough![/i]"
+          }
+        }
+      },
+      "options": {
+        "play": {
+          "label": "EVENT_MYSTERIOUSSTRANGER_ANSW",
+          "label_resolved": "Play his game",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "set_adventure_token": "HasPlayedMysteriousStranger",
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW1",
+                "prompt_resolved": "{catname} barely pulls {his} paw back at the last second!\n\n[i]Impressive... Have your winnings.[/i]",
+                "gain_coins": [
+                  "5",
+                  "15"
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN",
+                "event_now_same_cat": "MysteriousStranger"
+              },
+              "rare": {
+                "set_frame": "4",
+                "set_adventure_token": "HasPlayedMysteriousStranger",
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW2",
+                "prompt_resolved": "Before the stranger could barely move the large knife, {catname} darts {his} paw away to safety!\n\n[i]Most impressive... I think you win today. I give up![/i]",
+                "gain_coins": [
+                  "20",
+                  "100"
+                ],
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "set_adventure_token": "HasPlayedMysteriousStranger",
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW3",
+                "prompt_resolved": "{catname} concentrates on the stranger's movements but {he} is caught by surprise and the knife slices down, removing {his} finger!\n\n[i]Not fast enough little feline![/i]",
+                "set_adventure_token": "MysteriousStranger_HasLostFinger",
+                "random_pool": [
+                  {
+                    "permanent_stats": {
+                      "str": "-1"
+                    }
+                  },
+                  {
+                    "permanent_stats": {
+                      "dex": "-1"
+                    }
+                  }
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN",
+                "event_now_same_cat": "MysteriousStranger"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW4",
+                "prompt_resolved": "The knife slams down, cutting off {catname}'s finger!\n\n[i]Are you even trying?!? Pay attention this time![/i]\n\nThe stranger reaches out and grabs {catname}'s paw, forcing {him} to play again!",
+                "set_adventure_token": "MysteriousStranger_HasLostFinger",
+                "random_pool": [
+                  {
+                    "permanent_stats": {
+                      "str": "-1"
+                    }
+                  },
+                  {
+                    "permanent_stats": {
+                      "dex": "-1"
+                    }
+                  }
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN2",
+                "event_now_same_cat": "MysteriousStrangerForced"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "HasPlayedMysteriousStranger"
+              },
+              "reward": {
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW6",
+                "prompt_resolved": "{catname} clutches {his} paw in shame and runs away!"
+              }
+            },
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

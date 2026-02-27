@@ -1,0 +1,662 @@
+{
+  "Backstabber": {
+    "name": "PASSIVE_BACKSTABBER_NAME",
+    "name_resolved": "Backstabber",
+    "desc": "PASSIVE_BACKSTABBER_DESC",
+    "desc_resolved": "Your backstabs are always critical.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "BackstabCritChance": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BACKSTABBER2_DESC",
+      "desc_resolved": "Your backstabs are always critical.\nWhen you land a critical hit, gain a random stat up.",
+      "passives": {
+        "BackstabCritChance": "1",
+        "StatusOnCrit": {
+          "RandomStatUp": "1"
+        }
+      }
+    }
+  },
+  "GoldenClaws": {
+    "name": "PASSIVE_GOLDENCLAWS_NAME",
+    "name_resolved": "Golden Claws",
+    "desc": "PASSIVE_GOLDENCLAWS_DESC",
+    "desc_resolved": "Gain +1 Damage for each coin you collect.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "CoinsAddDamage": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GOLDENCLAWS2_DESC",
+      "desc_resolved": "Gain +2 Damage for each coin you collect.",
+      "passives": {
+        "CoinsAddDamage": "2"
+      }
+    }
+  },
+  "Shadow": {
+    "name": "PASSIVE_STEALTHED_NAME",
+    "name_resolved": "Stealthed",
+    "desc": "PASSIVE_STEALTHED_DESC",
+    "desc_resolved": "Start each battle with Stealth.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "Stealth": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_STEALTHED2_DESC",
+      "desc_resolved": "Start each battle with Stealth. Gain Stealth when you get a kill.",
+      "passives": {
+        "Stealth": "1",
+        "StatusOnKill": {
+          "Stealth": "1"
+        }
+      }
+    }
+  },
+  "PoisonTips": {
+    "name": "PASSIVE_POISONTIPS_NAME",
+    "name_resolved": "Poison Tips",
+    "desc": "PASSIVE_POISONTIPS_DESC",
+    "desc_resolved": "Your basic attack inflicts Poison 1.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_POISONTIPS2_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison 1.\nPoison you inflict is doubled.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        },
+        "PoisonMultiplier": "2"
+      }
+    }
+  },
+  "Burgle": {
+    "name": "PASSIVE_BURGLE_NAME",
+    "name_resolved": "Burgle",
+    "desc": "PASSIVE_BURGLE_DESC",
+    "desc_resolved": "Your basic attack gains you 1 coin when it deals damage.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "BurgleCoin": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BURGLE2_DESC",
+      "desc_resolved": "Your basic attack gains you 1 coin and spawns a coin pickup when it deals damage.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "BurgleCoin": "1",
+          "KnockOutCoin": [
+            "1",
+            ".5"
+          ]
+        }
+      }
+    }
+  },
+  "SwiftKiller": {
+    "name": "PASSIVE_SWIFTKILLER_NAME",
+    "name_resolved": "More!",
+    "desc": "PASSIVE_SWIFTKILLER_DESC",
+    "desc_resolved": "When you kill a unit, refresh your movement action.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "StatusOnKill": {
+          "RefreshMovePoints": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SWIFTKILLER2_DESC",
+      "desc_resolved": "When you kill a unit, refresh your movement and basic attack.",
+      "passives": {
+        "StatusOnKill": {
+          "RefreshMovePoints": "1",
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "LongStrider": {
+    "name": "PASSIVE_LONGSTRIDER_NAME",
+    "name_resolved": "Long Stride",
+    "desc": "PASSIVE_LONGSTRIDER_DESC",
+    "desc_resolved": "+1 movement range.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddMovement": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LONGSTRIDER2_DESC",
+      "desc_resolved": "+2 movement range.\n+10% dodge chance.",
+      "passives": {
+        "AddMovement": "2",
+        "ArmorDodgeChance": "10%"
+      }
+    }
+  },
+  "DoubleThrow": {
+    "name": "PASSIVE_DOUBLETHROW_NAME",
+    "name_resolved": "Double Throw",
+    "desc": "PASSIVE_DOUBLETHROW_DESC",
+    "desc_resolved": "Your basic attack hits twice for half damage.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddTemporaryEffectsToBasicAttack": {
+          "CastAgain": "1"
+        },
+        "BasicAttackDamageMultiplier": "50%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DOUBLETHROW2_DESC",
+      "desc_resolved": "Your basic attack hits thrice for 1/3rd damage.",
+      "passives": {
+        "AddTemporaryEffectsToBasicAttack": {
+          "CastAgain": "2"
+        },
+        "BasicAttackDamageMultiplier": "33.333334%"
+      }
+    }
+  },
+  "BountyHunter": {
+    "name": "PASSIVE_BOUNTYHUNTER_NAME",
+    "name_resolved": "Bounty Hunter",
+    "desc": "PASSIVE_BOUNTYHUNTER_DESC",
+    "desc_resolved": "During your turn, one random enemy has a Bounty.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "ApplyStatusesToRandomEnemiesEachTurn": {
+          "Bounty": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BOUNTYHUNTER2_DESC",
+      "desc_resolved": "During your turn, 2 random enemies have a large Bounty.",
+      "passives": {
+        "ApplyStatusesToRandomEnemiesEachTurn": {
+          "count": "2",
+          "Bounty": "3"
+        }
+      }
+    }
+  },
+  "RazorClaws": {
+    "name": "PASSIVE_RAZORCLAWS_NAME",
+    "name_resolved": "Razor Claws",
+    "desc": "PASSIVE_RAZORCLAWS_DESC",
+    "desc_resolved": "Your basic attack inflicts Bleed 1.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RAZORCLAWS2_DESC",
+      "desc_resolved": "All of your damaging abilities inflict Bleed 1.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bleed": "1"
+        },
+        "AddStatusToAllDamageAbilities": {
+          "Bleed": "1"
+        }
+      }
+    }
+  },
+  "Looter": {
+    "name": "PASSIVE_SWIFTLOOTER_NAME",
+    "name_resolved": "Swift Looter",
+    "desc": "PASSIVE_SWIFTLOOTER_DESC",
+    "desc_resolved": "When you collect a coin pickup, refresh your movement action.\n1-2 extra coins spawn in each battle.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "StatusOnPickupCoins": {
+          "RefreshMovePoints": "1"
+        },
+        "SpawnOnBattleStartRandomEmptyTile": {
+          "object": "Coin",
+          "number": [
+            "1",
+            "2"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SWIFTLOOTER2_DESC",
+      "desc_resolved": "When you collect a coin pickup, refresh your movement action and gain +1 [img:dex] and +1 [img:spd].\n2-3 extra coins spawn in each battle.",
+      "passives": {
+        "StatusOnPickupCoins": {
+          "RefreshMovePoints": "1",
+          "DexterityUp": "1",
+          "SpeedUp": "1"
+        },
+        "SpawnOnBattleStartRandomEmptyTile": {
+          "object": "Coin",
+          "number": [
+            "2",
+            "3"
+          ]
+        }
+      }
+    }
+  },
+  "AlphaStrike": {
+    "name": "PASSIVE_ALPHASTRIKE_NAME",
+    "name_resolved": "First Strike",
+    "desc": "PASSIVE_ALPHASTRIKE_DESC",
+    "desc_resolved": "Gain an extra turn at the start of the battle.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AlphaTurns": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ALPHASTRIKE2_DESC",
+      "desc_resolved": "Gain an extra turn at the start of the battle. Damage you deal on this turn is always critical.",
+      "passives": {
+        "AlphaTurns": "1",
+        "AllDamageCrits": "1"
+      }
+    }
+  },
+  "Zip": {
+    "name": "PASSIVE_ZIP_NAME",
+    "name_resolved": "ZIP!",
+    "desc": "PASSIVE_ZIP_DESC",
+    "desc_resolved": "Your movement action is Shadowstep.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "ReplaceBasicMove": "Shadowstep"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ZIP2_DESC",
+      "desc_resolved": "Your movement action is Shadowstep.\nYou can use your movement action an extra time each turn.",
+      "passives": {
+        "ReplaceBasicMove": "Shadowstep",
+        "ExtraMovePoints": "1"
+      }
+    }
+  },
+  "WeakSpot": {
+    "name": "PASSIVE_WEAKSPOT_NAME",
+    "name_resolved": "Weak Spot",
+    "desc": "PASSIVE_WEAKSPOT_DESC",
+    "desc_resolved": "Your basic attack ignores shield and inflicts Weakness 1.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Weakness": "1",
+          "Piercing": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WEAKSPOT2_DESC",
+      "desc_resolved": "All of your damaging abilities ignore shield and inflict Weakness 2. +25% crit chance.",
+      "passives": {
+        "CritChanceUp": "25",
+        "AddStatusToAllDamageAbilities": {
+          "Weakness": "2",
+          "Piercing": "1"
+        }
+      }
+    }
+  },
+  "Penetrate": {
+    "name": "PASSIVE_PENETRATE_NAME",
+    "name_resolved": "Penetrate",
+    "desc": "PASSIVE_PENETRATE_DESC",
+    "desc_resolved": "Your basic attack passes through units and ignores shield. +1 Range.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddBonusRange": "1",
+        "AddBonusMeleeRange": "1",
+        "MakeBasicAttackPassThroughThings": "1",
+        "AddStatusToBasicAttack": {
+          "Piercing": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PENETRATE2_DESC",
+      "desc_resolved": "Your basic attack passes through units and ignores shield. +10 Range.",
+      "passives": {
+        "AddBonusRange": "10",
+        "AddBonusMeleeRange": "10",
+        "MakeBasicAttackPassThroughThings": "1",
+        "AddStatusToBasicAttack": {
+          "Piercing": "1"
+        }
+      }
+    }
+  },
+  "AfterImage": {
+    "name": "PASSIVE_AFTERIMAGE_NAME",
+    "name_resolved": "After Image",
+    "desc": "PASSIVE_AFTERIMAGE_DESC",
+    "desc_resolved": "When you move, spawn a shadow where you moved from. The shadow mimics your basic action but fades away at the end of your turn.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AfterImage": "PlayerCat_ThiefShade"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_AFTERIMAGE2_DESC",
+      "desc_resolved": "When you move, spawn a shadow where you moved from. The shadow mimics your basic action.",
+      "passives": {
+        "AfterImage": "PlayerCat_ThiefShade2",
+        "ReplaceSpawnedObjects": [
+          "PlayerCat_ThiefShade",
+          "PlayerCat_ThiefShade2"
+        ]
+      }
+    }
+  },
+  "Shiv": {
+    "name": "PASSIVE_SHIV_NAME",
+    "name_resolved": "Shiv",
+    "desc": "PASSIVE_SHIV_DESC",
+    "desc_resolved": "Your basic attack has +2 damage, +25% critical chance, and inflicts Bleed 1 when attacking a unit in melee range.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Adjacent": {
+            "BonusDamage": "2",
+            "Bleed": "1",
+            "BonusCritChance": "25"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHIV2_DESC",
+      "desc_resolved": "Your basic attack has +2 damage, +50% critical chance, and inflicts Bleed 2 when attacking a unit in melee range.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Adjacent": {
+            "BonusDamage": "3",
+            "Bleed": "2",
+            "BonusCritChance": "50"
+          }
+        }
+      }
+    }
+  },
+  "Critical": {
+    "name": "PASSIVE_CRITICAL_NAME",
+    "name_resolved": "Critical",
+    "desc": "PASSIVE_CRITICAL_DESC",
+    "desc_resolved": "Your critical hits deal +100% more damage. Gain +1 [img:lck] whenever you make a critical hit.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddCritMultiplier": "100%",
+        "StatusOnCrit": {
+          "LuckUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CRITICAL2_DESC",
+      "desc_resolved": "Your critical hits deal +100% more damage and inflict Bleed and Weakness 1.  Gain +1 [img:lck] whenever you make a critical hit.",
+      "passives": {
+        "AddCritMultiplier": "100%",
+        "StatusOnCrit": {
+          "LuckUp": "1"
+        },
+        "CritsApplyStatus": {
+          "Bleed": "1",
+          "Weakness": "1"
+        }
+      }
+    }
+  },
+  "LootHoarder": {
+    "name": "PASSIVE_LOOTHOARDER_NAME",
+    "name_resolved": "Loot Hoarder",
+    "desc": "PASSIVE_LOOTHOARDER_DESC",
+    "desc_resolved": "Automatically collect all pickups at the end of the battle if you're not downed.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "CollectPickupsOnBattleEnd": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LOOTHOARDER2_DESC",
+      "desc_resolved": "Automatically destroy all enemy bodies and collect all pickups at the end of the battle if you're not downed.",
+      "passives": {
+        "CollectPickupsOnBattleEnd": {
+          "pop_corpses": "true"
+        }
+      }
+    }
+  },
+  "Cripple": {
+    "name": "PASSIVE_CRIPPLE_NAME",
+    "name_resolved": "Cripple",
+    "desc": "PASSIVE_CRIPPLE_DESC",
+    "desc_resolved": "Your critical hits inflict Immobilize and Weakness 2.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "CritsApplyStatus": {
+          "Immobile": "1",
+          "Weakness": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CRIPPLE2_DESC",
+      "desc_resolved": "Your critical hits inflict Stun and Weakness 2.",
+      "passives": {
+        "CritsApplyStatus": {
+          "Stun": "1",
+          "Weakness": "2"
+        }
+      }
+    }
+  },
+  "Agile": {
+    "name": "PASSIVE_AGILE_NAME",
+    "name_resolved": "Agile",
+    "desc": "PASSIVE_AGILE_DESC",
+    "desc_resolved": "+2 Movement Range. If you move fewer tiles than your full movement range, you can move a 2nd time for the rest of your movement range.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "SplittableMove": "1",
+        "AddMovement": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_AGILE2_DESC",
+      "desc_resolved": "+4 Movement Range. If you move fewer tiles than your full movement range, you can move a 2nd, 3rd and 4th time for the rest of your movement range.",
+      "passives": {
+        "SplittableMove": "3",
+        "AddMovement": "4"
+      }
+    }
+  },
+  "Shank": {
+    "name": "PASSIVE_SHANK_NAME",
+    "name_resolved": "Shank",
+    "desc": "PASSIVE_SHANK_DESC",
+    "desc_resolved": "When behind and adjacent to an enemy, your basic attack is a melee attack that hits twice.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "ReplaceBasicAttackWhenCastable": "Shank"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHANK2_DESC",
+      "desc_resolved": "When behind and adjacent to an enemy, your basic attack is a melee attack that hits thrice!",
+      "passives": {
+        "ReplaceBasicAttackWhenCastable": "Shank2"
+      }
+    }
+  },
+  "FlipACoin": {
+    "name": "PASSIVE_FLIPACOIN_NAME",
+    "name_resolved": "Flip a Coin",
+    "desc": "PASSIVE_FLIPACOIN_DESC",
+    "desc_resolved": "When you gain a coin, you have a 50% chance to spawn a coin on a random tile and a 50% chance to gain +2 [img:spd] and +2 [img:lck].",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "StatusOnGainCoins": {
+          "RandomStatusFromPool": {
+            "SpawnCoinAnywhere": "1",
+            "StatusGroup": {
+              "SpeedUp": "2",
+              "LuckUp": "2"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLIPACOIN2_DESC",
+      "desc_resolved": "When you gain a coin, you have a 50% chance to spawn 2 coins on random tiles and a 50% chance to gain +2 [img:spd], +2 [img:lck] and +2 [img:dex].",
+      "passives": {
+        "StatusOnGainCoins": {
+          "RandomStatusFromPool": {
+            "StatusGroup": {
+              "SpeedUp": "2",
+              "LuckUp": "2",
+              "DexterityUp": "2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ShakeDown": {
+    "name": "PASSIVE_SHAKEDOWN_NAME",
+    "name_resolved": "Shake Down",
+    "desc": "PASSIVE_SHAKEDOWN_DESC",
+    "desc_resolved": "Your critical hits spawn a coin and a random pickup.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "CritsApplyStatus": {
+          "ObjectOnHitCharacter": "RandomPickup"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHAKEDOWN2_DESC",
+      "desc_resolved": "+25% critical hit chance. Your critical hits spawn a coin and two random pickups.",
+      "passives": {
+        "CritChanceUp": "25",
+        "CritsApplyStatus": {
+          "ObjectOnHitCharacter": "RandomPickup"
+        }
+      }
+    }
+  },
+  "SweetSpot": {
+    "name": "PASSIVE_SWEETSPOT_NAME",
+    "name_resolved": "Sweetspot",
+    "desc": "PASSIVE_SWEETSPOT_DESC",
+    "desc_resolved": "+1 Range. Your basic attack deals more damage the farther away you are from the target.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "AddBonusRange": "1",
+        "AddStatusToBasicAttack": {
+          "DistanceBonusDamage": {
+            "stacks": "1",
+            "min_range": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SWEETSPOT2_DESC",
+      "desc_resolved": "+6 Range. Your basic attack deals more damage the farther away you are from the target.",
+      "passives": {
+        "AddBonusRange": "6",
+        "AddStatusToBasicAttack": {
+          "DistanceBonusDamage": {
+            "stacks": "1",
+            "min_range": "1"
+          }
+        }
+      }
+    }
+  },
+  "Pinpoint": {
+    "name": "PASSIVE_PINPOINT_NAME",
+    "name_resolved": "Pinpoint",
+    "desc": "PASSIVE_PINPOINT_DESC",
+    "desc_resolved": "Your critical hits inflict Marked.",
+    "class": "Thief",
+    "1": {
+      "passives": {
+        "CritsApplyStatus": {
+          "Conditional_HasStatus": {
+            "status": "Marked"
+          },
+          "Else": {
+            "Marked": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PINPOINT2_DESC",
+      "desc_resolved": "Your critical hits inflict Marked.\nYour critical hits deal 100% more damage.",
+      "passives": {
+        "CritsApplyStatus": {
+          "Conditional_HasStatus": {
+            "status": "Marked"
+          },
+          "Else": {
+            "Marked": "1"
+          }
+        },
+        "AddCritMultiplier": "100%"
+      }
+    }
+  }
+}

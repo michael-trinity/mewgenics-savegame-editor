@@ -1,0 +1,739 @@
+{
+  "SuperCrow": {
+    "name": "PASSIVE_SUPERCROW_NAME",
+    "name_resolved": "Super Crow!",
+    "desc": "PASSIVE_SUPERCROW_DESC",
+    "desc_resolved": "Your crow has its abilities upgraded.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "ReplaceSpawnedObjects": [
+          "Crow",
+          "Crow2"
+        ]
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SUPERCROW2_DESC",
+      "desc_resolved": "Your crow has its abilities upgraded… Twice!",
+      "passives": {
+        "ReplaceSpawnedObjects": [
+          "Crow",
+          "Crow3"
+        ]
+      }
+    }
+  },
+  "NaturesGuidance": {
+    "name": "PASSIVE_NATUREGUIDANCE_NAME",
+    "name_resolved": "Nature's Guidance",
+    "desc": "PASSIVE_NATUREGUIDANCE_DESC",
+    "desc_resolved": "Allied familiars are immune to damage from tiles, knockback, thorns, and trample.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "FamiliarSecondaryDamageImmunity": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NATUREGUIDANCE2_DESC",
+      "desc_resolved": "Allied familiars are immune to damage from tiles, knockback, thorns, and trample.\nFamiliars you spawn gain +1 Holy Shield.",
+      "passives": {
+        "FamiliarSecondaryDamageImmunity": "1",
+        "AddPassivesToMinions": {
+          "DivineShield": "1"
+        }
+      }
+    }
+  },
+  "PoisonIvy": {
+    "name": "PASSIVE_POISONIVY_NAME",
+    "name_resolved": "Poison Ivy",
+    "desc": "PASSIVE_POISONIVY_DESC",
+    "desc_resolved": "You and familiar you spawn are Poisonous.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "PoisonThorns": "1",
+        "AddPassivesToMinions": {
+          "PoisonThorns": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_POISONIVY2_DESC",
+      "desc_resolved": "You and familiar you spawn have Poisonous 2.",
+      "passives": {
+        "PoisonThorns": "2",
+        "AddPassivesToMinions": {
+          "PoisonThorns": "2"
+        }
+      },
+      "stats": {
+        "con": "2"
+      }
+    }
+  },
+  "Pathfinder": {
+    "name": "PASSIVE_PATHFINDER_NAME",
+    "name_resolved": "Pathfinder",
+    "desc": "PASSIVE_PATHFINDER_DESC",
+    "desc_resolved": "Grass tiles are free to move through for you and familiars you spawn. Plant grass as you walk.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "FreePathfindElement": "Grass",
+        "TileTrail": "GrassTile",
+        "AddPassivesToMinions": {
+          "FreePathfindElement": "Grass"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PATHFINDER2_DESC",
+      "desc_resolved": "Grass tiles are free to move through for you and familiars you spawn. Gain +1 HP when moving through grass tiles. Plant grass as you walk.",
+      "passives": {
+        "FreePathfindElement": "Grass",
+        "GrassTileHealing": "1",
+        "TileTrail": "GrassTile",
+        "AddPassivesToMinions": {
+          "FreePathfindElement": "Grass",
+          "GrassTileHealing": "1"
+        }
+      }
+    }
+  },
+  "EmptyVessels": {
+    "name": "PASSIVE_EMPTYVESSEL_NAME",
+    "name_resolved": "Empty Vessels",
+    "desc": "PASSIVE_EMPTYVESSEL_DESC",
+    "desc_resolved": "Familiars you spawn have +3 Health Regeneration and +10 max health.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "HealthRegenUp": "3",
+          "AddMaxHealth": "10"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_EMPTYVESSEL2_DESC",
+      "desc_resolved": "Familiars you spawn have +3 Health Regeneration and uncapped HP.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "HealthRegenUp": "3",
+          "UncappedHP": "1"
+        }
+      }
+    }
+  },
+  "WildAnimals": {
+    "name": "PASSIVE_WILDANIMALS_NAME",
+    "name_resolved": "Wild Animals",
+    "desc": "PASSIVE_WILDANIMALS_DESC",
+    "desc_resolved": "Familiars you spawn attack a random enemy within their range when they are spawned.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "ForceAttack": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WILDANIMALS2_DESC",
+      "desc_resolved": "Familiars you spawn attack a random enemy within their range when they're spawned, then they take an extra turn.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "ForceAttack": "1",
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "BarkSkin": {
+    "name": "PASSIVE_BARKSKIN_NAME",
+    "name_resolved": "Bark Skin",
+    "desc": "PASSIVE_BARKSKIN_DESC",
+    "desc_resolved": "+1 Brace.\nWhen you take damage, you get +1 temporary Brace until the start of your next turn.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "Brace": "1",
+        "StatusOnTookDamage": {
+          "Temporary": {
+            "status": "Brace",
+            "stacks": "1",
+            "expires_on_begin_turn": "true"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BARKSKIN2_DESC",
+      "desc_resolved": "+1 Brace.\nWhen you take damage, gain +2 temporary Brace and +2 temporary Thorns until the start of your next turn.",
+      "passives": {
+        "Brace": "1",
+        "StatusOnTookDamage": {
+          "Temporary": {
+            "status": "Thorns",
+            "stacks": "2",
+            "expires_on_begin_turn": "true"
+          }
+        }
+      }
+    }
+  },
+  "SoothingSong": {
+    "name": "PASSIVE_LOVESONG_NAME",
+    "name_resolved": "Love Song",
+    "desc": "PASSIVE_LOVESONG_DESC",
+    "desc_resolved": "Your basic action has +2 area, and heals 1 additional HP.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "BasicAttackAOEBonus": "2",
+        "AddDamageToBasicAttack": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LOVESONG2_DESC",
+      "desc_resolved": "Your basic action has +2 area, and heals 2 additional HP. The Damage your basic action grants lasts until the end of the battle.",
+      "passives": {
+        "BasicAttackAOEBonus": "2",
+        "AddDamageToBasicAttack": "2",
+        "BasicAttackStatusSwap": [
+          "TempDamageUp",
+          "DamageUp"
+        ]
+      }
+    }
+  },
+  "Teamwork": {
+    "name": "PASSIVE_TEAMWORK_NAME",
+    "name_resolved": "Teamwork",
+    "desc": "PASSIVE_TEAMWORK_DESC",
+    "desc_resolved": "When one of your familiars kills something, all allies get +1 Damage.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "StatusAlliesOnKill": {
+            "DamageUp": "1"
+          },
+          "StatusOnKill": {
+            "DamageUp": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TEAMWORK2_DESC",
+      "desc_resolved": "When one of your familiars kills something, all allies get +1 Damage and heal 5 health.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "StatusAlliesOnKill": {
+            "DamageUp": "1",
+            "HealthGain": "5"
+          },
+          "StatusOnKill": {
+            "DamageUp": "1",
+            "HealthGain": "5"
+          }
+        }
+      }
+    }
+  },
+  "Bouquet": {
+    "name": "PASSIVE_BOUQUET_NAME",
+    "name_resolved": "Bouquet",
+    "desc": "PASSIVE_BOUQUET_DESC",
+    "desc_resolved": "Spawn a tall flower tile under you at the end of your turn.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "FlowersOnEndTurn": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BOUQUET2_DESC",
+      "desc_resolved": "Spawn tall flower tiles under and around you at the end of your turn.",
+      "passives": {
+        "FlowersOnEndTurn": "4"
+      }
+    }
+  },
+  "GoodVibrations": {
+    "name": "PASSIVE_GOODVIBRATIONS_NAME",
+    "name_resolved": "Good Vibrations",
+    "desc": "PASSIVE_GOODVIBRATIONS_DESC",
+    "desc_resolved": "Allies have +1 Health Regeneration and +1 Mana Regeneration.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AllyHealthRegenAura": {
+          "stacks": "1",
+          "range": "global"
+        },
+        "AllyManaRegenAura": {
+          "stacks": "1",
+          "range": "global"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GOODVIBRATIONS2_DESC",
+      "desc_resolved": "Allies have +2 Health Regeneration and +2 Mana Regeneration.",
+      "passives": {
+        "AllyHealthRegenAura": {
+          "stacks": "2",
+          "range": "global"
+        },
+        "AllyManaRegenAura": {
+          "stacks": "2",
+          "range": "global"
+        }
+      }
+    }
+  },
+  "VersatileVocalist": {
+    "name": "PASSIVE_VERSATILEVOLCALIST_NAME",
+    "name_resolved": "Versatile Vocalist",
+    "desc": "PASSIVE_VERSATILEVOLCALIST_DESC",
+    "desc_resolved": "Your basic action deals 1 damage to enemies, and inflicts temporary -1 Damage. Your basic attack wont apply debuffs to allies or buffs to enemies.",
+    "class": "Druid",
+    "1": {
+      "override_basic_attack": "BasicDruidAbilityVersatile",
+      "passives": {
+        "BasicAttackStatusCarefulness": "1",
+        "ReplaceBasicAttack": "BasicDruidAbilityVersatile"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VERSATILEVOLCALIST2_DESC",
+      "desc_resolved": "Your basic action has +1 area, deals 1 damage to enemies, and inflicts temporary -1 Damage. Your basic attack wont apply debuffs to allies or buffs to enemies.",
+      "override_basic_attack": "BasicDruidAbilityVersatile",
+      "passives": {
+        "BasicAttackAOEBonus": "1",
+        "BasicAttackStatusCarefulness": "1",
+        "ReplaceBasicAttack": "BasicDruidAbilityVersatile"
+      }
+    }
+  },
+  "LikeAFish": {
+    "name": "PASSIVE_LIKEAFISH_NAME",
+    "name_resolved": "Like a Fish",
+    "desc": "PASSIVE_LIKEAFISH_DESC",
+    "desc_resolved": "Water tiles don't slow you down.\nGain +1 Holy Shield at the end of the turn if you're wet and have no Holy Shield.\nFamiliars you spawn also have this passive.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "WaterWalk": "1",
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "StatusEachTurnEnd": {
+              "NonStackingDivineShield": "1"
+            }
+          }
+        },
+        "AddPassivesToMinions": {
+          "WaterWalk": "1",
+          "PassiveWhenAffectedByElement": {
+            "element": "water",
+            "passives": {
+              "StatusEachTurnEnd": {
+                "NonStackingDivineShield": "1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIKEAFISH2_DESC",
+      "desc_resolved": "Water tiles don't slow you down.\nGain +1 Holy Shield at the end of the turn if you're wet and have no Holy Shield.  Gain +1 Health Regeneration.\nFamiliars you spawn also have this passive.",
+      "passives": {
+        "WaterWalk": "1",
+        "FreePathfindElement": "Water",
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "StatusEachTurnEnd": {
+              "NonStackingDivineShield": "1"
+            },
+            "HealthRegenUp": "1",
+            "AddManaRegen": "1"
+          }
+        },
+        "AddPassivesToMinions": {
+          "WaterWalk": "1",
+          "FreePathfindElement": "Water",
+          "PassiveWhenAffectedByElement": {
+            "element": "water",
+            "passives": {
+              "StatusEachTurnEnd": {
+                "NonStackingDivineShield": "1"
+              },
+              "HealthRegenUp": "1",
+              "AddManaRegen": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Encore": {
+    "name": "PASSIVE_ENCORE_NAME",
+    "name_resolved": "Encore",
+    "desc": "PASSIVE_ENCORE_DESC",
+    "desc_resolved": "When you use a musical ability, refresh your basic action.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "StatusOnUseAbilityWithTag": {
+          "tag": "musical",
+          "exclude_basicattack": "true",
+          "RefreshActPoints": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENCORE2_DESC",
+      "desc_resolved": "Your musical spells cost 1 less mana. When you use a musical ability, refresh your basic action.",
+      "passives": {
+        "StatusOnUseAbilityWithTag": {
+          "tag": "musical",
+          "exclude_basicattack": "true",
+          "RefreshActPoints": "1"
+        },
+        "ManaCostReductionTagged": {
+          "tag": "musical",
+          "reduction": "1"
+        }
+      },
+      "stats": {
+        "cha": "2"
+      }
+    }
+  },
+  "SpecialFriends": {
+    "name": "PASSIVE_SUPERFRIENDS_NAME",
+    "name_resolved": "Super Friends",
+    "desc": "PASSIVE_SUPERFRIENDS_DESC",
+    "desc_resolved": "Familiars spawned by spells gain All Stats Up 2, but that spell gets disabled until the spawned familiars die.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "SpecialFriends": {
+          "AllStatsUp": "2",
+          "HealthGain": "8"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SUPERFRIENDS2_DESC",
+      "desc_resolved": "Familiars spawned by spells gain All Stats Up 2, but that spell gets disabled until the spawned familiars die.\nYour spawning spells cost 50% less mana.",
+      "passives": {
+        "SpecialFriends": {
+          "AllStatsUp": "2",
+          "HealthGain": "8"
+        },
+        "ManaCostReductionTagged": {
+          "tag": "summon",
+          "reduction": "50%"
+        }
+      }
+    }
+  },
+  "SneakAttack": {
+    "name": "PASSIVE_SNEAKATTACK_NAME",
+    "name_resolved": "Sneak Attack",
+    "desc": "PASSIVE_SNEAKATTACK_DESC",
+    "desc_resolved": "Your spells that spawn familiars cost -3 mana.\nFamiliars spawned by your spells gain +2 Damage and +2 Movement, but die after their first turn.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToSummonAbilityMinions": {
+          "DamageUp": "2",
+          "MovementUp": "2",
+          "Doomed": "1"
+        },
+        "ManaCostReductionTagged": {
+          "tag": "summon",
+          "reduction": "3"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SNEAKATTACK2_DESC",
+      "desc_resolved": "Your spells that spawn familiars cost -3 mana.\nFamiliars spawned by your spells gain +4 Damage and +4 Movement, but die after their first turn.",
+      "passives": {
+        "AddPassivesToSummonAbilityMinions": {
+          "DamageUp": "4",
+          "MovementUp": "4",
+          "Doomed": "1"
+        },
+        "ManaCostReductionTagged": {
+          "tag": "summon",
+          "reduction": "3"
+        }
+      }
+    }
+  },
+  "WildStyle": {
+    "name": "PASSIVE_WILDSTYLE_NAME",
+    "name_resolved": "Wild Style",
+    "desc": "PASSIVE_WILDSTYLE_DESC",
+    "desc_resolved": "The first time you shapeshift each turn, gain an extra turn.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "StatusOnUseAbilityWithTag": {
+          "tag": "shapeshift",
+          "Conditional_FirstApplicationThisTurn": {
+            "TakeExtraTurn": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WILDSTYLE2_DESC",
+      "desc_resolved": "The first time you shapeshift each turn, gain All Stats Up and an extra turn.",
+      "passives": {
+        "StatusOnUseAbilityWithTag": {
+          "tag": "shapeshift",
+          "Conditional_FirstApplicationThisTurn": {
+            "TakeExtraTurn": "1",
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "BuddySystem": {
+    "name": "PASSIVE_BUDDYSYSTEM_NAME",
+    "name_resolved": "Buddy System",
+    "desc": "PASSIVE_BUDDYSYSTEM_DESC",
+    "desc_resolved": "When you lose [img:divineshield], your crow gains +1 [img:divineshield]. When your crow loses [img:divineshield], gain +1 [img:divineshield].",
+    "class": "Druid",
+    "1": {
+      "divine_shield": "1",
+      "passives": {
+        "HolyShieldTransferToTaggedMinions": "crow",
+        "AddPassivesToMinions": {
+          "tag_filter": "crow",
+          "HolyShieldTransferToSpawner": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BUDDYSYSTEM2_DESC",
+      "desc_resolved": "When you lose [img:divineshield], all your familiars gain +1 [img:divineshield]. When your crow loses [img:divineshield], gain +1 [img:divineshield].",
+      "divine_shield": "1",
+      "passives": {
+        "HolyShieldTransferToTaggedMinions": "any",
+        "AddPassivesToMinions": {
+          "tag_filter": "crow",
+          "HolyShieldTransferToSpawner": "1"
+        }
+      }
+    }
+  },
+  "FlowerPower": {
+    "name": "PASSIVE_FLOWERPOWER_NAME",
+    "name_resolved": "Flower Power",
+    "desc": "PASSIVE_FLOWERPOWER_DESC",
+    "desc_resolved": "Units on flower tiles have +2 [img:str] and +2 Brace. When you move, plant flowers on the tile you moved from.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "FlowerPowerAuraStrength": "1",
+        "FlowerPowerAuraBrace": "1",
+        "LimitedTileTrail": "FlowerTile"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLOWERPOWER2_DESC",
+      "desc_resolved": "Units on flower tiles have +2 [img:str] and +2 Brace. When you move, plant flowers on all tiles you move through.",
+      "passives": {
+        "FlowerPowerAuraStrength": "1",
+        "FlowerPowerAuraBrace": "1",
+        "TileTrail": "FlowerTile"
+      }
+    }
+  },
+  "SuicideSquad": {
+    "name": "PASSIVE_SUICIDESQUAD_NAME",
+    "name_resolved": "Suicide Squad",
+    "desc": "PASSIVE_SUICIDESQUAD_DESC",
+    "desc_resolved": "Your controllable familiars gain Self Destruct as their bonus ability.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "FamiliarBonusAbility": "FamiliarSelfDestruct"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SUICIDESQUAD2_DESC",
+      "desc_resolved": "Your controllable familiars gain Self Destruct+ as their bonus ability.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "FamiliarBonusAbility": "FamiliarSelfDestruct2"
+        }
+      }
+    }
+  },
+  "Feral": {
+    "name": "PASSIVE_FERAL_NAME",
+    "name_resolved": "Feral",
+    "desc": "PASSIVE_FERAL_DESC",
+    "desc_resolved": "Your bonus ability is Feral Attack.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "BonusAbility": "FeralMelee"
+      },
+      "stats": {
+        "str": "3",
+        "con": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FERAL2_DESC",
+      "desc_resolved": "Your bonus ability is Feral Attack.",
+      "passives": {
+        "BonusAbility": "FeralMelee"
+      },
+      "stats": {
+        "str": "4",
+        "con": "2",
+        "spd": "2"
+      }
+    }
+  },
+  "RapGod": {
+    "name": "PASSIVE_RAPGOD_NAME",
+    "name_resolved": "Rap God",
+    "desc": "PASSIVE_RAPGOD_DESC",
+    "desc_resolved": "Your basic action also gives temporary +4 [img:spd].",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_SourceHasTag": {
+            "tag": "crow",
+            "Conditional_Ally": {
+              "TempSpeedUp": "4"
+            }
+          },
+          "Else": {
+            "TempSpeedUp": "4"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RAPGOD2_DESC",
+      "desc_resolved": "Your basic action also gives temporary +4 [img:spd], enemies gain Confusion 2 instead.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Ally": {
+            "TempSpeedUp": "4"
+          },
+          "Conditional_Enemy": {
+            "Confusion": "2"
+          }
+        }
+      }
+    }
+  },
+  "Animalistic": {
+    "name": "PASSIVE_ANIMALISTIC_NAME",
+    "name_resolved": "Animalistic",
+    "desc": "PASSIVE_ANIMALISTIC_DESC",
+    "desc_resolved": "Familiars you spawn gain +2 Damage.\nWhen you shapeshift, gain +1 Damage.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "DamageUp": "2"
+        },
+        "StatusOnUseAbilityWithTag": {
+          "tag": "shapeshift",
+          "DamageUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ANIMALISTIC2_DESC",
+      "desc_resolved": "Familiars you spawn gain +2 Damage and a Bonus Attack.\nWhen you shapeshift, gain +1 Damage and refresh your basic attack.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "DamageUp": "2",
+          "Quivered": "1"
+        },
+        "StatusOnUseAbilityWithTag": {
+          "tag": "shapeshift",
+          "DamageUp": "1",
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "Maestro": {
+    "name": "PASSIVE_MAESTRO_NAME",
+    "name_resolved": "Maestro",
+    "desc": "PASSIVE_MAESTRO_DESC",
+    "desc_resolved": "Your musical spells cost 50% less mana.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "ManaCostReductionTagged": {
+          "tag": "musical",
+          "reduction": "50%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MAESTRO2_DESC",
+      "desc_resolved": "Your musical spells cost 50% less mana.\nWhen you use a musical spell, heal 1 HP and gain +1 to a random stat.",
+      "passives": {
+        "ManaCostReductionTagged": {
+          "tag": "musical",
+          "reduction": "50%"
+        },
+        "StatusOnUseAbilityWithTag": {
+          "tag": "musical",
+          "RandomStatUp": "1",
+          "HealthGain": "1"
+        }
+      }
+    }
+  },
+  "MegaMinions": {
+    "name": "PASSIVE_MEGAMINIONS_NAME",
+    "name_resolved": "Mega Minions",
+    "desc": "PASSIVE_MEGAMINIONS_DESC",
+    "desc_resolved": "Every 3rd familiar you spawn is upgraded into a Champion.",
+    "class": "Druid",
+    "1": {
+      "passives": {
+        "MegaMinions": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MEGAMINIONS2_DESC",
+      "desc_resolved": "The 1st and every 3rd familiar you spawn are upgraded into a Champion.\n[s:.7](The first familiar you spawn is likely your Crow.)[/s]",
+      "passives": {
+        "MegaMinions": {
+          "stacks": "3",
+          "cycle_start": "3"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "verycloseup": [
+        "verycloseup"
+      ],
+      "closeup": [
+        "closeup"
+      ],
+      "choosecats": [
+        "choosecats"
+      ],
+      "zoomedout": [
+        "zoomedout"
+      ],
+      "closerup": [
+        "closerup"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "intro": {
+      "set_state": "closeup",
+      "delay": ".05",
+      "dialog": "NPC_BEANIES_INTRO_27",
+      "set_mood": "happy",
+      "dialog_and_autopass": "NPC_BEANIES_INTRO_15",
+      "unlock_controls": "1",
+      "wait_for": "reject_cat",
+      "lock_controls": "1",
+      "sfx": "Intro_LabDisposal"
+    }
+  }
+}

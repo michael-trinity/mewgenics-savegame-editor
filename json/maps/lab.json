@@ -1,0 +1,122 @@
+{
+  "levels": {
+    "folder": "lab",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "lab_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [],
+    "medium": [
+      "RatCat",
+      "Gamete",
+      "NubsCat",
+      "CatHuman",
+      "HumanCat",
+      "CopBot",
+      "DrDitto",
+      "Drcat",
+      "Mangy3",
+      "Needlecat",
+      "Stacy2p0"
+    ],
+    "large": [
+      "MegaMutant"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "labitems"
+  },
+  "bosses": {
+    "stacy": "auto",
+    "spewer": "auto"
+  },
+  "minibosses": {
+    "druidcat": "auto",
+    "monkcat": "auto",
+    "psychiccat": "auto",
+    "tinkerercat": "auto",
+    "jestercat": "auto"
+  },
+  "random_generation_flags": {
+    "choose_one": [
+      "GenFlag_Boss_Stacy,",
+      "GenFlag_Boss_Spewer"
+    ]
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "iceage.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_IceAge"
+    },
+    "exit1": {
+      "type": "exit",
+      "next_map": "future.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_Future"
+    },
+    "boss": {
+      "type": "boss"
+    },
+    "miniboss_event": {
+      "type": "empty"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_BrokenTimeMachine",
+      "override_art": "MapNode_BrokenTimeMachine"
+    }
+  },
+  "flags": {
+    "IceAgeUnlocked": {
+      "quest_event": {
+        "level": "Quest_TimeMachine",
+        "override_art": "MapNode_TimeMachine"
+      }
+    },
+    "FutureUnlocked": {
+      "quest_event": {
+        "level": "Quest_TimeMachine",
+        "override_art": "MapNode_TimeMachine"
+      }
+    },
+    "GenFlag_Boss_Stacy": {
+      "miniboss_event": {
+        "type": "special_event",
+        "level": "StacyMutant1"
+      },
+      "boss": {
+        "level": "stacy"
+      }
+    },
+    "GenFlag_Boss_Spewer": {
+      "boss": {
+        "level": "spewer"
+      }
+    }
+  }
+}

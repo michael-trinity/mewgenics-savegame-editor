@@ -1,0 +1,155 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle",
+        "blocking"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unprompted": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_JACK_UNPROMPTED_1",
+      "wait_for_cancel": "1"
+    },
+    "also": {
+      "dialog": "NPC_JACK_ALSO_1"
+    },
+    "jack_begin_accepting_cats": {
+      "lock_controls": "1",
+      "dialog": "NPC_JACK_JACK_BEGIN_ACCEPTING_CATS_16",
+      "set_state": "idle",
+      "begin_accepting_cats": "jack",
+      "unlock_controls": "1"
+    },
+    "out_of_stock": {
+      "set_state": "blocking",
+      "dialog": "NPC_JACK_OUT_OF_STOCK_1"
+    },
+    "purchase_item": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_JACK_PURCHASE_ITEM_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_JACK_CANT_AFFORD_1",
+      "wait_for_cancel": "1"
+    },
+    "tooltip": {
+      "cancelable": "true",
+      "tooltip_dialog": "NPC_JACK_SHOP_TOOLTIP",
+      "wait_for_cancel": "1"
+    },
+    "hide_text": {
+      "cancelable": "true",
+      "dialog_and_autopass": ""
+    },
+    "jack_shopupgrade1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_SHOPUPGRADE1_13",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_shopupgrade2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_SHOPUPGRADE2_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_shopupgrade3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_SHOPUPGRADE3_10",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_shopupgrade4": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_SHOPUPGRADE4_16",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max_intro": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX_INTRO_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max_repeating": {
+      "do_random_sequence": [
+        "jack_max1,",
+        "jack_max2,",
+        "jack_max3,",
+        "jack_max4,",
+        "jack_max5"
+      ]
+    },
+    "jack_max1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX1_3",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX2_3",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX3_5",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max4": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX4_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_max5": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_MAX5_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "unknown": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_UNKNOWN_1",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "jack_desert_intro": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_DESERT_INTRO_12",
+      "unlock_controls": "1"
+    },
+    "jack_zara": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_ZARA_10",
+      "unlock_controls": "1"
+    },
+    "Jack_Gainaltfurniture": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_JACK_JACK_GAINALTFURNITURE_8",
+      "unlock_controls": "1"
+    }
+  }
+}

@@ -1,0 +1,2197 @@
+{
+  "LineShot": {
+    "id": "LineShot",
+    "template": "spell",
+    "name_key": "ABILITY_LINESHOT_NAME",
+    "name": "Line Shot",
+    "desc_key": "ABILITY_LINESHOT_DESC",
+    "description": "An attack that hits all units in a straight line.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "2+size",
+      "max_aoe": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "graphics": {
+      "particle": "ArrowFromAbove",
+      "delay": "10",
+      "animation": "majormagic"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "LineShot2": {
+    "id": "LineShot2",
+    "variant_of": "LineShot",
+    "desc_key": "ABILITY_LINESHOT2_DESC",
+    "description": "A stronger attack that hits all units in a straight line.",
+    "target": {
+      "min_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "9+bonus_ranged_damage"
+    }
+  },
+  "HailOfNails": {
+    "id": "HailOfNails",
+    "template": "spell",
+    "name_key": "ABILITY_HAILOFNAILS_NAME",
+    "name": "Hail of Nails",
+    "desc_key": "ABILITY_HAILOFNAILS_DESC",
+    "description": "An attack that hits all units in a perpendicular line.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "cross",
+      "min_range": "3",
+      "max_range": "10",
+      "aoe_mode": "perpline",
+      "min_aoe": "-10",
+      "max_aoe": "10",
+      "knockback_mode": "zero",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "graphics": {
+      "particle": "ArrowFromAbove",
+      "delay": "10",
+      "animation": "majormagic"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "HailOfNails2": {
+    "id": "HailOfNails2",
+    "variant_of": "HailOfNails",
+    "desc_key": "ABILITY_HAILOFNAILS2_DESC",
+    "description": "An attack that hits and Immobilizes all units in a perpendicular line.",
+    "damage_instance": {
+      "effects": {
+        "Immobile": "1"
+      }
+    }
+  },
+  "SpawnMaggotFriend": {
+    "id": "SpawnMaggotFriend",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SPAWNMAGGOTFRIEND_NAME",
+    "name": "Spawn Maggot Friend",
+    "desc_key": "ABILITY_SPAWNMAGGOTFRIEND_DESC",
+    "description": "Spawn a maggot familiar.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "4"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "spawn": {
+      "object": "CharmedMaggot"
+    }
+  },
+  "SpawnMaggotFriend2": {
+    "id": "SpawnMaggotFriend2",
+    "variant_of": "SpawnMaggotFriend",
+    "desc_key": "ABILITY_SPAWNMAGGOTFRIEND2_DESC",
+    "description": "Spawn a [img:champion] maggot familiar.",
+    "spawn": {
+      "object": "CharmedMaggot_Champion"
+    }
+  },
+  "SpawnPooterFriend": {
+    "id": "SpawnPooterFriend",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SPAWNPOOTERFRIEND_NAME",
+    "name": "Spawn Pooter Friend",
+    "desc_key": "ABILITY_SPAWNPOOTERFRIEND_DESC",
+    "description": "Spawn a pooter familiar.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "spawn": {
+      "object": "CharmedPooter"
+    }
+  },
+  "SpawnPooterFriend2": {
+    "id": "SpawnPooterFriend2",
+    "variant_of": "SpawnPooterFriend",
+    "desc_key": "ABILITY_SPAWNPOOTERFRIEND2_DESC",
+    "description": "Spawn 2 pooter familiars.",
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "1",
+      "max_targets": "2"
+    }
+  },
+  "Marked": {
+    "id": "Marked",
+    "template": "targeted_status",
+    "name_key": "ABILITY_MARKED_NAME",
+    "name": "Marked",
+    "desc_key": "ABILITY_MARKED_DESC",
+    "description": "Inflict Marked on a unit.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "affected_particle": "TakeAim",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "effects": {
+        "Marked": "1"
+      }
+    }
+  },
+  "Marked2": {
+    "id": "Marked2",
+    "template": "targeted_status",
+    "name_key": "ABILITY_MARKED_NAME",
+    "name": "Marked",
+    "desc_key": "ABILITY_MARKED2_DESC",
+    "description": "Inflict Marked on a unit and all other units of the same type.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "affected_particle": "TakeAim",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "effects": {
+        "Marked": "1",
+        "ApplyToOthersWithSharedTagAndFaction": {
+          "Marked": "1"
+        }
+      }
+    }
+  },
+  "ScatterShot": {
+    "id": "ScatterShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SCATTERSHOT_NAME",
+    "name": "Scatter Shot",
+    "desc_key": "ABILITY_SCATTERSHOT_DESC",
+    "description": "Fire a bunch of shots randomly in an area.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "3",
+      "min_range": "3",
+      "max_range": "6+bonus_range",
+      "aoe_chance": ".5",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "ScatterShot2": {
+    "id": "ScatterShot2",
+    "variant_of": "ScatterShot",
+    "desc_key": "ABILITY_SCATTERSHOT2_DESC",
+    "description": "Fire a bunch of shots randomly in a large area.",
+    "target": {
+      "max_aoe": "4",
+      "aoe_restrictions": [
+        "exclude_allies"
+      ]
+    }
+  },
+  "BrambleShot": {
+    "id": "BrambleShot",
+    "template": "spell",
+    "name_key": "ABILITY_BRAMBLESHOT_NAME",
+    "name": "Bramble Shot",
+    "desc_key": "ABILITY_BRAMBLESHOT_DESC",
+    "description": "Fire a shot that spawns brambles in an area.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "level",
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "use_projectile": "true",
+      "particle": "none",
+      "projectile": "BrambleProjectile",
+      "delay": "5"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "BramblesOnHit": "1"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "BrambleShot2": {
+    "id": "BrambleShot2",
+    "variant_of": "BrambleShot",
+    "desc_key": "ABILITY_BRAMBLESHOT2_DESC",
+    "description": "Fire a shot that spawns brambles in a large area.",
+    "target": {
+      "max_aoe": "level",
+      "min_range": "0",
+      "max_range": "20"
+    }
+  },
+  "BearTrap": {
+    "id": "BearTrap",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_BEARTRAP_NAME",
+    "name": "Bear Trap",
+    "desc_key": "ABILITY_BEARTRAP_DESC",
+    "description": "Set a trap within 5 tiles that damages and immobilizes units that walk over it.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "projectile": "DamageTrap",
+      "use_rotation": "false",
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnBearTrap": "1"
+      }
+    }
+  },
+  "BearTrap2": {
+    "id": "BearTrap2",
+    "variant_of": "BearTrap",
+    "desc_key": "ABILITY_BEARTRAP2_DESC",
+    "description": "Set a trap on any tile that damages and immobilizes units that walk over it.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Harpoon": {
+    "id": "Harpoon",
+    "template": "straightshot_attack",
+    "name_key": "ABILITY_HARPOON_NAME",
+    "name": "Harpoon",
+    "desc_key": "ABILITY_HARPOON_DESC",
+    "description": "Hook onto something in a straight line and drag yourself to it.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "graphics": {
+      "animation": "invthrow",
+      "projectile": "HookProjectile",
+      "chain_movieclip": "ChainLink",
+      "chain_distance": ".25"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "PullSourceToTarget": "1"
+      }
+    }
+  },
+  "Harpoon2": {
+    "id": "Harpoon2",
+    "variant_of": "Harpoon",
+    "desc_key": "ABILITY_HARPOON2_DESC",
+    "description": "Hook onto something in a straight line and drag yourself to it.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "TwinShot": {
+    "id": "TwinShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_TWINSHOT_NAME",
+    "name": "Twin Shot",
+    "desc_key": "ABILITY_TWINSHOT_DESC",
+    "description": "Shoot twice.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage"
+    }
+  },
+  "TwinShot2": {
+    "id": "TwinShot2",
+    "variant_of": "TwinShot",
+    "desc_key": "ABILITY_TWINSHOT2_DESC",
+    "description": "Shoot thrice."
+  },
+  "CrossShot": {
+    "id": "CrossShot",
+    "template": "straightshot_attack",
+    "name_key": "ABILITY_CROSSSHOT_NAME",
+    "name": "Cross Shot",
+    "desc_key": "ABILITY_CROSSSHOT_DESC",
+    "description": "Shoot four projectiles in an X shape.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "custom",
+      "aoe_symmetry": "four_way",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ]
+      ]
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage"
+    }
+  },
+  "CrossShot2": {
+    "id": "CrossShot2",
+    "variant_of": "CrossShot",
+    "desc_key": "ABILITY_CROSSSHOT2_DESC",
+    "description": "Shoot four penetrating projectiles in an X shape.",
+    "target": {
+      "upgrade_straight_shot_to_piercing": "true"
+    }
+  },
+  "SpawnBaitTrap": {
+    "id": "SpawnBaitTrap",
+    "template": "spawn",
+    "name_key": "ABILITY_BAITTRAP_NAME",
+    "name": "Bait Trap",
+    "desc_key": "ABILITY_BAITTRAP_DESC",
+    "description": "Set a bait trap that attracts enemies.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": [
+        "must_be_empty",
+        "aoe_must_exist"
+      ]
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "spawn": {
+      "object": "Bait",
+      "layer": "pickups"
+    }
+  },
+  "SpawnBaitTrap2": {
+    "id": "SpawnBaitTrap2",
+    "variant_of": "SpawnBaitTrap",
+    "desc_key": "ABILITY_BAITTRAP2_DESC",
+    "description": "Set a bait trap that attracts enemies and inflicts Poison and Slow when eaten.",
+    "spawn": {
+      "object": "PoisonBait",
+      "layer": "pickups"
+    }
+  },
+  "BombShot": {
+    "id": "BombShot",
+    "template": "spell",
+    "name_key": "ABILITY_BOMBSHOT_NAME",
+    "name": "Bomb Shot",
+    "desc_key": "ABILITY_BOMBSHOT_DESC",
+    "description": "Toss a bomb that explodes and knocks units away.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "1",
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "shoot",
+      "center_particle": "Explosion",
+      "area_particle": "none",
+      "use_projectile": "true"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell",
+      "knockback": "1",
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "BombShot2": {
+    "id": "BombShot2",
+    "variant_of": "BombShot",
+    "desc_key": "ABILITY_BOMBSHOT2_DESC",
+    "description": "Toss a large bomb that explodes and knocks units away.",
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "SummonBrambles": {
+    "id": "SummonBrambles",
+    "template": "spell",
+    "name_key": "ABILITY_SUMMONBRAMBLES_NAME",
+    "name": "Summon Brambles",
+    "desc_key": "ABILITY_SUMMONBRAMBLES_DESC",
+    "description": "Spawn brambles on any tile.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "level-1",
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "BramblesOnHit": "1"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "SummonBrambles2": {
+    "id": "SummonBrambles2",
+    "variant_of": "SummonBrambles",
+    "desc_key": "ABILITY_SUMMONBRAMBLES2_DESC",
+    "description": "Spawn brambles in an area."
+  },
+  "FireShot": {
+    "id": "FireShot",
+    "template": "spell",
+    "name_key": "ABILITY_FIRESHOT_NAME",
+    "name": "Fire Shot",
+    "desc_key": "ABILITY_FIRESHOT_DESC",
+    "description": "Shoot a projectile that inflicts Burn 2 and lights fires.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "1",
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "center_particle": "none",
+      "area_particle": "none",
+      "use_projectile": "true",
+      "projectile": "FireProjectile"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "type": "ranged",
+      "effects": {
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire",
+        "Napalm"
+      ]
+    }
+  },
+  "FireShot2": {
+    "id": "FireShot2",
+    "variant_of": "FireShot",
+    "desc_key": "ABILITY_FIRESHOT2_DESC",
+    "description": "Shoot a projectile with infinite range that inflicts Burn 4 and lights fires.",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "Burn": "4"
+      }
+    }
+  },
+  "TrailBlazer": {
+    "id": "TrailBlazer",
+    "template": "self_buff",
+    "name_key": "ABILITY_TRAILBLAZER_NAME",
+    "name": "Trail Blazer",
+    "desc_key": "ABILITY_TRAILBLAZER_DESC",
+    "description": "Increase your movement. You're unaffected by tile effects until the end of the turn.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "TrailBlazer": "1"
+      }
+    }
+  },
+  "TrailBlazer2": {
+    "id": "TrailBlazer2",
+    "variant_of": "TrailBlazer",
+    "desc_key": "ABILITY_TRAILBLAZER2_DESC",
+    "description": "Double your movement.  You're unaffected by tile effects until the end of the turn.",
+    "damage_instance": {
+      "effects": {
+        "TrailBlazer": "mov"
+      }
+    }
+  },
+  "FocusShot": {
+    "id": "FocusShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_FOCUSSHOT_NAME",
+    "name": "Focus Shot",
+    "desc_key": "ABILITY_FOCUSSHOT_DESC",
+    "description": "Aim at a unit. On your next turn, shoot a projectile that always crits and ignores shield at that unit.",
+    "class": "Hunter",
+    "cost": {
+      "cantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "delayed_trigger": "true",
+      "min_range": "3",
+      "max_range": "5+bonus_range",
+      "track_target": "true",
+      "hint_can_target_empty": "false"
+    },
+    "graphics": {
+      "lob_height": "1",
+      "speed": "20",
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "piercing": "true",
+      "crit_chance": "100%",
+      "cant_miss": "true"
+    }
+  },
+  "FocusShot2": {
+    "id": "FocusShot2",
+    "variant_of": "FocusShot",
+    "desc_key": "ABILITY_FOCUSSHOT2_DESC",
+    "description": "Shoot a projectile that always crits and ignores shield.",
+    "cost": {
+      "infcantrip": "true"
+    },
+    "target": {
+      "delayed_trigger": "false"
+    }
+  },
+  "Shards": {
+    "id": "Shards",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SHARDS_NAME",
+    "name": "Shards",
+    "desc_key": "ABILITY_SHARDS_DESC",
+    "description": "Shoot a projectile that spawns glass.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "GlassBall"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "ranged",
+      "effects": {
+        "ChangeTile": "GlassTile"
+      }
+    }
+  },
+  "Shards2": {
+    "id": "Shards2",
+    "variant_of": "Shards",
+    "desc_key": "ABILITY_SHARDS2_DESC",
+    "description": "Shoot a projectile that spawns glass in an area and inflicts Bleed 2.",
+    "damage_instance": {
+      "damage": "2",
+      "type": "ranged",
+      "effects": {
+        "ChangeTile": {
+          "tile": "GlassTile",
+          "aoe": "1"
+        },
+        "Bleed": "2"
+      }
+    }
+  },
+  "TerrainWalk": {
+    "id": "TerrainWalk",
+    "template": "teleport",
+    "name_key": "ABILITY_TERRAINWALK_NAME",
+    "name": "Terrain Walk",
+    "desc_key": "ABILITY_TERRAINWALK_DESC",
+    "description": "Teleport to any grass or water tile.",
+    "class": "Hunter",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_moveable",
+        "must_have_element"
+      ],
+      "target_requires_element": [
+        "grass",
+        "water"
+      ]
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    }
+  },
+  "TerrainWalk2": {
+    "id": "TerrainWalk2",
+    "variant_of": "TerrainWalk",
+    "desc_key": "ABILITY_TERRAINWALK2_DESC",
+    "description": "Teleport to any grass or water tile. Gain Stealth.",
+    "cost": {
+      "mana": "4"
+    },
+    "self_damage": {
+      "effects": {
+        "Stealth": "1"
+      }
+    }
+  },
+  "Extend": {
+    "id": "Extend",
+    "template": "spell",
+    "name_key": "ABILITY_EXTEND_NAME",
+    "name": "Extend",
+    "desc_key": "ABILITY_EXTEND_DESC",
+    "description": "Give a unit +3 range and reach until the end of their next turn.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TempRangeUp": "3",
+        "Temporary": {
+          "status": "MeleeRangeUp",
+          "stacks": "3",
+          "turns": "1"
+        }
+      }
+    }
+  },
+  "Extend2": {
+    "id": "Extend2",
+    "template": "spell",
+    "name_key": "ABILITY_EXTEND_NAME",
+    "name": "Extend",
+    "desc_key": "ABILITY_EXTEND2_DESC",
+    "description": "Give a unit +20 range and reach until the end of their next turn.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TempRangeUp": "20",
+        "Temporary": {
+          "status": "MeleeRangeUp",
+          "stacks": "20",
+          "turns": "1"
+        }
+      }
+    }
+  },
+  "ChaosShot": {
+    "id": "ChaosShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CHAOSSHOT_NAME",
+    "name": "Chaos Shot",
+    "desc_key": "ABILITY_CHAOSSHOT_DESC",
+    "description": "Shoot a random unit within range.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "3",
+      "max_range": "5+bonus_range",
+      "restrictions": "must_have_animate_character"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage"
+    }
+  },
+  "ChaosShot2": {
+    "id": "ChaosShot2",
+    "variant_of": "ChaosShot",
+    "desc_key": "ABILITY_CHAOSSHOT2_DESC",
+    "description": "Shoot a random unit within range, twice!"
+  },
+  "NeedleShot": {
+    "id": "NeedleShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_NEEDLESHOT_NAME",
+    "name": "Needle Shot",
+    "desc_key": "ABILITY_NEEDLESHOT_DESC",
+    "description": "Shoot a needle that deals damage, gives Thorns, and ignores shield.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "projectile": "NeedleProjectile",
+      "animation": "throwArrow"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "piercing": "true",
+      "effects": {
+        "Thorns": "1"
+      }
+    }
+  },
+  "NeedleShot2": {
+    "id": "NeedleShot2",
+    "variant_of": "NeedleShot",
+    "desc_key": "ABILITY_NEEDLESHOT2_DESC",
+    "description": "Shoot a needle that deals damage, gives Thorns, and ignores shield. This deals extra damage to enemies and gives extra Thorns to allies.",
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "BonusDamage": "1"
+        },
+        "Conditional_Ally": {
+          "Thorns": "1"
+        }
+      }
+    }
+  },
+  "SpikeTrap": {
+    "id": "SpikeTrap",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SPIKETRAP_NAME",
+    "name": "Spike Trap",
+    "desc_key": "ABILITY_SPIKETRAP_DESC",
+    "description": "Set a trap that deals 8 damage.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "projectile": "SpikeTrap",
+      "animation": "throwobject",
+      "use_rotation": "false"
+    },
+    "damage_instance": {
+      "damage": "8",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnCustomTrap": "SpikeTrap"
+      }
+    }
+  },
+  "SpikeTrap2": {
+    "id": "SpikeTrap2",
+    "variant_of": "SpikeTrap",
+    "desc_key": "ABILITY_SPIKETRAP2_DESC",
+    "description": "Set a trap that deals 13 damage.",
+    "target": {
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "damage": "13"
+    }
+  },
+  "FleaShot": {
+    "id": "FleaShot",
+    "template": "lobbed_attack",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_FLEASHOT_NAME",
+    "name": "Flea Shot",
+    "desc_key": "ABILITY_FLEASHOT_DESC",
+    "description": "Shoot a flea at a unit.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "projectile": "Flea"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "effects": {
+        "BounceObject": "CharmedFlea"
+      }
+    }
+  },
+  "FleaShot2": {
+    "id": "FleaShot2",
+    "variant_of": "FleaShot",
+    "desc_key": "ABILITY_FLEASHOT2_DESC",
+    "description": "Shoot a [img:champion] flea at a unit.",
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "effects": {
+        "BounceObject": "CharmedFlea_Champion"
+      }
+    }
+  },
+  "WebTrap": {
+    "id": "WebTrap",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_WEBTRAP_NAME",
+    "name": "Web Trap",
+    "desc_key": "ABILITY_WEBTRAP_DESC",
+    "description": "Set a trap that webs non-bug units that walk through it.",
+    "class": "Hunter",
+    "keyword_tooltips": {
+      "Webbed": "1"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "projectile": "WebTrap",
+      "animation": "throwobject",
+      "use_rotation": "false"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnWebTrap": "1"
+      }
+    }
+  },
+  "WebTrap2": {
+    "id": "WebTrap2",
+    "variant_of": "WebTrap",
+    "desc_key": "ABILITY_WEBTRAP2_DESC",
+    "description": "Set a web trap on any tile that webs non-bug units that walk through it.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "LastHit": {
+    "id": "LastHit",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_LASTHIT_NAME",
+    "name": "Last Hit",
+    "desc_key": "ABILITY_LASTHIT_DESC",
+    "description": "Deal 1 damage to a unit. If this kills it, refresh your basic attack.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "LastHit2": {
+    "id": "LastHit2",
+    "variant_of": "LastHit",
+    "desc_key": "ABILITY_LASTHIT2_DESC",
+    "description": "Deal 1 damage to a unit. If this kills it, refresh your basic attack. This ignores shield and can't miss.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "piercing": "true",
+      "cant_miss": "true"
+    }
+  },
+  "CupidsArrow": {
+    "id": "CupidsArrow",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CUPIDSARROW_NAME",
+    "name": "Cupid's Arrow",
+    "desc_key": "ABILITY_CUPIDSARROW_DESC",
+    "description": "A shot that damages and inflicts Charm.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "8+bonus_range"
+    },
+    "graphics": {
+      "projectile": "CupidsArrowProjectile",
+      "animation": "throwArrow"
+    },
+    "damage_instance": {
+      "damage": "6+bonus_ranged_damage",
+      "effects": {
+        "Charmed": "level"
+      }
+    }
+  },
+  "CupidsArrow2": {
+    "id": "CupidsArrow2",
+    "variant_of": "CupidsArrow",
+    "desc_key": "ABILITY_CUPIDSARROW2_DESC",
+    "description": "A shot that damages and inflicts Charm 2.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    }
+  },
+  "ArrowFlurry": {
+    "id": "ArrowFlurry",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_ARROWFLURRY_NAME",
+    "name": "Arrow Flurry",
+    "desc_key": "ABILITY_ARROWFLURRY_DESC",
+    "description": "Shoot 5 weak shots, each one has a 50% chance to miss.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "accuracy": ".5"
+    }
+  },
+  "ArrowFlurry2": {
+    "id": "ArrowFlurry2",
+    "variant_of": "ArrowFlurry",
+    "desc_key": "ABILITY_ARROWFLURRY2_DESC",
+    "description": "Shoot 5 weak shots, each one has a 50% chance to miss and 50% chance to crit!",
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "accuracy": ".5",
+      "crit_chance": ".5"
+    }
+  },
+  "HeavyShot": {
+    "id": "HeavyShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_HEAVYSHOT_NAME",
+    "name": "Heavy Shot",
+    "desc_key": "ABILITY_HEAVYSHOT_DESC",
+    "description": "Shoot a high damage shot with a 70% chance to miss.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "lob_height": "4",
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_ranged_damage",
+      "accuracy": ".3"
+    }
+  },
+  "HeavyShot2": {
+    "id": "HeavyShot2",
+    "variant_of": "HeavyShot",
+    "desc_key": "ABILITY_HEAVYSHOT2_DESC",
+    "description": "Shoot a high damage shot with a 70% chance to miss and a 50% chance to crit.\n[s:.7](This spell has increased range.)[/s]",
+    "target": {
+      "min_range": "3",
+      "max_range": "8+bonus_range"
+    },
+    "damage_instance": {
+      "crit_chance": ".5"
+    }
+  },
+  "StakeOut": {
+    "id": "StakeOut",
+    "template": "self_buff",
+    "name_key": "ABILITY_STAKEOUT_NAME",
+    "name": "Stake Out",
+    "desc_key": "ABILITY_STAKEOUT_DESC",
+    "description": "End your turn. On your next turn, your ranged abilities deal double damage.\n[s:.7](Castable only if you haven't taken any other actions this turn.)[/s]",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "must_be_first_action": "true"
+    },
+    "graphics": {
+      "animation": "statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "EndTurn": "1",
+        "NextTurnDoubleRangedDamage": "1"
+      }
+    }
+  },
+  "StakeOut2": {
+    "id": "StakeOut2",
+    "variant_of": "StakeOut",
+    "desc_key": "ABILITY_STAKEOUT2_DESC",
+    "description": "End your turn. On your next turn, your ranged abilities deal double damage.\n[s:.7](Costs 0 mana. Castable only if you haven't taken any other actions this turn other than your movement action.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "must_be_first_action": "false",
+      "must_be_first_nonmove_action": "true"
+    }
+  },
+  "BallOfSpiders": {
+    "id": "BallOfSpiders",
+    "template": "lobbed_attack",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_BALLOFSPIDERS_NAME",
+    "name": "Ball of Spiders",
+    "desc_key": "ABILITY_BALLOFSPIDERS_DESC",
+    "description": "Throw a spider egg that spawns 3 spiderlings on impact.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "9",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "SpiderBall"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "effects": {
+        "BounceObject": "CharmedTinySpider"
+      }
+    }
+  },
+  "BallOfSpiders2": {
+    "id": "BallOfSpiders2",
+    "variant_of": "BallOfSpiders",
+    "desc_key": "ABILITY_BALLOFSPIDERS2_DESC",
+    "description": "Throw a stronger spider egg that spawns 3 spiderlings on impact.",
+    "damage_instance": {
+      "damage": "6+bonus_ranged_damage"
+    }
+  },
+  "Snipe": {
+    "id": "Snipe",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SNIPE_NAME",
+    "name": "Snipe",
+    "desc_key": "ABILITY_SNIPE_DESC",
+    "description": "Fire a shot exactly 6 tiles away that ignores shield and can't miss.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "6",
+      "max_range": "6"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "cant_miss": "true",
+      "piercing": "true"
+    }
+  },
+  "Snipe2": {
+    "id": "Snipe2",
+    "variant_of": "Snipe",
+    "desc_key": "ABILITY_SNIPE2_DESC",
+    "description": "Fire a stronger shot exactly 6 tiles away that ignores shield, can't miss, and has a 50% chance to crit.",
+    "damage_instance": {
+      "damage": "8+bonus_ranged_damage",
+      "crit_chance": ".5"
+    }
+  },
+  "Diversion": {
+    "id": "Diversion",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_DIVERSION_NAME",
+    "name": "Diversion",
+    "desc_key": "ABILITY_DIVERSION_DESC",
+    "description": "Shoot a pebble. All enemies within 3 tiles move toward it.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range",
+      "max_aoe": "3",
+      "aoe_restrictions": "exclude_allies"
+    },
+    "graphics": {
+      "single_projectile": "true",
+      "projectile": "Pebble"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "ForceMoveNonAlliesInRangeTowardsTile": "3"
+      }
+    },
+    "splash_damage": {
+      "damage": "0",
+      "type": "status_spell"
+    }
+  },
+  "Diversion2": {
+    "id": "Diversion2",
+    "variant_of": "Diversion",
+    "desc_key": "ABILITY_DIVERSION2_DESC",
+    "description": "Shoot a pebble. All enemies within 3 tiles move toward it and gain Confusion.",
+    "target": {
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "ForceMoveNonAlliesInRangeTowardsTile": "4",
+        "Confusion": "1"
+      }
+    },
+    "splash_damage": {
+      "effects": {
+        "Conditional_NotAlly": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "ArrowSmith": {
+    "id": "ArrowSmith",
+    "template": "self_buff",
+    "name_key": "ABILITY_ARROWSMITH_NAME",
+    "name": "Arrowsmith",
+    "desc_key": "ABILITY_ARROWSMITH_DESC",
+    "description": "Gain +1 Bonus Attack at the start of your next turn.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "Quiver"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyStatusesNextTurnBegin": {
+          "Quivered": "1"
+        }
+      }
+    }
+  },
+  "ArrowSmith2": {
+    "id": "ArrowSmith2",
+    "variant_of": "ArrowSmith",
+    "desc_key": "ABILITY_ARROWSMITH2_DESC",
+    "description": "You or another unit gains +1 Bonus Attack at the start of their next turn.",
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "5+bonus_range"
+    }
+  },
+  "TacticalRetreat": {
+    "id": "TacticalRetreat",
+    "template": "teleport",
+    "name_key": "ABILITY_TACTICALRETREAT_NAME",
+    "name": "Tactical Retreat",
+    "desc_key": "ABILITY_TACTICALRETREAT_DESC",
+    "description": "Teleport up to 5 tiles away. Set a bear trap on the tile you teleported from.",
+    "class": "Hunter",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    }
+  },
+  "TacticalRetreat2": {
+    "id": "TacticalRetreat2",
+    "variant_of": "TacticalRetreat",
+    "desc_key": "ABILITY_TACTICALRETREAT2_DESC",
+    "description": "Teleport up to 5 tiles away. Set a baited bear trap on the tile you teleported from."
+  },
+  "Infest": {
+    "id": "Infest",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_INFEST_NAME",
+    "name": "Infest",
+    "desc_key": "ABILITY_INFEST_DESC",
+    "description": "Toss a spider egg that deals low damage and inflicts Infested.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "SpiderBall"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "SpiderInfested": "1"
+      }
+    }
+  },
+  "Infest2": {
+    "id": "Infest2",
+    "variant_of": "Infest",
+    "desc_key": "ABILITY_INFEST2_DESC",
+    "description": "Toss a spider egg that deals low damage and inflicts Infested 2.",
+    "damage_instance": {
+      "effects": {
+        "SpiderInfested": "2"
+      }
+    }
+  },
+  "CollectPelt": {
+    "id": "CollectPelt",
+    "template": "melee_attack",
+    "name_key": "ABILITY_COLLECTPELT_NAME",
+    "name": "Collect Pelt",
+    "desc_key": "ABILITY_COLLECTPELT_DESC",
+    "description": "Destroy a body. Equip a piece of Cat Hide armor to an empty armor slot.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "Craft": {
+            "slot": "random_empty_armor",
+            "pool": "pelts",
+            "temporary": "false"
+          }
+        }
+      }
+    }
+  },
+  "CollectPelt2": {
+    "id": "CollectPelt2",
+    "variant_of": "CollectPelt",
+    "desc_key": "ABILITY_COLLECTPELT2_DESC",
+    "description": "Destroy a body. Create a big food pickup and equip a piece of Cat Hide armor to an empty armor slot.",
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "ObjectOnHit": "BiggestFood"
+      }
+    }
+  },
+  "SentryMode": {
+    "id": "SentryMode",
+    "template": "self_buff",
+    "name_key": "ABILITY_SENTRYMODE_NAME",
+    "name": "Sentry Mode",
+    "desc_key": "ABILITY_SENTRYMODE_DESC",
+    "description": "The next time an enemy ends movement in your basic attack range, attack it.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "TowerDefenseStatus": "1"
+      }
+    }
+  },
+  "SentryMode2": {
+    "id": "SentryMode2",
+    "template": "self_buff",
+    "name_key": "ABILITY_SENTRYMODE_NAME",
+    "name": "Sentry Mode",
+    "desc_key": "ABILITY_SENTRYMODE2_DESC",
+    "description": "Until your next turn, whenever an enemy ends movement in your basic attack range, attack it.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "TowerDefenseStatus2": "1"
+      }
+    }
+  },
+  "Pheromones": {
+    "id": "Pheromones",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_PHEROMONES_NAME",
+    "name": "Pheromones",
+    "desc_key": "ABILITY_PHEROMONES_DESC",
+    "description": "Inflict Charm on a unit. If it's an enemy, it takes an extra turn immediately.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "projectile": "CupidsArrowProjectile",
+      "animation": "throwArrow"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Charmed": "1",
+        "Conditional_Enemy": {
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "Pheromones2": {
+    "id": "Pheromones2",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_PHEROMONES_NAME",
+    "name": "Pheromones",
+    "desc_key": "ABILITY_PHEROMONES2_DESC",
+    "description": "Inflict Charm on a unit. It takes an extra turn immediately.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "CupidsArrowProjectile"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Charmed": "1",
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "SpawnTomTomFriend": {
+    "id": "SpawnTomTomFriend",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_CALLOFTHEWILD_NAME",
+    "name": "Call of the Wild",
+    "desc_key": "ABILITY_CALLOFTHEWILD_DESC",
+    "description": "Spawn a charmed Tom Tom.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "spawn": {
+      "object": "CharmedTomTom"
+    }
+  },
+  "SpawnTomTomFriend2": {
+    "id": "SpawnTomTomFriend2",
+    "variant_of": "SpawnTomTomFriend",
+    "desc_key": "ABILITY_CALLOFTHEWILD2_DESC",
+    "description": "Spawn a charmed Tom Tom on any tile.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "ScoutMe": {
+    "id": "ScoutMe",
+    "template": "self_buff",
+    "name_key": "ABILITY_SCOUTME_NAME",
+    "name": "Scout Me",
+    "desc_key": "ABILITY_SCOUTME_DESC",
+    "description": "Until next turn, allied cats gain a bonus ability that can let you shoot a tile of their choice.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Hunter",
+    "cost": {
+      "cantrip": "true",
+      "mana": "7"
+    },
+    "graphics": {
+      "animation": "ColorlessStartTurn"
+    },
+    "damage_instance": {
+      "effects": {
+        "ShootHereReceiver": "1",
+        "TeamBonusAbility": "ShootHere"
+      }
+    }
+  },
+  "ScoutMe2": {
+    "id": "ScoutMe2",
+    "variant_of": "ScoutMe",
+    "desc_key": "ABILITY_SCOUTME2_DESC",
+    "description": "Until next turn, allied cats gain a bonus ability that can let you shoot a tile of their choice.\n[s:.7](Castable once per turn. This spell costs 0 mana.)[/s]",
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "ShootHere": {
+    "id": "ShootHere",
+    "template": "targeted_status",
+    "name_key": "ABILITY_SHOOTHERE_NAME",
+    "name": "Shoot Here!",
+    "desc_key": "ABILITY_SHOOTHERE_DESC",
+    "description": "Instructs your friend to shoot an adjacent tile!\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Hunter",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "1",
+      "min_range": "1"
+    },
+    "graphics": {
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "effects": {
+        "ShootHereCommand": "1"
+      }
+    }
+  },
+  "CraftArrow": {
+    "id": "CraftArrow",
+    "template": "targeted_status",
+    "name_key": "ABILITY_CRAFTARROW_NAME",
+    "name": "Craft Arrow",
+    "desc_key": "ABILITY_CRAFTARROW_DESC",
+    "description": "Collect an adjacent pickup and gain +1 Bonus Attack instead of its normal effects.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "1",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "graphics": {
+      "animation": "Quiver"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CollectsPickupsWithAltEffects": {
+          "Quivered": "1"
+        }
+      }
+    }
+  },
+  "CraftArrow2": {
+    "id": "CraftArrow2",
+    "variant_of": "CraftArrow",
+    "desc_key": "ABILITY_CRAFTARROW2_DESC",
+    "description": "Collect all pickups within two tiles of you. Gain +1 Bonus Attack for each pickup instead of their normal effects.\n[s:.7](This spell costs 1 mana.)[/s]",
+    "cost": {
+      "mana": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "2",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_tag"
+    }
+  },
+  "CharmTrap": {
+    "id": "CharmTrap",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CHARMTRAP_NAME",
+    "name": "Charm Trap",
+    "desc_key": "ABILITY_CHARMTRAP_DESC",
+    "description": "Spawn a trap that deals damage and inflicts Charm 1.",
+    "class": "Hunter",
+    "keyword_tooltips": {
+      "Charmed": "1"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "projectile": "CharmTrap",
+      "animation": "throwobject",
+      "use_rotation": "false"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnCustomTrap": "CharmTrap",
+        "Charmed": "1",
+        "Immobile": "0"
+      }
+    }
+  },
+  "CharmTrap2": {
+    "id": "CharmTrap2",
+    "variant_of": "CharmTrap",
+    "desc_key": "ABILITY_CHARMTRAP2_DESC",
+    "description": "Spawn a trap that deals damage and inflicts Charm 1.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "BounceShot": {
+    "id": "BounceShot",
+    "template": "spell",
+    "name_key": "ABILITY_BOUNCESHOT_NAME",
+    "name": "Bounce Shot",
+    "desc_key": "ABILITY_BOUNCESHOT_DESC",
+    "description": "Shoot a projectile that bounces everything adjacent to it back 3 tiles.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "1",
+      "min_aoe": "1",
+      "min_range": "0",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwArrow",
+      "area_particle": "none",
+      "use_projectile": "true",
+      "particle": "none",
+      "projectile": "bounceshot"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "KnockUpAndAway": {
+          "distance": "3",
+          "stacks": "1"
+        }
+      }
+    }
+  },
+  "BounceShot2": {
+    "id": "BounceShot2",
+    "variant_of": "BounceShot",
+    "desc_key": "ABILITY_BOUNCESHOT2_DESC",
+    "description": "Shoot a projectile that bounces everything adjacent to it back 3 tiles. They take 5 damage if they collide with something.",
+    "damage_instance": {
+      "effects": {
+        "KnockUpAndAway": {
+          "stacks": "5"
+        }
+      }
+    }
+  },
+  "Picnic": {
+    "id": "Picnic",
+    "template": "spell",
+    "name_key": "ABILITY_PICNIC_NAME",
+    "name": "Picnic",
+    "desc_key": "ABILITY_PICNIC_DESC",
+    "description": "You and adjacent units each heal 5 HP.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "affected_particle": "HealSmall"
+    },
+    "damage_instance": {
+      "heal": "5"
+    }
+  },
+  "Picnic2": {
+    "id": "Picnic2",
+    "variant_of": "Picnic",
+    "desc_key": "ABILITY_PICNIC2_DESC",
+    "description": "You and adjacent units each heal 5 HP and gain +1 Damage.",
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "SoothingShot": {
+    "id": "SoothingShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SOOTHINGSHOT_NAME",
+    "name": "Soothing Shot",
+    "desc_key": "ABILITY_SOOTHINGSHOT_DESC",
+    "description": "A ranged shot that heals and inflicts Charmed 1.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "projectile": "CupidsArrowProjectile",
+      "animation": "throwArrow",
+      "particle": "CharmedOverlay"
+    },
+    "damage_instance": {
+      "heal": "10+bonus_ranged_damage",
+      "effects": {
+        "Charmed": "1"
+      }
+    }
+  },
+  "SoothingShot2": {
+    "id": "SoothingShot2",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SOOTHINGSHOT_NAME",
+    "name": "Soothing Shot",
+    "desc_key": "ABILITY_SOOTHINGSHOT2_DESC",
+    "description": "A ranged shot that heals and inflicts Charmed 2.\nAgainst allies this cleanses debuffs and inflicts Charmed 1 instead.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "heal": "10+bonus_ranged_damage",
+      "effects": {
+        "Conditional_Ally": {
+          "Cleanse": "0",
+          "Charmed": "1"
+        },
+        "Else": {
+          "Charmed": "2"
+        }
+      }
+    }
+  },
+  "Vivisect": {
+    "id": "Vivisect",
+    "template": "melee_attack",
+    "name_key": "ABILITY_VIVISECT_NAME",
+    "name": "Vivisect",
+    "desc_key": "ABILITY_VIVISECT_DESC",
+    "description": "A melee attack that spawns a baited bear trap if it kills a unit or destroys a body.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Conditional_DestructibleCorpse": {
+          "VaporizeCorpse": "1",
+          "ApplyToTile": {
+            "ObjectOnHit": "Bait",
+            "SpawnBearTrap": "1"
+          }
+        },
+        "Else": {
+          "SpawnBearTrapIfHitKills": "1",
+          "SpawnThingIfHitKills": "Bait"
+        }
+      }
+    }
+  },
+  "Vivisect2": {
+    "id": "Vivisect2",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_VIVISECT_NAME",
+    "name": "Vivisect",
+    "desc_key": "ABILITY_VIVISECT2_DESC",
+    "description": "A lobbed attack that spawns a baited bear trap if it kills a unit or destroys a body.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Conditional_DestructibleCorpse": {
+          "VaporizeCorpse": "1",
+          "ApplyToTile": {
+            "ObjectOnHit": "Bait",
+            "SpawnBearTrap": "1"
+          }
+        },
+        "Else": {
+          "SpawnBearTrapIfHitKills": "1",
+          "SpawnThingIfHitKills": "Bait"
+        }
+      }
+    }
+  },
+  "PoisonLace": {
+    "id": "PoisonLace",
+    "template": "targeted_status",
+    "name_key": "ABILITY_POISONLACE_NAME",
+    "name": "Poison Lace",
+    "desc_key": "ABILITY_POISONLACE_DESC",
+    "description": "Give yourself or an adjacent unit +1 Poison Lace.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "PoisonLace": "1"
+      }
+    }
+  },
+  "PoisonLace2": {
+    "id": "PoisonLace2",
+    "variant_of": "PoisonLace",
+    "desc_key": "ABILITY_POISONLACE2_DESC",
+    "description": "Give yourself or any other unit +1 Poison Lace.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "SlopThePigs": {
+    "id": "SlopThePigs",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SLOPTHEPIGS_NAME",
+    "name": "Slop the Pigs",
+    "desc_key": "ABILITY_SLOPTHEPIGS_DESC",
+    "description": "Each familiar in an area gains All Stats Up and heals 4 HP. Other units in the area gain +1 [img:con] and heal 2 HP.",
+    "class": "Hunter",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+bonus_range",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "Foodball"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "Conditional_Familiar": {
+          "BonusDamage": "-2",
+          "AllStatsUp": "1"
+        },
+        "Else": {
+          "ConstitutionUp": "1"
+        }
+      }
+    }
+  },
+  "SlopThePigs2": {
+    "id": "SlopThePigs2",
+    "variant_of": "SlopThePigs",
+    "desc_key": "ABILITY_SLOPTHEPIGS2_DESC",
+    "description": "Each familiar in an area gains All Stats Up and heals 4 HP. Other units in the area gain +1 [img:con] and heal 2 HP.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "SpiderInjector": {
+    "id": "SpiderInjector",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_EGGSACTRAP_NAME",
+    "name": "Egg Sac Trap",
+    "desc_key": "ABILITY_EGGSACTRAP_DESC",
+    "description": "Spawn a spider egg trap that inflicts Infested 4.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "EggSackTrap",
+      "use_rotation": "false"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnCustomTrap": "EggSackTrap",
+        "SpiderInfested": "4"
+      }
+    }
+  },
+  "SpiderInjector2": {
+    "id": "SpiderInjector2",
+    "variant_of": "SpiderInjector",
+    "desc_key": "ABILITY_EGGSACTRAP2_DESC",
+    "description": "Spawn a spider egg trap that deals damage and inflicts Infested 4.",
+    "damage_instance": {
+      "damage": "4"
+    }
+  },
+  "PersistentHunt": {
+    "id": "PersistentHunt",
+    "template": "targeted_status",
+    "name_key": "ABILITY_PERSISTENTHUNT_NAME",
+    "name": "Persistent Hunt",
+    "desc_key": "ABILITY_PERSISTENTHUNT_DESC",
+    "description": "Inflict Marked 5 on a unit. \nRELOAD: Kill an enemy.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "0",
+      "requires_reload": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "graphics": {
+      "affected_particle": "TakeAim",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "effects": {
+        "Marked": "5"
+      }
+    },
+    "bonus_passives": {
+      "ReloadOnKillEnemy": "1"
+    }
+  },
+  "PersistentHunt2": {
+    "id": "PersistentHunt2",
+    "variant_of": "PersistentHunt",
+    "desc_key": "ABILITY_PERSISTENTHUNT2_DESC",
+    "description": "Inflict Marked 5 on a unit.\nRELOAD: Kill an enemy.\nThis spell starts reloaded.",
+    "cost": {
+      "start_reloaded": "true"
+    }
+  },
+  "Bunker": {
+    "id": "Bunker",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_HEDGEIN_NAME",
+    "name": "Hedge In",
+    "desc_key": "ABILITY_HEDGEIN_DESC",
+    "description": "Spawn bear traps on each adjacent tile.",
+    "class": "Hunter",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_restrictions": "must_be_empty",
+      "low_gravity_boostable": "false"
+    },
+    "graphics": {
+      "projectile": "DamageTrap",
+      "use_rotation": "false",
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "10",
+      "custom_additional_ai_weight": "tile_has_no_known_traps",
+      "effects": {
+        "SpawnBearTrap": "1"
+      }
+    }
+  },
+  "Bunker2": {
+    "id": "Bunker2",
+    "variant_of": "Bunker",
+    "desc_key": "ABILITY_HEDGEIN2_DESC",
+    "description": "Spawn bear traps on each tile exactly 2 tiles away.",
+    "target": {
+      "min_aoe": "2",
+      "max_aoe": "2"
+    }
+  }
+}

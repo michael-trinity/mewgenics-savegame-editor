@@ -1,0 +1,190 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "welcome": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog": "NPC_TRACY_SHOP_WELCOME_1",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_2",
+      "wait_for_cancel": "1"
+    },
+    "welcome_water": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_WATER_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_water_cheap": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_WATER_CHEAP_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_sewers": "welcome_junkyard",
+    "welcome_junkyard": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_JUNKYARD_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_caves": "welcome_boneyard",
+    "welcome_boneyard": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog": "NPC_TRACY_SHOP_WELCOME_BONEYARD_1",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_BONEYARD_2",
+      "wait_for_cancel": "1"
+    },
+    "welcome_desert": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_DESERT_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_crater": "welcome_bunker",
+    "welcome_bunker": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog": "NPC_TRACY_SHOP_WELCOME_BUNKER_2",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_BUNKER_3",
+      "wait_for_cancel": "1"
+    },
+    "welcome_moon": "welcome_core",
+    "welcome_core": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_CORE_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_lab": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog": "NPC_TRACY_SHOP_WELCOME_LAB_1",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_LAB_2",
+      "wait_for_cancel": "1"
+    },
+    "welcome_iceage": "welcome_future",
+    "welcome_future": {
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_FUTURE_1",
+      "wait_for_cancel": "1"
+    },
+    "welcome_jurassic": "welcome_theend",
+    "welcome_theend": {
+      "set_npc_voice": "beanies",
+      "cancelable": "true",
+      "delay": ".5",
+      "dialog": "NPC_TRACY_SHOP_WELCOME_THEEND_1",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_WELCOME_THEEND_2",
+      "wait_for_cancel": "1"
+    },
+    "/*": "cant_afford_debug",
+    "welcome_tutorial": "welcome_alley",
+    "welcome_meatworld": "welcome_desert",
+    "welcome_dimensionx": "welcome_lab",
+    "welcome_endoftime": "*/",
+    "purchase_item": {
+      "do_random_sequence": [
+        "purchase_item_a,",
+        "purchase_item_b,",
+        "purchase_item_c,",
+        "purchase_item_d"
+      ]
+    },
+    "purchase_item_a": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_PURCHASE_ITEM_A_1",
+      "wait_for_cancel": "1"
+    },
+    "purchase_item_b": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_PURCHASE_ITEM_B_1",
+      "wait_for_cancel": "1"
+    },
+    "purchase_item_c": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_PURCHASE_ITEM_C_1",
+      "wait_for_cancel": "1"
+    },
+    "purchase_item_d": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_PURCHASE_ITEM_D_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford": {
+      "do_random_sequence": [
+        "cant_afford_a,",
+        "cant_afford_b,",
+        "cant_afford_c,",
+        "cant_afford_d"
+      ]
+    },
+    "cant_afford_a": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_CANT_AFFORD_A_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford_b": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_CANT_AFFORD_B_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford_c": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_CANT_AFFORD_C_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford_d": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_CANT_AFFORD_D_1",
+      "wait_for_cancel": "1"
+    },
+    "purchase_item_moon": "purchase_item_core",
+    "cant_afford_moon": "cant_afford_core",
+    "purchase_item_iceage": "purchase_item_future",
+    "cant_afford_iceage": "cant_afford_future",
+    "purchase_item_jurassic": "purchase_item_theend",
+    "cant_afford_jurassic": "cant_afford_theend",
+    "purchase_item_theend": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_PURCHASE_ITEM_THEEND_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford_theend": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_SHOP_CANT_AFFORD_THEEND_1",
+      "wait_for_cancel": "1"
+    },
+    "purchase_item_tutorial": "purchase_item_alley",
+    "purchase_item_sewers": "purchase_item_junkyard",
+    "purchase_item_caves": "purchase_item_boneyard",
+    "purchase_item_meatworld": "purchase_item_desert",
+    "purchase_item_crater": "purchase_item_bunker",
+    "purchase_item_dimensionx": "purchase_item_lab",
+    "purchase_item_endoftime": "*/",
+    "cant_afford_tutorial": "cant_afford_alley",
+    "cant_afford_sewers": "cant_afford_junkyard",
+    "cant_afford_caves": "cant_afford_boneyard",
+    "cant_afford_meatworld": "cant_afford_desert",
+    "cant_afford_crater": "cant_afford_bunker",
+    "cant_afford_dimensionx": "cant_afford_lab",
+    "cant_afford_endoftime": "*/",
+    "tooltip": {
+      "cancelable": "true",
+      "tooltip_dialog": "NPC_TRACY_SHOP_TOOLTIP",
+      "wait_for_cancel": "1"
+    },
+    "hide_text": {
+      "cancelable": "true",
+      "dialog_and_autopass": ""
+    }
+  }
+}

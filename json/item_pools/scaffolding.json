@@ -1,0 +1,114 @@
+{
+  "chapter": {
+    "common": "55",
+    "uncommon": "35",
+    "rare": "10",
+    "very_rare": "1"
+  },
+  "chapter_common": {
+    "common": "55",
+    "uncommon": "35"
+  },
+  "chapter_rare": {
+    "rare": "15",
+    "very_rare": "1"
+  },
+  "treasure_easy": {
+    "uncommon": "75",
+    "rare": "15"
+  },
+  "treasure_hard": {
+    "uncommon": "60",
+    "rare": "40",
+    "very_rare": "2"
+  },
+  "shop_rare": {
+    "rare": "25",
+    "very_rare": "1"
+  },
+  "shop_common": {
+    "consumables": "60",
+    "common": "50",
+    "uncommon": "35",
+    "rare": "1",
+    "very_rare": ".01"
+  },
+  "any_chapter": {
+    "common": "55",
+    "uncommon": "35",
+    "rare": "10",
+    "very_rare": "1"
+  },
+  "combat_reward_easy": {
+    "common": "60",
+    "uncommon": "35",
+    "rare": "5"
+  },
+  "combat_reward_hard": {
+    "common": "50",
+    "uncommon": "30",
+    "rare": "15",
+    "very_rare": "1"
+  },
+  "combat_reward_miniboss": {
+    "common": "50",
+    "uncommon": "40",
+    "rare": "10",
+    "very_rare": "1"
+  },
+  "combat_reward_boss": {
+    "common": "50",
+    "uncommon": "40",
+    "rare": "10",
+    "very_rare": "1"
+  },
+  "tracy_houseshop_common": {
+    "basic_consumables": "90",
+    "consumables": "10",
+    "shop_common": "1"
+  },
+  "tracy_houseshop_common_item": {
+    "common": "50",
+    "uncommon": "35"
+  },
+  "tracy_houseshop_rare": {
+    "consumables": "10",
+    "shop_common": "1"
+  },
+  "tracy_houseshop_item": {
+    "common": "100",
+    "uncommon": "10",
+    "rare": "1",
+    "very_rare": ".01"
+  },
+  "tracy_houseshop_bonusrare": {
+    "rare": "15",
+    "very_rare": "1"
+  },
+  "current_chapter_common": {},
+  "current_chapter_uncommon": {},
+  "current_chapter_rare": {},
+  "current_chapter_very_rare": {},
+  "chapter_specific_item": {
+    "current_chapter_common": "55",
+    "current_chapter_uncommon": "35",
+    "current_chapter_rare": "10",
+    "current_chapter_very_rare": "1"
+  },
+  "common": {
+    "general_common": "auto",
+    "current_chapter_common": "auto"
+  },
+  "uncommon": {
+    "general_uncommon": "auto",
+    "current_chapter_uncommon": "auto"
+  },
+  "rare": {
+    "general_rare": "auto",
+    "current_chapter_rare": "auto"
+  },
+  "very_rare": {
+    "general_very_rare": "auto",
+    "current_chapter_very_rare": "auto"
+  }
+}

@@ -1,0 +1,2299 @@
+{
+  "IceBlock": {
+    "graphics": {
+      "movieclip": "IceCube",
+      "name": "OBJECT_ICECUBE_NAME",
+      "name_resolved": "Ice Cube",
+      "water_mask": "square",
+      "tooltip": "OBJECT_ICECUBE_DESC",
+      "tooltip_resolved": "Slides when attacked."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "elements": [
+        "Ice"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "IceBlockBehavior": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "/*GasCloud": {
+    "graphics": {
+      "movieclip": "GasCloud",
+      "name": "OBJECT_GASCLOUD_NAME",
+      "name_resolved": "Gas Cloud",
+      "depth_offset": "-.1"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "layer": "gas",
+      "flying": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "elements": [
+        "Poison"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "GasCloudBehavior": "2"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "DustCloud": {
+    "graphics": {
+      "movieclip": "DustCloud",
+      "name": "OBJECT_DUSTCLOUD_NAME",
+      "name_resolved": "Dust Cloud",
+      "depth_offset": "-.1"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "layer": "gas",
+      "flying": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "elements": [
+        "Dust"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "DustCloudBehavior": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Bomb": {
+    "graphics": {
+      "movieclip": "Bomb",
+      "name": "OBJECT_RATBOMB_NAME",
+      "name_resolved": "Rat Bomb",
+      "tooltip": "OBJECT_RATBOMB_DESC",
+      "tooltip_resolved": "Explodes on its turn or when hit with fire.\nAttack to disarm!"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Bomb_Land"
+        ]
+      ]
+    },
+    "properties": {
+      "health": "1",
+      "tag": "bomb",
+      "initiative": "-20",
+      "can_be_backstabbed": "false",
+      "faction": "none",
+      "inherit_faction": "true",
+      "type": "object",
+      "corpse_health": "1",
+      "kill_required": "false",
+      "ai_scale": ".5"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "BombExplode"
+    },
+    "passives": {
+      "BombBehavior": "1",
+      "LoopingSoundWhileAlive": "Bomb_FuseLoop"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "animate_choice": "false"
+    }
+  },
+  "Rock": {
+    "graphics": {
+      "movieclip": "BigRock",
+      "name": "OBJECT_ROCK_NAME",
+      "name_resolved": "Rock",
+      "shadow_size": ".50",
+      "water_mask": "medium"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_BigRockLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "30",
+      "corpse_health": "0",
+      "knockback_immune": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "elements": [
+        "Rock"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Junk": {
+    "graphics": {
+      "movieclip": "Junk",
+      "name": "OBJECT_JUNK_NAME",
+      "name_resolved": "Junk",
+      "shadow": "None",
+      "water_mask": "square",
+      "tooltip": "OBJECT_JUNK_DESC"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_JunkLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "tag": "trash",
+      "takes_turns": "false",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Tumor": {
+    "graphics": {
+      "movieclip": "Tumor",
+      "name": "OBJECT_TUMOR_NAME",
+      "name_resolved": "Tumor",
+      "scale": ".8",
+      "shadow": "None"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_TumorLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "visually_spiky": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "Thorns": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "TrashBag": {
+    "graphics": {
+      "movieclip": "TrashBag",
+      "name": "OBJECT_TRASHBAG_NAME",
+      "name_resolved": "Trash Bag",
+      "water_mask": "medmed",
+      "tooltip": "OBJECT_TRASHBAG_DESC",
+      "tooltip_resolved": "Spawns random Pickups when damaged."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_TrashBagLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "tag": [
+        "trash",
+        "container"
+      ],
+      "takes_turns": "false",
+      "corpse_health": "0",
+      "health": "25",
+      "can_be_backstabbed": "false",
+      "can_collect_coins": "true",
+      "held_coins": [
+        "5",
+        "10"
+      ],
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SpawnThingOnDamage": {
+        "object": "RandomPickup",
+        "coins": "1"
+      },
+      "BirdRewards": {
+        "statuses": {},
+        "ally_rewards": {
+          "Conditional_GoodRoll": {
+            "odds": "5%",
+            "FindItemFromPool": "chapter"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Dumpster_interactive": {
+    "graphics": {
+      "movieclip": "Dumpster",
+      "name": "OBJECT_DUMPSTER_NAME",
+      "name_resolved": "Dumpster",
+      "shade_occluded_objects": "true",
+      "water_mask": "square",
+      "tooltip": "OBJECT_DUMPSTER_DESC",
+      "tooltip_resolved": "Spawns random Pickups when damaged."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "size": "2x2",
+      "takes_turns": "false",
+      "corpse_health": "0",
+      "health": "100",
+      "can_be_backstabbed": "false",
+      "can_collect_coins": "true",
+      "held_coins": [
+        "2",
+        "15"
+      ],
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SpawnThingOnDamage": {
+        "object": "Food",
+        "chance": ".25",
+        "good": "true"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SmallRock": {
+    "graphics": {
+      "movieclip": "SmallRock",
+      "name": "OBJECT_SMALLROCK_NAME",
+      "name_resolved": "Small Rock",
+      "shadow_size": ".50",
+      "uifloaters_offset": ".5",
+      "tooltip": "OBJECT_SMALLROCK_DESC",
+      "tooltip_resolved": "Attack it to knock it foward in a straight line. It deals 5 damage to units it hits."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_Rock_Land"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "tag": "rock",
+      "type": "object",
+      "takes_turns": "false",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "move_block": "nothing",
+      "corpse_health": "0",
+      "health": "3"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SmallRockBehavior": "5",
+      "LimitDamage": "1",
+      "LimitHeal": "0",
+      "StripStatuses": "1",
+      "FormChanger": {
+        "default": {
+          "passives": {
+            "FormChangeOnElementInfluence": {
+              "element": "very_hot",
+              "exclude": "water",
+              "form": "hot"
+            }
+          }
+        },
+        "hot": {
+          "name": "OBJECT_HOTROCK_NAME",
+          "name_resolved": "Hot Rock",
+          "animation_suffix": "Hot",
+          "passives": {
+            "InnateElement": "Fire",
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Burn": "2"
+              },
+              "elements": [
+                "Fire"
+              ]
+            },
+            "FormChangeOnElementInfluence": {
+              "element": "water",
+              "form": "default",
+              "particle": "FireExtinguish",
+              "sfx": "FireExtinguish"
+            }
+          }
+        },
+        "initial_form": "default"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SmallLavaRock": {
+    "variant_of": "SmallRock",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "hot"
+      }
+    }
+  },
+  "AnimatedSmallRock": {
+    "graphics": {
+      "movieclip": "PetRock",
+      "name": "OBJECT_PETROCK_NAME",
+      "name_resolved": "Pet Rock",
+      "shadow_size": ".50",
+      "uifloaters_offset": ".5",
+      "tooltip": "OBJECT_PETROCK_DESC",
+      "tooltip_resolved": "Attack it to knock it foward in a straight line. It deals 5 damage to units it hits."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_Rock_Land"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "tag": "rock",
+      "type": "object",
+      "takes_turns": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "move_block": "nothing",
+      "corpse_health": "0",
+      "initiative": "-80",
+      "movement": "2",
+      "ai_scale": ".25",
+      "health": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "AnimatedRockAttack",
+      "spells": []
+    },
+    "passives": {
+      "SmallRockBehavior": "5",
+      "LimitDamage": "1",
+      "LimitHeal": "0",
+      "StripStatuses": "1",
+      "FormChanger": {
+        "default": {
+          "passives": {
+            "FormChangeOnElementInfluence": {
+              "element": "very_hot",
+              "exclude": "water",
+              "form": "hot"
+            }
+          }
+        },
+        "hot": {
+          "name": "OBJECT_HOTPETROCK_NAME",
+          "name_resolved": "Hot Pet Rock <3",
+          "animation_suffix": "Hot",
+          "passives": {
+            "InnateElement": "Fire",
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Burn": "2"
+              },
+              "elements": [
+                "Fire"
+              ]
+            },
+            "FormChangeOnElementInfluence": {
+              "element": "water",
+              "form": "default",
+              "particle": "FireExtinguish",
+              "sfx": "FireExtinguish"
+            }
+          }
+        },
+        "initial_form": "default"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default_ignore_selfdamage",
+      "move_weights": "stay_close"
+    }
+  },
+  "AnimatedSmallLavaRock": {
+    "variant_of": "AnimatedSmallRock",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "hot"
+      }
+    }
+  },
+  "Boulder": {
+    "graphics": {
+      "movieclip": "Boulder",
+      "name": "OBJECT_BOULDER_NAME",
+      "name_resolved": "Boulder",
+      "tooltip": "OBJECT_BOULDER_DESC",
+      "tooltip_resolved": "Attack it to push it 1 tile. It deals 9 damage to units it hits."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_BoulderLand"
+        ],
+        [
+          "SE_PetRock_Dash",
+          "SE_PetBoulder_Dash"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "tag": "rock",
+      "type": "object",
+      "takes_turns": "false",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0",
+      "health": "8"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SmallRockBehavior": {
+        "damage": "9",
+        "knockback": "1"
+      },
+      "LimitDamage": "1",
+      "LimitHeal": "0",
+      "StripStatuses": "1",
+      "FormChanger": {
+        "default": {},
+        "hot": {
+          "name": "OBJECT_HOTBOULDER_NAME",
+          "name_resolved": "Hot Boulder",
+          "animation_suffix": "Hot",
+          "passives": {
+            "InnateElement": "Fire",
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Burn": "2"
+              },
+              "elements": [
+                "Fire"
+              ]
+            }
+          }
+        },
+        "initial_form": "default"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "LavaBoulder": {
+    "variant_of": "Boulder",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "hot"
+      }
+    }
+  },
+  "AnimatedBoulder": {
+    "graphics": {
+      "movieclip": "PetBoulder",
+      "name": "OBJECT_PETBOULDER_NAME",
+      "name_resolved": "Pet Boulder",
+      "tooltip": "OBJECT_PETBOULDER_DESC",
+      "tooltip_resolved": "Attack it to push it 1 tile. It deals 9 damage to units it hits."
+    },
+    "properties": {
+      "faction": "allies",
+      "tag": "rock",
+      "type": "object",
+      "takes_turns": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0",
+      "initiative": "-80",
+      "movement": "1",
+      "ai_scale": ".25",
+      "health": "8"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "AnimatedRockAttack",
+      "spells": []
+    },
+    "passives": {
+      "SmallRockBehavior": {
+        "damage": "5",
+        "knockback": "1"
+      },
+      "LimitDamage": "1",
+      "LimitHeal": "0",
+      "StripStatuses": "1",
+      "FormChanger": {
+        "default": {
+          "passives": {
+            "FormChangeOnElementInfluence": {
+              "element": "very_hot",
+              "exclude": "water",
+              "form": "hot"
+            }
+          }
+        },
+        "hot": {
+          "name": "OBJECT_HOTPETBOULDER_NAME",
+          "name_resolved": "Hot Pet Boulder <3",
+          "animation_suffix": "Hot",
+          "passives": {
+            "InnateElement": "Fire",
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Burn": "2"
+              },
+              "elements": [
+                "Fire"
+              ]
+            },
+            "FormChangeOnElementInfluence": {
+              "element": "water",
+              "form": "default",
+              "particle": "FireExtinguish",
+              "sfx": "FireExtinguish"
+            }
+          }
+        },
+        "initial_form": "default"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default_ignore_selfdamage",
+      "move_weights": "stay_close"
+    }
+  },
+  "AnimatedLavaBoulder": {
+    "variant_of": "AnimatedBoulder",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "hot"
+      }
+    }
+  },
+  "Tire": {
+    "graphics": {
+      "movieclip": "Tire",
+      "name": "OBJECT_TIRE_NAME",
+      "name_resolved": "Tire",
+      "water_mask": "medium",
+      "tooltip": "OBJECT_TIRE_DESC",
+      "tooltip_resolved": "Knocks back all adjacent units when this takes damage."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_TireLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "inanimate_can_receive_specific_statuses": [
+        "Burn"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "FormChanger": {
+        "Down": {
+          "passives": {
+            "TireBehavior": "1"
+          }
+        },
+        "Up": {
+          "animation_suffix": "Up",
+          "tooltip": "OBJECT_TIREUP_DESC",
+          "tooltip_resolved": "Attack it to send it rolling.",
+          "passives": {
+            "UpTireBehavior": "5"
+          }
+        },
+        "initial_form": "Down"
+      },
+      "PassiveWhenAffectedByElement": {
+        "element": "Fire",
+        "passives": {
+          "TileTrail_Ahead": "FireTile"
+        }
+      },
+      "DiesToPiercingAndSpikes": {
+        "deferred": "true"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Tire_Up": {
+    "variant_of": "Tire",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "Up"
+      }
+    }
+  },
+  "Crate": {
+    "graphics": {
+      "movieclip": "Crate",
+      "name": "OBJECT_CRATE_NAME",
+      "name_resolved": "Crate",
+      "water_mask": "square",
+      "tooltip": "OBJECT_CRATE_DESC",
+      "tooltip_resolved": "What could be inside?"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "DamageHealthMed",
+          "SE_CrateDamage"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "tag": "container",
+      "takes_turns": "false",
+      "health": "10",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "held_coins": [
+        "1",
+        "10"
+      ],
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Crate_WithItemChance": {
+    "variant_of": "Crate",
+    "passives": {
+      "BirdRewards": {
+        "statuses": {},
+        "ally_rewards": {
+          "Conditional_GoodRoll": {
+            "odds": "33%",
+            "FindItemFromPool": "chapter"
+          }
+        }
+      }
+    }
+  },
+  "GasCan": {
+    "graphics": {
+      "movieclip": "GasCan",
+      "name": "OBJECT_GASCAN_NAME",
+      "name_resolved": "Gas Can"
+    },
+    "properties": {
+      "health": "10",
+      "can_be_backstabbed": "false",
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "corpse_health": "0",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "GasCanExplode"
+    },
+    "passives": {
+      "GasCanBehavior": "1",
+      "ChangeTileOnPop": "OilTile"
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "animate_choice": "false"
+    }
+  },
+  "Poop": {
+    "graphics": {
+      "movieclip": "Poop",
+      "name": "OBJECT_POOP_NAME",
+      "name_resolved": "Poop"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_PoopLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "tag": "poop",
+      "takes_turns": "false",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "held_coins": [
+        "0",
+        "2"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "CapReceivedDamage": "1",
+      "HPAltStates": {
+        "clipname": "poopmain",
+        "/*thresholds": [
+          [
+            "3",
+            "0"
+          ],
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "2"
+          ],
+          [
+            "0",
+            "3"
+          ]
+        ],
+        "*/": "thresholds",
+        "1": "0",
+        "0": "3"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "FlamingPoop": {
+    "variant_of": "Poop",
+    "passives": {
+      "Burn": "3"
+    }
+  },
+  "Hydrant": {
+    "graphics": {
+      "movieclip": "Hydrant",
+      "name": "OBJECT_FIREHYDRANT_NAME",
+      "name_resolved": "Fire Hydrant"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "knockback_immune": "true",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "TransformOnDeath": "HydrantFountain"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "HydrantFountain": {
+    "graphics": {
+      "movieclip": "HydrantFountain",
+      "name": "OBJECT_FOUNTAIN_NAME",
+      "name_resolved": "Fountain",
+      "depth_offset": ".1",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "inanimate": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "knockback_immune": "true",
+      "blocking": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SpreadWater": "1",
+      "FlingObjectsOnTop": "8"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Dice": {
+    "graphics": {
+      "movieclip": "GambitDice",
+      "name": "OBJECT_D6_NAME",
+      "name_resolved": "D6",
+      "shadow_size": ".50",
+      "tooltip": "OBJECT_D6_DESC",
+      "tooltip_resolved": "Attack to re-roll."
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "speculative_inanimate": "false",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "DiceBehavior": {
+        "dice_size": "6",
+        "knockback_damage": "5"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Phylactery": {
+    "graphics": {
+      "movieclip": "Tumor",
+      "name": "OBJECT_PHYLACTERY_NAME",
+      "name_resolved": "Phylactery",
+      "shadow": "None",
+      "tooltip": "OBJECT_PHYLACTERY_DESC",
+      "tooltip_resolved": "When its owner dies, this breaks and revives them."
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "75",
+      "initial_health": "15",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "BloatyCorpse": {
+    "graphics": {
+      "movieclip": "BloatyCorpse",
+      "name": "OBJECT_BLOATEDCORPSE_NAME",
+      "name_resolved": "Bloated Corpse",
+      "water_mask": "medmed",
+      "tooltip": "OBJECT_BLOATEDCORPSE_DESC",
+      "tooltip_resolved": "Explodes into Maggots when destroyed."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "can_be_backstabbed": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "BloatyExplodey"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "BloatyExplodey",
+      "MultiSpawnOnDeath": {
+        "obj": "Maggot",
+        "count": [
+          "0,",
+          "2"
+        ]
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "TNTCrate": {
+    "graphics": {
+      "movieclip": "TNTCrate",
+      "name": "OBJECT_TNT_NAME",
+      "name_resolved": "TNT",
+      "no_splatter": "true",
+      "water_mask": "square",
+      "tooltip": "OBJECT_TNT_DESC",
+      "tooltip_resolved": "Explodes when destroyed."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "can_be_backstabbed": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "TNTExplodey"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "TNTExplodey"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "HarpoonTrap": {
+    "graphics": {
+      "movieclip": "HarpoonTrap",
+      "name": "OBJECT_HARPOONTRAP_NAME",
+      "name_resolved": "Harpoon Trap",
+      "no_splatter": "true",
+      "water_mask": "square",
+      "tooltip": "OBJECT_HARPOONTRAP_DESC",
+      "tooltip_resolved": "Harpoons units that end movement in front of it."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "aoe_pierce_mode": "block"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "HarpoonTrapPull"
+      ]
+    },
+    "passives": {
+      "HarpoonTrapPassive": "HarpoonTrapPull"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SpikyRock": {
+    "graphics": {
+      "movieclip": "SpikyRock",
+      "name": "OBJECT_SPIKYROCK_NAME",
+      "name_resolved": "Spiky Rock",
+      "no_splatter": "true",
+      "water_mask": "medium",
+      "tooltip": "OBJECT_SPIKYROCK_DESC"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "knockback_immune": "true",
+      "aoe_pierce_mode": "block",
+      "visually_spiky": "true",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "Thorns": "5"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SpikyCactus": {
+    "variant_of": "SpikyRock",
+    "graphics": {
+      "movieclip": "SpikyCactus",
+      "name": "OBJECT_SPIKYCACTUS_NAME",
+      "name_resolved": "Spiky Cactus"
+    },
+    "properties": {
+      "visually_spiky": "true"
+    },
+    "passives": {
+      "Thorns": "5",
+      "ChangeTileOnDeath": "WaterTile",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Thorns": "1"
+        }
+      }
+    }
+  },
+  "SpikyCactus_Tall": {
+    "variant_of": "SpikyCactus",
+    "graphics": {
+      "movieclip": "SpikyCactusTall",
+      "name": "OBJECT_SPIKYCACTUS_NAME",
+      "name_resolved": "Spiky Cactus",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "tall": "true"
+    }
+  },
+  "SpikyCactus_2x2": {
+    "variant_of": "SpikyCactus",
+    "graphics": {
+      "movieclip": "SpikyCactus2x2",
+      "name": "OBJECT_SPIKYCACTUS_NAME",
+      "name_resolved": "Spiky Cactus",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "size": "2x2",
+      "tall": "true"
+    }
+  },
+  "Decoy": {
+    "graphics": {
+      "movieclip": "Decoy2",
+      "name": "OBJECT_DECOY_NAME",
+      "name_resolved": "Decoy"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_BuildBot_Land"
+        ]
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "tag": [
+        "robot",
+        "decoy"
+      ],
+      "takes_turns": "false",
+      "health": "5",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "ai_scale": "1"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "ExplodingDecoy": {
+    "variant_of": "Decoy",
+    "graphics": {
+      "desc": "OBJECT_DECOY_DESC",
+      "desc_resolved": "Explodes when it dies."
+    },
+    "abilities": {
+      "spells": [
+        "DecoyExplode"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "DecoyExplode"
+    }
+  },
+  "ElectricNail": {
+    "graphics": {
+      "movieclip": "ElectricNail",
+      "name": "OBJECT_ELECTRICNAIL_NAME",
+      "name_resolved": "Electric Nail",
+      "shadow_size": ".25",
+      "tooltip": "OBJECT_ELECTRICNAIL_DESC",
+      "tooltip_resolved": "It arcs electricity to neighboring tiles whenever any unit spends mana."
+    },
+    "properties": {
+      "type": "object",
+      "tag": "robot",
+      "takes_turns": "false",
+      "health": "5",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "faction": "none"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "ElectricArcs": "1",
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "RubberFistBot": {
+    "graphics": {
+      "movieclip": "Punchbot",
+      "name": "OBJECT_RUBBERFISTBOT_NAME",
+      "name_resolved": "Rubber Fist Bot",
+      "tooltip": "OBJECT_RUBBERFISTBOT_DESC",
+      "tooltip_resolved": "It punches anything that gets near it."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_BuildBot_Land"
+        ]
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "tag": "robot",
+      "takes_turns": "false",
+      "health": "3",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "faction": "none",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "RubberFistBotPunch"
+    },
+    "passives": {
+      "Robot": "1",
+      "/*Trapper": {
+        "ability": "RubberFistBotPunch",
+        "enemies_only": "false",
+        "on_self_move": "true"
+      },
+      "*/": "MovementReaction",
+      "ability": "RubberFistBotPunch",
+      "enemies_only": "false",
+      "on_self_move_too": "true"
+    }
+  },
+  "ai": {
+    "brain": "NoBrain"
+  },
+  "Tombstone_Ghost": {
+    "graphics": {
+      "movieclip": "Tombstone",
+      "name": "OBJECT_TOMBSTONE_NAME",
+      "name_resolved": "Tombstone",
+      "tooltip": "OBJECT_GHOSTTOMBSTONE_DESC",
+      "tooltip_resolved": "Could something be inside?"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "3",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "SpawnOnDeath": {
+        "obj": [
+          "Spookie",
+          "Spookie",
+          "Scary",
+          "Coin2",
+          "Coin3",
+          "Coin4"
+        ],
+        "faction": "enemies"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Tombstone_Zombie": {
+    "graphics": {
+      "movieclip": "Tombstone",
+      "name": "OBJECT_TOMBSTONE_NAME",
+      "name_resolved": "Tombstone",
+      "piece_alt_frame": "3",
+      "tooltip": "OBJECT_TOMBSTONE_DESC",
+      "tooltip_resolved": "Summons a Zombie Cat at the end of each round."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "3",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "AutocastEachRound": {
+        "ability": "ZombieTombstone",
+        "even_if_stunned": "true"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Tombstone_ManaIdol": {
+    "graphics": {
+      "movieclip": "Tombstone",
+      "name": "OBJECT_TOMBSTONE_NAME",
+      "name_resolved": "Tombstone",
+      "piece_alt_frame": "5",
+      "tooltip": "OBJECT_DRAINTOMBSTONE_DESC",
+      "tooltip_resolved": "Drains mana from units when they end their turn."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "3",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "GlobalManaDrainAura": "-1",
+      "CharacterLightSource": {
+        "color": [
+          ".3,",
+          ".7,",
+          "1"
+        ],
+        "size": "3"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Cactus": {
+    "graphics": {
+      "movieclip": "Cactus",
+      "name": "OBJECT_CACTUS_NAME",
+      "name_resolved": "Cactus",
+      "tooltip": "OBJECT_CACTUS_DESC"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "10",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "visually_spiky": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "Thorns": "5",
+      "ChangeTileOnDeath": "WaterTile",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Thorns": "1"
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Twister": {
+    "graphics": {
+      "movieclip": "Twister",
+      "name": "OBJECT_TWISTER_NAME",
+      "name_resolved": "Twister",
+      "no_splatter": "true",
+      "tooltip": "OBJECT_TWISTER_DESC",
+      "tooltip_resolved": "Moves towards its enemies. Tosses what it touches."
+    },
+    "properties": {
+      "faction": "enemies",
+      "inherit_faction": "true",
+      "type": "object",
+      "takes_turns": "true",
+      "initiative": "10000",
+      "movement": "2",
+      "health": "1",
+      "inanimate": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "blocking": "false",
+      "kill_required": "false",
+      "flying": "true",
+      "tile_desire_cost": "200"
+    },
+    "abilities": {
+      "move": "TwisterMove",
+      "attack": "None"
+    },
+    "passives": {
+      "Phasing": "1",
+      "LoopingSoundWhileAlive": "Twister_loop",
+      "TwisterFling": {
+        "min_dist": "3",
+        "max_dist": "5",
+        "damage": "5"
+      },
+      "ReflectProjectiles": "100%",
+      "DiesToElement": "Wind",
+      "HiddenDoomed": "2"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move",
+      "animate_choice": "false"
+    }
+  },
+  "NeutralTwister": {
+    "variant_of": "Twister",
+    "graphics": {
+      "tooltip": "OBJECT_NTWISTER_DESC",
+      "tooltip_resolved": "Moves randomly. Tosses what it touches."
+    },
+    "properties": {
+      "faction": "third_party",
+      "initiative": "10"
+    }
+  },
+  "MiniNuke": {
+    "graphics": {
+      "movieclip": "TNTCrate",
+      "name": "OBJECT_MININUKE_NAME",
+      "name_resolved": "Mini Nuke",
+      "no_splatter": "true",
+      "water_mask": "square",
+      "tooltip": "OBJECT_MININUKE_DESC",
+      "tooltip_resolved": "Explodes when destroyed."
+    },
+    "properties": {
+      "faction": "none",
+      "tag": "bomb",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "can_be_backstabbed": "false",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "MiniNukeExplodey"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "MiniNukeExplodey"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "NeutronStar": {
+    "graphics": {
+      "movieclip": "NeutronStar",
+      "name": "OBJECT_NEUTRONSTAR_NAME",
+      "name_resolved": "Neutron Star",
+      "dont_sink": "true",
+      "tooltip": "OBJECT_NEUTRONSTAR_DESC",
+      "tooltip_resolved": "May go supernova..."
+    },
+    "properties": {
+      "tag": "cosmic",
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "true",
+      "size": "2x2",
+      "tall": "true",
+      "inanimate": "true",
+      "knockback_immune": "true",
+      "takes_main_turn": "false",
+      "round_end_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "BHoleSuck",
+        "NeutronRumble",
+        "NeutronExplode"
+      ]
+    },
+    "passives": {
+      "FormChanger": {
+        "NeutronStar": {
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_random": [
+                "NeutronRumble",
+                "NeutronExplode"
+              ]
+            },
+            "decision_weights": "always_cast",
+            "animate_choice": "false"
+          },
+          "passives": {
+            "MeleeRevengeDamage": {
+              "damage": "5",
+              "knockback": "3",
+              "effects": {
+                "Burn": "5"
+              },
+              "elements": [
+                "Fire"
+              ]
+            }
+          }
+        },
+        "BlackHole": {
+          "animation_suffix": "BlackHole",
+          "name": "OBJECT_BLACKHOLE_NAME",
+          "name_resolved": "Black Hole",
+          "tooltip": "OBJECT_BLACKHOLE_DESC",
+          "tooltip_resolved": "Pulls units towards it. Destroys anything that touches it.",
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "BHoleSuck"
+            },
+            "decision_weights": "always_cast",
+            "animate_choice": "false"
+          },
+          "passives": {
+            "MeleeRevengeDamage": {
+              "damage": "0",
+              "type": "none",
+              "cant_miss": "true",
+              "effects": {
+                "BlackHoleSuck": "1"
+              }
+            },
+            "BlackHolePassive": "1"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "BlackHole": {
+    "variant_of": "NeutronStar",
+    "passives": {
+      "FormChanger": {
+        "initial_form": "BlackHole"
+      }
+    }
+  },
+  "HellHand": {
+    "graphics": {
+      "movieclip": "CoreArm",
+      "name": "OBJECT_HELLHAND_NAME",
+      "name_resolved": "Hell Hand",
+      "shadow": "none",
+      "no_splatter": "true",
+      "tooltip": "OBJECT_HELLHAND_DESC",
+      "tooltip_resolved": "Grapples its enemies if they walk past it."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "2",
+      "constitution": "2",
+      "intelligence": "2",
+      "speed": "5",
+      "charisma": "2"
+    },
+    "properties": {
+      "tag": "demon",
+      "faction": "enemies",
+      "kill_required": "false",
+      "movement": "0",
+      "health": "13",
+      "weak_threshold": "0",
+      "corpse_health": "0",
+      "takes_turns": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "HellHandGrab",
+      "spells": []
+    },
+    "passives": {
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "Trapper": "HellHandGrab"
+          }
+        },
+        "Grappling": {
+          "partial_animation_suffix": "Grapple",
+          "exit_animations": {
+            "Default": "release"
+          }
+        }
+      },
+      "FormChangeWhileHasStatus": {
+        "status": "Grappling",
+        "form_has": "Grappling",
+        "form_hasnot": "Default"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "CloningVat": {
+    "graphics": {
+      "movieclip": "CloningVat",
+      "name": "OBJECT_CLONINGVAT_NAME",
+      "name_resolved": "Cloning Vat",
+      "scale": ".8",
+      "tooltip": "OBJECT_CLONINGVAT_DESC",
+      "tooltip_resolved": "Something is moving inside..."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "kill_required": "false",
+      "movement": "0",
+      "corpse_health": "0",
+      "health": "3",
+      "takes_turns": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": []
+    },
+    "passives": {
+      "SpawnOnDeath": {
+        "obj": [
+          "Kitten",
+          "Kitten",
+          "TomTom",
+          "TomTom",
+          "Mangy",
+          "Mangy",
+          "CatCaller",
+          "CatCaller",
+          "GlassSpitter",
+          "SpiderCat",
+          "SharkyCat",
+          "WolfCat"
+        ],
+        "faction": "enemies",
+        "additional_statuses": {
+          "PermanentMadness": "1"
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "GroundedSpear": {
+    "graphics": {
+      "movieclip": "GroundedSpear",
+      "name": "OBJECT_GROUNDEDSPEAR_NAME",
+      "name_resolved": "Spear",
+      "tooltip": "OBJECT_GROUNDEDSPEAR_DESC",
+      "tooltip_resolved": "Attack to send it flying."
+    },
+    "properties": {
+      "tag": "spear",
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "12",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "StripStatuses": "1",
+      "AddStatusToReceivedDamage": {
+        "Conditional_IsPhysicalAttack": {
+          "RemoveKnockback": "1",
+          "KnockUpAndAway": {
+            "stacks": "5",
+            "distance": "3",
+            "displace": "true",
+            "self_damage": "false"
+          },
+          "TempPassiveUntilSettled": {
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Stun": "1"
+              }
+            }
+          }
+        },
+        "Else": {
+          "Conditional_HasKnockback": {
+            "RemoveKnockback": "1",
+            "KnockUpAndAway": {
+              "stacks": "5",
+              "distance": "3",
+              "displace": "true",
+              "self_damage": "false"
+            },
+            "TempPassiveUntilSettled": {
+              "MeleeRevengeDamage": {
+                "effects": {
+                  "Stun": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "LabSupportPillar": {
+    "graphics": {
+      "movieclip": "LabSupportPillar",
+      "name": "OBJECT_SUPPORTPILLAR_NAME",
+      "name_resolved": "Support Pillar",
+      "water_mask": "square",
+      "tooltip": "OBJECT_SUPPORTPILLAR_DESC",
+      "tooltip_resolved": "When destroyed will drop random things down around it."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "1",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "knockback_immune": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "LabPillarDrop"
+      ]
+    },
+    "passives": {
+      "DeathRattle": {
+        "ability": "LabPillarDrop",
+        "pop_corpse": "false",
+        "is_dying_animation": "true"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SpewerPill_Normal": {
+    "graphics": {
+      "movieclip": "SpewerPill",
+      "name": "OBJECT_SPEWERPILL_CREEP_NAME",
+      "name_resolved": "Creep Pill",
+      "piece_alt_frame": "1",
+      "tooltip": "OBJECT_SPEWERPILL_DESC",
+      "tooltip_resolved": "Heals and changes the form of Spewer when eaten."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "tag": "pill",
+      "hidden_tag": "sp_pill_normal",
+      "takes_turns": "false",
+      "health": "6",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "flying": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SpewerPill_Fire": {
+    "variant_of": "SpewerPill_Normal",
+    "graphics": {
+      "name": "OBJECT_SPEWERPILL_LAVA_NAME",
+      "name_resolved": "Lava Pill",
+      "piece_alt_frame": "3"
+    },
+    "properties": {
+      "hidden_tag": "sp_pill_fire"
+    }
+  },
+  "SpewerPill_Tar": {
+    "variant_of": "SpewerPill_Normal",
+    "graphics": {
+      "name": "OBJECT_SPEWERPILL_TAR_NAME",
+      "name_resolved": "Tar Pill",
+      "piece_alt_frame": "5"
+    },
+    "properties": {
+      "hidden_tag": "sp_pill_tar"
+    }
+  },
+  "SpewerPillTubeL": {
+    "graphics": {
+      "movieclip": "SpewerTube",
+      "name": "OBJECT_SPEWERTUBE_NAME",
+      "name_resolved": "Pill Tube",
+      "tooltip": "OBJECT_SPEWERTUBE_DESC",
+      "tooltip_resolved": "Spawns pills for Spewer."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "true",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "knockback_immune": "true",
+      "initiative": "-999999",
+      "lock_orientation": [
+        "-1",
+        "0"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "SpawnSpewerPill",
+      "spells": [
+        "LabPillarDrop"
+      ]
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "animate_choice": "false"
+    }
+  },
+  "SpewerPillTubeR": {
+    "variant_of": "SpewerPillTubeL",
+    "properties": {
+      "lock_orientation": [
+        "0",
+        "-1"
+      ]
+    }
+  },
+  "MiniVolcano": {
+    "graphics": {
+      "movieclip": "MiniVolcano",
+      "name": "OBJECT_MINIVOLCANO_NAME",
+      "name_resolved": "Mini Volcano",
+      "tooltip": "OBJECT_MINIVOLCANO_DESC",
+      "tooltip_resolved": "Spawns lava rocks when attacked."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "knockback_immune": "true",
+      "lock_orientation": [
+        "1",
+        "0"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "MiniVolcano_Spurt"
+      ]
+    },
+    "passives": {
+      "MiniVolcanoReaction": "MiniVolcano_Spurt"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "PunchingBag": {
+    "graphics": {
+      "movieclip": "Decoy",
+      "name": "OBJECT_PUNCHINGBAG_NAME",
+      "name_resolved": "Punching Bag",
+      "uifloaters_offset": "1.5"
+    },
+    "properties": {
+      "type": "object",
+      "takes_turns": "false",
+      "health": "999",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "faction": "third_party"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "KineticSpikes": "5"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "GasCloud": {
+    "graphics": {
+      "movieclip": "GasCloud",
+      "name": "OBJECT_GASCLOUD_NAME",
+      "name_resolved": "Gas Cloud",
+      "depth_offset": "-.1",
+      "no_splatter": "true",
+      "tooltip": "OBJECT_GASCLOUD_DESC",
+      "tooltip_resolved": "Poisons units that walk through it."
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "layer": "gas",
+      "flying": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "tile_desire_cost": "100",
+      "elements": [
+        "Poison"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "GasCloudBehavior2": "2",
+      "StatusOverlappingCharactersAndDie": {
+        "Poison": "1"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Grenade": {
+    "graphics": {
+      "movieclip": "Grenade",
+      "name": "OBJECT_GRENADE_NAME",
+      "name_resolved": "Grenade",
+      "no_splatter": "true",
+      "scale": ".8",
+      "tooltip": "OBJECT_GRENADE_DESC",
+      "tooltip_resolved": "Explodes on its turn or if it's destroyed. Explosion shreds 5 stacks of random buffs off of whatever it hits."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_Obj_GrenadeLand"
+        ]
+      ]
+    },
+    "properties": {
+      "faction": "none",
+      "tag": "bomb",
+      "initiative": "-99",
+      "type": "object",
+      "health": "35",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "GrenadeExplode"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "GrenadeExplode",
+      "DisplayDangerAOE": "GrenadeExplode",
+      "MinimumKnockbackFromPhysicalAttacks": "1",
+      "BasicAIDangerZone": "2"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "always_cast",
+      "pattern": {
+        "do": "GrenadeExplode"
+      }
+    }
+  },
+  "SlotMachine": {
+    "graphics": {
+      "movieclip": "SlotMachine",
+      "name": "OBJECT_SLOTMACHINE_NAME",
+      "name_resolved": "Slot Machine",
+      "no_splatter": "true",
+      "uifloaters_offset": "1.5",
+      "tooltip": "OBJECT_SLOTMACHINE_DESC",
+      "tooltip_resolved": "Attack to play! Explodes when destroyed."
+    },
+    "properties": {
+      "faction": "none",
+      "tag": [
+        "robot",
+        "container"
+      ],
+      "initiative": "-99",
+      "type": "object",
+      "health": "21",
+      "always_face_forward": "true",
+      "kill_required": "false",
+      "corpse_health": "0",
+      "takes_turns": "false",
+      "flying": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "SlotMachine_DeathExplode",
+        "SlotResult_Explode",
+        "SlotResult_Nothing",
+        "SlotResult_RandomPickup",
+        "SlotResult_Jackpot_Coins"
+      ]
+    },
+    "passives": {
+      "Robot": {
+        "alternate_energized_effect": {
+          "FormChange": "GuaranteedJackpot"
+        }
+      },
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "SlotMachineRollPool": {
+              "SlotResult_Explode": "1",
+              "SlotResult_Nothing": "7",
+              "SlotResult_RandomPickup": "11",
+              "SlotResult_Jackpot_Coins": "1"
+            }
+          }
+        },
+        "GuaranteedJackpot": {
+          "passives": {
+            "SlotMachineRollPool": {
+              "SlotResult_Jackpot_Coins": "1"
+            }
+          }
+        }
+      },
+      "DeathRattle": "SlotMachine_DeathExplode"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "CovenCandle": {
+    "graphics": {
+      "movieclip": "CovenCandle",
+      "name": "OBJECT_CANDLE_NAME",
+      "name_resolved": "Candle",
+      "uifloaters_offset": "1.5",
+      "scale": ".8",
+      "no_splatter": "true"
+    },
+    "properties": {
+      "faction": "none",
+      "tag": "candle",
+      "type": "object",
+      "takes_turns": "false",
+      "health": "50",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "weak_threshold": "0",
+      "knockback_immune": "true",
+      "can_be_overkilled": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "BattlefieldUniqueRandomPassive": {
+        "DemonicGlyph_Bite": "1",
+        "DemonicGlyph_Fire": "1",
+        "DemonicGlyph_Summon": "1",
+        "DemonicGlyph_Movement": "1",
+        "DemonicGlyph_Bounce": "1"
+      },
+      "StripStatuses": "1",
+      "FormChanger": {
+        "Lit": {
+          "partial_animation_suffix": "Lit",
+          "passives": {
+            "FormChangeOnElementInfluence": {
+              "element": "water",
+              "form": "Unlit",
+              "particle": "FireExtinguish",
+              "sfx": "FireExtinguish"
+            }
+          }
+        },
+        "Unlit": {
+          "partial_animation_suffix": "Unlit",
+          "passives": {
+            "MuteDemonicGlyphDisplay": "1",
+            "FormChangeOnElementInfluence": {
+              "element": [
+                "fire"
+              ],
+              "exclude": "water",
+              "form": "Lit"
+            },
+            "AddHiddenTag": "unlit_candle"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "BloatEye": {
+    "graphics": {
+      "movieclip": "BloatEye",
+      "name": "OBJECT_BLOATEYE_NAME",
+      "name_resolved": "Peeper",
+      "tooltip": "OBJECT_BLOATEYE_DESC",
+      "tooltip_resolved": "Moves 1 tile towards units each time they take an action. Trample."
+    },
+    "properties": {
+      "faction": "enemies",
+      "hidden_tag": "bloateye",
+      "type": "object",
+      "inanimate": "true",
+      "takes_turns": "false",
+      "flying": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "BloatEyeMovement2"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "BloatEyePassive2": "BloatEyeMovement2",
+      "MinimumKnockbackFromPhysicalAttacks": "1"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  }
+}

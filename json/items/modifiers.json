@@ -1,0 +1,74 @@
+{
+  "/*LevelUp": {
+    "name": "Rare Candy",
+    "desc": "Use to level up a cat now.",
+    "kind": "modifier",
+    "frame": "3"
+  },
+  "LearnPassive": {
+    "name": "ITEM_LEARNPASSIVE_NAME",
+    "name_resolved": "{str_aux_passive_name} Syringe",
+    "desc": "ITEM_LEARNPASSIVE_DESC",
+    "desc_resolved": "Use to immediately teach a cat the passive ability: {str_aux_passive_name}\n\n{str_aux_passive_desc}",
+    "kind": "modifier",
+    "str_aux_initialize": "random_class_passive",
+    "icon_hint": "passive_syringe",
+    "frame": "12"
+  },
+  "LearnDisorder": {
+    "name": "ITEM_LEARNDISORDER_NAME",
+    "name_resolved": "{str_aux_passive_name} Syringe",
+    "desc": "ITEM_LEARNDISORDER_DESC",
+    "desc_resolved": "Use to immediately give a cat the disorder: {str_aux_passive_name}\n\n{str_aux_passive_desc}",
+    "kind": "modifier",
+    "str_aux_initialize": "random_disorder",
+    "icon_hint": "passive_syringe",
+    "frame": "12"
+  },
+  "LearnAbility": {
+    "name": "ITEM_LEARNABILITY_NAME",
+    "name_resolved": "{str_aux_active_name} Syringe",
+    "desc": "ITEM_LEARNABILITY_DESC",
+    "desc_resolved": "Use to immediately teach a cat the active ability: {str_aux_active_name}\n\n{str_aux_active_desc}",
+    "kind": "modifier",
+    "str_aux_initialize": "random_class_ability",
+    "icon_hint": "ability_syringe",
+    "frame": "13"
+  },
+  "Upgrade": {
+    "name": "Upgrade",
+    "desc": "Use to have a cat upgrade a passive or active ability now.",
+    "kind": "modifier",
+    "frame": "4"
+  },
+  "StatUp": {
+    "name": "Stat Up",
+    "desc": "Use to have a cat gain stats now.",
+    "kind": "modifier",
+    "frame": "5"
+  },
+  "StatShuffle": {
+    "name": "Stat Shuffle",
+    "desc": "Use to have a cat shuffle their stats now.",
+    "kind": "modifier",
+    "frame": "6"
+  },
+  "InstantHeal": {
+    "name": "Heal",
+    "desc": "Use to have a cat heal now.",
+    "kind": "modifier",
+    "frame": "7"
+  },
+  "CureDisorder": {
+    "name": "Cure",
+    "desc": "Use to have a cat (i forgot what this does when writing the description TODO) now.",
+    "kind": "modifier",
+    "frame": "8"
+  },
+  "TemporaryBuff": {
+    "name": "Temp Buff",
+    "desc": "Use to have a cat get a temporary status effect for the next fight now.",
+    "kind": "modifier",
+    "frame": "10"
+  }
+}

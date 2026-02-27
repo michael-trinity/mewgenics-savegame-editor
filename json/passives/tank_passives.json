@@ -1,0 +1,709 @@
+{
+  "Thorns": {
+    "name": "PASSIVE_THORNS_NAME",
+    "name_resolved": "Thorns",
+    "desc": "PASSIVE_THORNS_DESC",
+    "desc_resolved": "Thorns 2.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "Thorns": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THORNS2_DESC",
+      "desc_resolved": "Thorns 4.\nGain +1 Thorns when you take damage.",
+      "passives": {
+        "Thorns": "4",
+        "StatusOnTookDamage": {
+          "Thorns": "1"
+        }
+      }
+    }
+  },
+  "HeavyHanded": {
+    "name": "PASSIVE_HEAVYHANDED_NAME",
+    "name_resolved": "Heavy Handed",
+    "desc": "PASSIVE_HEAVYHANDED_DESC",
+    "desc_resolved": "+2 Knockback Damage.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "AddKnockbackDamage": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HEAVYHANDED2_DESC",
+      "desc_resolved": "+3 Knockback Damage.\nYour basic attack gains +3 Knockback.",
+      "passives": {
+        "AddKnockbackDamage": "3",
+        "AddStatusToBasicAttack": {
+          "Knockback": "3"
+        }
+      }
+    }
+  },
+  "SlackOff": {
+    "name": "PASSIVE_SLACKOFF_NAME",
+    "name_resolved": "Slack Off",
+    "desc": "PASSIVE_SLACKOFF_DESC",
+    "desc_resolved": "If you end your turn with unused movement actions, gain 8 HP.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "StatusIfUnusedMovePoints": {
+          "HealthGain": "8"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SLACKOFF2_DESC",
+      "desc_resolved": "If you end your turn with unused movement actions, gain +2 [img:con], 8 HP and 5 mana.",
+      "passives": {
+        "StatusIfUnusedMovePoints": {
+          "ConstitutionUp": "2",
+          "HealthGain": "8",
+          "ManaGain": "5"
+        }
+      }
+    }
+  },
+  "Scabs": {
+    "name": "PASSIVE_SCABS_NAME",
+    "name_resolved": "Scabs",
+    "desc": "PASSIVE_SCABS_DESC",
+    "desc_resolved": "Gain +2 Shield when you take damage from an ability.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "StatusOnTookDamageFromAbility": {
+          "Shield": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SCABS2_DESC",
+      "desc_resolved": "Gain +2 Shield when you take damage from any source.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "Shield": "2"
+        }
+      }
+    }
+  },
+  "EyeCatchin": {
+    "name": "Eye Catchin'",
+    "desc": "taunt while at full health",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "TauntAtFullHealth": "1"
+      }
+    },
+    "2": {
+      "desc": "taunt always",
+      "passives": {
+        "TauntAlways": "1"
+      }
+    }
+  },
+  "ThunderThighs": {
+    "name": "PASSIVE_THUNDERTHIGHS_NAME",
+    "name_resolved": "Thunder Thighs",
+    "desc": "PASSIVE_THUNDERTHIGHS_DESC",
+    "desc_resolved": "Trample.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "Trample": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THUNDERTHIGHS2_DESC",
+      "desc_resolved": "Trample 9.",
+      "passives": {
+        "Trample": "9"
+      },
+      "stats": {
+        "con": "1"
+      }
+    }
+  },
+  "Plow": {
+    "name": "PASSIVE_PLOW_NAME",
+    "name_resolved": "Plow",
+    "desc": "PASSIVE_PLOW_DESC",
+    "desc_resolved": "When you knock back a unit, leave a rock where that unit was.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "AddStatusToAllDamage": {
+          "LeaveBehindRockOnKnockback": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PLOW2_DESC",
+      "desc_resolved": "When you knock back a unit, leave a rock where that unit was.\nAll damage you deal has +1 Knockback.",
+      "passives": {
+        "AddStatusToAllDamage": {
+          "LeaveBehindRockOnKnockback": "1"
+        },
+        "AddKnockbackToEverything": "1"
+      }
+    }
+  },
+  "PetRocks": {
+    "name": "PASSIVE_PETROCKS_NAME",
+    "name_resolved": "Pet Rocks",
+    "desc": "PASSIVE_PETROCKS_DESC",
+    "desc_resolved": "Rocks you spawn are alive!!\n...and have +3 HP. Spawn a rock at the start of the battle.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "ReplaceSpawnedObjects": [
+          "LavaBoulder",
+          "AnimatedLavaBoulder"
+        ],
+        "AddPassiveToSpawnedRocks": {
+          "JoinSpawnerFaction": "1",
+          "AddFilledMaxHealth": "3"
+        },
+        "SpawnOnBattleStart": {
+          "object": "SmallRock",
+          "number": "1"
+        },
+        "StatusReplacement": [
+          "Petrify",
+          "PetrifyCharmed"
+        ]
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PETROCKS2_DESC",
+      "desc_resolved": "Rocks you spawn are alive, and hot!!\n...and have +7 HP. Spawn a boulder at the start of the battle.",
+      "passives": {
+        "ReplaceSpawnedObjects": [
+          "LavaBoulder",
+          "AnimatedLavaBoulder"
+        ],
+        "AddPassiveToSpawnedRocks": {
+          "JoinSpawnerFaction": "1",
+          "AddFilledMaxHealth": "7"
+        },
+        "SpawnOnBattleStart": {
+          "object": "Boulder",
+          "number": "1"
+        },
+        "StatusReplacement": [
+          "Petrify",
+          "PetrifyCharmed"
+        ]
+      }
+    }
+  },
+  "ToadStyle": {
+    "name": "PASSIVE_TOADSTYLE_NAME",
+    "name_resolved": "Toad Style",
+    "desc": "PASSIVE_TOADSTYLE_DESC",
+    "desc_resolved": "Your movement action is a jump. Landing on a unit deals damage and displaces it.",
+    "class": "Tank",
+    "1": {
+      "stats": {
+        "spd": "4"
+      },
+      "passives": {
+        "ReplaceBasicMove": "ToadJump_BasicMove"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TOADSTYLE2_DESC",
+      "desc_resolved": "Your movement action is a jump. Landing on a unit deals damage and displaces it.",
+      "stats": {
+        "spd": "8"
+      },
+      "passives": {
+        "ReplaceBasicMove": "BellyFlop_BasicMove"
+      }
+    }
+  },
+  "ChainKnockback": {
+    "name": "PASSIVE_CHAINKNOCKBACK_NAME",
+    "name_resolved": "Chain Knockback",
+    "desc": "PASSIVE_CHAINKNOCKBACK_DESC",
+    "desc_resolved": "Your basic attack gains +1 Knockback.\nUnits you knockback will Knockback other units.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "ChainKnockback": "1",
+        "AddStatusToBasicAttack": {
+          "Knockback": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CHAINKNOCKBACK2_DESC",
+      "desc_resolved": "Your basic attack gains +1 Knockback.\nAll knockback you deal is increased by 2 and deals +1 extra damage.\nUnits you knockback will Knockback other units further.",
+      "passives": {
+        "ChainKnockback": "1",
+        "AddStatusToBasicAttack": {
+          "Knockback": "1"
+        },
+        "AddKnockbackDamage": "1",
+        "AmplifyKnockback": "2"
+      }
+    }
+  },
+  "ProtectiveAura": {
+    "name": "PASSIVE_PROTECTIVE_NAME",
+    "name_resolved": "Protective",
+    "desc": "PASSIVE_PROTECTIVE_DESC",
+    "desc_resolved": "Your allies have Brace 1.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "DamageReductionAura": {
+          "range": "global",
+          "allies_only": "true",
+          "stacks": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PROTECTIVE2_DESC",
+      "desc_resolved": "Your allies have Brace 2.",
+      "passives": {
+        "DamageReductionAura": {
+          "range": "global",
+          "allies_only": "true",
+          "stacks": "2"
+        }
+      }
+    }
+  },
+  "Wrestlemaniac": {
+    "name": "PASSIVE_WRESTLEMANIAC_NAME",
+    "name_resolved": "Wrestlemaniac",
+    "desc": "PASSIVE_WRESTLEMANIAC_DESC",
+    "desc_resolved": "Your basic attack becomes Suplex when adjacent to enemies.\nYou gain the ability Toss.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "BonusAbility": "BonusToss",
+        "ReplaceBasicAttackWhenCastable": "BasicSuplex"
+      },
+      "stats": {
+        "spd": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WRESTLEMANIAC2_DESC",
+      "desc_resolved": "Your basic attack is Suplex while you're next to a unit that can be suplexed and Your basic attack becomes Suplex when adjacent to enemies. +1 Bonus Move.\nYou gain the ability Toss+.",
+      "passives": {
+        "BonusAbility": "BonusToss2",
+        "ReplaceBasicAttackWhenCastable": "BasicSuplex",
+        "ExtraMovePoints": "1"
+      },
+      "stats": {
+        "spd": "2"
+      }
+    }
+  },
+  "MountainForm": {
+    "name": "PASSIVE_MOUNTAINFORM_NAME",
+    "name_resolved": "Mountain Form",
+    "desc": "PASSIVE_MOUNTAINFORM_DESC",
+    "desc_resolved": "Knockback immunity.\nTiles you walk over become dirt and may spawn rocks.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "InnateElement": "Earth",
+        "KnockbackImmunity": "1",
+        "RockDetector": "10",
+        "SizeScale": "1.2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MOUNTAINFORM2_DESC",
+      "desc_resolved": "Trample. Knockback and Fire immunity.\nTiles you walk over become dirt and may spawn rocks.",
+      "passives": {
+        "InnateElement": "Earth",
+        "ElementImmune": "Fire",
+        "StatusImmunity": [
+          "Burn"
+        ],
+        "KnockbackImmunity": "1",
+        "RockDetector": "10",
+        "SizeScale": "1.3",
+        "Trample": "3"
+      }
+    }
+  },
+  "HomeRun": {
+    "name": "PASSIVE_HOMERUN_NAME",
+    "name_resolved": "Home Run",
+    "desc": "PASSIVE_HOMERUN_DESC",
+    "desc_resolved": "Knockback you deal is increased by 10.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "AmplifyKnockback": "10"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HOMERUN2_DESC",
+      "desc_resolved": "Knockback you deal is increased by 10 and inflicts Bruise 1.",
+      "passives": {
+        "AmplifyKnockback": "10",
+        "AddStatusToKnockbackDamage": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "RockAspect": {
+    "name": "PASSIVE_ROCKASPECT_NAME",
+    "name_resolved": "Rock Aspect",
+    "desc": "PASSIVE_ROCKASPECT_DESC",
+    "desc_resolved": "Units that attack or contact you have a 10% chance to get Petrified.",
+    "class": "Tank",
+    "1": {
+      "shield": "4",
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Petrify": [
+              "1,",
+              ".1"
+            ]
+          }
+        },
+        "AddTag": "rock"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ROCKASPECT2_DESC",
+      "desc_resolved": "Units that attack or contact you have a 20% chance to get Petrified.",
+      "shield": "8",
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Petrify": [
+              "1,",
+              ".2"
+            ]
+          }
+        },
+        "AddTag": "rock"
+      }
+    }
+  },
+  "WideLoad": {
+    "name": "PASSIVE_WIDELOAD_NAME",
+    "name_resolved": "Wide Load",
+    "desc": "PASSIVE_WIDELOAD_DESC",
+    "desc_resolved": "When an adjacent ally is targeted by an enemy, swap places with the ally.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "ProtectTargetedAllies": "SwapPositions_WideLoad"
+      },
+      "stats": {
+        "con": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WIDELOAD2_DESC",
+      "desc_resolved": "When an adjacent ally is targeted by an enemy, gain +1 temp Thorns and temp Brace, then swap places with the ally.",
+      "passives": {
+        "ProtectTargetedAllies": "SwapPositions_WideLoad2"
+      },
+      "stats": {
+        "con": "1"
+      }
+    }
+  },
+  "HardHead": {
+    "name": "PASSIVE_HARDHEAD_NAME",
+    "name_resolved": "Hard Head",
+    "desc": "PASSIVE_HARDHEAD_DESC",
+    "desc_resolved": "You block attacks from the front.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "FaceShield": "0"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HARDHEAD2_DESC",
+      "desc_resolved": "You block attacks from the front. Your basic attack inflicts Bruise.",
+      "passives": {
+        "FaceShield": "0",
+        "AddStatusToBasicAttack": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "MyLeg": {
+    "name": "PASSIVE_MYLEG_NAME",
+    "name_resolved": "My Leg!",
+    "desc": "PASSIVE_MYLEG_DESC",
+    "desc_resolved": "All injuries you get are Broken Legs.\nIf you have four broken legs, gain +4 Thorns, Trample, and adjacent allies have Toss as a bonus ability.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "ForceSpecificInjury": "spd",
+        "PassiveAtInjuryThreshold": {
+          "mode": "greater_or_equal",
+          "injury": "spd",
+          "threshold": "4",
+          "passives": {
+            "Thorns": "4",
+            "Trample": "3",
+            "AllyBonusAbilityAura": "NubbyToss",
+            "NubbyTossPriority": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MYLEG2_DESC",
+      "desc_resolved": "All injuries you get are Broken Legs.\nIf you have four broken legs, gain +4 Thorns, +4 Brace, Trample, and adjacent allies have Toss as a bonus ability.",
+      "passives": {
+        "ForceSpecificInjury": "spd",
+        "PassiveAtInjuryThreshold": {
+          "mode": "greater_or_equal",
+          "injury": "spd",
+          "threshold": "4",
+          "passives": {
+            "Thorns": "4",
+            "Trample": "3",
+            "Brace": "4",
+            "AllyBonusAbilityAura": "NubbyToss",
+            "NubbyTossPriority": "1"
+          }
+        }
+      }
+    }
+  },
+  "Hardy": {
+    "name": "PASSIVE_HARDY_NAME",
+    "name_resolved": "Hardy",
+    "desc": "PASSIVE_HARDY_DESC",
+    "desc_resolved": "Heal to full HP at the start of each battle.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "StatusOnBattleStart": {
+          "FullHeal": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HARDY2_DESC",
+      "desc_resolved": "Heal to full HP at the start of each battle. +3 Health Regeneration.",
+      "passives": {
+        "StatusOnBattleStart": {
+          "FullHeal": "1"
+        },
+        "HealthRegenUp": "4"
+      }
+    }
+  },
+  "SlowAndSteady": {
+    "name": "PASSIVE_SLOWANDSTEADY_NAME",
+    "name_resolved": "Slow and Steady",
+    "desc": "PASSIVE_SLOWANDSTEADY_DESC",
+    "desc_resolved": "Gain -2 [img:spd] and +1 Range at the end of each turn. If your [img:spd] is 0, you can attack an extra time each turn.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "StatusEachTurnEnd": {
+          "SpeedUp": "-2",
+          "RangeUp": "1"
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "spd": "0"
+          },
+          "passives": {
+            "ExtraBasicAttacks": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SLOWANDSTEADY2_DESC",
+      "desc_resolved": "Gain -2 [img:spd], +1 Range, +1 [img:str], and +1 [img:int] at the end of each turn. If your [img:spd] is 0, you can attack an extra time each turn.",
+      "passives": {
+        "StatusEachTurnEnd": {
+          "SpeedUp": "-2",
+          "RangeUp": "1",
+          "StrengthUp": "1",
+          "IntelligenceUp": "1"
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "spd": "0"
+          },
+          "passives": {
+            "ExtraBasicAttacks": "1"
+          }
+        }
+      }
+    }
+  },
+  "FollowUp": {
+    "name": "PASSIVE_FOLLOWUP_NAME",
+    "name_resolved": "Follow Up",
+    "desc": "PASSIVE_FOLLOWUP_DESC",
+    "desc_resolved": "After you use your basic attack, dash forward as far as you can.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "FollowUp": "FollowUpDash"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FOLLOWUP2_DESC",
+      "desc_resolved": "After you use your basic attack, dash forward as far as you can and do a melee attack.",
+      "passives": {
+        "FollowUp": "FollowUpDash2"
+      }
+    }
+  },
+  "CatAPult": {
+    "name": "PASSIVE_CATAPULT_NAME",
+    "name_resolved": "Cat-A-Pult",
+    "desc": "PASSIVE_CATAPULT_DESC",
+    "desc_resolved": "You can throw adjacent allies up to 4 tiles on their turns without using their movement action.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "AllyMoveAbilityAura": "CatapultJump",
+        "CatAPultAnimation": {
+          "ability": "CatapultJump",
+          "animation": "knockupatk"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CATAPULT2_DESC",
+      "desc_resolved": "You can throw adjacent allies to any tile on their turns without using their movement action.",
+      "passives": {
+        "AllyMoveAbilityAura": "CatapultJump2",
+        "CatAPultAnimation": {
+          "ability": "CatapultJump2",
+          "animation": "knockupatk"
+        }
+      }
+    }
+  },
+  "ShovingMatch": {
+    "name": "PASSIVE_SHOVINGMATCH_NAME",
+    "name_resolved": "Shoving Match",
+    "desc": "PASSIVE_SHOVINGMATCH_DESC",
+    "desc_resolved": "When you knock a unit into an ally, or knock an ally into an enemy, that ally uses their basic attack on the other unit.\nYour basic attack has +1 Knockback.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "ShovingMatch": "attack",
+        "AddStatusToBasicAttack": {
+          "Knockback": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHOVINGMATCH2_DESC",
+      "desc_resolved": "When you knock a unit into an ally, or knock an ally into an enemy, that ally uses their basic attack on the other unit.\nYour basic attack has +2 Knockback. You deal no damage to allies.",
+      "passives": {
+        "ShovingMatch": "attack",
+        "AllyDamageReduction": "0",
+        "AddStatusToBasicAttack": {
+          "Knockback": "2"
+        }
+      }
+    }
+  },
+  "Stoic": {
+    "name": "PASSIVE_STOIC_NAME",
+    "name_resolved": "Stoic",
+    "desc": "PASSIVE_STOIC_DESC",
+    "desc_resolved": "If you end your turn with unused movement actions, gain +2 Bonus Moves.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "StatusIfUnusedMovePoints": {
+          "MoveQuivered": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_STOIC2_DESC",
+      "desc_resolved": "If you end your turn with unused movement actions, gain +2 Bonus Moves, +2 [img:shield] and +1 Brace.",
+      "passives": {
+        "StatusIfUnusedMovePoints": {
+          "MoveQuivered": "2",
+          "Brace": "1",
+          "Shield": "2"
+        }
+      }
+    }
+  },
+  "PriorityTarget": {
+    "name": "PASSIVE_PRIORITYTARGET_NAME",
+    "name_resolved": "Priority Target",
+    "desc": "PASSIVE_PRIORITYTARGET_DESC",
+    "desc_resolved": "Enemies will attack you instead of your allies if they can.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "TauntAlways": "1"
+      },
+      "stats": {
+        "con": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PRIORITYTARGET2_DESC",
+      "desc_resolved": "+2 Thorns, +2 Brace, and +2 Health Regeneration. Enemies will attack you instead of your allies if they can.",
+      "passives": {
+        "TauntAlways": "1",
+        "Brace": "2",
+        "Thorns": "2",
+        "HealthRegenUp": "2"
+      },
+      "stats": {
+        "con": "2"
+      }
+    }
+  },
+  "Bouncer": {
+    "name": "PASSIVE_BOUNCER_NAME",
+    "name_resolved": "Bouncer",
+    "desc": "PASSIVE_BOUNCER_DESC",
+    "desc_resolved": "When an ally takes damage, move 3 tiles toward the source of the damage and attack it if you can.",
+    "class": "Tank",
+    "1": {
+      "passives": {
+        "SecurityBotProtect": {
+          "ability": "attack",
+          "move": "MoveThree"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BOUNCER2_DESC",
+      "desc_resolved": "When an ally takes damage, full move toward the source of the damage and attack it if you can.",
+      "passives": {
+        "SecurityBotProtect": {
+          "ability": "attack",
+          "move": "move"
+        }
+      }
+    }
+  }
+}

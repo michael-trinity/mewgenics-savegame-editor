@@ -1,0 +1,108 @@
+{
+  "Bunny": {
+    "catdata": "Bunny",
+    "name": "SPECIAL_STRAY_BUNNY",
+    "name_resolved": "Bunny",
+    "gender": "any"
+  },
+  "Beaver": {
+    "catdata": "Beaver",
+    "name": "SPECIAL_STRAY_BEAVER",
+    "name_resolved": "Beaver",
+    "gender": "any"
+  },
+  "Pig": {
+    "catdata": "Pig",
+    "name": "SPECIAL_STRAY_PIG",
+    "name_resolved": "Pig",
+    "gender": "any"
+  },
+  "Dog": {
+    "catdata": "Dog",
+    "name": "SPECIAL_STRAY_DOG",
+    "name_resolved": "Dog",
+    "gender": "any"
+  },
+  "Skunk": {
+    "catdata": "Skunk",
+    "name": "SPECIAL_STRAY_SKUNK",
+    "name_resolved": "Skunk",
+    "gender": "any"
+  },
+  "Porcupine": {
+    "catdata": "Porcupine",
+    "name": "SPECIAL_STRAY_PORCUPINE",
+    "name_resolved": "Porcupine",
+    "gender": "any"
+  },
+  "Isaac": {
+    "catdata": "Isaac",
+    "name": "SPECIAL_STRAY_ISAAC",
+    "name_resolved": "Isaac",
+    "gender": "male",
+    "no_breed": "true"
+  },
+  "Edmund": {
+    "catdata": "Edmund",
+    "name": "SPECIAL_STRAY_EDMUND",
+    "name_resolved": "Edmund",
+    "gender": "male",
+    "no_breed": "true"
+  },
+  "Tyler": {
+    "catdata": "Tyler",
+    "name": "SPECIAL_STRAY_TYLER",
+    "name_resolved": "Tyler",
+    "gender": "male",
+    "no_breed": "true"
+  },
+  "FijiMermaid": {
+    "catdata": "FijiMermaid",
+    "name": "SPECIAL_STRAY_FIJIMERMAID",
+    "name_resolved": "Fiji Mermaid",
+    "gender": "any"
+  },
+  "JerseyDevil": {
+    "catdata": "JerseyDevil",
+    "name": "SPECIAL_STRAY_JERSEYDEVIL",
+    "name_resolved": "Jersey Devil",
+    "gender": "any"
+  },
+  "Sonichu": {
+    "catdata": "Sonichu",
+    "name": "SPECIAL_STRAY_SONICHU",
+    "name_resolved": "Sonichu",
+    "gender": "any"
+  },
+  "Bigfoot": {
+    "catdata": "Bigfoot",
+    "name": "SPECIAL_STRAY_BIGFOOT",
+    "name_resolved": "Bigfoot",
+    "gender": "any"
+  },
+  "Nessie": {
+    "catdata": "Nessie",
+    "name": "SPECIAL_STRAY_NESSIE",
+    "name_resolved": "Nessie",
+    "gender": "any"
+  },
+  "Grey": {
+    "catdata": "Grey",
+    "name": "SPECIAL_STRAY_GREY",
+    "name_resolved": "Grey",
+    "gender": "any"
+  },
+  "Mothman": {
+    "catdata": "Mothman",
+    "name": "SPECIAL_STRAY_MOTHMAN",
+    "name_resolved": "Mothman",
+    "gender": "male"
+  },
+  "Slenderman": {
+    "catdata": "Slenderman",
+    "name": "SPECIAL_STRAY_SLENDERMAN",
+    "name_resolved": "Slenderman",
+    "gender": "male",
+    "no_breed": "true"
+  }
+}

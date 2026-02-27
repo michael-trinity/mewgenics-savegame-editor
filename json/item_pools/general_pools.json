@@ -1,0 +1,23 @@
+{
+  "basic_consumables": {
+    "FoodMedium": "5",
+    "FoodBig": "2",
+    "Catnip": "3",
+    "CatnipBig": "2",
+    "pills": "7",
+    "Antidote": "1",
+    "Chicken": ".1"
+  },
+  "consumables": {
+    "basic_consumables": "100",
+    "consumables_consumable_common": "50",
+    "consumables_consumable_uncommon": "35",
+    "consumables_consumable_rare": "15",
+    "consumables_consumable_very_rare": "1"
+  },
+  "food": {
+    "FoodMedium": "1",
+    "FoodBig": "1",
+    "Chicken": ".01"
+  }
+}

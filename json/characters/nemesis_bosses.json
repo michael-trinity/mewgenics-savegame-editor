@@ -1,0 +1,57 @@
+{
+  "ShadowCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SHADOWCAT_NAME",
+      "name_resolved": "Shadow Cat",
+      "tint": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "equipment": {},
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "demon"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "5",
+      "corpse_health": "3",
+      "health": "50",
+      "disperse_main_turns": "true",
+      "elements": [
+        "Shadow"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ShadowDagger",
+      "spells": [
+        "ShadowstepDodge"
+      ]
+    },
+    "passives": {
+      "DodgeWhenTargeted": {
+        "ability": "ShadowstepDodge"
+      },
+      "TileTrail": "ShadowTile"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move"
+    }
+  }
+}

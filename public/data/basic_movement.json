@@ -1,0 +1,148 @@
+{
+  "DefaultMove": {
+    "id": "DefaultMove",
+    "template": "move",
+    "name_key": "ABILITY_MOVE_NAME",
+    "name": "Move",
+    "desc_key": "ABILITY_MOVE_DESC",
+    "description": "{he} go",
+    "animate_name": "false"
+  },
+  "BasicJump": {
+    "id": "BasicJump",
+    "template": "jump_attack",
+    "name_key": "ABILITY_JUMP_NAME",
+    "name": "Jump",
+    "desc_key": "ABILITY_JUMP_DESC",
+    "description": "{he} jump",
+    "animate_name": "false",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    }
+  },
+  "Teleport": {
+    "id": "Teleport",
+    "template": "teleport",
+    "name_key": "ABILITY_TELEPORT_NAME",
+    "name": "Teleport",
+    "desc_key": "ABILITY_TELEPORT_DESC",
+    "description": "{he} teleport",
+    "animate_name": "false"
+  },
+  "BasicDig": {
+    "id": "BasicDig",
+    "template": "teleport",
+    "name_key": "ABILITY_DIG_NAME",
+    "name": "Dig",
+    "desc_key": "ABILITY_DIG_DESC",
+    "description": "{he} dig",
+    "animate_name": "false",
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    }
+  },
+  "Shadowstep": {
+    "id": "Shadowstep",
+    "template": "teleport",
+    "name_key": "ABILITY_SHADOWSTEP_NAME",
+    "name": "Shadowstep",
+    "desc_key": "ABILITY_SHADOWSTEP_DESC",
+    "description": "{he} teleport",
+    "animate_name": "false",
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    }
+  },
+  "SwapPositions": {
+    "id": "SwapPositions",
+    "template": "swap",
+    "name_key": "ABILITY_SWAP_NAME",
+    "name": "Swap",
+    "desc_key": "ABILITY_SWAP_DESC",
+    "description": "{he} swap",
+    "animate_name": "true"
+  },
+  "SwimmerMove": {
+    "id": "SwimmerMove",
+    "template": "move",
+    "name_key": "ABILITY_SWIMMERMOVE_NAME",
+    "name": "Move",
+    "desc_key": "ABILITY_SWIMMERMOVE_DESC",
+    "description": "{he} go",
+    "animate_name": "false",
+    "target": {
+      "range_mode": "water_move"
+    }
+  },
+  "TrampleMove": {
+    "id": "TrampleMove",
+    "template": "move",
+    "name_key": "ABILITY_TRAMPLEMOVE_NAME",
+    "name": "Move",
+    "desc_key": "ABILITY_TRAMPLEMOVE_DESC",
+    "description": "{he} go",
+    "animate_name": "false",
+    "damage_instance": {
+      "damage": "3"
+    }
+  },
+  "TrampleMoveOne": {
+    "id": "TrampleMoveOne",
+    "template": "move",
+    "name_key": "ABILITY_MOVEONETILE_NAME",
+    "name": "Move",
+    "desc_key": "ABILITY_MOVEONETILE_DESC",
+    "description": "{he} go",
+    "animate_name": "false",
+    "target": {
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "damage": "3"
+    }
+  },
+  "MaxTeleport": {
+    "id": "MaxTeleport",
+    "template": "teleport",
+    "name_key": "ABILITY_MAXTELEPORT_NAME",
+    "name": "Teleport",
+    "desc_key": "ABILITY_MAXTELEPORT_DESC",
+    "description": "{he} teleport",
+    "animate_name": "false",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "FloatMove": {
+    "id": "FloatMove",
+    "template": "move",
+    "name_key": "ABILITY_FLOAT_NAME",
+    "name": "Move",
+    "desc_key": "ABILITY_FLOAT_DESC",
+    "description": "{he} go",
+    "animate_name": "false",
+    "target": {
+      "as_the_crow_flies": "true"
+    }
+  }
+}

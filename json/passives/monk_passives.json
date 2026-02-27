@@ -1,0 +1,728 @@
+{
+  "SafeSwitching": {
+    "name": "PASSIVE_SAFESWITCHING_NAME",
+    "name_resolved": "Safe Switching",
+    "desc": "PASSIVE_SAFESWITCHING_DESC",
+    "desc_resolved": "When you switch stances, gain +2 [img:shield].",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "Shield": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SAFESWITCHING2_DESC",
+      "desc_resolved": "When you switch stances, gain +3 [img:shield] and cleanse one stack of a random debuff.",
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "Shield": "3",
+          "PartialCleanse": "1"
+        }
+      }
+    }
+  },
+  "Mixup": {
+    "name": "PASSIVE_MIXUP_NAME",
+    "name_resolved": "Mixup",
+    "desc": "PASSIVE_MIXUP_DESC",
+    "desc_resolved": "When you switch stances, your next basic attack this turn is critical.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "NextBasicAttackCritsThisTurn": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MIXUP2_DESC",
+      "desc_resolved": "When you switch stances, your next basic attack this turn is critical.\nCritical hits you land inflict Confusion 1.",
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "NextBasicAttackCritsThisTurn": "1"
+        },
+        "CritsApplyStatus": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "Turnabout": {
+    "name": "PASSIVE_TURNABOUT_NAME",
+    "name_resolved": "Turnabout",
+    "desc": "PASSIVE_TURNABOUT_DESC",
+    "desc_resolved": "Your basic melee attacks inflict Confusion 1 and make units face away from you.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "FaceAway": "1",
+          "Confusion": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TURNABOUT2_DESC",
+      "desc_resolved": "Your basic melee attacks inflict Confusion 1, make units face away from you, and have a 20% chance to inflict Stun 1.",
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "FaceAway": "1",
+          "Confusion": "1",
+          "Stun": [
+            "1",
+            ".2"
+          ]
+        }
+      }
+    }
+  },
+  "MonkeyStyle": {
+    "name": "PASSIVE_MONKEYSTYLE_NAME",
+    "name_resolved": "Monkey Style",
+    "desc": "PASSIVE_MONKEYSTYLE_DESC",
+    "desc_resolved": "15% chance to block damage and counter-attack.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "ChanceToBlockAndCounter": "15%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MONKEYSTYLE2_DESC",
+      "desc_resolved": "33% chance to block damage and counter-attack.",
+      "passives": {
+        "ChanceToBlockAndCounter": "33%"
+      }
+    }
+  },
+  "BrickSkin": {
+    "name": "PASSIVE_BRICKSKIN_NAME",
+    "name_resolved": "Brick Skin",
+    "desc": "PASSIVE_BRICKSKIN_DESC",
+    "desc_resolved": "Any [img:shield] you gain is increased by 2.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "GainExtraShield": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BRICKSKIN2_DESC",
+      "desc_resolved": "Any [img:shield] you gain is increased by 2.",
+      "passives": {
+        "GainExtraShield": "2"
+      },
+      "shield": "8"
+    }
+  },
+  "JaggedEdges": {
+    "name": "PASSIVE_JAGGEDEDGE_NAME",
+    "name_resolved": "Jagged Edges",
+    "desc": "PASSIVE_JAGGEDEDGE_DESC",
+    "desc_resolved": "When you lose [img:shield], gain +1 Thorns.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnLoseShield": {
+          "Thorns": "1"
+        }
+      },
+      "shield": "2"
+    },
+    "2": {
+      "desc": "PASSIVE_JAGGEDEDGE2_DESC",
+      "desc_resolved": "When you lose [img:shield], gain that many Thorns.",
+      "passives": {
+        "ScaledStatusOnLoseShield": {
+          "Thorns": "1"
+        }
+      },
+      "shield": "4"
+    }
+  },
+  "MindBreaker": {
+    "name": "PASSIVE_MINDBREAKER_NAME",
+    "name_resolved": "Mind Breaker",
+    "desc": "PASSIVE_MINDBREAKER_DESC",
+    "desc_resolved": "Your basic attack inflicts Magic Weakness 1.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "MagicWeakness": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MINDBREAKER2_DESC",
+      "desc_resolved": "Your basic attack inflicts Magic Weakness 2.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "MagicWeakness": "2"
+        }
+      }
+    }
+  },
+  "CobraStyle": {
+    "name": "PASSIVE_COBRASTYLE_NAME",
+    "name_resolved": "Cobra Style",
+    "desc": "PASSIVE_COBRASTYLE_DESC",
+    "desc_resolved": "When an enemy moves into an adjacent tile, perform a weak melee attack on it.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "CobraReflex": "BasicMonkMelee"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_COBRASTYLE2_DESC",
+      "desc_resolved": "When an enemy moves into an adjacent tile, perform a weak melee attack on it, twice!",
+      "passives": {
+        "CobraReflex": "BasicMonkMelee"
+      }
+    }
+  },
+  "Tenderize": {
+    "name": "PASSIVE_TENDERIZE_NAME",
+    "name_resolved": "Tenderize",
+    "desc": "PASSIVE_TENDERIZE_DESC",
+    "desc_resolved": "Your basic melee attacks inflict Bruise 1.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "Bruise": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TENDERIZE2_DESC",
+      "desc_resolved": "Your basic melee attacks inflict Bruise 1 and have a 15% chance to inflict Stun 1.",
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "Bruise": "1",
+          "Confusion": "1",
+          "Stun": [
+            "1",
+            ".15"
+          ]
+        }
+      }
+    }
+  },
+  "LongArms": {
+    "name": "PASSIVE_LONGARMS_NAME",
+    "name_resolved": "Long Arms",
+    "desc": "PASSIVE_LONGARMS_DESC",
+    "desc_resolved": "+1 Range and +1 Reach.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddBonusRange": "1",
+        "AddBonusMeleeRange": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LONGARMS2_DESC",
+      "desc_resolved": "+1 Range and +1 Reach.",
+      "passives": {
+        "AddBonusRange": "1",
+        "AddBonusMeleeRange": "1"
+      },
+      "stats": {
+        "str": "2",
+        "dex": "2"
+      }
+    }
+  },
+  "SpreadThePain": {
+    "name": "PASSIVE_SPREADTHEPAIN_NAME",
+    "name_resolved": "Spread the Pain",
+    "desc": "PASSIVE_SPREADTHEPAIN_DESC",
+    "desc_resolved": "Deal 2 extra damage the first time you damage each unit each turn.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "SpreadPainBonus": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SPREADTHEPAIN2_DESC",
+      "desc_resolved": "Deal 2 extra damage with 100% crit chance the first time you damage each unit each turn.",
+      "passives": {
+        "SpreadPainBonus": "2",
+        "SpreadPainBonusCrit": "1"
+      }
+    }
+  },
+  "Harden": {
+    "name": "PASSIVE_HARDEN_NAME",
+    "name_resolved": "Harden",
+    "desc": "PASSIVE_HARDEN_DESC",
+    "desc_resolved": "When you gain [img:shield], also gain temporary Brace 1.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnGainShield": {
+          "Temporary": {
+            "status": "Brace",
+            "stacks": "1",
+            "turns": "1",
+            "expires_on_begin_turn": "true"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HARDEN2_DESC",
+      "desc_resolved": "When you gain [img:shield], also gain temporary Brace 1.\nGain +1 [img:shield] when you hit a unit with your basic attack.",
+      "passives": {
+        "StatusOnGainShield": {
+          "Temporary": {
+            "status": "Brace",
+            "stacks": "1",
+            "turns": "1",
+            "expires_on_begin_turn": "true"
+          }
+        },
+        "AddStatusToBasicAttack": {
+          "ApplyToSource": {
+            "Shield": "1"
+          }
+        }
+      }
+    }
+  },
+  "IronSkin": {
+    "name": "PASSIVE_IRONSKINTECHNIQUE_NAME",
+    "name_resolved": "Iron Skin Technique",
+    "desc": "PASSIVE_IRONSKINTECHNIQUE_DESC",
+    "desc_resolved": "Gain +2 [img:shield] when you land a critical hit. +10% critical chance.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnCrit": {
+          "Shield": "2"
+        },
+        "CritChanceUp": "10"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_IRONSKINTECHNIQUE2_DESC",
+      "desc_resolved": "Gain +3 [img:shield] when you land a critical hit. +25% critical chance.",
+      "passives": {
+        "StatusOnCrit": {
+          "Shield": "3"
+        },
+        "CritChanceUp": "25"
+      }
+    }
+  },
+  "JetFists": {
+    "name": "PASSIVE_JETFISTS_NAME",
+    "name_resolved": "Jet Fists",
+    "desc": "PASSIVE_JETFISTS_DESC",
+    "desc_resolved": "Your melee attacks and abilities blow wind through the tiles they hit.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddStatusToMeleeDamage": {
+          "DelayedWind": {
+            "distance": "2"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_JETFISTS2_DESC",
+      "desc_resolved": "Your melee attacks and abilities blow wind through the tiles they hit in a large cone.",
+      "passives": {
+        "AddStatusToMeleeDamage": {
+          "DelayedWindCone": {
+            "distance": "10"
+          }
+        }
+      }
+    }
+  },
+  "EnergyFists": {
+    "name": "PASSIVE_ENERGYFISTS_NAME",
+    "name_resolved": "Energy Fists",
+    "desc": "PASSIVE_ENERGYFISTS_DESC",
+    "desc_resolved": "Emit a Sparkle when you use your basic attack.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "AddSelfStatusToBasicAttack": {
+          "RandomMagicMissile": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENERGYFISTS2_DESC",
+      "desc_resolved": "Emit two Sparkles when you use your basic attack.",
+      "passives": {
+        "AddSelfStatusToBasicAttack": {
+          "RandomMagicMissile": "1"
+        }
+      }
+    }
+  },
+  "Unstoppable": {
+    "name": "PASSIVE_UNSTOPPABLE_NAME",
+    "name_resolved": "Unstoppable!",
+    "desc": "PASSIVE_UNSTOPPABLE_DESC",
+    "desc_resolved": "You're immune to knockback, Stun, Slow, and other mobility debuffs.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "CCImmunity": "1",
+        "KnockbackImmunity": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNSTOPPABLE2_DESC",
+      "desc_resolved": "You're immune to knockback and debuffs.",
+      "passives": {
+        "CCImmunity": "1",
+        "DebuffImmunity": "1",
+        "KnockbackImmunity": "1"
+      }
+    }
+  },
+  "UnburdenedMotion": {
+    "name": "PASSIVE_UNBURDENEDMOTION_NAME",
+    "name_resolved": "Unburdened Motion",
+    "desc": "PASSIVE_UNBURDENEDMOTION_DESC",
+    "desc_resolved": "+1 [img:spd] and +10% dodge chance for each empty armor slot. If all of your armor slots are empty, you can use your movement action an extra time.",
+    "class": "Monk",
+    "1": {
+      "empty_armor_scaled_stats": {
+        "spd": "1"
+      },
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "DodgeChance": "10%"
+        },
+        "PassiveIfEmptyNeck": {
+          "DodgeChance": "10%"
+        },
+        "PassiveIfEmptyFace": {
+          "DodgeChance": "10%"
+        },
+        "PassiveIfAllArmorEmpty": {
+          "ExtraMovePoints": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNBURDENEDMOTION2_DESC",
+      "desc_resolved": "+2 [img:spd] and +15% dodge chance for each empty armor slot. If all of your armor slots are empty, you gain flying and can use your movement action an extra time.",
+      "empty_armor_scaled_stats": {
+        "spd": "2"
+      },
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "DodgeChance": "15%"
+        },
+        "PassiveIfEmptyNeck": {
+          "DodgeChance": "15%"
+        },
+        "PassiveIfEmptyFace": {
+          "DodgeChance": "15%"
+        },
+        "PassiveIfAllArmorEmpty": {
+          "ExtraMovePoints": "1",
+          "Flying": "1"
+        }
+      }
+    }
+  },
+  "UnburdenedStrikes": {
+    "name": "PASSIVE_UNBURDENEDSTRIKES_NAME",
+    "name_resolved": "Unburdened Strikes",
+    "desc": "PASSIVE_UNBURDENEDSTRIKES_DESC",
+    "desc_resolved": "+10% critical hit chance and +25% critical hit damage for each empty armor slot. If all of your armor slots are empty, counter-attack whenever you get hit.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "25%"
+        },
+        "PassiveIfEmptyNeck": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "25%"
+        },
+        "PassiveIfEmptyFace": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "25%"
+        },
+        "PassiveIfAllArmorEmpty": {
+          "CounterAttack": "attack"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNBURDENEDSTRIKES2_DESC",
+      "desc_resolved": "+10% critical hit chance and +25% critical hit damage for each empty armor slot. If all of your armor slots are empty your critical hits inflict bruise, and counter-attack whenever you get hit.",
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "40%"
+        },
+        "PassiveIfEmptyNeck": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "40%"
+        },
+        "PassiveIfEmptyFace": {
+          "CritChanceUp": "10",
+          "AddCritMultiplier": "40%"
+        },
+        "PassiveIfAllArmorEmpty": {
+          "CounterAttack": "attack",
+          "CritsApplyStatus": {
+            "Bruise": "1"
+          }
+        }
+      }
+    }
+  },
+  "UnburdenedThoughts": {
+    "name": "PASSIVE_UNBURDENEDTHOUGHTS_NAME",
+    "name_resolved": "Unburdened Thoughts",
+    "desc": "PASSIVE_UNBURDENEDTHOUGHTS_DESC",
+    "desc_resolved": "+1 [img:int] and +1 [img:cha] for each empty armor slot. If all of your armor slots are empty, your spells cost 1 less mana.",
+    "class": "Monk",
+    "1": {
+      "empty_armor_scaled_stats": {
+        "int": "1",
+        "cha": "1"
+      },
+      "passives": {
+        "PassiveIfAllArmorEmpty": {
+          "ManaCostReduction": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNBURDENEDTHOUGHTS2_DESC",
+      "desc_resolved": "+1 [img:int], +1 [img:cha], and +1 Kinetic Spikes for each empty armor slot. If all of your armor slots are empty, you have +2 Magic Damage and your spells cost 1 less mana.",
+      "empty_armor_scaled_stats": {
+        "int": "1",
+        "cha": "1"
+      },
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "KineticSpikes": "1"
+        },
+        "PassiveIfEmptyNeck": {
+          "KineticSpikes": "1"
+        },
+        "PassiveIfEmptyFace": {
+          "KineticSpikes": "1"
+        },
+        "PassiveIfAllArmorEmpty": {
+          "ManaCostReduction": "1",
+          "AddSpellDamage": "2"
+        }
+      }
+    }
+  },
+  "RunningJab": {
+    "name": "PASSIVE_RUNNINGJAB_NAME",
+    "name_resolved": "Running Jab",
+    "desc": "PASSIVE_RUNNINGJAB_DESC",
+    "desc_resolved": "When you end your movement, automatically use your basic attack if an enemy is in range.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnEndMove": {
+          "ForceAttack": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RUNNINGJAB2_DESC",
+      "desc_resolved": "When you end your movement, automatically use your basic attack if an enemy is in range. You can move an extra time each turn.",
+      "passives": {
+        "StatusOnEndMove": {
+          "ForceAttack": "1"
+        },
+        "ExtraMovePoints": "1"
+      }
+    }
+  },
+  "PerfectTechnique": {
+    "name": "PASSIVE_PERFECTTECHNIQUE_NAME",
+    "name_resolved": "Perfect Technique",
+    "desc": "PASSIVE_PERFECTTECHNIQUE_DESC",
+    "desc_resolved": "While in ranged stance, You have +1 Range and +2 Magic Damage. While in melee stance, you have +1 Brace.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "PassiveWhileInMonkRangedStance": {
+          "AddBonusRange": "1",
+          "AddSpellDamage": "2"
+        },
+        "PassiveWhilePreviewingMonkRangedStance": {
+          "AddBonusRange": "1"
+        },
+        "PassiveWhileInMonkMeleeStance": {
+          "Brace": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PERFECTTECHNIQUE2_DESC",
+      "desc_resolved": "While in ranged stance, You have +1 Range, +2 Kinetic Spikes, and +2 Magic Damage. While in melee stance, you have +2 Brace and +2 Health Regeneration.",
+      "passives": {
+        "PassiveWhileInMonkRangedStance": {
+          "AddBonusRange": "2",
+          "KineticSpikes": "2",
+          "AddSpellDamage": "2"
+        },
+        "PassiveWhilePreviewingMonkRangedStance": {
+          "AddBonusRange": "2"
+        },
+        "PassiveWhileInMonkMeleeStance": {
+          "Brace": "2",
+          "HealthRegenUp": "2"
+        }
+      }
+    }
+  },
+  "RapidFlow": {
+    "name": "PASSIVE_RAPIDFLOW_NAME",
+    "name_resolved": "Rapid Flow",
+    "desc": "PASSIVE_RAPIDFLOW_DESC",
+    "desc_resolved": "When you switch stances, do a spin attack that hits all adjacent units.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "ForceUseAbility": "RapidFlowSpin"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RAPIDFLOW2_DESC",
+      "desc_resolved": "When you switch stances, do a double spin attack that hits all adjacent units.",
+      "passives": {
+        "StatusOnStanceSwitch": {
+          "ForceUseAbility": "RapidFlowSpin2"
+        }
+      }
+    }
+  },
+  "CounterBarrage": {
+    "name": "PASSIVE_COUNTERBARRAGE_NAME",
+    "name_resolved": "Counter Barrage",
+    "desc": "PASSIVE_COUNTERBARRAGE_DESC",
+    "desc_resolved": "When you take damage from an enemy attack, gain +1 Bonus Attack.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnTookDamageFromEnemyAbility": {
+          "Quivered": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_COUNTERBARRAGE2_DESC",
+      "desc_resolved": "When you take damage from an enemy attack, gain +1 Bonus Attack and +1 Bonus Move.",
+      "passives": {
+        "StatusOnTookDamageFromEnemyAbility": {
+          "Quivered": "1",
+          "MoveQuivered": "1"
+        }
+      }
+    }
+  },
+  "FlowState": {
+    "name": "PASSIVE_FLOWSTATE_NAME",
+    "name_resolved": "Flow State",
+    "desc": "PASSIVE_FLOWSTATE_DESC",
+    "desc_resolved": "When you deal damage to another unit, gain +1 [img:str] and +2 [img:dex] until the end of the turn.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "StatusOnDealtDamage": {
+          "TempStrengthUp": "1",
+          "TempDexterityUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLOWSTATE2_DESC",
+      "desc_resolved": "When you deal damage to another unit, gain +2 [img:str], +2 [img:dex], and +2 [img:lck] until the end of the turn.",
+      "passives": {
+        "StatusOnDealtDamage": {
+          "TempStrengthUp": "2",
+          "TempDexterityUp": "2",
+          "TempLuckUp": "2"
+        }
+      }
+    }
+  },
+  "DancingLights": {
+    "name": "PASSIVE_DANCINGLIGHTS_NAME",
+    "name_resolved": "Dancing Lights",
+    "desc": "PASSIVE_DANCINGLIGHTS_DESC",
+    "desc_resolved": "When you switch stances, for each empty armor slot, emit a Sparkle. If all slots are empty gain +1 to a random stat.",
+    "class": "Monk",
+    "1": {
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfEmptyNeck": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfEmptyFace": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfAllArmorEmpty": {
+          "StatusOnStanceSwitch": {
+            "RandomStatUp": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DANCINGLIGHTS2_DESC",
+      "desc_resolved": "When you switch stances, for each empty armor slot, emit a Sparkle. If all slots are empty gain +1 to a random stat.\nWhile all armor slots are empty, you have +1 Magic Damage.",
+      "passives": {
+        "PassiveIfEmptyHead": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfEmptyNeck": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfEmptyFace": {
+          "StatusOnStanceSwitch": {
+            "RandomMagicMissile": "1"
+          }
+        },
+        "PassiveIfAllArmorEmpty": {
+          "StatusOnStanceSwitch": {
+            "RandomStatUp": "1"
+          },
+          "AddSpellDamage": "1"
+        }
+      }
+    }
+  }
+}

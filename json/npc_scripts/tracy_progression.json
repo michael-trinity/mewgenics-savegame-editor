@@ -1,0 +1,263 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle",
+        "blocking"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unprompted": {
+      "cancelable": "true",
+      "dialog": "NPC_TRACY_UNPROMPTED_1",
+      "dialog_and_autopass": "NPC_TRACY_UNPROMPTED_2",
+      "wait_for_cancel": "1"
+    },
+    "also": {
+      "dialog": "NPC_TRACY_ALSO_1"
+    },
+    "tracy_introduction": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_INTRODUCTION_22",
+      "begin_accepting_cats": "tracy",
+      "unlock_controls": "1"
+    },
+    "out_of_stock": {
+      "set_state": "blocking",
+      "dialog": "NPC_TRACY_OUT_OF_STOCK_1"
+    },
+    "purchase_item": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_PURCHASE_ITEM_1",
+      "wait_for_cancel": "1"
+    },
+    "cant_afford": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_TRACY_CANT_AFFORD_1",
+      "wait_for_cancel": "1"
+    },
+    "tooltip": {
+      "cancelable": "true",
+      "tooltip_dialog": "NPC_TRACY_SHOP_TOOLTIP",
+      "wait_for_cancel": "1"
+    },
+    "hide_text": {
+      "cancelable": "true",
+      "dialog_and_autopass": ""
+    },
+    "tracy_foodbonus1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODBONUS1_2",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_blankcollar1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_BLANKCOLLAR1_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_blankcollar2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_BLANKCOLLAR2_11",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_blankcollar3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_BLANKCOLLAR3_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL1_13",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL2_8",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL3_11",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol4": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL4_10",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol5": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL5_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol6": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL6_11",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_idol7": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_IDOL7_17",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE1_8",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE2_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE3_16",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage4": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE4_15",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage5": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE5_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage6": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE6_10",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage7": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE7_12",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage8": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE8_10",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage9": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE9_10",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_foodstorage10": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_FOODSTORAGE10_12",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max_intro": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX_INTRO_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max_repeating": {
+      "do_random_sequence": [
+        "tracy_max1,",
+        "tracy_max2,",
+        "tracy_max3,",
+        "tracy_max4,",
+        "tracy_max5"
+      ]
+    },
+    "tracy_max1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX1_3",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max2": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX2_3",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max3": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX3_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max4": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX4_6",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_max5": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_MAX5_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "unknown": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_UNKNOWN_1",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "tracy_kaijufight": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_TRACY_TRACY_KAIJUFIGHT_10",
+      "unlock_controls": "1"
+    }
+  }
+}

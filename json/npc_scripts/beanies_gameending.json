@@ -1,0 +1,20 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "ending": {
+      "dialog": "NPC_BEANIES_ENDING_19",
+      "screenshake": [
+        "1,",
+        "30"
+      ],
+      "sfx": "BeaniesEnding_Banging"
+    }
+  }
+}

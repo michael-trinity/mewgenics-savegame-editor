@@ -1,0 +1,34 @@
+{
+  "nodes": {
+    "alley": {},
+    "sewers": {},
+    "caves": {},
+    "junkyard": {},
+    "boneyard": {},
+    "meatworld": {},
+    "desert": {},
+    "crater": {},
+    "moon": {},
+    "bunker": {},
+    "core": {},
+    "dimensionx": {
+      "spin_cats": "true"
+    },
+    "lab": {},
+    "future": {
+      "spin_cats": "true"
+    },
+    "theend": {
+      "spin_cats": "true"
+    },
+    "iceage": {
+      "spin_cats": "true"
+    },
+    "jurassic": {
+      "spin_cats": "true"
+    },
+    "endoftime": {
+      "spin_cats": "true"
+    }
+  }
+}

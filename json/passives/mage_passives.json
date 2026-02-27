@@ -1,0 +1,915 @@
+{
+  "Micronaps": {
+    "name": "PASSIVE_SYNTHESIZE_NAME",
+    "name_resolved": "Synthesize",
+    "desc": "PASSIVE_SYNTHESIZE_DESC",
+    "desc_resolved": "Gain +1 [img:int] at the start of each turn.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusEachTurnBegin": {
+          "IntelligenceUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SYNTHESIZE2_DESC",
+      "desc_resolved": "Gain +1 [img:int] at the start of each turn.\nYour spells cost 25% less mana.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "IntelligenceUp": "1"
+        },
+        "ManaCostReduction": "25%"
+      }
+    }
+  },
+  "HolyMantel": {
+    "name": "PASSIVE_FORCEFIELD_NAME",
+    "name_resolved": "Force Field",
+    "desc": "PASSIVE_FORCEFIELD_DESC",
+    "desc_resolved": "At the start of every third turn, gain +1 [img:divineshield].",
+    "class": "Mage",
+    "1": {
+      "divine_shield": "1",
+      "passives": {
+        "StatusEveryXTurnBegins": {
+          "turns": "3",
+          "DivineShield": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FORCEFIELD2_DESC",
+      "desc_resolved": "At the start of every other turn, gain +1 [img:divineshield].",
+      "divine_shield": "1",
+      "passives": {
+        "StatusEveryXTurnBegins": {
+          "turns": "2",
+          "DivineShield": "1"
+        }
+      }
+    }
+  },
+  "Shrapnel": {
+    "name": "PASSIVE_SHRAPNEL_NAME",
+    "name_resolved": "Splash Damage",
+    "desc": "PASSIVE_SHRAPNEL_DESC",
+    "desc_resolved": "Your basic attack deals 2 Magic splash damage.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SplashDamage": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHRAPNEL2_DESC",
+      "desc_resolved": "+2 Range. Your basic attack deals 2 Magic splash damage in a wide area.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "BigSplashDamage": "2"
+        },
+        "AddBonusRange": "2",
+        "AddBonusMeleeRange": "2"
+      }
+    }
+  },
+  "BurningPaws": {
+    "name": "PASSIVE_BURNINGPAWS_NAME",
+    "name_resolved": "Burning Paws",
+    "desc": "PASSIVE_BURNINGPAWS_DESC",
+    "desc_resolved": "Your basic action inflicts Burn 1.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Burn": "1"
+        },
+        "AddElementsToBasicAttack": "Fire"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BURNINGPAWS2_DESC",
+      "desc_resolved": "Your basic action inflicts Burn 3.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Burn": "3"
+        },
+        "AddElementsToBasicAttack": "Fire"
+      }
+    }
+  },
+  "LightningPaws": {
+    "name": "PASSIVE_LIGHTNINGPAWS_NAME",
+    "name_resolved": "Lightning Paws",
+    "desc": "PASSIVE_LIGHTNINGPAWS_DESC",
+    "desc_resolved": "Your basic attack deals +1 Electric Damage and has a 10% chance to Stun.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Stun": [
+            "1",
+            ".1"
+          ]
+        },
+        "AddDamageToBasicAttack": "1",
+        "AddElementsToBasicAttack": "Electric"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIGHTNINGPAWS2_DESC",
+      "desc_resolved": "Your basic attack deals +2 Electric Damage and has a 33% chance to Stun.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Stun": [
+            "1",
+            ".33"
+          ]
+        },
+        "AddDamageToBasicAttack": "2",
+        "AddElementsToBasicAttack": "Electric"
+      }
+    }
+  },
+  "IcePaws": {
+    "name": "PASSIVE_ICEPAWS_NAME",
+    "name_resolved": "Ice Paws",
+    "desc": "PASSIVE_ICEPAWS_DESC",
+    "desc_resolved": "Your basic attack deals Ice Damage, inflicts Slow 1, and has a 15% chance to Freeze.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Freeze": [
+            "1",
+            ".15"
+          ],
+          "Slow": "1"
+        },
+        "AddElementsToBasicAttack": "Ice"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ICEPAWS2_DESC",
+      "desc_resolved": "Your basic attack deals Ice Damage, inflicts Slow 2, and has a 50% chance to Freeze.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Freeze": [
+            "1",
+            ".5"
+          ],
+          "Slow": "2"
+        },
+        "AddElementsToBasicAttack": "Ice"
+      }
+    }
+  },
+  "PawMissile": {
+    "name": "PASSIVE_PAWMISSILE_NAME",
+    "name_resolved": "Paw Missile",
+    "desc": "PASSIVE_PAWMISSILE_DESC",
+    "desc_resolved": "Your basic attack is Magic Missile.\n(its damage scales with [img:int]).",
+    "class": "Mage",
+    "1": {
+      "override_basic_attack": "BasicMagicMissile",
+      "passives": {
+        "ReplaceBasicAttack": "BasicMagicMissile"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PAWMISSILE2_DESC",
+      "desc_resolved": "Your basic attack is Magic Missile.\n(its damage scales with [img:int]).\nEmit 4 Sparkles when you use your basic attack.",
+      "override_basic_attack": "BasicMagicMissile",
+      "passives": {
+        "ReplaceBasicAttack": "BasicMagicMissile",
+        "AddSelfStatusToBasicAttack": {
+          "RandomMagicMissile": "1"
+        }
+      }
+    }
+  },
+  "Overload": {
+    "name": "PASSIVE_OVERLOAD_NAME",
+    "name_resolved": "Overload",
+    "desc": "PASSIVE_OVERLOAD_DESC",
+    "desc_resolved": "When you cast a spell, deal 1 random elemental damage to adjacent tiles.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "DamageNeighborTilesWhenCastSpell": {
+          "fire": {
+            "type": "spell",
+            "damage": "1",
+            "effects": {
+              "Burn": "1",
+              "VisualFXTile": "BurnTrigger"
+            },
+            "elements": [
+              "Fire"
+            ]
+          },
+          "ice": {
+            "type": "spell",
+            "damage": "1",
+            "effects": {
+              "Freeze": [
+                "1,",
+                ".05"
+              ],
+              "VisualFXTile": "IcePoof"
+            },
+            "elements": [
+              "Ice"
+            ]
+          },
+          "lightning": {
+            "type": "spell",
+            "damage": "1",
+            "effects": {
+              "Stun": [
+                "1,",
+                ".05"
+              ],
+              "VisualFXTile": "WaterConduct"
+            },
+            "elements": [
+              "Electric"
+            ]
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OVERLOAD2_DESC",
+      "desc_resolved": "When you cast a spell, deal 2 tri-elemental damage to adjacent tiles.",
+      "passives": {
+        "DamageNeighborTilesWhenCastSpell": {
+          "triattack": {
+            "type": "spell",
+            "damage": "2",
+            "effects": {
+              "Burn": "1",
+              "Stun": [
+                "1,",
+                ".05"
+              ],
+              "VisualFXTile": "WaterConduct"
+            },
+            "elements": [
+              "Fire",
+              "Ice",
+              "Electric"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ChargeUp": {
+    "name": "PASSIVE_CHARGEUP_NAME",
+    "name_resolved": "Charge Up",
+    "desc": "PASSIVE_CHARGEUP_DESC",
+    "desc_resolved": "If you end your turn with 0 mana, the next spell you cast is free",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "0",
+          "FreeSpell": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CHARGEUP2_DESC",
+      "desc_resolved": "If you end your turn with 0 mana, gain +1 Magic Damage and the next spell you cast is free.",
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "0",
+          "FreeSpell": "1",
+          "SpellDamageUp": "1"
+        }
+      }
+    }
+  },
+  "DeathChill": {
+    "name": "PASSIVE_DEATHCHILL_NAME",
+    "name_resolved": "Death Chill",
+    "desc": "PASSIVE_DEATHCHILL_DESC",
+    "desc_resolved": "When downed, Freeze all enemies and the rest of the map.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusEnemiesOnDeath": {
+          "Freeze": "2",
+          "AllStatsUp": "-1"
+        },
+        "DeathChill": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEATHCHILL2_DESC",
+      "desc_resolved": "When downed, Freeze all enemies and the rest of the map, and full heal all allies.",
+      "passives": {
+        "StatusEnemiesOnDeath": {
+          "Freeze": "2",
+          "AllStatsUp": "-2"
+        },
+        "StatusAlliesOnDeath": {
+          "FullHeal": "1",
+          "Freeze": "1"
+        },
+        "DeathChill": "1"
+      }
+    }
+  },
+  "Recharged": {
+    "name": "PASSIVE_RECHARGED_NAME",
+    "name_resolved": "Epiphany",
+    "desc": "PASSIVE_RECHARGED_DESC",
+    "desc_resolved": "+5 starting mana. +5 Mana Regeneration  Lose all unspent mana at the end of each of your turns",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AddStartingMana": "5",
+        "AddManaRegen": "5",
+        "StatusEachTurnEnd": {
+          "EmptyMana": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RECHARGED2_DESC",
+      "desc_resolved": "+20 starting mana. +5 Mana Regeneration  Lose all unspent mana at the end of each of your turns",
+      "passives": {
+        "AddStartingMana": "20",
+        "AddManaRegen": "5",
+        "StatusEachTurnEnd": {
+          "EmptyMana": "1"
+        }
+      }
+    }
+  },
+  "EnergyStorm": {
+    "name": "PASSIVE_ENERGYSTORM_NAME",
+    "name_resolved": "Three",
+    "desc": "PASSIVE_ENERGYSTORM_DESC",
+    "desc_resolved": "Every 3rd spell you cast in a turn is cast twice.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "EnergyStorm": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENERGYSTORM2_DESC",
+      "desc_resolved": "The first spell and every 3rd spell you cast is cast twice.",
+      "passives": {
+        "EnergyStorm": {
+          "period": "3",
+          "cycle_start": "2"
+        }
+      }
+    }
+  },
+  "FireArmor": {
+    "name": "PASSIVE_FIREASPECT_NAME",
+    "name_resolved": "Fire Aspect",
+    "desc": "PASSIVE_FIREASPECT_DESC",
+    "desc_resolved": "Fire immunity.\nInflict Burn 1 on units that contact you.\nYour Fire element damage is increased by 1 and inflicts +1 Burn.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "MeleeRevengeDamage": {
+          "damage": "0",
+          "effects": {
+            "VisualFXTile": "BurnTrigger"
+          },
+          "elements": [
+            "Fire"
+          ]
+        },
+        "InnateElement": "Fire",
+        "ElementImmune": "Fire",
+        "StatusImmunity": [
+          "Burn"
+        ],
+        "AddStatusToElementDamage": {
+          "element": "Fire",
+          "Burn": "1"
+        },
+        "AddDamageToElementDamage": {
+          "element": "Fire",
+          "damage": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FIREASPECT2_DESC",
+      "desc_resolved": "Fire immunity.\nInflict Burn 3 on units that contact you.\nYour Fire element damage is increased by 2 and inflicts +3 Burn.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "damage": "0",
+          "effects": {
+            "VisualFXTile": "BurnTrigger"
+          },
+          "elements": [
+            "Fire"
+          ]
+        },
+        "InnateElement": "Fire",
+        "ElementImmune": "Fire",
+        "StatusImmunity": [
+          "Burn"
+        ],
+        "AddStatusToElementDamage": {
+          "element": "Fire",
+          "Burn": "3"
+        },
+        "AddDamageToElementDamage": {
+          "element": "Fire",
+          "damage": "2"
+        }
+      }
+    }
+  },
+  "IceArmor": {
+    "name": "PASSIVE_ICEASPECT_NAME",
+    "name_resolved": "Ice Aspect",
+    "desc": "PASSIVE_ICEASPECT_DESC",
+    "desc_resolved": "Ice immunity. You can damage frozen units.\nUnits that contact you take 1 Ice Damage, Slow 2, and have a 5% chance to Freeze.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "MeleeRevengeDamage": {
+          "damage": "1",
+          "effects": {
+            "Slow": "2",
+            "Freeze": [
+              "1,",
+              ".05"
+            ],
+            "VisualFXTile": "IcePoof"
+          },
+          "elements": [
+            "Ice"
+          ]
+        },
+        "InnateElement": "Ice",
+        "ElementImmune": "Ice",
+        "StatusImmunity": [
+          "Freeze,",
+          "Slow"
+        ],
+        "FreezePiercing": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ICEASPECT2_DESC",
+      "desc_resolved": "+2 Brace. Ice immunity. You can damage frozen units.\nUnits that contact you take 3 Ice Damage, Slow 2, and have a 15% chance to Freeze.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "damage": "3",
+          "effects": {
+            "Slow": "2",
+            "Freeze": [
+              "1,",
+              ".15"
+            ],
+            "VisualFXTile": "IcePoof"
+          },
+          "elements": [
+            "Ice"
+          ]
+        },
+        "InnateElement": "Ice",
+        "ElementImmune": "Ice",
+        "StatusImmunity": [
+          "Freeze,",
+          "Slow"
+        ],
+        "FreezePiercing": "1",
+        "Brace": "2"
+      }
+    }
+  },
+  "Resonance": {
+    "name": "PASSIVE_RESONANCE_NAME",
+    "name_resolved": "Resonance",
+    "desc": "PASSIVE_RESONANCE_DESC",
+    "desc_resolved": "When you cast a spell gain +1 Magic Damage for the rest of the turn.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusAfterCastSpell": {
+          "TempSpellDamageUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RESONANCE2_DESC",
+      "desc_resolved": "When you cast a spell gain +1 Magic Damage and +1 Damage for the rest of the turn.",
+      "passives": {
+        "StatusAfterCastSpell": {
+          "TempSpellDamageUp": "1",
+          "TempDamageUp": "1"
+        }
+      }
+    }
+  },
+  "LearnFromMe": {
+    "name": "PASSIVE_LEARNFROMME_NAME",
+    "name_resolved": "Learn From Me",
+    "desc": "PASSIVE_LEARNFROMME_DESC",
+    "desc_resolved": "When you cast a spell, all allied cats gain that spell in their bonus slot.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "ConjureCastSpellsForAllies": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LEARNFROMME2_DESC",
+      "desc_resolved": "When you cast a spell, all allied cats gain the upgraded version of that spell in their bonus slot.",
+      "passives": {
+        "ConjureCastSpellsForAllies": "2"
+      }
+    }
+  },
+  "LightningArmor": {
+    "name": "PASSIVE_LIGHTNINGASPECT_NAME",
+    "name_resolved": "Lightning Aspect",
+    "desc": "PASSIVE_LIGHTNINGASPECT_DESC",
+    "desc_resolved": "Electric immunity.\nWhen you deal Electric Damage, gain +1 Charge.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "InnateElement": "Electric",
+        "ElementImmune": "Electric",
+        "LightningAspectCharge": "0"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIGHTNINGASPECT2_DESC",
+      "desc_resolved": "Electric immunity.\nWhen you deal Electric Damage, gain +1 Charge for each point of damage dealt.",
+      "passives": {
+        "InnateElement": "Electric",
+        "ElementImmune": "Electric",
+        "LightningAspectCharge": "1"
+      }
+    }
+  },
+  "LongCast": {
+    "name": "PASSIVE_LONGCAST_NAME",
+    "name_resolved": "Long Cast",
+    "desc": "PASSIVE_LONGCAST_DESC",
+    "desc_resolved": "Tile-targeted spells gain +3 Range.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "IncreaseSpellRange": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LONGCAST2_DESC",
+      "desc_resolved": "+1 Magic Damage. Tile-targeted spells gain +5 Range.",
+      "passives": {
+        "IncreaseSpellRange": "5",
+        "AddSpellDamage": "1"
+      }
+    }
+  },
+  "LightUpTheStage": {
+    "name": "PASSIVE_LIGHTUPTHESTAGE_NAME",
+    "name_resolved": "Light Up the Stage",
+    "desc": "PASSIVE_LIGHTUPTHESTAGE_DESC",
+    "desc_resolved": "At the end of your turn, Emit a Sparkle for each turn you've taken.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusEachTurnEndForEachTurn": {
+          "RandomMagicMissile": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIGHTUPTHESTAGE2_DESC",
+      "desc_resolved": "At the end of your turn, emit a Sparkle for each turn you've taken and gain +1 Kinetic Spikes .",
+      "passives": {
+        "StatusEachTurnEndForEachTurn": {
+          "RandomMagicMissile": "1"
+        },
+        "StatusEachTurnEnd": {
+          "KineticSpikes": "1"
+        }
+      }
+    }
+  },
+  "ElementalAttunement": {
+    "name": "PASSIVE_ELEMENTALATTUNEMENT_NAME",
+    "name_resolved": "Elemental Attunement",
+    "desc": "PASSIVE_ELEMENTALATTUNEMENT_DESC",
+    "desc_resolved": "Casting elemental spells imbues your basic attack with those elements and relevant effects for the rest of the battle.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "ElementalAttunement": {
+          "Fire": {
+            "Burn": "X"
+          },
+          "Ice": {
+            "Slow": "X"
+          },
+          "Electric": {
+            "Stun": [
+              "1",
+              ".1*X"
+            ]
+          },
+          "Earth": {
+            "damage": "X"
+          },
+          "Wind": {
+            "knockback": "X"
+          },
+          "Water": {
+            "AOEPuddle": "X-1"
+          },
+          "Grass": {
+            "Poison": "X"
+          },
+          "Holy": {
+            "FlatLeech": "X"
+          },
+          "/*Explosion": {
+            "HitExplosion": "X"
+          },
+          "Musical": {
+            "(cause": "that",
+            "shows": "as",
+            "an": "element",
+            "icon": "on",
+            "spells)": true
+          },
+          "*/": "Gravity",
+          "Weakness": "X"
+        },
+        "Shadow": {
+          "crit_chance": ".05*X"
+        }
+      }
+    }
+  },
+  "2": {
+    "desc": "PASSIVE_ELEMENTALATTUNEMENT2_DESC",
+    "desc_resolved": "Casting elemental spells imbues your basic attack with those elements and relevant effects for the rest of the battle.\nElemental spells cost -2 mana.",
+    "passives": {
+      "ElementalAttunement": {
+        "Fire": {
+          "Burn": "X"
+        },
+        "Ice": {
+          "Slow": "X"
+        },
+        "Electric": {
+          "Stun": [
+            "1",
+            ".1*X"
+          ]
+        },
+        "Earth": {
+          "damage": "X"
+        },
+        "Wind": {
+          "knockback": "X"
+        },
+        "Water": {
+          "AOEPuddle": "X-1"
+        },
+        "Grass": {
+          "Poison": "X"
+        },
+        "Holy": {
+          "FlatLeech": "X"
+        },
+        "/*Explosion": {
+          "HitExplosion": "X"
+        },
+        "Musical": {
+          "(cause": "that",
+          "shows": "as",
+          "an": "element",
+          "icon": "on",
+          "spells)": true
+        },
+        "*/": "Gravity",
+        "Weakness": "X"
+      },
+      "Shadow": {
+        "crit_chance": ".05*X"
+      }
+    },
+    "ElementalManaCostReduction": {
+      "element": [
+        "Fire",
+        "Ice",
+        "Electric",
+        "Earth",
+        "Wind",
+        "Water",
+        "Grass",
+        "Holy",
+        "Gravity"
+      ],
+      "reduction": "2"
+    }
+  },
+  "LatentEnergy": {
+    "name": "PASSIVE_LATENTENERGY_NAME",
+    "name_resolved": "Latent Energy",
+    "desc": "PASSIVE_LATENTENERGY_DESC",
+    "desc_resolved": "When an ally spends mana, Gain +2 Magic Damage until the next time you use magic.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusWhenAllySpendsMana": {
+          "OneUseSpellDamageUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LATENTENERGY2_DESC",
+      "desc_resolved": "When an ally spends mana, Gain +2 Magic Damage until the next time you use magic, and gain +2 mana.",
+      "passives": {
+        "StatusWhenAllySpendsMana": {
+          "OneUseSpellDamageUp": "2",
+          "ManaGain": "2"
+        }
+      }
+    }
+  },
+  "Five": {
+    "name": "PASSIVE_FIVE_NAME",
+    "name_resolved": "Five",
+    "desc": "PASSIVE_FIVE_DESC",
+    "desc_resolved": "When you end your turn with exactly 5 mana, gain +5 [img:shield] and temporarily gain +5 Kinetic Spikes until the end of your next turn .",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "5",
+          "Shield": "5",
+          "Temporary": {
+            "status": "KineticSpikes",
+            "stacks": "5",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FIVE2_DESC",
+      "desc_resolved": "When you end your turn with exactly 5 mana, gain +5 [img:shield], heal 5 HP and temporarily gain +5 Kinetic Spikes and +5 Damage until the end of your next turn.",
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "5",
+          "Shield": "5",
+          "HealthGain": "5",
+          "Temporary": {
+            "status": "DamageUp",
+            "stacks": "5",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        }
+      }
+    }
+  },
+  "MagicGuru": {
+    "name": "PASSIVE_MAGICGURU_NAME",
+    "name_resolved": "Magic Guru",
+    "desc": "PASSIVE_MAGICGURU_DESC",
+    "desc_resolved": "Your allies have +1 Mana Regeneration. When an ally spends 7+ mana to cast a spell, they gain All Stats Up.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "AllyManaRegenAura": {
+          "stacks": "1",
+          "range": "global"
+        },
+        "StatusAllyWhenAllySpendsMana": {
+          "threshold": "7",
+          "AllStatsUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MAGICGURU2_DESC",
+      "desc_resolved": "Your allies have +1 Mana Regeneration. When an ally spends 7+ mana to cast a spell, they gain All Stats Up. When you spend mana, each ally gains +1 mana.",
+      "passives": {
+        "AllyManaRegenAura": {
+          "stacks": "1",
+          "range": "global"
+        },
+        "StatusAllyWhenAllySpendsMana": {
+          "threshold": "7",
+          "AllStatsUp": "1"
+        },
+        "StatusAlliesOnSpendMana": {
+          "ManaGain": "1"
+        }
+      }
+    }
+  },
+  "One": {
+    "name": "PASSIVE_ONE_NAME",
+    "name_resolved": "One",
+    "desc": "PASSIVE_ONE_DESC",
+    "desc_resolved": "When you end your turn, if you cast exactly 1 spell, double cast your next spell.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusOnTurnEndIfCastNSpells": {
+          "spells": "1",
+          "DoubleCastSpell": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ONE2_DESC",
+      "desc_resolved": "When you end your turn, if you cast exactly 1 spell, double cast your next 2 spells.",
+      "passives": {
+        "StatusOnTurnEndIfCastNSpells": {
+          "spells": "1",
+          "DoubleCastSpell": "2"
+        }
+      }
+    }
+  },
+  "Two": {
+    "name": "PASSIVE_TWO_NAME",
+    "name_resolved": "Two",
+    "desc": "PASSIVE_TWO_DESC",
+    "desc_resolved": "When you end your turn, if you cast exactly 2 spells, gain +1 Bonus Attack.\nWhen you end your turn, if you have exactly 2 mana, gain +1 Bonus Attack.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "2",
+          "Quivered": "1"
+        },
+        "StatusOnTurnEndIfCastNSpells": {
+          "spells": "2",
+          "Quivered": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TWO2_DESC",
+      "desc_resolved": "When you end your turn, if you cast exactly 2 spells, gain +1 Bonus Attack and Movement.\nWhen you end your turn, if you have exactly 2 mana, gain +1 Bonus Attack and Movement.",
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "2",
+          "Quivered": "1",
+          "MoveQuivered": "1"
+        },
+        "StatusOnTurnEndIfCastNSpells": {
+          "spells": "2",
+          "Quivered": "1",
+          "MoveQuivered": "1"
+        }
+      }
+    }
+  },
+  "Four": {
+    "name": "PASSIVE_FOUR_NAME",
+    "name_resolved": "Four",
+    "desc": "PASSIVE_FOUR_DESC",
+    "desc_resolved": "When you end your turn, if you have exactly 4 mana, gain +1 [img:int] and +1 Magic Damage.",
+    "class": "Mage",
+    "1": {
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "4",
+          "IntelligenceUp": "1",
+          "SpellDamageUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FOUR2_DESC",
+      "desc_resolved": "When you end your turn, if you have exactly 4 mana, gain +1 [img:int], +1 Magic Damage, +1 Kinetic Spikes, and +1 Holy Shield.",
+      "passives": {
+        "StatusOnTurnEndIfManaExact": {
+          "mana": "4",
+          "IntelligenceUp": "1",
+          "SpellDamageUp": "1",
+          "KineticSpikes": "1",
+          "DivineShield": "1"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "None": {
+    "id": "None",
+    "template": "melee_attack",
+    "name_key": "None",
+    "name": "None",
+    "desc_key": "nothing",
+    "description": "nothing"
+  }
+}

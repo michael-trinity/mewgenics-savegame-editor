@@ -1,0 +1,54 @@
+{
+  "blackbird_pool": {
+    "chapter_common": "1",
+    "BagOfSeeds": ".3",
+    "MagicSeed": ".3",
+    "GlowingSeed": ".3"
+  },
+  "pigeon_pool": {
+    "chapter_common": "1",
+    "BirdFeed": ".3"
+  },
+  "chicken_pool": {
+    "chapter_common": "1",
+    "Chicken": "2",
+    "WeirdEgg": ".3",
+    "GoldenEgg": ".3",
+    "RaptorEgg": ".1"
+  },
+  "dove_pool": {
+    "chapter": "1",
+    "PeaceSymbol": ".3",
+    "TieDyeBandana": ".3",
+    "PeaceSymbolFacePaint": ".3"
+  },
+  "seagull_pool": {
+    "chapter": "1",
+    "BirdPoopHat": ".3"
+  },
+  "turkey_pool": {
+    "Turkey": "2",
+    "chapter": "1",
+    "WishBone": ".3"
+  },
+  "hummingbird_pool": {
+    "chapter_rare": "1",
+    "DeadHummingbird": ".3"
+  },
+  "raven_pool": {
+    "chapter_rare": "1",
+    "RavenFeather": ".3"
+  },
+  "cherub_pool": {
+    "chapter_rare": "1",
+    "LostSoul": ".5"
+  },
+  "mutant_pool": {
+    "chapter_rare": "1",
+    "Parousworm": ".5"
+  },
+  "harpy_pool": {
+    "chapter_rare": "1",
+    "HarpysClaw": ".5"
+  }
+}

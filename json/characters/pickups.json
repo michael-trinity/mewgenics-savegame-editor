@@ -1,0 +1,903 @@
+{
+  "PickupBase": {
+    "graphics": {
+      "movieclip": "Coin",
+      "name": "PICKUP_NOTHING_NAME",
+      "name_resolved": "Nothing!",
+      "depth_offset": ".015",
+      "shadow": "None"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "takes_turns": "false",
+      "inanimate": "true",
+      "can_be_backstabbed": "false",
+      "layer": "pickups",
+      "kill_required": "false",
+      "tag": "pickup"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Coin": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "Coin",
+      "name": "PICKUP_COIN_NAME",
+      "name_resolved": "Coin",
+      "tooltip": "PICKUP_COIN_DESC",
+      "tooltip_resolved": "Collect it to get money!"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_CoinLand"
+        ]
+      ]
+    },
+    "properties": {
+      "pickup_type": "1",
+      "tag": [
+        "money",
+        "pickup"
+      ],
+      "elements": [
+        "Metal"
+      ]
+    },
+    "passives": {
+      "CoinPickup": "1"
+    }
+  },
+  "Coin2": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "2"
+    }
+  },
+  "Coin3": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "3"
+    }
+  },
+  "Coin4": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "4"
+    }
+  },
+  "Coin5": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "5"
+    }
+  },
+  "Coin6": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "6"
+    }
+  },
+  "Coin7": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "7"
+    }
+  },
+  "Coin8": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "8"
+    }
+  },
+  "Coin9": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "9"
+    }
+  },
+  "Coin10": {
+    "variant_of": "Coin",
+    "passives": {
+      "CoinPickup": "10"
+    }
+  },
+  "FoodBase": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "Food",
+      "name": "PICKUP_FOOD_NAME",
+      "name_resolved": "Food",
+      "tooltip": "PICKUP_FOOD_DESC",
+      "tooltip_resolved": "Heals 4 HP when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_FoodLand"
+        ]
+      ]
+    },
+    "properties": {
+      "tag": [
+        "food",
+        "pickup"
+      ]
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "1",
+          "2"
+        ],
+        "stored_food_value": "1"
+      }
+    }
+  },
+  "Food": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_FOOD_NAME",
+      "name_resolved": "Food",
+      "tooltip": "PICKUP_FOOD_DESC",
+      "tooltip_resolved": "Heals 4 HP when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_FoodLand"
+        ]
+      ]
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "1",
+          "2"
+        ],
+        "stored_food_value": "1"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedFood"
+      }
+    }
+  },
+  "BigFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_MEDIUMFOOD_NAME",
+      "name_resolved": "Medium Food",
+      "tooltip": "PICKUP_MEDIUMFOOD_DESC",
+      "tooltip_resolved": "Heals 7 HP when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_FoodLand"
+        ]
+      ]
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "7",
+        "frame_range": [
+          "3",
+          "4"
+        ],
+        "stored_food_value": "2"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedBigFood"
+      }
+    }
+  },
+  "BiggestFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_BIGFOOD_NAME",
+      "name_resolved": "Big Food",
+      "tooltip": "PICKUP_BIGFOOD_DESC",
+      "tooltip_resolved": "Heals 10 HP when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_FoodLand"
+        ]
+      ]
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "10",
+        "frame_range": [
+          "5",
+          "5"
+        ],
+        "stored_food_value": "3"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedBiggestFood"
+      }
+    }
+  },
+  "PoisonFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_POISONEDFOOD_NAME",
+      "name_resolved": "Poisoned Food",
+      "tooltip": "PICKUP_POISONEDFOOD_DESC",
+      "tooltip_resolved": "Gain Poison 2 and Slow 2 if eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_FoodLand"
+        ]
+      ]
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "0",
+        "frame_range": [
+          "6",
+          "7"
+        ],
+        "stored_food_value": "0"
+      },
+      "StatusCollector": {
+        "Poison": "2",
+        "Slow": "2"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedPoisonFood"
+      },
+      "TransformOnElementInfluencex": {
+        "element": "Holy",
+        "object": "PurifiedPoisonFood"
+      }
+    }
+  },
+  "Bait": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_BAIT_NAME",
+      "name_resolved": "Bait",
+      "tooltip": "PICKUP_BAIT_DESC",
+      "tooltip_resolved": "Attracts enemies toward it.\nHeals 1 HP when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "1",
+        "frame_range": [
+          "8",
+          "8"
+        ],
+        "anything_eats": "true",
+        "stored_food_value": "0"
+      },
+      "BaitAura": {
+        "range": "3"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedBait"
+      }
+    }
+  },
+  "PoisonBait": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_POISONBAIT_NAME",
+      "name_resolved": "Poisoned Bait",
+      "tooltip": "PICKUP_POISONBAIT_DESC",
+      "tooltip_resolved": "Attracts enemies toward it.\nGain Poison 2 and Slow 2 if eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "0",
+        "frame_range": [
+          "19",
+          "19"
+        ],
+        "anything_eats": "true",
+        "stored_food_value": "0"
+      },
+      "BaitAura": {
+        "range": "3"
+      },
+      "StatusCollector": {
+        "Poison": "2",
+        "Slow": "2"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedPoisonBait"
+      },
+      "TransformOnElementInfluencex": {
+        "element": "Holy",
+        "object": "Bait"
+      }
+    }
+  },
+  "CookedFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDFOOD_NAME",
+      "name_resolved": "Cooked Food",
+      "tooltip": "PICKUP_COOKEDFOOD_DESC",
+      "tooltip_resolved": "Heals 4 HP and +1 [img:str] when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "9",
+          "10"
+        ],
+        "stored_food_value": "2"
+      },
+      "StatusCollector": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "CookedBigFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDMEDIUMFOOD_NAME",
+      "name_resolved": "Cooked Medium Food",
+      "tooltip": "PICKUP_COOKEDMEDIUMFOOD_DESC",
+      "tooltip_resolved": "Heals 7 HP and +1 [img:str] when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "7",
+        "frame_range": [
+          "11",
+          "12"
+        ],
+        "stored_food_value": "3"
+      },
+      "StatusCollector": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "CookedChickenLeg": {
+    "variant_of": "CookedBigFood",
+    "passives": {
+      "HealthPickup": {
+        "force_frame": "12"
+      }
+    }
+  },
+  "CookedBiggestFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDBIGFOOD_NAME",
+      "name_resolved": "Cooked Big Food",
+      "tooltip": "PICKUP_COOKEDBIGFOOD_DESC",
+      "tooltip_resolved": "Heals 10 HP and +1 [img:str] when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "10",
+        "frame_range": [
+          "13",
+          "13"
+        ],
+        "stored_food_value": "4"
+      },
+      "StatusCollector": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "CookedPoisonFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDPOISONEDFOOD_NAME",
+      "name_resolved": "Cooked Poisoned Food",
+      "tooltip": "PICKUP_COOKEDPOISONEDFOOD_DESC",
+      "tooltip_resolved": "Gain Poison 2, Slow 2 and +1 [img:str] if eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "0",
+        "frame_range": [
+          "14",
+          "15"
+        ],
+        "stored_food_value": "0"
+      },
+      "StatusCollector": {
+        "Poison": "2",
+        "Slow": "2",
+        "StrengthUp": "1"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Holy",
+        "object": "CookedPurifiedPoisonFood"
+      }
+    }
+  },
+  "PurifiedPoisonFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_PURIFIEDFOOD_NAME",
+      "name_resolved": "Purified Food",
+      "tooltip": "PICKUP_PURIFIEDFOOD_DESC",
+      "tooltip_resolved": "Heals 4 HP when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "17",
+          "18"
+        ],
+        "stored_food_value": "1"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Fire",
+        "object": "CookedPurifiedPoisonFood"
+      }
+    }
+  },
+  "CookedPurifiedPoisonFood": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDPURIFIEDFOOD_NAME",
+      "name_resolved": "Cooked Purified Food",
+      "tooltip": "PICKUP_COOKEDPURIFIEDFOOD_DESC",
+      "tooltip_resolved": "Heals 4 HP and +1 [img:str] when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "21",
+          "22"
+        ],
+        "stored_food_value": "2"
+      },
+      "StatusCollector": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "CookedBait": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDBAIT_NAME",
+      "name_resolved": "Cooked Bait",
+      "tooltip": "PICKUP_COOKEDBAIT_DESC",
+      "tooltip_resolved": "Attracts enemies toward it.\nHeals 1 HP and +1 [img:str] when eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "1",
+        "frame_range": [
+          "16",
+          "16"
+        ],
+        "anything_eats": "true",
+        "stored_food_value": "0"
+      },
+      "BaitAura": {
+        "range": "3"
+      },
+      "StatusCollector": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "CookedPoisonBait": {
+    "variant_of": "FoodBase",
+    "graphics": {
+      "name": "PICKUP_COOKEDPOISONEDBAIT_NAME",
+      "name_resolved": "Cooked Poisoned Bait",
+      "tooltip": "PICKUP_COOKEDPOISONEDBAIT_DESC",
+      "tooltip_resolved": "Attracts enemy units toward it.\nGain Poison 2, Slow 2 and +1 [img:str] if eaten."
+    },
+    "passives": {
+      "HealthPickup": {
+        "stacks": "0",
+        "frame_range": [
+          "20",
+          "20"
+        ],
+        "anything_eats": "true",
+        "stored_food_value": "0"
+      },
+      "BaitAura": {
+        "range": "3"
+      },
+      "StatusCollector": {
+        "Poison": "2",
+        "Slow": "2",
+        "StrengthUp": "1"
+      },
+      "TransformOnElementInfluence": {
+        "element": "Holy",
+        "object": "CookedBait"
+      }
+    }
+  },
+  "Scrap": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ArmorPickup",
+      "name": "PICKUP_SCRAP_NAME",
+      "name_resolved": "Scrap",
+      "tooltip": "PICKUP_SCRAP_DESC",
+      "tooltip_resolved": "Gain +2 [img:shield] when collected."
+    },
+    "properties": {
+      "tag": [
+        "scrap",
+        "pickup"
+      ],
+      "elements": [
+        "Metal"
+      ]
+    },
+    "passives": {
+      "ArmorPickup": {
+        "stacks": "2",
+        "frame_range": [
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "MedScrap": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ArmorPickup",
+      "name": "PICKUP_MEDIUMSCRAP_NAME",
+      "name_resolved": "Medium Scrap",
+      "tooltip": "PICKUP_MEDIUMSCRAP_DESC",
+      "tooltip_resolved": "Gain +4 [img:shield] when collected."
+    },
+    "properties": {
+      "tag": [
+        "scrap",
+        "pickup"
+      ],
+      "elements": [
+        "Metal"
+      ]
+    },
+    "passives": {
+      "ArmorPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "3",
+          "5"
+        ]
+      }
+    }
+  },
+  "BigScrap": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ArmorPickup",
+      "name": "PICKUP_BIGSCRAP_NAME",
+      "name_resolved": "Big Scrap",
+      "tooltip": "PICKUP_BIGSCRAP_DESC",
+      "tooltip_resolved": "Gain +6 [img:shield] when collected."
+    },
+    "properties": {
+      "tag": [
+        "scrap",
+        "pickup"
+      ],
+      "elements": [
+        "Metal"
+      ]
+    },
+    "passives": {
+      "ArmorPickup": {
+        "stacks": "6",
+        "frame_range": [
+          "6",
+          "6"
+        ]
+      }
+    }
+  },
+  "Blessing": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "HolyPickup",
+      "name": "PICKUP_BLESSING_NAME",
+      "name_resolved": "Blessing",
+      "tooltip": "PICKUP_BLESSING_DESC",
+      "tooltip_resolved": "Gain +1 [img:divineshield] when collected."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_HolyPickupLand"
+        ]
+      ]
+    },
+    "passives": {
+      "DivineShieldPickup": "1"
+    }
+  },
+  "Antidote": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "AntidotePickup",
+      "name": "PICKUP_ANTIDOTE_NAME",
+      "name_resolved": "Antidote",
+      "tooltip": "PICKUP_ANTIDOTE_DESC",
+      "tooltip_resolved": "Cleanse all debuffs when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_AntidotePickupLand"
+        ]
+      ]
+    },
+    "passives": {
+      "ModularPickup": {
+        "Cleanse": "0",
+        "sound_event": "EatAntidote"
+      }
+    }
+  },
+  "Catnip": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ManaPickup",
+      "name": "PICKUP_CATNIP_NAME",
+      "name_resolved": "Catnip",
+      "tooltip": "PICKUP_CATNIP_DESC",
+      "tooltip_resolved": "Gain +2 mana when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_ManaPickupLand"
+        ]
+      ]
+    },
+    "passives": {
+      "ManaPickup": {
+        "stacks": "2",
+        "frame_range": [
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "MedCatnip": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ManaPickup",
+      "name": "PICKUP_MEDIUMCATNIP_NAME",
+      "name_resolved": "Medium Catnip",
+      "tooltip": "PICKUP_MEDIUMCATNIP_DESC",
+      "tooltip_resolved": "Gain +4 mana when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_ManaPickupLand"
+        ]
+      ]
+    },
+    "passives": {
+      "ManaPickup": {
+        "stacks": "4",
+        "frame_range": [
+          "3",
+          "5"
+        ]
+      }
+    }
+  },
+  "BigCatnip": {
+    "variant_of": "PickupBase",
+    "graphics": {
+      "movieclip": "ManaPickup",
+      "name": "PICKUP_BIGCATNIP_NAME",
+      "name_resolved": "Big Catnip",
+      "tooltip": "PICKUP_BIGCATNIP_DESC",
+      "tooltip_resolved": "Gain +6 mana when eaten."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "Obj_ManaPickupLand"
+        ]
+      ]
+    },
+    "passives": {
+      "ManaPickup": {
+        "stacks": "6",
+        "frame_range": [
+          "6",
+          "6"
+        ]
+      }
+    }
+  },
+  "RandomPickup": {
+    "alt_spawn_pool": {
+      "Coin": "70",
+      "RandomFoodPickup": "15",
+      "RandomArmorPickup": "4.5",
+      "RandomCatnipPickup": "10",
+      "Antidote": ".5",
+      "Blessing": ".5"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomNonCoinPickup": {
+    "alt_spawn_pool": {
+      "RandomFoodPickup": "40",
+      "RandomArmorPickup": "40",
+      "RandomCatnipPickup": "30",
+      "Antidote": "1",
+      "Blessing": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomCatnipPickup": {
+    "alt_spawn_pool": {
+      "Catnip": "20",
+      "MedCatnip": "5",
+      "BigCatnip": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomBiggerCatnipPickup": {
+    "alt_spawn_pool": {
+      "MedCatnip": "20",
+      "BigCatnip": "6"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomFoodPickup": {
+    "alt_spawn_pool": {
+      "Food": "20",
+      "BigFood": "5",
+      "BiggestFood": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomBiggerFoodPickup": {
+    "alt_spawn_pool": {
+      "BigFood": "20",
+      "BiggestFood": "6"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomArmorPickup": {
+    "alt_spawn_pool": {
+      "Scrap": "20",
+      "MedScrap": "5",
+      "BigScrap": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomBiggerArmorPickup": {
+    "alt_spawn_pool": {
+      "MedScrap": "20",
+      "BigScrap": "6"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomBiggerPickup": {
+    "alt_spawn_pool": {
+      "Coin": "70",
+      "RandomBiggerFoodPickup": "15",
+      "RandomBiggerArmorPickup": "4.5",
+      "RandomBiggerCatnipPickup": "10",
+      "Antidote": ".5",
+      "Blessing": ".5"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "RandomBiggestPickup": {
+    "alt_spawn_pool": {
+      "Coin": "70",
+      "BiggestFood": "15",
+      "BigScrap": "4.5",
+      "BigCatnip": "10",
+      "Antidote": ".5",
+      "Blessing": ".5"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "SlotMachineNormalPickupReward": {
+    "alt_spawn_pool": {
+      "Coin": "1",
+      "Coin2": "1",
+      "Coin3": "1",
+      "Coin4": "1",
+      "Coin10": ".1",
+      "BiggestFood": "4",
+      "BigScrap": "2",
+      "BigCatnip": "2",
+      "Antidote": "1",
+      "Blessing": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  },
+  "SlotMachineJackpotCoinsReward": {
+    "alt_spawn_pool": {
+      "Coin3": "1",
+      "Coin4": "1",
+      "Coin10": "1"
+    },
+    "properties": {
+      "layer": "pickups",
+      "can_be_champion": "false"
+    }
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "TakeAim": {
+    "name": "PASSIVE_TAKEAIM_NAME",
+    "name_resolved": "Take Aim",
+    "desc": "PASSIVE_TAKEAIM_DESC",
+    "desc_resolved": "Gain +1 range and damage at the start of each turn. You lose this when you move.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "TowerDefense": {
+          "range": "1",
+          "damage": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TAKEAIM2_DESC",
+      "desc_resolved": "Gain +2 range and damage at the start of each turn. You lose this when you move.",
+      "passives": {
+        "TowerDefense": {
+          "range": "2",
+          "damage": "2"
+        }
+      }
+    }
+  },
+  "TowerDefense": {
+    "name": "PASSIVE_TOWERDEFENSE_NAME",
+    "name_resolved": "Tower Defense",
+    "desc": "PASSIVE_TOWERDEFENSE_DESC",
+    "desc_resolved": "When an enemy comes within range, shoot them for 1 damage.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "TowerDefenseReflex": "BasicRanged_1DMG"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TOWERDEFENSE2_DESC",
+      "desc_resolved": "When an enemy comes within range, use your basic attack on them.",
+      "passives": {
+        "TowerDefenseReflex": "attack"
+      }
+    }
+  },
+  "HuntersBoon": {
+    "name": "PASSIVE_HUNTERSBOON_NAME",
+    "name_resolved": "Hunter's Boon",
+    "desc": "PASSIVE_HUNTERSBOON_DESC",
+    "desc_resolved": "When you kill an enemy, gain 5 mana.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "StatusOnKillEnemy": {
+          "ManaGain": "5"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HUNTERSBOON2_DESC",
+      "desc_resolved": "When you kill an enemy, restore all your mana.",
+      "passives": {
+        "StatusOnKillEnemy": {
+          "FillMana": "1"
+        }
+      }
+    }
+  },
+  "BroodMother": {
+    "name": "PASSIVE_BROODMOTHER_NAME",
+    "name_resolved": "Brood Mother",
+    "desc": "PASSIVE_BROODMOTHER_DESC",
+    "desc_resolved": "Your familiars and units you charm gain +2 Damage and +5 HP.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "DamageUp": "2",
+          "AddMaxHealth": "5",
+          "HealthGain": "5"
+        },
+        "AddPassivesToCharmed": {
+          "DamageUp": "2",
+          "AddMaxHealth": "5"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BROODMOTHER2_DESC",
+      "desc_resolved": "Your familiars and units you charm gain +3 Damage, +10 HP, and inflict Poison.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "DamageUp": "3",
+          "AddMaxHealth": "10",
+          "HealthGain": "10",
+          "AddStatusToBasicAttack": {
+            "Poison": "1"
+          }
+        },
+        "AddPassivesToCharmed": {
+          "DamageUp": "3",
+          "AddMaxHealth": "10",
+          "AddStatusToBasicAttack": {
+            "Poison": "1"
+          }
+        }
+      }
+    }
+  },
+  "TaintedMother": {
+    "name": "PASSIVE_TAINTEDMOTHER_NAME",
+    "name_resolved": "Tainted Mother",
+    "desc": "PASSIVE_TAINTEDMOTHER_DESC",
+    "desc_resolved": "Your familiars and units you charm gain +4 [img:spd] and inflict Poison and Bleed.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddPassivesToMinions": {
+          "AddSpeed": "4",
+          "AddStatusToBasicAttack": {
+            "Bleed": "1"
+          }
+        },
+        "AddPassivesToCharmed": {
+          "AddSpeed": "4",
+          "AddStatusToBasicAttack": {
+            "Bleed": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TAINTEDMOTHER2_DESC",
+      "desc_resolved": "Your familiars and units you charm gain +4 [img:spd] and inflict Poison and Bleed.\nStart each battle with 4 fly familiars.",
+      "passives": {
+        "AddPassivesToMinions": {
+          "AddSpeed": "4",
+          "AddStatusToBasicAttack": {
+            "Bleed": "2"
+          }
+        },
+        "AddPassivesToCharmed": {
+          "AddSpeed": "4",
+          "AddStatusToBasicAttack": {
+            "Bleed": "2"
+          }
+        },
+        "SpawnOnBattleStart": {
+          "object": "CharmedFly",
+          "number": "3"
+        }
+      }
+    }
+  },
+  "Quiver": {
+    "name": "PASSIVE_QUIVER_NAME",
+    "name_resolved": "Quiver",
+    "desc": "PASSIVE_QUIVER_DESC",
+    "desc_resolved": "Save unused basic attacks for future turns.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "Quiver": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_QUIVER2_DESC",
+      "desc_resolved": "Save unused basic attacks for future turns.\nIf you haven't attacked this battle, the number you save is doubled.",
+      "passives": {
+        "Quiver": "2"
+      }
+    }
+  },
+  "SplitShot": {
+    "name": "PASSIVE_SPLITSHOT_NAME",
+    "name_resolved": "Split Shot",
+    "desc": "PASSIVE_SPLITSHOT_DESC",
+    "desc_resolved": "Your basic attack has +1 area but deals 50% less damage.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "BasicAttackAOEBonus": "1",
+        "BasicAttackDamageMultiplier": "50%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SPLITSHOT2_DESC",
+      "desc_resolved": "Your basic attack has +2 area but deals 50% less damage.",
+      "passives": {
+        "BasicAttackAOEBonus": "2",
+        "BasicAttackDamageMultiplier": "50%"
+      }
+    }
+  },
+  "Hazardous": {
+    "name": "PASSIVE_HAZARDOUS_NAME",
+    "name_resolved": "Hazardous",
+    "desc": "PASSIVE_HAZARDOUS_DESC",
+    "desc_resolved": "Tile damage and effects are doubled.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "TileDamageMultiplier": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HAZARDOUS2_DESC",
+      "desc_resolved": "Tile damage and effects are doubled.\nAllies are immune to tile damage and effects.",
+      "passives": {
+        "TileDamageMultiplier": {
+          "multiplier": "2",
+          "ally_multiplier": "0"
+        }
+      }
+    }
+  },
+  "ThornArrows": {
+    "name": "PASSIVE_THORNARROWS_NAME",
+    "name_resolved": "Thorn Arrows",
+    "desc": "PASSIVE_THORNARROWS_DESC",
+    "desc_resolved": "Your basic attack spawns brambles.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": "BrambleTile"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THORNARROWS2_DESC",
+      "desc_resolved": "Your basic attack spawns brambles in an area.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": {
+            "tile": "BrambleTile",
+            "aoe": "1"
+          }
+        }
+      }
+    }
+  },
+  "Traps": {
+    "name": "PASSIVE_TRAPS_NAME",
+    "name_resolved": "Traps",
+    "desc": "PASSIVE_TRAPS_DESC",
+    "desc_resolved": "Your basic attack spawns a bear trap if you shoot an empty tile.\nWhenever one of your traps triggers, gain +2 [img:dex].",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SpawnBearTrapOnMiss": "1"
+        },
+        "StatusOnTriggerTrap": {
+          "DexterityUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TRAPS2_DESC",
+      "desc_resolved": "Your basic attack spawns a bear trap if you shoot an empty tile.\nWhenever one of your traps triggers, gain +2 [img:dex] and +1 Bonus Attack.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SpawnBearTrapOnMiss": "1"
+        },
+        "StatusOnTriggerTrap": {
+          "Quivered": "1",
+          "DexterityUp": "2"
+        }
+      }
+    }
+  },
+  "CatchProjectiles": {
+    "name": "PASSIVE_CATCHPROJECTILES_NAME",
+    "name_resolved": "Catch Projectiles",
+    "desc": "PASSIVE_CATCHPROJECTILES_DESC",
+    "desc_resolved": "33% chance to block enemy projectiles and a 100% chance to block allied projectiles. If you block a projectile, gain +1 Bonus Attack.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "CatchProjectiles": {
+          "chance": "33%",
+          "ally_chance": "100%",
+          "Quivered": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CATCHPROJECTILES2_DESC",
+      "desc_resolved": "50% chance to block enemy projectiles and a 100% chance to block allied projectiles. If you block a projectile, gain +1 Bonus Attack and +1 All Stats Up.",
+      "passives": {
+        "CatchProjectiles": {
+          "chance": "50%",
+          "ally_chance": "100%",
+          "Quivered": "1",
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "TrickyTraps": {
+    "name": "PASSIVE_TRICKYTRAPS_NAME",
+    "name_resolved": "Tricky Traps",
+    "desc": "PASSIVE_TRICKYTRAPS_DESC",
+    "desc_resolved": "Damage and effects from your traps are doubled.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "TrapEffectsMultiplier": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TRICKYTRAPS2_DESC",
+      "desc_resolved": "Damage and effects from your traps are doubled.\nAllies don't trigger your traps.",
+      "passives": {
+        "TrapEffectsMultiplier": "2",
+        "AlliesAvoidTraps": "1"
+      }
+    }
+  },
+  "GravityFalls": {
+    "name": "PASSIVE_GRAVITYFALLS_NAME",
+    "name_resolved": "Gravity Falls",
+    "desc": "PASSIVE_GRAVITYFALLS_DESC",
+    "desc_resolved": "Your basic attack deals +1 damage for each tile you shoot beyond range 3.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "DistanceBonusDamage": {
+            "stacks": "1",
+            "min_range": "3"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GRAVITYFALLS2_DESC",
+      "desc_resolved": "+2 range.\nYour basic attack deals +1 damage for each tile you shoot beyond range 3.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "DistanceBonusDamage": {
+            "stacks": "1",
+            "min_range": "3"
+          }
+        },
+        "AddBonusRange": "2"
+      }
+    }
+  },
+  "HawkEye": {
+    "name": "PASSIVE_BULLSEYE_NAME",
+    "name_resolved": "Bullseye",
+    "desc": "PASSIVE_BULLSEYE_DESC",
+    "desc_resolved": "Your ranged attacks never miss.\n+25% critical hit chance.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "RangedTrueShot": "1",
+        "CritChanceUp": "25"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BULLSEYE2_DESC",
+      "desc_resolved": "Your ranged attacks never miss.\n+25% critical hit chance.\nGain +1 [img:lck] each time you make a critical hit.",
+      "passives": {
+        "RangedTrueShot": "1",
+        "CritChanceUp": "25",
+        "StatusOnCrit": {
+          "LuckUp": "1"
+        }
+      }
+    }
+  },
+  "Spotters": {
+    "name": "PASSIVE_SPOTTERS_NAME",
+    "name_resolved": "Spotters",
+    "desc": "PASSIVE_SPOTTERS_DESC",
+    "desc_resolved": "Your basic attack can target tiles adjacent to allies.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddAllyNeighborsToAttackRange": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SPOTTERS2_DESC",
+      "desc_resolved": "Your basic attack and spells can target tiles adjacent to allies.",
+      "passives": {
+        "AddAllyNeighborsToAbilityRange": "1"
+      }
+    }
+  },
+  "LuckSwing": {
+    "name": "PASSIVE_LUCKSWING_NAME",
+    "name_resolved": "Luck Swing",
+    "desc": "PASSIVE_LUCKSWING_DESC",
+    "desc_resolved": "+50% critical hit chance but +25% chance to miss.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "CritChanceUp": "50",
+        "MissChance": "25"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LUCKSWING2_DESC",
+      "desc_resolved": "+50% critical hit chance but +25% chance to miss.",
+      "stats": {
+        "lck": "3"
+      },
+      "passives": {
+        "CritChanceUp": "50",
+        "MissChance": "25"
+      }
+    }
+  },
+  "Host": {
+    "name": "PASSIVE_HOST_NAME",
+    "name_resolved": "Host",
+    "desc": "PASSIVE_HOST_DESC",
+    "desc_resolved": "Start each battle with 2 tiny spider familiars. A spider egg parasite is added to your inventory. You can unequip parasites freely.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "ParasitesArentCursed": "1",
+        "SpawnOnBattleStart": "CharmedTinySpider"
+      },
+      "bonus_items": [
+        "SpiderEgg"
+      ]
+    },
+    "2": {
+      "desc": "PASSIVE_HOST2_DESC",
+      "desc_resolved": "Start each battle with 2 tiny spider familiars. A spider webber parasite is added to your inventory. You can unequip parasites freely.",
+      "passives": {
+        "ParasitesArentCursed": "1",
+        "SpawnOnBattleStart": "CharmedTinySpider"
+      },
+      "bonus_items": [
+        "SpiderWebber"
+      ]
+    }
+  },
+  "Sniper": {
+    "name": "PASSIVE_SNIPER_NAME",
+    "name_resolved": "Sniper",
+    "desc": "PASSIVE_SNIPER_DESC",
+    "desc_resolved": "Critical hits deal +100% more damage and have a 25% chance to inflict Stun.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddCritMultiplier": "100%",
+        "CritsApplyStatus": {
+          "Stun": [
+            "1",
+            ".25"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SNIPER2_DESC",
+      "desc_resolved": "Critical hits deal +200% more damage and have a 33% chance to inflict Stun.",
+      "passives": {
+        "AddCritMultiplier": "200%",
+        "CritsApplyStatus": {
+          "Stun": [
+            "1",
+            ".33"
+          ]
+        }
+      }
+    }
+  },
+  "RubberArrows": {
+    "name": "PASSIVE_RUBBERARROWS_NAME",
+    "name_resolved": "Rubber Arrows",
+    "desc": "PASSIVE_RUBBERARROWS_DESC",
+    "desc_resolved": "Your projectiles bounce to another enemy within 3 tiles.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "BouncyProjectiles": {
+          "max_bounces": "1",
+          "max_range": "3"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RUBBERARROWS2_DESC",
+      "desc_resolved": "Your projectiles bounce to another enemy within 4 tiles, twice!",
+      "passives": {
+        "BouncyProjectiles": {
+          "max_bounces": "2",
+          "max_range": "4"
+        }
+      }
+    }
+  },
+  "TalkToAnimals": {
+    "name": "PASSIVE_TALKTOANIMALS_NAME",
+    "name_resolved": "Talk to Animals",
+    "desc": "PASSIVE_TALKTOANIMALS_DESC",
+    "desc_resolved": "Your basic attack inflicts Charm 5 the first time you use it each battle.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddStatusToFirstBasicAttack": {
+          "Charmed": "5"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TALKTOANIMALS2_DESC",
+      "desc_resolved": "Your basic attack inflicts Charm 5 the first time you use it each battle.\nYour basic attack has a 25% chance to inflict Charm 1.",
+      "passives": {
+        "AddStatusToFirstBasicAttack": {
+          "Charmed": "5"
+        },
+        "AddStatusToBasicAttack": {
+          "Charmed": [
+            "1",
+            ".25"
+          ]
+        }
+      }
+    }
+  },
+  "AnimalControl": {
+    "name": "PASSIVE_ANIMALCONTROL_NAME",
+    "name_resolved": "Animal Control",
+    "desc": "PASSIVE_ANIMALCONTROL_DESC",
+    "desc_resolved": "Your basic attack causes units to immediately attack an enemy in range.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttackWithCooldown": {
+          "CharmedForceAttack": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ANIMALCONTROL2_DESC",
+      "desc_resolved": "Your basic attack causes units to immediately attack an enemy in range. Your basic attack can heal allies.",
+      "passives": {
+        "AddStatusToBasicAttackWithCooldown": {
+          "CharmedForceAttack": "1"
+        },
+        "AddStatusToBasicAttack": {
+          "DamageOrHealConditionally": "1"
+        }
+      }
+    }
+  },
+  "SleepDarts": {
+    "name": "PASSIVE_SLEEPDARTS_NAME",
+    "name_resolved": "Sleep Darts",
+    "desc": "PASSIVE_SLEEPDARTS_DESC",
+    "desc_resolved": "At the start of each battle, you and all allies that don't have weapons gains a temporary Sleep Dart.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "EquipTemporaryItem": "SleepDart",
+        "StatusAlliesOnBattleStart": {
+          "EquipTemporaryItem": "SleepDart"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SLEEPDARTS2_DESC",
+      "desc_resolved": "At the start of each battle, you and all allies that don't have weapons gains a temporary Sleep Dart with 2 uses.",
+      "passives": {
+        "EquipTemporaryItem": "SleepDart2",
+        "StatusAlliesOnBattleStart": {
+          "EquipTemporaryItem": "SleepDart2"
+        }
+      }
+    }
+  },
+  "Survivalist": {
+    "name": "PASSIVE_SURVIVALIST_NAME",
+    "name_resolved": "Survivalist",
+    "desc": "PASSIVE_SURVIVALIST_DESC",
+    "desc_resolved": "4 healing consumables and a full water bottle are added to your inventory.\nYou can use consumables on allies.\nStore +2 food at the end of each battle.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "ConsumablesMeleeRange": "1",
+        "BonusFoodEachBattle": "2"
+      },
+      "bonus_items": [
+        "FoodMedium",
+        "FoodMedium",
+        "FoodMedium",
+        "FoodMedium",
+        "WaterBottle_Full"
+      ]
+    },
+    "2": {
+      "desc": "PASSIVE_SURVIVALIST2_DESC",
+      "desc_resolved": "4 large healing consumables are added to your inventory.\nYou can use consumables on allies.\nStore +20 food at the end of each battle.",
+      "passives": {
+        "ConsumablesInfiniteRange": "1",
+        "BonusFoodEachBattle": "20"
+      },
+      "bonus_items": [
+        "FoodBig",
+        "FoodBig",
+        "FoodBig",
+        "FoodBig"
+      ]
+    }
+  },
+  "Fleabag": {
+    "name": "PASSIVE_FLEABAG_NAME",
+    "name_resolved": "Fleabag",
+    "desc": "PASSIVE_FLEABAG_DESC",
+    "desc_resolved": "At the end of your turn, spawn Flea familiars equal to the number of enemies you've killed this battle.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "StatusEachTurnEndPerEnemyKill": {
+          "ObjectOnHitCharacter": {
+            "stacks": "1",
+            "object": "CharmedFlea"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLEABAG2_DESC",
+      "desc_resolved": "At the end of your turn, spawn Flea familiars equal to the number of enemies you've killed this battle plus two.",
+      "passives": {
+        "StatusEachTurnEnd": {
+          "ObjectOnHitCharacter": {
+            "stacks": "2",
+            "object": "CharmedFlea"
+          }
+        },
+        "StatusEachTurnEndPerEnemyKill": {
+          "ObjectOnHitCharacter": {
+            "stacks": "1",
+            "object": "CharmedFlea"
+          }
+        }
+      }
+    }
+  },
+  "ThrillOfTheHunt": {
+    "name": "PASSIVE_THRILLOFTHEHUNT_NAME",
+    "name_resolved": "Thrill of the Hunt",
+    "desc": "PASSIVE_THRILLOFTHEHUNT_DESC",
+    "desc_resolved": "At the end of each battle, if you killed at least 3 enemies, gain +1 [img:dex] permanently and find a random consumable item.",
+    "class": "Hunter",
+    "1": {
+      "passives": {
+        "StatusOnBattleEndIfKillThresholdMet": {
+          "kills": "3",
+          "statuses": {
+            "PermanentDexterity": "1",
+            "FindItemFromPool": "consumables"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THRILLOFTHEHUNT2_DESC",
+      "desc_resolved": "At the end of each battle, if you killed at least 3 enemies, gain +1 [img:dex] permanently and find a random consumable item. +1 Range and +1 Health Regeneration for every 5 [img:dex] you have.",
+      "passives": {
+        "StatusOnBattleEndIfKillThresholdMet": {
+          "kills": "3",
+          "statuses": {
+            "PermanentDexterity": "1",
+            "FindItemFromPool": "chapter"
+          }
+        },
+        "BonusRangeBasedOnDex": "5",
+        "BonusHealthRegenBasedOnDex": "5"
+      }
+    }
+  }
+}

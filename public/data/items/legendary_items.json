@@ -1,0 +1,12 @@
+{
+  "TinksBow": {
+    "name": "ARMOR_TINKSBOW_NAME",
+    "name_resolved": "Fancy Bow",
+    "desc": "ARMOR_TINKSBOW_DESC",
+    "desc_resolved": "It's fancy.",
+    "rarity": "very_rare",
+    "kind": "head",
+    "frame": "113",
+    "degrade_after_adventure": "false"
+  }
+}

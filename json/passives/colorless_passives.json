@@ -1,0 +1,1673 @@
+{
+  "SelfAssured": {
+    "name": "PASSIVE_SELFASSURED_NAME",
+    "name_resolved": "Self-Assured",
+    "desc": "PASSIVE_SELFASSURED_DESC",
+    "desc_resolved": "Gain a random stat up whenever you down a unit.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusOnKill": {
+          "RandomStatUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SELFASSURED2_DESC",
+      "desc_resolved": "Gain All Stats Up whenever you down a unit.",
+      "passives": {
+        "StatusOnKill": {
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "LuckDrain": {
+    "name": "PASSIVE_LUCKDRAIN_NAME",
+    "name_resolved": "Luck Drain",
+    "desc": "PASSIVE_LUCKDRAIN_DESC",
+    "desc_resolved": "Gain +1 [img:lck] whenever a unit is downed.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusOnAnyDeath": {
+          "LuckUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LUCKDRAIN2_DESC",
+      "desc_resolved": "Gain +1 [img:lck] whenever a unit is downed.\nGain an extra +2 [img:lck] whenever YOU down a unit.",
+      "passives": {
+        "StatusOnAnyDeath": {
+          "LuckUp": "1"
+        },
+        "StatusOnKill": {
+          "LuckUp": "2"
+        }
+      }
+    }
+  },
+  "Infested": {
+    "name": "PASSIVE_INFESTED_NAME",
+    "name_resolved": "Infested",
+    "desc": "PASSIVE_INFESTED_DESC",
+    "desc_resolved": "50% chance to spawn a flea familiar when you end your turn.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SpawnEachTurn": {
+          "object": "CharmedFlea",
+          "number": "1",
+          "chance": ".5"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INFESTED2_DESC",
+      "desc_resolved": "Spawn 2-3 fleas at the start of each battle.\n50% chance to spawn a flea familiar when you end your turn.",
+      "passives": {
+        "SpawnEachTurn": {
+          "object": "CharmedFlea",
+          "number": "1"
+        },
+        "SpawnOnBattleStart": {
+          "object": "CharmedFlea",
+          "number": [
+            "2",
+            "3"
+          ]
+        }
+      }
+    }
+  },
+  "Worms": {
+    "name": "PASSIVE_WORMS_NAME",
+    "name_resolved": "Worms",
+    "desc": "PASSIVE_WORMS_DESC",
+    "desc_resolved": "50% chance to spawn a maggot familiar when you end your turn.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SpawnEachTurn": {
+          "chance": ".5",
+          "object": "CharmedMaggot"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WORMS2_DESC",
+      "desc_resolved": "50% chance to spawn a mutated maggot familiar when you end your turn.",
+      "passives": {
+        "SpawnEachTurn": {
+          "chance": ".5",
+          "object": [
+            "CharmedTumorousMaggot",
+            "CharmedChargeyMaggot",
+            "CharmedSwappyMaggot"
+          ]
+        }
+      }
+    }
+  },
+  "Amped": {
+    "name": "PASSIVE_AMPED_NAME",
+    "name_resolved": "Amped",
+    "desc": "PASSIVE_AMPED_DESC",
+    "desc_resolved": "Gain +1 [img:spd] at the end of your turn.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusEachTurnEnd": {
+          "SpeedUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_AMPED2_DESC",
+      "desc_resolved": "Gain +1 [img:spd] at the end of your turn.\nYou can move an extra time each turn.",
+      "passives": {
+        "StatusEachTurnEnd": {
+          "SpeedUp": "1"
+        },
+        "ExtraMovePoints": "1"
+      }
+    }
+  },
+  "Furious": {
+    "name": "PASSIVE_FURIOUS_NAME",
+    "name_resolved": "Furious",
+    "desc": "PASSIVE_FURIOUS_DESC",
+    "desc_resolved": "Gain +1 Damage each time you land a critical hit.\n+5% critical hit chance.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusOnCrit": {
+          "DamageUp": "1"
+        },
+        "CritChanceUp": "5"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FURIOUS2_DESC",
+      "desc_resolved": "Gain +1 Damage and +5% critical hit chance each time you land a critical hit.\n+5% critical hit chance.",
+      "passives": {
+        "StatusOnCrit": {
+          "DamageUp": "1",
+          "CritChanceUp": "5"
+        },
+        "CritChanceUp": "5"
+      }
+    }
+  },
+  "Deathless": {
+    "name": "PASSIVE_DEATHLESS_NAME",
+    "name_resolved": "Deathless",
+    "desc": "PASSIVE_DEATHLESS_DESC",
+    "desc_resolved": "+3 Corpse HP",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AddCorpseHealth": "3"
+      }
+    },
+    "2": {
+      "passives": {
+        "AddCorpseHealth": "96"
+      }
+    }
+  },
+  "MetalDetector": {
+    "name": "PASSIVE_METALDETECTOR_NAME",
+    "name_resolved": "Metal Detector",
+    "desc": "PASSIVE_METALDETECTOR_DESC",
+    "desc_resolved": "5% chance to spawn a coin when you move over a tile.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MetalDetector": "5"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_METALDETECTOR2_DESC",
+      "desc_resolved": "10% chance to spawn a coin when you move over a tile.",
+      "passives": {
+        "MetalDetector": "10"
+      }
+    }
+  },
+  "DeathProof": {
+    "name": "PASSIVE_DEATHPROOF_NAME",
+    "name_resolved": "Deathproof",
+    "desc": "PASSIVE_DEATHPROOF_DESC",
+    "desc_resolved": "While downed, you have a 25% chance to revive with 1 HP at the end of each round.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "ChanceToRevive": "25"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEATHPROOF2_DESC",
+      "desc_resolved": "While downed, you have a 33% chance to revive with 10 HP and All Stats Up at the end of each round.",
+      "passives": {
+        "ChanceToRevive": {
+          "stacks": "33",
+          "statuses": {
+            "AllStatsUp": "1",
+            "HealthGain": "10"
+          }
+        }
+      }
+    }
+  },
+  "Leader": {
+    "name": "PASSIVE_LEADER_NAME",
+    "name_resolved": "Leader",
+    "desc": "PASSIVE_LEADER_DESC",
+    "desc_resolved": "Adjacent allies have +1 Damage and +1 Range.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "BoostDamageAura": "1",
+        "BoostRangeAura": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LEADER2_DESC",
+      "desc_resolved": "All allies have +1 Damage and +1 Range.",
+      "passives": {
+        "BoostDamageGlobalAura": "1",
+        "BoostRangeGlobalAura": "1"
+      }
+    }
+  },
+  "Mange": {
+    "name": "PASSIVE_MANGE_NAME",
+    "name_resolved": "Mange",
+    "desc": "PASSIVE_MANGE_DESC",
+    "desc_resolved": "Inflict Poison 1 on units that contact you.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MeleeRevengeDamage": {
+          "effects": {
+            "Poison": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MANGE2_DESC",
+      "desc_resolved": "Inflict 1 Poison, Bleed, Bruise, Weakness, and Leech on units that contact you.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "effects": {
+            "Poison": "1",
+            "Bleed": "1",
+            "Bruise": "1",
+            "Weakness": "1",
+            "Leeches": "1"
+          }
+        }
+      }
+    }
+  },
+  "ETank": {
+    "name": "PASSIVE_ETANK_NAME",
+    "name_resolved": "E-Tank",
+    "desc": "PASSIVE_ETANK_DESC",
+    "desc_resolved": "Start each battle with +20 unfilled max health.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AddUnfilledMaxHealth": "20"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ETANK2_DESC",
+      "desc_resolved": "Start each battle with +50 unfilled max health.",
+      "passives": {
+        "AddUnfilledMaxHealth": "50"
+      }
+    }
+  },
+  "Careful": {
+    "name": "PASSIVE_CAREFUL_NAME",
+    "name_resolved": "Careful",
+    "desc": "PASSIVE_CAREFUL_DESC",
+    "desc_resolved": "Damage you deal to other allies is reduced to 0.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AllyDamageReduction": "0"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CAREFUL2_DESC",
+      "desc_resolved": "Damage you deal to other allies is reduced to 0. You cannot inflict debuffs on other allies.\nYou are careful in many other ways too.",
+      "passives": {
+        "AllyDamageReduction": "0",
+        "WeaponsDontLoseDurability": "0",
+        "DodgeChance": "25%",
+        "BackstabImmunity": "1",
+        "IgnoreTiles": "1",
+        "StatusCarefulness": "1"
+      }
+    }
+  },
+  "DirtyClaws": {
+    "name": "PASSIVE_DIRTYCLAWS_NAME",
+    "name_resolved": "Dirty Claws",
+    "desc": "PASSIVE_DIRTYCLAWS_DESC",
+    "desc_resolved": "Your physical attacks on Poisoned or Bleeding enemies inflict +1 Poison and/or Bleed.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "DirtyClaws": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DIRTYCLAWS2_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison 1 and Bleed 1. \nYour physical attacks on Poisoned or Bleeding enemies inflict +1 Poison and/or Bleed.",
+      "passives": {
+        "DirtyClaws": "1",
+        "AddStatusToBasicAttack": {
+          "Poison": "1",
+          "Bleed": "1"
+        }
+      }
+    }
+  },
+  "LateBloomer": {
+    "name": "PASSIVE_LATEBLOOMER_NAME",
+    "name_resolved": "Late Bloomer",
+    "desc": "PASSIVE_LATEBLOOMER_DESC",
+    "desc_resolved": "On your 5th turn, you gain All Stats Up 3.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "LateBloomer": {
+          "stacks": "5",
+          "AllStatsUp": "3"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LATEBLOOMER2_DESC",
+      "desc_resolved": "On your 3rd turn, you gain All Stats Up 3.",
+      "passives": {
+        "LateBloomer": {
+          "stacks": "3",
+          "AllStatsUp": "3"
+        }
+      }
+    }
+  },
+  "Study": {
+    "name": "PASSIVE_STUDY_NAME",
+    "name_resolved": "Study",
+    "desc": "PASSIVE_STUDY_DESC",
+    "desc_resolved": "Gain +1 [img:int] whenever you hit a new type of unit with an attack or ability.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "Study": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_STUDY2_DESC",
+      "desc_resolved": "Gain +1 [img:int] whenever you hit a new type of unit with an attack or ability. All enemies of that type become Marked.",
+      "passives": {
+        "Study": {
+          "stacks": "1",
+          "marked": "2"
+        }
+      }
+    }
+  },
+  "SkillShare": {
+    "name": "PASSIVE_SKILLSHARE_NAME",
+    "name_resolved": "Skill Share",
+    "desc": "PASSIVE_SKILLSHARE_DESC",
+    "desc_resolved": "Your other passive ability is shared with the other cats in your party at the start of each battle.",
+    "class": "Colorless",
+    "tags": [
+      "noncopyable"
+    ],
+    "1": {},
+    "2": {
+      "desc": "PASSIVE_SKILLSHARE2_DESC",
+      "desc_resolved": "Your other passive ability is shared with the other cats in your party at the start of each battle. When breeding, your children will always inherit your other passive."
+    }
+  },
+  "NaturalHealing": {
+    "name": "PASSIVE_NATURALHEALING_NAME",
+    "name_resolved": "Natural Healing",
+    "desc": "PASSIVE_NATURALHEALING_DESC",
+    "desc_resolved": "You have +1 Health Regeneration",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "HealthRegenUp": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NATURALHEALING2_DESC",
+      "desc_resolved": "You have +2 Health Regeneration\nAdjacent allies gain +1 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "2",
+        "HealingAura": "1"
+      }
+    }
+  },
+  "LongShot": {
+    "name": "PASSIVE_LONGSHOT_NAME",
+    "name_resolved": "Longshot",
+    "desc": "PASSIVE_LONGSHOT_DESC",
+    "desc_resolved": "+1 Range.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AddBonusRange": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LONGSHOT2_DESC",
+      "desc_resolved": "+2 Range.\nYour ranged attacks have +25% critical hit chance.",
+      "passives": {
+        "AddBonusRange": "2",
+        "AddRangedCritChance": "25%"
+      }
+    }
+  },
+  "FastFooted": {
+    "name": "PASSIVE_FASTFOOTED_NAME",
+    "name_resolved": "Fast Footsies",
+    "desc": "PASSIVE_FASTFOOTED_DESC",
+    "desc_resolved": "You are immune to negative tile effects.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "IgnoreTiles": "1"
+      },
+      "stats": {
+        "spd": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FASTFOOTED2_DESC",
+      "desc_resolved": "You are immune to negative tile effects.\nYou can move through units and objects.",
+      "passives": {
+        "IgnoreTiles": "1",
+        "Phasing": "1"
+      },
+      "stats": {
+        "spd": "3"
+      }
+    }
+  },
+  "Slugger": {
+    "name": "PASSIVE_SLUGGER_NAME",
+    "name_resolved": "Slugger",
+    "desc": "PASSIVE_SLUGGER_DESC",
+    "desc_resolved": "+1 Damage.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "DamageUp": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SLUGGER2_DESC",
+      "desc_resolved": "+3 Damage.",
+      "passives": {
+        "DamageUp": "3"
+      }
+    }
+  },
+  "Pulp": {
+    "name": "PASSIVE_PULP_NAME",
+    "name_resolved": "Pulp",
+    "desc": "PASSIVE_PULP_DESC",
+    "desc_resolved": "When you kill a unit or destroy a corpse, it becomes meat.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "KillsToMeat": "Food"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PULP2_DESC",
+      "desc_resolved": "+4 Damage.\nWhen you kill a unit or destroy a corpse, it becomes meat.",
+      "passives": {
+        "KillsToMeat": "Food",
+        "DamageUp": "4"
+      }
+    }
+  },
+  "Amplify": {
+    "name": "PASSIVE_AMPLIFY_NAME",
+    "name_resolved": "Amplify",
+    "desc": "PASSIVE_AMPLIFY_DESC",
+    "desc_resolved": "+1 Magic Damage.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AddSpellDamage": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_AMPLIFY2_DESC",
+      "desc_resolved": "+1 Magic Damage for every 3 [img:cha] you have.",
+      "passives": {
+        "AddChaScalingSpellDamage": "3"
+      }
+    }
+  },
+  "DeathBoon": {
+    "name": "PASSIVE_DEATHBOON_NAME",
+    "name_resolved": "Death Boon",
+    "desc": "PASSIVE_DEATHBOON_DESC",
+    "desc_resolved": "When you're downed, all allies gain All Stats Up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "BoostAllyStatsOnDeath": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEATHBOON2_DESC",
+      "desc_resolved": "When you're downed, all allies gain All Stats Up 2.",
+      "passives": {
+        "BoostAllyStatsOnDeath": "2"
+      }
+    }
+  },
+  "SantaSangre": {
+    "name": "PASSIVE_SANTASANGRE_NAME",
+    "name_resolved": "Santa Sangre",
+    "desc": "PASSIVE_SANTASANGRE_DESC",
+    "desc_resolved": "When you're downed, allies heal 12 HP. Excess healing is converted to Shield.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "HealAndOverhealToShield": "12"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SANTASANGRE2_DESC",
+      "desc_resolved": "When you're downed, allies heal 20 HP. Excess healing is converted to Shield.",
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "HealAndOverhealToShield": "20"
+        }
+      }
+    }
+  },
+  "Untouched": {
+    "name": "PASSIVE_UNSCARRED_NAME",
+    "name_resolved": "Unscarred",
+    "desc": "PASSIVE_UNSCARRED_DESC",
+    "desc_resolved": "While at full hp you have 100% critical hit chance.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "FullHealthCritChance": "100"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNSCARRED2_DESC",
+      "desc_resolved": "While at full hp you have 100% critical hit chance, +5 Mana Regeneration  and +1 All Stats Up.",
+      "passives": {
+        "FullHealthCritChance": "100",
+        "FullHealthAllStatsUp": "1",
+        "FullHealthManaRegen": "5"
+      }
+    }
+  },
+  "Daunt": {
+    "name": "PASSIVE_DAUNT_NAME",
+    "name_resolved": "Daunt",
+    "desc": "PASSIVE_DAUNT_DESC",
+    "desc_resolved": "Small enemies won't attack you.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SmallEnemiesIgnoreYou": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DAUNT2_DESC",
+      "desc_resolved": "Small enemies won't attack you.\nInflict Fear 1 on units that contact or attack you.",
+      "passives": {
+        "SmallEnemiesIgnoreYou": "1",
+        "RevengeDamage": {
+          "effects": {
+            "Fear": "1"
+          }
+        }
+      }
+    }
+  },
+  "AnimalHandler": {
+    "name": "PASSIVE_ANIMALHANDLER_NAME",
+    "name_resolved": "Animal Handler",
+    "desc": "PASSIVE_ANIMALHANDLER_DESC",
+    "desc_resolved": "You start each battle with a random vermin familiar with boosted damage and health.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SpawnOnBattleStart": {
+          "object": [
+            "BuffFamiliarMaggot",
+            "BuffFamiliarPooter",
+            "BuffFamiliarFlea",
+            "BuffFamiliarFly"
+          ],
+          "number": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ANIMALHANDLER2_DESC",
+      "desc_resolved": "You start each battle with 3 random vermin familiars with boosted damage and health.",
+      "passives": {
+        "SpawnOnBattleStart": {
+          "object": [
+            "BuffFamiliarMaggot",
+            "BuffFamiliarPooter",
+            "BuffFamiliarFlea",
+            "BuffFamiliarFly"
+          ],
+          "number": "3"
+        }
+      }
+    }
+  },
+  "WhipCracker": {
+    "name": "PASSIVE_WHIPCRACKER_NAME",
+    "name_resolved": "Whipcracker",
+    "desc": "PASSIVE_WHIPCRACKER_DESC",
+    "desc_resolved": "When you damage an ally they gain +1 Damage.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "ExtraStatusWhenDealingDamage": {
+          "Conditional_Ally": {
+            "DamageUp": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WHIPCRACKER2_DESC",
+      "desc_resolved": "When you damage an ally they gain +1 Damage and +1 [img:spd].",
+      "passives": {
+        "ExtraStatusWhenDealingDamage": {
+          "Conditional_Ally": {
+            "DamageUp": "1",
+            "SpeedUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "PressurePoints": {
+    "name": "PASSIVE_PRESSUREPOINTS_NAME",
+    "name_resolved": "Might of the Meek",
+    "desc": "PASSIVE_PRESSUREPOINTS_DESC",
+    "desc_resolved": "Damage you deal that's 2 or less is always critical.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AutoCritLowDamage": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PRESSUREPOINTS2_DESC",
+      "desc_resolved": "Damage you deal that's 3 or less is always critical. +50% Crit Damage.",
+      "passives": {
+        "AutoCritLowDamage": "3",
+        "AddCritMultiplier": "50%"
+      }
+    }
+  },
+  "Gassy": {
+    "name": "PASSIVE_GASSY_NAME",
+    "name_resolved": "Gassy",
+    "desc": "PASSIVE_GASSY_DESC",
+    "desc_resolved": "Whenever you take damage, knock back all adjacent units.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AbilityReaction": "Gassy_AssBlast"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GASSY2_DESC",
+      "desc_resolved": "Whenever you take damage, poison all adjacent units and knock them back 10 tiles.",
+      "passives": {
+        "AbilityReaction": "Gassy_AssBlast2"
+      }
+    }
+  },
+  "Dealer": {
+    "name": "PASSIVE_DEALER_NAME",
+    "name_resolved": "Dealer",
+    "desc": "PASSIVE_DEALER_DESC",
+    "desc_resolved": "You can use consumables on other units.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "ConsumablesInfiniteRange": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEALER2_DESC",
+      "desc_resolved": "You can use consumables on other units.\nConsumables you use have double the effect.",
+      "passives": {
+        "ConsumablesInfiniteRange": "1",
+        "ConsumableEffectsMultiplierBonus": "1"
+      }
+    }
+  },
+  "Patience": {
+    "name": "PASSIVE_PATIENCE_NAME",
+    "name_resolved": "Patience",
+    "desc": "PASSIVE_PATIENCE_DESC",
+    "desc_resolved": "If you end your turn without taking any actions, gain an extra turn at the end of the round. You don't regenerate mana on your main turn if you pass it.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AllowPassTurn": "0"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PATIENCE2_DESC",
+      "desc_resolved": "If you end your turn without taking any actions, gain an extra turn at the end of the round.",
+      "passives": {
+        "AllowPassTurn": "1"
+      }
+    }
+  },
+  "Wiggly": {
+    "name": "PASSIVE_WIGGLY_NAME",
+    "name_resolved": "Wiggly",
+    "desc": "PASSIVE_WIGGLY_DESC",
+    "desc_resolved": "+25% dodge chance.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "DodgeChance": "25%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WIGGLY2_DESC",
+      "desc_resolved": "+25% dodge chance and +25% critical hit chance.",
+      "passives": {
+        "DodgeChance": "25%",
+        "CritChanceUp": "25"
+      }
+    }
+  },
+  "MiniMe": {
+    "name": "PASSIVE_MINIME_NAME",
+    "name_resolved": "Mini-Me",
+    "desc": "PASSIVE_MINIME_DESC",
+    "desc_resolved": "Gain a half-sized copy of yourself that has 50% of your stats. The copy is AI controlled.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SpawnCatCopyOnBattleStart": {
+          "object": "PlayerCat_MiniMe",
+          "prevent_chain_tag": "minime_clone"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MINIME2_DESC",
+      "desc_resolved": "Gain a half-sized copy of yourself that has 50% of your stats and quarter-sized copy that has 25% of your stats. The copies are AI controlled.",
+      "passives": {
+        "SpawnCatCopyOnBattleStart": {
+          "object": "PlayerCat_MiniMiniMe",
+          "prevent_chain_tag": "minime_clone"
+        }
+      }
+    }
+  },
+  "BareMinimum": {
+    "name": "PASSIVE_BAREMINIMUM_NAME",
+    "name_resolved": "Bare Minimum",
+    "desc": "PASSIVE_BAREMINIMUM_DESC",
+    "desc_resolved": "Your stats can't go below 5.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatMinimum": "5"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BAREMINIMUM2_DESC",
+      "desc_resolved": "Your stats can't go below 7.",
+      "passives": {
+        "StatMinimum": "7"
+      }
+    }
+  },
+  "Unrestricted": {
+    "name": "PASSIVE_UNRESTRICTED_NAME",
+    "name_resolved": "Unrestricted",
+    "desc": "PASSIVE_UNRESTRICTED_DESC",
+    "desc_resolved": "Actions with a once per battle restriction can be cast once per turn instead.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "RemoveOncePerFightRestriction": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNRESTRICTED2_DESC",
+      "desc_resolved": "Actions with a once per battle restriction can be cast once per turn instead.\nActions with a once per turn restriction have a 50% chance to be castable again.",
+      "passives": {
+        "RemoveOncePerFightRestriction": "1",
+        "AbilityChargeRefundChance": {
+          "chance": "50%",
+          "advantage_softcap": "3.5"
+        }
+      }
+    }
+  },
+  "DeathsDoor": {
+    "name": "PASSIVE_DEATHSDOOR_NAME",
+    "name_resolved": "Death's Door",
+    "desc": "PASSIVE_DEATHSDOOR_DESC",
+    "desc_resolved": "While you're at 1 HP, your spells cost 1 mana, but can only be cast once per turn.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "PassiveAtHealthThreshold": {
+          "threshold": "1",
+          "mode": "equal",
+          "passives": {
+            "SetSpellCosts": "1",
+            "MakeSpellsRequireCharge": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEATHSDOOR2_DESC",
+      "desc_resolved": "While you're at 5 or fewer HP, your spells cost 1 mana, but can only be cast once per turn.",
+      "passives": {
+        "PassiveAtHealthThreshold": {
+          "threshold": "5",
+          "mode": "less_or_equal",
+          "passives": {
+            "SetSpellCosts": "1",
+            "MakeSpellsRequireCharge": "1"
+          }
+        }
+      }
+    }
+  },
+  "OverConfident": {
+    "name": "PASSIVE_OVERCONFIDENT_NAME",
+    "name_resolved": "Overconfident",
+    "desc": "PASSIVE_OVERCONFIDENT_DESC",
+    "desc_resolved": "While at full HP, reduce the cost of your spells by 2, but take double damage. This can't reduce mana costs to less than 1.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "PassiveAtFullHealth": {
+          "ManaCostReduction": "2",
+          "TakeExtraDamage": "200%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OVERCONFIDENT2_DESC",
+      "desc_resolved": "While at full HP, reduce the cost of your spells by 2, but take double damage.  This can't reduce mana costs to less than 1. When you cast a spell, heal 1 HP.",
+      "passives": {
+        "PassiveAtFullHealth": {
+          "ManaCostReduction": "2",
+          "TakeExtraDamage": "200%"
+        },
+        "StatusOnCastSpell": {
+          "HealthGain": "1"
+        }
+      }
+    }
+  },
+  "SerialKiller": {
+    "name": "PASSIVE_SERIALKILLER_NAME",
+    "name_resolved": "Serial Killer",
+    "desc": "PASSIVE_SERIALKILLER_DESC",
+    "desc_resolved": "After you kill 3 units, gain +6 [img:spd] and backstabs have 100% crit chance.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "PassiveAfterXKills": {
+          "stacks": "3",
+          "passives": {
+            "SpeedUp": "6",
+            "BackstabCritChance": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SERIALKILLER2_DESC",
+      "desc_resolved": "After you kill 3 units, gain +6 [img:spd], backstabs have 100% crit chance, and gain an extra basic attack each turn.",
+      "passives": {
+        "PassiveAfterXKills": {
+          "stacks": "3",
+          "passives": {
+            "SpeedUp": "6",
+            "BackstabCritChance": "1",
+            "ExtraBasicAttacks": "1"
+          }
+        }
+      }
+    }
+  },
+  "StrengthInNumbers": {
+    "name": "PASSIVE_STRENGTHINNUMBERS_NAME",
+    "name_resolved": "Strength in Numbers",
+    "desc": "PASSIVE_STRENGTHINNUMBERS_DESC",
+    "desc_resolved": "Your familiars have +1 Damage for each other familiar you have.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StrengthInNumbersAura": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_STRENGTHINNUMBERS2_DESC",
+      "desc_resolved": "You and your familiars have +1 Damage for each other familiar you have.",
+      "passives": {
+        "StrengthInNumbersAura": {
+          "count_self": "true"
+        }
+      }
+    }
+  },
+  "FightersSoul": {
+    "name": "PASSIVE_FIGHTERSOUL_NAME",
+    "name_resolved": "Fighter's Soul",
+    "desc": "PASSIVE_FIGHTERSOUL_DESC",
+    "desc_resolved": "Fighter abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Fighter"
+      },
+      "stats": {
+        "str": "2",
+        "spd": "1",
+        "int": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FIGHTERSOUL2_DESC",
+      "desc_resolved": "Fighter abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Fighter"
+      },
+      "stats": {
+        "str": "4",
+        "spd": "2",
+        "int": "-2"
+      }
+    }
+  },
+  "HuntersSoul": {
+    "name": "PASSIVE_HUNTERSOUL_NAME",
+    "name_resolved": "Hunter's Soul",
+    "desc": "PASSIVE_HUNTERSOUL_DESC",
+    "desc_resolved": "Hunter abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Hunter"
+      },
+      "stats": {
+        "dex": "3",
+        "lck": "2",
+        "con": "-1",
+        "spd": "-2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HUNTERSOUL2_DESC",
+      "desc_resolved": "Hunter abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Hunter"
+      },
+      "stats": {
+        "dex": "6",
+        "lck": "4",
+        "con": "-2",
+        "spd": "-4"
+      }
+    }
+  },
+  "MagesSoul": {
+    "name": "PASSIVE_MAGESOUL_NAME",
+    "name_resolved": "Mage's Soul",
+    "desc": "PASSIVE_MAGESOUL_DESC",
+    "desc_resolved": "Mage abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Mage"
+      },
+      "stats": {
+        "int": "2",
+        "cha": "2",
+        "con": "-1",
+        "str": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MAGESOUL2_DESC",
+      "desc_resolved": "Mage abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Mage"
+      },
+      "stats": {
+        "int": "4",
+        "cha": "4",
+        "con": "-2",
+        "str": "-2"
+      }
+    }
+  },
+  "ClericsSoul": {
+    "name": "PASSIVE_CLERICSOUL_NAME",
+    "name_resolved": "Cleric's Soul",
+    "desc": "PASSIVE_CLERICSOUL_DESC",
+    "desc_resolved": "Cleric abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Medic"
+      },
+      "stats": {
+        "cha": "2",
+        "con": "2",
+        "spd": "-1",
+        "dex": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CLERICSOUL2_DESC",
+      "desc_resolved": "Cleric abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Medic"
+      },
+      "stats": {
+        "cha": "4",
+        "con": "4",
+        "spd": "-2",
+        "dex": "-2"
+      }
+    }
+  },
+  "TanksSoul": {
+    "name": "PASSIVE_TANKSOUL_NAME",
+    "name_resolved": "Tank's Soul",
+    "desc": "PASSIVE_TANKSOUL_DESC",
+    "desc_resolved": "Tank abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Tank"
+      },
+      "stats": {
+        "con": "4",
+        "int": "-1",
+        "dex": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TANKSOUL2_DESC",
+      "desc_resolved": "Tank abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Tank"
+      },
+      "stats": {
+        "con": "8",
+        "int": "-2",
+        "dex": "-2"
+      }
+    }
+  },
+  "ThiefsSoul": {
+    "name": "PASSIVE_THIEFSOUL_NAME",
+    "name_resolved": "Thief's Soul",
+    "desc": "PASSIVE_THIEFSOUL_DESC",
+    "desc_resolved": "Thief abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Thief"
+      },
+      "stats": {
+        "spd": "4",
+        "lck": "1",
+        "str": "-1",
+        "con": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THIEFSOUL2_DESC",
+      "desc_resolved": "Thief abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Thief"
+      },
+      "stats": {
+        "spd": "8",
+        "lck": "2",
+        "str": "-2",
+        "con": "-2"
+      }
+    }
+  },
+  "MonksSoul": {
+    "name": "PASSIVE_MONKSOUL_NAME",
+    "name_resolved": "Monk's Soul",
+    "desc": "PASSIVE_MONKSOUL_DESC",
+    "desc_resolved": "Monk abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Monk"
+      },
+      "stats": {
+        "int": "2",
+        "cha": "2",
+        "str": "-1",
+        "dex": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MONKSOUL2_DESC",
+      "desc_resolved": "Monk abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Monk"
+      },
+      "stats": {
+        "int": "4",
+        "cha": "4",
+        "str": "-2",
+        "dex": "-2"
+      }
+    }
+  },
+  "ButchersSoul": {
+    "name": "PASSIVE_BUTCHERSOUL_NAME",
+    "name_resolved": "Butcher's Soul",
+    "desc": "PASSIVE_BUTCHERSOUL_DESC",
+    "desc_resolved": "Butcher abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Butcher"
+      },
+      "stats": {
+        "con": "3",
+        "str": "2",
+        "spd": "-2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BUTCHERSOUL2_DESC",
+      "desc_resolved": "Butcher abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Butcher"
+      },
+      "stats": {
+        "con": "6",
+        "str": "4",
+        "spd": "-4"
+      }
+    }
+  },
+  "DruidsSoul": {
+    "name": "PASSIVE_DRUIDSOUL_NAME",
+    "name_resolved": "Druid's Soul",
+    "desc": "PASSIVE_DRUIDSOUL_DESC",
+    "desc_resolved": "Druid abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Druid"
+      },
+      "stats": {
+        "cha": "3",
+        "lck": "1",
+        "con": "-2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DRUIDSOUL2_DESC",
+      "desc_resolved": "Druid abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Druid"
+      },
+      "stats": {
+        "cha": "6",
+        "lck": "2",
+        "con": "-4"
+      }
+    }
+  },
+  "TinkerersSoul": {
+    "name": "PASSIVE_TINKERERSOUL_NAME",
+    "name_resolved": "Tinkerer's Soul",
+    "desc": "PASSIVE_TINKERERSOUL_DESC",
+    "desc_resolved": "Tinkerer abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Tinkerer"
+      },
+      "stats": {
+        "int": "4",
+        "lck": "-1",
+        "cha": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TINKERERSOUL2_DESC",
+      "desc_resolved": "Tinkerer abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Tinkerer"
+      },
+      "stats": {
+        "int": "8",
+        "lck": "-2",
+        "cha": "-2"
+      }
+    }
+  },
+  "NecromancersSoul": {
+    "name": "PASSIVE_NECROMANCERSOUL_NAME",
+    "name_resolved": "Necromancer's Soul",
+    "desc": "PASSIVE_NECROMANCERSOUL_DESC",
+    "desc_resolved": "Necromancer abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Necromancer"
+      },
+      "stats": {
+        "con": "2",
+        "cha": "1",
+        "str": "-2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NECROMANCERSOUL2_DESC",
+      "desc_resolved": "Necromancer abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Necromancer"
+      },
+      "stats": {
+        "con": "4",
+        "cha": "2",
+        "str": "-4"
+      }
+    }
+  },
+  "PsychicsSoul": {
+    "name": "PASSIVE_PSYCHICSOUL_NAME",
+    "name_resolved": "Psychic's Soul",
+    "desc": "PASSIVE_PSYCHICSOUL_DESC",
+    "desc_resolved": "Psychic abilities are offered when you level up.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "MulticlassLevelUp": "Psychic"
+      },
+      "stats": {
+        "int": "1",
+        "cha": "1",
+        "spd": "1",
+        "con": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PSYCHICSOUL2_DESC",
+      "desc_resolved": "Psychic abilities are offered when you level up.",
+      "passives": {
+        "MulticlassLevelUp": "Psychic"
+      },
+      "stats": {
+        "int": "2",
+        "cha": "2",
+        "spd": "2",
+        "con": "-2"
+      }
+    }
+  },
+  "Charming": {
+    "name": "PASSIVE_CHARMING_NAME",
+    "name_resolved": "Charming",
+    "desc": "PASSIVE_CHARMING_DESC",
+    "desc_resolved": "You have a 25% chance to inflict Charm on units that damage you.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Charmed": [
+              "1,",
+              ".25"
+            ]
+          }
+        }
+      },
+      "stats": {
+        "cha": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CHARMING2_DESC",
+      "desc_resolved": "You have a 40% chance to inflict Charm on units that damage you.",
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Charmed": [
+              "1,",
+              ".40"
+            ]
+          }
+        }
+      },
+      "stats": {
+        "cha": "2"
+      }
+    }
+  },
+  "FirstImpression": {
+    "name": "PASSIVE_FIRSTIMPRESSION_NAME",
+    "name_resolved": "First Impression",
+    "desc": "PASSIVE_FIRSTIMPRESSION_DESC",
+    "desc_resolved": "Start each battle with +1 Bonus Attack.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "Quivered": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FIRSTIMPRESSION2_DESC",
+      "desc_resolved": "Start each battle with +2 Bonus Attacks and +2 Bonus Moves.",
+      "passives": {
+        "Quivered": "2",
+        "MoveQuivered": "2"
+      }
+    }
+  },
+  "Scavenger": {
+    "name": "PASSIVE_SCAVENGER_NAME",
+    "name_resolved": "Scavenger",
+    "desc": "PASSIVE_SCAVENGER_DESC",
+    "desc_resolved": "If your trinket slot is empty, equip a small consumable food item at the start of each battle.",
+    "class": "Colorless",
+    "tags": [
+      "noncopyable"
+    ],
+    "1": {
+      "passives": {
+        "EquipTemporaryItem": "FoodMedium"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SCAVENGER2_DESC",
+      "desc_resolved": "If your trinket slot is empty, equip a big consumable food item at the start of each battle.",
+      "passives": {
+        "EquipTemporaryItem": "FoodBig"
+      }
+    }
+  },
+  "ZenkaiBoost": {
+    "name": "PASSIVE_ZENKAIBOOST_NAME",
+    "name_resolved": "Zenkai Boost",
+    "desc": "PASSIVE_ZENKAIBOOST_DESC",
+    "desc_resolved": "If you end battle with 1 HP, gain +1 to a random stat permanently and start the next battle at full HP with All Stats Up 3.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "PassiveAtHealthThreshold": {
+          "mode": "equal",
+          "threshold": "1",
+          "passives": {
+            "StatusOnBattleEnd": {
+              "RandomPermanentStat": "1",
+              "NextBattleStatus": {
+                "AllStatsUp": "3",
+                "FullHeal": "1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ZENKAIBOOST2_DESC",
+      "desc_resolved": "If you end battle with 1 HP, gain +1 to 3 random stats permanently and start the next battle at full HP with All Stats Up 3.",
+      "passives": {
+        "PassiveAtHealthThreshold": {
+          "mode": "equal",
+          "threshold": "1",
+          "passives": {
+            "StatusOnBattleEnd": {
+              "RandomPermanentStat": "3",
+              "NextBattleStatus": {
+                "AllStatsUp": "3",
+                "FullHeal": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Protection": {
+    "name": "PASSIVE_PROTECTION_NAME",
+    "name_resolved": "Protection",
+    "desc": "PASSIVE_PROTECTION_DESC",
+    "class": "Colorless",
+    "1": {
+      "divine_shield": "1"
+    },
+    "2": {
+      "desc": "PASSIVE_PROTECTION2_DESC",
+      "divine_shield": "3"
+    }
+  },
+  "Rockin": {
+    "name": "PASSIVE_ROCKIN_NAME",
+    "name_resolved": "Rockin'",
+    "desc": "PASSIVE_ROCKIN_DESC",
+    "desc_resolved": "Spawn 4 small rocks at the start of each battle.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "SpawnOnBattleStart": {
+          "object": "SmallRock",
+          "number": "4"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ROCKIN2_DESC",
+      "desc_resolved": "Spawn 4 small rocks and 4 boulders at the start of each battle.",
+      "passives": {
+        "SpawnOnBattleStart": {
+          "object": "Boulder",
+          "number": "4"
+        }
+      }
+    }
+  },
+  "Mania": {
+    "name": "PASSIVE_MANIA_NAME",
+    "name_resolved": "Mania",
+    "desc": "PASSIVE_MANIA_DESC",
+    "desc_resolved": "10% chance to restore all your mana at the start of your turn.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusEachTurnBegin": {
+          "FillMana": [
+            "1",
+            ".10"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MANIA2_DESC",
+      "desc_resolved": "25% chance to restore all your mana at the start of your turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "FillMana": [
+            "1",
+            ".25"
+          ]
+        }
+      }
+    }
+  },
+  "Lucky": {
+    "name": "PASSIVE_LUCKY_NAME",
+    "name_resolved": "Lucky",
+    "desc": "PASSIVE_LUCKY_DESC",
+    "class": "Colorless",
+    "1": {
+      "stats": {
+        "lck": "4"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LUCKY2_DESC",
+      "stats": {
+        "lck": "7"
+      }
+    }
+  },
+  "OneEighty": {
+    "name": "PASSIVE_180_NAME",
+    "name_resolved": "180",
+    "desc": "PASSIVE_180_DESC",
+    "desc_resolved": "When you use your basic attack, turn around and use it again.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "StatusOnUseBasicAttack": {
+          "FlippedFacingForceAttack": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_1802_DESC",
+      "desc_resolved": "When you use your basic attack, turn around and use it again.\nYour basic attack inflicts Confusion 1.",
+      "passives": {
+        "StatusOnUseBasicAttack": {
+          "FlippedFacingForceAttack": "1"
+        },
+        "AddStatusToBasicAttack": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "JestersSoul": {
+    "name": "PASSIVE_JESTERSSOUL_NAME",
+    "name_resolved": "Jester's Soul",
+    "desc": "PASSIVE_JESTERSSOUL_DESC",
+    "desc_resolved": "Abilities from any class are offered when you level up.\nYou can reroll your level up options twice.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "LevelUpClassOverride": "Jester",
+        "AddLevelUpRerolls": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_JESTERSSOUL2_DESC",
+      "desc_resolved": "Abilities from any class are offered when you level up.\nYou can reroll your level up options twice.",
+      "passives": {
+        "LevelUpClassOverride": "Jester",
+        "AddLevelUpRerolls": "2"
+      },
+      "stats": {
+        "str": "2",
+        "dex": "2",
+        "con": "2",
+        "int": "2",
+        "cha": "2",
+        "spd": "2",
+        "lck": "2"
+      }
+    }
+  },
+  "HotBlooded": {
+    "name": "PASSIVE_HOTBLOODED_NAME",
+    "name_resolved": "Hot-Blooded",
+    "desc": "PASSIVE_HOTBLOODED_DESC",
+    "desc_resolved": "Burn you inflict is increased by 1.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AmplifyStatus": "Burn"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HOTBLOODED2_DESC",
+      "desc_resolved": "Burn you inflict is increased by 2.",
+      "passives": {
+        "AmplifyStatus": {
+          "status": "Burn",
+          "addstacks": "2"
+        }
+      }
+    }
+  },
+  "ToxicBlooded": {
+    "name": "PASSIVE_TOXICBLOODED_NAME",
+    "name_resolved": "Toxic-Blooded",
+    "desc": "PASSIVE_TOXICBLOODED_DESC",
+    "desc_resolved": "Poison you inflict is increased by 1.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AmplifyStatus": "Poison"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TOXICBLOODED2_DESC",
+      "desc_resolved": "Poison you inflict is increased by 2.",
+      "passives": {
+        "AmplifyStatus": {
+          "status": "Poison",
+          "addstacks": "2"
+        }
+      }
+    }
+  },
+  "BloodBlooded": {
+    "name": "PASSIVE_BLOODBLOODED_NAME",
+    "name_resolved": "Blood-Blooded",
+    "desc": "PASSIVE_BLOODBLOODED_DESC",
+    "desc_resolved": "Bleed you inflict is increased by 1.",
+    "class": "Colorless",
+    "1": {
+      "passives": {
+        "AmplifyStatus": "Bleed"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLOODBLOODED2_DESC",
+      "desc_resolved": "Bleed you inflict is increased by 2.",
+      "passives": {
+        "AmplifyStatus": {
+          "status": "Bleed",
+          "addstacks": "2"
+        }
+      }
+    }
+  },
+  "VoidSoul": {
+    "name": "PASSIVE_VOIDSOUL_NAME",
+    "name_resolved": "Void Soul",
+    "desc": "PASSIVE_VOIDSOUL_DESC",
+    "desc_resolved": "Only upgraded Collarless abilities are offered when you level up",
+    "1": {
+      "passives": {
+        "LevelUpClassOverride": "Colorless",
+        "UpgradeLevelUpClassActives": "Colorless",
+        "UpgradeLevelUpClassPassives": "Colorless"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VOIDSOUL2_DESC",
+      "desc_resolved": "Only upgraded Collarless abilities are offered when you level up. Collarless spells cost 1 less mana.",
+      "passives": {
+        "LevelUpClassOverride": "Colorless",
+        "UpgradeLevelUpClassActives": "Colorless",
+        "UpgradeLevelUpClassPassives": "Colorless",
+        "ClassManaCostReduction": {
+          "class": "Colorless",
+          "reduction": "1"
+        }
+      }
+    }
+  }
+}

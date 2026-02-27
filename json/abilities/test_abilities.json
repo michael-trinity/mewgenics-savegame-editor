@@ -1,0 +1,396 @@
+{
+  "BlockingRanged": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "Long Ranged Attack",
+      "desc": "he shoot",
+      "animate_name": "false"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "10",
+      "restrictions": "must_have_line_of_sight_unpurgable"
+    }
+  },
+  "BigWind": {
+    "template": "spell",
+    "meta": {
+      "name": "Big Wind",
+      "desc": "hewind"
+    },
+    "graphics": {
+      "particle": "fx_windSpell"
+    },
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "orientation"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "LookTowardsCenter": {
+    "template": "spell",
+    "meta": {
+      "name": "FaceCenter",
+      "desc": "hewind"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "to_map_center"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "LookTowardsMe": {
+    "template": "spell",
+    "meta": {
+      "name": "FaceMe",
+      "desc": "hewind"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "tile_to_character_4snap"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "LookTowardsMeOne": {
+    "template": "spell",
+    "meta": {
+      "name": "FaceMe",
+      "desc": "hewind"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "tile_to_character_4snap"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "PierceShotTest": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "Pierce Shot Test",
+      "desc": "range 5 straight shot, upgraded to piercing",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "invthrow"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_aoe": "5",
+      "upgrade_straight_shot_to_piercing": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "SleepTalk": {
+    "template": "spell",
+    "meta": {
+      "name": "Sleep Talk",
+      "desc": "High damage magical blast with infinite range. You can cast this while dead.",
+      "class": "Necromancer"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "1",
+      "speed": "20"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "10"
+    }
+  },
+  "SpearPokeTest": {
+    "template": "melee_attack",
+    "graphics": {
+      "detatched_animation": "SpearGuyAttack",
+      "detatched_animation_reach": "4"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage"
+    }
+  },
+  "DiagonalDashTest": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "Diagonal Dash"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction8"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "DiagonalBasicMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "Diagonal Melee"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "DiagonalSpell": {
+    "template": "spell",
+    "meta": {
+      "name": "Diagonal Spell",
+      "desc": "fire cone attack"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "particle": "Explosion",
+      "delay": "10",
+      "animation": "weaponspell"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Burn": "1"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "BounceDashTest": {
+    "template": "dash_attack",
+    "class": "BounceDashAbility",
+    "meta": {
+      "name": "Bounce Dash"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_range": "-1",
+      "max_bounces": "10"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    },
+    "splash_damage": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "0",
+      "makes_contact": "true"
+    }
+  },
+  "LaserTest": {
+    "template": "laser",
+    "meta": {
+      "name": "Laser Test",
+      "desc": "laser"
+    },
+    "graphics": {
+      "animation": "shoot",
+      "delay": "5",
+      "beam_clip": "thinlaser",
+      "beam_cap": "thinlasercap",
+      "mask_center": "SpearMaskCenter",
+      "mask_extent": "SpearMaskExtent"
+    },
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "0"
+    }
+  },
+  "LaserBombTest": {
+    "template": "laser",
+    "meta": {
+      "name": "Laser Bomb Test",
+      "desc": "laser"
+    },
+    "graphics": {
+      "delay": "5"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_range": "5",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "0"
+        ]
+      ],
+      "aoe_symmetry": "four_way"
+    },
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "0"
+    }
+  },
+  "BackgroundTransitionTest": {
+    "template": "self_buff",
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "GlobalSpawnCharacter": "MegaGuppy",
+        "PlayBackground": "1",
+        "SwitchMusic": {
+          "new_song": "same",
+          "new_layer": "event"
+        }
+      }
+    }
+  },
+  "DbgBackgroundTransitionTest": {
+    "template": "self_buff",
+    "graphics": {
+      "dont_visualize_ai": "true"
+    },
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "PlayBackground": "1",
+        "TimeDelayStatusApplication": {
+          "delay": ".1",
+          "GlobalSpawnCharacter": "MegaGuppy",
+          "PlayBackground": "1",
+          "RemoveAmbientLightEffects": ".5",
+          "SwitchMusic": {
+            "new_song": "same",
+            "new_layer": "event"
+          },
+          "Vaporize": "1"
+        }
+      }
+    },
+    "damage_instance": {
+      "ai_base_score": "999999"
+    }
+  },
+  "TestGameEndingSequence": {
+    "template": "self_buff",
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "TriggerGameEnding": "1"
+      }
+    }
+  }
+}

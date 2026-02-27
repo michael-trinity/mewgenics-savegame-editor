@@ -1,0 +1,384 @@
+{
+  "CrashedObject": {
+    "intro": {
+      "title": "EVENT_CRASHEDOBJECT_NAME",
+      "title_resolved": "Crashed Object",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "crashed_object",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CRASHEDOBJECT_QUES",
+      "prompt_resolved": "{catname} finds a large crashed mechanical object!\n\nMaybe it is some kind of large robot or ship?",
+      "options": {
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CRASHEDOBJECT_REW1",
+                "prompt_resolved": "{catname} digs around in the wreckage until {he} finds something useful!",
+                "get_item_from_pool": "tech_items"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CRASHEDOBJECT_REW2",
+                "prompt_resolved": "{catname} explores the crashed object and finds a sweet sci-fi weapon!",
+                "get_item": "AlienBlaster"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW3",
+                "prompt_resolved": "{catname} digs through the wreckage but can't find anything worth salvaging."
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_CRASHEDOBJECT_REW4",
+                "prompt_resolved": "While examining the wreckage, {catname} accidentally sits on something. It hurts!\n\n{catname} has been probed!",
+                "self_status_next_fight": {
+                  "ProbeCharmed": "1"
+                }
+              }
+            }
+          }
+        },
+        "repair": {
+          "label": "EVENT_REPAIR_ANSW",
+          "label_resolved": "Repair",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CRASHEDOBJECT_REW5",
+                "prompt_resolved": "Something whirs and clicks and a light turns on!\n\nIt doesn't seem to do much, but {catname} feels very smart for having figured it out!",
+                "permanent_stats": {
+                  "int": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "6",
+                "prompt": "EVENT_CRASHEDOBJECT_REW6",
+                "prompt_resolved": "The ship turns on, and stands up...\n\nIt was a big mech! {catname} is stoked, this looks very handy!",
+                "gain_familiar": "MechSuit"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW7",
+                "prompt_resolved": "{catname} tries to repair the ship but can't make heads or tails of it."
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_CRASHEDOBJECT_REW8",
+                "prompt_resolved": "{catname} tinkers with the ship, trying to fix it, when a sharp piece of metal cuts {him} badly!",
+                "damage": "10",
+                "self_status_next_fight": {
+                  "Bleed": "2"
+                }
+              }
+            }
+          }
+        },
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW9",
+                "prompt_resolved": "Tucked in a protected compartment, {catname} finds a robot and turns it on!",
+                "random_pool": [
+                  {
+                    "gain_familiar": "CharmedLoveBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSecurityBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedCopBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSoldierBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedHangerBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedDoctorBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedTallBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedFutureBot"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW10",
+                "prompt_resolved": "After further inspection, the wreckage contains several robots, still in working condition!\n\n{catname} powers them on!",
+                "random_pool": [
+                  {
+                    "gain_familiar": "CharmedLoveBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSecurityBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedCopBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSoldierBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedHangerBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedDoctorBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedTallBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedFutureBot"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW11",
+                "prompt_resolved": "{catname} tries {his} best to figure out the large pile of wreckage but it's no use."
+              },
+              "rare": {
+                "prompt": "EVENT_CRASHEDOBJECT_REW12",
+                "prompt_resolved": "{catname} wastes so much time trying to figure out the wrecked ship that the party gets ambushed!",
+                "ambush_next_basic_fights": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousObelisk": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSOBELISK_NAME",
+      "title_resolved": "Mysterious Obelisk",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_obelisk",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSOBELISK_QUES",
+      "prompt_resolved": "{catname} finds a mysterious obelisk jutting out from the moon's surface.\n\nIt has strange text on it that {catname} can't decipher.",
+      "options": {
+        "touch": {
+          "label": "EVENT_MYSTERIOUSOBELISK_TOUCH_ANSW",
+          "label_resolved": "Touch obelisk",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_MYSTERIOUSOBELISK_REW1",
+                "prompt_resolved": "The obelisk reacts to {catname}'s touch, glowing with energy!\n\nIt infuses {catname} with energy,",
+                "random_pool": [
+                  {
+                    "self_status_next_fight": {
+                      "MaxStartingMana": "1"
+                    },
+                    "prompt": "EVENT_MYSTERIOUSOBELISK_REW1A",
+                    "prompt_resolved": "maxing out {his} starting mana for the next battle!"
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "HealthRegenUp": "3"
+                    },
+                    "prompt": "EVENT_MYSTERIOUSOBELISK_REW1B",
+                    "prompt_resolved": "providing {him} with health regen for the next battle!"
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "DoubleCast": "1"
+                    },
+                    "prompt": "EVENT_MYSTERIOUSOBELISK_REW1C",
+                    "prompt_resolved": "empowering {his} next spell for the next battle!"
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSOBELISK_REW2",
+                "prompt_resolved": "{catname} reaches out and touches the obelisk and it bursts into flames!",
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_MYSTERIOUSOBELISK_REW2A",
+                    "prompt_resolved": "{catname} feels heat surging through {his} body, and {his} paws begin to glow with heat!",
+                    "gain_disorder": "FlamingFists",
+                    "play_animation": [
+                      "resultVeryGood",
+                      "0"
+                    ]
+                  },
+                  {
+                    "prompt": "EVENT_MYSTERIOUSOBELISK_REW2B",
+                    "prompt_resolved": "A chunk of the obelisk melts off and falls to {catname}'s feet.",
+                    "get_item_from_pool": [
+                      "ObeliskMask",
+                      "ObeliskHat",
+                      "ObeliskArmor"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_MYSTERIOUSOBELISK_REW3",
+                "prompt_resolved": "{catname} touches the obelisk and a powerful wave of energy pulses courses through {his} body...",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_MYSTERIOUSOBELISK_REW4",
+                "prompt_resolved": "{catname} reaches out and touches the obelisk and it begins to glow and shake... \n\n{He} tries to pull {his} paw away but {catname}'s body is overwhelmed by the powerful energy emanating from the obelisk.\n\nAll of {catname}'s abilities have been rerolled!",
+                "scramble_abilities": "all"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSOBELISK_REW5",
+            "prompt_resolved": "Fearing what terrible and unnatural things might happen if {he} were to touch the alien obelisk, {catname} leaves it alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "SmallBlackHole": {
+    "intro": {
+      "title": "EVENT_SMALLBLACKHOLE_NAME",
+      "title_resolved": "Small Black Hole",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "small_black_hole",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SMALLBLACKHOLE_QUES",
+      "prompt_resolved": "A small black hole beckons {catname} toward it, pulling at every hair on {his} body...",
+      "options": {
+        "reach_inside": {
+          "label": "EVENT_SMALLBLACKHOLE_REACHINSIDE_ANSW",
+          "label_resolved": "Reach inside",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMALLBLACKHOLE_REW1",
+                "prompt_resolved": "{catname}'s hand disappears into the darkness of the hole as {he} reaches inside.",
+                "random_pool": [
+                  {
+                    "set_frame": "2",
+                    "prompt": "EVENT_SMALLBLACKHOLE_REW1A",
+                    "prompt_resolved": "With great effort, {catname} pulls {his} arm from the black hole clutching a rare item in {his} paw!",
+                    "get_item_from_pool": "chapter_rare"
+                  },
+                  {
+                    "set_frame": "3",
+                    "prompt": "EVENT_SMALLBLACKHOLE_REW1B",
+                    "prompt_resolved": "With great effort, {catname} pulls {his} arm from the black hole only to find it mutated into a strange new shape!",
+                    "random_pool": [
+                      {
+                        "mutation": {
+                          "arm1": "-1"
+                        }
+                      },
+                      {
+                        "mutation": {
+                          "arm2": "-1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_SMALLBLACKHOLE_REW2",
+                "prompt_resolved": "{catname} swipes at the black hole...\n\n{His} body convulses as it is overcome with numerous strange mutations!",
+                "random_mutation": "3"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_SMALLBLACKHOLE_REW3",
+                "prompt_resolved": "{catname} reaches into the black hole with {his} arm and feels a terrible crushing sensation as the arm disintegrates into nothing!\n\n{He} recoils in horror from the black hole but it is too late. {catname}'s arm is gone!",
+                "permanent_stats": {
+                  "str": "-2"
+                },
+                "random_mutation": {
+                  "count": "2",
+                  "asymmetric": "true"
+                },
+                "random_pool": [
+                  {
+                    "mutation": {
+                      "arm1": "-2"
+                    }
+                  },
+                  {
+                    "mutation": {
+                      "arm2": "-2"
+                    }
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_SMALLBLACKHOLE_REW4",
+                "prompt_resolved": "{catname} reaches for the black hole and is completely sucked in!\n\nA blink of the eye later, {catname} is thrown out the other side, {his} body distorted and riddled with severe mutations.",
+                "random_mutation": {
+                  "count": "2",
+                  "tag": "birth_defect"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

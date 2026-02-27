@@ -1,0 +1,13 @@
+{
+  "None": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "None",
+      "desc": "nothing"
+    },
+    "damage": {
+      "damage": "0",
+      "type": "none"
+    }
+  }
+}

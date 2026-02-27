@@ -1,0 +1,778 @@
+{
+  "Tragedy": {
+    "intro": {
+      "title": "EVENT_TRAGEDY_NAME",
+      "title_resolved": "Tragedy!",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tragedy",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "goto": "end",
+      "outcome": {
+        "play_animation": [
+          "resultTragedy",
+          ".5"
+        ],
+        "random_pool": [
+          {
+            "set_frame": "1",
+            "prompt": "EVENT_TRAGEDY_REW1",
+            "prompt_resolved": "{catname} feels like an outcast in the group. {He} strays a bit further from the pack."
+          },
+          {
+            "set_frame": "2",
+            "prompt": "EVENT_TRAGEDY_REW2",
+            "prompt_resolved": "{catname} remembers a time when things were easier and wishes {he} was back home."
+          },
+          {
+            "set_frame": "3",
+            "prompt": "EVENT_TRAGEDY_REW3",
+            "prompt_resolved": "{catname} recalls fond memories of being cared for by {his} mother."
+          },
+          {
+            "set_frame": "4",
+            "prompt": "EVENT_TRAGEDY_REW4",
+            "prompt_resolved": "{catname} experiences existential dread. What's the point of it all if it just ends in death?"
+          },
+          "/*",
+          {
+            "set_frame": "5",
+            "prompt": "EVENT_TRAGEDY_REW5",
+            "prompt_resolved": "{catname} checks {his} pockets... It appears {he} has lost something.",
+            "lose_item": "inventory"
+          },
+          "*/",
+          {
+            "set_frame": "6",
+            "prompt": "EVENT_TRAGEDY_REW6",
+            "prompt_resolved": "{catname} feels pangs of hunger. {He} licks {his} wounds but they won't heal!",
+            "self_status_next_fight": {
+              "NoHealthRegen": "1"
+            }
+          },
+          {
+            "set_frame": "7",
+            "prompt": "EVENT_TRAGEDY_REW7",
+            "prompt_resolved": "{catname} feels emotionally drained... This adventure has been quite the ordeal.\n\n{catname} won't start with mana next battle.",
+            "self_status_next_fight": {
+              "NoStartingMana": "1"
+            }
+          },
+          {
+            "set_frame": "8",
+            "prompt": "EVENT_TRAGEDY_REW8",
+            "prompt_resolved": "{catname} accidentally snags {himself} on a rusted nail. {He} can't stop the bleeding!",
+            "self_status_next_fight": {
+              "Bleed": "1"
+            }
+          },
+          {
+            "set_frame": "9",
+            "prompt": "EVENT_TRAGEDY_REW9",
+            "prompt_resolved": "{catname} hears the voice of {his} father calling to him!\n\n{catname} turns to see a terrifying face {he} can't describe… It is horrifying!",
+            "self_status_next_fight": {
+              "Fear": "1"
+            }
+          },
+          {
+            "set_frame": "10",
+            "prompt": "EVENT_TRAGEDY_REW10",
+            "prompt_resolved": "Whatever {catname} last ate must have been spoiled...\n\n{He} got food poisoning!",
+            "self_status_next_fight": {
+              "Poison": "1"
+            }
+          },
+          {
+            "set_frame": "11",
+            "prompt": "EVENT_TRAGEDY_REW11",
+            "prompt_resolved": "{catname}'s wounds have become infected.",
+            "permanent_stats": {
+              "cha": "-1"
+            }
+          },
+          {
+            "set_frame": "12",
+            "prompt": "EVENT_TRAGEDY_REW12",
+            "prompt_resolved": "{catname} trips on a rock, face planting into the ground!\n\n{catname}'s forehead swells up and {he} feels sluggish from the head trauma.",
+            "permanent_stats": {
+              "int": "-1"
+            }
+          },
+          "/*",
+          {
+            "set_frame": "13",
+            "prompt": "EVENT_TRAGEDY_REW13",
+            "prompt_resolved": "{catname} seems to have misplaced something important but {he} can't remember where or what it was...",
+            "lose_item": "equipped"
+          },
+          "*/",
+          {
+            "set_frame": "14",
+            "prompt": "EVENT_TRAGEDY_REW14",
+            "prompt_resolved": "{catname} accidentally steps on a trap!",
+            "self_damage": [
+              "8",
+              "15"
+            ]
+          },
+          {
+            "set_frame": "15",
+            "prompt": "EVENT_TRAGEDY_REW15",
+            "prompt_resolved": "Rats jump out from a nearby crevice and bite {catname}!\n\n{Catname} is suffering a string of bad luck... What did {he} do to deserve this?",
+            "self_damage": [
+              "4",
+              "8"
+            ],
+            "next_event_from_set": "Tragedy"
+          },
+          {
+            "set_frame": "16",
+            "prompt": "EVENT_TRAGEDY_REW16",
+            "prompt_resolved": "Out of nowhere, {catname} spontaneously combusts!\n\n{catname} howls in surprise as {his} fur lights on fire!",
+            "self_status_next_fight": {
+              "Burn": "5"
+            }
+          },
+          {
+            "set_frame": "17",
+            "prompt": "EVENT_TRAGEDY_REW17",
+            "prompt_resolved": "{catname} finds a little friend! {He} proudly shows it off to the party.\n\nIsn't it cute!?",
+            "get_parasite_from_pool": "parasites"
+          },
+          {
+            "set_frame": "18",
+            "prompt": "EVENT_TRAGEDY_REW18",
+            "prompt_resolved": "{catname} feels something lumpy under the ground at {his} feet and digs it up...\n\nIt latches onto {him}!",
+            "get_parasite_from_pool": "cursed_items"
+          },
+          {
+            "set_frame": "19",
+            "prompt": "EVENT_TRAGEDY_REW19",
+            "prompt_resolved": "Memories of battles flash in {catname}'s mind, driving {him} into an insatiable rage!",
+            "gain_disorder": "BloodFrenzy"
+          },
+          {
+            "set_frame": "20",
+            "prompt": "EVENT_TRAGEDY_REW20",
+            "prompt_resolved": "Someone pushes {catname}! {He} tumbles roughly onto a pile of sharp rocks.",
+            "injury": "random"
+          }
+        ]
+      }
+    }
+  },
+  "Blessing": {
+    "intro": {
+      "title": "Blessing!",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "blessing",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "goto": "end",
+      "outcome": {
+        "play_animation": [
+          "resultBlessing",
+          ".5"
+        ],
+        "random_pool": [
+          {
+            "set_frame": "1",
+            "prompt": "EVENT_BLESSING_REW1",
+            "prompt_resolved": "{catname} finds a tasty snack!",
+            "heal": "5"
+          },
+          {
+            "set_frame": "2",
+            "prompt": "EVENT_BLESSING_REW2",
+            "prompt_resolved": "{catname} finds some shiny coins!",
+            "gain_coins": [
+              "5",
+              "15"
+            ]
+          },
+          {
+            "set_frame": "3",
+            "prompt": "EVENT_BLESSING_REW3",
+            "prompt_resolved": "{catname} finds some delicious catnip growing and devours it. {He} travels to strange places where all {his} dreams come true...\n\n{catname} will start the next battle with extra mana.",
+            "self_status_next_fight": {
+              "AddStartingMana": "5"
+            }
+          },
+          {
+            "set_frame": "4",
+            "prompt": "EVENT_BLESSING_REW4",
+            "prompt_resolved": "{catname} finds some evidence and is more prepared for the next event!",
+            "next_event_bonus": "2"
+          },
+          {
+            "set_frame": "5",
+            "prompt": "EVENT_BLESSING_REW5",
+            "prompt_resolved": "{catname} seems to have an admirer. A fly has joined the party!",
+            "gain_familiar": "CharmedFly"
+          },
+          {
+            "set_frame": "6",
+            "prompt": "EVENT_BLESSING_REW6",
+            "prompt_resolved": "Aha! {catname} discovers some tracks!\n\n{He} follows them through a secret path allowing the party to ambush!",
+            "ally_ambush_next_fights": "1"
+          },
+          {
+            "set_frame": "7",
+            "prompt": "EVENT_BLESSING_REW7",
+            "prompt_resolved": "{catname} finds a strange sealed box and opens it up...",
+            "get_item_from_pool": "consumables"
+          },
+          {
+            "set_frame": "8",
+            "prompt": "EVENT_BLESSING_REW8",
+            "prompt_resolved": "{catname} discovers a strange piece of art.\n\n{He} admires the design and comments smugly about it to the other cats.",
+            "permanent_stats": {
+              "int": "1"
+            }
+          },
+          {
+            "set_frame": "9",
+            "prompt": "EVENT_BLESSING_REW9",
+            "prompt_resolved": "{catname} has been working out lately and it is finally starting to pay off!",
+            "permanent_stats": {
+              "str": "1"
+            }
+          },
+          {
+            "set_frame": "10",
+            "prompt": "EVENT_BLESSING_REW10",
+            "prompt_resolved": "{catname} is all dolled up and ready for a night on the town!",
+            "permanent_stats": {
+              "cha": "1"
+            }
+          },
+          {
+            "set_frame": "11",
+            "prompt": "EVENT_BLESSING_REW11",
+            "prompt_resolved": "{catname} finds a secret hatch and pulls it open to look inside...",
+            "get_item_from_pool": "treasure_easy"
+          },
+          {
+            "set_frame": "12",
+            "prompt": "EVENT_BLESSING_REW12",
+            "prompt_resolved": "{catname} makes a new friend!\n\nA stray cat joins the party.",
+            "gain_cat_familiar": "1"
+          },
+          {
+            "set_frame": "13",
+            "prompt": "EVENT_BLESSING_REW13",
+            "prompt_resolved": "{catname} discovers a partially buried treasure chest and digs it up!",
+            "get_item_from_pool": "chapter"
+          },
+          {
+            "set_frame": "14",
+            "prompt": "EVENT_BLESSING_REW14",
+            "prompt_resolved": "{catname} finds a large pile of food! The cats chow down on the lavish feast!",
+            "party_heal": "10",
+            "gain_food": [
+              "5",
+              "10"
+            ],
+            "permanent_stats": {
+              "con": "1"
+            }
+          },
+          {
+            "set_frame": "15",
+            "prompt": "EVENT_BLESSING_REW15",
+            "prompt_resolved": "{catname} finds a rare piece of candy and levels up!",
+            "level_up": "self"
+          },
+          {
+            "set_frame": "16",
+            "prompt": "EVENT_BLESSING_REW16",
+            "prompt_resolved": "{catname} spies a four leaf clover!",
+            "permanent_stats": {
+              "lck": "1"
+            }
+          },
+          {
+            "set_frame": "17",
+            "prompt": "EVENT_BLESSING_REW17",
+            "prompt_resolved": "{catname} finds an old shoe and wears it for a while. When {he} finally takes it off, {catname} can run much faster than before!",
+            "permanent_stats": {
+              "spd": "1"
+            }
+          },
+          {
+            "set_frame": "18",
+            "prompt": "EVENT_BLESSING_REW18",
+            "prompt_resolved": "{catname} finds a plump and delicious looking mushroom and eats it!",
+            "permanent_stats": {
+              "str": "1",
+              "dex": "1",
+              "con": "1",
+              "int": "1",
+              "cha": "1",
+              "spd": "1",
+              "lck": "1"
+            }
+          },
+          {
+            "set_frame": "19",
+            "prompt": "EVENT_BLESSING_REW19",
+            "prompt_resolved": "{catname} digs through a trash heap and finds something valuable!",
+            "get_item_from_pool": "rare"
+          },
+          {
+            "set_frame": "20",
+            "prompt": "EVENT_BLESSING_REW20",
+            "prompt_resolved": "{catname} finds a syringe full of a strange liquid. {He} doesn't hesitate!",
+            "random_mutation": "1"
+          },
+          {
+            "set_frame": "21",
+            "prompt": "EVENT_BLESSING_REW21",
+            "prompt_resolved": "{catname} finds a tin full of super rare candies!\n\nThe whole party gets one!",
+            "level_up": "all"
+          }
+        ]
+      }
+    }
+  },
+  "Happening": {
+    "intro": {
+      "title": "EVENT_HAPPENING_NAME",
+      "title_resolved": "Something's Happening!",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "happening",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "goto": "end",
+      "outcome": {
+        "play_animation": [
+          "resultWeather",
+          ".5"
+        ],
+        "weather_roll": [
+          {
+            "weight": "1",
+            "set_frame": "2",
+            "prompt": "EVENT_HAPPENING_FOG_REW",
+            "prompt_resolved": "A dense fog starts rolling in. The cats can barely see in front of them!",
+            "add_weather": "Fog"
+          },
+          {
+            "weight": "1",
+            "set_frame": "4",
+            "prompt": "EVENT_HAPPENING_RAIN_REW",
+            "prompt_resolved": "The sky darkens with clouds and raindrops drizzle down, forming small puddles on the ground and wetting the cats' soft fur.",
+            "add_weather": "Rain"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "5",
+            "prompt": "EVENT_HAPPENING_HEAVYRAIN_REW",
+            "prompt_resolved": "Dark clouds churn above as a heavy rain begins to pelt down, drenching the cats in a constant deluge.",
+            "add_weather": "HeavyRain"
+          },
+          {
+            "weight": "1",
+            "set_frame": "6",
+            "prompt": "EVENT_HAPPENING_WINDY_REW",
+            "prompt_resolved": "A strong wind howls around the cats. Dirt and debris kicked up from the tempest pelt against them, nearly knocking the cats off their feet!",
+            "add_weather": "Windy"
+          },
+          {
+            "weight": "1",
+            "set_frame": "7",
+            "prompt": "EVENT_HAPPENING_SANDSTORM_REW",
+            "prompt_resolved": "A thick sandstorm kicks up. Small grains of sand, travelling at furious speeds through the air, sting the cats through their fur!",
+            "add_weather": "Sandstorm"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "8",
+            "prompt": "EVENT_HAPPENING_OVERGROWTH_REW",
+            "prompt_resolved": "Tall grass and brambles are thick here!\n\nThe cats push their way through the long grass, trying desperately not to get caught in the thorny branches.",
+            "add_weather": "Overgrowth"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "9",
+            "prompt": "EVENT_HAPPENING_EARTHQUAKE_REW",
+            "prompt_resolved": "Tremors shake the ground beneath the cats' feet!\n\nRocks and debris tumble down around them, dislodged from the violent shaking!",
+            "add_weather": "Earthquake"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "10",
+            "prompt": "EVENT_HAPPENING_WILDFIRE_REW",
+            "prompt_resolved": "Embers fill the air as a raging wildfire engulfs the horizon.\n\nThe cats cough, spitting out chunks of dry ash, as smoke fills their lungs.",
+            "add_weather": "Wildfire"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "11",
+            "prompt": "EVENT_HAPPENING_HEATWAVE_REW",
+            "prompt_resolved": "A brutal heatwave settles in the air...\n\nThe cats sluggishly plod on, their warm fur exacerbating their misery.",
+            "add_weather": "HeatWave"
+          },
+          {
+            "weight": "1",
+            "set_frame": "12",
+            "prompt": "EVENT_HAPPENING_SNOW_REW",
+            "prompt_resolved": "The temperature suddenly drops and thick snow begins falling around the cats.\n\nAt first the cats swat at the pretty little snowflakes, but as the snow piles up the party decides they liked it much better when it was warm out.",
+            "add_weather": "Snow"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "15",
+            "prompt": "EVENT_HAPPENING_ACIDRAIN_REW",
+            "prompt_resolved": "A light rain begins to fall around the cats. At first they are not worried...\n\nBut it is raining acid! The cats howl as it burns them!",
+            "add_weather": "AcidRain"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "18",
+            "prompt": "EVENT_HAPPENING_THUNDERSTORM_REW",
+            "prompt_resolved": "The distant rumbling of thunder quickly turns into a full lightning storm, as rain pours down and fierce winds blow the cats off their now soggy feet!",
+            "add_weather": "Thunderstorm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "20",
+            "prompt": "EVENT_HAPPENING_FLASHFLOOD_REW",
+            "prompt_resolved": "A torrent of water dumps from the sky and begins pooling in large pools around the cats!\n\nThe flash flood claims more and more of the terrain as the cats run to high ground!",
+            "add_weather": "FlashFlood"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "25",
+            "prompt": "EVENT_HAPPENING_TRASHDAY_REW",
+            "prompt_resolved": "It must be trash day. Bags of discarded refuse line the path forward!",
+            "add_weather": "TrashDay"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "30",
+            "prompt": "EVENT_HAPPENING_FROGS_REW",
+            "prompt_resolved": "It's raining frogs!?!\n\nThe slimy little fellows bounce down like water balloons, and the air is filled with the sound of their ribbits!",
+            "add_weather": "RainingFrogs"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "37",
+            "prompt": "EVENT_HAPPENING_PIPEBLOCKAGE_REW",
+            "prompt_resolved": "A nearby sewer pipe erupts, triggering a chain reaction of other pipes nearby! Sewage sprays into the air, piling into large mounds of sludge.\n\nStench from the freed blockage permeates the air like thick molasses accosting the cats' sensitive noses...",
+            "add_weather": "PipeBlockage"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "38",
+            "prompt": "EVENT_HAPPENING_PAYDAY_REW",
+            "prompt_resolved": "It's payday! Various coins lay scattered about, carelessly dropped in a rush to spend them!",
+            "add_weather": "PayDay"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "40",
+            "prompt": "EVENT_HAPPENING_HUNTINGSEASON_REW",
+            "prompt_resolved": "The cats notice an abundance of bear traps laid out.\n\nIt must be hunting season, they had better watch their step!",
+            "add_weather": "HuntingSeason"
+          },
+          {
+            "weight": ".5",
+            "requires_flag": "RestlessDeadUnlocked",
+            "set_frame": "41",
+            "prompt": "EVENT_HAPPENING_RESTLESSDEAD_REW",
+            "prompt_resolved": "Patches of earth begin to shake around the cats, as rotting paws reach up from beneath the ground! The dead are restless!",
+            "add_weather": "RestlessDead"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "42",
+            "prompt": "EVENT_HAPPENING_FIREFLIES_REW",
+            "prompt_resolved": "Swarms of fireflies surround the cats, their bioluminescent lights dancing in a beautiful symphony of floating stars!",
+            "add_weather": "FireflySwarm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "43",
+            "prompt": "EVENT_HAPPENING_BUTTERFLIES_REW",
+            "prompt_resolved": "The cats can't believe their eyes!\n\nSwarms of beautiful butterflies fill the air, landing on every surface in a blanket of color!",
+            "add_weather": "ButterflySwarm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "44",
+            "prompt": "EVENT_HAPPENING_FLIES_REW",
+            "prompt_resolved": "Swarms of flies fill the air!\n\nThe cats swat at them and shake their tails but there are too many of them to stop!",
+            "add_weather": "FlySwarm"
+          },
+          {
+            "weight": ".25",
+            "requires_flag": "RobotUprisingUnlocked",
+            "set_frame": "48",
+            "prompt": "EVENT_HAPPENING_ROBOTS_REW",
+            "prompt_resolved": "Noisy terrible machines are rolling around, snapping their strange metal arms at everything in sight!\n\nA robot uprising has begun!",
+            "add_weather": "RobotUprising"
+          },
+          {
+            "weight": ".25",
+            "requires_flag": "HauntedNightUnlocked",
+            "set_frame": "3",
+            "prompt": "EVENT_HAPPENING_HAUNTEDNIGHT_REW",
+            "prompt_resolved": "Oh, what a horrible night to have a curse...\n\nEthereal cries of ghostly figures fill the air!",
+            "add_weather": "HauntedNight"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "46",
+            "prompt": "EVENT_HAPPENING_FIRESTORM_REW",
+            "prompt_resolved": "Walls of fire rapidly spring up, blocking the way!\n\nThe cats hurry to navigate the burning landscape, fleeing the fury of a firestorm!",
+            "add_weather": "Firestorm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "47",
+            "prompt": "EVENT_HAPPENING_METEORNADO_REW",
+            "prompt_resolved": "A giant meteornado engulfs the area! Large boulders and stones are swept up, pelting everything still foolishly standing in the path of the maelstrom!",
+            "add_weather": "Meteornado"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "50",
+            "prompt": "EVENT_HAPPENING_BIRDMIGRATION_REW",
+            "prompt_resolved": "Flocks of birds travel above in the sky...\n\nSome land on nearby perches, resting for a moment before continuing on their migration.",
+            "add_weather": "BirdMigration"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "51",
+            "prompt": "EVENT_HAPPENING_COCKROACHES_REW",
+            "prompt_resolved": "Swarms of cockroaches ripple like waves across the surface of the ground!\n\nThe cats yelp in terror as the hard little creatures bite their paws and try to climb their legs!",
+            "add_weather": "CockroachSwarm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "52",
+            "prompt": "EVENT_HAPPENING_JUDGEMENTDAY_REW",
+            "prompt_resolved": "Blinding beams of holy light from the heavens begin striking the ground nearby, obliterating everything caught in their deadly rays.\n\nIt is judgment day!",
+            "add_weather": "JudgementDay"
+          },
+          "/*",
+          {
+            "weight": ".25",
+            "set_frame": "53",
+            "prompt": "EVENT_HAPPENING_PANDEMONIUM_REW",
+            "prompt_resolved": "A strange fervor grips the minds of the cats, and they tear about in a frantic pandemonium, striking at anything, or anyone, that gets in their way!",
+            "add_weather": "Pandemonium"
+          },
+          "*/",
+          {
+            "weight": ".25",
+            "set_frame": "54",
+            "prompt": "EVENT_HAPPENING_THEHOLLOWING_REW",
+            "prompt_resolved": "Strange muffled cries fill the night... the howls and screams of the dead, awakened from their slumber...\n\nThe Hollowing has begun!",
+            "add_weather": "TheHollowing"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "55",
+            "prompt": "EVENT_HAPPENING_OILSPILL_REW",
+            "prompt_resolved": "Large steel drums lay strewn about, their inky contents spilled out onto the ground!",
+            "add_weather": "OilSpill"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "56",
+            "prompt": "EVENT_HAPPENING_BLIZZARD_REW",
+            "prompt_resolved": "A violent frigid wind sweeps through, chilling the cats to their core!\n\nThe cats brace themselves against the frozen torrent, even as snow plasters against their faces and thunder rumbles in the air!",
+            "add_weather": "Blizzard"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "57",
+            "prompt": "EVENT_HAPPENING_HURRICANE_REW",
+            "prompt_resolved": "A terrible hurricane rips through the area, tossing everything up in the air and into a violent turmoil of wind and water!",
+            "add_weather": "Hurricane"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "58",
+            "prompt": "EVENT_HAPPENING_SPIKES_REW",
+            "prompt_resolved": "Strange thorns start growing out of everything...\n\nThe cats look down in astonishment as thin barbs stick out from beneath their own fur!\n\nIt will be a while until their next bath!",
+            "add_weather": "StrangeSpikes"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "59",
+            "prompt": "EVENT_HAPPENING_BLESSEDDAY_REW",
+            "prompt_resolved": "A radiant light fills the surroundings with holy energy, and the cats feel invigorated by its warm embrace.",
+            "add_weather": "BlessedDay"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "60",
+            "prompt": "EVENT_HAPPENING_STEALTHMISSION_REW",
+            "prompt_resolved": "There is a strange stillness here...\n\nThe silence accentuates every step and the cats move as stealthily as they can!",
+            "add_weather": "StealthMission"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "61",
+            "prompt": "EVENT_HAPPENING_INFESTATION_REW",
+            "prompt_resolved": "Swarms of small insects darken the sky, latching onto and infesting everything in sight!",
+            "add_weather": "Infestation"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "62",
+            "prompt": "EVENT_HAPPENING_ERUPTION_REW",
+            "prompt_resolved": "Hot lava flows from a huge mound not far away! Molten debris flies through the air and dark clouds billow forth from the Earth's maw!",
+            "add_weather": "Eruption"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "63",
+            "prompt": "EVENT_HAPPENING_DRUGAWARENESS_REW",
+            "prompt_resolved": "The cats seemed to have stumbled into a drug awareness day party!",
+            "add_weather": "Drugs"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "64",
+            "prompt": "EVENT_HAPPENING_TRAININGDAY_REW",
+            "prompt_resolved": "Weird looking dummy cats can be seen about, just waiting to be pounced on!\n\nIt's training day? The cats wonder if striking the dummies will be like using the scratching post back home?",
+            "add_weather": "TrainingDay"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "65",
+            "prompt": "EVENT_HAPPENING_TORNADOES_REW",
+            "prompt_resolved": "Violent tornadoes form from distant air currents high above!\n\nThe windy tendrils reach down like fingers of a long hand and strike the earth, lifting debris up and tossing it indiscriminately into the air!",
+            "add_weather": "Tornado"
+          },
+          {
+            "weight": ".5",
+            "set_frame": "66",
+            "prompt": "EVENT_HAPPENING_CRAZYWEATHER_REW",
+            "prompt_resolved": "The weather is going crazy! First rain, then snow, then lightning!\n\nThe cats don't know what is going on, but if they were back safe at home it might be fun to watch from a window.",
+            "add_weather": "CrazyWeather"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "67",
+            "prompt": "EVENT_HAPPENING_HUNTINGBOUNTIES_REW",
+            "prompt_resolved": "Gunshots ring out in the distance followed by an unnerving quiet...\n\nSomeone is hunting bounties... the cats had better be careful!",
+            "add_weather": "BountyHunting"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "68",
+            "prompt": "EVENT_HAPPENING_MINEFIELD_REW",
+            "prompt_resolved": "Large craters in the ground are scattered about, and the smell of sulfur is in the air.\n\nThe cats have stepped into a minefield!",
+            "add_weather": "Minesweeper"
+          },
+          {
+            "weight": ".25",
+            "requires_flag": "AlienInvasionUnlocked",
+            "set_frame": "69",
+            "prompt": "EVENT_HAPPENING_ALIENINVASION_REW",
+            "prompt_resolved": "Aliens are invading!?!\n\nThe cats look around in bewilderment as flying saucers whiz by and little strange people hop out, firing lasers!",
+            "add_weather": "AlienInvasion"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "75",
+            "prompt": "EVENT_HAPPENING_BIRDEMIC_REW",
+            "prompt_resolved": "The sky appears to darken as numerous birds circle above.\n\nThe cats look around them in surprise as birds begin to land everywhere!",
+            "requires_counter": [
+              "BonusBirdsKilled",
+              "25"
+            ],
+            "add_weather": "Birdemic"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "16",
+            "prompt": "EVENT_HAPPENING_METEORSHOWER_REW",
+            "prompt_resolved": "The cats look up in wonder as majestic balls of fire streak through the sky.\n\nTheir awe shifts to terror as the loud booms of meteors striking the ground reverberate through the air!",
+            "requires_flag": "MeteorShowerUnlocked",
+            "add_weather": "MeteorShower"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "70",
+            "prompt": "EVENT_CRATERWEATHER_REW2",
+            "prompt_resolved": "A blinding light from the sky illuminates the landscape in terrifying clarity.\n\nThe cats cower and cover their eyes from the scorching rays!",
+            "requires_flag": "SolarFlareUnlocked",
+            "add_weather": "SolarFlare"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "71",
+            "prompt": "EVENT_CRATERWEATHER_REW3",
+            "prompt_resolved": "The cats look on in bewilderment as rocks around them begin hovering in the air and flying in every direction!",
+            "requires_flag": "GeomagneticStormUnlocked",
+            "add_weather": "GeomagneticStorm"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "74",
+            "prompt": "EVENT_CRATERWEATHER_REW4",
+            "prompt_resolved": "The air shimmers in vibrant hues and the cats retch as ripples in the air cause their bodies to warp and mutate!",
+            "requires_flag": "TheShimmerUnlocked",
+            "add_weather": "TheShimmer"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "72",
+            "prompt": "EVENT_CRATERWEATHER_REW5",
+            "prompt_resolved": "Strange eggs begin to pop up all over the ground...\n\nThe cats look at them inquisitively, not sure what to do.",
+            "requires_flag": "StrangeEggsUnlocked",
+            "add_weather": "StrangeEggs"
+          },
+          {
+            "weight": ".25",
+            "set_frame": "73",
+            "prompt": "EVENT_CRATERWEATHER_REW6",
+            "prompt_resolved": "Brambles begin rapidly growing all around the cats...\n\nSomething about the strange bulbs growing amidst the thorns is very off-putting!",
+            "requires_flag": "AlienOvergrowthUnlocked",
+            "add_weather": "AlienOvergrowth"
+          }
+        ]
+      }
+    }
+  },
+  "ExtraLife": {
+    "intro": {
+      "title": "EVENT_ACAT_NAME",
+      "title_resolved": "A cat!",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "blessing",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "goto": "end",
+      "outcome": {
+        "play_animation": [
+          "resultGood",
+          ".5"
+        ],
+        "random_pool": [
+          {
+            "set_frame": "12",
+            "prompt": "EVENT_ACAT_REW1",
+            "prompt_resolved": "A new cat starts following the party!",
+            "gain_cat_familiar": "1",
+            "get_item": "Neverstone"
+          }
+        ]
+      }
+    }
+  }
+}

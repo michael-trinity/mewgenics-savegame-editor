@@ -1,0 +1,392 @@
+{
+  "ViolentOutburst": {
+    "id": "ViolentOutburst",
+    "template": "dash_attack",
+    "target": {
+      "max_range": "2"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "1"
+    },
+    "self_damage": {
+      "damage": "1"
+    }
+  },
+  "BasicDashAttackMove": {
+    "id": "BasicDashAttackMove",
+    "template": "dash_attack",
+    "name_key": "ABILITY_BASICDASHATTACKMOVE_NAME",
+    "name": "Dash Attack",
+    "desc_key": "ABILITY_BASICDASHATTACKMOVE_DESC",
+    "description": "Dash forward, then attack with knockback.",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "BasicDashAttackMove_NoKnockback": {
+    "id": "BasicDashAttackMove_NoKnockback",
+    "template": "dash_attack",
+    "name_key": "ABILITY_BASICDASHATTACKMOVE_NOKNOCKBACK_NAME",
+    "name": "Dash Attack",
+    "desc_key": "ABILITY_BASICDASHATTACKMOVE_NOKNOCKBACK_DESC",
+    "description": "Dash forward and attack",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "PoxScratch": {
+    "id": "PoxScratch",
+    "template": "self_buff",
+    "graphics": {
+      "animation": "scratchear"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "EndTurn": "1"
+      }
+    }
+  },
+  "MegaFart": {
+    "id": "MegaFart",
+    "template": "spell",
+    "name_key": "ABILITY_MEGAFART_NAME",
+    "name": "Mega Fart",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "delayed_trigger": "true"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "fartoom"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "knockback": "10",
+      "effects": {
+        "Poison": "2"
+      },
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "ParanoiaBasicMelee": {
+    "id": "ParanoiaBasicMelee",
+    "variant_of": "BasicMelee",
+    "self_damage": {
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "MiniFart": {
+    "id": "MiniFart",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "poopfartbehind"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Poison": "1"
+      }
+    }
+  },
+  "KidneyStone": {
+    "id": "KidneyStone",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "-1,",
+          "0"
+        ]
+      ],
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "None",
+      "animation": "poopfartbehind"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "ChangeTile": "WaterTile",
+        "ObjectOnHitCharacter": "SmallRock",
+        "SendRock": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "1"
+    }
+  },
+  "EatShit": {
+    "id": "EatShit",
+    "template": "tile_targeted_melee_attack",
+    "name_key": "ABILITY_EATSHIT_NAME",
+    "name": "Eat Poop",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "poop"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "999999",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Conditional_HasTag": {
+          "tag": "poop",
+          "Vaporize": "1"
+        }
+      }
+    }
+  },
+  "Cannibalize": {
+    "id": "Cannibalize",
+    "template": "melee_attack",
+    "name_key": "ABILITY_CANNIBALIZE_NAME",
+    "name": "Cannibalize",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation": "dashbite"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "999999",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "AllStatsUp": "1",
+          "HealthGain": "4"
+        }
+      }
+    }
+  },
+  "CrohnsPoop": {
+    "id": "CrohnsPoop",
+    "template": "spawn",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_be_displaceable"
+    },
+    "graphics": {
+      "animation": "fartoom",
+      "lob": "true"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Poison": "1"
+      }
+    },
+    "spawn": {
+      "object": "Poop"
+    }
+  },
+  "Hallucinate_Disorder": {
+    "id": "Hallucinate_Disorder",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_restrictions": [
+        "exclude_blocking"
+      ]
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "spawn": {
+      "object": "RANDOM_1X1_ENEMY",
+      "faction": "solitary_enemies",
+      "first_turn": "next_turn",
+      "additional_passives": {
+        "SafeDoomed": "1",
+        "InjuryImmunity": "1",
+        "FadeInsteadOfDie": "1",
+        "IllusionTint": "1",
+        "SchizoIllusionAIModifier": "1"
+      }
+    }
+  },
+  "SpontaneouslyCombust": {
+    "id": "SpontaneouslyCombust",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "center_particle": "FireBlastMushroom",
+      "area_particle": "FireBlastSmall",
+      "delay": "5",
+      "palette": "6",
+      "animation": "meow"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Burn": "5"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "DysenteryPoop": {
+    "id": "DysenteryPoop",
+    "template": "spawn",
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "-1,",
+          "0"
+        ]
+      ],
+      "aoe_restrictions": "none"
+    },
+    "graphics": {
+      "animation": "poopfartbehind",
+      "lob": "true"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "3"
+      },
+      "elements": [
+        "Fire"
+      ]
+    },
+    "self_damage": {
+      "damage": "1"
+    },
+    "spawn": {
+      "object": "FlamingPoop"
+    }
+  },
+  "DarkOneStrike": {
+    "id": "DarkOneStrike",
+    "template": "spell",
+    "cost": {
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "restrictions": [
+        "must_have_living_character"
+      ]
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "evilMagic"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Leech": "1",
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "SkunkTail": {
+    "id": "SkunkTail",
+    "template": "melee_attack",
+    "target": {
+      "knockback_mode": "back_orientation",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "-1,",
+          "0"
+        ]
+      ]
+    },
+    "graphics": {
+      "animation": "poopfartbehind"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "knockback": "4",
+      "effects": {
+        "Poison": "4",
+        "VisualFXTile": "PoisonPoof"
+      }
+    }
+  }
+}

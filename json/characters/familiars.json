@@ -1,0 +1,1789 @@
+{
+  "FamiliarMaggot": {
+    "variant_of": "Maggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "FamiliarTumorousMaggot": {
+    "variant_of": "TumorousMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "/*ai": {
+      "brain": "PlayerBrain"
+    },
+    "*/": true
+  },
+  "FamiliarChargeyMaggot": {
+    "variant_of": "ChargeyMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "/*": "ai",
+    "brain": "PlayerBrain"
+  },
+  "FamiliarSwappyMaggot": {
+    "variant_of": "SwappyMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "/*ai": {
+      "brain": "PlayerBrain"
+    },
+    "*/": true
+  },
+  "FamiliarPooter": {
+    "variant_of": "Pooter",
+    "graphics": {
+      "tint": [
+        ".7",
+        "1",
+        ".7",
+        "1"
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "CharmedPooter": {
+    "variant_of": "Pooter",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFlySwarm": {
+    "variant_of": "FlySwarm",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFlea": {
+    "variant_of": "Flea",
+    "graphics": {
+      "tint": [
+        ".7",
+        "1",
+        ".7",
+        "1"
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFleaSpecial": {
+    "variant_of": "CharmedFlea",
+    "graphics": {
+      "name": "FAMILIAR_FLORIANTHEFLEA_NAME",
+      "name_resolved": "Florian the Flea",
+      "tooltip": "FAMILIAR_FLORIANTHEFLEA_DESC",
+      "tooltip_resolved": "Your flea friend till the end!"
+    },
+    "properties": {
+      "health": "10"
+    },
+    "abilities": {
+      "attack": "BasicDrainMelee"
+    }
+  },
+  "CharmedTinySpider": {
+    "variant_of": "TinySpider",
+    "graphics": {
+      "tint": [
+        ".7",
+        "1",
+        ".7",
+        "1"
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFly": {
+    "variant_of": "Fly",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "SteelFly": {
+    "variant_of": "CharmedFly",
+    "graphics": {
+      "name": "FAMILIAR_FLY_STEEL_NAME",
+      "name_resolved": "Steel Fly",
+      "tooltip": "FAMILIAR_FLY_STEEL_DESC",
+      "tooltip_resolved": "Invulnerable.",
+      "piece_alt_frame": "5"
+    },
+    "properties": {
+      "kill_required": "false"
+    },
+    "passives": {
+      "AllDamageImmune_IncludingSpeculative": "1"
+    }
+  },
+  "CharmedDip": {
+    "variant_of": "Dip",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFloater": {
+    "variant_of": "Floater",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedPile": {
+    "variant_of": "Pile",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedMaggot": {
+    "variant_of": "Maggot",
+    "graphics": {
+      "tint": [
+        ".7",
+        "1",
+        ".7",
+        "1"
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedTumorousMaggot": {
+    "variant_of": "TumorousMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedChargeyMaggot": {
+    "variant_of": "ChargeyMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedSwappyMaggot": {
+    "variant_of": "SwappyMaggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedRat": {
+    "variant_of": "Rat",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedKitten": {
+    "variant_of": "Kitten",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "BuffCharmedKitten": {
+    "variant_of": "CharmedKitten",
+    "passives": {
+      "AllStatsUp": "2",
+      "HealthGain": "8"
+    }
+  },
+  "CharmedTomTom": {
+    "variant_of": "TomTom",
+    "graphics": {
+      "tint": [
+        ".7",
+        "1",
+        ".7",
+        "1"
+      ]
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "BuffFamiliarMaggot": {
+    "variant_of": "Maggot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddDamage": "1",
+      "AddMaxHealth": "5",
+      "HealthGain": "5"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "BuffFamiliarPooter": {
+    "variant_of": "Pooter",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddDamage": "1",
+      "AddMaxHealth": "5",
+      "HealthGain": "5"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "BuffFamiliarFlea": {
+    "variant_of": "Flea",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddDamage": "1",
+      "AddMaxHealth": "5",
+      "HealthGain": "5"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "BuffFamiliarFly": {
+    "variant_of": "Fly",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddDamage": "1",
+      "AddMaxHealth": "5",
+      "HealthGain": "5"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "RotFly": {
+    "variant_of": "Fly",
+    "graphics": {
+      "name": "FAMILIAR_ROTFLY_NAME",
+      "name_resolved": "Rot Fly",
+      "piece_alt_frame": "3"
+    },
+    "properties": {
+      "kill_required": "false"
+    }
+  },
+  "AllyRotFly": {
+    "variant_of": "Fly",
+    "graphics": {
+      "name": "FAMILIAR_ROTFLY_NAME",
+      "name_resolved": "Rot Fly",
+      "piece_alt_frame": "3"
+    },
+    "properties": {
+      "kill_required": "false",
+      "inherit_faction": "true"
+    }
+  },
+  "Deathbot": {
+    "graphics": {
+      "movieclip": "Deathbot",
+      "name": "FAMILIAR_DEATHBOT_NAME",
+      "name_resolved": "Deathbot"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_BuildBot_Land"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "robot",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "4",
+      "health": "12",
+      "weak_threshold": "0",
+      "corpse_health": "0",
+      "ai_scale": ".5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "Flamethrower"
+    },
+    "passives": {
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TinkererTurret": {
+    "graphics": {
+      "movieclip": "Turret",
+      "name": "FAMILIAR_TURRET_NAME",
+      "name_resolved": "Turret"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_BuildBot_Land"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "robot",
+      "faction": "allies",
+      "movement": "4",
+      "health": "3",
+      "weak_threshold": "0",
+      "corpse_health": "0",
+      "ai_scale": ".5",
+      "inherit_faction": "true",
+      "auto_run_priority": "stationary"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "TurretShot"
+    },
+    "passives": {
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "keep_distance",
+      "never_hit_ally_corpses": "true"
+    }
+  },
+  "RocketTurret": {
+    "variant_of": "TinkererTurret",
+    "graphics": {
+      "name": "FAMILIAR_ROCKETTURRET_NAME",
+      "name_resolved": "Rocket Turret"
+    },
+    "abilities": {
+      "attack": "RocketTurretShot"
+    },
+    "ai": {
+      "decision_weights": "default"
+    }
+  },
+  "CharmedDemonKitten": {
+    "variant_of": "Hyde",
+    "graphics": {
+      "name": "FAMILIAR_DEMONKITTEN_NAME",
+      "name_resolved": "Demon Kitten",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "spawnin_animation": "spawnin"
+    },
+    "stats": {
+      "strength": "5"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "health": "14"
+    }
+  },
+  "CharmedLeech": {
+    "variant_of": "Maggot",
+    "graphics": {
+      "name": "FAMILIAR_LEECH_NAME",
+      "name_resolved": "Leech",
+      "piece_alt_frame": "3"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "RemoteFlatLeech": "1"
+      }
+    }
+  },
+  "BeefyCharmedLeech": {
+    "variant_of": "Maggot",
+    "graphics": {
+      "name": "FAMILIAR_BEEFYLEECH_NAME",
+      "name_resolved": "Beefy Leech",
+      "piece_alt_frame": "3",
+      "scale": "1.5"
+    },
+    "stats": {
+      "strength": "4"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "health": "8",
+      "movement": "4",
+      "corpse_health": "1"
+    },
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "RemoteLeech": "1"
+      }
+    }
+  },
+  "BestBud": {
+    "variant_of": "Maggot",
+    "graphics": {
+      "name": "FAMILIAR_BESTBUD_NAME",
+      "name_resolved": "Best Bud",
+      "piece_alt_frame": "3",
+      "scale": "1.5"
+    },
+    "stats": {
+      "strength": "4"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "health": "8",
+      "movement": "4",
+      "corpse_health": "1"
+    },
+    "passives": {
+      "StatusOnSpawnIn": {
+        "CaptureFamiliar": "1"
+      },
+      "AddStatusToBasicAttack": {
+        "RemoteLeech": "1"
+      }
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "Catbot": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "FAMILIAR_CATBOT_NAME",
+      "name_resolved": "Catbot",
+      "custom_cat_data": "RoboTom",
+      "alt_animations": [
+        [
+          "idle",
+          "catbotIdle"
+        ],
+        [
+          "walk",
+          "stompwalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "robot"
+      ],
+      "type": "cat",
+      "health": "10",
+      "base_mana_regen": "999",
+      "faction": "allies",
+      "ai_scale": ".5",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "spells": []
+    },
+    "passives": {
+      "TakeWeaponFromSpawner": "1",
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "ZombieCatFamiliar": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "FAMILIAR_ZOMBIEKITTEN_NAME",
+      "name_resolved": "Zombie Kitten",
+      "custom_cat_data": "ZombieCat",
+      "spawnin_animation": "digUp",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "alt_animations": [
+        [
+          "idle",
+          "zombieIdle"
+        ],
+        [
+          "walk",
+          "zombieWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "1",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "zombie"
+      ],
+      "type": "cat",
+      "health": "6",
+      "base_mana_regen": "999",
+      "faction": "allies",
+      "movement": "2",
+      "ai_scale": ".5",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "ZombieFeastSmall"
+      ]
+    },
+    "passives": {
+      "Undead": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "ZombieFeastSmall,",
+          "attack"
+        ]
+      },
+      "decision_weights": "zombie",
+      "move_weights": "zombie"
+    }
+  },
+  "NeutralZombieKitten": {
+    "variant_of": "ZombieCatFamiliar",
+    "properties": {
+      "faction": "third_party"
+    }
+  },
+  "FeralZombieKitten": {
+    "variant_of": "ZombieCatFamiliar",
+    "properties": {
+      "faction": "third_party",
+      "inherit_faction": "false"
+    },
+    "passives": {
+      "PermanentMadness": "1"
+    }
+  },
+  "SkeletonCatFamiliar": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "FAMILIAR_SKELETONKITTEN_NAME",
+      "name_resolved": "Skeleton Kitten",
+      "custom_cat_data": "SkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "skeletonIdle"
+        ]
+      ],
+      "spawnin_animation": "digUp",
+      "scale": ".8",
+      "shadow_size": ".8"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "6",
+      "base_mana_regen": "999",
+      "initiative": "10",
+      "movement": "2",
+      "corpse_health": "0",
+      "faction": "allies",
+      "ai_scale": ".5",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "NoHealthOnlyShield": "1",
+      "Undead": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "TransformOnDeathImmediately": {
+        "obj": "SkeletonCatCorpseFamiliar",
+        "first_turn": "keep_turns"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "SkeletonCatCorpseFamiliar": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "FAMILIAR_SKELETONKITTEN_NAME",
+      "name_resolved": "Skeleton Kitten",
+      "custom_cat_data": "SkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "dead"
+        ],
+        [
+          "weak",
+          "dead"
+        ],
+        [
+          "hit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "deadhit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "stunned",
+          "dead"
+        ],
+        [
+          "dying",
+          "dead"
+        ],
+        [
+          "dead",
+          "skeletonDead"
+        ]
+      ],
+      "spawnin_animation": "skeletonDie",
+      "scale": ".8",
+      "shadow_size": ".8"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "6",
+      "faction": "allies",
+      "ai_scale": ".5",
+      "inherit_faction": "true",
+      "initiative": "10",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "NoHealthOnlyShield": "1",
+      "Undead": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "CountAsCorpse": "1",
+      "TransformInXTurns": {
+        "stacks": "1",
+        "object": "SkeletonCatRevivedFamiliar",
+        "initiative": "keep_turns_end_turn"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SkeletonCatRevivedFamiliar": {
+    "variant_of": "SkeletonCatFamiliar",
+    "graphics": {
+      "spawnin_animation": "revive"
+    }
+  },
+  "Bombchu": {
+    "graphics": {
+      "movieclip": "Bombchu",
+      "name": "FAMILIAR_BOMBCHU_NAME",
+      "name_resolved": "Bombchu"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "HitGround",
+          "SE_BuildBot_Land"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "robot",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "1",
+      "health": "5",
+      "base_mana_regen": "999",
+      "ai_scale": ".5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "RocketSkates_Bombchu",
+      "spells": []
+    },
+    "passives": {
+      "DeathRattle": "DecoyExplode",
+      "Robot": "1",
+      "LoopingSoundWhileAlive": "Bomb_FuseLoop"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "MechSuit": {
+    "graphics": {
+      "movieclip": "MechSuit",
+      "name": "FAMILIAR_MECHSUIT_NAME",
+      "name_resolved": "Mech Suit",
+      "uifloaters_offset": "2",
+      "shadow_size": "2"
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "robot",
+        "mount"
+      ],
+      "mana_matters": "true",
+      "faction": "none",
+      "inherit_faction": "false",
+      "takes_main_turn": "false",
+      "kill_required": "false",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "MechSuitPunch",
+      "spells": [
+        "MechSuitBarrage",
+        "MechSuitDash",
+        "MechSuitEject"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "Trample": "3",
+      "Mount": {
+        "enter_ability": "EnterMech",
+        "eject_ability": "MechSuitEject"
+      },
+      "DeathRattle": "MechExplode",
+      "FormChanger": {
+        "Unmounted": {},
+        "Mounted": {
+          "animation_suffix": "Cat"
+        }
+      }
+    },
+    "ai": {
+      "brain": "MountBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close",
+      "animate_choice": "true"
+    }
+  },
+  "RoboVacuum": {
+    "graphics": {
+      "movieclip": "Roomba",
+      "name": "FAMILIAR_ROBOVAC_NAME",
+      "name_resolved": "Robo-Vac",
+      "move_speed_multiplier": "1.75"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "robot",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "8",
+      "health": "3",
+      "base_mana_regen": "999",
+      "ai_scale": ".5",
+      "corpse_health": "0",
+      "can_collect_coins": "true",
+      "can_eat_food": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "Roomba_Bump",
+      "spells": []
+    },
+    "passives": {
+      "SharePickupsWithSpawner": "1",
+      "TagGreed": "pickup",
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "blind_move_far"
+    }
+  },
+  "RoboVacuum2": {
+    "variant_of": "RoboVacuum",
+    "passives": {
+      "SharePickupsWithSpawner": "0",
+      "SharePickups": {
+        "include_coins": "true"
+      }
+    }
+  },
+  "NurseBot": {
+    "graphics": {
+      "movieclip": "LoveBot",
+      "name": "FAMILIAR_NURSEBOT_NAME",
+      "name_resolved": "Nurse Bot",
+      "uifloaters_offset": "2",
+      "scale": ".7"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "robot",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "auto_run_priority": "support",
+      "health": "5",
+      "shield": "5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "NurseBotHealCat",
+      "spells": [
+        "NurseBotHeal"
+      ]
+    },
+    "passives": {
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "NurseBotHealCat",
+          "NurseBotHeal"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_near_allies"
+    }
+  },
+  "TeslaCoil": {
+    "graphics": {
+      "movieclip": "TeslaCoil",
+      "name": "FAMILIAR_TESLACOIL_NAME",
+      "name_resolved": "Tesla Coil",
+      "shadow_size": ".25"
+    },
+    "properties": {
+      "type": "object",
+      "tag": "robot",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "health": "5",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "ai_scale": ".25"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "TeslaBolt",
+      "spells": []
+    },
+    "passives": {
+      "Robot": {
+        "alternate_energized_effect": {
+          "SpellDamageUp": "1"
+        }
+      },
+      "CounterAttack": "TeslaBolt"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "teslacoil",
+      "move_weights": "stay_close"
+    }
+  },
+  "FamiliarFetus": {
+    "graphics": {
+      "movieclip": "Fetus",
+      "name": "ENEMY_FETUS_NAME",
+      "name_resolved": "Fetus",
+      "tooltip": "ENEMY_FETUS_DESC",
+      "tooltip_resolved": "Ranged attacker.\nCan drink water to heal."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "fetus",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "2",
+      "health": "12",
+      "base_mana_regen": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicShortLobbed_Water",
+      "can_get_bonus": "true",
+      "spells": [
+        "DrinkUp"
+      ]
+    },
+    "passives": {
+      "WaterWalk": "1"
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "pattern": {
+        "do_priority": [
+          "attack",
+          "DrinkUp"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move_prefer_water"
+    }
+  },
+  "FamiliarFetusGusher": {
+    "graphics": {
+      "movieclip": "FetusGusher",
+      "name": "ENEMY_FETUSGUSHER_NAME",
+      "name_resolved": "Fetus Gusher",
+      "tooltip": "ENEMY_FETUSGUSHER_DESC",
+      "tooltip_resolved": "Its water attack pushes all units in a straight line.\nMust be in water to attack. Seeks water when out of water."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "fetus",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "3",
+      "health": "15",
+      "base_mana_regen": "3",
+      "round_end_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "SwimmerMove",
+      "attack": "FetusGush",
+      "can_get_bonus": "true"
+    },
+    "passives": {
+      "WaterWalk": "1"
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "FamiliarBrainDrain": {
+    "variant_of": "BrainDrain",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "FamiliarKirbyFetus": {
+    "variant_of": "KirbyFetus",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    },
+    "ai_if_spawned_as_enemy": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "KirbySuck"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "SleepParalysisDemon": {
+    "variant_of": "Hyde",
+    "graphics": {
+      "name": "FAMILIAR_SLEEPDEMON_NAME",
+      "name_resolved": "{SpawnedBy}'s Sleep Paralysis Demon",
+      "spawnin_animation": "howl",
+      "tint": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "tooltip": "FAMILIAR_SLEEPDEMON_DESC",
+      "tooltip_resolved": "When killed, {SpawnedBy} wakes up."
+    },
+    "stats": {
+      "strength": "7"
+    },
+    "properties": {
+      "faction": "solitary_enemies",
+      "corpse_health": "0",
+      "health": "19"
+    }
+  },
+  "RandomLivingPoop": {
+    "alt_spawn_pool": {
+      "CharmedDip": "1",
+      "CharmedFloater": "1",
+      "CharmedPile": "1"
+    },
+    "properties": {
+      "can_be_champion": "true"
+    }
+  },
+  "GrubFamiliarBase": {
+    "variant_of": "Maggot",
+    "graphics": {
+      "name": "FAMILIAR_GRUB_NAME",
+      "name_resolved": "Grub"
+    },
+    "properties": {
+      "hidden_tag": "grub_familiar",
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {},
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "set_GrubFamiliarReturn"
+      ]
+    },
+    "ai": {
+      "decision_weights": "heal_others",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "HeadGrubFamiliar": {
+    "variant_of": "GrubFamiliarBase",
+    "graphics": {
+      "name": "ARMOR_HEADGRUB_NAME",
+      "name_resolved": "Head Grub"
+    }
+  },
+  "FaceGrubFamiliar": {
+    "variant_of": "GrubFamiliarBase",
+    "graphics": {
+      "name": "ARMOR_FACEGRUB_NAME",
+      "name_resolved": "Face Grub"
+    }
+  },
+  "NeckGrubFamiliar": {
+    "variant_of": "GrubFamiliarBase",
+    "graphics": {
+      "name": "ARMOR_NECKGRUB_NAME",
+      "name_resolved": "Neck Grub"
+    }
+  },
+  "CharmedPinky": {
+    "variant_of": "Pinky",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedLeaper": {
+    "variant_of": "Leaper",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedHyde": {
+    "variant_of": "Hyde",
+    "stats": {
+      "constitution": "8"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "/*ai": {
+      "brain": "PlayerBrain"
+    },
+    "*/": true
+  },
+  "CharmedSpookie": {
+    "variant_of": "Spookie",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedDaddyShark": {
+    "variant_of": "DaddyShark",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedHeadTumor": {
+    "variant_of": "HeadTumor",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFetus": {
+    "variant_of": "Fetus",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFetus2": {
+    "variant_of": "CharmedFetus",
+    "properties": {
+      "health": "24"
+    }
+  },
+  "CharmedLoveBot": {
+    "variant_of": "LoveBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedSecurityBot": {
+    "variant_of": "SecurityBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedCopBot": {
+    "variant_of": "CopBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedSoldierBot": {
+    "variant_of": "SoldierBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedHangerBot": {
+    "variant_of": "HangerBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedDoctorBot": {
+    "variant_of": "DoctorBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedTallBot": {
+    "variant_of": "TallBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFutureBot": {
+    "variant_of": "FutureBot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedCaveBaby": {
+    "variant_of": "CaveBaby",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedMammoth": {
+    "variant_of": "Mammoth",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedTarBaby": {
+    "variant_of": "TarBaby",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedRaptorBaby": {
+    "variant_of": "RaptorBaby",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedCancerCat": {
+    "variant_of": "CancerCat",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedFloast": {
+    "variant_of": "Floast",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CatCopyClot": {
+    "variant_of": "Clot",
+    "graphics": {
+      "name": "FAMILIAR_CATCOPYCLOT_NAME",
+      "name_resolved": "{SpawnedBy}'s Clot",
+      "tooltip": "FAMILIAR_CATCOPYCLOT_DESC",
+      "tooltip_resolved": "Has a chance to become a {SpawnedBy} Clone at the end of its turn."
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "spells": [
+        "ClotEvolveCatCopy",
+        "ClotFailEvolve"
+      ]
+    },
+    "passives": {
+      "SpawnerCatDataReference": "1"
+    },
+    "ai": {
+      "pattern": {
+        "move_then_do_random": [
+          "ClotEvolveCatCopy",
+          "ClotFailEvolve"
+        ]
+      }
+    }
+  },
+  "CharmedRattleSnake": {
+    "variant_of": "RattleSnake",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedDustDevil": {
+    "variant_of": "DustDevil",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedSnakeyBones": {
+    "variant_of": "SnakeyBones",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedHornyCat": {
+    "variant_of": "HornyCat",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedGunCat": {
+    "variant_of": "GunCat",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedScorpionCat": {
+    "variant_of": "ScorpionCat",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedMangy2": {
+    "variant_of": "Mangy2",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedBabyDeathWorm": {
+    "variant_of": "BabyDeathWorm",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedBigDemon": {
+    "variant_of": "BigDemon",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedStacy": {
+    "variant_of": "Stacy2p0",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedCultist": {
+    "variant_of": "Cultist",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedLice": {
+    "variant_of": "Lice",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedGamete": {
+    "variant_of": "Gamete",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedClot": {
+    "variant_of": "Clot",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedAmoeba": {
+    "variant_of": "Amoeba",
+    "scale": ".5",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedReaper": {
+    "variant_of": "Reaper",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "Triachnid": {
+    "graphics": {
+      "movieclip": "Triachnid",
+      "name": "FAMILIAR_TRIACHNID_NAME",
+      "name_resolved": "Triachnid",
+      "tooltip": "FAMILIAR_TRIACHNID_DESC",
+      "move_speed_multiplier": "1.75",
+      "scale": "1.3"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "bug",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "8",
+      "health": "3",
+      "base_mana_regen": "999",
+      "ai_scale": ".5",
+      "dispersed_bonus_turns": "1",
+      "corpse_health": "0",
+      "can_collect_coins": "true",
+      "can_eat_food": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "spells": [
+        "tw_TriachnidSpawn"
+      ]
+    },
+    "passives": {
+      "SharePickupsWithSpawner": "1",
+      "TagGreed": "pickup"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "blind_move_far"
+    }
+  },
+  "CharmedMegaDino": {
+    "variant_of": "MegaDinoLeg",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    }
+  },
+  "CharmedBear": {
+    "variant_of": "Bear",
+    "ai": {
+      "brain": "GenericBrain"
+    }
+  },
+  "CharmedWhiteRabbit": {
+    "variant_of": "WhiteRabbit",
+    "graphics": {
+      "tooltip": "FAMILIAR_WHITERABBIT_DESC",
+      "tooltip_resolved": "Has a 50% chance of gaining Madness at the end of each turn."
+    },
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Conditional_BadRoll": {
+          "odds": "0.5",
+          "Madness": "1"
+        }
+      }
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "0"
+    }
+  },
+  "CharmedTinaFly": {
+    "variant_of": "Fly",
+    "graphics": {
+      "name": "FAMILIAR_TINAFLY_NAME",
+      "name_resolved": "Tina's Friend",
+      "scale": "1.2",
+      "tint": "blue"
+    },
+    "properties": {
+      "health": "10",
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "passives": {
+      "AddDamage": "4",
+      "HealthGain": "1"
+    }
+  },
+  "CharmedTinyTumor": {
+    "variant_of": "TinyTumor",
+    "graphics": {
+      "scale": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": "-1"
+      }
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "0"
+    }
+  },
+  "CharmedMammothBaby": {
+    "variant_of": "MammothBaby",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "0"
+    }
+  },
+  "CharmedGeoLad": {
+    "variant_of": "GeoLad",
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "0"
+    }
+  },
+  "TheLost": {
+    "variant_of": "Scary",
+    "graphics": {
+      "name": "FAMILIAR_THELOST_NAME",
+      "name_resolved": "The Lost",
+      "scale": ".7"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "1"
+    }
+  },
+  "TheIntruder": {
+    "variant_of": "TallSpiderCat",
+    "graphics": {
+      "name": "FAMILIAR_THEINTRUDER_NAME",
+      "name_resolved": "The Intruder",
+      "scale": ".5"
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true",
+      "dispersed_bonus_turns": "2"
+    }
+  },
+  "FamiliarFleshLad": {
+    "variant_of": "FleshLad",
+    "graphics": {
+      "tooltip": "FAMILIAR_FLESHLAD_DESC",
+      "tooltip_resolved": "Gains an extra attack per turn each time it takes damage.\nGains Speed at the end of its turn."
+    },
+    "properties": {
+      "faction": "allies",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "can_get_bonus": "true"
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "PhantomMaskRock": {
+    "graphics": {
+      "movieclip": "Mask",
+      "shadow_size": ".50",
+      "uifloaters_offset": ".5",
+      "scale": ".7",
+      "name": "FAMILIAR_PHANTOMMASK_NAME",
+      "name_resolved": "Phantom Mask",
+      "tooltip": "FAMILIAR_PHANTOMMASK_DESC",
+      "tooltip_resolved": "Invulnerable. Attack it to knock it foward in a straight line. It deals 5 damage to units it hits."
+    },
+    "properties": {
+      "faction": "allies",
+      "tag": "rock",
+      "type": "object",
+      "takes_turns": "true",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "move_block": "nothing",
+      "corpse_health": "0",
+      "initiative": "-80",
+      "movement": "2",
+      "ai_scale": ".25",
+      "health": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "AnimatedRockAttack",
+      "spells": []
+    },
+    "passives": {
+      "SmallRockBehavior": "5",
+      "LimitHeal": "0",
+      "StripStatuses": "1",
+      "ReturnBoundItemOnBattleEnd": "1",
+      "AllDamageImmune_IncludingSpeculative": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default_ignore_selfdamage",
+      "move_weights": "stay_close"
+    }
+  }
+}

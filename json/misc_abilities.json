@@ -1,0 +1,158 @@
+{
+  "MoveOne": {
+    "id": "MoveOne",
+    "template": "move",
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "MoveTwo": {
+    "id": "MoveTwo",
+    "template": "move",
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "MoveThree": {
+    "id": "MoveThree",
+    "template": "move",
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "MoveFour": {
+    "id": "MoveFour",
+    "template": "move",
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "DoubleDistanceMove": {
+    "id": "DoubleDistanceMove",
+    "template": "move",
+    "target": {
+      "max_range": "mov*2"
+    }
+  },
+  "MoveOneTrample": {
+    "id": "MoveOneTrample",
+    "template": "move",
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "MoveTwoTrample": {
+    "id": "MoveTwoTrample",
+    "template": "move",
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "MoveThreeTrample": {
+    "id": "MoveThreeTrample",
+    "template": "move",
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "MoveFourTrample": {
+    "id": "MoveFourTrample",
+    "template": "move",
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "FormShrinkFour": {
+    "id": "FormShrinkFour",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "shrink"
+    },
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "4"
+        }
+      }
+    }
+  },
+  "FormShrinkThree": {
+    "id": "FormShrinkThree",
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "3"
+        }
+      }
+    }
+  },
+  "FormShrinkTwo": {
+    "id": "FormShrinkTwo",
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "2"
+        }
+      }
+    }
+  },
+  "FormShrinkOne": {
+    "id": "FormShrinkOne",
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "1"
+        }
+      }
+    }
+  },
+  "FormGrowTwo": {
+    "id": "FormGrowTwo",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "grow"
+    },
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "2"
+        }
+      }
+    }
+  },
+  "FormGrowThree": {
+    "id": "FormGrowThree",
+    "variant_of": "FormGrowTwo",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "3"
+        }
+      }
+    }
+  },
+  "DoNothing": {
+    "id": "DoNothing",
+    "template": "placeholder",
+    "cost": {
+      "cant_cast": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "none",
+      "range_mode": "none"
+    },
+    "graphics": {
+      "animation": "none"
+    }
+  }
+}

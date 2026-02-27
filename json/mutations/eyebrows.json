@@ -1,0 +1,314 @@
+{
+  "eyebrows": {
+    "300": {
+      "spd": "1"
+    },
+    "301": {
+      "desc": "MUTATION_EYEBROWS_301_DESC",
+      "desc_resolved": "You have a 10% chance to inflict Confusion on units who contact or attack you.",
+      "passives": {
+        "RevengeDamage": {
+          "type": "status",
+          "damage": "0",
+          "effects": {
+            "Confusion": [
+              "1,",
+              ".1"
+            ]
+          }
+        }
+      }
+    },
+    "302": {
+      "shield": "2"
+    },
+    "303": {
+      "cha": "1"
+    },
+    "304": {
+      "tag": "animal",
+      "dex": "1"
+    },
+    "305": {
+      "lck": "1"
+    },
+    "306": {
+      "desc": "MUTATION_EYEBROWS_306_DESC",
+      "desc_resolved": "You have a 5% chance to inflict Fear on units who contact or attack you.",
+      "passives": {
+        "RevengeDamage": {
+          "type": "status",
+          "damage": "0",
+          "effects": {
+            "Fear": [
+              "1,",
+              ".05"
+            ]
+          }
+        }
+      }
+    },
+    "307": {
+      "desc": "MUTATION_EYEBROWS_307_DESC",
+      "desc_resolved": "+1 Mana Regeneration. +1 Health Regeneration.",
+      "passives": {
+        "HealthRegenUp": "1",
+        "AddManaRegen": "1"
+      }
+    },
+    "308": {
+      "cha": "1"
+    },
+    "309": {
+      "desc": "MUTATION_EYEBROWS_309_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "310": {
+      "desc": "MUTATION_EYEBROWS_310_DESC",
+      "desc_resolved": "+1 Range.",
+      "tag": "extra",
+      "passives": {
+        "AddBonusRange": "1"
+      }
+    },
+    "311": {
+      "desc": "MUTATION_EYEBROWS_311_DESC",
+      "desc_resolved": "When you cast your third spell each turn, heal 2.",
+      "passives": {
+        "StatusEveryXSpellCastsEachTurn": {
+          "stacks": "3",
+          "HealthGain": "2"
+        }
+      }
+    },
+    "313": {
+      "desc": "MUTATION_EYEBROWS_313_DESC",
+      "desc_resolved": "Spawn 1-2 extra pickups in each battle.",
+      "passives": {
+        "SpawnExtraThingsOnBattleStart": {
+          "object": "RandomPickup",
+          "number": [
+            "1",
+            "2"
+          ]
+        }
+      }
+    },
+    "314": {
+      "desc": "MUTATION_EYEBROWS_314_DESC",
+      "desc_resolved": "When an allied cat dies, gain +2 Damage.",
+      "passives": {
+        "StatusOnAllyCatDeath": {
+          "DamageUp": "2"
+        }
+      }
+    },
+    "315": {
+      "desc": "MUTATION_EYEBROWS_315_DESC",
+      "desc_resolved": "You can reroll your options when you level up.",
+      "passives": {
+        "AddLevelUpRerolls": "1"
+      }
+    },
+    "900": {
+      "desc": "MUTATION_EYEBROWS_900_DESC",
+      "desc_resolved": "+5% dodge chance. Your basic attack has a 1% chance to inflict Freeze.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Freeze": [
+            "1",
+            ".01"
+          ]
+        },
+        "DodgeChance": "5%"
+      }
+    },
+    "400": {
+      "str": "2",
+      "con": "-1"
+    },
+    "401": {
+      "str": "2",
+      "dex": "-1"
+    },
+    "402": {
+      "str": "2",
+      "cha": "-1"
+    },
+    "403": {
+      "str": "2",
+      "int": "-1"
+    },
+    "404": {
+      "str": "2",
+      "spd": "-1"
+    },
+    "405": {
+      "str": "2",
+      "lck": "-1"
+    },
+    "406": {
+      "con": "2",
+      "str": "-1"
+    },
+    "407": {
+      "con": "2",
+      "dex": "-1"
+    },
+    "408": {
+      "con": "2",
+      "cha": "-1"
+    },
+    "409": {
+      "con": "2",
+      "int": "-1"
+    },
+    "410": {
+      "con": "2",
+      "spd": "-1"
+    },
+    "411": {
+      "con": "2",
+      "lck": "-1"
+    },
+    "412": {
+      "dex": "2",
+      "con": "-1"
+    },
+    "413": {
+      "dex": "2",
+      "str": "-1"
+    },
+    "414": {
+      "dex": "2",
+      "cha": "-1"
+    },
+    "415": {
+      "dex": "2",
+      "int": "-1"
+    },
+    "416": {
+      "dex": "2",
+      "spd": "-1"
+    },
+    "417": {
+      "dex": "2",
+      "lck": "-1"
+    },
+    "418": {
+      "int": "2",
+      "con": "-1"
+    },
+    "419": {
+      "int": "2",
+      "dex": "-1"
+    },
+    "420": {
+      "int": "2",
+      "cha": "-1"
+    },
+    "421": {
+      "int": "2",
+      "str": "-1"
+    },
+    "422": {
+      "int": "2",
+      "spd": "-1"
+    },
+    "423": {
+      "int": "2",
+      "lck": "-1"
+    },
+    "424": {
+      "cha": "2",
+      "con": "-1"
+    },
+    "425": {
+      "cha": "2",
+      "dex": "-1"
+    },
+    "426": {
+      "cha": "2",
+      "str": "-1"
+    },
+    "427": {
+      "cha": "2",
+      "int": "-1"
+    },
+    "428": {
+      "cha": "2",
+      "spd": "-1"
+    },
+    "429": {
+      "cha": "2",
+      "lck": "-1"
+    },
+    "430": {
+      "lck": "2",
+      "con": "-1"
+    },
+    "431": {
+      "lck": "2",
+      "dex": "-1"
+    },
+    "432": {
+      "lck": "2",
+      "cha": "-1"
+    },
+    "433": {
+      "lck": "2",
+      "int": "-1"
+    },
+    "434": {
+      "lck": "2",
+      "spd": "-1"
+    },
+    "435": {
+      "lck": "2",
+      "str": "-1"
+    },
+    "436": {
+      "spd": "2",
+      "con": "-1"
+    },
+    "437": {
+      "spd": "2",
+      "str": "-1"
+    },
+    "438": {
+      "spd": "2",
+      "cha": "-1"
+    },
+    "439": {
+      "spd": "2",
+      "int": "-1"
+    },
+    "440": {
+      "spd": "2",
+      "dex": "-1"
+    },
+    "441": {
+      "spd": "2",
+      "lck": "-1"
+    },
+    "700": {
+      "tag": "birth_defect",
+      "lck": "-1"
+    },
+    "701": {
+      "tag": "birth_defect",
+      "cha": "-1"
+    },
+    "702": {
+      "tag": "birth_defect",
+      "int": "-1"
+    },
+    "-2": {
+      "tag": "birth_defect",
+      "cha": "-2"
+    }
+  }
+}

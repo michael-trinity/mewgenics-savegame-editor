@@ -1,0 +1,88 @@
+{
+  "levels": {
+    "folder": "jurassic",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "jurassic_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [],
+    "medium": [
+      "PrehistoricPooter",
+      "Pterodactyl",
+      "Raptor",
+      "RaptorBaby",
+      "Ankylosaurus",
+      "Parasaurolophus",
+      "Maelestes",
+      "DinoEggs"
+    ],
+    "large": [
+      "Trex",
+      "Stegosaurus",
+      "Triceratops"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "jurassicitems"
+  },
+  "minibosses": {
+    "dinocouple": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "endoftime.gon",
+      "hidden": "true",
+      "override_art": "MapNodeExit_Infinite"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "megadino"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_Volcano",
+      "override_art": "MapNode_Volcano"
+    },
+    "time_machine": {
+      "type": "special_event",
+      "level": "Quest_TimeMachineJurassic",
+      "override_art": "MapNode_TimeMachine"
+    }
+  },
+  "flags": {
+    "VolcanoAntennaAttached": {
+      "quest_event": {
+        "override_art": "MapNode_VolcanoAntenna"
+      }
+    },
+    "EndOfTimeUnlocked": {
+      "exit0": {
+        "hidden": "false"
+      }
+    }
+  }
+}

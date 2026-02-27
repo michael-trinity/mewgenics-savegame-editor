@@ -1,0 +1,175 @@
+{
+  "get_item_from_pool": {
+    "pool": "chapter_common",
+    "restrict": "weapon"
+  },
+  "permanent_stats": {
+    "str": "1",
+    "con": "1",
+    "random": "4"
+  },
+  "party_permanent_stats": {
+    "str": "1",
+    "con": "1"
+  },
+  "random_mutation_from_set": {
+    "tail": "1500",
+    "ears": "1500",
+    "mouth": "-1",
+    "tag": "birth_defect"
+  },
+  "mutation": {
+    "tail": "1500",
+    "ears": "1500",
+    "mouth": "1500",
+    "tag": "birth_defect"
+  },
+  "random_mutation": {
+    "count": "4",
+    "asymmetric": "true",
+    "tag": "birth_defect"
+  },
+  "self_status_next_fight": {
+    "Fights": "1",
+    "Poison": "2"
+  },
+  "party_status_next_fight": {
+    "Fights": "1",
+    "Poison": "2"
+  },
+  "global_effect_next_fight": {
+    "Fights": "1",
+    "CharacterTypeGainsStatusAtBattleStart": {
+      "tag": "rat",
+      "Fear": "1"
+    }
+  },
+  "/*chapter_global_effect": {
+    "Rain": "1"
+  },
+  "leave_party_temporarily": {
+    "fights_skipped": "0",
+    "return_during": "boss",
+    "return_as": "enemy"
+  },
+  "spawn_unit_next_fight": {
+    "object": [
+      "Rat",
+      "Pinky",
+      "Leaper"
+    ],
+    "count": "2",
+    "spawn_side": "enemies",
+    "fights": "1"
+  },
+  "spawn_reflection_next_fight": {
+    "mutation": {
+      "eyes": "442"
+    }
+  },
+  "gain_familiar": {
+    "object": "CharmedPooter",
+    "initial_health": "10"
+  },
+  "next_event_from_set": {
+    "event": "Tragedy",
+    "count": "3",
+    "same_cat": "true"
+  },
+  "conditional_reward": {
+    "requirements": {
+      "has_token": "WorldEventLegacyToken_Bar",
+      "not_has_token": "WorldEventLegacyToken_Baz",
+      "counter_minimum": [
+        "WorldEventLegacyCounter_FooCounter",
+        "5"
+      ],
+      "counter_maximum": [
+        "WorldEventLegacyCounter_FooCounter",
+        "10"
+      ],
+      "counter_range": [
+        "WorldEventLegacyCounter_FooCounter",
+        "5",
+        "10"
+      ],
+      "cat_has_item_equipped": [
+        "FaceCovering",
+        "InfamousMask"
+      ],
+      "not_cat_has_item_equipped": "Horns",
+      "has_parasite": "true"
+    },
+    "reward": {
+      "gain_coins": "5",
+      "ambush_next_basic_fights": "1",
+      "level_up": "self"
+    },
+    "else": {
+      "prompt": "siphoning life from your team",
+      "party_damage": "5",
+      "increment_legacy_counter": "WorldEventLegacyCounter_FooCounter"
+    }
+  },
+  "legacy_token_conditional_reward": {},
+  "intro": {
+    "choose_cat_with_min_health": "75%"
+  },
+  "setup": {
+    "conditional_reward": {
+      "requirements": {
+        "has_token": "WorldEventLegacyCounter_FooCounter"
+      },
+      "reward": {
+        "prompt": "EVENT_QUESTION_TEXT",
+        "set_subject": "subject_frame"
+      }
+    }
+  },
+  "reward": {
+    "common": {
+      "prompt": "common reward",
+      "set_frame": "2"
+    },
+    "rare": {
+      "prompt": "rare reward",
+      "set_frame": "3"
+    }
+  },
+  "random_chance": {
+    "chance": "50%",
+    "prompt": "woah",
+    "set_frame": "5"
+  },
+  "[": {
+    "weight": "10",
+    "party_heal": "5"
+  },
+  "}": {
+    "weight": "1",
+    "prompt": "{Catname} found a delicious feast and healed fully!",
+    "full_heal": "1"
+  },
+  "/*x_unique_from_pool": {
+    "count": "2",
+    "pool": [
+      {
+        "weight": "10",
+        "party_heal": "5"
+      },
+      {
+        "weight": "5",
+        "get_item_from_pool": "consumables"
+      },
+      {
+        "weight": "1",
+        "prompt": "{Catname} found a delicious feast and healed fully!",
+        "full_heal": "1"
+      }
+    ]
+  },
+  "cutscene": {
+    "cutscene": "time_machine",
+    "skip_result_screen": "true"
+  }
+}

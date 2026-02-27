@@ -1,0 +1,2587 @@
+{
+  "CatHole": {
+    "requirements": {
+      "minimum_party_size": "2",
+      "not_on_quest": "1"
+    },
+    "intro": {
+      "title": "EVENT_CATSHAPEDHOLE_NAME",
+      "title_resolved": "Cat-Shaped Hole",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "cathole",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CATSHAPEDHOLE_QUES",
+      "prompt_resolved": "{catname} finds a cat-shaped hole in the wall. It looks like it was made just for {him}!",
+      "options": {
+        "concheck": {
+          "label": "EVENT_GETINTHEHOLE_ANSW",
+          "label_resolved": "Get in the hole!",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW1",
+                "prompt_resolved": "{catname} tries {his} best, but doesn't fit in the hole.",
+                "play_animation": "resultConfused"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW2",
+                "prompt_resolved": "{catname} fits perfectly into the hole. {He} slides in deeper and deeper, unable to turn back!\n\nThe party waits anxiously for a while at the hole, but {catname} never returns, and they move on without {him}.",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "1"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW3",
+                "prompt_resolved": "{catname} is too fat to fit into the hole and the party mocks {him}!",
+                "gain_disorder": "Depression",
+                "play_animation": "resultConfused"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW4",
+                "prompt_resolved": "{catname} disappears deep into the hole!\n\nThe party calls after {him}, but {he} never returns...",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "0",
+                  "return_during": "boss",
+                  "return_as": "enemy"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          }
+        },
+        "intcheck": {
+          "label": "EVENT_GETINTHEHOLE_ANSW",
+          "label_resolved": "Get in the hole!",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW5",
+                "prompt_resolved": "With great effort, {catname} resists the urge to get into the strange hole.",
+                "play_animation": "resultLeave"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW6",
+                "prompt_resolved": "The hole fits {catname} like a glove and {he} slides deep into it, fading from sight into the blackness of the hole.",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "1"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW7",
+                "prompt_resolved": "{catname} manages to resist the urge to climb into the hole.\n\nThe perfect hole, crafted just for {him}, plagues {his} thoughts, whispering in the deep recesses of {his} mind... compelling {catname} to return!",
+                "gain_disorder_from_pool": "mental_disorders",
+                "play_animation": "resultConfused"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW8",
+                "prompt_resolved": "Without hesitating, {catname} enters the strange hole. \n\n{He} slides in deeper and deeper, unable to turn back!\n\nThe party looks for {catname}, but {he} is gone...",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "0",
+                  "return_during": "boss",
+                  "return_as": "enemy"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          }
+        },
+        "dexcheck": {
+          "label": "EVENT_GETINTHEHOLE_ANSW",
+          "label_resolved": "Get in the hole!",
+          "stat": "dex",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW9",
+                "prompt_resolved": "{catname} tries to enter the hole, but the other cats pull {him} to safety before {he} can go in.",
+                "play_animation": "resultConfused"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW10",
+                "prompt_resolved": "{catname} slides deftly into the hole. It fits {him} perfectly, as if created just for {him}!\n\nThe other cats don't think they will fit, and there are no other similar holes for them, so they move on without {catname}...",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "1"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW11",
+                "prompt_resolved": "{catname} tries to leap into the hole, but {his} body does not fit, and {he} is bashed against the wall...",
+                "gain_disorder_from_pool": "physical_disorders",
+                "play_animation": "resultBad"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATSHAPEDHOLE_REW12",
+                "prompt_resolved": "{catname} leaps into the hole, {his} body sliding perfectly deeper and deeper in until {he} is gone from sight...\n\nThe party wishes they had tried to stop {catname}. The cats wonder if they will ever see {him} again...",
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "0",
+                  "return_during": "boss",
+                  "return_as": "enemy"
+                },
+                "mutation": {
+                  "body": "900",
+                  "ears": "900",
+                  "eyebrows": "900",
+                  "eyes": "900",
+                  "head": "900",
+                  "legs": "900",
+                  "arms": "900",
+                  "mouth": "900",
+                  "tail": "900"
+                },
+                "hide_appearance_changes": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "TallFence": {
+    "intro": {
+      "title": "EVENT_TALLFENCE_NAME",
+      "title_resolved": "Tall Fence",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tallfence",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TALLFENCE_QUES",
+      "prompt_resolved": "An imposingly tall fence blocks the way forward in front of {catname}!\n\nWhat should {he} do?",
+      "options": {
+        "climb": {
+          "label": "EVENT_CLIMB_ANSW",
+          "label_resolved": "Climb",
+          "stat": "dex",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TALLFENCE_REW1",
+                "prompt_resolved": "With a running jump, {catname} leaps up and over the fence, ambushing the occupants on the other side!",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_TALLFENCE_REW2",
+                "prompt_resolved": "{catname} deftly climbs over the tall fence and looks around on the other side...",
+                "get_item_from_pool": "treasure_easy"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TALLFENCE_REW3",
+                "prompt_resolved": "{catname} tries to leap over the fence, but doesn't quite make it. {He} smashes into the wooden boards and tumbles down to the ground!",
+                "self_damage": "5",
+                "spin": "again"
+              },
+              "rare": {
+                "prompt": "EVENT_TALLFENCE_REW4",
+                "prompt_resolved": "{catname} tries to climb the fence, but one of the boards snaps halfway up and {his} leg slams through the fence and gets stuck!",
+                "injury": "spd"
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TALLFENCE_REW5",
+                "prompt_resolved": "{catname} smashes a hole in the fence and leaps through, ambushing the surprised occupants on the other side!",
+                "get_item_from_pool": "consumables",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_TALLFENCE_REW6",
+                "prompt_resolved": "{catname} pries apart the rotting wood of the fence and makes a path through!",
+                "get_item_from_pool": "treasure_easy"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_TALLFENCE_REW7",
+            "prompt_resolved": "{catname} tears through the wooden fence, but the old timber splinters and digs into {his} soft paws!",
+            "reward": {
+              "common": {
+                "get_parasite": "Splinters"
+              },
+              "rare": {
+                "get_parasite": "BadSplinters"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_TALLFENCE_REW8",
+            "prompt_resolved": "{catname} ignores the fence and finds another way around.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MouseTrap": {
+    "intro": {
+      "title": "EVENT_BAITEDMOUSETRAP_NAME",
+      "title_resolved": "Baited Mouse Trap",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mousetrap",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BAITEDMOUSETRAP_QUES",
+      "prompt_resolved": "{catname} finds a mousetrap with a tasty looking fish on it. What should {he} do?",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW1",
+                "prompt_resolved": "{catname} doesn't see any way of safely getting the fish without triggering the trap and opts to leave it alone."
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW2",
+                "prompt_resolved": "{catname} cleverly figures out how to remove the bait without triggering the trap!",
+                "random_pool": [
+                  {
+                    "weight": "10",
+                    "get_item_from_pool": "food"
+                  },
+                  {
+                    "weight": "4",
+                    "get_item": "HeadCheese"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW3",
+                "prompt_resolved": "{catname} tries to quickly swipe off the bait before the trap can trigger and isn't quick enough!\n\n{catname} howls in pain as the metal bruises {his} paw!",
+                "damage": [
+                  "5",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW4",
+                "prompt_resolved": "{catname} tries to disarm the mousetrap but accidentally trips it and the metal arm slams shut on {him}!",
+                "injury": "random"
+              }
+            }
+          }
+        },
+        "sneak": {
+          "label": "EVENT_SNEAKBY_ANSW",
+          "label_resolved": "Sneak by",
+          "stat": "dex",
+          "good": {
+            "prompt": "EVENT_BAITEDMOUSETRAP_REW5",
+            "prompt_resolved": "{catname} decides it's best not to mess with it. It is by a trap after all!"
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW6",
+                "prompt_resolved": "Trying to show off, {catname} leaps over the trap! It snaps shut!",
+                "damage": [
+                  "5",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_BAITEDMOUSETRAP_REW7",
+                "prompt_resolved": "{catname} attempts to run past the trap as fast as possible, but it slams shut on {him}!",
+                "injury": "random"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "CatOrgy": {
+    "intro": {
+      "title": "EVENT_CATSINHEAT_NAME",
+      "title_resolved": "Cats in Heat",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "catorgy",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CATSINHEAT_QUES",
+      "prompt_resolved": "{catname} stumbles upon a cat party! What should {he} do?",
+      "options": {
+        "sneak": {
+          "label": "EVENT_SNEAKBY_ANSW",
+          "label_resolved": "Sneak by",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_CATSINHEAT_REW1",
+            "prompt_resolved": "{catname} slowly backs away, hoping to not draw any unwanted attention!"
+          },
+          "bad": {
+            "set_frame": "5",
+            "prompt": "EVENT_CATSINHEAT_REW2",
+            "prompt_resolved": "The cats notice {catname} trying to sneak away and are offended {catname} did not at least say hello!\n\nThey lash out and attack the party!",
+            "reward": {
+              "common": {
+                "party_damage": [
+                  "3",
+                  "6"
+                ]
+              },
+              "rare": {
+                "party_damage": [
+                  "7",
+                  "12"
+                ]
+              }
+            }
+          }
+        },
+        "join": {
+          "label": "EVENT_JOININ_ANSW",
+          "label_resolved": "Join in",
+          "stat": "cha",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CATSINHEAT_REW3",
+                "prompt_resolved": "The cats join in on the action. It has been a while since they have had this much fun!",
+                "party_heal": "100%"
+              },
+              "rare": {
+                "prompt": "EVENT_CATSINHEAT_REW4",
+                "prompt_resolved": "{catname} joins in on the fun and is welcomed into the fray!\n\nAs {catname} gets up to leave, one of the cats follows {him} out…",
+                "gain_cat_familiar": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "conditional_reward": {
+                  "requirements": {
+                    "is_not_chapter": [
+                      "jurassic",
+                      "iceage"
+                    ]
+                  },
+                  "reward": {
+                    "prompt": "EVENT_CATSINHEAT_REW5",
+                    "prompt_resolved": "{catname}'s primal urges overcome {his} better judgment and {he} joins in on the fun! What could go wrong?",
+                    "random_pool": [
+                      {
+                        "weight": "10",
+                        "gain_disorder_from_pool": "diseases"
+                      },
+                      {
+                        "weight": "1",
+                        "gain_disorder": "FelineAids"
+                      }
+                    ]
+                  },
+                  "else": {
+                    "prompt": "EVENT_CATSINHEAT_ALT_REW5",
+                    "prompt_resolved": "{catname} can't shake the feeling that {he} may have just kissed {his} grandparent... Gross!",
+                    "gain_disorder": "AcidReflux"
+                  }
+                }
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "is_not_chapter": [
+                      "jurassic",
+                      "iceage"
+                    ]
+                  },
+                  "reward": {
+                    "prompt": "EVENT_CATSINHEAT_REW5",
+                    "prompt_resolved": "{catname}'s primal urges overcome {his} better judgment and {he} joins in on the fun! What could go wrong?",
+                    "random_pool": [
+                      {
+                        "weight": "10",
+                        "gain_disorder_from_pool": "diseases"
+                      },
+                      {
+                        "weight": "1",
+                        "gain_disorder": "FelineAids"
+                      }
+                    ],
+                    "get_parasite_from_pool": "parasites"
+                  },
+                  "else": {
+                    "prompt": "EVENT_CATSINHEAT_ALT_REW5_B",
+                    "prompt_resolved": "The worst possible outcome has been realized...\n\n{catname} has just became {his} own great, great, grandparent!\n\n{catname}'s body is ravaged with birth defects as the time paradox catches up to {him}!",
+                    "random_mutation": {
+                      "count": "10",
+                      "asymmetric": "true",
+                      "tag": "birth_defect"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fight": {
+          "label": "EVENT_FIGHT_ANSW",
+          "label_resolved": "Fight",
+          "stat": "str",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "conditional_reward": {
+                  "prompt": "EVENT_CATSINHEAT_REW6",
+                  "prompt_resolved": "{catname} strikes left and right, sending the cats scattering in every direction. Amidst the mayhem, the cats drop some of their belongings.",
+                  "requirements": {
+                    "is_not_chapter": [
+                      "jurassic",
+                      "iceage"
+                    ]
+                  },
+                  "reward": {
+                    "gain_coins": [
+                      "4",
+                      "15"
+                    ],
+                    "get_item_from_pool": "consumables"
+                  },
+                  "else": {
+                    "random_pool": [
+                      {
+                        "get_item": "Catnip"
+                      },
+                      {
+                        "gain_food": [
+                          "2",
+                          "5"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_CATSINHEAT_REW7",
+                "prompt_resolved": "{catname} leaps into the room and viciously attacks the cats, striking them down with {his} claws in a furious rage!\n\nWhen the bloodbath is over, {catname} is the only one still standing.",
+                "get_item_from_pool": [
+                  "CatHideHat",
+                  "CatHideMask",
+                  "CatHideArmor",
+                  "GutsHeart",
+                  "GutsLiver",
+                  "GutsIntestines"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "conditional_reward": {
+                  "prompt": "EVENT_CATSINHEAT_REW8",
+                  "prompt_resolved": "The cats seemed harmless but when {catname} randomly attacks, they turn vicious and tear {catname} to shreds!",
+                  "requirements": {
+                    "is_not_chapter": [
+                      "jurassic",
+                      "iceage"
+                    ]
+                  },
+                  "reward": {
+                    "injury": "random"
+                  },
+                  "else": {
+                    "damage": "50%",
+                    "self_status_next_fight": {
+                      "NoHealthRegen": "1"
+                    }
+                  }
+                }
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "is_not_chapter": [
+                      "jurassic",
+                      "iceage"
+                    ]
+                  },
+                  "reward": {
+                    "prompt": "EVENT_CATSINHEAT_REW9",
+                    "prompt_resolved": "{catname} tries to take the cats by surprise but is quickly outnumbered and the cats mercilessly subdue {catname}!",
+                    "set_frame": "5",
+                    "injury": "con",
+                    "gain_disorder_from_pool": "diseases"
+                  },
+                  "else": {
+                    "prompt": "EVENT_CATSINHEAT_ALT_REW9",
+                    "prompt_resolved": "The party realizes in horror that {catname} has just slain {his} own grandfather!\n\n{catname} feels {his} existence fading from reality...",
+                    "set_frame": "4",
+                    "gain_disorder": "Soulless"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "WatchingEyeballs": {
+    "intro": {
+      "title": "EVENT_WATCHINGEYEBALLS_NAME",
+      "title_resolved": "Watching Eyeballs",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "watchingeyeballs",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_WATCHINGEYEBALLS_QUES",
+      "prompt_resolved": "{catname} stumbles upon a dark hole. Numerous eyes peer out from the darkness.",
+      "options": {
+        "sneak": {
+          "label": "EVENT_SNEAKBY_ANSW",
+          "label_resolved": "Sneak by",
+          "stat": "dex",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW1",
+                "prompt_resolved": "{catname} carefully sneaks by the wall and nothing appears to happen."
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW2",
+                "prompt_resolved": "{catname} sneaks by the spooky looking crack, leading the party around and into a position to ambush!",
+                "ally_ambush_next_fights": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW3",
+                "prompt_resolved": "The eyes glare directly at {catname} as {he} attempts to sneak by...\n\n{catname} bolts into a sprint in order to get away as quickly as possible!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW4",
+                "prompt_resolved": "{catname} approaches the crack in the wall, trying to discern what creature's eyes are staring at {him}...\n\nThe unnerving gaze of the eyeballs terrifies {catname}, and the cats turn tail and run for their lives, right into an ambush!",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                },
+                "ambush_next_basic_fights": "1"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW5",
+                "prompt_resolved": "After closer examination, {catname} discovers it was just a trick of the light...\n\nThe eyes were coins!",
+                "gain_coins": [
+                  "5",
+                  "7"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW6",
+                "prompt_resolved": "{catname} discovers the scary looking eyes were just large coins, glinting in the dim light!",
+                "get_item_from_pool": "Coin_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW7",
+                "prompt_resolved": "The cats look directly at the eyes, no one wanting to move first. Their eyes begin to water in pain as they resist the urge to blink.\n\nNo one says anything but together the cats all turn and run in terror!",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW8",
+                "prompt_resolved": "{catname} moves {his} face close to the hole and peers inside...\n\n{catname} howls in pain as something sharp from within the hole lashes out and stabs {his} eye!",
+                "gain_disorder": "PuncturedEye"
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW9",
+                "prompt_resolved": "{catname} smashes the eyes into concave lumps of flesh!",
+                "get_item_from_pool": "food"
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW10",
+                "prompt_resolved": "{catname} bats at the eyes with lightning fast strikes, dispatching them with ease!",
+                "get_item_from_pool": "Eye_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW11",
+                "prompt_resolved": "{catname} moves closely to strike the eyes, but they suddenly flash with a blinding brightness!",
+                "self_status_next_fight": {
+                  "Blind": "4"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WATCHINGEYEBALLS_REW12",
+                "prompt_resolved": "{catname} reaches into the dark hole with {his} arm to swat at the eyes, but {he} pokes {himself} in the face on the sharp edges of the hole instead!",
+                "gain_disorder": "PuncturedEye"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SpiderWebs": {
+    "intro": {
+      "title": "EVENT_SPIDERWEBS_NAME",
+      "title_resolved": "Spider Webs",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "spiderwebs",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SPIDERWEBS_QUES",
+      "prompt_resolved": "Dense cobwebs line the walls and ceiling, blocking {catname}'s way forward.",
+      "options": {
+        "sneak": {
+          "label": "EVENT_SNEAKBY_ANSW",
+          "label_resolved": "Sneak by",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_SPIDERWEBS_REW1",
+            "prompt_resolved": "{catname} finds a small gap amidst the webs and wriggles {his} way carefully through the sticky maze!"
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SPIDERWEBS_REW2",
+                "prompt_resolved": "{catname} attempts to sneak between the webs but gets tangled!",
+                "self_status_next_fight": {
+                  "Webbed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SPIDERWEBS_REW3",
+                "prompt_resolved": "{catname} tries to push through the dense canopy but is caught up in the webs and held fast...\n\nFrom within the sticky maze, {catname} sees a dark shadow moving quickly through the webs toward {him}!",
+                "self_status_next_fight": {
+                  "Webbed": "2"
+                },
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "SpiderCat",
+                    "TallSpiderCat"
+                  ],
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "attack": {
+          "label": "EVENT_ATTACK_ANSW",
+          "label_resolved": "Attack",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SPIDERWEBS_REW4",
+                "prompt_resolved": "{catname} successfully claws through the cobwebs and continues onward."
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_SPIDERWEBS_REW5",
+                "prompt_resolved": "Dismantling the cobwebs as {he} goes, {catname} finds a flea trapped in the webs and rescues it!",
+                "gain_immortal_familiar": "CharmedFleaSpecial"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SPIDERWEBS_REW6",
+                "prompt_resolved": "{catname} and the cats try to push through, but get tangled in the cobwebs!",
+                "party_status_next_fight": {
+                  "Webbed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SPIDERWEBS_REW7",
+                "prompt_resolved": "While biting through a particularly messy cobweb, {catname} feels a sharp bite on {his} face!\n\n{catname} howls as {his} flesh mutates!",
+                "random_mutation_from_set": {
+                  "mouth": "1026",
+                  "eyes": "1029",
+                  "legs": "306"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Mirror": {
+    "intro": {
+      "title": "EVENT_STRANGEMIRROR_NAME",
+      "title_resolved": "Strange Mirror",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mirror",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_STRANGEMIRROR_QUES",
+      "prompt_resolved": "{catname} comes upon a strange mirror...\n\nAlthough {he} can see {his} reflection, {catname}'s movements appear oddly delayed and distorted.",
+      "options": {
+        "investigate": {
+          "label": "EVENT_INVESTIGATE_ANSW",
+          "label_resolved": "Investigate",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEMIRROR_REW1",
+                "prompt_resolved": "{catname} stares at {himself} for a few moments, but it appears to just be a normal mirror."
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEMIRROR_REW2",
+                "prompt_resolved": "{catname} stares into the mirror...\n\n{He} blinks, and suddenly {catname} and {his} reflection switch places!",
+                "set_frame": "2",
+                "mutation": {
+                  "eyes": "442"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEMIRROR_REW3",
+                "prompt_resolved": "The reflection in the mirror begins laughing maniacally!\n\n{catname} turns and runs away in terror!",
+                "set_frame": "4",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEMIRROR_REW4",
+                "prompt_resolved": "The party watches in horror as {catname}'s reflection crawls out of the mirror and attacks them!",
+                "set_frame": "2",
+                "spawn_reflection_next_fight": {
+                  "mutation": {
+                    "eyes": "442"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "attack": {
+          "label": "EVENT_BREAK_ANSW",
+          "label_resolved": "Break",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEMIRROR_REW5",
+                "prompt_resolved": "{catname} lets out a low hiss while staring at {his} reflection, then lashes out and shatters the mirror!",
+                "random_pool": [
+                  {
+                    "weight": "10",
+                    "get_item_from_pool": [
+                      "GlassShard,",
+                      "BagOfGlass"
+                    ]
+                  },
+                  {
+                    "weight": "3",
+                    "get_item": "BrokenWindow"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEMIRROR_REW6",
+                "prompt_resolved": "{catname} shatters the fragile reflective pane... \n\nSomething was hidden behind it!",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEMIRROR_REW7",
+                "prompt_resolved": "{catname} strikes the mirror with {his} paw, smashing it to smithereens!\n\n{catname} suddenly remembers something scary that an old cat back home told {him} about breaking mirrors...",
+                "permanent_stats": {
+                  "lck": "-2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEMIRROR_REW8",
+                "prompt_resolved": "{catname} smashes the mirror to pieces.\n\nSuddenly, a dark foreboding settles on {catname}...",
+                "next_event_from_set": {
+                  "event": "Tragedy",
+                  "count": "3",
+                  "same_cat": "true"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_STRANGEMIRROR_REW9",
+            "prompt_resolved": "Creepy! {catname} is spooked by the mirror and runs off.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "LockedDoor": {
+    "intro": {
+      "title": "EVENT_LOCKEDDOOR_NAME",
+      "title_resolved": "Locked Door",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "lockeddoor",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_LOCKEDDOOR_QUES",
+      "prompt_resolved": "A door bars the way forward. It looks like it could be locked. What should {catname} do?",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDDOOR_REW1",
+                "prompt_resolved": "After fiddling with the handle, {catname} finds a way to open the door!\n\nIt leads to a small shop!",
+                "override_end_option_prompt": "EVENT_LOCKEDDOOR_PROMPT1",
+                "shop_now": "Event_SmallShop"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDDOOR_REW2",
+                "prompt_resolved": "{catname} discovers the door is actually unlocked...\n\nBeyond the doorway is a large shop full of shiny objects!",
+                "override_end_option_prompt": "EVENT_LOCKEDDOOR_PROMPT2",
+                "shop_now": "Event_RareShop"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDDOOR_REW3",
+                "prompt_resolved": "{catname} tries to pry the door open, but it slams shut on {his} head!",
+                "injury": "int"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDDOOR_REW4",
+                "prompt_resolved": "The door creaks open, but when {catname} approaches the threshold it slams shut, crushing {him}!",
+                "gain_disorder_from_pool": "physical_disorders"
+              }
+            }
+          }
+        },
+        "attack": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDDOOR_REW5",
+                "prompt_resolved": "{catname} proudly smashes down the door!\n\nA startled shopkeeper within the room beyond yells out, [i]Why can't you just use the handle like a normal cat?![/i]\n\nOops!",
+                "override_end_option_prompt": "EVENT_LOCKEDDOOR_PROMPT1",
+                "shop_now": "Event_SmallShop"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDDOOR_REW6",
+                "prompt_resolved": "A voice calls out from beyond the destroyed entrance...\n\n[i]Why did I even bother installing a door?[/i]\n\nThe shopkeeper inside begrudgingly pulls out their best wares, hoping to make back enough coins to buy a new door.",
+                "override_end_option_prompt": "EVENT_LOCKEDDOOR_PROMPT2",
+                "shop_now": "Event_RareShop"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDDOOR_REW7",
+                "prompt_resolved": "{catname} winds up and slams {his} arm as hard as {he} can into the tough wooden door...",
+                "injury": "str"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDDOOR_REW8",
+                "prompt_resolved": "The door cracks and splinters when {catname} hits it!\n\nThe wooden shards slide deep into {catname}'s skin...",
+                "get_parasite": "BadSplinters"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_LOCKEDDOOR_REW9",
+            "prompt_resolved": "{catname} ignores the door and continues on.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "SmallBird": {
+    "intro": {
+      "title": "EVENT_SMALLBIRD_NAME",
+      "title_resolved": "Small Bird",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "small_bird",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SMALLBIRD_QUES",
+      "prompt_resolved": "{catname} spies a cute little bird.\n\nIt looks very soft... And also very tasty!",
+      "options": {
+        "catch": {
+          "label": "EVENT_CATCH_ANSW",
+          "label_resolved": "Catch",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_SMALLBIRD_REW1",
+                "prompt_resolved": "{catname} pounces on the bird, and catches it in {his} teeth!\n\nThis will make a fine treat!",
+                "get_item_from_pool": "Bird_items"
+              },
+              "rare": {
+                "set_frame": "1",
+                "prompt": "EVENT_SMALLBIRD_REW2",
+                "prompt_resolved": "{catname} stalks the small bird, {his} tail low to the ground and {his} ears quivering.\n\nThe bird hops around, and {catname} follows it into the next room...",
+                "permanent_stats": {
+                  "lck": "1"
+                },
+                "spawn_unit_next_fight": {
+                  "object": "BirdSmall",
+                  "spawn_side": "anywhere"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMALLBIRD_REW3",
+                "prompt_resolved": "{catname} leaps after the bird, but it evades {him}!\n\nFeathers fly as the bird swoops at {catname}, stealing some of {his} coins!",
+                "gain_coins": [
+                  "-10",
+                  "-5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_SMALLBIRD_REW4",
+                "prompt_resolved": "{catname} attempts to sneak up on the bird, but at the last minute it takes off!\n\nIt circles back around and plants a massive spray of white excrement all over {catname}'s head!",
+                "get_parasite": "BirdPoopHat"
+              }
+            }
+          }
+        },
+        "charm": {
+          "label": "EVENT_CHARM_ANSW",
+          "label_resolved": "Charm",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_SMALLBIRD_REW5",
+                "prompt_resolved": "{catname} saunters up to the small bird and offers it a seed.\n\nThe bird happily hops over, eager for snack. Little does it know but IT will be the snack today!",
+                "get_item_from_pool": "Bird_items"
+              },
+              "rare": {
+                "set_frame": "1",
+                "prompt": "EVENT_SMALLBIRD_REW6",
+                "prompt_resolved": "{catname} makes some chirping sounds deep in {his} throat, and the bird flies over and lands on {his} head!\n\nThe other cats are very impressed with {catname}'s new skill.",
+                "permanent_stats": {
+                  "lck": "1"
+                },
+                "spawn_unit_next_fight": {
+                  "object": "BirdSmall",
+                  "spawn_side": "anywhere"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMALLBIRD_REW7",
+                "prompt_resolved": "Attempting to charm the little bird, {catname} holds out a few coins in his paw.\n\nThe bird snatches them away before {he} can react!",
+                "gain_coins": [
+                  "-10",
+                  "-5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_SMALLBIRD_REW8",
+                "prompt_resolved": "{catname} places some seeds on {his} head, hoping that the bird will come land on it.\n\nInstead, it swoops down and sprays white excrement in {his} face!",
+                "get_parasite": "BirdPoopHat"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_SMALLBIRD_REW9",
+            "prompt_resolved": "It may look cute and fluffy but {catname} knows birds can be a pain so {he} leaves it alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "StrongCurrent": {
+    "intro": {
+      "title": "EVENT_STRONGCURRENT_NAME",
+      "title_resolved": "Strong Current",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "strong_current",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_STRONGCURRENT_QUES",
+      "prompt_resolved": "A strong current of water impedes {catname}'s way forward.",
+      "options": {
+        "swim": {
+          "label": "EVENT_SWIM_ANSW",
+          "label_resolved": "Swim across",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRONGCURRENT_REW1",
+                "prompt_resolved": "{catname} wades through the water and reaches the other side feeling invigorated from the cold water.",
+                "self_status_next_fight": {
+                  "StrengthUp": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRONGCURRENT_REW2",
+                "prompt_resolved": "{catname} swims through the torrent of water. {He} feels strengthened from the workout!",
+                "permanent_stats": {
+                  "str": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRONGCURRENT_REW3",
+                "prompt_resolved": "{catname} struggles to push through the fast flowing water, but eventually reaches the other side, sopping wet.",
+                "event_now": "random"
+              },
+              "rare": {
+                "prompt": "EVENT_STRONGCURRENT_REW4",
+                "prompt_resolved": "{catname} tries to paddles {his} way across but struggles against the strong current. {catname} barely reaches the other side, exhausted and shivering, only to discover it was a trap!",
+                "self_status_next_fight": {
+                  "StrengthUp": "-2"
+                },
+                "ambush_next_basic_fights": "1"
+              }
+            }
+          }
+        },
+        "jump": {
+          "label": "EVENT_JUMPOVER_ANSW",
+          "label_resolved": "Jump over",
+          "stat": "spd",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRONGCURRENT_REW5",
+                "prompt_resolved": "{catname} leaps across the torrent of water, landing on the other side. {He} flexes {his} arms in pride at {his} accomplishment.",
+                "self_status_next_fight": {
+                  "SpeedUp": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRONGCURRENT_REW6",
+                "prompt_resolved": "With careful precision, {catname} jumps across the stream of water!",
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRONGCURRENT_REW7",
+                "prompt_resolved": "{catname} goes to jump across but {his} leg slips on the wet rocks and {he} tumbles into the torrent!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_STRONGCURRENT_REW8",
+                "prompt_resolved": "{catname} doesn't jump far enough and nearly drowns in the deep current!",
+                "gain_disorder_from_pool": "physical_disorders"
+              }
+            }
+          }
+        },
+        "go_around": {
+          "label": "EVENT_GOAROUND_ANSW",
+          "label_resolved": "Go around",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "prompt": "EVENT_STRONGCURRENT_REW9",
+            "prompt_resolved": "It is probably for the best that {catname} goes around. {He} wouldn't want to get {his} feet wet.",
+            "event_now_same_cat": "random"
+          },
+          "bad": {
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "prompt": "EVENT_STRONGCURRENT_REW10",
+            "prompt_resolved": "{catname} follows the stream away from the main path, leading into a darker region...",
+            "next_event_bonus": "-1",
+            "event_now_same_cat": "random"
+          }
+        }
+      }
+    }
+  },
+  "BearTrap": {
+    "intro": {
+      "title": "EVENT_BEARTRAP_NAME",
+      "title_resolved": "Bear Trap",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "bear_trap",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BEARTRAP_QUES",
+      "prompt_resolved": "A large bear trap blocks {catname}'s way forward...",
+      "options": {
+        "disarm": {
+          "label": "EVENT_DISARM_ANSW",
+          "label_resolved": "Disarm",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BEARTRAP_REW1",
+                "prompt_resolved": "{catname} uses a stick to safely disarm the trap.",
+                "get_item": "BearTraps"
+              },
+              "rare": {
+                "prompt": "EVENT_BEARTRAP_REW2",
+                "prompt_resolved": "With lightning fast reflexes, {catname} triggers the trap and jumps back as it snaps shut right in {his} face!",
+                "get_item": "BearTrapMask"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BEARTRAP_REW3",
+                "prompt_resolved": "{catname} bats at the trap with {his} paw trying to trigger it safely. Looks like it requires more weight. {He} pushes down on the trap...",
+                "damage": "7"
+              },
+              "rare": {
+                "prompt": "EVENT_BEARTRAP_REW4",
+                "prompt_resolved": "{catname} tries to show off, taking a running jump at the trap to trigger it quickly as {he} flies by!\n\nIt slams shut on {catname}'s leg!",
+                "damage": "7",
+                "random_pool": [
+                  {
+                    "injury": "dex"
+                  },
+                  {
+                    "injury": "spd"
+                  },
+                  {
+                    "injury": "str"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "take": {
+          "label": "EVENT_GOAROUND_ANSW",
+          "label_resolved": "Go around",
+          "stat": "spd",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BEARTRAP_REW5",
+                "prompt_resolved": "{catname} carefully moves around the trap. {He} discovers a chain tied to the other side and pulls on it!",
+                "get_item": "BearTraps"
+              },
+              "rare": {
+                "prompt": "EVENT_BEARTRAP_REW6",
+                "prompt_resolved": "{catname} skirts around the trap, and finds a release button on the other side!",
+                "get_item": "BearTrapMask"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BEARTRAP_REW7",
+                "prompt_resolved": "{catname} tries to walk around the trap, but stumbles in the narrow space and gets caught!",
+                "damage": "7"
+              },
+              "rare": {
+                "prompt": "EVENT_BEARTRAP_REW8",
+                "prompt_resolved": "{catname} leaps over the large trap, but it snaps at {him} mercilessly as {he} passes over it!",
+                "damage": "7",
+                "random_pool": [
+                  {
+                    "injury": "dex"
+                  },
+                  {
+                    "injury": "spd"
+                  },
+                  {
+                    "injury": "str"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Baphomet": {
+    "intro": {
+      "title": "EVENT_BAPHOMET_NAME",
+      "title_resolved": "Baphomet",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "baphomet",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BAPHOMET_QUES",
+      "prompt_resolved": "[i]Come closer, small feline...\n\nWould you like to make a [a:shake]deal?![/a][/i]",
+      "options": {
+        "damage": {
+          "label": "EVENT_BAHPHOMET_HEALTH_ANSW",
+          "label_resolved": "All cats lose 10hp",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAPHOMET_REW1",
+                "prompt_resolved": "[i]\"Well done. Have this small trinket...\"[/i]\n\nThe strange beast looks down at {catname} and laughs.",
+                "party_damage": "10",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "trinket"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BAPHOMET_REW2",
+                "prompt_resolved": "[i]\"Most impressive...\nYou have my... blessing!\"[/i]\n{catname} does not feel very blessed.",
+                "party_damage": "10",
+                "get_parasite": "MarkOfTheBeast"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "prompt": "EVENT_BAPHOMET_REW3",
+            "prompt_resolved": "[b]\"HA HA HA.\"[/b]\n\nWhy did we do that exactly?",
+            "party_damage": "10"
+          }
+        },
+        "sacrifice": {
+          "label": "EVENT_BAHPHOMET_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice yourself",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAPHOMET_REW4",
+                "prompt_resolved": "[i]\"Yes... well done!\"[/i]\n{catname}'s eyes roll back in {his} head and is no more.\n[i]\"You will be reborn in a new form...\"[/i]",
+                "kill": "cat",
+                "play_animation": "resultHole",
+                "party_heal": "100%",
+                "party_permanent_stats_exclude_self": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                },
+                "gain_familiar": "CharmedHyde"
+              },
+              "rare": {
+                "prompt": "EVENT_BAPHOMET_REW5",
+                "prompt_resolved": "[i]\"Yes... wait, why are you still alive?\"[/i]",
+                "party_heal": "100%",
+                "party_permanent_stats_exclude_self": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                },
+                "damage": "99%",
+                "gain_disorder": "Charred"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "prompt": "EVENT_BAPHOMET_REW6",
+            "prompt_resolved": "[i]\"HA HA HA.\"[/i]\n\n[b][a:shake]\"FOOL!\"[/a][/b]\n\n{catname} dies.",
+            "kill": "cat",
+            "play_animation": "resultHole"
+          }
+        },
+        "leave": {
+          "label": "EVENT_BAHPHOMET_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_BAPHOMET_REW7",
+            "prompt_resolved": "{catname} turns away from the strange creature and leaves... probably for the best!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          },
+          "bad": {
+            "play_animation": "resultVeryBad",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BAPHOMET_REW8",
+                "prompt_resolved": "[i]\"How dare you turn your back on me!\nYou will [b]regret[/b] this!\"[/i]",
+                "next_event_from_set": {
+                  "event": "Tragedy",
+                  "count": "1",
+                  "same_cat": "true"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BAPHOMET_REW9",
+                "prompt_resolved": "[i]\"It would have been better if you had made a deal!\nNow you will be plagued with tragedy!\"[/i]\n\nA shudder goes down {catname}'s spine as {he} slinks away.",
+                "next_event_from_set": {
+                  "event": "Tragedy",
+                  "count": "4",
+                  "same_cat": "true"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ABeggar": {
+    "intro": {
+      "title": "EVENT_ABEGGAR_NAME",
+      "title_resolved": "A Beggar",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "a_beggar",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ABEGGAR_QUES",
+      "prompt_resolved": "A beggar with sad eyes holds up a small cardboard sign to {catname}.\n\n[i]\"Could you spare a few pennies please?\"[/i]",
+      "options": {
+        "5coins": {
+          "label": "EVENT_BEGGAR_5_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_one",
+          "stat_min": "5",
+          "stat_max": "5",
+          "good": {
+            "random_pool": [
+              {
+                "weight": "95",
+                "prompt": "EVENT_ABEGGAR_REW1",
+                "prompt_resolved": "The beggar accepts {catname}'s donation and pulls out something small and hands it to {him} in thanks.",
+                "set_frame": "3",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "consumables"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "trinket"
+                    }
+                  }
+                ]
+              },
+              {
+                "weight": "5",
+                "prompt": "EVENT_ABEGGAR_REW2",
+                "prompt_resolved": "It's your lucky day! The beggar gives {catname} a present in return!",
+                "set_frame": "2",
+                "get_item_from_pool": "chapter_rare"
+              }
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_BEGGAR_NOTENOUGHMONEY",
+            "prompt_resolved": "{catname} reaches into {his} pocket to hand over the money, and realizes {he} does not have enough! \n\nThe beggar scowls at you for getting their hopes up."
+          }
+        },
+        "10coins": {
+          "label": "EVENT_BEGGAR_5_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_ten",
+          "stat_min": "10",
+          "stat_max": "10",
+          "good": {
+            "random_pool": [
+              {
+                "weight": "90",
+                "prompt": "EVENT_ABEGGAR_REW1",
+                "prompt_resolved": "The beggar accepts {catname}'s donation and pulls out something small and hands it to {him} in thanks.",
+                "set_frame": "3",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "consumables"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "trinket"
+                    }
+                  }
+                ]
+              },
+              {
+                "weight": "10",
+                "prompt": "EVENT_ABEGGAR_REW2",
+                "prompt_resolved": "It's your lucky day! The beggar gives {catname} a present in return!",
+                "set_frame": "2",
+                "get_item_from_pool": "chapter_rare"
+              }
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_BEGGAR_NOTENOUGHMONEY",
+            "prompt_resolved": "{catname} reaches into {his} pocket to hand over the money, and realizes {he} does not have enough! \n\nThe beggar scowls at you for getting their hopes up."
+          }
+        },
+        "15coins": {
+          "label": "EVENT_BEGGAR_5_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_twentyfive",
+          "stat_min": "15",
+          "stat_max": "15",
+          "good": {
+            "random_pool": [
+              {
+                "weight": "85",
+                "prompt": "EVENT_ABEGGAR_REW1",
+                "prompt_resolved": "The beggar accepts {catname}'s donation and pulls out something small and hands it to {him} in thanks.",
+                "set_frame": "3",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "consumables"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": "trinket"
+                    }
+                  }
+                ]
+              },
+              {
+                "weight": "15",
+                "prompt": "EVENT_ABEGGAR_REW2",
+                "prompt_resolved": "It's your lucky day! The beggar gives {catname} a present in return!",
+                "set_frame": "2",
+                "get_item_from_pool": "chapter_rare"
+              }
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_BEGGAR_NOTENOUGHMONEY",
+            "prompt_resolved": "{catname} reaches into {his} pocket to hand over the money, and realizes {he} does not have enough! \n\nThe beggar scowls at you for getting their hopes up."
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_ABEGGAR_LEAVE",
+            "prompt_resolved": "As {catname} walks away the beggar looks on, forlorn...",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "CatBed": {
+    "intro": {
+      "title": "EVENT_CATBED_NAME",
+      "title_resolved": "Cat Bed",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "cat_bed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CATBED_QUES",
+      "prompt_resolved": "{catname} finds a lush cat bed. Its plush fabric looks like the perfect place to snuggle up for a long nap...",
+      "options": {
+        "rest": {
+          "label": "EVENT_REST_ANSW",
+          "label_resolved": "Rest",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CATBED_REW1",
+                "prompt_resolved": "{catname} falls fast asleep and dreams about being back home where it is safe and warm.",
+                "full_heal": "1",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_CATBED_REW2",
+                "prompt_resolved": "The luxurious curves of the bed embrace {catname} like a soft hug.\n\nWhen {he} wakes, {catname} feels rejuvenated and ready for anything!",
+                "full_heal": "1",
+                "permanent_stats": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CATBED_REW3",
+                "prompt_resolved": "{catname} tries to rest, but quickly discovers the bed is infested with bed bugs!",
+                "damage": "2",
+                "spawn_unit_next_fight": {
+                  "object": "Flea",
+                  "count": "2",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CATBED_REW4",
+                "prompt_resolved": "{catname} should have known better. Nothing is soft here...\n\nFleas and maggots crawl all over {catname}, biting {him}!",
+                "gain_disorder": "Infestation"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_CATBED_REW5",
+            "prompt_resolved": "{catname} doubts it would be safe to sleep here. It's not a good time to get complacent.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "TapeRecorder": {
+    "requirements": {
+      "not_has_token": "WorldEventLegacyToken_TapeRecorderDestroyed"
+    },
+    "intro": {
+      "title": "EVENT_TAPERECORDER_NAME",
+      "title_resolved": "Tape Recorder",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tape_recorder",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TAPERECORDER_QUES",
+      "prompt_resolved": "{catname} finds a tape recorder, its tape reels whirring quietly.",
+      "options": {
+        "listen": {
+          "label": "EVENT_LISTEN_ANSW",
+          "label_resolved": "Listen",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_TAPERECORDER_REW1",
+                "prompt_resolved": "Rewinding the tape, {catname} listens to the whole message contained on it.\n\n{He} meditates on the strange words of the recording, learning new techniques!",
+                "permanent_stats": {
+                  "dex": "1",
+                  "str": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_TAPERECORDER_REW2",
+                "prompt_resolved": "As the tape reels spin, a contraption at the back of the recorder flips open and a large item tumbles out!",
+                "get_item": "Chainsaw"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_TAPERECORDER_REW3",
+                "prompt_resolved": "The tape recorder spins and a strange howling emits from the speakers...\n\n{catname} begins to hear strange sounds from beneath the ground around {him}...",
+                "add_weather": "RestlessDead"
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_TAPERECORDER_REW4",
+                "prompt_resolved": "The tape recorder emits a terrifying howling sound!\n\n{catname}'s hair stands up on end. Something truly horrifying is happening and it is too late to stop!",
+                "add_weather": "HauntedNight",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                }
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_TAPERECORDER_REW5",
+                "prompt_resolved": "{catname} hits the recorder with {his} paws, banging on the various buttons.\n\nWith a click, the tape reel pops off and the recorder goes silent. Crisis averted!"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_TAPERECORDER_REW6",
+                "prompt_resolved": "{catname} leaps onto the recorder, tearing out the tape and shredding it into useless plastic!\n\nThe tape recorder has been [b]permanently[/b] destroyed.",
+                "set_legacy_token": "WorldEventLegacyToken_TapeRecorderDestroyed"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_TAPERECORDER_REW7",
+                "prompt_resolved": "The tape recorder spins and a strange howling emits from the speakers...\n\n{catname} begins to hear strange sounds from beneath the ground around {him}...",
+                "add_weather": "RestlessDead",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_TAPERECORDER_REW8",
+                "prompt_resolved": "The tape recorder emits a terrifying howling sound!\n\n{catname}'s hair stands up on end. Something truly horrifying is happening and it is too late to stop!",
+                "add_weather": "HauntedNight",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_TAPERECORDER_REW9",
+            "prompt_resolved": "{catname} ignores the recorder.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "HoleInTheEarth": {
+    "intro": {
+      "title": "EVENT_HOLEINTHEEARTH_NAME",
+      "title_resolved": "Hole in the earth",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "hole_in_the_earth",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_HOLEINTHEEARTH_QUES",
+      "prompt_resolved": "A deep hole in the Earth lies before {catname}. Orange red light dances up from something burning deep below...",
+      "options": {
+        "enter": {
+          "label": "EVENT_HOLEINTHEEARTH_ENTER_ANSW",
+          "label_resolved": "Enter the hole",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW1",
+                "prompt_resolved": "{catname} carefully crawls down the hole...\n\n{He} emerges several minutes later with a glowing item clutched in {his} paw!",
+                "get_item_from_pool": [
+                  "Ember,",
+                  "MatchStick,",
+                  "BurningCoal,",
+                  "FireFlower"
+                ]
+              },
+              "rare": {
+                "set_frame": "6",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW2",
+                "prompt_resolved": "{catname} descends into the hole...\n\nA hideous laugh breaks the nervous silence and moments later {catname} emerges with a devilish smirk on {his} face!",
+                "mutation": {
+                  "eyes": "301"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "7",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW3",
+                "prompt_resolved": "{catname} leaps into the hole...\n\nThe smell of burning hair envelops the party as {catname} reemerges!",
+                "injury": "burned"
+              },
+              "rare": {
+                "set_frame": "8",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW4",
+                "prompt_resolved": "{catname} tries to carefully lower {himself} into the hole but tumbles in, head first!\n\n{catname} cries out in pain as {he} struggles to escape from the burning flames below!",
+                "injury": "burned",
+                "gain_disorder": "Charred"
+              }
+            }
+          }
+        },
+        "throw": {
+          "label": "EVENT_HOLEINTHEEARTH_THROW_ANSW",
+          "label_resolved": "Throw in a random item",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW5",
+                "prompt_resolved": "{catname} tosses something from {his} backpack into the hole...",
+                "lose_item": "inventory",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": [
+                    "weapon",
+                    "armor"
+                  ]
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW6",
+                "prompt_resolved": "{catname} offers up a sacrificial item to the hole...\n\nFrom the depths of hell below a powerful item is returned!",
+                "lose_item": "inventory",
+                "get_item_from_pool": "demon_themed_items"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW7",
+                "prompt_resolved": "{catname} tosses an item into the hole. {He} hears a faint hissing sound as it burns up deep below.",
+                "lose_item": "inventory"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_HOLEINTHEEARTH_REW8",
+                "prompt_resolved": "{catname} pulls an item from {his} bag to toss in the hole but knocks off an equipped item too, and they both tumble down into the chasm!",
+                "lose_item": "equipped"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_HOLEINTHEEARTH_REW9",
+            "prompt_resolved": "{catname} does peek into the ominous looking hole, but opts to walk carefully around it instead.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "WrithingPileOfMaggots": {
+    "intro": {
+      "title": "EVENT_WRITHINGPILEOFMAGGOTS_NAME",
+      "title_resolved": "Writhing pile of maggots",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "writhing_pile_of_maggots",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_QUES",
+      "prompt_resolved": "A large writhing pile of maggots blocks the way forward!\n\nWhat should {catname} do?",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW1",
+                "prompt_resolved": "{catname} sees something useful poking out from beneath the maggot swarm and pulls it out...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW2",
+                "prompt_resolved": "Carefully digging into the writhing heap, {catname} pulls something out!",
+                "get_item_from_pool": "grub_armor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW3",
+                "prompt_resolved": "The maggots in the pile leap forward and bite the cats!",
+                "party_damage": [
+                  "3",
+                  "6"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW4",
+                "prompt_resolved": "{catname} gets too close and one of the worms burrows into {him}!",
+                "get_parasite_from_pool": [
+                  "Tapeworm,",
+                  "Pinworm,",
+                  "Ringworm,",
+                  "Heartworm,",
+                  "EyeWorm,",
+                  "Parousworm,",
+                  "Hookworm,",
+                  "Roundworm"
+                ]
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW5",
+                "prompt_resolved": "{catname} smashes a bunch of the small maggots, but nothing seems to happen."
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW6",
+                "prompt_resolved": "{catname} strikes at the maggots, scaring them aside to reveal what they were hiding beneath!",
+                "get_item_from_pool": "grub_armor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW3",
+                "prompt_resolved": "The maggots in the pile leap forward and bite the cats!",
+                "party_damage": [
+                  "3",
+                  "6"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW4",
+                "prompt_resolved": "{catname} gets too close and one of the worms burrows into {him}!",
+                "get_parasite_from_pool": [
+                  "Tapeworm,",
+                  "Pinworm,",
+                  "Ringworm,",
+                  "Heartworm,",
+                  "EyeWorm,",
+                  "Parousworm,",
+                  "Hookworm,",
+                  "Roundworm"
+                ]
+              }
+            }
+          }
+        },
+        "kiss": {
+          "label": "EVENT_KISS_ANSW",
+          "label_resolved": "Kiss",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW7",
+                "prompt_resolved": "{catname} leans in and gives the cute little maggots a kiss...\n\nA few of them become {his} friends!",
+                "gain_familiar": "CharmedMaggot"
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW8",
+                "prompt_resolved": "{catname} licks the cute little maggots and they follow {him} to {his} next adventure, hoping for more affection!",
+                "gain_familiar": "CharmedMaggot"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW3",
+                "prompt_resolved": "The maggots in the pile leap forward and bite the cats!",
+                "party_damage": [
+                  "3",
+                  "6"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WRITHINGPILEOFMAGGOTS_REW4",
+                "prompt_resolved": "{catname} gets too close and one of the worms burrows into {him}!",
+                "get_parasite_from_pool": [
+                  "Tapeworm,",
+                  "Pinworm,",
+                  "Ringworm,",
+                  "Heartworm,",
+                  "EyeWorm,",
+                  "Parousworm,",
+                  "Hookworm,",
+                  "Roundworm"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "DustStorm": {
+    "intro": {
+      "title": "EVENT_DUSTSTORM_NAME",
+      "title_resolved": "Dust Storm",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dust_storm",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DUSTSTORM_QUES",
+      "prompt_resolved": "A dust storm ahead is blowing debris and sand everywhere.\n\nInside the dust storm {catname} sees the silhouette of a figure...",
+      "options": {
+        "talk_to": {
+          "label": "EVENT_TALKTO_ANSW",
+          "label_resolved": "Talk to",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_DUSTSTORM_REW1",
+                "prompt_resolved": "{catname} calls out to the figure inside the storm.\n\nIt smiles, then turns and leaves."
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_DUSTSTORM_REW2",
+                "prompt_resolved": "The figure steps forward with a wide grin on its face...\n\nThe dust devil joins the party!",
+                "gain_familiar": "CharmedDustDevil"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_DUSTSTORM_REW3",
+                "prompt_resolved": "{catname} cries out to the figure in the storm, but {his} voice is lost in the torrent of wind.\n\nThe sand storm grows until it envelops the whole area!",
+                "add_weather": "Sandstorm"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_DUSTSTORM_REW4",
+                "prompt_resolved": "The figure inside the storm approaches and attacks!",
+                "battle": "desert/boss/dustdevil/DustDevil.lvl"
+              }
+            }
+          }
+        },
+        "run": {
+          "label": "EVENT_RUN_ANSW",
+          "label_resolved": "Run!",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_DUSTSTORM_REW5",
+                "prompt_resolved": "{catname} escapes the cyclone of wind and dust!"
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_DUSTSTORM_REW6",
+                "prompt_resolved": "Sand stings {catname}'s face as the wind gusts in a fervor around {him}.\n\n{catname} runs like the wind and escapes!",
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_DUSTSTORM_REW7",
+                "prompt_resolved": "{catname} tries to flee but the sand storm engulfs the area in never ending torrents of wind!",
+                "add_weather": "Sandstorm"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_DUSTSTORM_REW8",
+                "prompt_resolved": "{catname} turns to run but it is too late...\n\nThe figure inside the storm leaps forward and attacks!",
+                "battle": "desert/boss/dustdevil/DustDevil.lvl"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "VibratingMeteor": {
+    "intro": {
+      "title": "EVENT_VIBRATINGMETEOR_NAME",
+      "title_resolved": "Vibrating Meteor",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "vibrating_meteor",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_VIBRATINGMETEOR_QUES",
+      "prompt_resolved": "{catname} finds a strange vibrating meteor.\n\n{He} hears a deep humming sound as it pulses with energy...",
+      "options": {
+        "take": {
+          "label": "EVENT_TAKE_ANSW",
+          "label_resolved": "Take",
+          "stat": "con",
+          "animation": "choice_dex_alt",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_VIBRATINGMETEOR_REW1",
+                "prompt_resolved": "{catname} reaches out and grabs the meteor, pocketing it!",
+                "set_frame": "2",
+                "get_item_from_pool": [
+                  "VibratingMeteorite,",
+                  "LargeMeteor,",
+                  "SmallMeteor"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_VIBRATINGMETEOR_REW2",
+                "prompt_resolved": "{catname} reaches out and grips the meteor with {his} paws...\n\n{catname}'s body trembles and convulses as {his} body mutates!",
+                "set_frame": "3",
+                "random_mutation": "2"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_VIBRATINGMETEOR_REW3",
+                "prompt_resolved": "Terrible pain wracks {catname}'s body as {he} touches the meteor with {his} paws.\n\n{catname} recoils in fright but it's too late... the meteor has already mutated {him}!",
+                "set_frame": "4",
+                "random_mutation": "1",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_VIBRATINGMETEOR_REW4",
+                "prompt_resolved": "{catname} releases a howl of agony as {he} grabs the meteor!\n\n{catname}'s body twists into horrible contortions as {his} body is ravaged by countless mutations!",
+                "set_frame": "5",
+                "random_mutation": {
+                  "count": "3",
+                  "asymmetric": "true",
+                  "tag": "birth_defect"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_VIBRATINGMETEOR_REW5",
+            "prompt_resolved": "{catname} fears the strange power of the vibrating meteor and leaves well enough alone...",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Death": {
+    "requirements": {
+      "cat_has_injury_count_min": "2"
+    },
+    "intro": {
+      "title": "EVENT_DEATH_NAME",
+      "title_resolved": "Death",
+      "cat_choice": "random",
+      "choose_cat_with_most_injuries": "true",
+      "subject_clip": "EventSubject",
+      "subject_frame": "death",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AdventureToken_HasRunFromDeath"
+          },
+          "reward": {
+            "prompt": "EVENT_DEATH_QUES2",
+            "prompt_resolved": "Death appears again before {catname}.\n\n[i]\"Ha! I have caught you again! Your days of cheating me from what is rightfully mine has come to an end... Give me your soul!\"[/i]"
+          },
+          "else": {
+            "prompt": "EVENT_DEATH_QUES",
+            "prompt_resolved": "The ghastly figure of Death himself appears before {catname}!\n\n[i]\"Do you think you can so brazenly ignore me? I've seen you cheat death far too many times to be fair, and now I have come to reclaim what is rightfully mine... your soul!\"[/i]"
+          }
+        }
+      },
+      "options": {
+        "sweet_talk": {
+          "label": "EVENT_DEATH_SWEETTALK_ANSW",
+          "label_resolved": "Sweet talk",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEATH_REW1",
+                "prompt_resolved": "[i]\"Your silly words do not impress me. But I will spare you, just this once... and only because I know you will suffer even more if I do!\"[/i]"
+              },
+              "rare": {
+                "prompt": "EVENT_DEATH_REW2",
+                "prompt_resolved": "[i]\"I have enjoyed watching you supplicate yourself before me in terror. Were that all my henchmen could be as smooth lipped as you! Take this token and wear it proudly. Ha!\"[/i]\n\nDeath looks very amused with himself.",
+                "set_frame": "3",
+                "get_item": "MysteriousBone"
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_DEATH_REW3",
+            "prompt_resolved": "[i]\"You can't talk your way out of this one! Your soul is mine!\"[/i]\n\nDeath swings his scythe to attack {catname}!",
+            "battle": "events/Death.lvl",
+            "set_frame": "4"
+          }
+        },
+        "challenge_to_game": {
+          "label": "EVENT_DEATH_CHALLENGE_ANSW",
+          "label_resolved": "Challenge to a game",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEATH_REW4",
+                "prompt_resolved": "[i]\"Arrggh you tricked me! Fine! You get to live this time.\"[/i]\n\n{catname} grins smugly at {his} accomplishment as Death storms off angrily."
+              },
+              "rare": {
+                "prompt": "EVENT_DEATH_REW5",
+                "prompt_resolved": "{catname} baits Death into betting more and more on the game until he bets his scythe.\n\n[i]\"This is unacceptable! You must be cheating somehow! Fine... I will just reclaim my scythe from your corpse later when you inevitably meet your demise!\"[/i]",
+                "get_item": "DeathsScythe",
+                "set_frame": "2"
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_DEATH_REW6",
+            "prompt_resolved": "[i]\"Ha! You lose! Time to die!\"[/i]",
+            "battle": "events/Death.lvl",
+            "set_frame": "4"
+          }
+        },
+        "run": {
+          "label": "EVENT_RUN_ANSW",
+          "label_resolved": "Run!",
+          "stat": "spd",
+          "animation": "choice_leave",
+          "requirements": {
+            "not_has_token": "AdventureToken_HasRunFromDeath"
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEATH_REW7",
+                "prompt_resolved": "While Death is still rambling on in an intimidating monologue, {catname} slips away.\n\n[i]\"Hey! Where'd that little brat run off to? You think you can escape me? I'll be back!\"[/i]",
+                "set_legacy_token": "WorldEventLegacyToken_HasRunFromDeath",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ],
+                "set_adventure_token": "AdventureToken_HasRunFromDeath",
+                "next_event_from_set": {
+                  "event": "Death",
+                  "same_cat": "true"
+                }
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "WorldEventLegacyToken_HasRunFromDeath"
+                  },
+                  "reward": {
+                    "prompt": "EVENT_DEATH_REW8_B",
+                    "prompt_resolved": "{catname} takes off before Death can react.\n\n[i]\"Damn it! Why are these cats always running off? Which one was I supposed to kill this time? Whatever... I don't have time for these small fry brats.\"[/i]"
+                  },
+                  "else": {
+                    "prompt": "EVENT_DEATH_REW8",
+                    "prompt_resolved": "{catname} takes off before Death can react.\n\n[i]\"Damn it! Where did that cat just run off to? Whatever... I don't have time for chasing cats around all day.\"[/i]",
+                    "set_legacy_token": "WorldEventLegacyToken_HasRunFromDeath"
+                  }
+                },
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "prompt": "EVENT_DEATH_REW9",
+            "prompt_resolved": "{catname} tries to dash off but Death swoops into his way.\n\n[i]\"No no no... You can't just scamper off and get away with this! Your demise is long overdue!\"[/i]",
+            "battle": "events/Death.lvl"
+          }
+        },
+        "run_again": {
+          "label": "EVENT_RUN_ANSW",
+          "label_resolved": "Run!",
+          "stat": "spd",
+          "animation": "choice_leave",
+          "requirements": {
+            "has_token": "AdventureToken_HasRunFromDeath"
+          },
+          "good": {
+            "prompt": "EVENT_DEATH_REW_RUNAGAIN",
+            "prompt_resolved": "{catname} takes off again before Death can react.\n\n[i]\"Damn it! How'd I let that cat slip by me again? It's so rude, {he} won't even let me finish what I have to say!\"[/i]",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "reward": {
+              "common": {
+                "self_status_next_fight": {
+                  "SpeedUp": "2"
+                }
+              },
+              "rare": {
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "prompt": "EVENT_DEATH_REW9",
+            "prompt_resolved": "{catname} tries to dash off but Death swoops into his way.\n\n[i]\"No no no... You can't just scamper off and get away with this! Your demise is long overdue!\"[/i]",
+            "battle": "events/Death.lvl"
+          }
+        }
+      }
+    }
+  }
+}

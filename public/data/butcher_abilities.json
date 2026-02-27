@@ -1,0 +1,2242 @@
+{
+  "HogRush": {
+    "id": "HogRush",
+    "template": "move",
+    "name_key": "ABILITY_HOGRUSH_NAME",
+    "name": "Hog Rush",
+    "desc_key": "ABILITY_HOGRUSH_DESC",
+    "description": "Trample over to a tile with meat on it.",
+    "class": "Butcher",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "100",
+      "restrictions": [
+        "must_be_moveable",
+        "must_have_tag",
+        "must_move"
+      ],
+      "target_requires_tag": "food",
+      "trample_allies_too": "true"
+    },
+    "graphics": {
+      "speed": "2",
+      "animation": "dash"
+    }
+  },
+  "HogRush2": {
+    "id": "HogRush2",
+    "variant_of": "HogRush",
+    "desc_key": "ABILITY_HOGRUSH2_DESC",
+    "description": "Trample over to a tile with meat on it and Cleave all units in your way.",
+    "damage_instance": {
+      "damage": "3",
+      "override_trample_damage": "true",
+      "effects": {
+        "Cleave": "1"
+      }
+    }
+  },
+  "Burp": {
+    "id": "Burp",
+    "template": "melee_attack",
+    "name_key": "ABILITY_BURP_NAME",
+    "name": "Burp",
+    "desc_key": "ABILITY_BURP_DESC",
+    "description": "Inflict Rot on a unit and it moves away from you.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "burp"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "ForceMoveAway": "1",
+        "Rot": "1"
+      }
+    }
+  },
+  "Burp2": {
+    "id": "Burp2",
+    "variant_of": "Burp",
+    "desc_key": "ABILITY_BURP2_DESC",
+    "description": "Inflict Rot 2 and Poison 2 on a unit and it moves away from you.",
+    "damage_instance": {
+      "effects": {
+        "ForceMoveAway": "1",
+        "Rot": "2",
+        "Poison": "2"
+      }
+    }
+  },
+  "SelfMutilate": {
+    "id": "SelfMutilate",
+    "template": "self_buff",
+    "name_key": "ABILITY_SELFHARM_NAME",
+    "name": "Self Harm",
+    "desc_key": "ABILITY_SELFHARM_DESC",
+    "description": "Attack yourself with Cleave to gain +2 [img:str].",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "generic_physical",
+      "effects": {
+        "Cleave": "1",
+        "StrengthUp": "2"
+      }
+    }
+  },
+  "SelfMutilate2": {
+    "id": "SelfMutilate2",
+    "variant_of": "SelfMutilate",
+    "desc_key": "ABILITY_SELFHARM2_DESC",
+    "description": "Attack yourself at half damage with Cleave to gain +2 [img:str].",
+    "damage_instance": {
+      "damage": "(5+bonus_melee_ability_damage)*.5"
+    }
+  },
+  "ForceFeed": {
+    "id": "ForceFeed",
+    "template": "melee_attack",
+    "name_key": "ABILITY_FORCEFEED_NAME",
+    "name": "Force Feed",
+    "desc_key": "ABILITY_FORCEFEED_DESC",
+    "description": "Heal an adjacent unit and give that unit +1 [img:con] and -1 [img:spd].",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "heal": "4",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "ConstitutionUp": "1",
+        "SpeedUp": "-1"
+      }
+    }
+  },
+  "ForceFeed2": {
+    "id": "ForceFeed2",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_FORCEFEED_NAME",
+    "name": "Force Feed",
+    "desc_key": "ABILITY_FORCEFEED2_DESC",
+    "description": "Heal a unit within range and give that unit +1 [img:con] and -1 [img:spd].",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "heal": "4",
+      "type": "spell",
+      "effects": {
+        "ConstitutionUp": "1",
+        "SpeedUp": "-1"
+      }
+    }
+  },
+  "Fartoom": {
+    "id": "Fartoom",
+    "template": "spell",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_FARTOOM_NAME",
+    "name": "Fartoom!",
+    "desc_key": "ABILITY_FARTOOM_DESC",
+    "description": "Lose 25% of your current HP, deal that much damage to adjacent units, and deal Knockback to them.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "X_is": "current_health"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "fartoom"
+    },
+    "damage_instance": {
+      "damage": "floor(X*.25)",
+      "knockback": "ceil(X*.25/5)",
+      "elements": [
+        "Explosion"
+      ]
+    },
+    "self_damage": {
+      "damage": "floor(X*.25)",
+      "piercing": "true"
+    }
+  },
+  "Fartoom2": {
+    "id": "Fartoom2",
+    "variant_of": "Fartoom",
+    "desc_key": "ABILITY_FARTOOM2_DESC",
+    "description": "Lose 25% of your HP, deal that much damage to nearby units, and deal Knockback to them.",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "Mutilate": {
+    "id": "Mutilate",
+    "template": "melee_attack",
+    "class": "Butcher",
+    "name_key": "ABILITY_MUTILATE_NAME",
+    "name": "Mutilate",
+    "desc_key": "ABILITY_MUTILATE_DESC",
+    "description": "Attack 3-5 times for 1 damage each. These attacks inflict Bleed.",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "multihit_min": "3",
+      "multihit_max": "5"
+    },
+    "graphics": {
+      "start": "attack",
+      "loop": "attack",
+      "end": "attack"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "Mutilate2": {
+    "id": "Mutilate2",
+    "variant_of": "Mutilate",
+    "desc_key": "ABILITY_MUTILATE2_DESC",
+    "description": "Attack 3-10 times for 1 damage each. These attacks inflict Bleed.",
+    "target": {
+      "multihit_min": "3",
+      "multihit_max": "10"
+    }
+  },
+  "SkullBash": {
+    "id": "SkullBash",
+    "template": "dash_attack",
+    "name_key": "ABILITY_SKULLBASH_NAME",
+    "name": "Skull Bash",
+    "desc_key": "ABILITY_SKULLBASH_DESC",
+    "description": "A range 1 dash attack that inflicts Stun and knockback. Also stuns yourself.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "knockback": "5",
+      "effects": {
+        "Stun": "1",
+        "SelfStun": "1"
+      }
+    }
+  },
+  "SkullBash2": {
+    "id": "SkullBash2",
+    "variant_of": "SkullBash",
+    "desc_key": "ABILITY_SKULLBASH2_DESC",
+    "description": "A range 4 dash attack that inflicts Stun and knockback. Has a 50% chance to stun yourself.",
+    "target": {
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "SelfStun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "Shred": {
+    "id": "Shred",
+    "template": "melee_attack",
+    "name_key": "ABILITY_SHRED_NAME",
+    "name": "Shred",
+    "desc_key": "ABILITY_SHRED_DESC",
+    "description": "Attack five times for 1 damage each. These attacks inflict all status effects your basic attack does.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "multihit": "5"
+    },
+    "graphics": {
+      "animation": "shred"
+    },
+    "damage_instance": {
+      "damage": "1"
+    },
+    "bonus_passives": {
+      "CopyBasicAttackEffects": "1"
+    }
+  },
+  "Shred2": {
+    "id": "Shred2",
+    "variant_of": "Shred",
+    "desc_key": "ABILITY_SHRED2_DESC",
+    "description": "Attack five times with damage that scales with [img:str]. These attacks inflict all status effects your basic attack does.",
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage"
+    }
+  },
+  "Chomp": {
+    "id": "Chomp",
+    "template": "melee_attack",
+    "name_key": "ABILITY_CHOMP_NAME",
+    "name": "Chomp",
+    "desc_key": "ABILITY_CHOMP_DESC",
+    "description": "A melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "hint_can_target_pickups": "true"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "can_collect_pickups": "true",
+      "effects": {
+        "Leech": "1",
+        "Conditional_Ally": {
+          "ApplyToSource": {
+            "StrengthUp": "1"
+          }
+        },
+        "CollectsPickups": "2"
+      }
+    }
+  },
+  "Chomp2": {
+    "id": "Chomp2",
+    "variant_of": "Chomp",
+    "desc_key": "ABILITY_CHOMP2_DESC",
+    "description": "A wide melee attack with Life Steal. If used on an ally, gain +1[img:str]. If used on a pickup, gain double that pickup's effects.",
+    "target": {
+      "aoe_mode": "custom",
+      "aoe_symmetry": "none",
+      "custom_aoe": [
+        [
+          "1,",
+          "-1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ]
+      ]
+    }
+  },
+  "Succ": {
+    "id": "Succ",
+    "template": "spell",
+    "name_key": "ABILITY_SUCC_NAME",
+    "name": "SUCC",
+    "desc_key": "ABILITY_SUCC_DESC",
+    "description": "Collect a pickup within two tiles of you.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_aoe": "0",
+      "max_range": "2",
+      "knockback_mode": "tile_to_character",
+      "hint_can_target_pickups": "true"
+    },
+    "graphics": {
+      "particle": "fx_windSpell"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "effects": {
+        "CollectsPickups": "1"
+      },
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Succ2": {
+    "id": "Succ2",
+    "variant_of": "Succ",
+    "desc_key": "ABILITY_SUCC2_DESC",
+    "description": "Collect all pickups within two tiles of you.",
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "2"
+    }
+  },
+  "Consume": {
+    "id": "Consume",
+    "template": "spell",
+    "name_key": "ABILITY_CONSUME_NAME",
+    "name": "Consume",
+    "desc_key": "ABILITY_CONSUME_DESC",
+    "description": "Collect all pickups, then become drowsy.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "20"
+    },
+    "graphics": {
+      "particle": "DustPoofMedium",
+      "delay": "5"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "effects": {
+        "CollectsPickups": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "Drowsy": "1"
+      }
+    }
+  },
+  "Consume2": {
+    "id": "Consume2",
+    "variant_of": "Consume",
+    "desc_key": "ABILITY_CONSUME2_DESC",
+    "description": "Collect all pickups, then become drowsy. Gain double the effects of these pickups.",
+    "damage_instance": {
+      "effects": {
+        "CollectsPickups": "2"
+      }
+    }
+  },
+  "Trudge": {
+    "id": "Trudge",
+    "template": "move",
+    "name_key": "ABILITY_TRUDGE_NAME",
+    "name": "Trudge",
+    "desc_key": "ABILITY_TRUDGE_DESC",
+    "description": "Move four tiles. Costs less mana the lower your HP is.",
+    "class": "Butcher",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "X"
+    },
+    "target": {
+      "max_range": "4",
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsMultipliedPercentHealth": [
+        "1",
+        "12"
+      ]
+    }
+  },
+  "Trudge2": {
+    "id": "Trudge2",
+    "variant_of": "Trudge",
+    "desc_key": "ABILITY_TRUDGE2_DESC",
+    "description": "Trample over four tiles. Costs less mana the lower your HP is."
+  },
+  "BodySlam": {
+    "id": "BodySlam",
+    "template": "jump_attack",
+    "name_key": "ABILITY_BODYSLAM_NAME",
+    "name": "Body Slam",
+    "desc_key": "ABILITY_BODYSLAM_DESC",
+    "description": "Jump to a tile within range 2. Damage both yourself and units you land on equal to 25% of your current HP.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "2",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none",
+      "X_is": "current_health"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "floor(X*.25)",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "floor(X*.25)"
+    }
+  },
+  "BodySlam2": {
+    "id": "BodySlam2",
+    "variant_of": "BodySlam",
+    "desc_key": "ABILITY_BODYSLAM2_DESC",
+    "description": "Jump to a tile within range 2. Damage both yourself and units you land on equal to 25% of your current HP. This attack inflicts Bruise and has a chance to Stun.",
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1",
+        "Stun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "BloodMagic": {
+    "id": "BloodMagic",
+    "template": "self_buff",
+    "name_key": "ABILITY_BLOODMAGIC_NAME",
+    "name": "Blood Magic",
+    "desc_key": "ABILITY_BLOODMAGIC_DESC",
+    "description": "Take 5 damage and gain 5 mana.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Butcher",
+    "cost": {
+      "mana": "0",
+      "act_points": "0",
+      "charge": "1"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "none",
+      "cant_miss": "true",
+      "effects": {
+        "ManaGain": "5"
+      }
+    }
+  },
+  "BloodMagic2": {
+    "id": "BloodMagic2",
+    "variant_of": "BloodMagic",
+    "desc_key": "ABILITY_BLOODMAGIC2_DESC",
+    "description": "Take 5 damage and gain 10 mana.\n[s:.7](Castable once per turn.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "10"
+      }
+    }
+  },
+  "SmellBlood": {
+    "id": "SmellBlood",
+    "template": "self_buff",
+    "name_key": "ABILITY_SMELLBLOOD_NAME",
+    "name": "Smell Blood",
+    "desc_key": "ABILITY_SMELLBLOOD_DESC",
+    "description": "Until your next turn, if a unit in your attack range takes physical damage from a source that isn't you, you attack that unit.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "7",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "SmellBlood": "1"
+      }
+    }
+  },
+  "SmellBlood2": {
+    "id": "SmellBlood2",
+    "variant_of": "SmellBlood",
+    "desc_key": "ABILITY_SMELLBLOOD2_DESC",
+    "description": "Until your next turn, if a unit in your attack range takes physical damage from a source that isn't you, you attack that unit.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Vurp": {
+    "id": "Vurp",
+    "template": "self_buff",
+    "name_key": "ABILITY_VURP_NAME",
+    "name": "Vurp",
+    "desc_key": "ABILITY_VURP_DESC",
+    "description": "Vomit up the last consumable you ate this battle and equip it.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Butcher",
+    "cost": {
+      "mana": "4",
+      "cantrip": "true",
+      "requires_empty_trinket": "true",
+      "requires_consumed_trinket": "true",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "pukeatk"
+    },
+    "damage_instance": {
+      "effects": {
+        "Regurge": "1"
+      }
+    }
+  },
+  "Vurp2": {
+    "id": "Vurp2",
+    "variant_of": "Vurp",
+    "desc_key": "ABILITY_VURP2_DESC",
+    "description": "Vomit up the last consumable you ate this battle and equip it.\n[s:.7](Castable once per turn.)[/s]",
+    "cost": {
+      "once_per_fight": "false"
+    }
+  },
+  "SliceAndDice": {
+    "id": "SliceAndDice",
+    "template": "dash_attack",
+    "name_key": "ABILITY_SLICEANDDICE_NAME",
+    "name": "Slice and Dice",
+    "desc_key": "ABILITY_SLICEANDDICE_DESC",
+    "description": "Dash forward one tile and do a spin attack with Cleave, then repeat twice more.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile",
+      "max_range": "1"
+    },
+    "graphics": {
+      "dash_start_animation": "none",
+      "dash_animation": "spinattackloop",
+      "dash_attack_animation": "spinattackloop"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "Cleave": "1"
+      }
+    }
+  },
+  "SliceAndDice2": {
+    "id": "SliceAndDice2",
+    "variant_of": "SliceAndDice",
+    "desc_key": "ABILITY_SLICEANDDICE2_DESC",
+    "description": "Dash forward one tile and do a spin attack with Cleave, then repeat four more times."
+  },
+  "LunchTime": {
+    "id": "LunchTime",
+    "template": "jump_attack",
+    "name_key": "ABILITY_LUNCHTIME_NAME",
+    "name": "Lunch Time",
+    "desc_key": "ABILITY_LUNCHTIME_DESC",
+    "description": "Jump to a food pickup in range 4.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "4",
+      "min_range": "1",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_have_tag",
+        "must_move"
+      ],
+      "target_requires_tag": "food"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "LunchTime2": {
+    "id": "LunchTime2",
+    "variant_of": "LunchTime",
+    "desc_key": "ABILITY_LUNCHTIME2_DESC",
+    "description": "Jump to any food pickup.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Tromp": {
+    "id": "Tromp",
+    "template": "move",
+    "name_key": "ABILITY_TROMP_NAME",
+    "name": "Tromp",
+    "desc_key": "ABILITY_TROMP_DESC",
+    "description": "Trample over one tile. If you trample over a unit, you inflict Bruise on that unit and yourself.",
+    "class": "Butcher",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true"
+    },
+    "damage_instance": {
+      "override_trample_damage": "true",
+      "damage": "3",
+      "effects": {
+        "Bruise": "1",
+        "ApplyToSource": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "Tromp2": {
+    "id": "Tromp2",
+    "template": "move",
+    "name_key": "ABILITY_TROMP_NAME",
+    "name": "Tromp",
+    "desc_key": "ABILITY_TROMP2_DESC",
+    "description": "Trample over one tile. If you trample over a unit, you inflict Bruise on that unit.",
+    "class": "Butcher",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true"
+    },
+    "damage_instance": {
+      "override_trample_damage": "true",
+      "damage": "3",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "LightenTheLoad": {
+    "id": "LightenTheLoad",
+    "template": "self_buff",
+    "name_key": "ABILITY_LIGHTENTHELOAD_NAME",
+    "name": "Lighten the Load",
+    "desc_key": "ABILITY_LIGHTENTHELOAD_DESC",
+    "description": "Take 25 damage. You take an extra turn after this one.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2",
+      "main_turn_only": "true"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "25",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "LightenTheLoad2": {
+    "id": "LightenTheLoad2",
+    "variant_of": "LightenTheLoad",
+    "desc_key": "ABILITY_LIGHTENTHELOAD2_DESC",
+    "description": "Take 15 damage. You take an extra turn after this one.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+    "damage_instance": {
+      "damage": "15"
+    }
+  },
+  "Crushinator": {
+    "id": "Crushinator",
+    "template": "melee_attack",
+    "name_key": "ABILITY_CRUSHINATOR_NAME",
+    "name": "Crushinator",
+    "desc_key": "ABILITY_CRUSHINATOR_DESC",
+    "description": "This spell only damages Shield. Cleave and inflict Stun on units with Shield. Deals 3 Knockback to units without Shield.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "20",
+      "damage_shield_only": "true",
+      "effects": {
+        "Conditional_Shielded": {
+          "Stun": "1",
+          "Cleave": "1"
+        },
+        "Conditional_NotShielded": {
+          "Knockback": "3"
+        }
+      }
+    }
+  },
+  "Crushinator2": {
+    "id": "Crushinator2",
+    "variant_of": "Crushinator",
+    "desc_key": "ABILITY_CRUSHINATOR2_DESC",
+    "description": "This spell only damages Shield. Cleave and inflict Stun on units with Shield. Deals 10 Knockback to units without Shield.",
+    "damage_instance": {
+      "damage": "50",
+      "effects": {
+        "Conditional_NotShielded": {
+          "Knockback": "10"
+        }
+      }
+    }
+  },
+  "CannonBall": {
+    "id": "CannonBall",
+    "template": "jump_attack",
+    "name_key": "ABILITY_CANNONBALL_NAME",
+    "name": "Cannon Ball!",
+    "desc_key": "ABILITY_CANNONBALL_DESC",
+    "description": "Target any tile. At the beginning of your next turn, jump to that tile. If you land on a unit, stun it.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Butcher",
+    "cost": {
+      "mana": "4",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "delayed_trigger": "true",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Stun": "1"
+      }
+    }
+  },
+  "CannonBall2": {
+    "id": "CannonBall2",
+    "variant_of": "CannonBall",
+    "desc_key": "ABILITY_CANNONBALL2_DESC",
+    "description": "Target any tile. At the beginning of your next turn, jump to that tile. If you land on a unit, damage and stun it.\n[s:.7](This spell costs less.)[/s]\n[s:.7](Castable once per turn.)[/s]",
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_ability_damage"
+    }
+  },
+  "Monch": {
+    "id": "Monch",
+    "template": "melee_attack",
+    "name_key": "ABILITY_MONCH_NAME",
+    "name": "Monch",
+    "desc_key": "ABILITY_MONCH_DESC",
+    "description": "A melee attack with lifesteal. This spell does more damage the less health you have.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "X",
+      "effects": {
+        "Leech": "1"
+      }
+    },
+    "bonus_passives": {
+      "XIsMultipliedPercentHealth": [
+        "14",
+        "1"
+      ]
+    }
+  },
+  "Monch2": {
+    "id": "Monch2",
+    "variant_of": "Monch",
+    "desc_key": "ABILITY_MONCH2_DESC",
+    "description": "A melee attack with lifesteal. This spell does more damage the less health you have.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "DeathWind": {
+    "id": "DeathWind",
+    "template": "spell",
+    "name_key": "ABILITY_DEATHWIND_NAME",
+    "name": "Death Wind",
+    "desc_key": "ABILITY_DEATHWIND_DESC",
+    "description": "Blow wind that inflicts Poison 4 in a cone. The cone is larger the less health you have.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "X",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "X_is": "custom"
+    },
+    "graphics": {
+      "delay": "4",
+      "particle": "PoisonPoof",
+      "animation": "poopfart",
+      "visual_delay_but_simultaneous_damage": "8"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "type": "status_spell",
+      "effects": {
+        "Poison": "4"
+      },
+      "elements": [
+        "Wind"
+      ]
+    },
+    "bonus_passives": {
+      "XIsMultipliedPercentHealth": [
+        "6",
+        "2"
+      ]
+    }
+  },
+  "DeathWind2": {
+    "id": "DeathWind2",
+    "variant_of": "DeathWind",
+    "desc_key": "ABILITY_DEATHWIND2_DESC",
+    "description": "Blow wind that inflicts Poison 4 in a cone. The cone is larger the less health you have.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    }
+  },
+  "Spoil": {
+    "id": "Spoil",
+    "template": "spell",
+    "name_key": "ABILITY_SPOIL_NAME",
+    "name": "Spoil",
+    "desc_key": "ABILITY_SPOIL_DESC",
+    "description": "Turn all food pickups into Rot Flies.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "food",
+          "CanApplyToInanimate": {
+            "Vaporize": "1",
+            "ObjectOnHitCharacter": "AllyRotFly"
+          }
+        }
+      }
+    }
+  },
+  "Spoil2": {
+    "id": "Spoil2",
+    "variant_of": "Spoil",
+    "desc_key": "ABILITY_SPOIL2_DESC",
+    "description": "Turn all food pickups into Rot Flies.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "Grill": {
+    "id": "Grill",
+    "template": "spell",
+    "name_key": "ABILITY_GRILL_NAME",
+    "name": "Grill",
+    "desc_key": "ABILITY_GRILL_DESC",
+    "description": "Light a fire under a food pickup on any tile.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "food"
+    },
+    "graphics": {
+      "particle": "FireSpin",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "FireTile",
+        "Burn": "1"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Grill2": {
+    "id": "Grill2",
+    "variant_of": "Grill",
+    "desc_key": "ABILITY_GRILL2_DESC",
+    "description": "Light a fire under any tile.",
+    "target": {
+      "restrictions": "none"
+    }
+  },
+  "Roast": {
+    "id": "Roast",
+    "template": "spell",
+    "name_key": "ABILITY_ROAST_NAME",
+    "name": "Roast",
+    "desc_key": "ABILITY_ROAST_DESC",
+    "description": "Breathe a cone of fire.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "blowFire",
+      "particle": "FireBlastSmall",
+      "delay": "10",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "1"
+      },
+      "elements": [
+        "Fire",
+        "Wind"
+      ]
+    }
+  },
+  "Roast2": {
+    "id": "Roast2",
+    "variant_of": "Roast",
+    "desc_key": "ABILITY_ROAST2_DESC",
+    "description": "Breathe a larger cone of fire.",
+    "target": {
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "damage": "4",
+      "effects": {
+        "Burn": "2"
+      }
+    }
+  },
+  "BadGas": {
+    "id": "BadGas",
+    "template": "melee_attack",
+    "name_key": "ABILITY_BADGAS_NAME",
+    "name": "Bad Gas",
+    "desc_key": "ABILITY_BADGAS_DESC",
+    "description": "Fart on a unit, inflicting Poison 3 and propelling yourself 3 tiles.",
+    "class": "Butcher",
+    "animate_name": "false",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "knockback_mode": "back_orientation",
+      "reverse_target_direction": "true",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "-1,",
+          "0"
+        ]
+      ]
+    },
+    "graphics": {
+      "animation": "poopfartbehind"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "Poison": "3",
+        "VisualFXTile": "PoisonPoof"
+      }
+    },
+    "self_damage": {
+      "damage": "0",
+      "type": "spell",
+      "knockback": "-3",
+      "effects": {
+        "KnockbackDamageImmuneUntilSettled": "1"
+      }
+    }
+  },
+  "BadGas2": {
+    "id": "BadGas2",
+    "variant_of": "BadGas",
+    "desc_key": "ABILITY_BADGAS2_DESC",
+    "description": "Fart on a unit, inflicting Poison 3 and propelling yourself ten tiles. Units in your path get trampled over.",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "self_damage": {
+      "knockback": "-10",
+      "effects": {
+        "KnockbackDamageImmuneUntilSettled": "1",
+        "TempTrampleUntilSettled": "3"
+      }
+    }
+  },
+  "ButcherPurge": {
+    "id": "ButcherPurge",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_PURGE_NAME",
+    "name": "Purge",
+    "desc_key": "ABILITY_PURGE_DESC",
+    "description": "Puke on the tile in front of you. You get -1 [img:con] and +2 [img:spd].",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2",
+      "minimum_con": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "pukeatk"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "SpawnCreep": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "ConstitutionUp": "-1",
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "ButcherPurge2": {
+    "id": "ButcherPurge2",
+    "variant_of": "ButcherPurge",
+    "desc_key": "ABILITY_PURGE2_DESC",
+    "description": "Puke on a tile in range. You get -1 [img:con] and +2 [img:spd].",
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "knockback_mode": "character_to_tile",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "Binge": {
+    "id": "Binge",
+    "template": "self_buff",
+    "name_key": "ABILITY_BINGE_NAME",
+    "name": "Binge",
+    "desc_key": "ABILITY_BINGE_DESC",
+    "description": "Gain -1 [img:spd], +1 [img:con], and +1 [img:str].",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2",
+      "minimum_spd": "1"
+    },
+    "graphics": {
+      "animation": "gulp"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpeedUp": "-1",
+        "ConstitutionUp": "1",
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "Binge2": {
+    "id": "Binge2",
+    "variant_of": "Binge",
+    "desc_key": "ABILITY_BINGE2_DESC",
+    "description": "Gain -1 [img:spd], +1 [img:con], +1 [img:str], and heal 4 HP.",
+    "damage_instance": {
+      "heal": "4"
+    }
+  },
+  "MyTurn": {
+    "id": "MyTurn",
+    "template": "targeted_status",
+    "name_key": "ABILITY_MYTURN_NAME",
+    "name": "My Turn!",
+    "desc_key": "ABILITY_MYTURN_DESC",
+    "description": "Steal an allied cat's next turn for yourself.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_ally",
+        "must_have_player_cat"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "StealTurn": "1"
+      }
+    }
+  },
+  "MyTurn2": {
+    "id": "MyTurn2",
+    "variant_of": "MyTurn",
+    "desc_key": "ABILITY_MYTURN2_DESC",
+    "description": "Steal an allied cat's next turn for yourself.\n[s:.7](This spell costs 1 mana.)[/s]",
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "Gib": {
+    "id": "Gib",
+    "template": "melee_attack",
+    "name_key": "ABILITY_GIB_NAME",
+    "name": "Gib",
+    "desc_key": "ABILITY_GIB_DESC",
+    "description": "Attack a unit in melee range. If this kills it, it becomes 3 food pickups.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "groundpound"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "effects": {
+        "SpawnThingIfHitKills": "Food"
+      }
+    }
+  },
+  "Gib2": {
+    "id": "Gib2",
+    "variant_of": "Gib",
+    "desc_key": "ABILITY_GIB2_DESC",
+    "description": "Attack a unit in melee range for more damage. If this kills it, it becomes 3 food pickups.",
+    "damage_instance": {
+      "damage": "6+bonus_melee_ability_damage"
+    }
+  },
+  "Swallow": {
+    "id": "Swallow",
+    "template": "targeted_status",
+    "name_key": "ABILITY_SWALLOW_NAME",
+    "name": "Swallow",
+    "desc_key": "ABILITY_SWALLOW_DESC",
+    "description": "Eat a unit and take damage equal to that unit's remaining HP. You can't swallow bosses or large units.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "1",
+      "min_range": "1"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "can_collect_pickups": "true",
+      "effects": {
+        "CollectsPickups": "1",
+        "SwallowSmallCharacter": "100%"
+      },
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Swallow2": {
+    "id": "Swallow2",
+    "variant_of": "Swallow",
+    "desc_key": "ABILITY_SWALLOW2_DESC",
+    "description": "Eat a unit within range 2 and take damage equal to half of that unit's remaining HP. You can't swallow bosses or large units.",
+    "target": {
+      "max_range": "2",
+      "min_range": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "can_collect_pickups": "true",
+      "effects": {
+        "SwallowSmallCharacter": "50%"
+      }
+    }
+  },
+  "Track": {
+    "id": "Track",
+    "template": "self_buff",
+    "name_key": "ABILITY_TRACK_NAME",
+    "name": "Track",
+    "desc_key": "ABILITY_TRACK_DESC",
+    "description": "Trample one tile toward the nearest food pickup.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "effects": {
+        "ForceMoveTowardsTaggedObject": {
+          "ability": "MoveOneTrample",
+          "tag": "food"
+        }
+      }
+    }
+  },
+  "Track2": {
+    "id": "Track2",
+    "variant_of": "Track",
+    "desc_key": "ABILITY_TRACK2_DESC",
+    "description": "Trample two tiles toward the nearest food pickup."
+  },
+  "Sharpen": {
+    "id": "Sharpen",
+    "template": "self_buff",
+    "name_key": "ABILITY_SHARPEN_NAME",
+    "name": "Sharpen",
+    "desc_key": "ABILITY_SHARPEN_DESC",
+    "description": "Your weapon gains +1 damage for the rest of the battle.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "CurrentWeaponDamageUp": "1"
+      }
+    }
+  },
+  "Sharpen2": {
+    "id": "Sharpen2",
+    "variant_of": "Sharpen",
+    "desc_key": "ABILITY_SHARPEN2_DESC",
+    "description": "Your weapon gains +1 damage for the rest of the battle and you gain +1 Damage.",
+    "damage_instance": {
+      "effects": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "FireFart": {
+    "id": "FireFart",
+    "template": "spell",
+    "name_key": "ABILITY_FIREFART_NAME",
+    "name": "Fire Fart",
+    "desc_key": "ABILITY_FIREFART_DESC",
+    "description": "Inflict Poison 2 and Burn 2 on a unit in melee range.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "X_is": "custom"
+    },
+    "graphics": {
+      "delay": "4",
+      "particle": "FireBlastMushroom",
+      "animation": "poopfart",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Poison": "2",
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "FireFart2": {
+    "id": "FireFart2",
+    "variant_of": "FireFart",
+    "desc_key": "ABILITY_FIREFART2_DESC",
+    "description": "Inflict Poison 2 and Burn 2 in a small cone.",
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "RoughToss": {
+    "id": "RoughToss",
+    "template": "throw_attack",
+    "name_key": "ABILITY_ROUGHTOSS_NAME",
+    "name": "Rough Toss",
+    "desc_key": "ABILITY_ROUGHTOSS_DESC",
+    "description": "Throw an adjacent unit to an empty tile, dealing a lot of damage to that unit.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "4"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "damage_instance": {
+      "damage": "7+bonus_melee_ability_damage",
+      "blocked_damage": "7+bonus_melee_ability_damage"
+    }
+  },
+  "RoughToss2": {
+    "id": "RoughToss2",
+    "variant_of": "RoughToss",
+    "desc_key": "ABILITY_ROUGHTOSS2_DESC",
+    "description": "Throw an adjacent unit to another tile (even if it isnt empty), dealing a lot of damage to that unit and whatever it lands on.",
+    "target": {
+      "max_range": "7",
+      "restrictions": "none"
+    }
+  },
+  "Bowl": {
+    "id": "Bowl",
+    "template": "spell",
+    "name_key": "ABILITY_BOWL_NAME",
+    "name": "Bowl",
+    "desc_key": "ABILITY_BOWL_DESC",
+    "description": "Roll the bowling ball cat. If it hits something, deal 10 damage in a large cone with knockback.",
+    "class": "Butcher",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "range_mode": "square",
+      "max_aoe": "0",
+      "max_range": "1",
+      "knockback_mode": "character_to_target",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "bowling_ball"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "knockswatatk"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "false",
+      "effects": {
+        "ImmediateUseDirectionalAbility": "BowlDash"
+      }
+    }
+  },
+  "Bowl2": {
+    "id": "Bowl2",
+    "variant_of": "Bowl",
+    "desc_key": "ABILITY_BOWL2_DESC",
+    "description": "Roll the bowling ball cat. If it hits something, deal 15 damage and inflict Bruise in a large cone with knockback.",
+    "damage_instance": {
+      "effects": {
+        "ImmediateUseDirectionalAbility": "BowlDash2"
+      }
+    }
+  },
+  "BowlDash": {
+    "id": "BowlDash",
+    "template": "dash_attack",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_range": "10",
+      "aoe_mode": "cone8",
+      "knockback_mode": "character_to_tile",
+      "min_aoe": "1",
+      "max_aoe": "4"
+    },
+    "graphics": {
+      "dash_start_animation": "none",
+      "dash_animation": "roll",
+      "dash_attack_animation": "none",
+      "aoe_spell_on_land": "true",
+      "speed": ".5",
+      "delay": "3",
+      "particle": "Earthquake",
+      "visual_delay_but_simultaneous_damage": "3"
+    },
+    "damage_instance": {
+      "type": "spell",
+      "damage": "10",
+      "knockback": "10",
+      "force_adjacent_and_diagonal_contact": "true",
+      "two_way_contact": "true",
+      "effects": {
+        "DoScreenShake": "1"
+      }
+    }
+  },
+  "BowlDash2": {
+    "id": "BowlDash2",
+    "variant_of": "BowlDash",
+    "damage_instance": {
+      "damage": "15",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "TaintedOffering": {
+    "id": "TaintedOffering",
+    "template": "jump_attack",
+    "name_key": "ABILITY_TAINTEDOFFERING_NAME",
+    "name": "Tainted Offering",
+    "desc_key": "ABILITY_TAINTEDOFFERING_DESC",
+    "description": "Jump to any open tile and fall asleep. While asleep, inflict Rot 1 and Poison 1 on units that contact you.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "max_aoe": "0",
+      "min_aoe": "0"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "self_damage": {
+      "effects": {
+        "Sleep": "1",
+        "Conditional_FirstApplicationThisTurn": {
+          "key": "TaintedOffering",
+          "TempPassiveWhileHasStatus": {
+            "status": "Sleep",
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Poison": "1",
+                "Rot": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "TaintedOffering2": {
+    "id": "TaintedOffering2",
+    "variant_of": "TaintedOffering",
+    "desc_key": "ABILITY_TAINTEDOFFERING2_DESC",
+    "description": "Jump to any open tile and fall asleep. While asleep, inflict Rot 2 and Poison 2 on units that contact you.",
+    "self_damage": {
+      "effects": {
+        "Conditional_FirstApplicationThisTurn": {
+          "key": "TaintedOffering2",
+          "TempPassiveWhileHasStatus": {
+            "MeleeRevengeDamage": {
+              "effects": {
+                "Poison": "2",
+                "Rot": "2"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "DeliciousScent": {
+    "id": "DeliciousScent",
+    "template": "spell",
+    "name_key": "ABILITY_DELICIOUSSCENT_NAME",
+    "name": "Delicious Scent",
+    "desc_key": "ABILITY_DELICIOUSSCENT_DESC",
+    "description": "Inflict Attraction on all enemies within range 4.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "4",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Enemy": {
+          "Attraction": "1"
+        }
+      }
+    }
+  },
+  "DeliciousScent2": {
+    "id": "DeliciousScent2",
+    "template": "jump_attack",
+    "name_key": "ABILITY_DELICIOUSSCENT_NAME",
+    "name": "Delicious Scent",
+    "desc_key": "ABILITY_DELICIOUSSCENT2_DESC",
+    "description": "Jump to a tile, then inflict Attraction on all enemies within range 4.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "10",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "4",
+      "max_aoe": "4",
+      "aoe_mode": "standard",
+      "min_aoe": "0",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "Conditional_Enemy": {
+          "Attraction": "1"
+        }
+      }
+    }
+  },
+  "Cough": {
+    "id": "Cough",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_COUGH_NAME",
+    "name": "Cough",
+    "desc_key": "ABILITY_COUGH_DESC",
+    "description": "Take 2 damage.\nSummon a Rot Fly.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "self_damage": {
+      "damage": "2"
+    },
+    "spawn": {
+      "object": "AllyRotFly"
+    }
+  },
+  "Cough2": {
+    "id": "Cough2",
+    "variant_of": "Cough",
+    "desc_key": "ABILITY_COUGH2_DESC",
+    "description": "Take 2 damage.\nSummon a [img:champion] Rot Fly.",
+    "self_damage": {
+      "damage": "2"
+    },
+    "spawn": {
+      "object": "AllyRotFly_Champion"
+    }
+  },
+  "Reflux": {
+    "id": "Reflux",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_REFLUX_NAME",
+    "name": "Reflux",
+    "desc_key": "ABILITY_REFLUX_DESC",
+    "description": "Take 2 damage and gain Burn 2, then fire a projectile that spawns a lava tile at short range.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "pukeatk"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "ChangeTile": "LavaTile"
+      },
+      "elements": [
+        "Fire"
+      ]
+    },
+    "self_damage": {
+      "damage": "2",
+      "effects": {
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Reflux2": {
+    "id": "Reflux2",
+    "variant_of": "Reflux",
+    "desc_key": "ABILITY_REFLUX2_DESC",
+    "description": "Take 2 damage and gain Burn 2, then fire a projectile that spawns a lava tile at long range.",
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "Tryptophan": {
+    "id": "Tryptophan",
+    "template": "spell",
+    "name_key": "ABILITY_TRYPTOPHAN_NAME",
+    "name": "Yawn",
+    "desc_key": "ABILITY_TRYPTOPHAN_DESC",
+    "description": "You and adjacent units fall asleep",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "Tryptophan2": {
+    "id": "Tryptophan2",
+    "variant_of": "Tryptophan",
+    "desc_key": "ABILITY_TRYPTOPHAN2_DESC",
+    "description": "You and adjacent units fall asleep. You gain all stats up and heal 4.",
+    "self_damage": {
+      "heal": "4",
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "HookBind": {
+    "id": "HookBind",
+    "template": "melee_attack",
+    "name_key": "ABILITY_HOOKBIND_NAME",
+    "name": "Hook Bind",
+    "desc_key": "ABILITY_HOOKBIND_DESC",
+    "description": "Melee attack that immobilizes.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Immobile": "1"
+      }
+    }
+  },
+  "HookBind2": {
+    "id": "HookBind2",
+    "variant_of": "HookBind",
+    "desc_key": "ABILITY_HOOKBIND2_DESC",
+    "description": "Melee attack that immobilizes and inflicts Bleed 2.",
+    "damage_instance": {
+      "effects": {
+        "Bleed": "2"
+      }
+    }
+  },
+  "Regurge": {
+    "id": "Regurge",
+    "template": "spawn",
+    "name_key": "ABILITY_REGURGE_NAME",
+    "name": "Regurge",
+    "desc_key": "ABILITY_REGURGE_DESC",
+    "description": "Take 2 damage and spawn a food pickup.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "restrictions": [
+        "aoe_must_exist"
+      ]
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "self_damage": {
+      "damage": "2"
+    },
+    "spawn": {
+      "object": "Food",
+      "layer": "pickups"
+    }
+  },
+  "Regurge2": {
+    "id": "Regurge2",
+    "variant_of": "Regurge",
+    "desc_key": "ABILITY_REGURGE2_DESC",
+    "description": "Take 2 damage and spawn a big food pickup.",
+    "target": {
+      "max_range": "5"
+    },
+    "spawn": {
+      "object": "BigFood",
+      "layer": "pickups"
+    }
+  },
+  "Grapnel": {
+    "id": "Grapnel",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_GRAPNEL_NAME",
+    "name": "Grapnel",
+    "desc_key": "ABILITY_GRAPNEL_DESC",
+    "description": "Lob a hook at an object and pull yourself to it. Trample over tiles in your path.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "10",
+      "range_mode": "8cross"
+    },
+    "graphics": {
+      "animation": "invthrow",
+      "projectile": "HookProjectile",
+      "chain_movieclip": "ChainLink",
+      "chain_distance": ".25"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "CanApplyToInanimate": {
+          "ApplyToSource": {
+            "TempTrampleUntilSettled": "3"
+          }
+        },
+        "PullSourceToTarget": "1"
+      }
+    }
+  },
+  "Grapnel2": {
+    "id": "Grapnel2",
+    "variant_of": "Grapnel",
+    "desc_key": "ABILITY_GRAPNEL2_DESC",
+    "description": "Lob a hook at an object and pull yourself to it. Trample over tiles in your path.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Rehook": {
+    "id": "Rehook",
+    "template": "self_buff",
+    "tags": [
+      "noncopyable"
+    ],
+    "name_key": "ABILITY_REHOOK_NAME",
+    "name": "Rehook",
+    "desc_key": "ABILITY_REHOOK_DESC",
+    "description": "Refresh your weapon ability.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "graphics": {
+      "animation": "equipWeapon"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshWeaponAbility": "1"
+      }
+    }
+  },
+  "Rehook2": {
+    "id": "Rehook2",
+    "variant_of": "Rehook",
+    "desc_key": "ABILITY_REHOOK2_DESC",
+    "description": "Refresh your weapon and movement action.",
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "Contaminate": {
+    "id": "Contaminate",
+    "template": "targeted_status",
+    "name_key": "ABILITY_CONTAMINATE_NAME",
+    "name": "Contaminate",
+    "desc_key": "ABILITY_CONTAMINATE_DESC",
+    "description": "Collect an adjacent pickup. Instead of that pickup's normal effects, add Poison 1 to your weapon for the rest of the battle.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "1",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "graphics": {
+      "animation": "weaponslam"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CollectsPickupsWithAltEffects": {
+          "CurrentWeaponAddPoison": "1"
+        }
+      }
+    }
+  },
+  "Contaminate2": {
+    "id": "Contaminate2",
+    "variant_of": "Contaminate",
+    "desc_key": "ABILITY_CONTAMINATE2_DESC",
+    "description": "Collect a pickup in range 5. Instead of that pickup's normal effects, add Poison 1 to your weapon for the rest of the battle.",
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "LodgeHook": {
+    "id": "LodgeHook",
+    "template": "melee_attack",
+    "name_key": "ABILITY_LODGEHOOK_NAME",
+    "name": "Lodge Hook",
+    "desc_key": "ABILITY_LODGEHOOK_DESC",
+    "description": "Inflict Bleed 10 on an adjacent unit. You can't use your weapon for the rest of the battle.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Butcher",
+    "cost": {
+      "act_points": "0",
+      "must_have_weapon": "true",
+      "once_per_fight": "true",
+      "mana": "0"
+    },
+    "graphics": {
+      "animation": "weaponslam"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Bleed": "10",
+        "ApplyToSource": {
+          "DisableWeapon": "1"
+        }
+      }
+    }
+  },
+  "LodgeHook2": {
+    "id": "LodgeHook2",
+    "variant_of": "LodgeHook",
+    "desc_key": "ABILITY_LODGEHOOK2_DESC",
+    "description": "Inflict Bleed 10, Immobilize 2, and Bruise 2 on an adjacent unit. You can't use your weapon for the rest of the battle.\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "Bleed": "10",
+        "Immobile": "2",
+        "Bruise": "2"
+      }
+    }
+  },
+  "Butcher": {
+    "id": "Butcher",
+    "template": "spell",
+    "name_key": "ABILITY_BUTCHER_NAME",
+    "name": "Butcher",
+    "desc_key": "ABILITY_BUTCHER_DESC",
+    "description": "Kill every unit with 3 or less health. They become meat.",
+    "class": "Butcher",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_HealthThreshold": {
+          "threshold_flat": "3",
+          "SpawnThingIfHitKills": "Food",
+          "Die": "1"
+        }
+      }
+    }
+  },
+  "Butcher2": {
+    "id": "Butcher2",
+    "variant_of": "Butcher",
+    "desc_key": "ABILITY_BUTCHER2_DESC",
+    "description": "Kill every unit with 3 or less health. They become meat. Gain 5 health for each unit killed.",
+    "damage_instance": {
+      "effects": {
+        "Conditional_HealthThreshold": {
+          "threshold_flat": "3",
+          "FlatLeech": "5",
+          "SpawnThingIfHitKills": "Food",
+          "Instakill": "999"
+        }
+      }
+    }
+  },
+  "Chonkwalk": {
+    "id": "Chonkwalk",
+    "template": "self_buff",
+    "name_key": "ABILITY_CHONKWALK_NAME",
+    "name": "Chonkwalk",
+    "desc_key": "ABILITY_CHONKWALK_DESC",
+    "description": "Deal 5 damage to yourself. Refresh your movement action.",
+    "class": "Butcher",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "Chonkwalk2": {
+    "id": "Chonkwalk2",
+    "variant_of": "Chonkwalk",
+    "desc_key": "ABILITY_CHONKWALK2_DESC",
+    "description": "Deal 5 damage to yourself. Refresh your movement action.\nPASSIVE: You have Trample.",
+    "bonus_passives": {
+      "Trample": "3"
+    }
+  },
+  "Indigestion_Fart": {
+    "id": "Indigestion_Fart",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "poopfartbehind"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Poison": "3"
+      },
+      "elements": [
+        "Poison"
+      ]
+    }
+  },
+  "Indigestion_Fart2": {
+    "id": "Indigestion_Fart2",
+    "variant_of": "Indigestion_Fart",
+    "graphics": {
+      "particle": "FireBlastMushroom",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Poison": "3",
+        "Burn": "3"
+      },
+      "elements": [
+        "Poison",
+        "Fire"
+      ]
+    }
+  }
+}

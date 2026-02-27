@@ -1,0 +1,160 @@
+{
+  "MoveOne": {
+    "template": "move",
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "MoveTwo": {
+    "template": "move",
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "MoveThree": {
+    "template": "move",
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "MoveFour": {
+    "template": "move",
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "DoubleDistanceMove": {
+    "template": "move",
+    "target": {
+      "max_range": "mov*2"
+    }
+  },
+  "MoveOneTrample": {
+    "template": "move",
+    "target": {
+      "max_range": "1"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    }
+  },
+  "MoveTwoTrample": {
+    "template": "move",
+    "target": {
+      "max_range": "2"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    }
+  },
+  "MoveThreeTrample": {
+    "template": "move",
+    "target": {
+      "max_range": "3"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    }
+  },
+  "MoveFourTrample": {
+    "template": "move",
+    "target": {
+      "max_range": "4"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    }
+  },
+  "FormShrinkFour": {
+    "template": "self_buff",
+    "meta": {
+      "dont_visualize_ai": "true"
+    },
+    "graphics": {
+      "animation": "shrink"
+    },
+    "cost": {
+      "cantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "4"
+        }
+      }
+    }
+  },
+  "FormShrinkThree": {
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "3"
+        }
+      }
+    }
+  },
+  "FormShrinkTwo": {
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "2"
+        }
+      }
+    }
+  },
+  "FormShrinkOne": {
+    "variant_of": "FormShrinkFour",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "1"
+        }
+      }
+    }
+  },
+  "FormGrowTwo": {
+    "template": "self_buff",
+    "meta": {
+      "dont_visualize_ai": "true"
+    },
+    "graphics": {
+      "animation": "grow"
+    },
+    "cost": {
+      "cantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "2"
+        }
+      }
+    }
+  },
+  "FormGrowThree": {
+    "variant_of": "FormGrowTwo",
+    "damage_instance": {
+      "effects": {
+        "FormChange": {
+          "form": "3"
+        }
+      }
+    }
+  },
+  "DoNothing": {
+    "template": "placeholder",
+    "cost": {
+      "cant_cast": "true"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "none",
+      "range_mode": "none"
+    }
+  }
+}

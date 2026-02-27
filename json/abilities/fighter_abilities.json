@@ -1,0 +1,2423 @@
+{
+  "Dash": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_BULLRUSH_NAME",
+      "name_resolved": "Bull Rush",
+      "desc": "ABILITY_BULLRUSH_DESC",
+      "desc_resolved": "Dash forward and attack with knockback.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "sounds": {
+      "ontrigger": "SE_BullRushDash"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {},
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "Dash2": {
+    "variant_of": "Dash",
+    "meta": {
+      "desc": "ABILITY_BULLRUSH2_DESC",
+      "desc_resolved": "Dash forward and attack with knockback. Repeat this if you hit something."
+    },
+    "temporary_effects": {
+      "DashFury": "4"
+    }
+  },
+  "Spin": {
+    "class": "MultiHitMeleeAttackAbility",
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SPIN_NAME",
+      "name_resolved": "Spin",
+      "desc": "ABILITY_SPIN_DESC",
+      "desc_resolved": "Attack everything around you 3 times.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "start": "spinattackstart",
+      "loop": "spinattackloop",
+      "end": "spinattackend"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile",
+      "multihit": "3"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage"
+    }
+  },
+  "Spin2": {
+    "variant_of": "Spin",
+    "meta": {
+      "desc": "ABILITY_SPIN2_DESC",
+      "desc_resolved": "Attack everything around you in a wide area 3 times."
+    },
+    "target": {
+      "aoe_mode": "square"
+    }
+  },
+  "FirePunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_FIREPUNCH_NAME",
+      "name_resolved": "Fire Punch",
+      "desc": "ABILITY_FIREPUNCH_DESC",
+      "desc_resolved": "A melee attack that inflicts Burn 3.",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Burn": "3",
+        "VisualFXTile": "FireBlastSmall"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "FirePunch2": {
+    "variant_of": "FirePunch",
+    "meta": {
+      "desc": "ABILITY_FIREPUNCH2_DESC",
+      "desc_resolved": "A melee attack that inflicts more Burn the more [img:str] you have."
+    },
+    "damage_instance": {
+      "effects": {
+        "Burn": "3+bonus_melee_ability_damage"
+      }
+    }
+  },
+  "IcePunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_ICEPUNCH_NAME",
+      "name_resolved": "Ice Punch",
+      "desc": "ABILITY_ICEPUNCH_DESC",
+      "desc_resolved": "A melee attack that inflicts Freeze.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "particle": "IcePoof"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Freeze": "1"
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "IcePunch2": {
+    "variant_of": "IcePunch",
+    "meta": {
+      "desc": "ABILITY_ICEPUNCH2_DESC",
+      "desc_resolved": "A much stronger melee attack that inflicts Freeze."
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_ability_damage"
+    }
+  },
+  "ThunderPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_THUNDERPUNCH_NAME",
+      "name_resolved": "Thunder Punch",
+      "desc": "ABILITY_THUNDERPUNCH_DESC",
+      "desc_resolved": "A melee attack that has a 25% chance to inflict Stun.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "angryfail"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".25"
+        ],
+        "VisualFXTile": "WaterConduct"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "ThunderPunch2": {
+    "variant_of": "ThunderPunch",
+    "meta": {
+      "desc": "ABILITY_THUNDERPUNCH2_DESC",
+      "desc_resolved": "A melee attack that inflicts Stun."
+    },
+    "damage_instance": {
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "FurySwipes": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_FURYSWIPES_NAME",
+      "name_resolved": "Fury Swipes",
+      "desc": "ABILITY_FURYSWIPES_DESC",
+      "desc_resolved": "A weak melee attack that has a chance to hit multiple times.",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "temporary_effects": {
+      "Fury": "75"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "type": "melee"
+    }
+  },
+  "FurySwipes2": {
+    "variant_of": "FurySwipes",
+    "meta": {
+      "desc": "ABILITY_FURYSWIPES2_DESC",
+      "desc_resolved": "A melee attack that has a chance to hit multiple times."
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee"
+    }
+  },
+  "SideSlash": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SIDESLASH_NAME",
+      "name_resolved": "Side Slash",
+      "desc": "ABILITY_SIDESLASH_DESC",
+      "desc_resolved": "An attack that hits a half circle around you.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "quarterswipe"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "0,",
+          "-1"
+        ],
+        ",",
+        [
+          "0,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "-1"
+        ]
+      ],
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "SideSlash2": {
+    "variant_of": "SideSlash",
+    "meta": {
+      "desc": "ABILITY_SIDESLASH2_DESC",
+      "desc_resolved": "An attack that hits a half circle around you and inflicts Bruise."
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Bruise": "2"
+      }
+    }
+  },
+  "FighterLeap": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_LEAP_NAME",
+      "name_resolved": "Leap",
+      "desc": "ABILITY_LEAP_DESC",
+      "desc_resolved": "Jump to an open tile within range, then inflict Bruise on all adjacent units.",
+      "class": "Fighter",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "4"
+    },
+    "temporary_effects": {
+      "JustInCaseTrample": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "false",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "FighterLeap2": {
+    "variant_of": "FighterLeap",
+    "meta": {
+      "desc": "ABILITY_LEAP2_DESC",
+      "desc_resolved": "Jump to an open tile within range, then damage and inflict Bruise on all adjacent units.",
+      "type_icon": "attack"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "makes_contact": "true"
+    }
+  },
+  "Uppercut": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_UPPERCUT_NAME",
+      "name_resolved": "Uppercut",
+      "desc": "ABILITY_UPPERCUT_DESC",
+      "desc_resolved": "Punch a unit into the air, lobbing it back 3 tiles.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "uppercutatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "KnockUpAndAway": {
+          "stacks": "5+bonus_melee_ability_damage",
+          "distance": "3"
+        }
+      }
+    }
+  },
+  "Uppercut2": {
+    "variant_of": "Uppercut",
+    "meta": {
+      "desc": "ABILITY_UPPERCUT2_DESC",
+      "desc_resolved": "Punch a unit into the air, lobbing it back 3 tiles.\nRefresh your movement action."
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePointsIfHit": "1"
+      }
+    }
+  },
+  "Counter": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_COUNTER_NAME",
+      "name_resolved": "Counter",
+      "desc": "ABILITY_COUNTER_DESC",
+      "desc_resolved": "Counterattack all attacks until your next turn.",
+      "class": "Fighter",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "bruise"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempCounterAttack": "1"
+      }
+    }
+  },
+  "Counter2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_COUNTER_NAME",
+      "name_resolved": "Counter",
+      "desc": "ABILITY_COUNTER2_DESC",
+      "desc_resolved": "Preemptively counterattack all attacks until your next turn.",
+      "class": "Fighter",
+      "type_icon": "defense"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempPreEmptiveCounterAttack": "1"
+      }
+    }
+  },
+  "TailWhip": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_TAILWHIP_NAME",
+      "name_resolved": "Tail Whip",
+      "desc": "ABILITY_TAILWHIP_DESC",
+      "desc_resolved": "An attack that hits 2 tiles in front of and behind you.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "tailwhip"
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "-1,",
+          "0"
+        ],
+        ",",
+        [
+          "-2,",
+          "0"
+        ]
+      ],
+      "max_aoe": "2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee"
+    }
+  },
+  "TailWhip2": {
+    "variant_of": "TailWhip",
+    "meta": {
+      "desc": "ABILITY_TAILWHIP2_DESC",
+      "desc_resolved": "An attack that hits 4 tiles in front of and behind you."
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "2,",
+          "0"
+        ],
+        [
+          "3,",
+          "0"
+        ],
+        [
+          "4,",
+          "0"
+        ],
+        [
+          "-1,",
+          "0"
+        ],
+        [
+          "-2,",
+          "0"
+        ],
+        [
+          "-3,",
+          "0"
+        ],
+        [
+          "-4,",
+          "0"
+        ]
+      ]
+    }
+  },
+  "Poke": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_POKE_NAME",
+      "name_resolved": "Poke",
+      "desc": "ABILITY_POKE_DESC",
+      "desc_resolved": "A melee attack that deals 1 damage.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "tinyPunch"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "melee"
+    }
+  },
+  "Poke2": {
+    "variant_of": "Poke",
+    "meta": {
+      "desc": "ABILITY_POKE2_DESC",
+      "desc_resolved": "A melee attack that deals 1 damage.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    }
+  },
+  "Nip": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_NIP_NAME",
+      "name_resolved": "Nip",
+      "desc": "ABILITY_NIP_DESC",
+      "desc_resolved": "Inflict Bruise on a unit.",
+      "class": "Fighter",
+      "type_icon": "debuff"
+    },
+    "graphics": {
+      "animation": "dashbite"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "Nip2": {
+    "variant_of": "Nip",
+    "meta": {
+      "desc": "ABILITY_NIP2_DESC",
+      "desc_resolved": "Deal 1 damage and inflict Bruise on a unit."
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "Push": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PUSH_NAME",
+      "name_resolved": "Push",
+      "desc": "ABILITY_PUSH_DESC",
+      "desc_resolved": "Knockback a unit 2 tiles.",
+      "class": "Fighter",
+      "type_icon": "melee"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "knockback": "2"
+    }
+  },
+  "Push2": {
+    "variant_of": "Push",
+    "meta": {
+      "desc": "ABILITY_PUSH2_DESC",
+      "desc_resolved": "Turn an adjacent unit around and knock it back 2 tiles."
+    },
+    "damage_instance": {
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "FalconPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_FALCONPUNCH_NAME",
+      "name_resolved": "Falcon Punch",
+      "desc": "ABILITY_FALCONPUNCH_DESC",
+      "desc_resolved": "Charge up a mega punch.\n[s:.7](This punch will be unleashed on your next turn.)[/s]\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "falconPunch"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "delayed_trigger": "true"
+    },
+    "damage_instance": {
+      "damage": "25+bonus_melee_ability_damage",
+      "knockback": "10"
+    }
+  },
+  "FalconPunch2": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_FALCONPUNCH_NAME",
+      "name_resolved": "Falcon Punch",
+      "desc": "ABILITY_FALCONPUNCH2_DESC",
+      "desc_resolved": "Charge up a mega dash attack.\n[s:.7](This punch will be unleashed on your next turn.)[/s]\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "4",
+      "delayed_trigger": "true"
+    },
+    "damage_instance": {
+      "damage": "25+bonus_melee_ability_damage",
+      "knockback": "10"
+    }
+  },
+  "Exert": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_EXERT_NAME",
+      "name_resolved": "Exert",
+      "desc": "ABILITY_EXERT_DESC",
+      "desc_resolved": "Refresh your basic attack and movement action.\nFall asleep at the end of the turn.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "jitter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "effects": {
+        "Drowsy": "1",
+        "RefreshMovePoints": "1",
+        "RefreshActPoints": "1"
+      }
+    }
+  },
+  "Exert2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_EXERT_NAME",
+      "name_resolved": "Exert",
+      "desc": "ABILITY_EXERT2_DESC",
+      "desc_resolved": "Refresh your basic attack and movement action.\nGain +2 [img:str] and +4 [img:spd] until end of turn.\nFall asleep at the end of the turn.",
+      "class": "Fighter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Drowsy": "1",
+        "RefreshMovePoints": "1",
+        "RefreshActPoints": "1",
+        "Temporary": {
+          "status": "SpeedUp",
+          "stacks": "4",
+          "turns": "1"
+        }
+      }
+    }
+  },
+  "Enrage": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_ENRAGE_NAME",
+      "name_resolved": "Enrage",
+      "desc": "ABILITY_ENRAGE_DESC",
+      "desc_resolved": "Give a unit +4 [img:str] and Confusion 2.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "0",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "StrengthUp": "4",
+        "Confusion": "2"
+      }
+    }
+  },
+  "Enrage2": {
+    "variant_of": "Enrage",
+    "meta": {
+      "desc": "ABILITY_ENRAGE2_DESC",
+      "desc_resolved": "Give a unit on any tile +4 [img:str] and Confusion 2."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Tumble": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_TUMBLE_NAME",
+      "name_resolved": "Tumble",
+      "desc": "ABILITY_TUMBLE_DESC",
+      "desc_resolved": "Move one tile diagonally.",
+      "class": "Fighter",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "sync_speed": "22",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "range_mode": "diagcross",
+      "max_range": "level",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    }
+  },
+  "Tumble2": {
+    "variant_of": "Tumble",
+    "meta": {
+      "desc": "ABILITY_TUMBLE2_DESC",
+      "desc_resolved": "Move two tiles diagonally."
+    }
+  },
+  "Confront": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_CONFRONT_NAME",
+      "name_resolved": "Confront",
+      "desc": "ABILITY_CONFRONT_DESC",
+      "desc_resolved": "Move in front of an enemy.",
+      "animate_name": "true",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "100",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_directly_in_front_of_enemy",
+        "must_move"
+      ]
+    }
+  },
+  "Confront2": {
+    "variant_of": "Confront",
+    "meta": {
+      "desc": "ABILITY_CONFRONT2_DESC",
+      "desc_resolved": "Move in front of an enemy.\nYour next action has +30% critical chance.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    },
+    "self_damage": {
+      "effects": {
+        "TempCritChanceUp": "30"
+      }
+    }
+  },
+  "Juiced": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_JUICED_NAME",
+      "name_resolved": "Juiced",
+      "desc": "ABILITY_JUICED_DESC",
+      "desc_resolved": "Your movement range is doubled until the end of the turn.",
+      "class": "Fighter",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "animation": "runincircles",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempMovement": "mov"
+      }
+    }
+  },
+  "Juiced2": {
+    "variant_of": "Juiced",
+    "meta": {
+      "desc": "ABILITY_JUICED2_DESC",
+      "desc_resolved": "Your movement range is doubled and you get +4 [img:str] until the end of the turn."
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "StrengthUp",
+          "stacks": "4",
+          "turns": "1"
+        }
+      }
+    }
+  },
+  "CosmicPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_COSMICPUNCH_NAME",
+      "name_resolved": "Cosmic Punch",
+      "desc": "ABILITY_COSMICPUNCH_DESC",
+      "desc_resolved": "Punch a unit into SPACE!\n[s:.7]They will fall back down at the end of the round.[/s]",
+      "class": "Fighter",
+      "type_icon": "melee",
+      "icon_shell_frame": "attack",
+      "icon_damage_display_eq": "10+bonus_melee_ability_damage"
+    },
+    "graphics": {
+      "animation": "uppercutatk",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Conditional_Displaceable": {
+          "LaunchOffScreen": "10+bonus_melee_ability_damage",
+          "TempInitiativeChange": "-100"
+        },
+        "Else": {
+          "BonusDamage": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "CosmicPunch2": {
+    "variant_of": "CosmicPunch",
+    "meta": {
+      "desc": "ABILITY_COSMICPUNCH2_DESC",
+      "desc_resolved": "Punch a unit into SPACE!\n[s:.7]They will fall back down at the end of the round.\n(This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "FighterTaunt": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_TAUNT_NAME",
+      "name_resolved": "Taunt!",
+      "desc": "ABILITY_TAUNT_DESC",
+      "desc_resolved": "All enemies within 3 tiles move toward you.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "tauntwiggle",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "3",
+      "min_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_Enemy": {
+          "ForceMoveTowards": "1"
+        }
+      }
+    }
+  },
+  "FighterTaunt2": {
+    "variant_of": "FighterTaunt",
+    "meta": {
+      "desc": "ABILITY_TAUNT2_DESC",
+      "desc_resolved": "All enemies within 5 tiles move toward you."
+    },
+    "target": {
+      "max_aoe": "5"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "GravitySlam": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_GRAVITYSLAM_NAME",
+      "name_resolved": "Gravity Slam",
+      "desc": "ABILITY_GRAVITYSLAM_DESC",
+      "desc_resolved": "Jump to a tile and pull enemies toward you when you land.",
+      "class": "Fighter",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_start_animation": "gravitySlamStart",
+      "air_animation": "gravitySlam_air",
+      "jump_attack_animation": "gravitySlamEnd",
+      "land_animation": "none",
+      "apex_distance": "0.875",
+      "apex_time": ".35",
+      "hang_time": ".6",
+      "fixed_jump_height": "3.5",
+      "fixed_jump_speed": "1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "4",
+      "max_aoe": "4",
+      "aoe_mode": "standard",
+      "distance_sort_targets": "1"
+    },
+    "temporary_effects": {
+      "JustInCaseTrample": "0"
+    },
+    "self_damage": {
+      "effects": {
+        "DoScreenShake": "1",
+        "DoDistortionRing": {
+          "speed": "-30",
+          "intensity": "-1",
+          "radius": "4"
+        }
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "false",
+      "type": "spell",
+      "effects": {
+        "Conditional_Enemy": {
+          "DisplaceToAbilityTarget": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "GravitySlam2": {
+    "variant_of": "GravitySlam",
+    "meta": {
+      "desc": "ABILITY_GRAVITYSLAM2_DESC",
+      "desc_resolved": "Jump to a tile and pull enemies toward you when you land.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "Berserk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BERSERK_NAME",
+      "name_resolved": "Berserk",
+      "desc": "ABILITY_BERSERK_DESC",
+      "desc_resolved": "Gain +5 [img:str] and Bruise 5. This ability becomes Berserker Dash.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "5",
+        "Bruise": "5",
+        "TransformAbility": "BerserkDash",
+        "AlternateIdleAnimation": "berserkIdle",
+        "SetDefaultFace": "insane"
+      }
+    }
+  },
+  "Berserk2": {
+    "variant_of": "Berserk",
+    "meta": {
+      "desc": "ABILITY_BERSERK2_DESC",
+      "desc_resolved": "Gain +7 [img:str] and Bruise 3. This ability becomes Berserker Dash+."
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "7",
+        "Bruise": "3",
+        "TransformAbility": "BerserkDash2"
+      }
+    }
+  },
+  "BerserkDash": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_BERSERKERDASH_NAME",
+      "name_resolved": "Berserker Dash",
+      "desc": "ABILITY_BERSERKERDASH_DESC",
+      "desc_resolved": "A short range dash attack.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "2"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage"
+    }
+  },
+  "BerserkDash2": {
+    "variant_of": "BerserkDash",
+    "meta": {
+      "desc": "ABILITY_BERSERKERDASH2_DESC",
+      "desc_resolved": "A dash attack with infinite range."
+    },
+    "target": {
+      "max_range": "10"
+    }
+  },
+  "Challenge": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MOCK_NAME",
+      "name_resolved": "Mock",
+      "desc": "ABILITY_MOCK_DESC",
+      "desc_resolved": "Force a unit to move towards you.\nRELOAD: Kill something.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "howl",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "0",
+      "requires_reload": "true"
+    },
+    "bonus_passives": {
+      "ReloadOnKill": "1"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceMoveTowards": "1"
+      }
+    }
+  },
+  "Challenge2": {
+    "variant_of": "Challenge",
+    "meta": {
+      "desc": "ABILITY_MOCK2_DESC",
+      "desc_resolved": "Force a unit to move towards you.\nRELOAD: Kill something.\nBonus Ability: Slap."
+    },
+    "bonus_passives": {
+      "BonusAbility_DelayedApplication": "Slap"
+    }
+  },
+  "Slap": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SLAP_NAME",
+      "name_resolved": "Slap",
+      "desc": "ABILITY_SLAP_DESC",
+      "desc_resolved": "A weak melee attack.\nRELOAD: Kill something.",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "requires_reload": "true",
+      "mana": "0"
+    },
+    "bonus_passives": {
+      "ReloadOnKill": "1"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage"
+    }
+  },
+  "Stoopzerk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_STOOPZERK_NAME",
+      "name_resolved": "Stoopzerk",
+      "desc": "ABILITY_STOOPZERK_DESC",
+      "desc_resolved": "Your [img:int] becomes 0. You can attack an extra time each turn for the rest of the battle.\nThis ability becomes MORE ANGRIER!!!",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "ExtraBasicAttacks_Status": "1",
+        "IntelligenceUp": "min(-int, 0)",
+        "TransformAbility": "LastThought"
+      }
+    }
+  },
+  "Stoopzerk2": {
+    "variant_of": "Stoopzerk",
+    "meta": {
+      "desc": "ABILITY_STOOPZERK2_DESC",
+      "desc_resolved": "Your [img:int] becomes 0. You can attack an extra time each turn for the rest of the battle.\nThis ability becomes MORE ANGRIER!!!+"
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "max(int, 0)",
+        "TransformAbility": "LastThought2"
+      }
+    }
+  },
+  "LastThought": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MOREANGRIER_NAME",
+      "name_resolved": "MORE ANGRIER!!!",
+      "desc": "ABILITY_MOREANGRIER_DESC",
+      "desc_resolved": "Lose all of your mana and gain that much [img:str] until the end of the turn.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "angry",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "X_is": "current_mana"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempStrengthUp": "X"
+      }
+    }
+  },
+  "LastThought2": {
+    "variant_of": "LastThought",
+    "meta": {
+      "desc": "ABILITY_MOREANGRIER2_DESC",
+      "desc_resolved": "Lose all of your mana and gain that much [img:str], [img:dex], and [img:spd] until the end of the turn."
+    },
+    "damage_instance": {
+      "effects": {
+        "TempStrengthUp": "X",
+        "TempDexterityUp": "X",
+        "TempSpeedUp": "X"
+      }
+    }
+  },
+  "SleeperHold": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SLEEPERHOLD_NAME",
+      "name_resolved": "Sleeper Hold",
+      "desc": "ABILITY_SLEEPERHOLD_DESC",
+      "desc_resolved": "Inflict Sleep on an adjacent unit.",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "SleeperHold2": {
+    "variant_of": "SleeperHold",
+    "meta": {
+      "desc": "ABILITY_SLEEPERHOLD2_DESC",
+      "desc_resolved": "Inflict Sleep and Bruise on an adjacent unit."
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Sleep": "1",
+        "Bruise": "1"
+      }
+    }
+  },
+  "Grapple": {
+    "template": "tile_targeted_melee_attack",
+    "class": "PlaceholderMeleeAttackAbility",
+    "meta": {
+      "name": "ABILITY_GRAPPLE_NAME",
+      "name_resolved": "Grapple",
+      "desc": "ABILITY_GRAPPLE_DESC",
+      "desc_resolved": "Immobilize an adjacent unit for as long as you remain adjacent.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "bearHug"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "knockback_mode": "tile_to_character"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Grappled": "1"
+      }
+    }
+  },
+  "Grapple2": {
+    "variant_of": "Grapple",
+    "meta": {
+      "desc": "ABILITY_GRAPPLE2_DESC",
+      "desc_resolved": "Immobilize an adjacent unit for as long as you remain adjacent.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "ThinkTooHard": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_THINKTOOHARD_NAME",
+      "name_resolved": "Think Too Hard",
+      "desc": "ABILITY_THINKTOOHARD_DESC",
+      "desc_resolved": "Take damage equal to your [img:int].\nThe next spell you cast this turn is free.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true",
+      "manacost_cant_be_zero": "true"
+    },
+    "damage_instance": {
+      "raw_damage": "int",
+      "effects": {
+        "FreeSpell": "1"
+      }
+    }
+  },
+  "ThinkTooHard2": {
+    "variant_of": "ThinkTooHard",
+    "meta": {
+      "desc": "ABILITY_THINKTOOHARD2_DESC",
+      "desc_resolved": "Take damage equal to your [img:int], then your [img:int] becomes 0.\nThe next spell you cast this turn is free."
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "min(-int, 0)"
+      }
+    }
+  },
+  "Zoomzerk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ZOOMZERK_NAME",
+      "name_resolved": "Zoomzerk",
+      "desc": "ABILITY_ZOOMZERK_DESC",
+      "desc_resolved": "Your movement action becomes a dash attack.\nThis ability becomes Reposition.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicMove": "BasicDashAttackMove_NoKnockback",
+        "TransformAbility": "Reposition"
+      }
+    }
+  },
+  "Zoomzerk2": {
+    "variant_of": "Zoomzerk",
+    "meta": {
+      "desc": "ABILITY_ZOOMZERK2_DESC",
+      "desc_resolved": "Your movement action becomes a dash attack. Restore all your mana.\nThis ability becomes Reposition+."
+    },
+    "damage_instance": {
+      "effects": {
+        "FillMana": "1",
+        "TransformAbility": "Reposition2"
+      }
+    }
+  },
+  "Reposition": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_REPOSITION_NAME",
+      "name_resolved": "Reposition",
+      "desc": "ABILITY_REPOSITION_DESC",
+      "desc_resolved": "Move up to two tiles.",
+      "animate_name": "true",
+      "class": "Fighter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "Reposition2": {
+    "variant_of": "Reposition",
+    "meta": {
+      "desc": "ABILITY_REPOSITION2_DESC",
+      "desc_resolved": "Move up to two tiles."
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    }
+  },
+  "FighterBonusThrow": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "ABILITY_FIGHTERTHROW_NAME",
+      "name_resolved": "Throw Weapon",
+      "desc": "ABILITY_FIGHTERTHROW_DESC",
+      "desc_resolved": "Throw your weapon at a unit. The weapon breaks.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "false"
+    },
+    "tags": [
+      "weapon_throw"
+    ],
+    "graphics": {
+      "animation": "weaponthrowstraight"
+    },
+    "cost": {
+      "requires_destructible_weapon": "true",
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "bonus_passives": {
+      "AbilityInheritsWeaponEffects": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "DestroyWeaponThrow": "1"
+      }
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "Bloodzerk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BLOODZERK_NAME",
+      "name_resolved": "Bloodzerk",
+      "desc": "ABILITY_BLOODZERK_DESC",
+      "desc_resolved": "Drop to 1 HP.\nDamage you deal to bleeding units has Lifesteal.\nThis spell becomes Lacerate.",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "SetHealth": "1",
+        "Bloodzerked": "1",
+        "TransformAbility": "Lacerate"
+      }
+    }
+  },
+  "Bloodzerk2": {
+    "variant_of": "Bloodzerk",
+    "meta": {
+      "desc": "ABILITY_BLOODZERK2_DESC",
+      "desc_resolved": "Drop to 1 HP.\nDamage you deal to bleeding units has Lifesteal.\nThis spell becomes Lacerate+.\n[s:.7](This spell costs 0 mana.)[/s]"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformAbility": "Lacerate2"
+      }
+    }
+  },
+  "Lacerate": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_LACERATE_NAME",
+      "name_resolved": "Lacerate",
+      "desc": "ABILITY_LACERATE_DESC",
+      "desc_resolved": "A melee attack that inflicts Bleed 2.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "effects": {
+        "Bleed": "2"
+      }
+    }
+  },
+  "Lacerate2": {
+    "variant_of": "Lacerate",
+    "meta": {
+      "desc": "ABILITY_LACERATE2_DESC",
+      "desc_resolved": "A stronger melee attack that inflicts Bleed 2."
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "ExhaustingBlow": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_EXHAUSTINGBLOW_NAME",
+      "name_resolved": "Exhausting Blow",
+      "desc": "ABILITY_EXHAUSTINGBLOW_DESC",
+      "desc_resolved": "Dash forward one tile and attack with knockback.\n[s:.7](This spell's mana cost increases by 2 at the end of each of your turns.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "cost": {
+      "mana": "2+X*2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "1+bonus_range",
+      "max_aoe": "1",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable",
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsIncreaseEachTurn": "1"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "ExhaustingBlow2": {
+    "variant_of": "ExhaustingBlow",
+    "meta": {
+      "desc": "ABILITY_EXHAUSTINGBLOW2_DESC",
+      "desc_resolved": "Dash forward any number of tiles and attack with knockback.\n[s:.7](This spell's mana cost increases by 2 at the end of each of your turns.)[/s]"
+    },
+    "target": {
+      "max_range": "10"
+    }
+  },
+  "ChaosRampage": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CHAOSRAMPAGE_NAME",
+      "name_resolved": "Chaos Rampage",
+      "desc": "ABILITY_CHAOSRAMPAGE_DESC",
+      "desc_resolved": "Take an extra turn. You have Madness 1 and Confusion 1 on that turn.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "main_turn_only": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeBonusTurnWithStatus": {
+          "Madness": "1",
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "ChaosRampage2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CHAOSRAMPAGE_NAME",
+      "name_resolved": "Chaos Rampage",
+      "desc": "ABILITY_CHAOSRAMPAGE2_DESC",
+      "desc_resolved": "Take an extra turn. You have Madness 1 on that turn.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+      "class": "Fighter",
+      "type_icon": "misc"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "main_turn_only": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeBonusTurnWithStatus": {
+          "Madness": "1"
+        }
+      }
+    }
+  },
+  "MeteorSlam": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_METEORSLAM_NAME",
+      "name_resolved": "Meteor Slam",
+      "desc": "ABILITY_METEORSLAM_DESC",
+      "desc_resolved": "Jump up to 2 tiles.\nDamage, knockback, and inflict Burn 3 on the unit you land on and all adjacent units.\n[s:.7](Adjacent units take half damage.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "aoe_spell_on_land": "true",
+      "jump_attack_animation": "land",
+      "do_damage_immediately": "true",
+      "particle": "Explosion",
+      "palette": "6",
+      "delay": "3",
+      "visual_delay_but_simultaneous_damage": "0",
+      "jump_height_multiplier": "2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2",
+      "max_aoe": "1",
+      "aoe_mode": "square",
+      "restrictions": "none"
+    },
+    "splash_damage": {
+      "damage": "(5+bonus_melee_ability_damage)/2",
+      "knockback": "2",
+      "type": "spell",
+      "effects": {
+        "Burn": "3",
+        "IgnoreSelf": "1"
+      },
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "knockback": "2",
+      "effects": {
+        "Burn": "3",
+        "IgnoreSelf": "1"
+      },
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    }
+  },
+  "MeteorSlam2": {
+    "variant_of": "MeteorSlam",
+    "meta": {
+      "desc": "ABILITY_METEORSLAM2_DESC",
+      "desc_resolved": "Jump up to 5 tiles.\nDamage, knockback, and inflict Burn 3 on the unit you land on and all adjacent units."
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "splash_damage": {
+      "damage": "5+bonus_melee_ability_damage"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "MuscleMemory": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_MUSCLEMEMORY_NAME",
+      "name_resolved": "Muscle Memory",
+      "desc": "ABILITY_MUSCLEMEMORY_DESC",
+      "desc_resolved": "A melee attack that deals 8 damage.\n[s:.7](This spell's damage is reduced by 1 and mana cost is reduced by 2 each time it's cast.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "heaviestMelee"
+    },
+    "target": {
+      "X_is": "cast_count"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "max(8-2*X,0)",
+      "damage_cant_be_zero": "true"
+    },
+    "damage_instance": {
+      "raw_damage": "8-X"
+    }
+  },
+  "MuscleMemory2": {
+    "variant_of": "MuscleMemory",
+    "meta": {
+      "desc": "ABILITY_MUSCLEMEMORY2_DESC",
+      "desc_resolved": "A melee attack that deals 8 damage and inflicts Bruise.\n[s:.7](This spell's damage is reduced by 1 and mana cost is reduced by 2 each time it's cast.)[/s]"
+    },
+    "cost": {
+      "mana": "max(7-2*X,0)"
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "Inhale": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_INHALE_NAME",
+      "name_resolved": "Inhale",
+      "desc": "ABILITY_INHALE_DESC",
+      "desc_resolved": "Suck all units in a straight line 1 tile toward you.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "particle": "fx_windSpell"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "back_orientation"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Inhale2": {
+    "variant_of": "Inhale",
+    "meta": {
+      "desc": "ABILITY_INHALE2_DESC",
+      "desc_resolved": "Suck all units in a straight line 3 tiles toward you."
+    },
+    "damage_instance": {
+      "knockback": "3"
+    }
+  },
+  "OneTwoPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_ONETWOPUNCH_NAME",
+      "name_resolved": "One-Two Punch",
+      "desc": "ABILITY_ONETWOPUNCH_DESC",
+      "desc_resolved": "A melee attack that hits twice. Each punch inflicts Bruise 1.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "bigdoubleswat"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "multihit": "2"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "OneTwoPunch2": {
+    "variant_of": "OneTwoPunch",
+    "meta": {
+      "desc": "ABILITY_ONETWOPUNCH2_DESC",
+      "desc_resolved": "A melee attack that hits thrice! Each punch inflicts Bruise 1."
+    },
+    "graphics": {
+      "animation": "tripleswat"
+    },
+    "target": {
+      "multihit": "3"
+    }
+  },
+  "TeamSpin": {
+    "template": "self_buff",
+    "sub_ability": "Spin",
+    "meta": {
+      "name": "ABILITY_SYNCHROSPIN_NAME",
+      "name_resolved": "Synchro Spin",
+      "desc": "ABILITY_SYNCHROSPIN_DESC",
+      "desc_resolved": "You and each allied cat do a spin attack at the same time.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "prouder"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "aoe_hint_teamcast": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TeamCastAbility": "Spin"
+      }
+    }
+  },
+  "TeamSpin2": {
+    "variant_of": "TeamSpin",
+    "meta": {
+      "desc": "ABILITY_SYNCHROSPIN2_DESC",
+      "desc_resolved": "You and each allied cat do a spin attack at the same time.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "TeamFlex": {
+    "template": "self_buff",
+    "sub_ability": "TeamFlex_Impl",
+    "meta": {
+      "name": "ABILITY_FLEXOFF_NAME",
+      "name_resolved": "Flex Off",
+      "desc": "ABILITY_FLEXOFF_DESC",
+      "desc_resolved": "You and each allied cat gain +2 [img:shield] and knockback adjacent units 2 tiles.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "aoe_hint_teamcast": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TeamCastAbility": "TeamFlex_Impl"
+      }
+    }
+  },
+  "TeamFlex2": {
+    "variant_of": "TeamFlex",
+    "meta": {
+      "desc": "ABILITY_FLEXOFF2_DESC",
+      "desc_resolved": "You and each allied cat gain +2 [img:shield], +2 temporary Brace, and knockback adjacent units 2 tiles."
+    },
+    "damage_instance": {
+      "effects": {
+        "TeamCastAbility": "TeamFlex_Impl2"
+      }
+    }
+  },
+  "TeamFlex_Impl": {
+    "template": "spell",
+    "graphics": {
+      "animation": "flex",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "2"
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "2"
+    }
+  },
+  "TeamFlex_Impl2": {
+    "variant_of": "TeamFlex_Impl",
+    "self_damage": {
+      "effects": {
+        "Shield": "2",
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "2",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "Huddle": {
+    "template": "self_buff",
+    "sub_ability": "Huddle_Impl",
+    "meta": {
+      "name": "ABILITY_HUDDLE_NAME",
+      "name_resolved": "Huddle",
+      "desc": "ABILITY_HUDDLE_DESC",
+      "desc_resolved": "You and each allied cat give adjacent units +1 Damage and +2 [img:spd].",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "aoe_hint_teamcast": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TeamCastAbility": "Huddle_Impl"
+      }
+    }
+  },
+  "Huddle2": {
+    "variant_of": "Huddle",
+    "meta": {
+      "desc": "ABILITY_HUDDLE2_DESC",
+      "desc_resolved": "You and each allied cat give adjacent units +1 Damage and +2 [img:spd].\n[s:.7](This spell is free the first time it's cast each battle.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "bonus_passives": {
+      "FreeFirstCastEachMatch": "1"
+    }
+  },
+  "Huddle_Impl": {
+    "template": "spell",
+    "graphics": {
+      "animation": "celebrate",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DamageUp": "1",
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "RagePunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_RAGEPUNCH_NAME",
+      "name_resolved": "Rage Punch",
+      "desc": "ABILITY_RAGEPUNCH_DESC",
+      "desc_resolved": "A melee attack that increases its damage by 1 each time you take damage.",
+      "class": "Fighter"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsTimesDamageTaken": "1"
+    },
+    "damage_instance": {
+      "damage": "1+X"
+    }
+  },
+  "RagePunch2": {
+    "variant_of": "RagePunch",
+    "meta": {
+      "desc": "ABILITY_RAGEPUNCH2_DESC",
+      "desc_resolved": "A melee attack that increases its damage by 1 each time you take damage.\n[s:.7](This spell starts at 5 damage.)[/s]"
+    },
+    "damage_instance": {
+      "damage": "5+X"
+    }
+  },
+  "BreakingPoint": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BREAKINGPOINT_NAME",
+      "name_resolved": "Breaking Point",
+      "desc": "ABILITY_BREAKINGPOINT_DESC",
+      "desc_resolved": "Deal damage, knockback, and knockback damage equal to your [img:str].\nReduce this spell's mana cost by 1 each time you take damage.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "shoulder"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "15-X"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsTimesDamageTaken": "1"
+    },
+    "damage_instance": {
+      "damage": "str",
+      "knockback": "str",
+      "effects": {
+        "OverrideKnockbackDamage": "str"
+      }
+    }
+  },
+  "BreakingPoint2": {
+    "variant_of": "BreakingPoint",
+    "meta": {
+      "desc": "ABILITY_BREAKINGPOINT2_DESC",
+      "desc_resolved": "Deal damage, knockback, and knockback damage equal to your [img:str].\nReduce this spell's mana cost by 2 each time you take damage.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "cost": {
+      "mana": "15-X*2"
+    }
+  },
+  "AssertDominance": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_ASSERTDOMINANCE_NAME",
+      "name_resolved": "Assert Dominance",
+      "desc": "ABILITY_ASSERTDOMINANCE_DESC",
+      "desc_resolved": "A weak melee attack. If this kills anything, you become the Alpha. If you are the Alpha, this spell deals 5 additional damage and inflicts Bruise.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "splashatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "X_is": "you_are_the_alpha"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage+X*5",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "AlphaCat": "1"
+        },
+        "Conditional_SourceHasStatus": {
+          "status": "AlphaCat",
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "AssertDominance2": {
+    "variant_of": "AssertDominance",
+    "meta": {
+      "desc": "ABILITY_ASSERTDOMINANCE2_DESC",
+      "desc_resolved": "A weak melee attack. If this kills anything, you become the Alpha and gain +2 [img:str]. If you are the Alpha, this spell deals 5 additional damage and inflicts Bruise."
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "AlphaCat": "1",
+          "StrengthUp": "2"
+        }
+      }
+    }
+  },
+  "DumbMove": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DUMBMOVE_NAME",
+      "name_resolved": "1D Chess",
+      "desc": "ABILITY_DUMBMOVE_DESC",
+      "desc_resolved": "Move toward the closest enemy. The dumber you are, the farther you move.",
+      "class": "Fighter",
+      "type_icon": "movement"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "graphics": {},
+    "damage_instance": {
+      "effects": {
+        "ForceMoveTowardsEnemies": "DumbMove_Impl"
+      }
+    }
+  },
+  "DumbMove2": {
+    "variant_of": "DumbMove",
+    "meta": {
+      "desc": "ABILITY_DUMBMOVE2_DESC",
+      "desc_resolved": "Move toward the closest enemy. The dumber you are, the farther you move.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "DumbMove_Impl": {
+    "template": "move",
+    "target": {
+      "max_range": "max(5-int, 1)"
+    }
+  },
+  "ReflexPunchJab": {
+    "template": "melee_attack",
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "ReflexPunchJab2": {
+    "template": "melee_attack",
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "SuckerPunch": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SUCKERPUNCH_NAME",
+      "name_resolved": "Sucker Punch",
+      "desc": "ABILITY_SUCKERPUNCH_DESC",
+      "desc_resolved": "The next time an enemy moves through an adjacent tile, cancel its movement and attack it.",
+      "class": "Fighter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "Trapper_Status": "1"
+      }
+    }
+  },
+  "SuckerPunch2": {
+    "variant_of": "SuckerPunch",
+    "meta": {
+      "desc": "ABILITY_SUCKERPUNCH2_DESC",
+      "desc_resolved": "The next time an enemy moves through an adjacent tile, cancel its movement and attack it.\nBonus Passive: While it's not your turn, your basic attack inflicts Bruise 2."
+    },
+    "bonus_passives": {
+      "PassiveWhileNotTakingTurn": {
+        "AddStatusToBasicAttack": {
+          "Bruise": "2"
+        }
+      }
+    }
+  },
+  "Stick": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_STICK_NAME",
+      "name_resolved": "Stick!",
+      "desc": "ABILITY_STICK_DESC",
+      "desc_resolved": "Equip a temporary Stick!\n[s:.7](Your weapon slot must be empty.)[/s]",
+      "type_icon": "misc",
+      "class": "Fighter"
+    },
+    "target": {
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_cat_with_empty_weapon_slot"
+    },
+    "graphics": {
+      "animation": "equipWeapon"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Craft": {
+          "pool": "stick",
+          "slot": "weapon",
+          "works_with_tech": "true"
+        }
+      }
+    }
+  },
+  "Stick2": {
+    "variant_of": "Stick",
+    "meta": {
+      "desc": "ABILITY_STICK2_DESC",
+      "desc_resolved": "Equip a temporary Stick! Maybe even a big one?\n[s:.7](Your weapon slot must be empty.)[/s]\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "Craft": {
+          "pool": "allsticks"
+        }
+      }
+    }
+  },
+  "Hurl": {
+    "template": "throw_attack",
+    "meta": {
+      "name": "ABILITY_HURL_NAME",
+      "name_resolved": "Hurl",
+      "desc": "ABILITY_HURL_DESC",
+      "desc_resolved": "Toss an adjacent unit at a random unit.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "2",
+      "max_range": "20",
+      "restrictions": "must_have_enemy"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "blocked_damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "Hurl2": {
+    "variant_of": "Hurl",
+    "meta": {
+      "desc": "ABILITY_HURL2_DESC",
+      "desc_resolved": "Toss an adjacent unit at a random unit.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "BigPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BIGPUNCH_NAME",
+      "name_resolved": "Big Punch",
+      "desc": "ABILITY_BIGPUNCH_DESC",
+      "desc_resolved": "A melee attack.\nThis spell's mana cost increases by 2 each time it's cast.",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "heavyMelee"
+    },
+    "target": {
+      "X_is": "cast_count"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3+X*2"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_ability_damage"
+    }
+  },
+  "BigPunch2": {
+    "variant_of": "BigPunch",
+    "meta": {
+      "desc": "ABILITY_BIGPUNCH2_DESC",
+      "desc_resolved": "A melee attack.\nThis spell's mana cost increases by 1 each time it's cast."
+    },
+    "cost": {
+      "mana": "3+X*1"
+    }
+  },
+  "Pawbreaker": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PAWBREAKER_NAME",
+      "name_resolved": "Paw Breaker",
+      "desc": "ABILITY_PAWBREAKER_DESC",
+      "desc_resolved": "A huge punch that breaks your paw... (You get -1 [img:str] permanently.)",
+      "class": "Fighter"
+    },
+    "graphics": {
+      "animation": "heaviestMelee"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "15+bonus_melee_ability_damage",
+      "effects": {
+        "CanApplyToInanimate": {
+          "ApplyToSource": {
+            "SpecificInjury": "str"
+          }
+        }
+      }
+    }
+  },
+  "Pawbreaker2": {
+    "variant_of": "Pawbreaker",
+    "meta": {
+      "desc": "ABILITY_PAWBREAKER2_DESC",
+      "desc_resolved": "A huge punch that inflicts Bruise and Stun, and breaks your paw... (You get -1 [img:str] permanently.)"
+    },
+    "damage_instance": {
+      "damage": "15+bonus_melee_ability_damage",
+      "effects": {
+        "Bruise": "1",
+        "Stun": "1"
+      }
+    }
+  },
+  "Ram": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_RAM_NAME",
+      "name_resolved": "Ram",
+      "desc": "ABILITY_RAM_DESC",
+      "desc_resolved": "Knock back a unit 4 tiles, then dash forward and attack it.",
+      "class": "Fighter",
+      "icon_damage_display_eq": "3+bonus_melee_ability_damage",
+      "icon_shell_frame": "attack"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "knockback": "4",
+      "effects": {
+        "ApplyToSource": {
+          "ForceUseAbility": "Ram_chained"
+        }
+      }
+    }
+  },
+  "Ram_chained": {
+    "template": "dash_attack",
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "Ram2": {
+    "variant_of": "Ram",
+    "meta": {
+      "desc": "ABILITY_RAM2_DESC",
+      "desc_resolved": "Knock back a unit 10 tiles, then dash forward and attack it.",
+      "icon_damage_display_suffix": "x2",
+      "icon_shell_frame": "multihit_attack"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "knockback": "10"
+    }
+  }
+}

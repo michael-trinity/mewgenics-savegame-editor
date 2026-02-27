@@ -1,0 +1,202 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unknown": {
+      "dialog": "NPC_FRANK_UNKNOWN_1",
+      "get": "npc_reward"
+    },
+    "also": {
+      "dialog": "NPC_FRANK_ALSO_1"
+    },
+    "unprompted": {
+      "do_random_sequence": [
+        "unprompted_a,",
+        "unprompted_b,",
+        "unprompted_c,",
+        "unprompted_d,",
+        "unprompted_e,",
+        "unprompted_f,",
+        "unprompted_g,",
+        "unprompted_h,",
+        "unprompted_i"
+      ]
+    },
+    "unprompted_a": {
+      "dialog": "NPC_FRANK_UNPROMPTED_A_3",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_b": {
+      "dialog": "NPC_FRANK_UNPROMPTED_B_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_c": {
+      "dialog": "NPC_FRANK_UNPROMPTED_C_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_d": {
+      "dialog": "NPC_FRANK_UNPROMPTED_D_3",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_e": {
+      "dialog": "NPC_FRANK_UNPROMPTED_E_3",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_f": {
+      "dialog": "NPC_FRANK_UNPROMPTED_F_3",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_g": {
+      "dialog": "NPC_FRANK_UNPROMPTED_G_3",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_h": {
+      "dialog": "NPC_FRANK_UNPROMPTED_H_5",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_i": {
+      "dialog": "NPC_FRANK_UNPROMPTED_I_5",
+      "do_sequence": "forward_to_tips"
+    },
+    "forward_to_tips": {
+      "do_random_sequence": [
+        "frank_tips_1,",
+        "frank_tips_2,",
+        "frank_tips_3,",
+        "frank_tips_4,frank_tips_5",
+        ",frank_tips_6,",
+        "frank_tips_7,",
+        "frank_tips_8,",
+        "frank_tips_9,",
+        "frank_tips_10"
+      ]
+    },
+    "frank_tips_1": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_1_4"
+    },
+    "frank_tips_2": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_2_3"
+    },
+    "frank_tips_3": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_3_3"
+    },
+    "frank_tips_4": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_4_3"
+    },
+    "frank_tips_5": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_5_5"
+    },
+    "frank_tips_6": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_6_3"
+    },
+    "frank_tips_7": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_7_3"
+    },
+    "frank_tips_8": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_8_3"
+    },
+    "frank_tips_9": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_9_2"
+    },
+    "frank_tips_10": {
+      "dialog": "NPC_FRANK_FRANK_TIPS_10_4"
+    },
+    "house_upgrade_attic": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_ATTIC_9",
+      "set_state": "zoomedout",
+      "get": "npc_reward"
+    },
+    "house_upgrade_mediumhouse": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_MEDIUMHOUSE_21",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "house_upgrade_largehouse": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_LARGEHOUSE_13",
+      "set_state": "zoomedout",
+      "get": "npc_reward"
+    },
+    "house_upgrade_4throom": {
+      "set_state": "idle",
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_4THROOM_17",
+      "get": "npc_reward"
+    },
+    "frank_max_intro": {
+      "dialog": "NPC_FRANK_FRANK_MAX_INTRO_8",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "frank_max_repeating": {
+      "do_random_sequence": [
+        "frank_max1,",
+        "frank_max2,",
+        "frank_max3,",
+        "frank_max4,",
+        "frank_max5"
+      ]
+    },
+    "frank_max1": {
+      "dialog": "NPC_FRANK_FRANK_MAX1_7",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "frank_max2": {
+      "dialog": "NPC_FRANK_FRANK_MAX2_6",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "frank_max3": {
+      "set_state": "closeup",
+      "dialog": "NPC_FRANK_FRANK_MAX3_7",
+      "get": "npc_reward"
+    },
+    "frank_max4": {
+      "dialog": "NPC_FRANK_FRANK_MAX4_7",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "frank_max5": {
+      "set_state": "idle",
+      "dialog": "NPC_FRANK_FRANK_MAX5_7",
+      "get": "npc_reward"
+    },
+    "house_upgrade_basement": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_BASEMENT_1",
+      "get": "npc_reward"
+    },
+    "house_upgrade_basement2": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_BASEMENT2_1",
+      "get": "npc_reward"
+    },
+    "house_upgrade_basement3": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_BASEMENT3_1",
+      "get": "npc_reward"
+    },
+    "house_upgrade_basement4": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_BASEMENT4_1",
+      "get": "npc_reward"
+    },
+    "house_upgrade_basement5": {
+      "dialog": "NPC_FRANK_HOUSE_UPGRADE_BASEMENT5_1",
+      "get": "npc_reward"
+    },
+    "frank_caves_intro": {
+      "dialog": "NPC_FRANK_FRANK_CAVES_INTRO_13",
+      "set_state": "closeup"
+    },
+    "frank_terminator2": {
+      "set_state": "zoomedout",
+      "dialog": "NPC_FRANK_FRANK_TERMINATOR2_15"
+    },
+    "frank_ending": {
+      "set_state": "idle",
+      "dialog": "NPC_FRANK_FRANK_ENDING_16"
+    }
+  }
+}

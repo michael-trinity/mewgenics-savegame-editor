@@ -1,0 +1,7070 @@
+{
+  "0": {
+    "#": "ID",
+    "0": "is",
+    "reserved": "for",
+    "empty!": "editor",
+    "image": "empty.png",
+    "name": "Empty"
+  },
+  "1": {
+    "editor": {
+      "category": "1",
+      "image": [
+        "shadow.png",
+        "cat.png"
+      ],
+      "image_tint": [
+        "blue",
+        "none"
+      ],
+      "paint": "false",
+      "name": "Player Cat Spawn"
+    },
+    "utility": "PlayerSpawn"
+  },
+  "11": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "rat.png"
+      ],
+      "paint": "false",
+      "name": "Rat"
+    },
+    "object": "Rat",
+    "value": "1"
+  },
+  "12": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "fly.png"
+      ],
+      "paint": "false",
+      "name": "Fly"
+    },
+    "object": "Fly",
+    "value": "0"
+  },
+  "13": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "worm.png"
+      ],
+      "paint": "false",
+      "name": "Worm"
+    },
+    "object": "Worm"
+  },
+  "14": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "madlad.png"
+      ],
+      "paint": "false",
+      "name": "MadLad"
+    },
+    "object": "MadLad"
+  },
+  "15": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gasser.png"
+      ],
+      "paint": "false",
+      "name": "Gasser"
+    },
+    "object": "Gasser"
+  },
+  "16": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "kitten.png"
+      ],
+      "paint": "false",
+      "name": "Kitten"
+    },
+    "object": "Kitten",
+    "value": "1"
+  },
+  "17": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy.png"
+      ],
+      "paint": "false",
+      "name": "Mangy"
+    },
+    "object": "Mangy",
+    "value": "1"
+  },
+  "18": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tomtom.png"
+      ],
+      "paint": "false",
+      "name": "Tom Tom"
+    },
+    "object": "TomTom",
+    "value": "1"
+  },
+  "19": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bombfly.png"
+      ],
+      "paint": "false",
+      "name": "Bomb Fly"
+    },
+    "object": "BombFly"
+  },
+  "20": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "leaper.png"
+      ],
+      "paint": "false",
+      "name": "Leaper"
+    },
+    "object": "Leaper",
+    "value": "1"
+  },
+  "21": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "lumpy.png"
+      ],
+      "paint": "false",
+      "name": "Lumpy"
+    },
+    "object": "Lumpy",
+    "value": "1"
+  },
+  "22": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "catcaller.png"
+      ],
+      "paint": "false",
+      "name": "Cat Caller"
+    },
+    "object": "CatCaller",
+    "value": ".5"
+  },
+  "23": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "pinky.png"
+      ],
+      "paint": "false",
+      "name": "Pinky"
+    },
+    "object": "Pinky",
+    "value": ".5"
+  },
+  "24": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "maggot.png"
+      ],
+      "paint": "false",
+      "name": "Maggot"
+    },
+    "object": "Maggot",
+    "value": "0"
+  },
+  "25": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "flea.png"
+      ],
+      "paint": "false",
+      "name": "Flea"
+    },
+    "object": "Flea",
+    "value": "0"
+  },
+  "26": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pooter.png"
+      ],
+      "paint": "false",
+      "name": "Pooter"
+    },
+    "object": "Pooter",
+    "value": "1"
+  },
+  "27": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "hive.png"
+      ],
+      "paint": "false",
+      "name": "Hive"
+    },
+    "object": "Hive",
+    "value": "1"
+  },
+  "28": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "floatinghive.png"
+      ],
+      "paint": "false",
+      "name": "Floating Hive"
+    },
+    "object": "FloatingHive",
+    "value": "1"
+  },
+  "29": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "multicat.png"
+      ],
+      "paint": "false",
+      "name": "Multi Head Cat"
+    },
+    "object": "Multicat",
+    "value": "1"
+  },
+  "30": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "glassspitter.png"
+      ],
+      "paint": "false",
+      "name": "Glass Spitter"
+    },
+    "object": "GlassSpitter",
+    "value": "1"
+  },
+  "31": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "siren.png"
+      ],
+      "paint": "false",
+      "name": "Siren"
+    },
+    "object": "Siren",
+    "value": ".5"
+  },
+  "32": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "jekyll.png"
+      ],
+      "paint": "false",
+      "name": "Jekyll & Hyde"
+    },
+    "object": "Jekyll",
+    "value": "1"
+  },
+  "33": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "spiky.png"
+      ],
+      "paint": "false",
+      "name": "Spiky Cat"
+    },
+    "object": "SpikedCat",
+    "value": "1"
+  },
+  "34": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "popeye.png"
+      ],
+      "paint": "false",
+      "name": "Popeye Cat"
+    },
+    "object": "PopeyeCat",
+    "value": "1.5"
+  },
+  "35": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "gassy.png"
+      ],
+      "paint": "false",
+      "name": "Gassy Cat"
+    },
+    "object": "GassyCat",
+    "value": "1"
+  },
+  "36": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sharky.png"
+      ],
+      "paint": "false",
+      "name": "Sharky"
+    },
+    "object": "SharkyCat",
+    "value": "1"
+  },
+  "37": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "boomer.png"
+      ],
+      "paint": "false",
+      "name": "Boomer"
+    },
+    "object": "BoomerCat",
+    "value": "1"
+  },
+  "38": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "waterkitten.png"
+      ],
+      "paint": "false",
+      "name": "Water Kitten"
+    },
+    "object": "WaterKitten",
+    "value": "1"
+  },
+  "39": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cager.png"
+      ],
+      "paint": "false",
+      "name": "Cager Maggot"
+    },
+    "object": "TumorousMaggot",
+    "value": "1"
+  },
+  "40": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "chargeymaggot.png"
+      ],
+      "paint": "false",
+      "name": "Chargey Maggot"
+    },
+    "object": "ChargeyMaggot",
+    "value": "1"
+  },
+  "41": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "swappymaggot.png"
+      ],
+      "paint": "false",
+      "name": "Swapper Maggot"
+    },
+    "object": "SwappyMaggot",
+    "value": "1"
+  },
+  "42": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tarbaby.png"
+      ],
+      "paint": "false",
+      "name": "Tar Baby"
+    },
+    "object": "TarBaby",
+    "value": "1"
+  },
+  "43": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "chumbag.png"
+      ],
+      "paint": "false",
+      "name": "Chum Bag"
+    },
+    "object": "ChumBag",
+    "value": "1"
+  },
+  "44": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "chummy.png"
+      ],
+      "paint": "false",
+      "name": "Chummy"
+    },
+    "object": "Chummy",
+    "value": "1"
+  },
+  "45": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "host.png"
+      ],
+      "paint": "false",
+      "name": "Host"
+    },
+    "object": "Host",
+    "value": "1"
+  },
+  "46": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pile.png"
+      ],
+      "paint": "false",
+      "name": "Pile"
+    },
+    "object": "Pile",
+    "value": "1"
+  },
+  "47": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "floater.png"
+      ],
+      "paint": "false",
+      "name": "Floater"
+    },
+    "object": "Floater",
+    "value": "1"
+  },
+  "48": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "waterleech.png"
+      ],
+      "paint": "false",
+      "name": "Water Leech"
+    },
+    "object": "WaterLeech",
+    "value": "1"
+  },
+  "49": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "meatminion.png"
+      ],
+      "paint": "false",
+      "name": "Meat Minion"
+    },
+    "object": "MeatMinion"
+  },
+  "50": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "dip.png"
+      ],
+      "paint": "false",
+      "name": "Dip"
+    },
+    "object": "Dip",
+    "value": "0"
+  },
+  "51": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "daddyshark.png"
+      ],
+      "paint": "false",
+      "name": "Daddy Shark"
+    },
+    "object": "DaddyShark",
+    "value": "2"
+  },
+  "52": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "babyshark.png"
+      ],
+      "paint": "false",
+      "name": "Baby Shark"
+    },
+    "object": "BabyShark",
+    "value": "1"
+  },
+  "53": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetus.png"
+      ],
+      "paint": "false",
+      "name": "Fetus"
+    },
+    "object": "Fetus",
+    "value": "1"
+  },
+  "54": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusgusher.png"
+      ],
+      "paint": "false",
+      "name": "Fetus Gusher"
+    },
+    "object": "FetusGusher",
+    "value": "1"
+  },
+  "55": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tentickles.png"
+      ],
+      "paint": "false",
+      "name": "Ten Tickles"
+    },
+    "object": "TenTickles",
+    "value": "1"
+  },
+  "56": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "kirbyfetus.png"
+      ],
+      "paint": "false",
+      "name": "Korbee"
+    },
+    "object": "KirbyFetus",
+    "value": "1"
+  },
+  "57": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "albinotomtom.png"
+      ],
+      "paint": "false",
+      "name": "Albino TomTom"
+    },
+    "object": "AlbinoTomTom",
+    "value": "1"
+  },
+  "58": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "toadie.png"
+      ],
+      "paint": "false",
+      "name": "Toadie"
+    },
+    "object": "Toadie",
+    "value": "1"
+  },
+  "59": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "toadie_hidden.png"
+      ],
+      "paint": "false",
+      "name": "Toadie (hidden)"
+    },
+    "object": "Toadie_Hidden",
+    "value": "1"
+  },
+  "60": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "spidercat.png"
+      ],
+      "paint": "false",
+      "name": "Spider Cat"
+    },
+    "object": "SpiderCat",
+    "value": "1"
+  },
+  "61": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tallspidercat.png"
+      ],
+      "paint": "false",
+      "name": "Tall Spider Cat"
+    },
+    "object": "TallSpiderCat",
+    "value": "1.5"
+  },
+  "62": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bat.png"
+      ],
+      "paint": "false",
+      "name": "Bat"
+    },
+    "object": "Bat",
+    "value": "1"
+  },
+  "63": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "braindrain.png"
+      ],
+      "paint": "false",
+      "name": "Brain Drain"
+    },
+    "object": "BrainDrain",
+    "value": "1"
+  },
+  "64": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "skullooze.png"
+      ],
+      "paint": "false",
+      "name": "Skull Ooze"
+    },
+    "object": "SkullOoze",
+    "value": "1"
+  },
+  "65": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megafetus.png"
+      ],
+      "paint": "false",
+      "name": "Mega Fetus"
+    },
+    "object": "MegaFetus",
+    "value": "2"
+  },
+  "66": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "zombiecat.png"
+      ],
+      "paint": "false",
+      "name": "Zombie Cat"
+    },
+    "object": "ZombieCat",
+    "value": "1"
+  },
+  "67": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "skeletoncat.png"
+      ],
+      "paint": "false",
+      "name": "Skeleton Cat"
+    },
+    "object": "SkeletonCat",
+    "value": "1"
+  },
+  "68": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tallskeletoncat.png"
+      ],
+      "paint": "false",
+      "name": "Tall Skeleton Cat"
+    },
+    "object": "TallSkeletonCat",
+    "value": "1.5"
+  },
+  "69": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "wolfcat.png"
+      ],
+      "paint": "false",
+      "name": "Wolf Cat"
+    },
+    "object": "WolfCat",
+    "value": "1"
+  },
+  "70": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "golemcat.png"
+      ],
+      "paint": "false",
+      "name": "Golem Cat"
+    },
+    "object": "GolemCat"
+  },
+  "71": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tatters.png"
+      ],
+      "paint": "false",
+      "name": "Tatters"
+    },
+    "object": "Tatters",
+    "value": "1"
+  },
+  "72": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "spookie.png"
+      ],
+      "paint": "false",
+      "name": "Spookie"
+    },
+    "object": "Spookie",
+    "value": "1"
+  },
+  "73": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "scary.png"
+      ],
+      "paint": "false",
+      "name": "Scary"
+    },
+    "object": "Scary",
+    "value": "1"
+  },
+  "74": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "reaper.png"
+      ],
+      "paint": "false",
+      "name": "Reaper"
+    },
+    "object": "Reaper",
+    "value": "1.5"
+  },
+  "75": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tallrobes.png"
+      ],
+      "paint": "false",
+      "name": "Tall Robes"
+    },
+    "object": "TallRobes",
+    "value": "1.5"
+  },
+  "76": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "shambler.png"
+      ],
+      "paint": "false",
+      "name": "Shambler"
+    },
+    "object": "Shambler",
+    "value": "2"
+  },
+  "77": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "graveworm.png"
+      ],
+      "paint": "false",
+      "name": "GraveWorm"
+    },
+    "object": "GraveWorm",
+    "value": "1"
+  },
+  "78": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "buttzombie.png"
+      ],
+      "paint": "false",
+      "name": "Butt Zombie"
+    },
+    "object": "ButtZombie",
+    "value": "1"
+  },
+  "79": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "tinyspider.png"
+      ],
+      "paint": "false",
+      "name": "Tiny Spider"
+    },
+    "object": "TinySpider",
+    "value": "0"
+  },
+  "80": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "wisp.png"
+      ],
+      "paint": "false",
+      "name": "Wisp"
+    },
+    "object": "Wisp",
+    "value": ".5"
+  },
+  "81": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "rattlesnake.png"
+      ],
+      "paint": "false",
+      "name": "Rattlesnek"
+    },
+    "object": "RattleSnake",
+    "value": ".5"
+  },
+  "82": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "skeletonshambler.png"
+      ],
+      "paint": "false",
+      "name": "Skeleton Shambler"
+    },
+    "object": "SkeletonShambler",
+    "value": "2"
+  },
+  "83": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "thump.png"
+      ],
+      "paint": "false",
+      "name": "Thump"
+    },
+    "object": "Thump",
+    "value": "2"
+  },
+  "84": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "flyswarm.png"
+      ],
+      "paint": "false",
+      "name": "Fly Swarm"
+    },
+    "object": "FlySwarm",
+    "value": "1"
+  },
+  "85": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "snakeybones.png"
+      ],
+      "paint": "false",
+      "name": "Bone Worm"
+    },
+    "object": "SnakeyBones",
+    "value": "1"
+  },
+  "86": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "carcus.png"
+      ],
+      "paint": "false",
+      "name": "Carcus"
+    },
+    "object": "Carcus",
+    "value": "1"
+  },
+  "87": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "suseuspeashy.png"
+      ],
+      "paint": "false",
+      "name": "Peashy"
+    },
+    "object": "Peashy",
+    "value": "1"
+  },
+  "88": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "babydeathworm.png"
+      ],
+      "paint": "false",
+      "name": "BabyDeathWorm"
+    },
+    "object": "BabyDeathWorm",
+    "value": "1"
+  },
+  "89": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "deathworm.png"
+      ],
+      "paint": "false",
+      "name": "Death Worm"
+    },
+    "object": "DeathWorm",
+    "value": "2"
+  },
+  "90": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "scorpioncat.png"
+      ],
+      "paint": "false",
+      "name": "Scorpion Cat"
+    },
+    "object": "ScorpionCat",
+    "value": "1"
+  },
+  "91": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy2.png"
+      ],
+      "paint": "false",
+      "name": "Mangy 2"
+    },
+    "object": "Mangy2",
+    "value": "1"
+  },
+  "92": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "guncat.png"
+      ],
+      "paint": "false",
+      "name": "Gun Cat"
+    },
+    "object": "GunCat",
+    "value": "1"
+  },
+  "93": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "hornycat.png"
+      ],
+      "paint": "false",
+      "name": "Horny Cat"
+    },
+    "object": "HornyCat",
+    "value": "1"
+  },
+  "94": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "atomickitten.png"
+      ],
+      "paint": "false",
+      "name": "Atomic Kitten"
+    },
+    "object": "AtomicKitten",
+    "value": "1"
+  },
+  "95": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "robotom.png"
+      ],
+      "paint": "false",
+      "name": "Robo Tom"
+    },
+    "object": "RoboTom",
+    "value": "1"
+  },
+  "96": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "catcultist.png"
+      ],
+      "paint": "false",
+      "name": "Cat Cultist"
+    },
+    "object": "CatCultist",
+    "value": "1"
+  },
+  "97": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cultist.png"
+      ],
+      "paint": "false",
+      "name": "Cultist"
+    },
+    "object": "Cultist",
+    "value": "1"
+  },
+  "98": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "zealot.png"
+      ],
+      "paint": "false",
+      "name": "Zealot"
+    },
+    "object": "CultistZealot",
+    "value": "1"
+  },
+  "99": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "mutant.png"
+      ],
+      "paint": "false",
+      "name": "Mutant"
+    },
+    "object": "CultistMutant",
+    "value": "1.5"
+  },
+  "100": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bishop.png"
+      ],
+      "paint": "false",
+      "name": "Bishop"
+    },
+    "object": "CultistBishop",
+    "value": "2"
+  },
+  "101": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bishophat.png"
+      ],
+      "paint": "false",
+      "name": "Bishop Hat"
+    },
+    "object": "BishopHat",
+    "value": "1"
+  },
+  "102": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "lovebot.png"
+      ],
+      "paint": "false",
+      "name": "Love Bot"
+    },
+    "object": "LoveBot",
+    "value": "1"
+  },
+  "103": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "securitybot.png"
+      ],
+      "paint": "false",
+      "name": "Security Bot"
+    },
+    "object": "SecurityBot",
+    "value": "1"
+  },
+  "104": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "killdozer.png"
+      ],
+      "paint": "false",
+      "name": "Killdozer"
+    },
+    "object": "KillDozer",
+    "value": "2"
+  },
+  "105": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "carnibulb.png"
+      ],
+      "paint": "false",
+      "name": "Carnibulb"
+    },
+    "object": "Carnibulb",
+    "value": "2"
+  },
+  "106": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "geolad.png"
+      ],
+      "paint": "false",
+      "name": "Geo Lad"
+    },
+    "object": "GeoLad",
+    "value": "1"
+  },
+  "107": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bramblebaby.png"
+      ],
+      "paint": "false",
+      "name": "Bramble Baby"
+    },
+    "object": "BrambleBaby",
+    "value": "1"
+  },
+  "108": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "hemlock.png"
+      ],
+      "paint": "false",
+      "name": "Hemlock"
+    },
+    "object": "Hemlock",
+    "value": "1"
+  },
+  "109": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "nettle.png"
+      ],
+      "paint": "false",
+      "name": "Nettle"
+    },
+    "object": "Nettle",
+    "value": "1"
+  },
+  "110": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "birthwort.png"
+      ],
+      "paint": "false",
+      "name": "Birthwort"
+    },
+    "object": "Birthwort",
+    "value": "1.5"
+  },
+  "111": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "amoeba.png"
+      ],
+      "paint": "false",
+      "name": "Amoeba"
+    },
+    "object": "Amoeba",
+    "value": ".5"
+  },
+  "112": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tremblo.png"
+      ],
+      "paint": "false",
+      "name": "Tremblo"
+    },
+    "object": "Tremblo",
+    "value": "1"
+  },
+  "113": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "infested.png"
+      ],
+      "paint": "false",
+      "name": "Infested"
+    },
+    "object": "Infested",
+    "value": "1"
+  },
+  "114": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "rockhead.png"
+      ],
+      "paint": "false",
+      "name": "RockHead"
+    },
+    "object": "RockHead",
+    "value": "1"
+  },
+  "115": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "nohead.png"
+      ],
+      "paint": "false",
+      "name": "NoHead"
+    },
+    "object": "NoHead",
+    "value": "1"
+  },
+  "116": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cratercreeper.png"
+      ],
+      "paint": "false",
+      "name": "CraterCreeper"
+    },
+    "object": "CraterCreeper",
+    "value": "2"
+  },
+  "117": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "corefreak.png"
+      ],
+      "paint": "false",
+      "name": "Core Freak"
+    },
+    "object": "CoreFreak",
+    "value": "1"
+  },
+  "118": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pokerdemon.png"
+      ],
+      "paint": "false",
+      "name": "Poker Demon"
+    },
+    "object": "PokerDemon",
+    "value": "1"
+  },
+  "119": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "whisperer.png"
+      ],
+      "paint": "false",
+      "name": "Whisperer"
+    },
+    "object": "Whisperer",
+    "value": "1.5"
+  },
+  "120": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cloakeddemon.png"
+      ],
+      "paint": "false",
+      "name": "Cloaked Demon"
+    },
+    "object": "CloakedDemon",
+    "value": "1"
+  },
+  "121": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bigdemon.png"
+      ],
+      "paint": "false",
+      "name": "Big Demon"
+    },
+    "object": "BigDemon",
+    "value": "2"
+  },
+  "122": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megatumor.png"
+      ],
+      "paint": "false",
+      "name": "Mega Tumor"
+    },
+    "object": "MegaTumor",
+    "value": "1.5"
+  },
+  "123": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "headtumor.png"
+      ],
+      "paint": "false",
+      "name": "Head Tumor"
+    },
+    "object": "HeadTumor",
+    "value": "1"
+  },
+  "124": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "talltumor.png"
+      ],
+      "paint": "false",
+      "name": "Tall Tumor"
+    },
+    "object": "TallTumor",
+    "value": "1"
+  },
+  "125": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "demonhooker.png"
+      ],
+      "paint": "false",
+      "name": "Demon Hooker"
+    },
+    "object": "DemonHooker",
+    "value": "1"
+  },
+  "126": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "belcher.png"
+      ],
+      "paint": "false",
+      "name": "Belcher"
+    },
+    "object": "Belcher",
+    "value": "1"
+  },
+  "127": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tumorcat.png"
+      ],
+      "paint": "false",
+      "name": "Tumor Cat"
+    },
+    "object": "TumorCat",
+    "value": "1"
+  },
+  "128": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bigasteroid.png"
+      ],
+      "paint": "false",
+      "name": "Big Asteroid"
+    },
+    "object": "BigAsteroid",
+    "value": "1"
+  },
+  "129": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "smallasteroid.png"
+      ],
+      "paint": "false",
+      "name": "Small Asteroid"
+    },
+    "object": "SmallAsteroid",
+    "value": "1"
+  },
+  "130": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "smallufo.png"
+      ],
+      "paint": "false",
+      "name": "Small UFO"
+    },
+    "object": "SmallUFO",
+    "value": "1"
+  },
+  "131": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "bigufo.png"
+      ],
+      "paint": "false",
+      "name": "Big UFO"
+    },
+    "object": "BigUFO",
+    "value": "2"
+  },
+  "132": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "yellowblaster.png"
+      ],
+      "paint": "false",
+      "name": "Yellow Blaster"
+    },
+    "object": "YellowBlaster",
+    "value": "1"
+  },
+  "133": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "greyalien.png"
+      ],
+      "paint": "false",
+      "name": "Grey Alien"
+    },
+    "object": "GreyAlien",
+    "value": "1"
+  },
+  "134": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "greenprober.png"
+      ],
+      "paint": "false",
+      "name": "Green Prober"
+    },
+    "object": "GreenProber",
+    "value": ".5"
+  },
+  "135": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "waggle.png"
+      ],
+      "paint": "false",
+      "name": "Waggle"
+    },
+    "object": "Waggle",
+    "value": "1"
+  },
+  "136": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "moonworm.png"
+      ],
+      "paint": "false",
+      "name": "Moon Worm"
+    },
+    "object": "MoonWorm",
+    "value": ".5"
+  },
+  "137": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "rover.png"
+      ],
+      "paint": "false",
+      "name": "Rover"
+    },
+    "object": "Rover",
+    "value": "1"
+  },
+  "138": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "astro.png"
+      ],
+      "paint": "false",
+      "name": "Astro"
+    },
+    "object": "Astro",
+    "value": "1"
+  },
+  "139": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "ratcat.png"
+      ],
+      "paint": "false",
+      "name": "Rat Cat"
+    },
+    "object": "RatCat",
+    "value": "1"
+  },
+  "140": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gamete.png"
+      ],
+      "paint": "false",
+      "name": "Gamete"
+    },
+    "object": "Gamete",
+    "value": "1"
+  },
+  "141": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "nubscat.png"
+      ],
+      "paint": "false",
+      "name": "Nubs Cat"
+    },
+    "object": "NubsCat",
+    "value": "1.5"
+  },
+  "142": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cathuman.png"
+      ],
+      "paint": "false",
+      "name": "Cat Human"
+    },
+    "object": "CatHuman",
+    "value": "1"
+  },
+  "143": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "humancat.png"
+      ],
+      "paint": "false",
+      "name": "Human Cat"
+    },
+    "object": "HumanCat",
+    "value": "1"
+  },
+  "144": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "copbot.png"
+      ],
+      "paint": "false",
+      "name": "Cop Bot"
+    },
+    "object": "CopBot",
+    "value": "1"
+  },
+  "145": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "drditto.png"
+      ],
+      "paint": "false",
+      "name": "Dr. Ditto"
+    },
+    "object": "DrDitto",
+    "value": "1"
+  },
+  "146": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megamutant.png"
+      ],
+      "paint": "false",
+      "name": "Mega Mutant"
+    },
+    "object": "MegaMutant",
+    "value": "2"
+  },
+  "147": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "drcat.png"
+      ],
+      "paint": "false",
+      "name": "Dr. Cat"
+    },
+    "object": "Drcat",
+    "value": "1"
+  },
+  "148": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy3.png"
+      ],
+      "paint": "false",
+      "name": "Mangy 3"
+    },
+    "object": "Mangy3",
+    "value": "1"
+  },
+  "149": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "needlecat.png"
+      ],
+      "paint": "false",
+      "name": "Needlecat"
+    },
+    "object": "Needlecat",
+    "value": "1"
+  },
+  "150": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "stacy2p0.png"
+      ],
+      "paint": "false",
+      "name": "Stacy 2.0"
+    },
+    "object": "Stacy2p0",
+    "value": "1"
+  },
+  "151": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "yeticat.png"
+      ],
+      "paint": "false",
+      "name": "Yeti Cat"
+    },
+    "object": "Yeticat",
+    "value": "1"
+  },
+  "152": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sabertoothcat.png"
+      ],
+      "paint": "false",
+      "name": "Sabertooth Cat"
+    },
+    "object": "SabertoothCat",
+    "value": "1"
+  },
+  "153": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sabertoothcub.png"
+      ],
+      "paint": "false",
+      "name": "Sabertooth Cub"
+    },
+    "object": "SabertoothCub",
+    "value": ".5"
+  },
+  "154": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mammothbaby.png"
+      ],
+      "paint": "false",
+      "name": "Mammoth Baby"
+    },
+    "object": "MammothBaby",
+    "value": "1"
+  },
+  "155": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavebaby.png"
+      ],
+      "paint": "false",
+      "name": "Cave Baby"
+    },
+    "object": "CaveBaby",
+    "value": "1"
+  },
+  "156": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "caveman.png"
+      ],
+      "paint": "false",
+      "name": "Cave Man"
+    },
+    "object": "CaveMan",
+    "value": "1"
+  },
+  "157": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavemannospear.png"
+      ],
+      "paint": "false",
+      "name": "Cave Man (No Spear)"
+    },
+    "object": "CaveManNoSpear",
+    "value": "1"
+  },
+  "158": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavewoman.png"
+      ],
+      "paint": "false",
+      "name": "Cave Woman"
+    },
+    "object": "CaveWoman",
+    "value": "1"
+  },
+  "159": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "wereman.png"
+      ],
+      "paint": "false",
+      "name": "Were-Man"
+    },
+    "object": "WereMan",
+    "value": "1"
+  },
+  "160": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavechief.png"
+      ],
+      "paint": "false",
+      "name": "Cave Chief"
+    },
+    "object": "CaveChief",
+    "value": "2"
+  },
+  "161": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "yeti.png"
+      ],
+      "paint": "false",
+      "name": "Yeti"
+    },
+    "object": "Yeti",
+    "value": "2"
+  },
+  "162": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fuzzer.png"
+      ],
+      "paint": "false",
+      "name": "Fuzzer"
+    },
+    "object": "Fuzzer",
+    "value": ".5"
+  },
+  "163": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "mammoth.png"
+      ],
+      "paint": "false",
+      "name": "Mammoth"
+    },
+    "object": "Mammoth",
+    "value": "2"
+  },
+  "164": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "prehistoricpooter.png"
+      ],
+      "paint": "false",
+      "name": "Prehistoric Pooter"
+    },
+    "object": "PrehistoricPooter",
+    "value": "1"
+  },
+  "165": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pterodactyl.png"
+      ],
+      "paint": "false",
+      "name": "Pterodactyl"
+    },
+    "object": "Pterodactyl",
+    "value": "1.5"
+  },
+  "166": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "raptor.png"
+      ],
+      "paint": "false",
+      "name": "Raptor"
+    },
+    "object": "Raptor",
+    "value": "1"
+  },
+  "167": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "raptorbaby.png"
+      ],
+      "paint": "false",
+      "name": "Raptor Baby"
+    },
+    "object": "RaptorBaby",
+    "value": "1"
+  },
+  "168": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "ankylosaurus.png"
+      ],
+      "paint": "false",
+      "name": "Ankylosaurus"
+    },
+    "object": "Ankylosaurus",
+    "value": "1.5"
+  },
+  "169": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "parasaurolophus.png"
+      ],
+      "paint": "false",
+      "name": "Parasaurolophus"
+    },
+    "object": "Parasaurolophus",
+    "value": "1"
+  },
+  "170": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "maelestes.png"
+      ],
+      "paint": "false",
+      "name": "Maelestes"
+    },
+    "object": "Maelestes",
+    "value": ".5"
+  },
+  "171": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "trex.png"
+      ],
+      "paint": "false",
+      "name": "T-Rex"
+    },
+    "object": "Trex",
+    "value": "2"
+  },
+  "172": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "stego.png"
+      ],
+      "paint": "false",
+      "name": "Stegosaurus"
+    },
+    "object": "Stegosaurus",
+    "value": "2"
+  },
+  "173": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "triceratops.png"
+      ],
+      "paint": "false",
+      "name": "Triceratops"
+    },
+    "object": "Triceratops",
+    "value": "2"
+  },
+  "174": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "dinoeggs.png"
+      ],
+      "paint": "false",
+      "name": "Dino Nest"
+    },
+    "object": "DinoEggs",
+    "value": "1"
+  },
+  "175": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "fatman.png"
+      ],
+      "paint": "false",
+      "name": "Uber Man"
+    },
+    "object": "FatMan",
+    "value": "1"
+  },
+  "176": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "fatwoman.png"
+      ],
+      "paint": "false",
+      "name": "Uber Woman"
+    },
+    "object": "FatWoman",
+    "value": "1"
+  },
+  "177": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "fatcat.png"
+      ],
+      "paint": "false",
+      "name": "Uber Cat"
+    },
+    "object": "FatCat",
+    "value": "1"
+  },
+  "178": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "futurebot.png"
+      ],
+      "paint": "false",
+      "name": "Katze Bot"
+    },
+    "object": "FutureBot",
+    "value": "1"
+  },
+  "179": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "invader.png"
+      ],
+      "paint": "false",
+      "name": "Spider bot"
+    },
+    "object": "Invader",
+    "value": "0"
+  },
+  "180": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "soldierbot.png"
+      ],
+      "paint": "false",
+      "name": "Soldier bot"
+    },
+    "object": "SoldierBot",
+    "value": "1.5"
+  },
+  "181": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "hangerbot.png"
+      ],
+      "paint": "false",
+      "name": "Hanger bot"
+    },
+    "object": "HangerBot",
+    "value": "1"
+  },
+  "182": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "doctorbot.png"
+      ],
+      "paint": "false",
+      "name": "Doctor bot"
+    },
+    "object": "DoctorBot",
+    "value": "1"
+  },
+  "183": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tallbot.png"
+      ],
+      "paint": "false",
+      "name": "Tall bot"
+    },
+    "object": "TallBot",
+    "value": "1.5"
+  },
+  "184": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tvbot.png"
+      ],
+      "paint": "false",
+      "name": "TV Bot"
+    },
+    "object": "TVBot"
+  },
+  "185": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "jarhead.png"
+      ],
+      "paint": "false",
+      "name": "Jar Head"
+    },
+    "object": "JarHead",
+    "value": "1"
+  },
+  "186": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusjar.png"
+      ],
+      "paint": "false",
+      "name": "Fetus (Jar)"
+    },
+    "object": "FetusJar",
+    "value": "1"
+  },
+  "187": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusnojar.png"
+      ],
+      "paint": "false",
+      "name": "Fetus (No Jar)"
+    },
+    "object": "FetusNoJar",
+    "value": "1"
+  },
+  "188": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "boyshade.png"
+      ],
+      "paint": "false",
+      "name": "Shade (male)"
+    },
+    "object": "BoyShade",
+    "value": "1.5"
+  },
+  "189": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "girlshade.png"
+      ],
+      "paint": "false",
+      "name": "Shade (female)"
+    },
+    "object": "GirlShade",
+    "value": "1.5"
+  },
+  "190": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gasper.png"
+      ],
+      "paint": "false",
+      "name": "Gasper"
+    },
+    "object": "Gasper",
+    "value": "1"
+  },
+  "191": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "floast.png"
+      ],
+      "paint": "false",
+      "name": "Floast"
+    },
+    "object": "Floast",
+    "value": "1"
+  },
+  "192": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tumorbarrier.png"
+      ],
+      "paint": "false",
+      "name": "Tumor Barrier"
+    },
+    "object": "TumorBarrier",
+    "value": "1"
+  },
+  "193": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "husk.png"
+      ],
+      "paint": "false",
+      "name": "Husk"
+    },
+    "object": "Husk",
+    "value": "1"
+  },
+  "194": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "doublehusk.png"
+      ],
+      "paint": "false",
+      "name": "Conjoined Husk"
+    },
+    "object": "ConjoinedHusk",
+    "value": "1.5"
+  },
+  "195": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "cancercat.png"
+      ],
+      "paint": "false",
+      "name": "Cancer Cat"
+    },
+    "object": "CancerCat",
+    "value": "1"
+  },
+  "196": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "collectivecat.png"
+      ],
+      "paint": "false",
+      "name": "Collective Cat"
+    },
+    "object": "CollectiveCat",
+    "value": "1"
+  },
+  "197": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "shadecat.png"
+      ],
+      "paint": "false",
+      "name": "Shade Cat"
+    },
+    "object": "ShadeCat",
+    "value": "1"
+  },
+  "198": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "slag.png"
+      ],
+      "paint": "false",
+      "name": "Slag"
+    },
+    "object": "Slag",
+    "value": "1"
+  },
+  "199": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "gorger.png"
+      ],
+      "paint": "false",
+      "name": "Gorger"
+    },
+    "object": "Gorger",
+    "value": "2"
+  },
+  "200": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cultist.png"
+      ],
+      "image_tint": [
+        "blue"
+      ],
+      "paint": "false",
+      "name": "Cultist Washer"
+    },
+    "object": "CultistWasher",
+    "value": "1"
+  },
+  "201": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "clot.png"
+      ],
+      "paint": "false",
+      "name": "Clot"
+    },
+    "object": "Clot",
+    "value": "0"
+  },
+  "202": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "throbbingturret.png"
+      ],
+      "paint": "false",
+      "name": "Throbbing Turret"
+    },
+    "object": "ThrobbingTurret",
+    "value": "1"
+  },
+  "203": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fleshlad.png"
+      ],
+      "paint": "false",
+      "name": "Flesh Lad"
+    },
+    "object": "FleshLad",
+    "value": "1.5"
+  },
+  "204": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fleshymind.png"
+      ],
+      "paint": "false",
+      "name": "Fleshy Mind"
+    },
+    "object": "FleshyMind",
+    "value": "1"
+  },
+  "205": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "parasiter.png"
+      ],
+      "paint": "false",
+      "name": "Parasiter"
+    },
+    "object": "Parasiter",
+    "value": "1"
+  },
+  "206": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "meatslime.png"
+      ],
+      "paint": "false",
+      "name": "Meat Slime"
+    },
+    "object": "MeatSlime",
+    "value": "1"
+  },
+  "207": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "skinned.png"
+      ],
+      "paint": "false",
+      "name": "Skinned"
+    },
+    "object": "Skinned",
+    "value": "1"
+  },
+  "208": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "stemcat.png"
+      ],
+      "paint": "false",
+      "name": "Stem Cat"
+    },
+    "object": "StemCat",
+    "value": "1"
+  },
+  "209": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "jackcat.png"
+      ],
+      "paint": "false",
+      "name": "Jack Cat"
+    },
+    "object": "JackCat",
+    "value": "1"
+  },
+  "210": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "stacy3.png"
+      ],
+      "paint": "false",
+      "name": "Chaos Stacy"
+    },
+    "object": "ChaosStacy",
+    "value": "2"
+  },
+  "211": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "frankpinky.png"
+      ],
+      "paint": "false",
+      "name": "Frank Pinky"
+    },
+    "object": "FrankPinky",
+    "value": ".5"
+  },
+  "212": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "butchtink.png"
+      ],
+      "paint": "false",
+      "name": "Butch Tink"
+    },
+    "object": "ButchTinkBoris",
+    "value": "2"
+  },
+  "213": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "tracyfetus.png"
+      ],
+      "paint": "false",
+      "name": "Tracy Fetus"
+    },
+    "object": "TracyFetus",
+    "value": "2"
+  },
+  "214": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "frankkorbee.png"
+      ],
+      "paint": "false",
+      "name": "Frank Fetus"
+    },
+    "object": "FrankFetus",
+    "value": "1"
+  },
+  "215": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "beaniesrat.png"
+      ],
+      "paint": "false",
+      "name": "Beanies Rat"
+    },
+    "object": "BeaniesRat",
+    "value": "2"
+  },
+  "216": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cherubim.png"
+      ],
+      "paint": "false",
+      "name": "Cherubim"
+    },
+    "object": "Cherubim",
+    "value": "1"
+  },
+  "217": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "seraphim.png"
+      ],
+      "paint": "false",
+      "name": "Seraphim"
+    },
+    "object": "Seraphim",
+    "value": "1.5"
+  },
+  "218": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gatekeeper.png"
+      ],
+      "paint": "false",
+      "name": "Gatekeeper"
+    },
+    "object": "Gatekeeper",
+    "value": "1"
+  },
+  "219": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "angelkitten.png"
+      ],
+      "paint": "false",
+      "name": "Angelic Kitten"
+    },
+    "object": "AngelicKitten",
+    "value": "1"
+  },
+  "220": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "angelcat.png"
+      ],
+      "paint": "false",
+      "name": "Angelic Cat"
+    },
+    "object": "AngelicCat",
+    "value": "1"
+  },
+  "1011": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "rat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Rat"
+    },
+    "object": "Rat_Elite",
+    "value": "1"
+  },
+  "1012": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "fly.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fly"
+    },
+    "object": "Fly_Elite",
+    "value": "0"
+  },
+  "1016": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "kitten.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Kitten"
+    },
+    "object": "Kitten_Elite",
+    "value": "1"
+  },
+  "1017": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mangy"
+    },
+    "object": "Mangy_Elite",
+    "value": "1"
+  },
+  "1018": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tomtom.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tom Tom"
+    },
+    "object": "TomTom_Elite",
+    "value": "1"
+  },
+  "1020": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "leaper.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Leaper"
+    },
+    "object": "Leaper_Elite",
+    "value": "1"
+  },
+  "1021": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "lumpy.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Lumpy"
+    },
+    "object": "Lumpy_Elite",
+    "value": "1"
+  },
+  "1022": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "catcaller.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cat Caller"
+    },
+    "object": "CatCaller_Elite",
+    "value": ".5"
+  },
+  "1023": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "pinky.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Pinky"
+    },
+    "object": "Pinky_Elite",
+    "value": ".5"
+  },
+  "1024": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "maggot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Maggot"
+    },
+    "object": "Maggot_Elite",
+    "value": "0"
+  },
+  "1025": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "flea.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Flea"
+    },
+    "object": "Flea_Elite",
+    "value": "0"
+  },
+  "1026": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pooter.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Pooter"
+    },
+    "object": "Pooter_Elite",
+    "value": "1"
+  },
+  "1030": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "glassspitter.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Glass Spitter"
+    },
+    "object": "GlassSpitter_Elite",
+    "value": "1"
+  },
+  "1031": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "siren.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Siren"
+    },
+    "object": "Siren_Elite",
+    "value": ".5"
+  },
+  "1032": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "jekyll.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Jekyll & Hyde"
+    },
+    "object": "Jekyll_Elite",
+    "value": "1"
+  },
+  "1033": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "spiky.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Spiky Cat"
+    },
+    "object": "SpikedCat_Elite",
+    "value": "1"
+  },
+  "1034": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "popeye.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Popeye Cat"
+    },
+    "object": "PopeyeCat_Elite",
+    "value": "1.5"
+  },
+  "1043": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "chumbag.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Chum Bag"
+    },
+    "object": "ChumBag_Elite",
+    "value": "1"
+  },
+  "1044": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "chummy.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Chummy"
+    },
+    "object": "Chummy_Elite",
+    "value": "1"
+  },
+  "1045": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "host.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Host"
+    },
+    "object": "Host_Elite",
+    "value": "1"
+  },
+  "1046": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pile.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Pile"
+    },
+    "object": "Pile_Elite",
+    "value": "1"
+  },
+  "1047": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "floater.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Floater"
+    },
+    "object": "Floater_Elite",
+    "value": "1"
+  },
+  "1048": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "waterleech.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Water Leech"
+    },
+    "object": "WaterLeech_Elite",
+    "value": "1"
+  },
+  "1050": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "dip.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Dip"
+    },
+    "object": "Dip_Elite",
+    "value": "0"
+  },
+  "1051": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "daddyshark.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Daddy Shark"
+    },
+    "object": "DaddyShark_Elite",
+    "value": "2"
+  },
+  "1052": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "babyshark.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Baby Shark"
+    },
+    "object": "BabyShark_Elite",
+    "value": "1"
+  },
+  "1053": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fetus"
+    },
+    "object": "Fetus_Elite",
+    "value": "1"
+  },
+  "1054": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusgusher.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fetus Gusher"
+    },
+    "object": "FetusGusher_Elite",
+    "value": "1"
+  },
+  "1035": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "gassy.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Gassy Cat"
+    },
+    "object": "GassyCat_Elite",
+    "value": "1"
+  },
+  "1036": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sharky.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Sharky"
+    },
+    "object": "SharkyCat_Elite",
+    "value": "1"
+  },
+  "1037": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "boomer.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Boomer"
+    },
+    "object": "BoomerCat_Elite",
+    "value": "1"
+  },
+  "1038": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "waterkitten.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Water Kitten"
+    },
+    "object": "WaterKitten_Elite",
+    "value": "1"
+  },
+  "1055": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tentickles.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Ten Tickles"
+    },
+    "object": "TenTickles_Elite",
+    "value": "1"
+  },
+  "1056": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "kirbyfetus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Korbee"
+    },
+    "object": "KirbyFetus_Elite",
+    "value": "1"
+  },
+  "1057": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "albinotomtom.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Albino TomTom"
+    },
+    "object": "AlbinoTomTom_Elite",
+    "value": "1"
+  },
+  "1058": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "toadie.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Toadie"
+    },
+    "object": "Toadie_Elite",
+    "value": "1"
+  },
+  "1059": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "toadie_hidden.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Toadie (hidden)"
+    },
+    "object": "Toadie_Hidden_Elite",
+    "value": "1"
+  },
+  "1060": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "spidercat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Spider Cat"
+    },
+    "object": "SpiderCat_Elite",
+    "value": "1"
+  },
+  "1061": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tallspidercat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tall Spider Cat"
+    },
+    "object": "TallSpiderCat_Elite",
+    "value": "1.5"
+  },
+  "1062": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Bat"
+    },
+    "object": "Bat_Elite",
+    "value": "1"
+  },
+  "1063": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "braindrain.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Brain Drain"
+    },
+    "object": "BrainDrain_Elite",
+    "value": "1"
+  },
+  "1064": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "skullooze.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Skull Ooze"
+    },
+    "object": "SkullOoze_Elite",
+    "value": "1"
+  },
+  "1065": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megafetus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mega Fetus"
+    },
+    "object": "MegaFetus_Elite",
+    "value": "2"
+  },
+  "1066": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "zombiecat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Zombie Cat"
+    },
+    "object": "ZombieCat_Elite",
+    "value": "1"
+  },
+  "1067": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "skeletoncat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Skeleton Cat"
+    },
+    "object": "SkeletonCat_Elite",
+    "value": "1"
+  },
+  "1068": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tallskeletoncat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tall Skeleton Cat"
+    },
+    "object": "TallSkeletonCat_Elite",
+    "value": "1.5"
+  },
+  "1069": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "wolfcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Wolf Cat"
+    },
+    "object": "WolfCat_Elite",
+    "value": "1"
+  },
+  "1071": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tatters.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tatters"
+    },
+    "object": "Tatters_Elite",
+    "value": "1"
+  },
+  "1072": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "spookie.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Spookie"
+    },
+    "object": "Spookie_Elite",
+    "value": "1"
+  },
+  "1073": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "scary.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Scary"
+    },
+    "object": "Scary_Elite",
+    "value": "1"
+  },
+  "1074": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "reaper.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Reaper"
+    },
+    "object": "Reaper_Elite",
+    "value": "1.5"
+  },
+  "1075": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tallrobes.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tall Robes"
+    },
+    "object": "TallRobes_Elite",
+    "value": "1.5"
+  },
+  "1076": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "shambler.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Shambler"
+    },
+    "object": "Shambler_Elite",
+    "value": "2"
+  },
+  "1077": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "graveworm.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite GraveWorm"
+    },
+    "object": "GraveWorm_Elite",
+    "value": "1"
+  },
+  "1078": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "buttzombie.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Butt Zombie"
+    },
+    "object": "ButtZombie_Elite",
+    "value": "1"
+  },
+  "1079": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "tinyspider.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tiny Spider"
+    },
+    "object": "TinySpider_Elite",
+    "value": "0"
+  },
+  "1080": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "wisp.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Wisp"
+    },
+    "object": "Wisp_Elite",
+    "value": ".5"
+  },
+  "1081": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "rattlesnake.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Rattlesnek"
+    },
+    "object": "RattleSnake_Elite",
+    "value": ".5"
+  },
+  "1082": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "skeletonshambler.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Skeleton Shambler"
+    },
+    "object": "SkeletonShambler_Elite",
+    "value": "2"
+  },
+  "1083": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "thump.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Thump"
+    },
+    "object": "Thump_Elite",
+    "value": "2"
+  },
+  "1084": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "flyswarm.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fly Swarm"
+    },
+    "object": "FlySwarm_Elite",
+    "value": "1"
+  },
+  "1085": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "snakeybones.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Bone Worm"
+    },
+    "object": "SnakeyBones_Elite",
+    "value": "1"
+  },
+  "1086": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "carcus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Carcus"
+    },
+    "object": "Carcus_Elite",
+    "value": "1"
+  },
+  "1087": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "suseuspeashy.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Peashy"
+    },
+    "object": "Peashy_Elite",
+    "value": "1"
+  },
+  "1088": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "babydeathworm.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite BabyDeathWorm"
+    },
+    "object": "BabyDeathWorm_Elite",
+    "value": "1"
+  },
+  "1089": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "deathworm.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Death Worm"
+    },
+    "object": "DeathWorm_Elite",
+    "value": "2"
+  },
+  "1090": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "scorpioncat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Scorpion Cat"
+    },
+    "object": "ScorpionCat_Elite",
+    "value": "1"
+  },
+  "1091": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy2.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mangy 2"
+    },
+    "object": "Mangy2_Elite",
+    "value": "1"
+  },
+  "1092": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "guncat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Gun Cat"
+    },
+    "object": "GunCat_Elite",
+    "value": "1"
+  },
+  "1093": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "hornycat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Horny Cat"
+    },
+    "object": "HornyCat_Elite",
+    "value": "1"
+  },
+  "1094": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "atomickitten.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Atomic Kitten"
+    },
+    "object": "AtomicKitten_Elite",
+    "value": "1"
+  },
+  "1095": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "robotom.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Robo Tom"
+    },
+    "object": "RoboTom_Elite",
+    "value": "1"
+  },
+  "1096": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "catcultist.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cat Cultist"
+    },
+    "object": "CatCultist_Elite",
+    "value": "1"
+  },
+  "1097": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cultist.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cultist"
+    },
+    "object": "Cultist_Elite",
+    "value": "1"
+  },
+  "1098": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "zealot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Zealot"
+    },
+    "object": "CultistZealot_Elite",
+    "value": "1"
+  },
+  "1099": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "mutant.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mutant"
+    },
+    "object": "CultistMutant_Elite",
+    "value": "1.5"
+  },
+  "1100": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bishop.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Bishop"
+    },
+    "object": "CultistBishop_Elite",
+    "value": "2"
+  },
+  "1101": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bishophat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Bishop Hat"
+    },
+    "object": "BishopHat_Elite",
+    "value": "1"
+  },
+  "1102": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "lovebot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Love Bot"
+    },
+    "object": "LoveBot_Elite",
+    "value": "1"
+  },
+  "1103": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "securitybot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Security Bot"
+    },
+    "object": "SecurityBot_Elite",
+    "value": "1"
+  },
+  "1104": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "killdozer.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Killdozer"
+    },
+    "object": "KillDozer_Elite",
+    "value": "2"
+  },
+  "1105": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "carnibulb.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Carnibulb"
+    },
+    "object": "Carnibulb_Elite",
+    "value": "2"
+  },
+  "1106": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "geolad.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Geo Lad"
+    },
+    "object": "GeoLad_Elite",
+    "value": "1"
+  },
+  "1107": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bramblebaby.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Bramble Baby"
+    },
+    "object": "BrambleBaby_Elite",
+    "value": "1"
+  },
+  "1108": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "hemlock.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Hemlock"
+    },
+    "object": "Hemlock_Elite",
+    "value": "1"
+  },
+  "1109": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "nettle.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Nettle"
+    },
+    "object": "Nettle_Elite",
+    "value": "1"
+  },
+  "1110": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "birthwort.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Birthwort"
+    },
+    "object": "Birthwort_Elite",
+    "value": "1.5"
+  },
+  "1111": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "amoeba.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Amoeba"
+    },
+    "object": "Amoeba_Elite",
+    "value": ".5"
+  },
+  "1112": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tremblo.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tremblo"
+    },
+    "object": "Tremblo_Elite",
+    "value": "1"
+  },
+  "1113": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "infested.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Infested"
+    },
+    "object": "Infested_Elite",
+    "value": "1"
+  },
+  "1114": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "rockhead.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite RockHead"
+    },
+    "object": "RockHead_Elite",
+    "value": "1"
+  },
+  "1116": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cratercreeper.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite CraterCreeper"
+    },
+    "object": "CraterCreeper_Elite",
+    "value": "2"
+  },
+  "1117": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "corefreak.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Core Freak"
+    },
+    "object": "CoreFreak_Elite",
+    "value": "1"
+  },
+  "1118": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pokerdemon.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Poker Demon"
+    },
+    "object": "PokerDemon_Elite",
+    "value": "1"
+  },
+  "1119": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "whisperer.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Whisperer"
+    },
+    "object": "Whisperer_Elite",
+    "value": "1.5"
+  },
+  "1120": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cloakeddemon.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cloaked Demon"
+    },
+    "object": "CloakedDemon_Elite",
+    "value": "1"
+  },
+  "1121": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bigdemon.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Big Demon"
+    },
+    "object": "BigDemon_Elite",
+    "value": "2"
+  },
+  "1122": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megatumor.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mega Tumor"
+    },
+    "object": "MegaTumor_Elite",
+    "value": "1.5"
+  },
+  "1123": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "headtumor.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Head Tumor"
+    },
+    "object": "HeadTumor_Elite",
+    "value": "1"
+  },
+  "1124": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "talltumor.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tall Tumor"
+    },
+    "object": "TallTumor_Elite",
+    "value": "1"
+  },
+  "1125": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "demonhooker.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Demon Hooker"
+    },
+    "object": "DemonHooker_Elite",
+    "value": "1"
+  },
+  "1126": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "belcher.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Belcher"
+    },
+    "object": "Belcher_Elite",
+    "value": "1"
+  },
+  "1127": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "tumorcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tumor Cat"
+    },
+    "object": "TumorCat_Elite",
+    "value": "1"
+  },
+  "1128": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "bigasteroid.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Big Asteroid"
+    },
+    "object": "BigAsteroid_Elite",
+    "value": "1"
+  },
+  "1129": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "smallasteroid.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Small Asteroid"
+    },
+    "object": "SmallAsteroid_Elite",
+    "value": "1"
+  },
+  "1130": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "smallufo.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Small UFO"
+    },
+    "object": "SmallUFO_Elite",
+    "value": "1"
+  },
+  "1131": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "bigufo.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Big UFO"
+    },
+    "object": "BigUFO_Elite",
+    "value": "2"
+  },
+  "1132": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "yellowblaster.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Yellow Blaster"
+    },
+    "object": "YellowBlaster_Elite",
+    "value": "1"
+  },
+  "1133": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "greyalien.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Grey Alien"
+    },
+    "object": "GreyAlien_Elite",
+    "value": "1"
+  },
+  "1134": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "greenprober.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Green Prober"
+    },
+    "object": "GreenProber_Elite",
+    "value": ".5"
+  },
+  "1135": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "waggle.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Waggle"
+    },
+    "object": "Waggle_Elite",
+    "value": "1"
+  },
+  "1136": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "moonworm.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Moon Worm"
+    },
+    "object": "MoonWorm_Elite",
+    "value": ".5"
+  },
+  "1137": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "rover.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Rover"
+    },
+    "object": "Rover_Elite",
+    "value": "1"
+  },
+  "1138": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "astro.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Astro"
+    },
+    "object": "Astro_Elite",
+    "value": "1"
+  },
+  "1139": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "ratcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Rat Cat"
+    },
+    "object": "RatCat_Elite",
+    "value": "1"
+  },
+  "1140": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gamete.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Gamete"
+    },
+    "object": "Gamete_Elite",
+    "value": "1"
+  },
+  "1141": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "nubscat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Nubs Cat"
+    },
+    "object": "NubsCat_Elite",
+    "value": "1.5"
+  },
+  "1142": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cathuman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cat Human"
+    },
+    "object": "CatHuman_Elite",
+    "value": "1"
+  },
+  "1143": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "humancat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Human Cat"
+    },
+    "object": "HumanCat_Elite",
+    "value": "1"
+  },
+  "1144": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "copbot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cop Bot"
+    },
+    "object": "CopBot_Elite",
+    "value": "1"
+  },
+  "1145": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "drditto.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Dr. Ditto"
+    },
+    "object": "DrDitto_Elite",
+    "value": "1"
+  },
+  "1146": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "megamutant.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mega Mutant"
+    },
+    "object": "MegaMutant_Elite",
+    "value": "2"
+  },
+  "1147": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "drcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Dr. Cat"
+    },
+    "object": "Drcat_Elite",
+    "value": "1"
+  },
+  "1148": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mangy3.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mangy 3"
+    },
+    "object": "Mangy3_Elite",
+    "value": "1"
+  },
+  "1149": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "needlecat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Needlecat"
+    },
+    "object": "Needlecat_Elite",
+    "value": "1"
+  },
+  "1150": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "stacy2p0.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Stacy 2.0"
+    },
+    "object": "Stacy2p0_Elite",
+    "value": "1"
+  },
+  "1151": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "yeticat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Yeti Cat"
+    },
+    "object": "Yeticat_Elite",
+    "value": "1"
+  },
+  "1152": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sabertoothcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Sabertooth Cat"
+    },
+    "object": "SabertoothCat_Elite",
+    "value": "1"
+  },
+  "1153": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "sabertoothcub.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Sabertooth Cub"
+    },
+    "object": "SabertoothCub_Elite",
+    "value": ".5"
+  },
+  "1154": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "mammothbaby.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mammoth Baby"
+    },
+    "object": "MammothBaby_Elite",
+    "value": "1"
+  },
+  "1155": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavebaby.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cave Baby"
+    },
+    "object": "CaveBaby_Elite",
+    "value": "1"
+  },
+  "1156": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "caveman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cave Man"
+    },
+    "object": "CaveMan_Elite",
+    "value": "1"
+  },
+  "1157": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavemannospear.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cave Man (No Spear)"
+    },
+    "object": "CaveManNoSpear_Elite",
+    "value": "1"
+  },
+  "1158": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavewoman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cave Woman"
+    },
+    "object": "CaveWoman_Elite",
+    "value": "1"
+  },
+  "1159": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "wereman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Were-Man"
+    },
+    "object": "WereMan_Elite",
+    "value": "1"
+  },
+  "1160": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "cavechief.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cave Chief"
+    },
+    "object": "CaveChief_Elite",
+    "value": "2"
+  },
+  "1161": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "yeti.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Yeti"
+    },
+    "object": "Yeti_Elite",
+    "value": "2"
+  },
+  "1162": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fuzzer.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fuzzer"
+    },
+    "object": "Fuzzer_Elite",
+    "value": ".5"
+  },
+  "1163": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "mammoth.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Mammoth"
+    },
+    "object": "Mammoth_Elite",
+    "value": "2"
+  },
+  "1164": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "prehistoricpooter.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Prehistoric Pooter"
+    },
+    "object": "PrehistoricPooter_Elite",
+    "value": "1"
+  },
+  "1165": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "pterodactyl.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Pterodactyl"
+    },
+    "object": "Pterodactyl_Elite",
+    "value": "1.5"
+  },
+  "1166": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "raptor.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Raptor"
+    },
+    "object": "Raptor_Elite",
+    "value": "1"
+  },
+  "1167": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "raptorbaby.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Raptor Baby"
+    },
+    "object": "RaptorBaby_Elite",
+    "value": "1"
+  },
+  "1168": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "ankylosaurus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Ankylosaurus"
+    },
+    "object": "Ankylosaurus_Elite",
+    "value": "1.5"
+  },
+  "1169": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "parasaurolophus.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Parasaurolophus"
+    },
+    "object": "Parasaurolophus_Elite",
+    "value": "1"
+  },
+  "1170": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "maelestes.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Maelestes"
+    },
+    "object": "Maelestes_Elite",
+    "value": ".5"
+  },
+  "1171": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "trex.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite T-Rex"
+    },
+    "object": "Trex_Elite",
+    "value": "2"
+  },
+  "1172": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "stego.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Stegosaurus"
+    },
+    "object": "Stegosaurus_Elite",
+    "value": "2"
+  },
+  "1173": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "triceratops.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Triceratops"
+    },
+    "object": "Triceratops_Elite",
+    "value": "2"
+  },
+  "1174": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "dinoeggs.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Dino Nest"
+    },
+    "object": "DinoEggs_Elite",
+    "value": "1"
+  },
+  "1175": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "fatman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Uber Man"
+    },
+    "object": "FatMan_Elite",
+    "value": "1"
+  },
+  "1176": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "fatwoman.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Uber Woman"
+    },
+    "object": "FatWoman_Elite",
+    "value": "1"
+  },
+  "1177": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "fatcat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Uber Cat"
+    },
+    "object": "FatCat_Elite",
+    "value": "1"
+  },
+  "1178": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "futurebot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Katze Bot"
+    },
+    "object": "FutureBot_Elite",
+    "value": "1"
+  },
+  "1179": {
+    "editor": {
+      "category": "4",
+      "image": [
+        "invader.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Spider bot"
+    },
+    "object": "Invader_Elite",
+    "value": "0"
+  },
+  "1180": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "soldierbot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Soldier bot"
+    },
+    "object": "SoldierBot_Elite",
+    "value": "1.5"
+  },
+  "1181": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "hangerbot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Hanger bot"
+    },
+    "object": "HangerBot_Elite",
+    "value": "1"
+  },
+  "1182": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "doctorbot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Doctor bot"
+    },
+    "object": "DoctorBot_Elite",
+    "value": "1"
+  },
+  "1183": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tallbot.png"
+      ],
+      "paint": "false",
+      "name": "Elite Tall bot"
+    },
+    "object": "TallBot_Elite",
+    "value": "1.5"
+  },
+  "1184": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tvbot.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite TV Bot"
+    },
+    "object": "TVBot_Elite"
+  },
+  "1185": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "jarhead.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Jar Head"
+    },
+    "object": "JarHead_Elite",
+    "value": "1"
+  },
+  "1186": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusjar.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Fetus (Jar)"
+    },
+    "object": "FetusJar_Elite",
+    "value": "1"
+  },
+  "1187": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "fetusnojar.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Fetus (No Jar)"
+    },
+    "object": "FetusNoJar_Elite",
+    "value": "1"
+  },
+  "1188": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "boyshade.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Shade (male)"
+    },
+    "object": "BoyShade_Elite",
+    "value": "1.5"
+  },
+  "1189": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "girlshade.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Shade (female)"
+    },
+    "object": "GirlShade_Elite",
+    "value": "1.5"
+  },
+  "1190": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "gasper.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Gasper"
+    },
+    "object": "Gasper_Elite",
+    "value": "1"
+  },
+  "1191": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "floast.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Floast"
+    },
+    "object": "Floast_Elite",
+    "value": "1"
+  },
+  "1192": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "tumorbarrier.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Tumor Barrier"
+    },
+    "object": "TumorBarrier_Elite",
+    "value": "1"
+  },
+  "1193": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "husk.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Husk"
+    },
+    "object": "Husk_Elite",
+    "value": "1"
+  },
+  "1194": {
+    "editor": {
+      "category": "3",
+      "image": [
+        "doublehusk.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Conjoined Husk"
+    },
+    "object": "ConjoinedHusk_Elite",
+    "value": "1.5"
+  },
+  "1195": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "cancercat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Cancer Cat"
+    },
+    "object": "CancerCat_Elite",
+    "value": "1"
+  },
+  "1196": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "collectivecat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Collective Cat"
+    },
+    "object": "CollectiveCat_Elite",
+    "value": "1"
+  },
+  "1197": {
+    "editor": {
+      "category": "2",
+      "image": [
+        "shadecat.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Shade Cat"
+    },
+    "object": "ShadeCat_Elite",
+    "value": "1"
+  },
+  "1198": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "slag.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Slag"
+    },
+    "object": "Slag_Elite",
+    "value": "1"
+  },
+  "1199": {
+    "editor": {
+      "category": "5",
+      "image": [
+        "gorger.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Elite Gorger"
+    },
+    "object": "Gorger_Elite",
+    "value": "2"
+  },
+  "2001": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "bomberrat.png"
+      ],
+      "paint": "false",
+      "name": "Bomber Rat"
+    },
+    "object": "BomberRat"
+  },
+  "2002": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "fatso.png"
+      ],
+      "paint": "false",
+      "name": "Fatso"
+    },
+    "object": "Fatso"
+  },
+  "2003": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "ratpile.png"
+      ],
+      "paint": "false",
+      "name": "Rat Pile"
+    },
+    "object": "RatPile"
+  },
+  "2004": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "maggotlord.png"
+      ],
+      "paint": "false",
+      "name": "Maggot Lord"
+    },
+    "object": "MaggotLord"
+  },
+  "2005": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "ornstein.png"
+      ],
+      "paint": "false",
+      "name": "Guillotina Phase 2 Head"
+    },
+    "object": "Guillotina2Head"
+  },
+  "2006": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "smough.png"
+      ],
+      "paint": "false",
+      "name": "Guillotina Phase 2 Body"
+    },
+    "object": "Guillotina2Body"
+  },
+  "2007": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "tankcat.png"
+      ],
+      "paint": "false",
+      "name": "Tank Cat"
+    },
+    "object": "TankCat"
+  },
+  "2008": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "mediccat.png"
+      ],
+      "paint": "false",
+      "name": "Medic Cat"
+    },
+    "object": "MedicCat"
+  },
+  "2009": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "magecat.png"
+      ],
+      "paint": "false",
+      "name": "Mage Cat"
+    },
+    "object": "MageCat"
+  },
+  "2010": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "thiefcat.png"
+      ],
+      "paint": "false",
+      "name": "Thief Cat"
+    },
+    "object": "ThiefCat"
+  },
+  "2011": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "huntercat.png"
+      ],
+      "paint": "false",
+      "name": "Hunter Cat"
+    },
+    "object": "HunterCat"
+  },
+  "2012": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "fightercat.png"
+      ],
+      "paint": "false",
+      "name": "Fighter Cat"
+    },
+    "object": "FighterCat"
+  },
+  "2013": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "cancreeper.png"
+      ],
+      "paint": "false",
+      "name": "Can Creeper"
+    },
+    "object": "CanCreeper"
+  },
+  "2014": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "bigslime.png"
+      ],
+      "paint": "false",
+      "name": "Big Slime"
+    },
+    "object": "BigSlime"
+  },
+  "2015": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "medslime.png"
+      ],
+      "paint": "false",
+      "name": "Med Slime"
+    },
+    "object": "MedSlime"
+  },
+  "2016": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "smallslime.png"
+      ],
+      "paint": "false",
+      "name": "Small Slime"
+    },
+    "object": "SmallSlime"
+  },
+  "2017": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "gambit.png"
+      ],
+      "paint": "false",
+      "name": "Gambit"
+    },
+    "object": "Gambit"
+  },
+  "2018": {
+    "editor": {
+      "category": "11",
+      "image": [
+        "enemycat.png"
+      ],
+      "image_tint": [
+        "black",
+        "none"
+      ],
+      "paint": "false",
+      "name": "Shadow Cat"
+    },
+    "object": "ShadowCat"
+  },
+  "2019": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "woc_wall.png"
+      ],
+      "paint": "false",
+      "name": "Wall Of Cats (Wall)"
+    },
+    "object": "WallOfCats_Wall",
+    "forced_placement": "true"
+  },
+  "2020": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "woc_wall.png"
+      ],
+      "paint": "false",
+      "name": "Wall Of Cats (Eye)"
+    },
+    "object": "WallOfCats_Eye",
+    "forced_placement": "true"
+  },
+  "2021": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "woc_wall.png"
+      ],
+      "paint": "false",
+      "name": "Wall Of Cats (Mouth)"
+    },
+    "object": "WallOfCats_Mouth",
+    "forced_placement": "true"
+  },
+  "2022": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "bumblefoot.png"
+      ],
+      "paint": "false",
+      "name": "Bumblefoot"
+    },
+    "object": "Bumblefoot"
+  },
+  "2023": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "throb.png"
+      ],
+      "paint": "false",
+      "name": "Throbbing King"
+    },
+    "object": "Simon"
+  },
+  "2024": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "rocky.png"
+      ],
+      "paint": "false",
+      "name": "Rocky Bobo"
+    },
+    "object": "RockyBobo"
+  },
+  "2025": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "chubs.png"
+      ],
+      "paint": "false",
+      "name": "Chubs"
+    },
+    "object": "Chubs"
+  },
+  "2026": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "nubs.png"
+      ],
+      "paint": "false",
+      "name": "Nubs"
+    },
+    "object": "Nubs"
+  },
+  "2027": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "gunslinger.png"
+      ],
+      "paint": "false",
+      "name": "Zodiac"
+    },
+    "object": "Zodiac"
+  },
+  "2028": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "flushmaster.png"
+      ],
+      "paint": "false",
+      "name": "Flushmaster"
+    },
+    "object": "Flushmaster",
+    "weather_element_alt": {
+      "element": "Ice",
+      "object": "IceElemental"
+    }
+  },
+  "2029": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "spiderqueen.png"
+      ],
+      "paint": "false",
+      "name": "Spider Queen"
+    },
+    "object": "SpiderQueen"
+  },
+  "2030": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "smough.png",
+        "ornstein.png"
+      ],
+      "paint": "false",
+      "name": "Guillotina Phase 1"
+    },
+    "object": "Guillotina1"
+  },
+  "2031": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "ornstein.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Guillotina Phase 3 Head"
+    },
+    "object": "Guillotina3Head"
+  },
+  "2032": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "smough.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Guillotina Phase 3 Body"
+    },
+    "object": "Guillotina3Body"
+  },
+  "2033": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "dustdevil.png"
+      ],
+      "paint": "false",
+      "name": "Dust Devil"
+    },
+    "object": "DustDevil"
+  },
+  "2034": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "lenny.png"
+      ],
+      "paint": "false",
+      "name": "Lenny"
+    },
+    "object": "Lenny"
+  },
+  "2035": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "johnny.png"
+      ],
+      "paint": "false",
+      "name": "Johnny"
+    },
+    "object": "Johnny"
+  },
+  "2036": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "alienbeast.png"
+      ],
+      "paint": "false",
+      "name": "Alien Beast"
+    },
+    "object": "AlienBeast"
+  },
+  "2037": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "thecoven.png"
+      ],
+      "paint": "false",
+      "name": "The Coven"
+    },
+    "object": "TheCoven"
+  },
+  "2038": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "cerberubs.png"
+      ],
+      "paint": "false",
+      "name": "Cerberubs"
+    },
+    "object": "Cerberubs"
+  },
+  "2039": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "astrozombie.png"
+      ],
+      "paint": "false",
+      "name": "Astro Zombie"
+    },
+    "object": "AstroZombie"
+  },
+  "2040": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "stacymutant.png"
+      ],
+      "paint": "false",
+      "name": "Stacy Mutant"
+    },
+    "object": "StacyMutant"
+  },
+  "2041": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "zaratana.png"
+      ],
+      "paint": "false",
+      "name": "Zaratana VS"
+    },
+    "object": "ZaratanaVS"
+  },
+  "2042": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "pyrophina.png"
+      ],
+      "paint": "false",
+      "name": "Pyrophina VS"
+    },
+    "object": "PyrophinaVS"
+  },
+  "2043": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "moonhead.png"
+      ],
+      "paint": "false",
+      "name": "Moon Head"
+    },
+    "object": "MoonHead"
+  },
+  "2044": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "moonhand.png"
+      ],
+      "paint": "false",
+      "name": "Moon Hand"
+    },
+    "object": "MoonHand"
+  },
+  "2045": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "fightercat.png"
+      ],
+      "image_tint": [
+        "blue"
+      ],
+      "paint": "false",
+      "name": "Colorless Cat (Tutorial)"
+    },
+    "object": "ColorlessCat_Tutorial"
+  },
+  "2046": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "lordbunga.png"
+      ],
+      "paint": "false",
+      "name": "Lord Bunga"
+    },
+    "object": "LordBunga"
+  },
+  "2047": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "bungaelite.png"
+      ],
+      "paint": "false",
+      "name": "Bunga Warrior 1"
+    },
+    "object": "BungaWarrior1"
+  },
+  "2048": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "spewer.png"
+      ],
+      "paint": "false",
+      "name": "Spewer"
+    },
+    "object": "Spewer"
+  },
+  "2049": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "iceelemental.png"
+      ],
+      "paint": "false",
+      "name": "Ice Elemental"
+    },
+    "object": "IceElemental"
+  },
+  "2050": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "queenhippo.png"
+      ],
+      "paint": "false",
+      "name": "Queen Hippo"
+    },
+    "object": "QueenHippo"
+  },
+  "2051": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "dybbuk.png"
+      ],
+      "paint": "false",
+      "name": "Dybbuk"
+    },
+    "object": "Dybbuk"
+  },
+  "2052": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "hitlerfetus.png"
+      ],
+      "paint": "false",
+      "name": "Hitler Fetus"
+    },
+    "object": "HitlerClone"
+  },
+  "2053": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "hitler.png"
+      ],
+      "paint": "false",
+      "name": "Hitler"
+    },
+    "object": "HitlerHead"
+  },
+  "2054": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "druidcat.png"
+      ],
+      "paint": "false",
+      "name": "Druid Cat"
+    },
+    "object": "DruidCat"
+  },
+  "2055": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "druidcrow.png"
+      ],
+      "paint": "false",
+      "name": "Druid Crow"
+    },
+    "object": "DruidCrow"
+  },
+  "2056": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "ratking.png"
+      ],
+      "paint": "false",
+      "name": "Rat King"
+    },
+    "object": "RatKing"
+  },
+  "2057": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "trampy.png"
+      ],
+      "paint": "false",
+      "name": "Trampy"
+    },
+    "object": "Trampy"
+  },
+  "2058": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "necrocat.png"
+      ],
+      "paint": "false",
+      "name": "Necro Cat"
+    },
+    "object": "NecroCat"
+  },
+  "2059": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "tinkerercat.png"
+      ],
+      "paint": "false",
+      "name": "Tinkerer Cat"
+    },
+    "object": "TinkererCat"
+  },
+  "2060": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "butchercat.png"
+      ],
+      "paint": "false",
+      "name": "Butcher Cat"
+    },
+    "object": "ButcherCat"
+  },
+  "2061": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "psychiccat.png"
+      ],
+      "paint": "false",
+      "name": "Psychic Cat"
+    },
+    "object": "PsychicCat"
+  },
+  "2062": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "monkcat.png"
+      ],
+      "paint": "false",
+      "name": "Monk Cat"
+    },
+    "object": "MonkCat"
+  },
+  "2063": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "jestercat.png"
+      ],
+      "paint": "false",
+      "name": "Jester Cat"
+    },
+    "object": "JesterCat"
+  },
+  "2064": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "terminator1.png"
+      ],
+      "paint": "false",
+      "name": "Terminator 1"
+    },
+    "object": "Terminator1"
+  },
+  "2065": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "terminator2.png"
+      ],
+      "paint": "false",
+      "name": "Terminator 2"
+    },
+    "object": "Terminator2"
+  },
+  "2066": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "1.png",
+        "pyrophina.png"
+      ],
+      "paint": "false",
+      "name": "Pyrophina (Solo)"
+    },
+    "object": "Pyrophina"
+  },
+  "2067": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "1.png",
+        "zaratana.png"
+      ],
+      "paint": "false",
+      "name": "Zaratana (Solo)"
+    },
+    "object": "Zaratana"
+  },
+  "2068": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "fightercat.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Chupacabra"
+    },
+    "object": "Chupacabra"
+  },
+  "2069": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "throbbingking.png"
+      ],
+      "paint": "false",
+      "name": "Throbbing King"
+    },
+    "object": "ThrobbingKing"
+  },
+  "2070": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "bungaelite.png"
+      ],
+      "paint": "false",
+      "name": "Bunga Warrior 2"
+    },
+    "object": "BungaWarrior2"
+  },
+  "2071": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "stevenslime.png"
+      ],
+      "paint": "false",
+      "name": "Steven Slime"
+    },
+    "object": "BigSlimeX"
+  },
+  "2072": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "organzodiac.png"
+      ],
+      "paint": "false",
+      "name": "Organ Zodiac"
+    },
+    "object": "OrganZodiac"
+  },
+  "2073": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "megadinohead.png"
+      ],
+      "paint": "false",
+      "name": "Mega Dino (Head)"
+    },
+    "object": "MegaDinoHead"
+  },
+  "2074": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "megadinoleg.png"
+      ],
+      "paint": "false",
+      "name": "Mega Dino (Leg)"
+    },
+    "object": "MegaDinoLeg"
+  },
+  "2075": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "girldino.png"
+      ],
+      "paint": "false",
+      "name": "Girl Dino"
+    },
+    "object": "GirlDino"
+  },
+  "2076": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "boydino.png"
+      ],
+      "paint": "false",
+      "name": "Boy Dino"
+    },
+    "object": "BoyDino"
+  },
+  "2077": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "bloat.png"
+      ],
+      "paint": "false",
+      "name": "The Bloat"
+    },
+    "object": "TheBloat"
+  },
+  "2078": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "lightning.png"
+      ],
+      "paint": "false",
+      "name": "Lightning Elemental"
+    },
+    "object": "LightningElemental"
+  },
+  "2079": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "infestedduo.png"
+      ],
+      "paint": "false",
+      "name": "Infested Duo"
+    },
+    "object": "InfestedDuo"
+  },
+  "2080": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "cavecatmom.png"
+      ],
+      "paint": "false",
+      "name": "Cave Cat Mom"
+    },
+    "object": "CaveCatMom"
+  },
+  "2081": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "cavecatdad.png"
+      ],
+      "paint": "false",
+      "name": "Cave Cat Dad"
+    },
+    "object": "CaveCatDad"
+  },
+  "2082": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "cavecatkitten.png"
+      ],
+      "paint": "false",
+      "name": "Cave Cat Kitten"
+    },
+    "object": "CaveCatBaby"
+  },
+  "2083": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "drmangler.png"
+      ],
+      "paint": "false",
+      "name": "Dr. Mangler"
+    },
+    "object": "DrMangler"
+  },
+  "2084": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "manglersmonster.png"
+      ],
+      "paint": "false",
+      "name": "Mangler's Monster"
+    },
+    "object": "ManglersMonster"
+  },
+  "2085": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "themother.png"
+      ],
+      "paint": "false",
+      "name": "The Mother"
+    },
+    "object": "TheMother"
+  },
+  "2086": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "mothertumorbig.png"
+      ],
+      "paint": "false",
+      "name": "Mother Tumor (big)"
+    },
+    "object": "MotherTumorBig"
+  },
+  "2087": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "mothertumorsmall.png"
+      ],
+      "paint": "false",
+      "name": "Mother Tumor (small)"
+    },
+    "object": "MotherTumor"
+  },
+  "2088": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "butchercat.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Hellspawn"
+    },
+    "object": "Hellspawn"
+  },
+  "2089": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "chaosboss.png"
+      ],
+      "paint": "false",
+      "name": "Chaos"
+    },
+    "object": "Chaos",
+    "tag_location": "ChaosValidPosition"
+  },
+  "2090": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "chaosboss.png"
+      ],
+      "image_tint": "red",
+      "paint": "false",
+      "name": "Chaos (mirrored position marker)"
+    },
+    "tag_location": "ChaosValidPosition"
+  },
+  "2091": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "hitleriii.png"
+      ],
+      "paint": "false",
+      "name": "T3 Hitler"
+    },
+    "object": "T3Hitler"
+  },
+  "2092": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "cat.png"
+      ],
+      "image_tint": "red",
+      "paint": "false",
+      "name": "T3 Hitler Mini Spawn Positions"
+    },
+    "tag_location": "HitlerMiniInitial"
+  },
+  "2093": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "finalboss.png"
+      ],
+      "paint": "false",
+      "name": "FinalBoss"
+    },
+    "object": "TheCreator"
+  },
+  "2094": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "cat.png"
+      ],
+      "image_tint": "blue",
+      "paint": "false",
+      "name": "Final Boss Clone Spawn Positions"
+    },
+    "tag_location": "FinalBossCloneSpot"
+  },
+  "2095": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "thechild.png"
+      ],
+      "paint": "false",
+      "name": "The Child (spawn position)"
+    },
+    "tag_location": "FinalBossTheChildLocation"
+  },
+  "2096": {
+    "editor": {
+      "category": "10",
+      "image": [
+        "megagup.png"
+      ],
+      "paint": "false",
+      "name": "Mega Guppy (DEBUG ONLY)"
+    },
+    "object": "Debug_MegaGuppyPhase3"
+  },
+  "2097": {
+    "editor": {
+      "category": "9",
+      "image": [
+        "cat.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "White Rabbit"
+    },
+    "object": "WhiteRabbit"
+  },
+  "2098": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "megafetus.png"
+      ],
+      "paint": "false",
+      "name": "Glowing Bear"
+    },
+    "object": "GlowingBear"
+  },
+  "2099": {
+    "editor": {
+      "category": "8",
+      "image": [
+        "reaper.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Death"
+    },
+    "object": "Death"
+  },
+  "5000": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "rock.png"
+      ],
+      "paint": "true",
+      "name": "Rock"
+    },
+    "object": "Rock"
+  },
+  "5001": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "icecube.png"
+      ],
+      "paint": "true",
+      "name": "Ice Block"
+    },
+    "object": "IceBlock"
+  },
+  "5002": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "coin.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Coin"
+    },
+    "object": "Coin"
+  },
+  "5003": {
+    "editor": {
+      "category": "107",
+      "subcategory": "2",
+      "image": [
+        "pole.png"
+      ],
+      "paint": "false",
+      "name": "Static Tall A (Power Pole)"
+    },
+    "object": "StaticTallA",
+    "early_spawn": "true"
+  },
+  "5004": {
+    "editor": {
+      "category": "107",
+      "subcategory": "3",
+      "image": [
+        "dumpster.png"
+      ],
+      "paint": "false",
+      "name": "Static 2x2 A (Dumpster)"
+    },
+    "object": "Static2x2A",
+    "early_spawn": "true"
+  },
+  "5005": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "cloud.png"
+      ],
+      "image_tint": [
+        "purple"
+      ],
+      "paint": "false",
+      "name": "Gas Cloud",
+      "layer": "2"
+    },
+    "object": "GasCloud"
+  },
+  "5006": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "cloud.png"
+      ],
+      "image_tint": [
+        "yellow"
+      ],
+      "paint": "false",
+      "name": "Dust Cloud",
+      "layer": "2"
+    },
+    "object": "DustCloud"
+  },
+  "5007": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "bomb.png"
+      ],
+      "paint": "false",
+      "name": "Bomb"
+    },
+    "object": "Bomb"
+  },
+  "5008": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "smallrock.png"
+      ],
+      "paint": "true",
+      "name": "Small Rock"
+    },
+    "object": "SmallRock"
+  },
+  "5009": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "junk.png"
+      ],
+      "paint": "true",
+      "name": "Junk"
+    },
+    "object": "Junk"
+  },
+  "5010": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "trash.png"
+      ],
+      "paint": "true",
+      "name": "Trash Bag"
+    },
+    "object": "TrashBag"
+  },
+  "5011": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "food.png"
+      ],
+      "paint": "true",
+      "name": "Food"
+    },
+    "object": "RandomFoodPickup"
+  },
+  "5012": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "crate.png"
+      ],
+      "paint": "true",
+      "name": "Crate"
+    },
+    "object": "Crate_WithItemChance"
+  },
+  "5013": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "gascan.png"
+      ],
+      "paint": "true",
+      "name": "Gas Can"
+    },
+    "object": "GasCan"
+  },
+  "5014": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "poop.png"
+      ],
+      "paint": "true",
+      "name": "Poop"
+    },
+    "object": "Poop"
+  },
+  "5015": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "hydrant.png"
+      ],
+      "paint": "true",
+      "name": "Fire Hydrant"
+    },
+    "object": "Hydrant"
+  },
+  "5016": {
+    "editor": {
+      "category": "107",
+      "subcategory": "1",
+      "image": [
+        "rubble.png"
+      ],
+      "paint": "false",
+      "name": "Static 1x1 A (Rubble)"
+    },
+    "object": "Static1x1A",
+    "early_spawn": "true"
+  },
+  "5017": {
+    "editor": {
+      "category": "107",
+      "subcategory": "1",
+      "image": [
+        "bricks.png"
+      ],
+      "paint": "false",
+      "name": "Static 1x1 B (Bricks)"
+    },
+    "object": "Static1x1B",
+    "early_spawn": "true"
+  },
+  "5018": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "tire.png"
+      ],
+      "paint": "false",
+      "name": "Tire"
+    },
+    "object": "Tire"
+  },
+  "5019": {
+    "editor": {
+      "category": "107",
+      "subcategory": "2",
+      "image": [
+        "phonebooth.png"
+      ],
+      "paint": "false",
+      "name": "Static Tall B (Phone Booth)"
+    },
+    "object": "StaticTallB",
+    "early_spawn": "true"
+  },
+  "5020": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "urn.png"
+      ],
+      "paint": "false",
+      "name": "Phylactery"
+    },
+    "object": "Phylactery"
+  },
+  "5021": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "corpse.png"
+      ],
+      "paint": "false",
+      "name": "Random Chapter Enemy Corpse"
+    },
+    "object": "chapter_corpse_medium"
+  },
+  "5022": {
+    "editor": {
+      "category": "107",
+      "subcategory": "1",
+      "image": [
+        "gravel.png"
+      ],
+      "paint": "false",
+      "name": "Static 1x1 C (Gravel)"
+    },
+    "object": "Static1x1C",
+    "early_spawn": "true"
+  },
+  "5023": {
+    "editor": {
+      "category": "107",
+      "subcategory": "3",
+      "image": [
+        "biggravel.png"
+      ],
+      "paint": "false",
+      "name": "Static 2x2 B (Gravel Pile)"
+    },
+    "object": "Static2x2B",
+    "early_spawn": "true"
+  },
+  "5024": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "tnt.png"
+      ],
+      "paint": "false",
+      "name": "TNTCrate"
+    },
+    "object": "TNTCrate"
+  },
+  "5025": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "harpoontrap.png",
+        "north_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Harpoon Trap"
+    },
+    "object": "HarpoonTrap",
+    "orientation": "north"
+  },
+  "5026": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "harpoontrap.png",
+        "south_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Harpoon Trap"
+    },
+    "object": "HarpoonTrap",
+    "orientation": "south"
+  },
+  "5027": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "harpoontrap.png",
+        "east_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Harpoon Trap"
+    },
+    "object": "HarpoonTrap",
+    "orientation": "east"
+  },
+  "5028": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "harpoontrap.png",
+        "west_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Harpoon Trap"
+    },
+    "object": "HarpoonTrap",
+    "orientation": "west"
+  },
+  "5029": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "waterkitten.png"
+      ],
+      "image_tint": [
+        "blue",
+        "none"
+      ],
+      "paint": "false",
+      "name": "Water Kitten Trap"
+    },
+    "trap": "WaterKittenTrap"
+  },
+  "5030": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spikyrock.png"
+      ],
+      "paint": "false",
+      "name": "Spiky Rock"
+    },
+    "object": "SpikyRock"
+  },
+  "5031": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "boulder.png"
+      ],
+      "paint": "true",
+      "name": "Boulder"
+    },
+    "object": "Boulder"
+  },
+  "5032": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spiderweb.png"
+      ],
+      "paint": "false",
+      "name": "Spider Web",
+      "layer": "2"
+    },
+    "trap": "WebTrap"
+  },
+  "5033": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "ghosttombstone.png"
+      ],
+      "paint": "false",
+      "name": "Ghost Tombstone"
+    },
+    "object": "Tombstone_Ghost"
+  },
+  "5034": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "zombietombstone.png"
+      ],
+      "paint": "false",
+      "name": "Zombie Tombstone"
+    },
+    "object": "Tombstone_Zombie"
+  },
+  "5035": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "manaidol.png"
+      ],
+      "paint": "false",
+      "name": "Mana Drain Idol"
+    },
+    "object": "Tombstone_ManaIdol"
+  },
+  "5036": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "tire.png",
+        ",",
+        "north_arrow.png",
+        ",",
+        "south_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Tire (Up)"
+    },
+    "object": "Tire_Up",
+    "orientation": "north"
+  },
+  "5037": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "tire.png",
+        ",",
+        "east_arrow.png",
+        ",",
+        "west_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Tire (Up)"
+    },
+    "object": "Tire_Up",
+    "orientation": "east"
+  },
+  "5038": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "tire.png",
+        ",",
+        "north_arrow.png",
+        ",",
+        "south_arrow.png",
+        ",",
+        "east_arrow.png",
+        ",",
+        "west_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Tire (Up) (Random Direction)"
+    },
+    "object": "Tire_Up"
+  },
+  "5039": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "cactus.png"
+      ],
+      "paint": "false",
+      "name": "Cactus"
+    },
+    "object": "Cactus"
+  },
+  "5040": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "staticcactus.png"
+      ],
+      "paint": "false",
+      "name": "Static Cactus"
+    },
+    "object": "SpikyCactus",
+    "early_spawn": "true"
+  },
+  "5041": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "staticcactus_tall.png"
+      ],
+      "paint": "false",
+      "name": "Tall Static Cactus"
+    },
+    "object": "SpikyCactus_Tall",
+    "early_spawn": "true"
+  },
+  "5042": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "staticcactus_2x2.png"
+      ],
+      "paint": "false",
+      "name": "2x2 Static Cactus"
+    },
+    "object": "SpikyCactus_2x2",
+    "early_spawn": "true"
+  },
+  "5043": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "mininuke.png"
+      ],
+      "paint": "false",
+      "name": "Mini Nuke"
+    },
+    "object": "MiniNuke"
+  },
+  "5044": {
+    "editor": {
+      "category": "107",
+      "subcategory": "4",
+      "image": [
+        "smcandle.png"
+      ],
+      "paint": "false",
+      "name": "Small Candle"
+    },
+    "object": "CandleSmall"
+  },
+  "5045": {
+    "editor": {
+      "category": "107",
+      "subcategory": "4",
+      "image": [
+        "bgcandle.png"
+      ],
+      "paint": "false",
+      "name": "Big Candle"
+    },
+    "object": "CandleBig"
+  },
+  "5046": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "neutronstar.png"
+      ],
+      "paint": "false",
+      "name": "Neutron Star"
+    },
+    "object": "NeutronStar"
+  },
+  "5047": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "blackhole.png"
+      ],
+      "paint": "false",
+      "name": "Black Hole"
+    },
+    "object": "BlackHole"
+  },
+  "5048": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "hellhand.png"
+      ],
+      "paint": "false",
+      "name": "Hell Hand"
+    },
+    "object": "HellHand"
+  },
+  "5049": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "cloningvat.png"
+      ],
+      "paint": "false",
+      "name": "Cloning Vat"
+    },
+    "object": "CloningVat"
+  },
+  "5050": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "labpillar.png"
+      ],
+      "paint": "false",
+      "name": "Support Pillar"
+    },
+    "object": "LabSupportPillar"
+  },
+  "5051": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "groundedspear.png"
+      ],
+      "paint": "false",
+      "name": "Cave Man Spear"
+    },
+    "object": "GroundedSpear"
+  },
+  "5052": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spewerpill.png"
+      ],
+      "image_tint": [
+        "purple"
+      ],
+      "paint": "false",
+      "name": "Spewer Pill (normal)"
+    },
+    "object": "SpewerPill_Normal"
+  },
+  "5053": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spewerpill.png"
+      ],
+      "image_tint": [
+        "red"
+      ],
+      "paint": "false",
+      "name": "Spewer Pill (lava)"
+    },
+    "object": "SpewerPill_Fire"
+  },
+  "5054": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spewerpill.png"
+      ],
+      "image_tint": [
+        "grey"
+      ],
+      "paint": "false",
+      "name": "Spewer Pill (tar)"
+    },
+    "object": "SpewerPill_Tar"
+  },
+  "5055": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spewerpilltube.png",
+        "west_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Spewer Pill Tube"
+    },
+    "object": "SpewerPillTubeL"
+  },
+  "5056": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "spewerpilltube.png",
+        "south_arrow.png"
+      ],
+      "paint": "false",
+      "name": "Spewer Pill Tube"
+    },
+    "object": "SpewerPillTubeR"
+  },
+  "5057": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "minivolcano.png"
+      ],
+      "paint": "false",
+      "name": "Mini Volcano"
+    },
+    "object": "MiniVolcano"
+  },
+  "5058": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "slotmachine.png"
+      ],
+      "paint": "false",
+      "name": "Slot Machine"
+    },
+    "object": "SlotMachine"
+  },
+  "5059": {
+    "editor": {
+      "category": "106",
+      "image": [
+        "covencandle.png"
+      ],
+      "paint": "false",
+      "name": "Coven Candle"
+    },
+    "object": "CovenCandle"
+  },
+  "5060": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "scrap.png"
+      ],
+      "paint": "false",
+      "name": "Scrap"
+    },
+    "object": "RandomArmorPickup"
+  },
+  "5061": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "catnip.png"
+      ],
+      "paint": "false",
+      "name": "Catnip"
+    },
+    "object": "RandomCatnipPickup"
+  },
+  "5062": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "blessing.png"
+      ],
+      "paint": "false",
+      "name": "Blessing"
+    },
+    "object": "Blessing"
+  },
+  "5063": {
+    "editor": {
+      "category": "105",
+      "image": [
+        "food.png"
+      ],
+      "image_tint": [
+        "green"
+      ],
+      "paint": "false",
+      "name": "Poison Food"
+    },
+    "object": "PoisonFood"
+  }
+}

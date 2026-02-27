@@ -1,0 +1,48 @@
+{
+  "levels": {
+    "folder": "alley",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "hard"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "nemesis": [
+      "nemesis"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "special_events.gon"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "bunkeritems"
+  },
+  "nemesis": {
+    "head_start": "99",
+    "advance": "1",
+    "spawn_node": "start",
+    "repeat": "never"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "radicalrat"
+    }
+  },
+  "generated_nodes": {},
+  "groups": {},
+  "flags": {}
+}

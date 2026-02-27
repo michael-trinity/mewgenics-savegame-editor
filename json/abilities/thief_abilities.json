@@ -1,0 +1,2263 @@
+{
+  "Assassinate": {
+    "template": "melee_spell",
+    "class": "AOESpellAbility",
+    "meta": {
+      "name": "ABILITY_ASSASSINATE_NAME",
+      "name_resolved": "Assassinate",
+      "desc": "ABILITY_ASSASSINATE_DESC",
+      "desc_resolved": "A melee attack that can only hit from behind. This attack ignores shield and has 50% crit chance.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "attack",
+      "particle": "Slash",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true",
+      "delay": "0"
+    },
+    "sounds": {
+      "oncast": "AbilitySnd_Assassinate"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "restrictions": [
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "must_backstab"
+      ]
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "10+bonus_melee_ability_damage",
+      "crit_chance": "50%",
+      "piercing": "true",
+      "incidentally_collects_pickups": "true"
+    }
+  },
+  "Assassinate2": {
+    "variant_of": "Assassinate",
+    "meta": {
+      "desc": "ABILITY_ASSASSINATE2_DESC",
+      "desc_resolved": "A melee attack that can only hit from behind. This attack ignores shield and has 100% crit chance.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_ability_damage",
+      "crit_chance": "100%"
+    }
+  },
+  "BoostBackstab": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BOOSTBACKSTAB_NAME",
+      "name_resolved": "Boost Backstab",
+      "desc": "ABILITY_BOOSTBACKSTAB_DESC",
+      "desc_resolved": "Until end of turn, your backstabs do +75% more damage and ignore shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "tailwag",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempBackstab": "75",
+        "TempBackstabPiercing": "1"
+      }
+    }
+  },
+  "BoostBackstab2": {
+    "variant_of": "BoostBackstab",
+    "meta": {
+      "desc": "ABILITY_BOOSTBACKSTAB2_DESC",
+      "desc_resolved": "Until end of turn, your backstabs do +75% more damage, ignore shield, and inflict Bleed and Poison."
+    },
+    "damage_instance": {
+      "effects": {
+        "TempBackstabBleed": "1",
+        "TempBackstabPoison": "1"
+      }
+    }
+  },
+  "PoisonGas": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_POISONGAS_NAME",
+      "name_resolved": "Poison Gas",
+      "desc": "ABILITY_POISONGAS_DESC",
+      "desc_resolved": "Inflict Poison 1 on all units adjacent to you.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "runincircles"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Poison": "level"
+      },
+      "elements": [
+        "Poison"
+      ]
+    }
+  },
+  "PoisonGas2": {
+    "variant_of": "PoisonGas",
+    "meta": {
+      "desc": "ABILITY_POISONGAS2_DESC",
+      "desc_resolved": "Inflict Poison 2 on all units adjacent to you (even diagonally)."
+    },
+    "target": {
+      "aoe_mode": "square"
+    }
+  },
+  "PoisonNail": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_POISONNAIL_NAME",
+      "name_resolved": "Poison Nail",
+      "desc": "ABILITY_POISONNAIL_DESC",
+      "desc_resolved": "Throw a nail that inflicts Poison and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true",
+      "effects": {
+        "Poison": "1"
+      }
+    }
+  },
+  "PoisonNail2": {
+    "variant_of": "PoisonNail",
+    "meta": {
+      "desc": "ABILITY_POISONNAIL2_DESC",
+      "desc_resolved": "Throw 2 nails that inflict Poison and ignore shield."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "WeakeningNail": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_WEAKENINGNAIL_NAME",
+      "name_resolved": "Weakening Nail",
+      "desc": "ABILITY_WEAKENINGNAIL_DESC",
+      "desc_resolved": "Throw a nail that inflicts Weakness and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true",
+      "effects": {
+        "Weakness": "1"
+      }
+    }
+  },
+  "WeakeningNail2": {
+    "variant_of": "WeakeningNail",
+    "meta": {
+      "desc": "ABILITY_WEAKENINGNAIL2_DESC",
+      "desc_resolved": "Throw 2 nails that inflict Weakness and ignore shield."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "SharpNail": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_SHARPNAIL_NAME",
+      "name_resolved": "Sharp Nail",
+      "desc": "ABILITY_SHARPNAIL_DESC",
+      "desc_resolved": "Throw a nail that inflicts Bleed and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "projectile": "knifeprojectile",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true",
+      "effects": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "SharpNail2": {
+    "variant_of": "SharpNail",
+    "meta": {
+      "desc": "ABILITY_SHARPNAIL2_DESC",
+      "desc_resolved": "Throw 2 nails that inflict Bleed and ignore shield."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "Double": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DOUBLE_NAME",
+      "name_resolved": "Double",
+      "desc": "ABILITY_DOUBLE_DESC",
+      "desc_resolved": "-",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "jitter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleCast": "1"
+      }
+    }
+  },
+  "Double2": {
+    "variant_of": "Double",
+    "meta": {
+      "desc": "ABILITY_DOUBLE2_DESC",
+      "desc_resolved": "-"
+    },
+    "cost": {
+      "mana": "6"
+    }
+  },
+  "CoinToss": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_COINTOSS_NAME",
+      "name_resolved": "Coin Toss",
+      "desc": "ABILITY_COINTOSS_DESC",
+      "desc_resolved": "Throw a coin that deals damage.\nRELOAD: Collect a coin.\n[s:.7]This spell costs more mana each additional time you use it on the same turn.[/s]",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "invthrow",
+      "projectile": "CoinProjectile"
+    },
+    "cost": {
+      "requires_reload": "true",
+      "mana": "X",
+      "coins": "1"
+    },
+    "target": {
+      "max_aoe": "5",
+      "X_is": "this_ability_storm_count"
+    },
+    "bonus_passives": {
+      "ReloadOnGainCoins": "1"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_ranged_damage",
+      "effects": {
+        "CoinTossBounce": "X"
+      }
+    }
+  },
+  "CoinToss2": {
+    "variant_of": "CoinToss",
+    "meta": {
+      "desc": "ABILITY_COINTOSS2_DESC",
+      "desc_resolved": "Throw a coin at infinite range with +50% crit chance that ignores shield.\nRELOAD: Collect a coin.\n[s:.7]This spell costs more mana each additional time you use it on the same turn.[/s]"
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "damage_instance": {
+      "crit_chance": "50%",
+      "piercing": "true"
+    }
+  },
+  "MoveAgain": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MOVEAGAIN_NAME",
+      "name_resolved": "Move Again",
+      "desc": "ABILITY_MOVEAGAIN_DESC",
+      "desc_resolved": "Refresh your movement action.",
+      "class": "Thief",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "animation": "hopinplace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "MoveAgain2": {
+    "variant_of": "MoveAgain",
+    "meta": {
+      "desc": "ABILITY_MOVEAGAIN2_DESC",
+      "desc_resolved": "Refresh your movement action.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "AttackAgain": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_REARM_NAME",
+      "name_resolved": "Rearm",
+      "desc": "ABILITY_REARM_DESC",
+      "desc_resolved": "Refresh your basic attack.",
+      "class": "Thief",
+      "type_icon": "melee"
+    },
+    "graphics": {
+      "animation": "celebrate"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshActPoints": "1"
+      }
+    }
+  },
+  "AttackAgain2": {
+    "variant_of": "AttackAgain",
+    "meta": {
+      "desc": "ABILITY_REARM2_DESC",
+      "desc_resolved": "Refresh your basic attack.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Camouflage": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CAMOFLAUGE_NAME",
+      "name_resolved": "Camouflage",
+      "desc": "ABILITY_CAMOFLAUGE_DESC",
+      "desc_resolved": "Gain Stealth.",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Stealth": "1"
+      }
+    }
+  },
+  "Camouflage2": {
+    "variant_of": "Camouflage",
+    "meta": {
+      "desc": "ABILITY_CAMOFLAUGE2_DESC",
+      "desc_resolved": "Gain Stealth. Attacking while stealthed has a 100% critical hit chance."
+    },
+    "damage_instance": {
+      "effects": {
+        "Stealth": "1",
+        "StealthCritChance": "100"
+      }
+    }
+  },
+  "Shadow": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_SHADOW_NAME",
+      "name_resolved": "Shadow",
+      "desc": "ABILITY_SHADOW_DESC",
+      "desc_resolved": "Teleport behind a unit.\n[s:.7]Nothin' personnel, kid.[/s]",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "4",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_directly_behind_character"
+      ]
+    }
+  },
+  "Shadow2": {
+    "variant_of": "Shadow",
+    "meta": {
+      "desc": "ABILITY_SHADOW2_DESC",
+      "desc_resolved": "Teleport behind a unit. Your next action has +100% crit chance.\n[s:.7]Nothin' personnel, kid.[/s]"
+    },
+    "target": {
+      "max_range": "6"
+    },
+    "self_damage": {
+      "effects": {
+        "TempCritChanceUp": "100"
+      }
+    }
+  },
+  "TimeWalk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_TIMEWALK_NAME",
+      "name_resolved": "Time Walk",
+      "desc": "ABILITY_TIMEWALK_DESC",
+      "desc_resolved": "Take an extra turn at the end of the round.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "doublevision"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10",
+      "main_turn_only": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeExtraTurnEndOfRound": "1"
+      }
+    }
+  },
+  "TimeWalk2": {
+    "variant_of": "TimeWalk",
+    "meta": {
+      "desc": "ABILITY_TIMEWALK2_DESC",
+      "desc_resolved": "Take an extra turn at the end of the round.\n[s:.7](This spell can't be cast on extra turns. This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "7"
+    }
+  },
+  "DoubleLoot": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DOUBLELOOT_NAME",
+      "name_resolved": "Double Loot",
+      "desc": "ABILITY_DOUBLELOOT_DESC",
+      "desc_resolved": "-",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "jitter"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleLoot": "1"
+      }
+    }
+  },
+  "DoubleLoot2": {
+    "variant_of": "DoubleLoot",
+    "meta": {
+      "desc": "ABILITY_DOUBLELOOT2_DESC",
+      "desc_resolved": "-"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleLoot": "2"
+      }
+    }
+  },
+  "Distract": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_DISTRACT_NAME",
+      "name_resolved": "Distract",
+      "desc": "ABILITY_DISTRACT_DESC",
+      "desc_resolved": "Make a unit face away from you.",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "4",
+      "min_range": "1",
+      "knockback_mode": "character_to_tile_4snap"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "Distract2": {
+    "variant_of": "Distract",
+    "meta": {
+      "desc": "ABILITY_DISTRACT2_DESC",
+      "desc_resolved": "Make any unit look away from you. This has a 33% chance to inflict Confusion."
+    },
+    "target": {
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Confusion": [
+          "1",
+          ".33"
+        ]
+      }
+    }
+  },
+  "Rebound": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_REBOUND_NAME",
+      "name_resolved": "Rebound",
+      "desc": "ABILITY_REBOUND_DESC",
+      "desc_resolved": "A melee attack that rebounds you backwards 10 tiles.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "bigkick"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "restrictions": [
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "must_have_character"
+      ],
+      "knockback_mode": "orientation"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage"
+    },
+    "self_damage": {
+      "damage": "0",
+      "type": "melee",
+      "knockback": "-10",
+      "effects": {
+        "OverrideKnockbackDamage": "2",
+        "KnockbackDamageImmuneUntilSettled": "1"
+      }
+    }
+  },
+  "Rebound2": {
+    "variant_of": "Rebound",
+    "meta": {
+      "desc": "ABILITY_REBOUND2_DESC",
+      "desc_resolved": "A melee attack that rebounds you backwards 10 tiles. Deal damage to any unit you collide with."
+    },
+    "self_damage": {
+      "effects": {
+        "OverrideKnockbackDamage": "max(5+bonus_melee_ability_damage, 1)"
+      }
+    }
+  },
+  "CutPurse": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_CUTPURSE_NAME",
+      "name_resolved": "Cut Purse",
+      "desc": "ABILITY_CUTPURSE_DESC",
+      "desc_resolved": "Throw a nail that knocks coins out of units it hits and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true",
+      "effects": {
+        "KnockOutCoin": "1"
+      }
+    }
+  },
+  "CutPurse2": {
+    "variant_of": "CutPurse",
+    "meta": {
+      "desc": "ABILITY_CUTPURSE2_DESC",
+      "desc_resolved": "Throw 2 nails that knock coins out of units they hit and ignore shield."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "EagleEye": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_EAGLEEYE_NAME",
+      "name_resolved": "Eagle Eye",
+      "desc": "ABILITY_EAGLEEYE_DESC",
+      "desc_resolved": "Spawn 2-3 coins on random tiles.",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "lob": "false"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "max_aoe": "20",
+      "min_targets": "2",
+      "max_targets": "3",
+      "aoe_restrictions": [
+        "must_be_empty"
+      ]
+    },
+    "spawn": {
+      "object": "Coin",
+      "layer": "pickups"
+    }
+  },
+  "EagleEye2": {
+    "variant_of": "EagleEye",
+    "meta": {
+      "desc": "ABILITY_EAGLEEYE2_DESC",
+      "desc_resolved": "Spawn 3-7 coins on random tiles."
+    },
+    "target": {
+      "min_targets": "3",
+      "max_targets": "7"
+    }
+  },
+  "PickPocket": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PICKPOCKET_NAME",
+      "name_resolved": "Pickpocket",
+      "desc": "ABILITY_PICKPOCKET_DESC",
+      "desc_resolved": "Steal 1-3 coins from a unit and give it -1 Damage.",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "BurgleCoin": [
+          "1",
+          ".5"
+        ],
+        "DamageUp": "-1"
+      }
+    }
+  },
+  "PickPocket2": {
+    "variant_of": "PickPocket",
+    "keyword_tooltips": {
+      "DamageUp": "-1"
+    },
+    "meta": {
+      "desc": "ABILITY_PICKPOCKET2_DESC",
+      "desc_resolved": "Steal 3-5 coins from a unit, give it -1 Damage, and apply some extra debuffs at random."
+    },
+    "damage_instance": {
+      "effects": {
+        "BurgleCoin": "3",
+        "Poison": [
+          "1",
+          ".2"
+        ],
+        "Bleed": [
+          "1",
+          ".2"
+        ],
+        "Weakness": [
+          "1",
+          ".2"
+        ],
+        "Bruise": [
+          "1",
+          ".2"
+        ],
+        "Burn": [
+          "1",
+          ".2"
+        ],
+        "Slow": [
+          "1",
+          ".2"
+        ]
+      }
+    }
+  },
+  "Backflip": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BACKFLIP_NAME",
+      "name_resolved": "Backflip",
+      "desc": "ABILITY_BACKFLIP_DESC",
+      "desc_resolved": "Backflip out of the way the next time you're targeted by an enemy.",
+      "class": "Thief",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "backflipLoop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "BackflipWhenTargeted": {
+          "stacks": "1",
+          "ability": "BackflipDodge"
+        }
+      }
+    }
+  },
+  "Backflip2": {
+    "variant_of": "Backflip",
+    "meta": {
+      "desc": "ABILITY_BACKFLIP2_DESC",
+      "desc_resolved": "Backflip out of the way the next time you're targeted by an enemy.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "BackflipDodge": {
+    "template": "move",
+    "graphics": {
+      "sync_speed": "17",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "backflipStart",
+      "animation": "backflipLoop",
+      "move_end_animation": "backflipEnd",
+      "dont_orient": "true"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_any_orientation": "true"
+    }
+  },
+  "Blur": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BLUR_NAME",
+      "name_resolved": "Blur",
+      "desc": "ABILITY_BLUR_DESC",
+      "desc_resolved": "Gain +10% dodge chance.\nDisable this spell if you have more than 65% dodge chance.",
+      "class": "Thief",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "hopinplace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4",
+      "cant_cast": "X-65"
+    },
+    "bonus_passives": {
+      "XIsCountStatusStacks": "DodgeChance_Status"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "damage_instance": {
+      "effects": {
+        "DodgeChance_Status": "10"
+      }
+    }
+  },
+  "Blur2": {
+    "variant_of": "Blur",
+    "meta": {
+      "desc": "ABILITY_BLUR2_DESC",
+      "desc_resolved": "Gain +15% dodge chance. \nDisable this spell if you have more than 80% dodge chance."
+    },
+    "cost": {
+      "cant_cast": "X-75"
+    },
+    "damage_instance": {
+      "effects": {
+        "DodgeChance_Status": "15"
+      }
+    }
+  },
+  "GreedStep": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_GREEDSTEP_NAME",
+      "name_resolved": "Greedstep",
+      "desc": "ABILITY_GREEDSTEP_DESC",
+      "desc_resolved": "Teleport to a tile with coins on it.",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_moveable",
+        "must_have_tag"
+      ],
+      "target_requires_tag": "money"
+    }
+  },
+  "GreedStep2": {
+    "variant_of": "GreedStep",
+    "meta": {
+      "desc": "ABILITY_GREEDSTEP2_DESC",
+      "desc_resolved": "Teleport to a tile with coins on it, then spawn 1-2 coins on random tiles."
+    },
+    "self_damage": {
+      "effects": {
+        "SpawnCoinAnywhere": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "Stalk": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_STALK_NAME",
+      "name_resolved": "Stalk",
+      "desc": "ABILITY_STALK_DESC",
+      "desc_resolved": "Target any unit. Teleport behind it at the start of your next turn.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "prime_animation": "angry",
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "20",
+      "track_target": "true",
+      "delayed_trigger": "true",
+      "adjust_target": "stalk",
+      "restrictions": [
+        "must_have_enemy"
+      ]
+    }
+  },
+  "Stalk2": {
+    "variant_of": "Stalk",
+    "meta": {
+      "desc": "ABILITY_STALK2_DESC",
+      "desc_resolved": "Target any unit. Teleport behind it at the start of your next turn.\n[s:.7](Castable once per turn. Costs 0 mana.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "NailFlurry": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_NAILFLURRY_NAME",
+      "name_resolved": "Nail Flurry",
+      "desc": "ABILITY_NAILFLURRY_DESC",
+      "desc_resolved": "Throw 10 1-damage nails that ignore shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "temporary_effects": {
+      "CastAgain": "9"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "piercing": "true"
+    }
+  },
+  "NailFlurry2": {
+    "variant_of": "NailFlurry",
+    "meta": {
+      "desc": "ABILITY_NAILFLURRY2_DESC",
+      "desc_resolved": "Throw 10 1-damage nails that ignore shield. Throw extra nails equal to your [img:dex]."
+    },
+    "temporary_effects": {
+      "CastAgain": "9+dex"
+    }
+  },
+  "Declaw": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DECLAW_NAME",
+      "name_resolved": "Declaw",
+      "desc": "ABILITY_DECLAW_DESC",
+      "desc_resolved": "A melee attack that inflicts -1 Damage and Bleed.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "Bleed": "1",
+        "DamageUp": "-1"
+      }
+    }
+  },
+  "Declaw2": {
+    "variant_of": "Declaw",
+    "meta": {
+      "desc": "ABILITY_DECLAW2_DESC",
+      "desc_resolved": "A 2-hit melee attack that inflicts -1 Damage and Bleed."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "QuickRoll": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_QUICKROLL_NAME",
+      "name_resolved": "Quick Roll",
+      "desc": "ABILITY_QUICKROLL_DESC",
+      "desc_resolved": "Roll in a straight line up to three tiles.\nRELOAD: Backstab a unit.",
+      "class": "Thief",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "sync_speed": "22",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    },
+    "cost": {
+      "requires_reload": "true",
+      "mana": "0"
+    },
+    "bonus_passives": {
+      "ReloadOnBackstab": "1"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "3",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true"
+    }
+  },
+  "QuickRoll2": {
+    "variant_of": "QuickRoll",
+    "meta": {
+      "desc": "ABILITY_QUICKROLL2_DESC",
+      "desc_resolved": "Roll in a straight or diagonal line up to five tiles.\nRELOAD: Backstab a unit."
+    },
+    "target": {
+      "range_mode": "8cross",
+      "max_range": "5",
+      "allow_diagonals": "true"
+    }
+  },
+  "Slice": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SLICE_NAME",
+      "name_resolved": "Slice",
+      "desc": "ABILITY_SLICE_DESC",
+      "desc_resolved": "A melee attack that has all effects of your basic attack and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "bonus_passives": {
+      "CopyBasicAttackEffects": "1"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "piercing": "true"
+    }
+  },
+  "Slice2": {
+    "variant_of": "Slice",
+    "meta": {
+      "desc": "ABILITY_SLICE2_DESC",
+      "desc_resolved": "A melee attack that has all effects of your basic attack and ignores shield.\n[s:.7](This spell is free the 1st time you use it each turn.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "1"
+    }
+  },
+  "PocketSand": {
+    "template": "spell",
+    "graphics": {
+      "delay": "4",
+      "particle": "fx_sandBlows",
+      "animation": "kicksand"
+    },
+    "meta": {
+      "name": "ABILITY_POCKETSAND_NAME",
+      "name_resolved": "Pocket Sand",
+      "desc": "ABILITY_POCKETSAND_DESC",
+      "desc_resolved": "Inflict Blind on all units in a small cone.",
+      "class": "Thief"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "elements": [
+        "Wind"
+      ],
+      "effects": {
+        "Blind": "1"
+      }
+    }
+  },
+  "PocketSand2": {
+    "variant_of": "PocketSand",
+    "meta": {
+      "desc": "ABILITY_POCKETSAND2_DESC",
+      "desc_resolved": "Inflict Blind 2 on all units in a larger cone."
+    },
+    "target": {
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "Blind": "2"
+      }
+    }
+  },
+  "Nightshade": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_NIGHTSHADE_NAME",
+      "name_resolved": "Nightshade",
+      "desc": "ABILITY_NIGHTSHADE_DESC",
+      "desc_resolved": "Inflict Poison 4 on an adjacent unit.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "affected_particle": "PoisonPoof",
+      "animation": "swatupatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Poison": "4"
+      }
+    }
+  },
+  "Nightshade2": {
+    "variant_of": "Nightshade",
+    "meta": {
+      "desc": "ABILITY_NIGHTSHADE2_DESC",
+      "desc_resolved": "Inflict Poison 4 on an adjacent unit.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Shadowshift": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_SHADOWSHIFT_NAME",
+      "name_resolved": "Shadow Shift",
+      "desc": "ABILITY_SHADOWSHIFT_DESC",
+      "desc_resolved": "Teleport exactly 2 tiles away, leaving behind a shadow that mimics your basic attack.\n[s:.7](The shadow fades at the end of your turn.)[/s]",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "temporary_effects": {
+      "AfterImage": {
+        "object": "PlayerCat_ThiefShade",
+        "skilltemp": "true"
+      }
+    },
+    "target": {
+      "max_range": "2",
+      "min_range": "2"
+    }
+  },
+  "Shadowshift2": {
+    "variant_of": "Shadowshift",
+    "meta": {
+      "desc": "ABILITY_SHADOWSHIFT2_DESC",
+      "desc_resolved": "Teleport up to 3 tiles away, leaving behind a shadow that mimics your basic attack.\n[s:.7](The shadow fades at the end of your turn.)[/s]"
+    },
+    "target": {
+      "max_range": "3",
+      "min_range": "1"
+    }
+  },
+  "SlingShade": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SLINGSHADE_NAME",
+      "name_resolved": "Slingshade",
+      "desc": "ABILITY_SLINGSHADE_DESC",
+      "desc_resolved": "Spawn a shadow up to 3 tiles away that mimics your basic attack.\n[s:.7](The shadow fades at the end of your turn.)[/s]",
+      "class": "Thief"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "false",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "PlayerCat_ThiefShade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true"
+    }
+  },
+  "SlingShade2": {
+    "variant_of": "SlingShade",
+    "meta": {
+      "desc": "ABILITY_SLINGSHADE2_DESC",
+      "desc_resolved": "Spawn a shadow up to 5 tiles away that mimics your basic attack.\n[s:.7](The shadow fades at the end of your turn.)[/s]\n[s:.7](This spell costs less.)[/s]"
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "Caltrops": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_CALTROPS_NAME",
+      "name_resolved": "Caltrops",
+      "desc": "ABILITY_CALTROPS_DESC",
+      "desc_resolved": "Move up to 3 tiles, spreading glass shards on the tiles you walk through.",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "3"
+    },
+    "temporary_effects": {
+      "TileTrail": "GlassTile"
+    }
+  },
+  "Caltrops2": {
+    "variant_of": "Caltrops",
+    "meta": {
+      "desc": "ABILITY_CALTROPS2_DESC",
+      "desc_resolved": "Move up to 5 tiles, spreading glass shards on the tiles you walk through."
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "PierceShot": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_PIERCESHOT_NAME",
+      "name_resolved": "Pierce Shot",
+      "desc": "ABILITY_PIERCESHOT_DESC",
+      "desc_resolved": "Throw a nail that passes through units and ignores shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range",
+      "upgrade_straight_shot_to_piercing": "true"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "piercing": "true"
+    }
+  },
+  "PierceShot2": {
+    "variant_of": "PierceShot",
+    "meta": {
+      "desc": "ABILITY_PIERCESHOT2_DESC",
+      "desc_resolved": "Throw an infinite range nail that passes through units and ignores shield."
+    },
+    "target": {
+      "max_aoe": "10+bonus_range"
+    }
+  },
+  "Cheat": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CHEAT_NAME",
+      "name_resolved": "Cheat",
+      "desc": "ABILITY_CHEAT_DESC",
+      "desc_resolved": "Gain temporary +5 [img:lck] until your next turn.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "cheat"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "LuckUp",
+          "stacks": "5",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "Cheat2": {
+    "variant_of": "Cheat",
+    "meta": {
+      "desc": "ABILITY_CHEAT2_DESC",
+      "desc_resolved": "Gain temporary +10 [img:lck] until your next turn."
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "LuckUp",
+          "stacks": "10",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "VenomBarrage": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "ABILITY_VENOMBARRAGE_NAME",
+      "name_resolved": "Venom Barrage",
+      "desc": "ABILITY_VENOMBARRAGE_DESC",
+      "desc_resolved": "Throw a nail that inflicts Poison 1 and ignores shield at each enemy in your line of sight.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "SpikeProjectile",
+      "lob_height": "0",
+      "speed": "20"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "20",
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "enemies_only"
+      ]
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true",
+      "effects": {
+        "Poison": "1"
+      }
+    }
+  },
+  "VenomBarrage2": {
+    "variant_of": "VenomBarrage",
+    "meta": {
+      "desc": "ABILITY_VENOMBARRAGE2_DESC",
+      "desc_resolved": "Throw 2 nails that inflict Poison 1 and ignore shield at each enemy in your line of sight."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "LootCorpse": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_LOOTCORPSE_NAME",
+      "name_resolved": "Loot Corpse",
+      "desc": "ABILITY_LOOTCORPSE_DESC",
+      "desc_resolved": "Loot 1-3 coins from a body... and possibly something else?\n[s:.7](This might destroy the body)[/s]",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pickpocket"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpseFlipAdvantage": [
+          "1",
+          ".33"
+        ],
+        "ApplyToSource": {
+          "GainCoinsRange": {
+            "min": "1",
+            "max": "3"
+          },
+          "FindItemFromPool": {
+            "pool": "chapter",
+            "chance": ".02"
+          }
+        }
+      }
+    }
+  },
+  "LootCorpse2": {
+    "variant_of": "LootCorpse",
+    "meta": {
+      "desc": "ABILITY_LOOTCORPSE2_DESC",
+      "desc_resolved": "Loot 1-3 coins from a body... and possibly something else?\n[s:.7](This might not destroy the body)[/s]\n[s:.7](Your chance of finding \"something else\" is significantly increased.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyToSource": {
+          "FindItemFromPool": {
+            "chance": ".15"
+          }
+        }
+      }
+    }
+  },
+  "SeverArtery": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SEVERARTERY_NAME",
+      "name_resolved": "Sever Artery",
+      "desc": "ABILITY_SEVERARTERY_DESC",
+      "desc_resolved": "A weak melee attack. If this crits, inflict Bleed 5.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "Bleed": "5"
+        }
+      }
+    }
+  },
+  "SeverArtery2": {
+    "variant_of": "SeverArtery",
+    "meta": {
+      "desc": "ABILITY_SEVERARTERY2_DESC",
+      "desc_resolved": "A weak melee attack. If this crits inflict Bleed 5 and you gain All Stats Up."
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "Bleed": "5",
+          "ApplyToSource": {
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "Fade": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FADE_NAME",
+      "name_resolved": "Fade",
+      "desc": "ABILITY_FADE_DESC",
+      "desc_resolved": "Gain Stealth 1.",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "damage_instance": {
+      "effects": {
+        "Stealth": "1"
+      }
+    }
+  },
+  "Fade2": {
+    "variant_of": "Fade",
+    "meta": {
+      "desc": "ABILITY_FADE2_DESC",
+      "desc_resolved": "Gain Stealth 2."
+    },
+    "damage_instance": {
+      "effects": {
+        "Stealth": "2"
+      }
+    }
+  },
+  "SharpenNail": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SHARPENNAIL_NAME",
+      "name_resolved": "Sharpen Nail",
+      "desc": "ABILITY_SHARPENNAIL_DESC",
+      "desc_resolved": "Gain +1 [img:dex] and +1 Range until the end of the battle.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "DexterityUp": "1",
+        "RangeUp": "1"
+      }
+    }
+  },
+  "SharpenNail2": {
+    "variant_of": "SharpenNail",
+    "meta": {
+      "desc": "ABILITY_SHARPENNAIL2_DESC",
+      "desc_resolved": "Gain +1 [img:dex] and +1 Range until the end of the battle.\n[s:.7]Automatically cast this spell at the end of each round for free.[/s]"
+    },
+    "bonus_passives": {
+      "AutocastEachRound": {
+        "ability": "SharpenNail2"
+      }
+    }
+  },
+  "SneakUp": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_SNEAKUP_NAME",
+      "name_resolved": "Sneak Up",
+      "desc": "ABILITY_SNEAKUP_DESC",
+      "desc_resolved": "Teleport directly behind a random enemy.",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_range": "20",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_directly_behind_enemy"
+      ]
+    }
+  },
+  "SneakUp2": {
+    "variant_of": "SneakUp",
+    "meta": {
+      "desc": "ABILITY_SNEAKUP2_DESC",
+      "desc_resolved": "Teleport directly behind a random enemy.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "Shank": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SHANKALT_NAME",
+      "name_resolved": "Shank",
+      "desc": "ABILITY_SHANKALT_DESC",
+      "desc_resolved": "An attack that hits 2 times from behind.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "doubleswat"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": [
+        "must_have_line_of_sight_unpurgable",
+        "enemies_only",
+        "must_backstab"
+      ],
+      "restrictions": "aoe_must_exist",
+      "multihit": "2"
+    }
+  },
+  "Shank2": {
+    "variant_of": "Shank",
+    "meta": {
+      "desc": "ABILITY_SHANKALT2_DESC",
+      "desc_resolved": "An attack that hits 3 times from behind."
+    },
+    "target": {
+      "multihit": "3"
+    }
+  },
+  "StealKidney": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_STEALKIDNEY_NAME",
+      "name_resolved": "Steal Kidney",
+      "desc": "ABILITY_STEALKIDNEY_DESC",
+      "desc_resolved": "A melee attack with increased critical hit chance. If this crits and your trinket slot is empty, gain a kidney, then inflict Bleed 1.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "crit_chance": "20%",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "ApplyToSource": {
+            "EquipPermanentItem": "Kidney"
+          },
+          "Bleed": "1"
+        }
+      }
+    }
+  },
+  "StealKidney2": {
+    "variant_of": "StealKidney",
+    "meta": {
+      "desc": "ABILITY_STEALKIDNEY2_DESC",
+      "desc_resolved": "A melee attack with increased critical hit chance that inflicts Bleed and Bruise 1. If this crits and your trinket slot is empty, gain a kidney, then inflict Bleed 1."
+    },
+    "damage_instance": {
+      "effects": {
+        "Bleed": "1",
+        "Bruise": "1"
+      }
+    }
+  },
+  "StealLuck": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_STEALLUCK_NAME",
+      "name_resolved": "Steal Luck",
+      "desc": "ABILITY_STEALLUCK_DESC",
+      "desc_resolved": "A weak melee attack. If this crits, inflict -1 [img:lck] and you gain +1 [img:lck].",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "LuckUp": "-1",
+          "ApplyToSource": {
+            "LuckUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "StealLuck2": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_STEALLUCK_NAME",
+      "name_resolved": "Steal Luck",
+      "desc": "ABILITY_STEALLUCK2_DESC",
+      "desc_resolved": "A weak melee attack that inflicts -1 [img:lck] and you gain +1 [img:lck].",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "LuckUp": "-1",
+        "ApplyToSource": {
+          "LuckUp": "1"
+        }
+      }
+    }
+  },
+  "ThiefSwap": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_THIEFSWAP_NAME",
+      "name_resolved": "Over Here, Over There",
+      "desc": "ABILITY_THIEFSWAP_DESC",
+      "desc_resolved": "Swap positions with an ally. Swap back at the end of your turn.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_in": "shadowStepIn",
+      "animation_out": "shadowStepOut"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "SourceSwapsBackEndOfTurn": "ThiefSwapBack"
+      }
+    }
+  },
+  "ThiefSwap2": {
+    "variant_of": "ThiefSwap",
+    "meta": {
+      "desc": "ABILITY_THIEFSWAP2_DESC",
+      "desc_resolved": "Swap positions with any unit. Swap back at the end of your turn. If the unit was an enemy, inflict Confusion 1.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "aoe_restrictions": "none"
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "ThiefSwapBack": {
+    "template": "swap",
+    "graphics": {
+      "animation_in": "shadowStepIn",
+      "animation_out": "shadowStepOut"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist"
+      ]
+    }
+  },
+  "Pierce": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PIERCE_NAME",
+      "name_resolved": "Pierce",
+      "desc": "ABILITY_PIERCE_DESC",
+      "desc_resolved": "Gain +2 Range. Your attacks pass through units and ignore shield for the rest of the turn.",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempPenetrate": "1",
+        "TempRangeUp": "2"
+      }
+    }
+  },
+  "Pierce2": {
+    "variant_of": "Pierce",
+    "meta": {
+      "desc": "ABILITY_PIERCE2_DESC",
+      "desc_resolved": "Gain +4 Range. Your attacks pass through units and ignore shield for the rest of the turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempRangeUp": "4"
+      }
+    }
+  },
+  "WindUp": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WINDUP_NAME",
+      "name_resolved": "Wind Up",
+      "desc": "ABILITY_WINDUP_DESC",
+      "desc_resolved": "Gain +1 Range for the rest of the turn.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "hopinplace",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempRangeUp": "1"
+      }
+    }
+  },
+  "WindUp2": {
+    "variant_of": "WindUp",
+    "meta": {
+      "desc": "ABILITY_WINDUP2_DESC",
+      "desc_resolved": "Gain +1 Range."
+    },
+    "damage_instance": {
+      "effects": {
+        "RangeUp": "1"
+      }
+    }
+  },
+  "TripleNails": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_TRIPLENAILS_NAME",
+      "name_resolved": "Triple Nails",
+      "desc": "ABILITY_TRIPLENAILS_DESC",
+      "desc_resolved": "Throw 3 nails straight and diagonally in front of you. These nails have the effects of your basic attack and ignore shield.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "10",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ]
+      ]
+    },
+    "bonus_passives": {
+      "CopyBasicAttackEffects": "1"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "piercing": "true"
+    }
+  },
+  "TripleNails2": {
+    "variant_of": "TripleNails",
+    "meta": {
+      "desc": "ABILITY_TRIPLENAILS2_DESC",
+      "desc_resolved": "Throw 3 nails straight and diagonally in front of you 2 times. These nails have the effects of your basic attack and ignore shield."
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "SkinDisguise": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_SKINDISGUISE_NAME",
+      "name_resolved": "Skin Disguise",
+      "desc": "ABILITY_SKINDISGUISE_DESC",
+      "desc_resolved": "Destroy an adjacent body. Enemies won't attack you until your next turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "aoe_restrictions": [
+        "must_have_destructible_corpse",
+        "enemies_only"
+      ],
+      "restrictions": "aoe_must_exist",
+      "max_range": "1",
+      "min_range": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "FactionDisguiseSource": "1",
+        "VaporizeCorpse": "1"
+      }
+    }
+  },
+  "SkinDisguise2": {
+    "variant_of": "SkinDisguise",
+    "meta": {
+      "desc": "ABILITY_SKINDISGUISE2_DESC",
+      "desc_resolved": "Destroy a body in range 3. Enemies won't attack you until your next turn.\n[s:.7](This spell is free. Castable once per turn.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "Chakram": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_CHAKRAM_NAME",
+      "name_resolved": "Chakram",
+      "desc": "ABILITY_CHAKRAM_DESC",
+      "desc_resolved": "Throw a projectile that passes through units and then returns to you. This can collect pickups.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "speed": "10",
+      "projectile": "ChakramProjectile",
+      "use_rotation": "false"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range",
+      "upgrade_straight_shot_to_piercing": "true",
+      "upgrade_straight_shot_to_boomerang": "true"
+    },
+    "bonus_passives": {
+      "CatchBoomerang": "1"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "CollectsPickups": "1"
+      }
+    }
+  },
+  "Chakram2": {
+    "variant_of": "Chakram",
+    "meta": {
+      "desc": "ABILITY_CHAKRAM2_DESC",
+      "desc_resolved": "Throw a projectile that passes through units and then returns to you. At its apex, it deals increased damage and always crits. This can collect pickups."
+    },
+    "splash_damage": {
+      "damage": "4+bonus_ranged_damage",
+      "crit_chance": "100",
+      "effects": {
+        "CollectsPickups": "1"
+      }
+    }
+  },
+  "Jitter": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_JITTER_NAME",
+      "name_resolved": "Jitter",
+      "desc": "ABILITY_JITTER_DESC",
+      "desc_resolved": "Inflict Confusion 1 on each adjacent unit.",
+      "class": "Thief"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "hopinplace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Confusion": "1"
+      }
+    }
+  },
+  "Jitter2": {
+    "variant_of": "Jitter",
+    "meta": {
+      "desc": "ABILITY_JITTER2_DESC",
+      "desc_resolved": "Inflict Confusion 1 on each unit within 3 tiles of you."
+    },
+    "target": {
+      "max_aoe": "3"
+    }
+  },
+  "StealTime": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_STEALTIME_NAME",
+      "name_resolved": "Steal Time",
+      "desc": "ABILITY_STEALTIME_DESC",
+      "desc_resolved": "A melee attack. If this crits, refresh your basic attack and movement actions.",
+      "class": "Thief"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "ApplyToSource": {
+            "RefreshActPoints": "1",
+            "RefreshMovePoints": "1"
+          }
+        }
+      }
+    }
+  },
+  "StealTime2": {
+    "variant_of": "StealTime",
+    "meta": {
+      "desc": "ABILITY_STEALTIME2_DESC",
+      "desc_resolved": "A melee attack with +30% crit chance. If this crits, refresh your basic attack and movement actions."
+    },
+    "damage_instance": {
+      "crit_chance": "30%"
+    }
+  },
+  "Outskirts": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_OUTSKIRTS_NAME",
+      "name_resolved": "Outskirts",
+      "desc": "ABILITY_OUTSKIRTS_DESC",
+      "desc_resolved": "Teleport to a tile on the edge of the map.",
+      "animate_name": "true",
+      "class": "Thief"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "range_mode": "map_edges"
+    }
+  },
+  "Outskirts2": {
+    "variant_of": "Outskirts",
+    "meta": {
+      "desc": "ABILITY_OUTSKIRTS2_DESC",
+      "desc_resolved": "Teleport to a tile on the edge of the map. Gain +2 Damage for the rest of the turn."
+    },
+    "self_damage": {
+      "effects": {
+        "TempDamageUp": "2"
+      }
+    }
+  },
+  "PoisonDip": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_POISONDIP_NAME",
+      "name_resolved": "Poison Dip",
+      "desc": "ABILITY_POISONDIP_DESC",
+      "desc_resolved": "Spend all your mana. For every 5 mana spent, your basic attack inflicts +1 Poison.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Thief"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "X",
+      "cant_cast": "5-X",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "X_is": "current_mana"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "PoisonLace": "X/5"
+      }
+    }
+  },
+  "PoisonDip2": {
+    "variant_of": "PoisonDip",
+    "meta": {
+      "desc": "ABILITY_POISONDIP2_DESC",
+      "desc_resolved": "Spend all your mana. For every 3 mana spent, your basic attack inflicts +1 Poison.\n[s:.7](Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "cant_cast": "3-X"
+    },
+    "damage_instance": {
+      "effects": {
+        "PoisonLace": "X/3"
+      }
+    }
+  },
+  "LuckyPenny": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_LUCKYPENNY_NAME",
+      "name_resolved": "Lucky Penny",
+      "desc": "ABILITY_LUCKYPENNY_DESC",
+      "desc_resolved": "Collect an adjacent pickup and gain +2 [img:lck] instead of its normal effects.",
+      "class": "Thief",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "coinFlip"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_range": "1",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CollectsPickupsWithAltEffects": {
+          "LuckUp": "2"
+        }
+      }
+    }
+  },
+  "LuckyPenny2": {
+    "variant_of": "LuckyPenny",
+    "meta": {
+      "desc": "ABILITY_LUCKYPENNY2_DESC",
+      "desc_resolved": "Collect a pickup within four tiles of you. Gain +2 [img:lck] instead of its normal effects."
+    },
+    "target": {
+      "max_range": "4"
+    }
+  }
+}

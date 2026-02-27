@@ -1,0 +1,351 @@
+{
+  "Spiky": {
+    "value": "1",
+    "icon_frame": "600",
+    "passives": {
+      "Thorns": "1",
+      "EliteParticle": "SpikeBuff",
+      "EliteTint": [
+        ".6",
+        ".6",
+        ".6",
+        ".50"
+      ]
+    }
+  },
+  "Reactive": {
+    "value": "1",
+    "icon_frame": "601",
+    "passives": {
+      "KineticSpikes": "1",
+      "EliteParticle": "SparkleBuff",
+      "EliteFlatTint": [
+        "1.1",
+        "1.1",
+        "1.1"
+      ]
+    }
+  },
+  "Damaging": {
+    "value": "1",
+    "icon_frame": "602",
+    "passives": {
+      "EliteTint": "red",
+      "DamageUp": "2"
+    }
+  },
+  "Tough": {
+    "value": "1",
+    "icon_frame": "603",
+    "passives": {
+      "EliteTint": [
+        ".4",
+        ".4",
+        ".4"
+      ],
+      "Brace": "1"
+    }
+  },
+  "Shielded1": {
+    "value": "1",
+    "icon_frame": "604",
+    "specific_chapter": "1",
+    "unique": "true",
+    "passives": {
+      "EliteTint": [
+        ".7",
+        ".7",
+        "1",
+        "1"
+      ],
+      "HealthMultiplier": ".8",
+      "NonStackingShield": "4",
+      "StatusEachRoundBegin": {
+        "NonStackingShield": "4"
+      }
+    }
+  },
+  "Shielded2": {
+    "value": "1",
+    "icon_frame": "604",
+    "specific_chapter": "2",
+    "unique": "true",
+    "passives": {
+      "EliteTint": [
+        ".7",
+        ".7",
+        "1",
+        "1"
+      ],
+      "HealthMultiplier": ".8",
+      "NonStackingShield": "8",
+      "StatusEachRoundBegin": {
+        "NonStackingShield": "8"
+      }
+    }
+  },
+  "Shielded3": {
+    "value": "1",
+    "icon_frame": "604",
+    "specific_chapter": "3",
+    "unique": "true",
+    "passives": {
+      "EliteTint": [
+        ".7",
+        ".7",
+        "1",
+        "1"
+      ],
+      "HealthMultiplier": ".8",
+      "NonStackingShield": "12",
+      "StatusEachRoundBegin": {
+        "NonStackingShield": "12"
+      }
+    }
+  },
+  "Shielded4": {
+    "value": "1",
+    "icon_frame": "604",
+    "specific_chapter": "4",
+    "unique": "true",
+    "passives": {
+      "EliteTint": [
+        ".7",
+        ".7",
+        "1",
+        "1"
+      ],
+      "HealthMultiplier": ".8",
+      "NonStackingShield": "16",
+      "StatusEachRoundBegin": {
+        "NonStackingShield": "16"
+      }
+    }
+  },
+  "Protected": {
+    "value": "1",
+    "icon_frame": "605",
+    "unique": "true",
+    "passives": {
+      "EliteFlatTint": [
+        "1.1",
+        "1.1",
+        "1.3"
+      ],
+      "HealthMultiplier": ".8",
+      "NonStackingDivineShield": "1",
+      "StatusEachTurnEnd": {
+        "NonStackingDivineShield": "1"
+      }
+    }
+  },
+  "Speedy": {
+    "value": "1",
+    "icon_frame": "606",
+    "passives": {
+      "EliteFlatTint": [
+        "1.1",
+        "1.1",
+        "1"
+      ],
+      "SpeedUp": "4"
+    }
+  },
+  "Flaming": {
+    "value": "1",
+    "icon_frame": "607",
+    "unique": "true",
+    "passives": {
+      "EliteParticle": "Lava_Distortion",
+      "EliteTint": [
+        "1",
+        ".75",
+        ".5",
+        ".50"
+      ],
+      "ElementImmune": "Fire",
+      "TileTrail": "FireTile",
+      "InnateElement": "Fire",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Burn": "1"
+        },
+        "elements": [
+          "Fire"
+        ]
+      }
+    }
+  },
+  "Static": {
+    "value": "1",
+    "icon_frame": "609",
+    "unique": "true",
+    "passives": {
+      "EliteParticle": "PassiveEnergized",
+      "EliteTint": [
+        "1",
+        "1",
+        ".7",
+        ".50"
+      ],
+      "DamageNeighborsAfterMove": {
+        "type": "spell",
+        "damage": "1",
+        "effects": {
+          "VisualFXTile": "WaterConduct"
+        },
+        "elements": [
+          "Electric"
+        ]
+      }
+    }
+  },
+  "Lucky": {
+    "value": "1",
+    "icon_frame": "610",
+    "passives": {
+      "LuckUp": "3",
+      "CritChanceUp": "10",
+      "DodgeChance": "10%",
+      "EliteTint": [
+        ".8",
+        "1",
+        ".7",
+        ".50"
+      ]
+    }
+  },
+  "Bouncy": {
+    "value": "1",
+    "icon_frame": "611",
+    "unique": "true",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "1"
+      },
+      "MinimumKnockbackFromAllDamage": "1"
+    }
+  },
+  "Absorbant": {
+    "value": "1",
+    "icon_frame": "618",
+    "unique": "true",
+    "passives": {
+      "EliteParticle": "AbsorbBuff",
+      "EliteFlatTint": [
+        ".6",
+        "1",
+        "1"
+      ],
+      "GlobalManaBurnAura": "-1"
+    }
+  },
+  "Depressing": {
+    "value": "1",
+    "unique": "true",
+    "icon_frame": "619",
+    "minion_alt": "SlightlyDepressing",
+    "roll_limit": "2",
+    "passives": {
+      "EliteTint": [
+        ".5",
+        ".5",
+        ".8",
+        "1"
+      ],
+      "DepressionAura": {
+        "stacks": "1",
+        "range": "global",
+        "aura_effects_allies": "false"
+      }
+    }
+  },
+  "SlightlyDepressing": {
+    "value": "1",
+    "unique": "true",
+    "icon_frame": "628",
+    "rollable": "false",
+    "passives": {
+      "DepressionAura": {
+        "stacks": "1",
+        "range": "1",
+        "aura_effects_allies": "false"
+      }
+    }
+  },
+  "/*Mad": {
+    "value": "1",
+    "icon_frame": "623",
+    "unique": "true",
+    "passives": {
+      "PermanentMadness": "1",
+      "StatusOnKill": {
+        "AllStatsUp": "1",
+        "HealthGain": "4"
+      }
+    }
+  },
+  "Twin": {
+    "value": "1",
+    "icon_frame": "624",
+    "unique": "true",
+    "only_at_battle_start": "true",
+    "minion_alt": "SubTwin",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "twin",
+        "prevent_chain_tag": "eb_twin"
+      },
+      "HealthMultiplier": ".5",
+      "SizeScale": ".75"
+    }
+  },
+  "SubTwin": {
+    "value": "1",
+    "unique": "true",
+    "icon_frame": "624",
+    "rollable": "false",
+    "passives": {
+      "/*SpawnOnceWhenSettled": {
+        "object": "twin",
+        "prevent_chain_tag": "eb_twin"
+      },
+      "*/": "HealthMultiplier",
+      ".5": "SizeScale",
+      ".75": true
+    }
+  },
+  "Hardy": {
+    "value": "1",
+    "icon_frame": "625",
+    "unique": "true",
+    "passives": {
+      "EliteTint": [
+        "1",
+        ".75",
+        ".50",
+        "1"
+      ],
+      "StunImmunity": "1",
+      "SizeScale": "1.1"
+    }
+  },
+  "Sticky": {
+    "value": "1",
+    "icon_frame": "626",
+    "passives": {
+      "EliteParticle": "PassiveTar",
+      "EliteFlatTint": [
+        ".05",
+        ".05",
+        ".05",
+        ".75"
+      ],
+      "RevengeDamage": {
+        "effects": {
+          "Tarred": "1"
+        }
+      }
+    }
+  }
+}

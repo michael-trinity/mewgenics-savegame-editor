@@ -1,0 +1,356 @@
+{
+  "BallOfCancer": {
+    "intro": {
+      "title": "EVENT_BALLOFCANCER_NAME",
+      "title_resolved": "Ball of Cancer",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "ball_of_cancer",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BALLOFCANCER_QUES",
+      "prompt_resolved": "A grotesque, writhing, cancerous mass of flesh lies in a heap before {catname}.\n\nPerhaps once this thing was a creature but it has now lost any recognizable form.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BALLOFCANCER_REW1",
+                "prompt_resolved": "{catname} tries to eat from the large mass of flesh. It doesn't taste great but satisfies {him} a tad.",
+                "heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BALLOFCANCER_REW2",
+                "prompt_resolved": "{catname} bites into the cancerous mass, unsure what to expect.\n\nIt tastes... odd. As {he} continues to eat from it, {catname} feels {his} body rapidly begin to mutate!",
+                "random_mutation": "3"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BALLOFCANCER_REW3",
+                "prompt_resolved": "{catname} takes a large bite from the strange creature. It tastes pretty gross.",
+                "damage": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BALLOFCANCER_REW4",
+                "prompt_resolved": "{catname} eats part of the disgusting creature. It tastes vile and wriggles on the way down!",
+                "gain_disorder": "Cancer"
+              }
+            }
+          }
+        },
+        "kiss": {
+          "label": "EVENT_KISS_ANSW",
+          "label_resolved": "Kiss",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BALLOFCANCER_REW5",
+                "prompt_resolved": "{catname} leans in and kisses the strange creature...\n\nHard to tell, but it seems to have liked the affection.",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BALLOFCANCER_REW6",
+                "prompt_resolved": "{catname} plants a large kiss on the strange creature.\n\nIt smiles in a gross but reassuring way and begins to follow {catname} around!",
+                "random_mutation": "2",
+                "random_pool": [
+                  {
+                    "gain_familiar": "CharmedCancerCat"
+                  },
+                  {
+                    "gain_familiar": "CharmedFloast"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BALLOFCANCER_REW7",
+                "prompt_resolved": "As {catname} brings {his} face close to the mass it attacks {him}, ripping off {catname}'s mouth!",
+                "mutation": {
+                  "mouth": "-2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BALLOFCANCER_REW8",
+                "prompt_resolved": "{catname} howls in distress as the horrific creature latches on to {his} face!\n\nThe cats look on in horror as {catname} turns to them, {his} body shaking in fear...\n\n{catname}'s mouth and eyes are gone!",
+                "mutation": {
+                  "mouth": "-2",
+                  "eyes": "-2"
+                }
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BALLOFCANCER_REW9",
+                "prompt_resolved": "{catname} crushes the frail mass, sending moist hunks of meat flying in all directions...",
+                "get_item_from_pool": "meat_items"
+              },
+              "rare": {
+                "prompt": "EVENT_BALLOFCANCER_REW10",
+                "prompt_resolved": "As {catname} tears the mass of cancer apart, {he} feels a fantastic surge of energy rush through {him}!",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "7",
+                "prompt": "EVENT_BALLOFCANCER_REW11",
+                "prompt_resolved": "{catname} strikes the mass with {his} paw, but it gets stuck.\n\n{catname} screams in pain as {his} arm is pulled further and further into the writhing mass until it is pulled completely off!",
+                "random_mutation_from_set": {
+                  "arm1": "-2",
+                  "arm2": "-2"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_BALLOFCANCER_REW12",
+                "prompt_resolved": "{catname} strikes at the ball of cancer. It seems to have little effect except to make it mad!\n\nThe strange mass shifts and attacks {catname} back!",
+                "gain_disorder": "Cancer"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousBuilding": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSBUILDING_NAME",
+      "title_resolved": "Mysterious Building",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_building",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSBUILDING_QUES",
+      "prompt_resolved": "A mysterious building looms ahead. {catname} approaches cautiously...\n\nAn open doorway leads within, but {catname}'s eyes cannot pierce into the shadowed interior.",
+      "options": {
+        "enter": {
+          "label": "EVENT_ENTER_ANSW",
+          "label_resolved": "Enter",
+          "stat": "none",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSBUILDING_REW1",
+                "prompt_resolved": "{catname} sneaks up to the doorway, fearing the worst...\n\nInside {he} finds a shop!",
+                "shop_now": "Event_SmallShop"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSBUILDING_REW2",
+                "prompt_resolved": "{catname} boldly runs into the ominous structure...\n\nInside is a rare discounted shop!",
+                "shop_now": "Event_RareShop"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSBUILDING_REW3",
+                "prompt_resolved": "{catname} thinks {he} can see something within the interior as {he} approaches the doorway.\n\nLegs trembling, but not wanting to lose {his} nerve, {catname} ventures within...",
+                "next_event_bonus": "-1",
+                "event_now_same_cat": "random"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSBUILDING_REW4",
+                "prompt_resolved": "{catname} can't shake the feeling this was a terrible idea...\n\nA chill goes down {catname}'s spine and {his} hair stands up on end.",
+                "event_now_same_cat": "Tragedy"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSBUILDING_REW5",
+            "prompt_resolved": "This place is eerie enough as it is, no need to venture into ominous buildings!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "CrackInTheEarth": {
+    "intro": {
+      "title": "EVENT_CRACKINTHEEARTH_NAME",
+      "title_resolved": "Crack in the Earth",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "crack_in_the_earth",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CRACKINTHEEARTH_QUES",
+      "prompt_resolved": "{catname} discovers a large crack in the earth. Who knows how far down it leads?",
+      "options": {
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW1",
+                "prompt_resolved": "{catname} looks beneath the lip of the crack and spies something poking out just within reach!",
+                "get_item_from_pool": "chapter_common"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW2",
+                "prompt_resolved": "There is a strange membrane blocking the way down, but {catname} sees something lodged in the barrier and reaches in to pull it out!\n\n{catname} pulls it out, but the strange surface mutates {him}!",
+                "get_item_from_pool": "chapter_rare",
+                "random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW3",
+                "prompt_resolved": "As {catname} approaches the crevice a terrifying monster rises up and attacks {him}!\n\n{catname} is barely able to escape its grasp!",
+                "lose_item": "equipped"
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW4",
+                "prompt_resolved": "Fear grips {catname} as a terrifying monster looms out of the crack and attacks {him}!\n\n{catname} runs for {his} life!",
+                "injury": "cursed",
+                "self_status_next_fight": {
+                  "Fear": "4"
+                }
+              }
+            }
+          }
+        },
+        "enter": {
+          "label": "EVENT_ENTER_ANSW",
+          "label_resolved": "Enter",
+          "stat": "lck",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW5",
+                "prompt_resolved": "{catname} follows the fracture down deep into the earth...",
+                "next_event_bonus": "1",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "DemonicIdol"
+                  },
+                  {
+                    "event_now_same_cat": "JaggedPathway"
+                  },
+                  {
+                    "event_now_same_cat": "MysteriousStranger"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW6",
+                "prompt_resolved": "{catname} finds a hidden pathway leading downwards at top of the crack and follows it below...",
+                "next_event_bonus": "2",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "DemonicIdol"
+                  },
+                  {
+                    "event_now_same_cat": "JaggedPathway"
+                  },
+                  {
+                    "event_now_same_cat": "MysteriousStranger"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW7",
+                "prompt_resolved": "{catname} can't shake a sense of foreboding as {he} scrambles {his} way down the narrow crack...",
+                "next_event_bonus": "-1",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "DemonicIdol"
+                  },
+                  {
+                    "event_now_same_cat": "JaggedPathway"
+                  },
+                  {
+                    "event_now_same_cat": "MysteriousStranger"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_CRACKINTHEEARTH_REW8",
+                "prompt_resolved": "{catname} struggles, but manages to navigate a way down the steep crevice.\n\nWhat misfortunes could lie below?",
+                "next_event_bonus": "-2",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "DemonicIdol"
+                  },
+                  {
+                    "event_now_same_cat": "JaggedPathway"
+                  },
+                  {
+                    "event_now_same_cat": "MysteriousStranger"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_CRACKINTHEEARTH_REW9",
+            "prompt_resolved": "{catname} takes a wide berth around the large crevice and makes {his} way safely past.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

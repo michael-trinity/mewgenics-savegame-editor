@@ -1,0 +1,7578 @@
+{
+  "test": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".1",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "2"
+    ],
+    "speed_start": "4",
+    "size_start": [
+      ".1",
+      "1"
+    ],
+    "size_end": ".2",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "inherit_speed": "1",
+    "face_moving_direction": "true"
+  },
+  "test2": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "24000",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1",
+    "speed_start": "11",
+    "force_start": [
+      "0",
+      "-70",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "90",
+      "0"
+    ],
+    "size_start": ".1",
+    "size_end": ".2",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".2",
+    "face_moving_direction": "true"
+  },
+  "FinalEvaporate": {
+    "combo": [
+      "FevaporateLight",
+      "FevaporateDark"
+    ]
+  },
+  "FevaporateLight": {
+    "movieclip": "DissolveParticle",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "400",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1",
+    "speed_start": "14",
+    "force_start": [
+      "0",
+      "100",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "70",
+      "0"
+    ],
+    "size_start": [
+      ".2",
+      "1.2"
+    ],
+    "size_end": ".1",
+    "alpha_start": "1",
+    "alpha_end": "1",
+    "speed_scale": [
+      "0",
+      "1.6"
+    ],
+    "face_moving_direction": "true"
+  },
+  "FevaporateDark": {
+    "movieclip": "DissolveDark",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "400",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "7",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "14",
+    "force_start": [
+      "150",
+      "70",
+      "150"
+    ],
+    "force_end": [
+      "0",
+      "70",
+      "0"
+    ],
+    "size_start": [
+      "3",
+      "5"
+    ],
+    "size_end": ".1",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": "1",
+    "face_moving_direction": "true"
+  },
+  "test3": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "2400",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1",
+    "speed_start": "15",
+    "force_start": [
+      "0",
+      "-70",
+      "0"
+    ],
+    "size_start": ".1",
+    "size_end": ".2",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".2",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".25"
+      }
+    }
+  },
+  "test4": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": "5",
+    "friction": [
+      ".2",
+      ".2",
+      ".2"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "0",
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "size_start": [
+      "1",
+      "3"
+    ],
+    "size_end": "0",
+    "alpha_start": "0",
+    "alpha_end": "2",
+    "face_moving_direction": "false",
+    "scripts": {
+      "ParticleAttractor": "100"
+    }
+  },
+  "test5": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "2400",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "3",
+    "speed_start": "10",
+    "size_start": ".1",
+    "size_end": ".2",
+    "alpha_start": "1",
+    "alpha_end": "0",
+    "speed_scale": ".5",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleAttractor": {
+        "towards": [
+          "5",
+          "0",
+          "5"
+        ],
+        "force": "100"
+      }
+    }
+  },
+  "test6": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "2400",
+    "emit_amount": "1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "-1"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "2",
+    "speed_start": "10",
+    "size_start": ".1",
+    "size_end": ".2",
+    "alpha_start": "1",
+    "alpha_end": "0",
+    "speed_scale": ".5",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "-20,",
+          "20"
+        ],
+        ",",
+        "0"
+      ],
+      "/*ParticleRandomForce": {
+        "begin": [
+          "0,",
+          [
+            "-20,",
+            "20"
+          ],
+          ",",
+          "0"
+        ],
+        "end": [
+          "-20,",
+          "0,",
+          "20"
+        ]
+      },
+      "*/": true
+    }
+  },
+  "test7": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1",
+    "speed_start": "2",
+    "alpha_in": ".5",
+    "alpha_out": ".5",
+    "size_end": "2",
+    "face_moving_direction": "true"
+  },
+  "test8": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "max_particles": "10000",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": [
+      "0",
+      "3"
+    ],
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".025",
+    "speed_start": "40",
+    "speed_scale": ".2",
+    "size": ".2",
+    "face_moving_direction": "true",
+    "chain": "test8",
+    "chain_chance": ".9"
+  },
+  "test9": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "1000",
+    "emit_timespread": ".25",
+    "emit_timespread_curve": "ease_out",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".1",
+      ".1"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      ".5"
+    ],
+    "speed_start": "10",
+    "size_start": [
+      ".1",
+      "1"
+    ],
+    "size_end": ".2",
+    "alpha_in": ".5",
+    "alpha_out": ".5",
+    "speed_scale": ".1",
+    "face_moving_direction": "true"
+  },
+  "firework": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".5,",
+      "1"
+    ],
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".01",
+      ".01",
+      ".01"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1",
+      "2"
+    ],
+    "speed_start": "4",
+    "size_start": "1",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "chain": "firework_burst"
+  },
+  "firework_burst": {
+    "combo": [
+      "firework_bursta,",
+      "firework_burstb"
+    ]
+  },
+  "firework_bursta": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "10,",
+      "100"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".01",
+      ".01",
+      ".01"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1",
+      "2"
+    ],
+    "speed_start": [
+      "0",
+      "4"
+    ],
+    "size_start": ".5",
+    "size_end": "0",
+    "speed_scale": ".1",
+    "face_moving_direction": "true"
+  },
+  "firework_burstb": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "50,100"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".1",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1",
+      "2"
+    ],
+    "speed_start": [
+      "8",
+      "10"
+    ],
+    "size_start": ".5",
+    "size_end": "0",
+    "speed_scale": ".1",
+    "face_moving_direction": "true"
+  },
+  "firework_burst_recursive": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "default",
+    "max_particles": "10000",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "5",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".01",
+      ".01",
+      ".01"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1",
+      "2"
+    ],
+    "speed_start": [
+      "0",
+      "4"
+    ],
+    "size_start": ".5",
+    "speed_scale": ".4",
+    "face_moving_direction": "true",
+    "chain": "firework_burst_recursive"
+  },
+  "Rain": {
+    "movieclip": "RainParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "10",
+      "10",
+      "0",
+      "10"
+    ],
+    "particle_lifetime": "5",
+    "speed_start": "10",
+    "size_start": ".5",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "chain": "splash",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "splash": {
+    "movieclip": "RainSplashParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "1",
+      "10"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      "0",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "4",
+    "size_start": ".2",
+    "size_end": "0",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "force": [
+      "0",
+      "-20",
+      "0"
+    ]
+  },
+  "Kingblood1": {
+    "movieclip": "KingBlood1",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      "1,5"
+    ],
+    "emit_amount": [
+      "0,2"
+    ],
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      ".4",
+      "0",
+      "0",
+      "0",
+      ".4"
+    ],
+    "particle_lifetime": "5",
+    "speed_start": [
+      "1.7,2.4"
+    ],
+    "size_start": [
+      ".8,1.3"
+    ],
+    "face_moving_direction": "true",
+    "chain": "Kingblood2",
+    "force": [
+      "0",
+      "-1",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "Kingblood2": {
+    "movieclip": "KingBlood2",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "1",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "8",
+    "speed_start": "4",
+    "size_start": [
+      "1,1.3"
+    ],
+    "speed_scale": ".1"
+  },
+  "AcidRain": {
+    "movieclip": "AcidRainParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "10",
+      "10",
+      "0",
+      "10"
+    ],
+    "particle_lifetime": "5",
+    "speed_start": "10",
+    "size_start": ".5",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "chain": "AcidSplash",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "AcidSplash": {
+    "movieclip": "AcidRainSplashParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "1",
+      "10"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      "0",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "4",
+    "size_start": ".2",
+    "size_end": "0",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "force": [
+      "0",
+      "-20",
+      "0"
+    ]
+  },
+  "CaveDrip": {
+    "movieclip": "RainParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".5",
+      "5"
+    ],
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "10",
+      "10",
+      "0",
+      "10"
+    ],
+    "particle_lifetime": "5",
+    "speed_start": "10",
+    "size_start": ".5",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "chain": "CaveSplash",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "CaveSplash": {
+    "movieclip": "RainSplashParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "15",
+      "20"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      "0",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "4",
+    "size_start": ".2",
+    "size_end": "0",
+    "speed_scale": ".1",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "force": [
+      "0",
+      "-20",
+      "0"
+    ]
+  },
+  "MegaBlast": {
+    "combo": [
+      "MegaBlastA",
+      "MegaBlastB"
+    ]
+  },
+  "MegaBlastA": {
+    "movieclip": "MegaBlastParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1000",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "0,",
+      "-1"
+    ],
+    "friction": [
+      ".2",
+      ".3",
+      ".2"
+    ],
+    "emit_spread": "50",
+    "particle_lifetime": [
+      ".2",
+      ".3"
+    ],
+    "speed_start": "60",
+    "alpha_start": "4",
+    "alpha_end": "0",
+    "size_start": "0",
+    "size_end": "2",
+    "face_moving_direction": "true"
+  },
+  "MegaBlastB": {
+    "movieclip": "MegaBlastParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "0,",
+      "-1"
+    ],
+    "friction": [
+      "0",
+      ".05",
+      "0"
+    ],
+    "emit_spread": "45",
+    "particle_lifetime": ".35",
+    "speed_start": "15",
+    "alpha_start": "0",
+    "alpha_end": "2",
+    "size_start": "1",
+    "size_end": "0",
+    "face_moving_direction": "true"
+  },
+  "GroundPoof": {
+    "movieclip": "ParticlePuff",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "15",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".2",
+      "1",
+      ".2"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-1000",
+      "1000"
+    ],
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      ".35",
+      ".65"
+    ],
+    "speed_start": "10",
+    "alpha_start": "1",
+    "alpha_end": "0",
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ]
+  },
+  "PointPoof": {
+    "movieclip": "PuffNoOutline",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "6",
+      "8"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".03",
+      ".35",
+      ".03"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-1000",
+      "1000"
+    ],
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      ".45",
+      ".75"
+    ],
+    "speed_start": "2",
+    "alpha_start": ".8",
+    "alpha_end": "0",
+    "size_start": [
+      ".2",
+      ".3"
+    ],
+    "size_end": [
+      ".7",
+      "1.3"
+    ],
+    "force_start": [
+      "0",
+      "40",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-60",
+      "0"
+    ]
+  },
+  "SmallDirt": {
+    "movieclip": "ParticleDirt",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "2",
+      "7"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".02",
+      ".35",
+      ".02"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "2.5",
+    "size_start": [
+      ".4",
+      ".7"
+    ],
+    "size_end": "0",
+    "speed_scale": ".1",
+    "alpha_start": [
+      "1",
+      "3"
+    ],
+    "alpha_end": "0",
+    "face_moving_direction": "true",
+    "force_start": [
+      "0",
+      "150",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-250",
+      "0"
+    ]
+  },
+  "Blood": {
+    "combo": [
+      "BloodPoof",
+      "BloodBounce"
+    ]
+  },
+  "BloodCrit": {
+    "combo": [
+      "BloodPoofCrit",
+      "BloodBounceCrit",
+      "BloodPopCrit"
+    ]
+  },
+  "Blood_Absorb": {
+    "combo": [
+      "BloodPoof_Absorb",
+      "BloodBounce_Absorb"
+    ]
+  },
+  "BloodCrit_Absorb": {
+    "combo": [
+      "BloodPoofCrit_Absorb",
+      "BloodBounceCrit_Absorb",
+      "BloodPopCrit_Absorb"
+    ]
+  },
+  "BloodPoof": {
+    "movieclip": "ParticleBlood",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "20",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction_start": [
+      ".2",
+      ".2",
+      ".2"
+    ],
+    "friction_end": [
+      "1",
+      "1",
+      "1"
+    ],
+    "emit_spread": "180",
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-5",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1"
+    ],
+    "speed_start": [
+      "0",
+      "10"
+    ],
+    "size_start": [
+      ".3",
+      "1"
+    ],
+    "size_end": "0",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".5",
+    "inherit_speed": [
+      "5",
+      "30"
+    ],
+    "face_moving_direction": "true"
+  },
+  "BloodPoof_Absorb": {
+    "variant_of": "BloodPoof",
+    "ownership": "local",
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "200",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "BloodPoofCrit": {
+    "variant_of": "BloodPoof",
+    "speed_start": [
+      "0",
+      "15"
+    ]
+  },
+  "BloodPoofCrit_Absorb": {
+    "variant_of": "BloodPoofCrit",
+    "ownership": "local",
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "200",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "BloodBounce": {
+    "movieclip": "ParticleBlood",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "20",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".1",
+      ".05"
+    ],
+    "emit_spread": "45",
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1.5"
+    ],
+    "speed_start": [
+      "0",
+      "10"
+    ],
+    "size_start": [
+      ".1",
+      ".5"
+    ],
+    "size_end": "0",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": "1",
+    "inherit_speed": [
+      "7",
+      "12"
+    ],
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".1"
+      }
+    }
+  },
+  "BloodBounce_Absorb": {
+    "variant_of": "BloodBounce",
+    "ownership": "local",
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "200",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "BloodBounceCrit": {
+    "variant_of": "BloodBounce",
+    "emit_spread": "90",
+    "speed_start": [
+      "0",
+      "15"
+    ]
+  },
+  "BloodBounceCrit_Absorb": {
+    "variant_of": "BloodBounceCrit",
+    "ownership": "local",
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "200",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "BloodPopCrit": {
+    "movieclip": "ParticleBlood",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "20",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction_start": [
+      "0",
+      "0",
+      "0"
+    ],
+    "friction_end": [
+      "1",
+      "1",
+      "1"
+    ],
+    "emit_spread": "180",
+    "particle_lifetime": [
+      ".1",
+      "2"
+    ],
+    "speed_start": [
+      "10",
+      "30"
+    ],
+    "size_start": [
+      ".2",
+      ".5"
+    ],
+    "size_end": "0",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".5",
+    "inherit_speed": "1",
+    "face_moving_direction": "true"
+  },
+  "BloodPopCrit_Absorb": {
+    "variant_of": "BloodPopCrit",
+    "ownership": "local",
+    "friction_end": [
+      ".5",
+      ".5",
+      ".5"
+    ],
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "500",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "HairballTrail": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "depth_bias": ".25",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "60",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      ".4"
+    ],
+    "speed_start": "1",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "size_start": ".2",
+    "size_end": ".1",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".5",
+    "inherit_speed": ".1",
+    "face_moving_direction": "true"
+  },
+  "FirePlumes": {
+    "movieclip": "ParticleFire1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.2",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "15",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".6",
+      ".35",
+      ".6"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".",
+    "size": [
+      ".3",
+      ".8"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "40,",
+          "80"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".3",
+      "0",
+      "0"
+    ]
+  },
+  "FireWaves": {
+    "movieclip": "ParticleFire2",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "6",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      ".5"
+    ],
+    "friction": [
+      ".03",
+      ".35",
+      ".03"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".6",
+      ".8"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "10,",
+          "60"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".3",
+      "0",
+      "0"
+    ]
+  },
+  "FireBase": {
+    "movieclip": "ParticleFire3",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".55",
+      ".6",
+      ".55"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".6",
+      ".85"
+    ],
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-20,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "40,",
+            "120"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ]
+  },
+  "FireWhites": {
+    "movieclip": "ParticleFire4",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "-0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "1"
+    ],
+    "friction": [
+      ".12",
+      ".6",
+      ".12"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".5",
+    "size": [
+      ".3",
+      ".6"
+    ],
+    "alpha_start": "1.3",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-10,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "200,",
+            "900"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "-.03",
+      ".03",
+      ".1",
+      "0",
+      "-.03",
+      ".03"
+    ]
+  },
+  "FireSmoke": {
+    "movieclip": "ParticleSmoke1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.3",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "4"
+    ],
+    "friction": [
+      ".2",
+      ".35",
+      ".2"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".7",
+    "size": [
+      ".2",
+      "1"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "75,",
+          "85"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".9",
+      "0",
+      "0"
+    ]
+  },
+  "FireFull": {
+    "combo": [
+      "FireSmoke,",
+      "FirePlumes,",
+      "FireWaves,",
+      "FireBase,",
+      "FireWhites"
+    ]
+  },
+  "FirePlumesSmall": {
+    "movieclip": "ParticleFire1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.2",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "6",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".6",
+      ".6",
+      ".6"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-2",
+      "2"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".3",
+      ".4"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "40,",
+          "80"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ]
+  },
+  "FireWavesSmall": {
+    "movieclip": "ParticleFire2",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "6",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      ".5"
+    ],
+    "friction": [
+      ".6",
+      ".6",
+      ".6"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".2",
+      ".4"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "10,",
+          "60"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ]
+  },
+  "FireBaseSmall": {
+    "movieclip": "ParticleFire3",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      "1",
+      ".6",
+      "1"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".3",
+      ".5"
+    ],
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-20,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "40,",
+            "120"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ]
+  },
+  "FireWhitesSmall": {
+    "movieclip": "ParticleFire4",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "-0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "1"
+    ],
+    "friction": [
+      ".6",
+      ".8",
+      ".6"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".5",
+    "size": [
+      ".15",
+      ".3"
+    ],
+    "alpha_start": "1.3",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-10,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "200,",
+            "900"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "-.02",
+      ".02",
+      ".1",
+      "0",
+      "-.02",
+      ".02"
+    ]
+  },
+  "FireSmokeSmall": {
+    "movieclip": "ParticleSmoke1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.3",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "6",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "4"
+    ],
+    "friction": [
+      ".33",
+      ".5",
+      ".33"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".7",
+    "size": [
+      ".1",
+      ".2"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "75,",
+          "85"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      ".1",
+      "0",
+      "0"
+    ]
+  },
+  "FireFullSmall": {
+    "combo": [
+      "FireSmokeSmall,",
+      "FirePlumesSmall,",
+      "FireWavesSmall,",
+      "FireBaseSmall,",
+      "FireWhitesSmall"
+    ]
+  },
+  "FirePlumesLarge": {
+    "movieclip": "ParticleFire1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.2",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".6",
+      ".35",
+      ".6"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".3",
+      ".8"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "40,",
+          "80"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "-.22",
+      ".22",
+      ".3",
+      ".3",
+      "-.22",
+      ".22"
+    ]
+  },
+  "FireWavesLarge": {
+    "movieclip": "ParticleFire2",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "6",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      ".5"
+    ],
+    "friction": [
+      ".03",
+      ".35",
+      ".03"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".8",
+      "1.2"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "10,",
+          "60"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "-.1",
+      ".1",
+      ".3",
+      ".3",
+      "-.1",
+      ".1"
+    ]
+  },
+  "FireBaseLarge": {
+    "movieclip": "ParticleFire3",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".55",
+      ".6",
+      ".55"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".9",
+      "1.3"
+    ],
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-20,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "40,",
+            "120"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "-.13",
+      ".13",
+      ".1",
+      ".1",
+      "-.13",
+      ".13"
+    ]
+  },
+  "FireWhitesLarge": {
+    "movieclip": "ParticleFire4",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "-0.1",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "1"
+    ],
+    "friction": [
+      ".12",
+      ".6",
+      ".12"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".5",
+    "size": [
+      ".3",
+      ".6"
+    ],
+    "alpha_start": "1",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          "-10,",
+          "0"
+        ],
+        "end": [
+          "0,",
+          [
+            "200,",
+            "900"
+          ],
+          ",",
+          "0"
+        ]
+      }
+    },
+    "emit_box": [
+      "-.1",
+      ".1",
+      "0",
+      "0",
+      "-.1",
+      ".1"
+    ]
+  },
+  "FireSmokeLarge": {
+    "movieclip": "ParticleSmoke1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "depth_bias": "0.3",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "40",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "4"
+    ],
+    "friction": [
+      ".2",
+      ".35",
+      ".2"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".7",
+    "size": [
+      ".2",
+      "1"
+    ],
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "75,",
+          "85"
+        ],
+        ",",
+        "0"
+      ]
+    },
+    "emit_box": [
+      "-.3",
+      ".3",
+      ".3",
+      ".9",
+      "-.3",
+      ".3"
+    ]
+  },
+  "FireFullLarge": {
+    "combo": [
+      "FireSmokeLarge,",
+      "FirePlumesLarge,",
+      "FireWavesLarge,",
+      "FireBaseLarge,",
+      "FireWhitesLarge"
+    ]
+  },
+  "PointSmoke": {
+    "movieclip": "ParticleSmoke1",
+    "render_mode": "separate",
+    "flat_movement": "true",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "25",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "speed": [
+      "0",
+      "10"
+    ],
+    "friction": [
+      ".4",
+      ".35",
+      ".4"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "-10",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-20",
+      "20"
+    ],
+    "particle_lifetime": ".7",
+    "size": [
+      ".15",
+      "1"
+    ],
+    "force": [
+      "0",
+      "70",
+      "0"
+    ]
+  },
+  "SplatterSmall": {
+    "movieclip": "ParticleDrop",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": [
+      "2",
+      "5"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".04",
+      ".35",
+      ".04"
+    ],
+    "emit_spread": "90",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      ".3"
+    ],
+    "speed_start": "2.5",
+    "size_start": [
+      ".4",
+      ".7"
+    ],
+    "size_end": ".1",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "force_start": [
+      "0",
+      "100",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-200",
+      "0"
+    ],
+    "chain": "MiniSplatter"
+  },
+  "SplatterMed": {
+    "movieclip": "ParticleDrop",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": [
+      "5",
+      "15"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".02",
+      ".35",
+      ".02"
+    ],
+    "emit_spread": "90",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      ".7"
+    ],
+    "speed_start": "2.5",
+    "size_start": [
+      ".4",
+      ".7"
+    ],
+    "size_end": ".1",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "force_start": [
+      "0",
+      "150",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-250",
+      "0"
+    ],
+    "chain": "MiniSplatter"
+  },
+  "SplatterLarge": {
+    "movieclip": "ParticleDrop",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": [
+      "50",
+      "70"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".008",
+      ".4",
+      ".008"
+    ],
+    "emit_spread": "90",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".05",
+      ".8"
+    ],
+    "speed_start": "2.5",
+    "size_start": [
+      ".3",
+      ".9"
+    ],
+    "size_end": ".3",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "force_start": [
+      "0",
+      "150",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-250",
+      "0"
+    ],
+    "chain": "MiniSplatter2"
+  },
+  "SplatterXL": {
+    "movieclip": "ParticleDrop",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "1500",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".008",
+      ".4",
+      ".008"
+    ],
+    "emit_spread": "90",
+    "live_bounds": [
+      "-.2",
+      "10",
+      "0",
+      "10",
+      "-.2",
+      "10"
+    ],
+    "particle_lifetime": [
+      ".7",
+      ".8"
+    ],
+    "speed_start": [
+      "1",
+      "17"
+    ],
+    "size_start": [
+      ".3",
+      "1"
+    ],
+    "size_end": ".3",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleRandomForce": {
+        "begin": [
+          "0,",
+          [
+            "-400,",
+            "200"
+          ],
+          ",",
+          "0"
+        ],
+        "end": [
+          "0,",
+          "-450,",
+          "0"
+        ]
+      }
+    },
+    "chain": "MiniSplatter3"
+  },
+  "MiniSplatter": {
+    "movieclip": "ParticleSpatter",
+    "render_mode": "separate",
+    "render_layer": "splatters",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "1",
+    "particle_lifetime": "2",
+    "size": [
+      "1",
+      "1.8"
+    ]
+  },
+  "MiniSplatter2": {
+    "movieclip": "ParticleSpatter",
+    "render_mode": "separate",
+    "render_layer": "splatters",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "1",
+    "particle_lifetime": "2",
+    "size": [
+      "1.8",
+      "2.3"
+    ]
+  },
+  "MiniSplatter3": {
+    "movieclip": "ParticleSpatter",
+    "render_mode": "separate",
+    "render_layer": "splatters",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "1,2"
+    ],
+    "particle_lifetime": [
+      "5,7"
+    ],
+    "size": [
+      "1.8",
+      "3"
+    ]
+  },
+  "Snow": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "0",
+      "10",
+      "10",
+      "10",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-0.5",
+      "999",
+      "-999",
+      "999",
+      "-0.5",
+      "999"
+    ],
+    "particle_lifetime": "7",
+    "speed_start": [
+      "2,",
+      "4"
+    ],
+    "size_start": [
+      ".3",
+      ".8"
+    ],
+    "size_end": "0",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-100,",
+      "100"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".5",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".1"
+      }
+    }
+  },
+  "FireTileSmall": {
+    "movieclip": "ParticleFire3",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "5",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      ".05",
+      ".95",
+      "0",
+      "0",
+      ".05",
+      ".95"
+    ],
+    "particle_lifetime": "30",
+    "speed_start": "10",
+    "size_start": ".5",
+    "speed_scale": ".1",
+    "alpha": "0",
+    "face_moving_direction": "true",
+    "chain": "FireFullSmall",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ]
+  },
+  "CreepBubbles": {
+    "movieclip": "CreepBubbleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".7,",
+      "2"
+    ],
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "-.4",
+      ".4",
+      "0",
+      "0",
+      "-.4",
+      ".4"
+    ],
+    "particle_lifetime": "1.5",
+    "speed_start": "0",
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "face_moving_direction": "false"
+  },
+  "ToxicBubbles": {
+    "movieclip": "ToxicBubbleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".7,",
+      "2"
+    ],
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "-.4",
+      ".4",
+      "0",
+      "0",
+      "-.4",
+      ".4"
+    ],
+    "particle_lifetime": "1.5",
+    "speed_start": "0",
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "face_moving_direction": "false"
+  },
+  "Lava_Distortion": {
+    "movieclip": "Particle_HeatWaveDistortion",
+    "render_mode": "separate",
+    "material": "distorter",
+    "render_layer": "sorted_distortions",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "4",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "-.4",
+      ".4",
+      "0",
+      "0",
+      "-.4",
+      ".4"
+    ],
+    "particle_lifetime": [
+      ".5,",
+      "1"
+    ],
+    "speed_start": [
+      "1,",
+      "2"
+    ],
+    "size_start": "1",
+    "size_end": "3",
+    "rotation": [
+      "0",
+      "0"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".01",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "3"
+      }
+    }
+  },
+  "SandStorm": {
+    "movieclip": "SandStormParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "5",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "3"
+    ],
+    "speed_start": "5",
+    "size_start": [
+      ".4",
+      ".6"
+    ],
+    "size_end": "0",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": ".25",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "5",
+          "0",
+          "5"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "20"
+      }
+    }
+  },
+  "Meteornado": {
+    "movieclip": "FX_MoonRock",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "5",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "3"
+    ],
+    "speed_start": "5",
+    "size_start": [
+      ".5",
+      "1.5"
+    ],
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-1000",
+      "1000"
+    ],
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "5",
+          "0",
+          "5"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "20"
+      }
+    }
+  },
+  "Fog": {
+    "movieclip": "FogParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "2",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "3",
+      "5"
+    ],
+    "speed_start": ".1",
+    "size_start": [
+      ".2",
+      "1"
+    ],
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "friction": [
+      "0",
+      "1",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "Mist": {
+    "movieclip": "FogParticle",
+    "render_mode": "separate",
+    "material": "mist",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "2",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "3",
+      "5"
+    ],
+    "speed_start": ".1",
+    "size_start": [
+      ".2",
+      "1"
+    ],
+    "alpha_start": "1",
+    "alpha_end": "0",
+    "friction": [
+      "0",
+      "1",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "DarkFog": {
+    "movieclip": "DarkFogParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "2",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "3",
+      "5"
+    ],
+    "speed_start": ".1",
+    "size_start": [
+      ".2",
+      "1"
+    ],
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "friction": [
+      "0",
+      "1",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "test_tornado": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".2",
+      ".03",
+      ".2"
+    ],
+    "emit_spread": "90",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "1"
+    ],
+    "speed_start": "10",
+    "force_start": [
+      "0",
+      "10",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "0",
+      "0"
+    ],
+    "size_start": [
+      ".1",
+      "1"
+    ],
+    "size_end": ".2",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "inherit_speed": "1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "5"
+      }
+    }
+  },
+  "ManaDrain": {
+    "movieclip": "ManaParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "10",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".2",
+    "friction_start": [
+      ".06",
+      ".06",
+      ".06"
+    ],
+    "friction_end": [
+      ".2",
+      ".2",
+      ".2"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".5",
+      ".5",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".8",
+      "1.2"
+    ],
+    "speed_start": "10",
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-2000,",
+      "2000"
+    ],
+    "size_start": "2",
+    "size_end": "1",
+    "alpha_start": "3",
+    "alpha_end": "0",
+    "face_moving_direction": "false",
+    "scripts": {
+      "ParticleAttractor": {
+        "force_start": "0",
+        "force_end": "500",
+        "towards": [
+          "0",
+          ".5",
+          "0"
+        ]
+      }
+    }
+  },
+  "fartoom": {
+    "combo": [
+      "fartoom_trail,",
+      "fartoom_burst"
+    ]
+  },
+  "fartoom_trail": {
+    "movieclip": "ParticleStinkCloudSlow",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "80",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".015",
+      ".1"
+    ],
+    "emit_radius": ".2",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "2"
+    ],
+    "speed_start": "7",
+    "size_start": [
+      ".2",
+      "1"
+    ],
+    "size_end": [
+      "1",
+      "2"
+    ],
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "-1",
+          "0"
+        ],
+        "force": "2"
+      },
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "5"
+      }
+    }
+  },
+  "fartoom_burst": {
+    "movieclip": "ParticleStinkCloudSlow",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "90,",
+      "150"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".15",
+      ".1",
+      ".15"
+    ],
+    "emit_spread": "300",
+    "emit_box": [
+      "0",
+      "0",
+      "-.95",
+      "-.95",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "2"
+    ],
+    "speed_start": [
+      "2",
+      "9"
+    ],
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "size_end": [
+      ".1",
+      "6"
+    ],
+    "alpha_end": "0",
+    "speed_scale": ".3",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "0"
+      }
+    }
+  },
+  "dustCloud": {
+    "movieclip": "ParticleDustCloudSlow",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "100",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".15",
+      ".1",
+      ".15"
+    ],
+    "emit_spread": "300",
+    "emit_box": [
+      "0",
+      "0",
+      "-.95",
+      "-.95",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "2"
+    ],
+    "speed_start": [
+      "2",
+      "9"
+    ],
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "size_end": [
+      ".1",
+      "6"
+    ],
+    "alpha_end": "0",
+    "speed_scale": ".3",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "0"
+      }
+    }
+  },
+  "druidFlowers": {
+    "movieclip": "ParticlePetals",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "150",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".2",
+      ".2",
+      ".2"
+    ],
+    "emit_spread": "50",
+    "emit_radius": ".5",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "1"
+    ],
+    "speed_start": [
+      "0.01",
+      "0.5"
+    ],
+    "speed_end": "0",
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-60,",
+      "60"
+    ],
+    "size_start": "0.1",
+    "size_end": [
+      "1",
+      "1.8"
+    ],
+    "alpha_start": "1.5",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "inherit_speed": ".1",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "2"
+      },
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "1"
+      }
+    }
+  },
+  "musicalSwirl": {
+    "movieclip": "ParticleMusicNotes",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "18",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".2",
+      ".1",
+      ".2"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      ".2",
+      ".2",
+      ".1",
+      ".1",
+      ".2",
+      ".2"
+    ],
+    "particle_lifetime": "2.5",
+    "speed_start": "1",
+    "force_start": [
+      "0",
+      "10",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "0",
+      "0"
+    ],
+    "rotation_start": [
+      "-10,",
+      "10"
+    ],
+    "rotation_speed_start": [
+      "-30",
+      "30"
+    ],
+    "size_start": ".5",
+    "size_end": "1",
+    "alpha_start": "1.1",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "5"
+      }
+    }
+  },
+  "coolLaserBeam": {
+    "combo": [
+      "coolLaserBeamInner,",
+      "coolLaserBeamOuter"
+    ]
+  },
+  "coolLaserBeamOuter": {
+    "movieclip": "ParticleColor",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "150",
+    "emit_amount": "3",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "friction": [
+      "0",
+      ".1",
+      ".1"
+    ],
+    "emit_spread": "1",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": ".2",
+    "particle_lifetime": [
+      ".6",
+      ".85"
+    ],
+    "speed_start": "20",
+    "size_start": [
+      ".1",
+      ".1"
+    ],
+    "size_end": [
+      ".1",
+      ".8"
+    ],
+    "alpha_start": "5",
+    "alpha_end": ".5",
+    "speed_scale": ".2",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "-1",
+          "0",
+          "0"
+        ],
+        "force": "8"
+      },
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "2",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "/*ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": ".1"
+      },
+      "*/": true
+    }
+  },
+  "coolLaserBeamInner": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "40",
+    "emit_amount": "3",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "friction": [
+      "0",
+      ".0",
+      ".0"
+    ],
+    "emit_spread": "2",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": ".25",
+    "particle_lifetime": [
+      ".6",
+      "1"
+    ],
+    "speed_start": "25",
+    "size_start": ".7",
+    "size_end": "1",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".95",
+        "friction": "1.4",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "/*ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": ".1"
+      },
+      "*/": true
+    }
+  },
+  "Feathers": {
+    "movieclip": "ParticleFeather",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "4",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".3",
+    "friction": [
+      ".12",
+      ".5",
+      ".12"
+    ],
+    "emit_spread": "10",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".7",
+      ".7",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      "2",
+      "2.5"
+    ],
+    "speed_start": [
+      "10",
+      "25"
+    ],
+    "size_start": "1",
+    "size_end": "1",
+    "alpha_start": "3",
+    "alpha_end": "0",
+    "face_moving_direction": "false",
+    "force_start": [
+      "0",
+      "-40",
+      "0"
+    ],
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "1"
+      }
+    }
+  },
+  "GuillotinaGuts": {
+    "movieclip": "ParticleGuilchunk",
+    "render_mode": "default",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "150",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-.3",
+      ".3",
+      "0",
+      "0",
+      "-.3",
+      ".3"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1.4",
+    "speed_start": [
+      "10",
+      "20"
+    ],
+    "force_start": [
+      "0",
+      "-40",
+      "0"
+    ],
+    "size_start": "1.2",
+    "size_end": "1",
+    "alpha_start": "9",
+    "alpha_end": "0",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5"
+      }
+    }
+  },
+  "TrackingTest": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".1",
+      ".1"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "2"
+    ],
+    "speed_start": "0",
+    "size_start": ".5",
+    "size_end": ".1",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".1",
+    "inherit_speed": "0",
+    "face_moving_direction": "true"
+  },
+  "MagicMissileTrail": {
+    "movieclip": "SparkleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": "1",
+    "emit_radius": ".1",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".2",
+      ".8"
+    ],
+    "speed_start": "0",
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "size_end": ".1",
+    "inherit_speed": "0"
+  },
+  "MagicMissileTrailSmall": {
+    "movieclip": "SparkleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "180",
+    "emit_amount": "1",
+    "emit_radius": ".05",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".2",
+      ".5"
+    ],
+    "speed_start": "0",
+    "size_start": [
+      ".25",
+      ".5"
+    ],
+    "size_end": ".1",
+    "inherit_speed": "0"
+  },
+  "SparkleBuff": {
+    "movieclip": "SparkleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "50",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "1"
+    ],
+    "speed_start": ".8",
+    "size_start": [
+      ".4",
+      ".6"
+    ],
+    "size_end": "0",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": "1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "5"
+      }
+    }
+  },
+  "HeatWave_Particles": {
+    "movieclip": "ParticleFire2",
+    "movieclip_timescale": ".5",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "1",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-0.5",
+      "999",
+      "-999",
+      "999",
+      "-0.5",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1,",
+      "4"
+    ],
+    "speed_start": [
+      ".5,",
+      "1"
+    ],
+    "size_start": ".5",
+    "size_end": "2",
+    "rotation": [
+      "0",
+      "0"
+    ],
+    "rotation_speed": [
+      "-100,",
+      "100"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".3",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "HeatWave_Distortion": {
+    "movieclip": "Particle_HeatWaveDistortion",
+    "render_mode": "separate",
+    "material": "distorter",
+    "render_layer": "sorted_distortions",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "5",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1,",
+      "3"
+    ],
+    "speed_start": [
+      ".5,",
+      "1"
+    ],
+    "size_start": "1",
+    "size_end": "5",
+    "rotation": [
+      "0",
+      "0"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".01",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "CoreHeatWave_Distortion": {
+    "movieclip": "Particle_HeatWaveDistortion",
+    "render_mode": "separate",
+    "material": "distorter",
+    "render_layer": "sorted_distortions",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "5",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1,",
+      "3"
+    ],
+    "speed_start": [
+      ".5,",
+      "1"
+    ],
+    "size_start": "1",
+    "size_end": "5",
+    "rotation": [
+      "0",
+      "0"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".005",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "HeatWave": {
+    "combo": [
+      "HeatWave_Particles,",
+      "HeatWave_Distortion"
+    ]
+  },
+  "healing_gas": {
+    "movieclip": "ParticleStinkCloudSlow",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "15",
+    "emit_amount": "50",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "friction": [
+      ".1",
+      ".015",
+      ".1"
+    ],
+    "emit_radius": ".2",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1"
+    ],
+    "speed_start": [
+      "5",
+      "7"
+    ],
+    "size_start": [
+      ".2",
+      "1"
+    ],
+    "size_end": [
+      "1",
+      "2"
+    ],
+    "alpha_start": "1.5",
+    "alpha_end": "0",
+    "speed_scale": [
+      ".05",
+      ".1"
+    ],
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "-0.5",
+          "0"
+        ],
+        "force": "1.5"
+      },
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "1",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "alienLaserCharge": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "30",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": "1.5",
+    "friction_start": [
+      ".9",
+      ".9",
+      ".9"
+    ],
+    "friction_end": [
+      ".15",
+      ".15",
+      ".15"
+    ],
+    "emit_spread": "180",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "0",
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "size_start": [
+      ".1",
+      "1"
+    ],
+    "size_end": "0",
+    "alpha_start": "0",
+    "alpha_end": "2",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleAttractor": "100"
+    }
+  },
+  "TormentorGuts": {
+    "movieclip": "ParticleTormentorGib",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "400",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "500",
+    "particle_lifetime": "2",
+    "speed_start": [
+      "3,",
+      "25"
+    ],
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "size_start": ".6",
+    "alpha_start": "4",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleRandomForce": [
+        "0,",
+        [
+          "-80,",
+          "-10"
+        ],
+        ",",
+        "0"
+      ],
+      "/*ParticleRandomForce": {
+        "begin": [
+          "0,",
+          [
+            "-20,",
+            "20"
+          ],
+          ",",
+          "0"
+        ],
+        "end": [
+          "-20,",
+          "0,",
+          "20"
+        ]
+      },
+      "*/": "ParticleBouncePlane",
+      "dampening": ".25"
+    },
+    "ParticleBouncePlane": {
+      "dampening": ".75",
+      "friction": "0",
+      "plane": "right",
+      "position": "10.5"
+    }
+  },
+  "TormentorFull": {
+    "combo": [
+      "TormentorGuts,",
+      "SplatterXL"
+    ]
+  },
+  "PassivePoison": {
+    "movieclip": "Particle_PoisonDrip",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "7",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "45",
+    "friction": [
+      ".05,",
+      ".01,",
+      ".05"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".3",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "1",
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ],
+    "alpha_end": "0",
+    "alpha_start": "2",
+    "rotation": [
+      "-30",
+      "30"
+    ]
+  },
+  "PassiveBleed": {
+    "movieclip": "Particle_BloodDrip",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "4",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_box": [
+      "0",
+      "0",
+      ".7",
+      ".7",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "force_start": [
+      "0",
+      "0",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-5",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5",
+      ".75"
+    ],
+    "speed_start": "0",
+    "size": [
+      ".5",
+      "1"
+    ],
+    "size_in": ".3",
+    "alpha_out": ".5",
+    "rotation": "-90"
+  },
+  "PassiveFire": {
+    "movieclip": "Particle_BurnFlame",
+    "unlit": "true",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "10",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "45",
+    "friction": [
+      ".05,",
+      ".01,",
+      ".05"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".3",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "1",
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ],
+    "alpha_in": ".1",
+    "alpha_out": ".5",
+    "rotation": [
+      "-30",
+      "30"
+    ]
+  },
+  "PassiveWet": {
+    "movieclip": "Particle_WaterDrip",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "4",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_box": [
+      "0",
+      "0",
+      ".7",
+      ".7",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "force_start": [
+      "0",
+      "0",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".35",
+      ".55"
+    ],
+    "speed_start": "0",
+    "size": ".5",
+    "size_in": ".3",
+    "alpha_out": ".5",
+    "rotation": "-90"
+  },
+  "PassiveTar": {
+    "movieclip": "Particle_TarDrip",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "spurt": "PassiveTarSplat",
+    "projection_matrix": "default",
+    "emit_rate": "4",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_box": [
+      "0",
+      "0",
+      ".7",
+      ".7",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "force_start": [
+      "0",
+      "0",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-1",
+      "0"
+    ],
+    "particle_lifetime": [
+      "1",
+      "1.5"
+    ],
+    "speed_start": "0",
+    "size": ".5",
+    "size_in": ".1",
+    "alpha_in": ".2",
+    "alpha_out": ".5",
+    "rotation": "-90"
+  },
+  "FireExtinguish_Steam": {
+    "movieclip": "ParticleDustCloud",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "200",
+    "emit_timespread": ".75",
+    "emit_timespread_curve": "ease_out",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "speed": [
+      "1",
+      "3"
+    ],
+    "emit_box": [
+      "-.1",
+      ".1",
+      ".2",
+      ".2",
+      "-.1",
+      ".1"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "1",
+    "size": [
+      ".5",
+      "2"
+    ],
+    "alpha": ".1",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "2"
+      }
+    }
+  },
+  "FireExtinguish": {
+    "combo": [
+      "FireExtinguish_Steam"
+    ]
+  },
+  "WindLeaves": {
+    "movieclip": "Particle_WindLeaf",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "50",
+    "emit_amount": "1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "30",
+    "emit_box": [
+      "-10",
+      "10",
+      "0",
+      "10",
+      "-10",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "10"
+    ],
+    "speed_start": [
+      "0,",
+      "2"
+    ],
+    "size": [
+      ".3",
+      ".8"
+    ],
+    "alpha": "1",
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".5"
+      }
+    }
+  },
+  "WindDebris": {
+    "movieclip": "Particle_WindDebris",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-10",
+      "10",
+      "0",
+      "10",
+      "-10",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "2,",
+      "4"
+    ],
+    "size": [
+      ".1",
+      "1"
+    ],
+    "size_in": ".5",
+    "size_out": ".5",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "WindDust": {
+    "movieclip": "Particle_WindDust",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-10",
+      "10",
+      "0",
+      "10",
+      "-10",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "2,",
+      "4"
+    ],
+    "size": [
+      "1",
+      "3"
+    ],
+    "alpha": ".03",
+    "alpha_in": ".3",
+    "alpha_out": ".3",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "WindWisps": {
+    "movieclip": "Particle_WindWisps",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-1",
+      "10",
+      "0",
+      "10",
+      "-1",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "2",
+    "speed_start": ".001",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "size": [
+      "1",
+      "3"
+    ]
+  },
+  "WindFull": {
+    "combo": [
+      "WindDebris",
+      "WindLeaves",
+      "WindDust",
+      "WindWisps"
+    ]
+  },
+  "FloatingRocks": {
+    "movieclip": "FX_MoonRock",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "3",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "0",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "force_end": [
+      "0",
+      "1",
+      "0"
+    ],
+    "particle_lifetime": [
+      "10",
+      "20"
+    ],
+    "speed_start": [
+      ".1",
+      ".2"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-50",
+      "50"
+    ],
+    "size": [
+      ".5",
+      ".9"
+    ],
+    "size_out": ".5",
+    "alpha_in": ".05",
+    "alpha": "1"
+  },
+  "Embers": {
+    "movieclip": "FX_Ember",
+    "render_mode": "separate",
+    "unlit": "true",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "-.5,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "10",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "0,",
+      "1"
+    ],
+    "size": [
+      ".2",
+      ".4"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-100",
+      "100"
+    ],
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".5"
+      },
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "EQRocks": {
+    "movieclip": "ParticleRocks",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": [
+      "0",
+      "4"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".02",
+      "0",
+      ".02"
+    ],
+    "emit_spread": "20",
+    "emit_radius": ".3",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-500",
+      "500"
+    ],
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      "1",
+      "1.5"
+    ],
+    "speed_start": [
+      "7",
+      "13"
+    ],
+    "size": [
+      ".8",
+      "1.5"
+    ],
+    "alpha_out": ".2",
+    "force": [
+      "0",
+      "-30",
+      "0"
+    ],
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5",
+        "friction": ".2"
+      }
+    }
+  },
+  "PassiveStealth": {
+    "movieclip": "ParticleDarkPuff",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "360",
+    "friction": [
+      ".01,",
+      ".01,",
+      ".01"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".5",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "force": [
+      "0",
+      "-.5",
+      "0"
+    ],
+    "particle_lifetime": [
+      "1",
+      "1"
+    ],
+    "speed_start": [
+      "0",
+      ".5"
+    ],
+    "size": [
+      ".5",
+      "1"
+    ],
+    "alpha": ".10",
+    "alpha_in": ".5",
+    "alpha_out": ".5",
+    "rotation": [
+      "-180",
+      "180"
+    ],
+    "rotation_speed": [
+      "-100,",
+      "100"
+    ],
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "0"
+      }
+    }
+  },
+  "Firestorm_Distortion": {
+    "movieclip": "Particle_HeatWaveDistortion",
+    "render_mode": "separate",
+    "material": "distorter",
+    "render_layer": "sorted_distortions",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "40",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "-5",
+      "10",
+      "0",
+      "5",
+      "-5",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "1,",
+      "3"
+    ],
+    "speed_start": [
+      "1,",
+      "2"
+    ],
+    "size_start": "1",
+    "size_end": "5",
+    "rotation": [
+      "0",
+      "0"
+    ],
+    "rotation_speed_end": "0",
+    "alpha": ".01",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "Firestorm_Embers": {
+    "movieclip": "FX_Ember",
+    "render_mode": "separate",
+    "unlit": "true",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "-.5,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "10",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "1,",
+      "2"
+    ],
+    "size": [
+      ".2",
+      ".4"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-100",
+      "100"
+    ],
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".5"
+      },
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "Firenado_Embers": {
+    "movieclip": "FX_Ember",
+    "render_mode": "separate",
+    "unlit": "true",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "-.5,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "10",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "10",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "1,",
+      "2"
+    ],
+    "size": [
+      ".2",
+      ".4"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-100",
+      "100"
+    ],
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".5"
+      },
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "5",
+          "0",
+          "5"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "10"
+      }
+    }
+  },
+  "Firestorm_Fire": {
+    "movieclip": "Particle_BurnFlame",
+    "unlit": "true",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "45",
+    "friction": [
+      ".05,",
+      ".01,",
+      ".05"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "3",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "1",
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ],
+    "alpha_in": ".1",
+    "alpha_out": ".5",
+    "rotation": [
+      "-30",
+      "30"
+    ]
+  },
+  "Firenado_Fire": {
+    "movieclip": "Particle_BurnFlame",
+    "unlit": "true",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "45",
+    "friction": [
+      ".05,",
+      ".01,",
+      ".05"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "3",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "1",
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ],
+    "alpha_in": ".1",
+    "alpha_out": ".5",
+    "rotation": [
+      "-30",
+      "30"
+    ],
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "5",
+          "0",
+          "5"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "5"
+      }
+    }
+  },
+  "CraterLeaves": {
+    "movieclip": "Particle_WindLeafCrater",
+    "movieclip_timescale": ".5",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "15",
+    "emit_amount": "1",
+    "emit_direction": [
+      "-.4,",
+      "-.4,",
+      "0"
+    ],
+    "emit_spread": "30",
+    "emit_box": [
+      "-10",
+      "10",
+      "0",
+      "10",
+      "-10",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "4",
+      "10"
+    ],
+    "speed_start": [
+      "0,",
+      "1"
+    ],
+    "size": [
+      ".5",
+      "1"
+    ],
+    "alpha": "1",
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      },
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".5"
+      }
+    }
+  },
+  "FireStorm": {
+    "combo": [
+      "Firestorm_Fire",
+      "Firestorm_Embers",
+      "Firestorm_Distortion"
+    ]
+  },
+  "Firenado": {
+    "combo": [
+      "Firenado_Fire",
+      "Firenado_Embers",
+      "Firestorm_Distortion"
+    ]
+  },
+  "HadoukenBall": {
+    "movieclip": "Particle_BurnFlame",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "50",
+    "emit_amount": "3",
+    "emit_direction": [
+      "0",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": ".1",
+    "particle_lifetime": [
+      ".6",
+      "1"
+    ],
+    "size_start": [
+      ".5",
+      "0"
+    ],
+    "size_end": [
+      ".1",
+      ".1"
+    ],
+    "alpha_start": "1",
+    "alpha_end": ".2",
+    "speed_scale": ".4",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          ".8",
+          "0"
+        ],
+        "axis": [
+          "1",
+          "0",
+          "0"
+        ],
+        "force": "15"
+      }
+    }
+  },
+  "GibsBloodSpurt": {
+    "movieclip": "ParticleBlood",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "10",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "45",
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "particle_lifetime": [
+      "1",
+      "2"
+    ],
+    "speed_start": [
+      "0",
+      "2"
+    ],
+    "size_start": [
+      ".1",
+      ".5"
+    ],
+    "size_end": "0",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": "1",
+    "inherit_speed": [
+      ".1",
+      ".9"
+    ],
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5",
+        "friction": ".1"
+      }
+    }
+  },
+  "Gibs_default": {
+    "movieclip": "Gibs_Default",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "3",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "60",
+    "emit_shell": ".5",
+    "emit_box": [
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "spurt": "GibsBloodSpurt",
+    "particle_lifetime": [
+      "1.5",
+      "2"
+    ],
+    "speed_start": [
+      "3",
+      "7"
+    ],
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "rotation_speed_end": "0",
+    "size_start": "1.2",
+    "size_end": "1",
+    "alpha_start": "9",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "Gibs_cat": {
+    "variant_of": "Gibs_default"
+  },
+  "Gibs_humanoid": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Human"
+  },
+  "Gibs_demon": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Demon"
+  },
+  "Gibs_animal": {
+    "variant_of": "Gibs_default"
+  },
+  "Gibs_rat": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Rat"
+  },
+  "Gibs_blob": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Blob"
+  },
+  "Gibs_skeleton": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Undead"
+  },
+  "Gibs_rock": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Rock"
+  },
+  "Gibs_plant": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Plant"
+  },
+  "Gibs_robot": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Robot"
+  },
+  "Gibs_bug": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Bugs"
+  },
+  "Gibs_poop": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Poop"
+  },
+  "Gibs_fetus": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Fetus"
+  },
+  "Gibs_box": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Box"
+  },
+  "Gibs_bag": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Bag"
+  },
+  "Gibs_cactus": {
+    "variant_of": "Gibs_default",
+    "movieclip": "Gibs_Cactus"
+  },
+  "Gibs_terminatorskin": {
+    "variant_of": "Gibs_default",
+    "emit_amount": "3"
+  },
+  "VolcanoSpurt": {
+    "movieclip": "ParticleRocks",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "spurt": "VolcanoSpurt_Trail",
+    "emit_rate": "1",
+    "emit_amount": "5",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".02",
+      "0",
+      ".02"
+    ],
+    "emit_spread": "20",
+    "emit_radius": ".3",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-500",
+      "500"
+    ],
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      "1",
+      "1.5"
+    ],
+    "speed_start": [
+      "7",
+      "13"
+    ],
+    "size": [
+      ".8",
+      "1.5"
+    ],
+    "alpha_out": ".2",
+    "force": [
+      "0",
+      "-30",
+      "0"
+    ],
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5",
+        "friction": ".2"
+      }
+    }
+  },
+  "VolcanoSpurt_Trail": {
+    "movieclip": "Particle_BurnFlame",
+    "unlit": "true",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "10",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": "0",
+    "emit_spread": "30",
+    "friction": [
+      ".01,",
+      ".01,",
+      ".01"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": [
+      "0",
+      "3"
+    ],
+    "size_start": "0",
+    "size_end": [
+      ".5",
+      "1"
+    ],
+    "alpha_in": ".1",
+    "alpha_out": ".5",
+    "rotation": [
+      "-30",
+      "30"
+    ]
+  },
+  "RocketTrail": {
+    "movieclip": "PuffNoOutline",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "30",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".03",
+      ".35",
+      ".03"
+    ],
+    "emit_spread": "180",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed_start": [
+      "-1000",
+      "1000"
+    ],
+    "rotation_speed_end": "0",
+    "particle_lifetime": "1",
+    "speed_start": "0",
+    "alpha_start": ".8",
+    "alpha_end": "0",
+    "size_start": "1",
+    "size_end": "0"
+  },
+  "GravityHoverRings": {
+    "movieclip": "Particle_GravityHoverRing",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "3",
+    "emit_amount": "1",
+    "emit_direction": [
+      ".1,",
+      "-1,",
+      ".1"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ],
+    "emit_spread": "0",
+    "rotation_speed_end": "0",
+    "particle_lifetime": "1",
+    "speed_start": ".5",
+    "alpha_in": ".3",
+    "alpha_out": ".2",
+    "size_start": "1",
+    "size_end": ".3",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "1"
+      }
+    }
+  },
+  "GravityBurstB": {
+    "movieclip": "Particle_GravityHoverRing",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "4",
+    "emit_timespread": ".1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ],
+    "friction": [
+      ".01",
+      ".01",
+      ".01"
+    ],
+    "emit_spread": "0",
+    "rotation": "90",
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      ".4",
+      ".6"
+    ],
+    "speed_start": [
+      "0",
+      "2"
+    ],
+    "alpha_in": ".01",
+    "alpha_out": ".5",
+    "size_start": "1",
+    "size_end": ".5"
+  },
+  "GravityBurstS": {
+    "movieclip": "Particle_GravityHoverRing",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "15",
+    "emit_timespread": ".1",
+    "emit_direction": [
+      "1,",
+      "0,",
+      "0"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".1",
+      ".1",
+      "0",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".05",
+      ".05"
+    ],
+    "emit_spread": "0",
+    "rotation": "90",
+    "rotation_speed_end": "0",
+    "particle_lifetime": [
+      ".4",
+      ".6"
+    ],
+    "speed_start": [
+      "1",
+      "10"
+    ],
+    "alpha_in": ".01",
+    "alpha_out": ".2",
+    "size_start": [
+      ".2",
+      ".5"
+    ],
+    "size_end": ".1"
+  },
+  "GravityBurst": {
+    "combo": [
+      "GravityBurstB",
+      "GravityBurstS"
+    ]
+  },
+  "MeatCaveDrip": {
+    "variant_of": "CaveDrip",
+    "emit_rate": [
+      "10",
+      "25"
+    ],
+    "alpha": "1",
+    "force": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "speed_start": "2",
+    "speed_scale": ".2",
+    "movieclip": "RedWaterParticle",
+    "chain": "MeatCaveSplash"
+  },
+  "MeatCaveSplash": {
+    "variant_of": "CaveSplash",
+    "movieclip": "RedWaterSplashParticle"
+  },
+  "DruidFlowersVictory": {
+    "movieclip": "ParticlePetals",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "240",
+    "emit_amount": [
+      "100,",
+      "300"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2,",
+      "3"
+    ],
+    "speed_start": [
+      "1.5,",
+      "2.5"
+    ],
+    "speed_end": [
+      "0.7,",
+      "1"
+    ],
+    "force_start": [
+      "0",
+      "-5",
+      "0"
+    ],
+    "rotation_start": [
+      "0,",
+      "360"
+    ],
+    "size_start": ".5",
+    "size_end": ".6",
+    "alpha_start": "2",
+    "alpha_end": "0",
+    "speed_scale": ".2",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "1",
+        "friction": "1"
+      }
+    }
+  },
+  "TinkererVictoryFirework": {
+    "movieclip": "ParticleTestNoRandom",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".5,",
+      "1"
+    ],
+    "emit_amount": [
+      "3,",
+      "5"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".01",
+      ".01",
+      ".01"
+    ],
+    "emit_spread": "30",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".2",
+      ".45"
+    ],
+    "speed_start": "10",
+    "speed_end": "5",
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "size_start": ".65",
+    "speed_scale": ".1",
+    "face_moving_direction": "true",
+    "chain": "firework_burst"
+  },
+  "FireBallTrail": {
+    "movieclip": "Particle_BurnFlame",
+    "unlit": "true",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".1",
+    "emit_spread": "45",
+    "friction": [
+      ".05,",
+      ".01,",
+      ".05"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "2",
+    "size_start": "1",
+    "size_end": [
+      ".5",
+      ".25"
+    ],
+    "alpha_in": ".1",
+    "alpha_out": ".5",
+    "rotation": [
+      "-30",
+      "30"
+    ],
+    "inherit_speed": "0"
+  },
+  "Confetti": {
+    "movieclip": "ConfettiParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": [
+      ".5"
+    ],
+    "emit_amount": [
+      "100"
+    ],
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".05",
+      ".05"
+    ],
+    "emit_spread": "45",
+    "emit_shell": ".5",
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      "2",
+      "4"
+    ],
+    "speed_start": [
+      "2",
+      "15"
+    ],
+    "force_start": [
+      "0",
+      "-10",
+      "0"
+    ],
+    "force_end": [
+      "0",
+      "-2",
+      "0"
+    ],
+    "size_start": [
+      ".5",
+      ".75"
+    ],
+    "speed_scale": ".1",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-1000",
+      "1000"
+    ],
+    "rotation_speed_end": "0",
+    "alpha_out": ".2",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "GlitchShards": {
+    "movieclip": "Particle_InvertShards",
+    "render_mode": "default",
+    "render_layer": "top",
+    "simulation_space": "global",
+    "is_3D": "false",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      "7.955",
+      "7.955",
+      "0",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_shell": "15",
+    "emitshape_scale": [
+      "1",
+      "0.5625"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": "4",
+    "rotation_start": [
+      "0",
+      "360"
+    ],
+    "speed_start": "-2",
+    "size": [
+      "2",
+      "5"
+    ],
+    "size_in": ".1",
+    "size_out": ".9"
+  },
+  "GlitchTile": {
+    "movieclip": "Particle_InvertShards",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "50",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".05",
+      ".05"
+    ],
+    "emit_spread": "45",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "-.4",
+      ".4",
+      "0",
+      "0",
+      "-.4",
+      ".4"
+    ],
+    "particle_lifetime": [
+      ".5,",
+      "1"
+    ],
+    "speed_start": [
+      "0,",
+      "2"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "size": [
+      "0",
+      "1"
+    ],
+    "size_in": ".1",
+    "size_out": ".9",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "3"
+      }
+    }
+  },
+  "PassiveScrambled": {
+    "movieclip": "Particle_InvertShards",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "20",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "180",
+    "friction": [
+      ".05,",
+      ".05,",
+      ".05"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".5",
+      ".5",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".25",
+      "1"
+    ],
+    "speed_start": "1",
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "size": [
+      "0",
+      "1"
+    ],
+    "size_in": ".1",
+    "size_out": ".9"
+  },
+  "FightBallCloud": {
+    "movieclip": "ParticleDustCloudSlow",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "100",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".15",
+      ".1",
+      ".15"
+    ],
+    "emit_spread": "300",
+    "emit_box": [
+      "0",
+      "0",
+      "-.95",
+      "-.95",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "2"
+    ],
+    "speed_start": [
+      "2",
+      "9"
+    ],
+    "size_start": [
+      ".5",
+      "1"
+    ],
+    "size_end": [
+      ".1",
+      "6"
+    ],
+    "alpha_end": "0",
+    "speed_scale": ".3",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "0"
+      }
+    }
+  },
+  "ChaosTPOut": {
+    "movieclip": "Particle_InvertShards",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "500",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".05",
+      ".05"
+    ],
+    "emit_spread": "360",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": "1",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "4",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5,",
+      "1"
+    ],
+    "speed_start": [
+      "2,",
+      "8"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "size": [
+      "0",
+      "1"
+    ],
+    "size_in": ".1",
+    "size_out": ".9",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "3"
+      }
+    }
+  },
+  "ChaosTPIn": {
+    "movieclip": "Particle_InvertShards",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "500",
+    "emit_timespread": "1",
+    "emit_timespread_curve": "ease_out",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".05",
+      ".05",
+      ".05"
+    ],
+    "emit_spread": "360",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": "2",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "4",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5,",
+      "1"
+    ],
+    "speed_start": [
+      "1,",
+      "8"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "size": [
+      "0",
+      "1"
+    ],
+    "size_in": ".1",
+    "size_out": ".9",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "3"
+      }
+    }
+  },
+  "ChaosTPTracer": {
+    "movieclip": "Particle_InvertShards",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "continual_emission": "true",
+    "emit_rate": "10000",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "friction": [
+      ".2",
+      ".2",
+      ".2"
+    ],
+    "emit_spread": "360",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_radius": "2",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "4",
+      "0",
+      "0"
+    ],
+    "particle_lifetime": [
+      ".5,",
+      "1"
+    ],
+    "speed_start": [
+      "0,",
+      "1"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "size": [
+      "0",
+      "1"
+    ],
+    "size_in": ".1",
+    "size_out": ".9",
+    "inherit_speed": ".15",
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "3"
+      }
+    }
+  },
+  "SandStormBuff": {
+    "movieclip": "SandStormParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "100",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".1",
+      "1"
+    ],
+    "speed_start": "1",
+    "size_start": [
+      ".4",
+      ".6"
+    ],
+    "size_end": "0",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": ".25",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "10"
+      }
+    }
+  },
+  "AbsorbBuff": {
+    "movieclip": "ManaParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "4",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1.5"
+    ],
+    "speed_start": "1",
+    "size_start": [
+      "2,",
+      "3"
+    ],
+    "size_end": ".5",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": "0",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "0",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1",
+          "0"
+        ],
+        "force": "1"
+      }
+    }
+  },
+  "FlyBuff": {
+    "movieclip": "Critter_Fly",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "50",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1.5"
+    ],
+    "speed_start": "1",
+    "size_start": [
+      "3",
+      "4"
+    ],
+    "size_end": "0",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": ".25",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "0",
+          "-8",
+          "0"
+        ],
+        "axis": [
+          "0",
+          "1.5",
+          "0"
+        ],
+        "force": "2"
+      }
+    }
+  },
+  "SpikeBuff": {
+    "movieclip": "Particle_Thorns",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "4",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": ".5",
+    "size_start": ".3",
+    "size_end": ".5",
+    "alpha_start": "1",
+    "alpha_end": "2",
+    "speed_scale": ".25",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      }
+    }
+  },
+  "ShineBuff": {
+    "movieclip": "SparkleParticle",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "15",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "180",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": "1",
+    "size_start": ".5",
+    "size_end": ".7",
+    "alpha_start": ".5",
+    "alpha_end": "2",
+    "speed_scale": ".50",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      }
+    }
+  },
+  "SmokeBuff": {
+    "movieclip": "ParticleSmoke1",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "ownership": "local",
+    "projection_matrix": "default",
+    "emit_rate": "25",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "100",
+    "emit_box": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": [
+      ".5",
+      "1"
+    ],
+    "speed_start": ".001",
+    "size_start": [
+      "1",
+      "1.4"
+    ],
+    "size_end": "0",
+    "alpha_start": "-1",
+    "alpha_end": "2",
+    "speed_scale": ".25",
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleTornadoForce": {
+        "point": [
+          "1",
+          "1",
+          "1"
+        ],
+        "axis": [
+          "0",
+          ".5",
+          "0"
+        ],
+        "force": "1"
+      }
+    }
+  },
+  "AngelClouds": {
+    "movieclip": "PuffNoOutline",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1000",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "-1,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      ".1",
+      "0",
+      "10"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "friction": [
+      ".02",
+      ".2",
+      ".02"
+    ],
+    "particle_lifetime": "7",
+    "speed_start": [
+      ".1,",
+      ".5"
+    ],
+    "size_start": [
+      "1",
+      "1.4"
+    ],
+    "rotation": [
+      "0",
+      "360"
+    ],
+    "rotation_speed": [
+      "-10,",
+      "10"
+    ],
+    "rotation_speed_end": "0",
+    "alpha_in": ".2",
+    "alpha_out": ".2",
+    "alpha": ".05",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": "0",
+        "friction": "1"
+      },
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": ".1"
+      },
+      "ParticleCharacterCollision": {
+        "character_sphere_offset": "0",
+        "pushforce": "2",
+        "inherit_velocity": ".5"
+      }
+    }
+  },
+  "Gibs_huge": {
+    "movieclip": "Gibs_Default",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "50",
+    "emit_direction": [
+      "0,",
+      ".05,",
+      "0"
+    ],
+    "emit_spread": "360",
+    "emit_shell": ".5",
+    "emit_box": [
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "spurt": "GibsBloodSpurtHuge",
+    "particle_lifetime": [
+      "1.5",
+      "3"
+    ],
+    "speed_start": [
+      "7",
+      "13"
+    ],
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "rotation_speed_end": "0",
+    "size_start": "1.2",
+    "size_end": "1",
+    "alpha_start": "9",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  },
+  "GibsBloodSpurtHuge": {
+    "movieclip": "ParticleBlood",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "1",
+    "emit_amount": "30",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "60",
+    "force_start": [
+      "0",
+      "-30",
+      "0"
+    ],
+    "particle_lifetime": [
+      "1",
+      "3"
+    ],
+    "speed_start": [
+      "1",
+      "5"
+    ],
+    "size_start": [
+      ".3",
+      ".8"
+    ],
+    "size_end": "0",
+    "alpha_start": [
+      ".1",
+      "2"
+    ],
+    "alpha_end": "0",
+    "speed_scale": "1.2",
+    "inherit_speed": [
+      ".4",
+      "1.5"
+    ],
+    "face_moving_direction": "true",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".5",
+        "friction": ".1"
+      }
+    }
+  },
+  "PassiveEnergized": {
+    "movieclip": "Particle_Electric",
+    "unlit": "true",
+    "/*render_mode": "default",
+    "simulation_space": "global",
+    "ownership": "local*/",
+    "render_mode": "separate",
+    "projection_matrix": "default",
+    "emit_rate": "15",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_radius": ".4",
+    "emit_spread": "45",
+    "friction": [
+      "-.05",
+      "-.1",
+      "-.05"
+    ],
+    "emit_box": [
+      "0",
+      "0",
+      ".3",
+      ".3",
+      "0",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "particle_lifetime": ".5",
+    "speed_start": [
+      "0",
+      "2"
+    ],
+    "size_in": ".1",
+    "size": [
+      ".5",
+      "1"
+    ],
+    "rotation": [
+      "-90",
+      "90"
+    ]
+  },
+  "BloodRain": {
+    "movieclip": "Particle_BloodDrip",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": "200",
+    "emit_amount": "1",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "0",
+    "live_bounds": [
+      "-999",
+      "999",
+      "0",
+      "999",
+      "-999",
+      "999"
+    ],
+    "emit_box": [
+      "0",
+      "10",
+      "0",
+      "0",
+      "0",
+      "10"
+    ],
+    "particle_lifetime": "5",
+    "speed_start": "0",
+    "size_start": [
+      ".25",
+      "1"
+    ],
+    "speed_scale": ".2",
+    "alpha": ".5",
+    "face_moving_direction": "true",
+    "force": [
+      "0",
+      "10",
+      "0"
+    ],
+    "scripts": {
+      "ParticleGlobalForce": {
+        "id": "Wind",
+        "amount": "1"
+      }
+    }
+  },
+  "Gibs_Medium": {
+    "movieclip": "Gibs_Default",
+    "render_mode": "separate",
+    "simulation_space": "global",
+    "projection_matrix": "default",
+    "emit_rate": ".5",
+    "emit_amount": "10",
+    "emit_direction": [
+      "0,",
+      "1,",
+      "0"
+    ],
+    "emit_spread": "60",
+    "emit_shell": ".5",
+    "emit_box": [
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0,",
+      "0"
+    ],
+    "live_bounds": [
+      "-999",
+      "999",
+      "-999",
+      "999",
+      "-999",
+      "999"
+    ],
+    "spurt": "GibsBloodSpurt",
+    "particle_lifetime": [
+      "1.5",
+      "2"
+    ],
+    "speed_start": [
+      "3",
+      "7"
+    ],
+    "force_start": [
+      "0",
+      "-20",
+      "0"
+    ],
+    "rotation_speed_start": [
+      "-900,",
+      "900"
+    ],
+    "rotation_speed_end": "0",
+    "size_start": "1.2",
+    "size_end": "1",
+    "alpha_start": "9",
+    "alpha_end": "0",
+    "scripts": {
+      "ParticleBouncePlane": {
+        "dampening": ".75",
+        "friction": "0",
+        "plane": "right",
+        "position": "10.5"
+      }
+    }
+  }
+}

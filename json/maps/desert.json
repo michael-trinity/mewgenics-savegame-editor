@@ -1,0 +1,104 @@
+{
+  "levels": {
+    "folder": "desert",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "desert_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "RattleSnake"
+    ],
+    "medium": [
+      "FlySwarm",
+      "SnakeyBones",
+      "Carcus",
+      "Peashy",
+      "BabyDeathWorm",
+      "HornyCat",
+      "GunCat",
+      "Mangy2",
+      "ScorpionCat"
+    ],
+    "large": [
+      "SkeletonShambler",
+      "Thump",
+      "DeathWorm"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "desertitems"
+  },
+  "bosses": {
+    "zodiac": "auto",
+    "gambit": "auto"
+  },
+  "minibosses": {
+    "thiefcat": "auto",
+    "clericcat": "auto",
+    "butchercat": "auto",
+    "necrocat": "auto",
+    "jestercat": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "bunker.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_Bunker"
+    },
+    "exit1": {
+      "type": "exit",
+      "next_map": "crater.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_Crater"
+    },
+    "boss": {
+      "type": "boss"
+    },
+    "shop_water": {
+      "type": "shop",
+      "level": "WaterShop",
+      "override_art": "cheapwatershop"
+    },
+    "shop_cheapwater": {
+      "type": "shop",
+      "level": "WaterShopCheap",
+      "override_art": "cheapwatershop"
+    }
+  },
+  "flags": {
+    "BunkerUnlocked": {
+      "exit0": {
+        "locked": "false"
+      }
+    },
+    "CraterUnlocked": {
+      "exit1": {
+        "locked": "false"
+      }
+    }
+  }
+}

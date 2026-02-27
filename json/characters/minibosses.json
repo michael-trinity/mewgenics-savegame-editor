@@ -1,0 +1,1927 @@
+{
+  "CanCreeper": {
+    "graphics": {
+      "movieclip": "CanCreeper",
+      "name": "ENEMY_CANCREEPER_NAME",
+      "name_resolved": "Can Creeper",
+      "water_mask": "medmed",
+      "tooltip": "ENEMY_CANCREEPER_DESC",
+      "tooltip_resolved": "Shoots diagonally or dashes forward leaving a Fly behind.\nCan only be damaged from the front.\nSpawns creep."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "DamageBlocked",
+          "DamageBlocked_CanCreeper"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "movement": "3",
+      "corpse_health": "0",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "40",
+      "always_triggers_traps": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "DoubleDiagonalCreepshot",
+      "spells": [
+        "CanCreeperSlide"
+      ]
+    },
+    "passives": {
+      "TileTrail": "CreepTile",
+      "CanShield": "1",
+      "IgnoreTiles": "1",
+      "ChangeTileOnPop": "CreepTile",
+      "TransformOnDeath": "CanCreeperOut",
+      "ElementImmune": "Creep"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveCenter": {
+          "ability": "move",
+          "move_weights": "stay_near_map_center"
+        }
+      },
+      "mainturn_pattern": {
+        "do": "attack"
+      },
+      "bonusturn_pattern": {
+        "do_strict": [
+          "*CanCreeperSlide,",
+          "MoveCenter"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move",
+      "auto_orient": "false"
+    }
+  },
+  "CanCreeperOut": {
+    "graphics": {
+      "movieclip": "CanCreeperOut",
+      "name": "ENEMY_CANCREEPER_NAME",
+      "name_resolved": "Can Creeper",
+      "projectile_spawn_offset": [
+        "0",
+        "1"
+      ],
+      "tooltip": "ENEMY_CANCREEPEROUT_DESC",
+      "tooltip_resolved": "Ranged attacker.\nMust be in creep to attack."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "8",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "corpse_health": "1",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "20"
+    },
+    "abilities": {
+      "move": "Swim",
+      "attack": "ShortCreepshot",
+      "spells": [
+        "MoveOne"
+      ]
+    },
+    "passives": {
+      "GroundFlopper": "MoveOne",
+      "WaterWalk": "1",
+      "ElementImmune": "Creep"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "BigSlime": {
+    "graphics": {
+      "movieclip": "BigSlime",
+      "name": "ENEMY_BIGSLIME_NAME",
+      "name_resolved": "Big Slime",
+      "shadow": "BigSlimeShadow",
+      "tooltip": "ENEMY_BIGSLIME_DESC",
+      "tooltip_resolved": "Melee attacker.\nSplits into 4 medium Slimes on death.",
+      "water_mask": "medium"
+    },
+    "stats": {
+      "strength": "10",
+      "dexterity": "6",
+      "constitution": "6",
+      "intelligence": "6",
+      "speed": "6",
+      "charisma": "6"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "4",
+      "dispersed_bonus_turns": "1",
+      "corpse_health": "0",
+      "health": "64",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "banned_elite_buffs": [
+        "Shielded1",
+        "Shielded2",
+        "Shielded3",
+        "Shielded4"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicBigMelee",
+      "spells": []
+    },
+    "passives": {
+      "Trample": "3",
+      "Divide4OnDeath": "MedSlime"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "MedSlime": {
+    "graphics": {
+      "movieclip": "MedSlime",
+      "name": "ENEMY_MEDIUMSLIME_NAME",
+      "name_resolved": "Medium Slime",
+      "shadow": "MedSlimeShadow",
+      "tooltip": "ENEMY_MEDIUMSLIME_DESC",
+      "tooltip_resolved": "Melee attacker.\nSplits into 4 small Slimes on death.",
+      "water_mask": "medium"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "3",
+      "constitution": "3",
+      "intelligence": "3",
+      "speed": "3",
+      "charisma": "3"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "0",
+      "health": "16",
+      "banned_elite_buffs": [
+        "Shielded1",
+        "Shielded2",
+        "Shielded3",
+        "Shielded4"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "Divide4OnDeath": "SmallSlime"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "SmallSlime": {
+    "graphics": {
+      "movieclip": "SmallSlime",
+      "name": "ENEMY_SMALLSLIME_NAME",
+      "name_resolved": "Small Slime",
+      "shadow": "SmallSlimeShadow",
+      "tooltip": "ENEMY_SMALLSLIME_DESC",
+      "tooltip_resolved": "Melee attacker."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "1",
+      "constitution": "1",
+      "intelligence": "1",
+      "speed": "1",
+      "charisma": "1"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "corpse_health": "0",
+      "health": "4",
+      "held_coins": [
+        "0",
+        "1"
+      ],
+      "banned_elite_buffs": [
+        "Shielded1",
+        "Shielded2",
+        "Shielded3",
+        "Shielded4"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Gambit": {
+    "graphics": {
+      "movieclip": "Gambit",
+      "name": "ENEMY_GAMBIT_NAME",
+      "name_resolved": "Gambit",
+      "uifloaters_offset": "1.5",
+      "tooltip": "ENEMY_GAMBIT_DESC",
+      "tooltip_resolved": "Has 6 special moves tied to the number on its dice! Higher numbers are more deadly."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "10"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "round_start_bonus_turns": "1",
+      "round_end_bonus_turns": "1",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "110",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "DiceLeap",
+        "RollDice",
+        "D6Fizzle",
+        "D6Confused",
+        "D6Poop",
+        "D6Laser",
+        "D6Quake",
+        "D6Storm",
+        "D6Wrath"
+      ]
+    },
+    "passives": {
+      "BossRewards": {
+        "common": "SnakeEyes",
+        "rare": "GambitsDice"
+      },
+      "Buddy": {
+        "obj": "Dice",
+        "reclaim_if_lost": "true",
+        "allies_only": "false"
+      },
+      "DicerArt": [
+        "59",
+        "52",
+        "65",
+        "50",
+        "54",
+        "63",
+        "64"
+      ]
+    },
+    "ai": {
+      "brain": "DicerBrain",
+      "roll_ability": "RollDice",
+      "dice_abilities": [
+        "D6Fizzle",
+        "D6Confused",
+        "D6Poop",
+        "D6Laser",
+        "D6Quake",
+        "D6Storm",
+        "D6Wrath"
+      ],
+      "decision_weights": "always_cast",
+      "move_weights": "keep_distance_always_move",
+      "post_absorb_move_weights": "minimum_move"
+    }
+  },
+  "Flushmaster": {
+    "graphics": {
+      "movieclip": "Flushmaster",
+      "name": "ENEMY_FLUSHMASTER_NAME",
+      "name_resolved": "Flushmaster",
+      "water_mask": "medium",
+      "uifloaters_offset": "2",
+      "shadow": "none",
+      "tooltip": "ENEMY_FLUSHMASTER_DESC",
+      "tooltip_resolved": "Pushes all units back 10 tiles in the direction its facing."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "6",
+      "constitution": "6",
+      "intelligence": "6",
+      "speed": "0",
+      "charisma": "6"
+    },
+    "properties": {
+      "tag": [
+        "elemental",
+        "poop"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "6",
+      "corpse_health": "0",
+      "initiative": "-30",
+      "health": "100",
+      "elements": [
+        "Water"
+      ]
+    },
+    "abilities": {
+      "move": "Teleport",
+      "attack": "Flush",
+      "spells": []
+    },
+    "passives": {
+      "TransformOnDeath": "Dip",
+      "FlushmasterCelebration": "celebrate"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "*Flush"
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "blind_move_far",
+      "random_orient": "true"
+    }
+  },
+  "MaggotLord": {
+    "graphics": {
+      "movieclip": "MamaMaggot",
+      "name": "ENEMY_MAMAMAGGOT_NAME",
+      "name_resolved": "Mama Maggot",
+      "projectile_spawn_offset": [
+        "-1",
+        ".5"
+      ],
+      "water_mask": "medium",
+      "tooltip": "ENEMY_MAMAMAGGOT_DESC",
+      "tooltip_resolved": "Spawns Maggots, evolves them and gives them bonus turns.\nTrample."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "worm",
+      "faction": "enemies",
+      "type": "boss",
+      "mana_regen": "999",
+      "mana": "100",
+      "movement": "3",
+      "health": "125",
+      "round_start_bonus_turns": "1",
+      "round_end_bonus_turns": "1",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "boss_minions_runaway": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "spells": [
+        "SpawnMaggots",
+        "MutateAOE",
+        "RallyMaggots"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "SpawnThingOnDamage": {
+        "object": "Maggot",
+        "good": "false",
+        "spawn_on_death_hit": "false",
+        "chance": "33%"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance",
+      "virtual_abilities": {
+        "MoveClose": {
+          "ability": "move",
+          "move_weights": "stay_close_always_move"
+        }
+      },
+      "round_start_bonusturn_pattern": {
+        "do_priority": [
+          "MutateAOE",
+          "SpawnMaggots"
+        ]
+      },
+      "mainturn_pattern": {
+        "do_priority": [
+          "MutateAOE",
+          "SpawnMaggots"
+        ]
+      },
+      "round_end_bonusturn_pattern": {
+        "do": "RallyMaggots"
+      },
+      "fallback": {
+        "do_priority": [
+          "MoveClose",
+          "SpawnMaggots"
+        ]
+      },
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "Lenny": {
+    "graphics": {
+      "movieclip": "Lenny",
+      "name": "ENEMY_LENNY_NAME",
+      "name_resolved": "Lenny",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_LENNY_DESC",
+      "tooltip_resolved": "Loves kitties! Especially {buddyname}!"
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "0",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "4",
+      "corpse_health": "1",
+      "dispersed_bonus_turns": "2",
+      "health": "130",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "LennyShove",
+      "spells": [
+        "LennyGrab",
+        "LennyHug",
+        "LennyCatSlap",
+        "LennyCatDies",
+        "LennyDrop",
+        "LennyStruggleFail",
+        "LennyGrabDead"
+      ]
+    },
+    "passives": {
+      "Buddy": "choose_favorite_cat",
+      "DisplayBuddyCatOnSpawn": "3",
+      "FormChanger": {
+        "Default": {
+          "move": "LennyTrampleMove",
+          "attack": "LennyShove",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "HasCat"
+            },
+            "AggroTargetIsBuddy": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "move_then_do_all": [
+                "LennyShove,",
+                "LennyGrabDead,",
+                "LennyGrab"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close_lenny",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "HasCat": {
+          "animation_suffix": "Cat",
+          "attack": "LennyCatSlap",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_hasnot": "Default"
+            },
+            "DigestDeadBodies": "LennyCatDies",
+            "CounterAttack": "LennyCatSlap"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "bonusturn_pattern": {
+              "do": "move"
+            },
+            "mainturn_pattern": {
+              "do": "LennyHug"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_far_always_move",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true",
+            "auto_orient": "false"
+          }
+        },
+        "HasDeadCat": {
+          "animation_suffix": "CatDead",
+          "attack": "LennyCatSlap",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_hasnot": "Default"
+            },
+            "CounterAttack": "LennyCatSlap"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "attack"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "initial_form": "Default"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Zodiac": {
+    "graphics": {
+      "movieclip": "Zodiac",
+      "name": "ENEMY_ZODIAC_NAME",
+      "name_resolved": "Zodiac",
+      "uifloaters_offset": "1.6",
+      "scale": ".8",
+      "tooltip": "ENEMY_ZODIAC_DESC",
+      "tooltip_resolved": "Will shoot at anything that moves!\nLimited ammo."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "6",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "75",
+      "initiative": "1000"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ZodiacShoot",
+      "spells": [
+        "Reload"
+      ]
+    },
+    "passives": {
+      "WeaponsDontLoseDurability": "1",
+      "Ammo": "6",
+      "BossRewards": {
+        "common": "ZodiacsPoncho",
+        "rare": "ZodiacsSixshooter"
+      },
+      "FormChanger": {
+        "active": {
+          "passives": {
+            "MovementReaction": {
+              "ability": "ZodiacShoot",
+              "objects_too": "true"
+            }
+          }
+        },
+        "passive": {
+          "attack": "DoNothing"
+        },
+        "initial_form": "active"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do_all": [
+          "*attack",
+          "move",
+          "Reload"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "gunslinger_reposition",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "Cerberubs": {
+    "graphics": {
+      "movieclip": "Cerberubs",
+      "name": "ENEMY_CERBERUBS_NAME",
+      "name_resolved": "Cerberubs",
+      "water_mask": "square",
+      "scale": ".8",
+      "tooltip": "ENEMY_CERBERUBS_DESC",
+      "tooltip_resolved": "Shoots Lava from its necks when damaged.\nBecomes enraged when hit from behind.\nImmune to Fire."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "dog",
+        "demon"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "dispersed_bonus_turns": "1",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "200",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CerberubsJump",
+      "spells": [
+        "CerberubsShotgunReaction",
+        "CerberubsStraightReaction",
+        "CerberubsThrow",
+        "CerberubsBarrage",
+        "CerberubsCalm"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "ImmediateAbilityReaction": "CerberubsStraightReaction",
+      "ElementImmune": "Fire",
+      "FormChanger": {
+        "Normal": {
+          "passives": {
+            "RandomizeAIWeightsEachTurn": [
+              {
+                "decision_weights": "default",
+                "move_weights": "chubs_and_nubs_blind"
+              },
+              {
+                "decision_weights": "default",
+                "move_weights": "chubs_and_nubs_blind"
+              },
+              {
+                "decision_weights": "default",
+                "move_weights": "stay_close_always_move"
+              }
+            ]
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "decision_weights": "default",
+            "move_weights": "blind_move_far",
+            "auto_orient": "false",
+            "reset_pattern_on_formswitch": "true",
+            "virtual_abilities": {
+              "CerberubsJumpBlind": {
+                "ability": "CerberubsJump",
+                "decision_weights": "nubs_fakeblind"
+              },
+              "CerberubsJumpNormal": {
+                "ability": "CerberubsJump",
+                "decision_weights": "default"
+              }
+            },
+            "pattern": {
+              "move_then_do_random": [
+                "CerberubsJumpBlind",
+                "CerberubsJumpNormal"
+              ],
+              "move_then_do": "CerberubsBarrage"
+            }
+          }
+        },
+        "Alert": {
+          "partial_animation_suffix": "Alert",
+          "ai": {
+            "brain": "PatternBrain",
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "pattern": {
+              "do": "CerberubsThrow"
+            },
+            "fallback": {
+              "move_then_do": "CerberubsCalm"
+            }
+          },
+          "passives": {
+            "AddMovement": "2"
+          }
+        }
+      },
+      "CerberubsAggroTargetBehavior": {
+        "default_form": "Normal",
+        "alert_form": "Alert"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "AstroZombie": {
+    "graphics": {
+      "movieclip": "AstroZombie",
+      "name": "ENEMY_ASTROZOMBIE_NAME",
+      "name_resolved": "Abandoned One",
+      "uifloaters_offset": "1.8",
+      "tooltip": "ENEMY_ASTROZOMBIE_DESC",
+      "tooltip_resolved": "Its melee attacks inflict random injuries."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid",
+        "zombie"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "health": "40",
+      "disperse_main_turns": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "AZ_BreakNeck",
+      "spells": [
+        "AZ_Jump",
+        "AZ_BreakLeg",
+        "AZ_BreakArm",
+        "AZ_LoseHead"
+      ]
+    },
+    "passives": {
+      "Undead": "1",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "DeathRattleRevive": {
+              "ability": "AZ_LoseHead",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Headless": {
+          "animation_suffix": "Headless",
+          "passives": {
+            "AddMovement": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "attack"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close_always_move"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_random": [
+          "AZ_BreakNeck",
+          "AZ_BreakLeg",
+          "AZ_BreakArm"
+        ]
+      },
+      "fallback": {
+        "do": "AZ_Jump"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "AstroZombieHead": {
+    "graphics": {
+      "movieclip": "AstroSkull",
+      "name": "ENEMY_ASTROZOMBIE_NAME",
+      "name_resolved": "Abandoned One",
+      "uifloaters_offset": "1.8",
+      "tooltip": "ENEMY_ASTROZOMBIEHEAD_DESC",
+      "tooltip_resolved": "Its melee attack inflicts Burn.\nIts scream will inflict Fear."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid",
+        "zombie"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "0",
+      "flying": "true",
+      "health": "20",
+      "disperse_main_turns": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "AZ_Scream"
+      ]
+    },
+    "passives": {
+      "Undead": "1",
+      "InnateElement": "Fire",
+      "ElementImmune": "Fire",
+      "StatusImmunity": [
+        "Burn"
+      ],
+      "AddStatusToBasicAttack": {
+        "Burn": "4"
+      },
+      "AddElementsToBasicAttack": "Fire"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "attack,",
+          "AZ_Scream"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "Spewer": {
+    "graphics": {
+      "movieclip": "Spewer",
+      "name": "ENEMY_SPEWER_NAME",
+      "name_resolved": "Spewer",
+      "water_mask": "medmed",
+      "scale": ".8",
+      "tooltip": "ENEMY_SPEWER_DESC",
+      "tooltip_resolved": "Will eat pills that heal him and change his form. Spits different kinds of liquids depending on his form."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "4",
+      "health": "125",
+      "dispersed_bonus_turns": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SpewerLobbed_Normal",
+      "spells": [
+        "SpewerTransformNormal",
+        "SpewerTransformFire",
+        "SpewerTransformTar",
+        "SpewerSuckNormal",
+        "SpewerSuckTar",
+        "SpewerSuckLava",
+        "SpewerSuckPill",
+        "SpewerBarf_Normal",
+        "SpewerBarf_Tar",
+        "SpewerBarf_Lava"
+      ]
+    },
+    "passives": {
+      "BossRewards": {
+        "common": "RedPill",
+        "rare": "ForbiddenPill"
+      },
+      "FormChanger": {
+        "Normal": {
+          "attack": "SpewerLobbed_Normal",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "NormalFull",
+              "form_hasnot": "Normal"
+            },
+            "CounterAttack": "SpewerSuckNormal"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "SpewerSuckPill",
+                "SpewerBarf_Normal",
+                "attack",
+                "move"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_far_move_far"
+          }
+        },
+        "NormalFull": {
+          "animation_suffix": "Full",
+          "attack": "SpewerSpit",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "NormalFull",
+              "form_hasnot": "Normal"
+            },
+            "Trample": "3",
+            "ChanceToSpitOnDamage": {
+              "flat_chance": "100%",
+              "ability": "SpewerSpit"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*SpewerTransformNormal",
+                "*SpewerTransformFire",
+                "*SpewerTransformTar",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        },
+        "Fire": {
+          "attack": "SpewerLobbed_Lava",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "FireFull",
+              "form_hasnot": "Fire"
+            },
+            "CounterAttack": "SpewerSuckLava"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "SpewerSuckPill",
+                "SpewerBarf_Lava",
+                "attack",
+                "move"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_far_move_far"
+          }
+        },
+        "FireFull": {
+          "animation_suffix": "Full",
+          "attack": "SpewerSpit",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "FireFull",
+              "form_hasnot": "Fire"
+            },
+            "Trample": "3",
+            "ChanceToSpitOnDamage": {
+              "flat_chance": "100%",
+              "ability": "SpewerSpit"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*SpewerTransformNormal",
+                "*SpewerTransformFire",
+                "*SpewerTransformTar",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        },
+        "Tar": {
+          "attack": "SpewerLobbed_Tar",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "TarFull",
+              "form_hasnot": "Tar"
+            },
+            "CounterAttack": "SpewerSuckTar"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "SpewerSuckPill",
+                "SpewerBarf_Tar",
+                "attack",
+                "move"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_far_move_far"
+          }
+        },
+        "TarFull": {
+          "animation_suffix": "Full",
+          "attack": "SpewerSpit",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "TarFull",
+              "form_hasnot": "Tar"
+            },
+            "Trample": "3",
+            "ChanceToSpitOnDamage": {
+              "flat_chance": "100%",
+              "ability": "SpewerSpit"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*SpewerTransformNormal",
+                "*SpewerTransformFire",
+                "*SpewerTransformTar",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        }
+      },
+      "GoopWalk": "1",
+      "GoopImmunity": "1",
+      "SpewerAltGraphics": {
+        "Normal": "0",
+        "NormalFull": "0",
+        "Fire": "1",
+        "FireFull": "1",
+        "Tar": "2",
+        "TarFull": "2"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "IceElemental": {
+    "graphics": {
+      "movieclip": "IceElemental",
+      "name": "ENEMY_FROSTBITER_NAME",
+      "name_resolved": "Frostbiter",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_FROSTBITER_DESC",
+      "tooltip_resolved": "Slows and knocks back units.\nFreezes adjacent units."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "elemental",
+        "poop"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "4",
+      "corpse_health": "0",
+      "round_end_bonus_turns": "1",
+      "initiative": "-999",
+      "dispersed_bonus_turns": "1",
+      "takes_main_turn": "false",
+      "health": "200",
+      "elements": [
+        "Ice"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "IceElementalSpikes",
+      "spells": [
+        "IceElementalBlizzard",
+        "IceElementalBreath"
+      ]
+    },
+    "passives": {
+      "ElementImmune": "Ice",
+      "ElementWeakness": "Fire",
+      "TileElementDamageImmunity": "Ice"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*attack",
+          "*IceElementalBreath",
+          "move"
+        ]
+      },
+      "round_end_bonusturn_pattern": {
+        "do_all": [
+          "*attack",
+          "*IceElementalBlizzard",
+          "move"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "blind_move_far"
+    }
+  },
+  "RatKing": {
+    "graphics": {
+      "movieclip": "RatKing_New",
+      "name": "ENEMY_RATKING_NAME",
+      "name_resolved": "Rat King",
+      "water_mask": "square",
+      "shadow_size": "2",
+      "tooltip": "ENEMY_RATKING_DESC",
+      "tooltip_resolved": "Spawns Lil' Rats and throws adjacent units."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "rat"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "dispersed_bonus_turns": "1",
+      "health": "100",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "RatKingToss",
+      "spells": [
+        "RatKingSpawn",
+        "RatKing2Spawn",
+        "RatKingTransform"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "FormChanger": {
+        "Normal": {
+          "passives": {
+            "ImmediateAbilityReaction": {
+              "ability": "RatKingTransform",
+              "health_threshold": "70"
+            }
+          }
+        },
+        "HalfDead": {
+          "animation_suffix": "2",
+          "attack": "RatKingDash",
+          "passives": {
+            "AddMovement": "-2"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "virtual_abilities": {
+              "MoveForDash": {
+                "ability": "move",
+                "move_for_ability": "attack",
+                "move_weights": "keep_distance"
+              }
+            },
+            "pattern": {
+              "do_all": [
+                "MoveForDash",
+                "RatKing2Spawn",
+                "attack"
+              ]
+            },
+            "decision_weights": "spawn_far",
+            "move_weights": "keep_distance"
+          }
+        },
+        "initial_form": "Normal"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "attack"
+      },
+      "bonusturn_pattern": {
+        "move_then_do": "RatKingSpawn"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "GirlDino": {
+    "graphics": {
+      "movieclip": "GirlDino",
+      "name": "ENEMY_GIRLDINO_NAME",
+      "name_resolved": "Pachysaurus [img:female]",
+      "water_mask": "square",
+      "shadow_size": "2",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_DINOLOVER_DESC",
+      "tooltip_resolved": "Melee attacker. Defends its partner."
+    },
+    "stats": {
+      "strength": "7",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "dinosaur",
+      "hidden_tag": "dinofamily",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "health": "50",
+      "shield": "50",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "GirlDinoMelee",
+      "spells": [
+        "GirlDinoHeadBash",
+        "GirlDinoCry",
+        "GirlDinoThrow",
+        "GirlDinoPoop"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Brace": "2",
+      "Buddy": "BoyDino",
+      "AbilityWhenBuddyDies": "GirlDinoCry",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "SecurityBotProtect": {
+              "ability": "GirlDinoHeadBash",
+              "tag_restriction": "dinofamily",
+              "not_on_kill": "true"
+            }
+          }
+        },
+        "Rage": {
+          "turns": {
+            "dispersed_bonus_turns": "1"
+          },
+          "passives": {
+            "SpeedUp": "2"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "GirlDinoThrow"
+      },
+      "decision_weights": "spawn_far",
+      "move_weights": "stay_close"
+    }
+  },
+  "BoyDino": {
+    "graphics": {
+      "movieclip": "BoyDino",
+      "name": "ENEMY_BOYDINO_NAME",
+      "name_resolved": "Pachysaurus [img:male]",
+      "water_mask": "square",
+      "shadow_size": "2",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_DINOLOVER_DESC",
+      "tooltip_resolved": "Melee attacker. Defends its partner."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "8",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "dinosaur",
+      "hidden_tag": "dinofamily",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "health": "50",
+      "shield": "25",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BoyDinoBasic",
+      "spells": [
+        "BoyDinoHeadBash",
+        "BoyDinoCry"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Brace": "1",
+      "Buddy": "GirlDino",
+      "AbilityWhenBuddyDies": "BoyDinoCry",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "SecurityBotProtect": {
+              "ability": "BoyDinoHeadBash",
+              "tag_restriction": "dinofamily",
+              "not_on_kill": "true"
+            }
+          }
+        },
+        "Rage": {
+          "turns": {
+            "dispersed_bonus_turns": "1"
+          },
+          "passives": {
+            "StrengthUp": "2"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TheBloat": {
+    "graphics": {
+      "movieclip": "TheBloat",
+      "name": "ENEMY_BLOAT_NAME",
+      "name_resolved": "The Bloat",
+      "uifloaters_offset": "1.8",
+      "water_mask": "big",
+      "tooltip": "ENEMY_BLOAT_DESC",
+      "tooltip_resolved": "Does a blood blast when units walk past its sides.\nSpawns Eyeballs."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "blob"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "1",
+      "health": "250",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BloatFrontLaser",
+      "spells": [
+        "BloatSideLaser",
+        "BloatLeap",
+        "BloatLoseFirstEye",
+        "BloatLoseSecondEye"
+      ]
+    },
+    "passives": {
+      "ElementImmune": "Creep",
+      "Trample": "3",
+      "Trapper": {
+        "ability": "BloatSideLaser",
+        "range": "10",
+        "cancel_movement": "false"
+      },
+      "FormChanger": {
+        "TwoEyes": {
+          "passives": {
+            "AbilityHealthThreshold": {
+              "threshold": "X*.8",
+              "ability": "BloatLoseFirstEye"
+            }
+          }
+        },
+        "OneEye": {
+          "animation_suffix": "1",
+          "passives": {
+            "AbilityHealthThreshold": {
+              "threshold": "X*.4",
+              "ability": "BloatLoseSecondEye"
+            }
+          }
+        },
+        "NoEyes": {
+          "animation_suffix": "0"
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "BloatLeap",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_far_distance"
+    }
+  },
+  "LightningElemental": {
+    "graphics": {
+      "movieclip": "LightningElemental",
+      "name": "ENEMY_ZAPPHAUSER_NAME",
+      "name_resolved": "Zapphauser",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_ZAPPHAUSER_DESC",
+      "tooltip_resolved": "Primes an attack when damaged.\nAttacks all tiles of the same parity as his own."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "3",
+      "intelligence": "5",
+      "speed": "20",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "elemental"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "0",
+      "flying": "true",
+      "health": "125",
+      "dispersed_bonus_turns": "3",
+      "/*elements": [
+        "Electric"
+      ],
+      "*/": "banned_elite_buffs",
+      "Protected": "]"
+    },
+    "abilities": {
+      "move": "Teleport",
+      "attack": "LEBurst",
+      "spells": [
+        "LELeave",
+        "LEReturn",
+        "LEPortFar"
+      ]
+    },
+    "passives": {
+      "ElementImmune": "Electric",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "CherubimReaction": {
+              "Leave": "LELeave",
+              "Return": "LEReturn"
+            }
+          }
+        },
+        "OffMap": {
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "LEReturn"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance_always_move"
+          }
+        }
+      },
+      "FormChangeOffMap": {
+        "form_offmap": "OffMap",
+        "form_onmap": "Default"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "*LEBurst"
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "keep_distance_always_move",
+      "end_turn_on_formswitch": "true"
+    }
+  },
+  "DrMangler": {
+    "graphics": {
+      "movieclip": "DrMangler",
+      "name": "ENEMY_DRMANGLER_NAME",
+      "name_resolved": "Dr. Mangler",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_DRMANGLER_DESC",
+      "tooltip_resolved": "Controls the Monster."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid",
+        "robot"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "5",
+      "initiative": "-10",
+      "health": "185",
+      "evenly_dispersed_bonus_turns": "1",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ManglerCommand",
+      "spells": [
+        "ManglerFumbleEven",
+        "ManglerFumbleOdd",
+        "ManglerEnrage",
+        "ManglerThrowRemote",
+        "ManglerSpin"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "Buddy": "ManglersMonster",
+      "AbilityWhenBuddyDies": "ManglerEnrage",
+      "FormChanger": {
+        "Joystick": {
+          "animation_suffix": "Joystick",
+          "passives": {
+            "ImmediateAbilityReaction": [
+              "ManglerFumbleEven",
+              "ManglerFumbleOdd"
+            ]
+          }
+        },
+        "NoStick": {
+          "attack": "ManglerJab",
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "*ManglerSpin",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close_always_move"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "*attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "drmangler"
+    }
+  },
+  "ManglersMonster": {
+    "graphics": {
+      "movieclip": "ManglersMonster",
+      "name": "ENEMY_MANGLERMONSTER_NAME",
+      "name_resolved": "Mangler's Monster",
+      "uifloaters_offset": "2.5",
+      "water_mask": "square",
+      "four_way_animations": "true",
+      "tooltip": "ENEMY_MANGLERMONSTER_DESC",
+      "tooltip_resolved": "Controlled by the Doctor."
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid",
+        "blob"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "health": "250",
+      "size": "3x3",
+      "movement": "1",
+      "move_block": "everything_even_when_dead",
+      "takes_turns": "false",
+      "can_be_backstabbed": "false",
+      "knockback_immune": "true",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "ManglerMonsterDashAttack",
+      "spells": [
+        "ManglerMonsterExplode",
+        "ManglerMonsterHeartAttack"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Buddy": "DrMangler",
+      "ManglerMonsterPassive": "ManglerMonsterDashAttack",
+      "OrthogonalAIDangerZone": "10",
+      "CCImmunity": "1",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "DeathRattle": "ManglerMonsterExplode"
+          }
+        },
+        "NoDeathRattle": {}
+      },
+      "AbilityWhenBuddyDies": "ManglerMonsterHeartAttack"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "GlowingBear": {
+    "graphics": {
+      "movieclip": "WhiteBear",
+      "name": "ENEMY_GLOWINGBEAR_NAME",
+      "name_resolved": "Glowing Bear",
+      "shadow_size": "2",
+      "tooltip": "ENEMY_GLOWINGBEAR_DESC",
+      "tooltip_resolved": "It glows with an eternal light."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "animal",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "100",
+      "movement": "2",
+      "weak_threshold": "25",
+      "evenly_dispersed_bonus_turns": "1",
+      "size": "2x2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicBigMelee"
+    },
+    "passives": {
+      "Trample": "3",
+      "HealthRegenUp": "4",
+      "AddStatusToBasicAttack": {
+        "Bleed": "2"
+      },
+      "CharacterLightSource": {
+        "color": [
+          "1,",
+          "1,",
+          "1"
+        ],
+        "glow": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "size": "3"
+      }
+    },
+    "ai": {
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Death": {
+    "graphics": {
+      "movieclip": "Reaper",
+      "name": "ENEMY_DEATH_NAME",
+      "name_resolved": "Death!",
+      "uifloaters_offset": "1.5",
+      "move_speed_multiplier": ".66",
+      "scale": "1.5",
+      "tooltip": "ENEMY_DEATH_DESC",
+      "tooltip_resolved": "He's here to take what he's owed."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "ghost",
+        "skeleton"
+      ],
+      "faction": "enemies",
+      "movement": "4",
+      "health": "60",
+      "corpse_health": "0",
+      "flying": "true",
+      "dispersed_bonus_turns": "3"
+    },
+    "abilities": {
+      "move": "FloatMove",
+      "attack": "ReaperSpin",
+      "spells": [
+        "ReaperRevenge"
+      ]
+    },
+    "passives": {
+      "MoveTowardsKillers": "ReaperRevenge",
+      "Undead": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveClose": {
+          "ability": "move",
+          "move_for_ability": "attack",
+          "move_weights": "stay_close_avoid_allies"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "*attack,",
+          "MoveClose,",
+          "move"
+        ]
+      },
+      "decision_weights": "reaper",
+      "move_weights": "stay_close_avoid_allies"
+    }
+  }
+}

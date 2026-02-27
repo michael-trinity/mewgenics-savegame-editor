@@ -1,0 +1,143 @@
+{
+  "completion_checkmark_ui": {
+    "CompletionCheckmarkTooltip": [
+      "meatworld",
+      "dimensionx",
+      "endoftime"
+    ],
+    "SmallCompletionCheckmarkTooltip": [
+      "caves",
+      "boneyard",
+      "moon",
+      "core",
+      "jurassic",
+      "theend"
+    ]
+  },
+  "pause_menu_completion_hints": {
+    "major_class_checkmarks": [
+      "caves",
+      "boneyard",
+      "moon",
+      "core",
+      "jurassic",
+      "theend",
+      "meatworld",
+      "dimensionx",
+      "endoftime"
+    ],
+    "map_areas": {
+      "alley": "departed_first_real_adventure",
+      "sewers": "mapflag_SewersUnlocked",
+      "junkyard": "mapflag_JunkyardUnlocked",
+      "caves": "mapflag_CavesUnlocked",
+      "boneyard": "mapflag_BoneyardUnlocked",
+      "meatworld": "mapflag_MeatWorldUnlockedFull",
+      "desert": "mapflag_DesertUnlocked",
+      "crater": "mapflag_CraterUnlocked",
+      "bunker": "mapflag_BunkerUnlocked",
+      "moon": "mapflag_MoonUnlocked",
+      "core": "mapflag_CoreUnlocked",
+      "dimensionx": "mapflag_DimensionXUnlocked",
+      "lab": "mapflag_LabUnlocked",
+      "iceage": "mapflag_IceAgeUnlocked",
+      "future": "mapflag_FutureUnlocked",
+      "jurassic": "mapflag_JurassicUnlocked",
+      "theend": "mapflag_TheEndUnlocked",
+      "endoftime": "mapflag_EndOfTimeUnlocked",
+      "nuke": "PlotFlag_FrankBeanies"
+    }
+  },
+  "chapter_names": {
+    "debug": "Unknown",
+    "tutorial": "AREA_NAME_TUTORIAL",
+    "alley": "AREA_NAME_ALLEY",
+    "sewers": "AREA_NAME_SEWERS",
+    "junkyard": "AREA_NAME_JUNKYARD",
+    "caves": "AREA_NAME_CAVES",
+    "boneyard": "AREA_NAME_BONEYARD",
+    "meatworld": "AREA_NAME_MEATWORLD",
+    "desert": "AREA_NAME_DESERT",
+    "crater": "AREA_NAME_CRATER",
+    "bunker": "AREA_NAME_BUNKER",
+    "moon": "AREA_NAME_MOON",
+    "core": "AREA_NAME_CORE",
+    "dimensionx": "AREA_NAME_DIMENSIONX",
+    "lab": "AREA_NAME_LAB",
+    "iceage": "AREA_NAME_ICEAGE",
+    "future": "AREA_NAME_FUTURE",
+    "jurassic": "AREA_NAME_JURASSIC",
+    "theend": "AREA_NAME_THEEND",
+    "endoftime": "AREA_NAME_ENDOFTIME"
+  },
+  "reverse_paths": {
+    "debug": [],
+    "tutorial": [],
+    "alley": [],
+    "sewers": [
+      "alley"
+    ],
+    "junkyard": [
+      "alley"
+    ],
+    "caves": [
+      "sewers",
+      "alley"
+    ],
+    "boneyard": [
+      "junkyard",
+      "alley"
+    ],
+    "meatworld": [
+      "caves",
+      "boneyard",
+      "junkyard",
+      "sewers",
+      "alley"
+    ],
+    "desert": [],
+    "crater": [
+      "desert"
+    ],
+    "bunker": [
+      "desert"
+    ],
+    "moon": [
+      "crater",
+      "desert"
+    ],
+    "core": [
+      "bunker",
+      "desert"
+    ],
+    "dimensionx": [
+      "moon",
+      "core",
+      "bunker",
+      "crater",
+      "desert"
+    ],
+    "lab": [],
+    "iceage": [
+      "lab"
+    ],
+    "future": [
+      "lab"
+    ],
+    "jurassic": [
+      "iceage",
+      "lab"
+    ],
+    "theend": [
+      "future",
+      "lab"
+    ],
+    "endoftime": [
+      "jurassic",
+      "theend",
+      "iceage",
+      "future",
+      "lab"
+    ]
+  }
+}

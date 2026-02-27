@@ -1,0 +1,910 @@
+{
+  "PyrophinaVSSpinThrow": {
+    "id": "PyrophinaVSSpinThrow",
+    "template": "throw_attack",
+    "class": "KaijuSpinThrowAbility",
+    "name_key": "EABILITY_SPINTHROW_NAME",
+    "name": "Spin Throw",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "10",
+      "min_range": "3",
+      "max_aoe": "2",
+      "aoe_mode": "circle",
+      "aoe_excludes_self": "true",
+      "aoe_considers_character_size": "true",
+      "range_considers_character_size": "false",
+      "restrictions": "must_fit_2x2",
+      "range_mode": "cross",
+      "toss_direction_restriction": "forwards",
+      "spin_steps": "-16",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "throwboss",
+      "use_placeholder": "true",
+      "face_toss_target": "true",
+      "dont_visualize_ai": "true",
+      "min_throw_height": "4"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "knockback": "2",
+      "makes_contact": "false",
+      "type": "melee",
+      "custom_additional_ai_weight": "target_farthest",
+      "effects": {
+        "CollideWithThrowTarget": "0"
+      }
+    },
+    "splash_damage": {
+      "damage": "10+bonus_melee_damage",
+      "type": "knockblock",
+      "makes_contact": "false",
+      "force_no_knockback": "true",
+      "knockback": "0",
+      "effects": {
+        "CollideWithThrowTarget": "0"
+      }
+    },
+    "bonus_passives": {
+      "TossTargetIsBuddy": "1"
+    }
+  },
+  "PyrophinaVSWeatherRoar": {
+    "id": "PyrophinaVSWeatherRoar",
+    "template": "self_buff",
+    "name_key": "EABILITY_FIRESTORM_NAME",
+    "name": "Firestorm",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "firestorm",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "EnableWeather": "KaijuFirestorm"
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledOncePerFightAtHealthThreshold": "50%"
+    }
+  },
+  "PyrophinaVSRoar": {
+    "id": "PyrophinaVSRoar",
+    "template": "spell",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true",
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "graphics": {
+      "animation": "roar",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "ai_base_score": "9999",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_NotBoss": {
+          "Fear": [
+            "1",
+            ".3"
+          ]
+        }
+      }
+    }
+  },
+  "PyrophinaVSCatThrow": {
+    "id": "PyrophinaVSCatThrow",
+    "template": "throw_attack",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_buddy"
+    },
+    "graphics": {
+      "grab_animation": "grab",
+      "animation": "throw",
+      "use_placeholder": "true",
+      "dont_visualize_ai": "true",
+      "min_throw_height": "1.75",
+      "max_throw_height": "1.75",
+      "throw_speed": "3"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "ai_base_score": "9999",
+      "custom_additional_ai_weight": "target_closest"
+    },
+    "splash_damage": {
+      "damage": "5+bonus_melee_damage"
+    }
+  },
+  "PyrophinaVSFlamethrower": {
+    "id": "PyrophinaVSFlamethrower",
+    "template": "spell",
+    "name_key": "EABILITY_FIREBREATH_NAME",
+    "name": "Fire Breath",
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "narrow_cone",
+      "aoe_leading_edge_only": "true",
+      "min_aoe": "1",
+      "max_aoe": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "FireBlastMushroom",
+      "delay": "5",
+      "palette": "6",
+      "animation": "fire"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Burn": "2",
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "ChangeTilesUnder": "LavaTile",
+          "Conditional_NotBoss": {
+            "VaporizeInanimate": "1"
+          },
+          "Else": {
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "RemoveStatus": "Petrify",
+              "BonusDamage": "10",
+              "Burn": "3"
+            }
+          }
+        }
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "PyrophinaVSEarthquakeStomp": {
+    "id": "PyrophinaVSEarthquakeStomp",
+    "template": "spell",
+    "name_key": "EABILITY_VOLCANOSTOMP_NAME",
+    "name": "Volcano Stomp",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "map_edges"
+    },
+    "graphics": {
+      "particle": "FireBlastMushroom",
+      "palette": "6",
+      "animation": "stomp"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "ai_base_score": "9999",
+      "effects": {
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire",
+        "Napalm"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0",
+        "Burn": "3",
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "PyrophinaVSRun": {
+    "id": "PyrophinaVSRun",
+    "template": "move",
+    "target": {
+      "max_range": "8"
+    },
+    "graphics": {
+      "animation": "run",
+      "speed": "4"
+    }
+  },
+  "ZaratanaVSSpinDash": {
+    "id": "ZaratanaVSSpinDash",
+    "template": "dash_attack",
+    "class": "BounceDashAbility",
+    "name_key": "EABILITY_SPINDASH_NAME",
+    "name": "Spin Dash",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_range": "20",
+      "max_bounces": "-1",
+      "splash_damage_aoe_begin": "999",
+      "restrictions": "diagonal_only"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_end_animation": "dashend",
+      "decelerate": "5",
+      "dash_decelerating_animation": "dashslow",
+      "lock_orientation_during_dash": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "SetDistanceDisplace": "5"
+      }
+    },
+    "splash_damage": {
+      "damage": "10+bonus_melee_ability_damage",
+      "type": "melee",
+      "knockback": "1",
+      "makes_contact": "true"
+    }
+  },
+  "ZaratanaVSWeatherRoar": {
+    "id": "ZaratanaVSWeatherRoar",
+    "template": "self_buff",
+    "name_key": "EABILITY_METEORNADO_NAME",
+    "name": "Meteornado",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "meteorshower",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "EnableWeather": "KaijuMeteornado"
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledOncePerFightAtHealthThreshold": "50%"
+    }
+  },
+  "ZaratanaVSRoar": {
+    "id": "ZaratanaVSRoar",
+    "template": "spell",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true",
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "roar",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "ai_base_score": "9999",
+      "cant_miss": "true",
+      "effects": {
+        "/*Conditional_NotBoss": {
+          "Fear": [
+            "1",
+            ".3"
+          ]
+        },
+        "*/": "Conditional_HasTag",
+        "tag": "rock",
+        "FloatingRockTrap": "1"
+      }
+    }
+  },
+  "ZaratanaVSTurtle": {
+    "id": "ZaratanaVSTurtle",
+    "template": "self_buff",
+    "name_key": "EABILITY_TURTLE_NAME",
+    "name": "Turtle",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "turtlestart"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": {
+          "form": "Turtled"
+        }
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledPercentEachTurn": "35%"
+    }
+  },
+  "ZaratanaVSTurtleGuaranteed": {
+    "id": "ZaratanaVSTurtleGuaranteed",
+    "template": "self_buff",
+    "name_key": "EABILITY_TURTLE_NAME",
+    "name": "Turtle",
+    "graphics": {
+      "animation": "turtlestart"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": {
+          "form": "Turtled"
+        }
+      }
+    }
+  },
+  "ZaratanaVSExitTurtle": {
+    "id": "ZaratanaVSExitTurtle",
+    "template": "melee_attack",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "exit"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "damage": "5+bonus_melee_damage",
+      "knockback": "2"
+    },
+    "self_damage": {
+      "ai_base_score": "9999",
+      "effects": {
+        "FormChange": {
+          "form": "Default"
+        }
+      }
+    }
+  },
+  "ZaratanaVSMagnet": {
+    "id": "ZaratanaVSMagnet",
+    "template": "spell",
+    "name_key": "EABILITY_MAGNETPULL_NAME",
+    "name": "Magnet Pull",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "distance_sort_targets": "1",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "magnet",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "9999",
+      "effects": {
+        "Conditional_NotBig": {
+          "DisplaceTowardsSource": "1"
+        },
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "FloatingRockTrap": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "DoDistortionRing": {
+          "speed": "-30",
+          "intensity": "-1",
+          "radius": "5"
+        }
+      }
+    }
+  },
+  "ZaratanaVSBombardment": {
+    "id": "ZaratanaVSBombardment",
+    "template": "lobbed_attack",
+    "name_key": "EABILITY_METEORBOMBARD_NAME",
+    "name": "Meteor Bombardment",
+    "target": {
+      "min_range": "2",
+      "max_range": "20",
+      "min_aoe": "0",
+      "max_aoe": "3",
+      "aoe_mode": "circle",
+      "aoe_excludes_self": "true",
+      "max_targets": "8",
+      "multihit": "8",
+      "stagger_multihit_targets": "true",
+      "shuffle_tile_order": "true",
+      "restrictions": "must_have_buddy"
+    },
+    "graphics": {
+      "animation": "bombardment",
+      "lob_height": "6"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_ranged_damage",
+      "effects": {
+        "HitExplosion": "5"
+      }
+    }
+  },
+  "ZaratanaVSRevenge": {
+    "id": "ZaratanaVSRevenge",
+    "template": "straightshot_attack",
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "0,",
+          "1"
+        ],
+        [
+          "0,",
+          "1"
+        ],
+        [
+          "0,",
+          "-1"
+        ],
+        [
+          "0,",
+          "-1"
+        ]
+      ],
+      "custom_aoe_util": [
+        [
+          "0,",
+          "1"
+        ],
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "0,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ]
+      ]
+    },
+    "graphics": {
+      "projectile": "SmallRock",
+      "animation": "revenge",
+      "lob_height": "2",
+      "speed": "10"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "BounceObject": "SmallRock"
+      }
+    }
+  },
+  "ZaratanaBasic": {
+    "id": "ZaratanaBasic",
+    "template": "dash_attack",
+    "class": "FullyAnimatedDashAttackAbility",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "2",
+      "consider_trample": "true"
+    },
+    "graphics": {
+      "animation": "attack",
+      "sync_frames": "26"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_damage",
+      "knockback": "2"
+    }
+  },
+  "PyrophinaSoloCatThrow": {
+    "id": "PyrophinaSoloCatThrow",
+    "template": "throw_attack",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "10",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "grab_animation": "grab",
+      "animation": "throw",
+      "use_placeholder": "true",
+      "dont_visualize_ai": "true",
+      "min_throw_height": "1.75",
+      "max_throw_height": "1.75",
+      "throw_speed": "3"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "custom_additional_ai_weight": "pyrophina_throw_to_lava"
+    }
+  },
+  "PyrophinaSoloFlamethrower": {
+    "id": "PyrophinaSoloFlamethrower",
+    "template": "spell",
+    "name_key": "EABILITY_FIREBREATH_NAME",
+    "name": "Fire Breath",
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "narrow_cone",
+      "aoe_leading_edge_only": "true",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "FireBlastMushroom",
+      "delay": "5",
+      "palette": "6",
+      "animation": "fire"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "ai_base_score": "9999",
+      "custom_additional_ai_weight": "tile_close_to_enemy_soft",
+      "effects": {
+        "Burn": "2",
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "ChangeTilesUnder": "LavaTile",
+          "Conditional_NotBoss": {
+            "VaporizeInanimate": "1"
+          },
+          "Else": {
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "RemoveStatus": "Petrify",
+              "BonusDamage": "10",
+              "Burn": "3"
+            }
+          }
+        },
+        "ChangeTile": {
+          "tile": "LavaTile",
+          "chance": ".25"
+        }
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "PyrophinaSoloAttack": {
+    "id": "PyrophinaSoloAttack",
+    "template": "melee_attack",
+    "damage_instance": {
+      "knockback": "3"
+    }
+  },
+  "PyrophinaSoloEarthquakeStomp": {
+    "id": "PyrophinaSoloEarthquakeStomp",
+    "template": "spell",
+    "name_key": "EABILITY_VOLCANOSTOMP_NAME",
+    "name": "Volcano Stomp",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "map_edges"
+    },
+    "graphics": {
+      "particle": "FireBlastMushroom",
+      "palette": "6",
+      "animation": "stomp"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "ai_base_score": "9999",
+      "effects": {
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire",
+        "Napalm"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0",
+        "Burn": "3"
+      }
+    }
+  },
+  "PyrophinaSoloRoar": {
+    "id": "PyrophinaSoloRoar",
+    "template": "spell",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true",
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "graphics": {
+      "animation": "roar",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "ai_base_score": "9999",
+      "cant_miss": "true",
+      "knockback": "10",
+      "effects": {}
+    }
+  },
+  "ZaratanaSoloRoar": {
+    "id": "ZaratanaSoloRoar",
+    "template": "spell",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true",
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "roar",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "ai_base_score": "9999",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "FloatingRockTrap": "1"
+        }
+      }
+    }
+  },
+  "ZaratanaSoloMagnet": {
+    "id": "ZaratanaSoloMagnet",
+    "template": "spell",
+    "name_key": "EABILITY_MAGNETPULL_NAME",
+    "name": "Magnet Pull",
+    "cost": {
+      "cant_cast": "2-X"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "distance_sort_targets": "1",
+      "X_is": "custom",
+      "prioritize_face_camera": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "magnet",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "9999",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "DisplaceTowardsSource": "1",
+          "FloatingRockTrap": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "DoDistortionRing": {
+          "speed": "-30",
+          "intensity": "-1",
+          "radius": "5"
+        }
+      }
+    },
+    "bonus_passives": {
+      "XIsLivingCharactersWithTag": "rock"
+    }
+  },
+  "ZaratanaSoloBombardment": {
+    "id": "ZaratanaSoloBombardment",
+    "template": "lobbed_attack",
+    "name_key": "EABILITY_METEORBOMBARD_NAME",
+    "name": "Meteor Bombardment",
+    "target": {
+      "min_range": "2",
+      "max_range": "20",
+      "min_aoe": "0",
+      "max_aoe": "3",
+      "aoe_mode": "circle",
+      "aoe_excludes_self": "true",
+      "max_targets": "5",
+      "multihit": "5",
+      "stagger_multihit_targets": "true",
+      "shuffle_tile_order": "true",
+      "knockback_mode": "0"
+    },
+    "graphics": {
+      "projectile": "Meteorball",
+      "animation": "bombardment",
+      "lob_height": "6"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "custom_additional_ai_weight": "tile_exists",
+      "effects": {
+        "Displace": "1",
+        "BounceRock": "SmallRock"
+      }
+    }
+  },
+  "ZaratanaSoloBasic": {
+    "id": "ZaratanaSoloBasic",
+    "template": "dash_attack",
+    "class": "FullyAnimatedDashAttackAbility",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "2",
+      "consider_trample": "true"
+    },
+    "graphics": {
+      "animation": "attack",
+      "sync_frames": "26"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_melee_damage",
+      "knockback": "2",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "ZaratanaSoloSpinDash": {
+    "id": "ZaratanaSoloSpinDash",
+    "template": "dash_attack",
+    "class": "BounceDashAbility",
+    "name_key": "EABILITY_SPINDASH_NAME",
+    "name": "Spin Dash",
+    "cost": {
+      "mana": "0",
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_range": "20",
+      "max_bounces": "-1",
+      "splash_damage_aoe_begin": "999",
+      "restrictions": "diagonal_only"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_end_animation": "dashend",
+      "decelerate": "5",
+      "dash_decelerating_animation": "dashslow",
+      "lock_orientation_during_dash": "true"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "ai_base_score": "9999",
+      "effects": {
+        "SetDistanceDisplace": "5",
+        "Bruise": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "RemoveActPoints": "1",
+        "RemoveMovePoints": "1",
+        "FormChange": {
+          "form": "Default"
+        }
+      }
+    }
+  },
+  "ZaratanaSoloTurtle": {
+    "id": "ZaratanaSoloTurtle",
+    "template": "self_buff",
+    "name_key": "EABILITY_TURTLE_NAME",
+    "name": "Turtle",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "turtlestart"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": {
+          "form": "Turtled"
+        }
+      }
+    }
+  },
+  "ZaratanaSoloWeatherRoar": {
+    "id": "ZaratanaSoloWeatherRoar",
+    "template": "self_buff",
+    "name_key": "EABILITY_METEORNADO_NAME",
+    "name": "Meteornado",
+    "cost": {
+      "cantrip": "true",
+      "cantrip_group": "kaiju_roar"
+    },
+    "target": {
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "meteorshower",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "ai_base_score": "9999",
+      "effects": {
+        "EnableWeather": "KaijuMeteornadoSolo"
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledOncePerFightAtHealthThreshold": "50%"
+    }
+  }
+}

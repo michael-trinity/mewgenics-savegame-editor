@@ -1,0 +1,615 @@
+{
+  "Crow": {
+    "graphics": {
+      "movieclip": "Crow",
+      "name": "ENTITY_CROW_NAME",
+      "name_resolved": "{SpawnedBy}'s Crow",
+      "uifloaters_offset": "1",
+      "shadow_size": ".75",
+      "scale": ".8",
+      "tooltip": "ENTITY_CROW_DESC",
+      "tooltip_resolved": "Inherits its owner's stats.\nBasic attack modifiers on its owner also get applied to the Crow.\nFlying."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "animal",
+        "crow"
+      ],
+      "hidden_tag": "bird",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "base_movement": "4",
+      "base_initiative": "0",
+      "base_health": "0",
+      "base_mana": "0",
+      "base_mana_regen": "0",
+      "base_health_regen": "0",
+      "base_initial_mana": "0",
+      "base_crit_chance": "0",
+      "mana_matters": "true",
+      "weak_threshold": "5",
+      "can_collect_coins": "true",
+      "can_eat_food": "true",
+      "access_to_player_inventory": "true",
+      "corpse_health": "1",
+      "flying": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "can_get_bonus": "true",
+      "spells": [
+        "CrowFlutter",
+        "CrowFlap"
+      ]
+    },
+    "passives": {
+      "InheritSpawnerStats": "1",
+      "CrowAttackLink": "1",
+      "Bird": "CookedChickenLeg"
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Crow2": {
+    "variant_of": "Crow",
+    "abilities": {
+      "spells": [
+        "CrowFlutter2",
+        "CrowFlap2"
+      ]
+    }
+  },
+  "Crow3": {
+    "variant_of": "Crow",
+    "abilities": {
+      "spells": [
+        "CrowFlutter3",
+        "CrowFlap3"
+      ]
+    }
+  },
+  "BabySquirrel": {
+    "graphics": {
+      "movieclip": "Squirrel",
+      "name": "ENTITY_BABYSQUIRREL_NAME",
+      "name_resolved": "Baby Squirrel",
+      "shadow_size": ".50",
+      "scale": ".6",
+      "move_speed_multiplier": "1.75"
+    },
+    "stats": {
+      "strength": "1",
+      "dexterity": "1",
+      "constitution": "1",
+      "intelligence": "1",
+      "speed": "9",
+      "charisma": "1"
+    },
+    "properties": {
+      "tag": [
+        "animal",
+        "squirrel"
+      ],
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "6",
+      "health": "1",
+      "weak_threshold": "0",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "can_get_bonus": "true"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Squirrel": {
+    "graphics": {
+      "movieclip": "Squirrel",
+      "name": "ENTITY_SQUIRREL_NAME",
+      "name_resolved": "Squirrel",
+      "shadow_size": ".50",
+      "move_speed_multiplier": "1.75"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "1",
+      "constitution": "1",
+      "intelligence": "1",
+      "speed": "8",
+      "charisma": "1"
+    },
+    "properties": {
+      "tag": [
+        "animal",
+        "squirrel"
+      ],
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "5",
+      "health": "1",
+      "weak_threshold": "0",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SquirrelFurySwipes",
+      "can_get_bonus": "true"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Snake": {
+    "graphics": {
+      "movieclip": "Snake",
+      "name": "ENTITY_SNAKE_NAME",
+      "name_resolved": "Snake",
+      "uifloaters_offset": ".5"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "2",
+      "constitution": "2",
+      "intelligence": "2",
+      "speed": "5",
+      "charisma": "2"
+    },
+    "properties": {
+      "tag": "animal",
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "5",
+      "health": "1",
+      "weak_threshold": "0",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "can_get_bonus": "true"
+    },
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Poison": "1"
+      }
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Snake2": {
+    "variant_of": "Snake",
+    "passives": {
+      "DodgeChance_Status": "66"
+    }
+  },
+  "Turtle": {
+    "graphics": {
+      "movieclip": "Turtle",
+      "name": "ENTITY_TURTLE_NAME",
+      "name_resolved": "Turtle",
+      "move_speed_multiplier": ".5"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "8"
+    },
+    "properties": {
+      "tag": [
+        "animal",
+        "dog"
+      ],
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "1",
+      "health": "1",
+      "shield": "10",
+      "weak_threshold": "0",
+      "corpse_health": "1",
+      "can_be_overkilled": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicTankMelee",
+      "can_get_bonus": "true"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Toad": {
+    "graphics": {
+      "movieclip": "Frog",
+      "name": "ENTITY_TOAD_NAME",
+      "name_resolved": "Toad"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "1",
+      "constitution": "2",
+      "intelligence": "2",
+      "speed": "4",
+      "charisma": "2"
+    },
+    "properties": {
+      "tag": "animal",
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "view_bugs_as_enemies": "true",
+      "movement": "4",
+      "health": "1",
+      "weak_threshold": "0",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "BasicHook",
+      "can_get_bonus": "true"
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Toad2": {
+    "variant_of": "Toad",
+    "graphics": {
+      "scale": "1.2"
+    },
+    "stats": {
+      "dexterity": "5"
+    },
+    "properties": {
+      "health": "4"
+    },
+    "passives": {
+      "ExtraMovePoints": "1"
+    }
+  },
+  "NeutralToad": {
+    "variant_of": "Toad",
+    "graphics": {
+      "name": "ENTITY_FROG_NAME",
+      "name_resolved": "Frog"
+    },
+    "properties": {
+      "faction": "none",
+      "kill_required": "false"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "move_weights": "random"
+    }
+  },
+  "Bear": {
+    "graphics": {
+      "movieclip": "Bear",
+      "name": "ENTITY_BEAR_NAME",
+      "name_resolved": "Bear",
+      "shadow_size": "2"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "animal",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "3",
+      "health": "15",
+      "weak_threshold": "0",
+      "size": "2x2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicBigMelee",
+      "can_get_bonus": "true"
+    },
+    "passives": {
+      "Trample": "3",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Bear2": {
+    "variant_of": "Bear",
+    "abilities": {
+      "attack": "BearFurySwipes"
+    }
+  },
+  "MaddenedBear": {
+    "variant_of": "Bear",
+    "passives": {
+      "PermanentMadness": "1"
+    },
+    "properties": {
+      "faction": "enemies"
+    },
+    "ai": {
+      "brain": "GenericBrain"
+    }
+  },
+  "Catepillar": {
+    "graphics": {
+      "movieclip": "Caterpillar",
+      "name": "ENTITY_CATERPILLAR_NAME",
+      "name_resolved": "Caterpillar",
+      "shadow_size": ".8",
+      "move_speed_sync_frames": "22",
+      "tooltip": "ENTITY_CATERPILLAR_DESC",
+      "tooltip_resolved": "Gains All Stats Up each turn.\nEvolves into a Moth when it reaches All Stats Up 5."
+    },
+    "stats": {
+      "strength": "1",
+      "dexterity": "1",
+      "constitution": "1",
+      "intelligence": "1",
+      "speed": "1",
+      "charisma": "1",
+      "luck": "1"
+    },
+    "properties": {
+      "tag": "animal",
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "1",
+      "health": "1",
+      "weak_threshold": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "can_get_bonus": "true"
+    },
+    "passives": {
+      "StatusEachTurnEnd": {
+        "AllStatsUp": "1",
+        "HealthGain": "4"
+      },
+      "TransformOnStatusThreshold": {
+        "status": "AllStatsUp",
+        "threshold": "5",
+        "object": "Moth"
+      }
+    },
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Moth": {
+    "graphics": {
+      "movieclip": "Moth",
+      "name": "ENTITY_MOTH_NAME",
+      "name_resolved": "Moth",
+      "shadow_size": ".8"
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "8",
+      "constitution": "8",
+      "intelligence": "8",
+      "speed": "8",
+      "charisma": "8",
+      "luck": "8"
+    },
+    "properties": {
+      "tag": "animal",
+      "type": "small",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "5",
+      "health": "24",
+      "flying": "true",
+      "mana_matters": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicShortLobbed",
+      "can_get_bonus": "true",
+      "spells": [
+        "CrowFlutter",
+        "SleepPowder"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "AnimalEgg": {
+    "graphics": {
+      "movieclip": "AnimalEgg",
+      "name": "ENTITY_EGG_NAME",
+      "name_resolved": "Egg",
+      "tooltip": "ENTITY_EGG_DESC",
+      "tooltip_resolved": "What could it hatch into?"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "animal",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "movement": "0",
+      "health": "4",
+      "shield": "4",
+      "corpse_health": "0",
+      "can_be_overkilled": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": []
+    },
+    "passives": {
+      "TransformInXTurns": {
+        "stacks": "2",
+        "object": [
+          "Squirrel",
+          "Crow",
+          "Snake",
+          "Turtle",
+          "Toad",
+          "Catepillar"
+        ],
+        "animation": "hatch"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "AnimalEgg2": {
+    "variant_of": "AnimalEgg",
+    "passives": {
+      "TransformInXTurns": {
+        "stacks": "1"
+      }
+    }
+  },
+  "GlowingMushroom": {
+    "graphics": {
+      "movieclip": "GlowingMushroom",
+      "name": "ENTITY_GLOWMUSHROOM_NAME",
+      "name_resolved": "Glowing Mushroom",
+      "tooltip": "ENTITY_GLOWMUSHROOM_DESC",
+      "tooltip_resolved": "Grants Mana to nearby units on its turn.",
+      "shadow_size": ".25"
+    },
+    "properties": {
+      "type": "object",
+      "tag": "plant",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "kill_required": "false",
+      "ai_scale": ".01"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "GlowingMushroomGiveMana"
+      ]
+    },
+    "passives": {
+      "Plant": "1",
+      "ElementImmune": "Creep",
+      "CharacterLightSource": {
+        "color": [
+          ".3,",
+          ".7,",
+          "1"
+        ],
+        "glow": [
+          ".3,",
+          ".7,",
+          "1,",
+          ".5"
+        ],
+        "size": "4"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "GlowingMushroomGiveMana"
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "stay_close"
+    }
+  },
+  "GlowingMushroom2": {
+    "variant_of": "GlowingMushroom",
+    "graphics": {
+      "tooltip": "ENTITY_GLOWMUSHROOM2_DESC",
+      "tooltip_resolved": "Grants Mana and health to nearby units on its turn."
+    },
+    "abilities": {
+      "spells": [
+        "GlowingMushroomGiveMana2"
+      ]
+    },
+    "ai": {
+      "pattern": {
+        "do": "GlowingMushroomGiveMana2"
+      }
+    }
+  },
+  "RandomDruidFamiliar": {
+    "alt_spawn_pool": {
+      "Squirrel": "10",
+      "Snake": "10",
+      "Turtle": "10",
+      "Toad": "10",
+      "Catepillar": "10",
+      "Bear": "1"
+    }
+  }
+}

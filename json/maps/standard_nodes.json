@@ -1,0 +1,109 @@
+{
+  "node": {
+    "type": "empty"
+  },
+  "npc": {
+    "type": "npc",
+    "locked": "true"
+  },
+  "battle": {
+    "type": "battle"
+  },
+  "event": {
+    "type": "event"
+  },
+  "optional_event": {
+    "type": "optional_event"
+  },
+  "miniboss": {
+    "type": "miniboss"
+  },
+  "hard": {
+    "type": "hard"
+  },
+  "c4hard": {
+    "type": "hard",
+    "musiclayer": "boss"
+  },
+  "treasure": {
+    "type": "treasure"
+  },
+  "treasure_hard": {
+    "type": "treasure",
+    "level": "TreasureHard",
+    "override_art": "Rare_Treasure"
+  },
+  "shop": {
+    "type": "shop"
+  },
+  "start": {
+    "type": "enter"
+  },
+  "home": {
+    "type": "home"
+  },
+  "battle_testskip": {
+    "type": "empty"
+  },
+  "hard_testskip": {
+    "type": "empty"
+  },
+  "foodbox": {
+    "type": "foodbox"
+  },
+  "largemeteor": {
+    "type": "treasure",
+    "level": "Treasure_LargeMeteor",
+    "override_art": "MapNode_LargeMetor"
+  },
+  "smallmeteor": {
+    "type": "treasure",
+    "level": "Treasure_SmallMeteor",
+    "override_art": "MapNode_SmallMeteor"
+  },
+  "furniturebox": {
+    "type": "treasure",
+    "level": "Treasure_FurnitureBox",
+    "override_art": "MapNode_FurnitureBox"
+  },
+  "furniturebox2": {
+    "type": "treasure",
+    "level": "Treasure_MedFurnitureBox",
+    "override_art": "MapNode_FurnitureBox2"
+  },
+  "furniturebox3": {
+    "type": "treasure",
+    "level": "Treasure_RareFurnitureBox",
+    "override_art": "MapNode_FurnitureBox3"
+  },
+  "abilityneedle": {
+    "type": "treasure",
+    "level": "Treasure_AbilityNeedle",
+    "override_art": "MapNode_Needle"
+  },
+  "largemoneybag": {
+    "type": "treasure",
+    "level": "Treasure_LargeMoneyBag",
+    "override_art": "MapNode_BigMoneyBag"
+  },
+  "smallmoneybag": {
+    "type": "treasure",
+    "level": "Treasure_SmallMoneyBag",
+    "override_art": "MapNode_SmallMoneyBag"
+  },
+  "treasure_radiated": {
+    "type": "treasure",
+    "level": "Treasure_IrradiatedObject",
+    "override_art": "MapNode_CursedTreasure"
+  },
+  "ancestor_bones": {
+    "type": "treasure",
+    "level": "Treasure_AncestorsSkull",
+    "override_art": "MapNode_Bones"
+  },
+  "glowing_bones": {
+    "type": "treasure",
+    "level": "Treasure_GlowingBone",
+    "override_art": "MapNode_GlowingBones"
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "PersuasionDevice": {
+    "name": "ITEM_PERSUASIONDEVICE_NAME",
+    "name_resolved": "Persuasion Device",
+    "desc": "ITEM_PERSUASIONDEVICE_DESC",
+    "desc_resolved": "Side Quest Item. Use to permanently charm a non-boss enemy. It joins your party.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "168",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "PersuasionDevice_Fixed",
+    "ability": "wp_PersuasionDevice",
+    "spd": "-2"
+  },
+  "PersuasionDevice_Fixed": {
+    "variant_of": "PersuasionDevice",
+    "desc": "ITEM_PERSUASIONDEVICE_FIXED_DESC",
+    "desc_resolved": "Use to permanently charm a non-boss enemy. It joins your party.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "169",
+    "rarity": "rare",
+    "quest_item": "false"
+  },
+  "ChaosDevice": {
+    "name": "ARMOR_CHAOSDEVICE_NAME",
+    "name_resolved": "Chaos Device",
+    "desc": "ARMOR_CHAOSDEVICE_DESC",
+    "desc_resolved": "Side Quest Item. When any cat levels up they are offered abilities from all classes.",
+    "kind": "head",
+    "frame": "160",
+    "set": "Experimental",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "ChaosDevice_Fixed",
+    "global_tags": [
+      "all_cats_are_jester"
+    ]
+  },
+  "ChaosDevice_Fixed": {
+    "name": "ARMOR_CHAOSDEVICE_FIXED_NAME",
+    "name_resolved": "Chaos Controller",
+    "desc": "ARMOR_CHAOSDEVICE_FIXED_DESC",
+    "desc_resolved": "Abilities from all classes are offered when you level up. You can reroll your levelup options thrice.",
+    "kind": "head",
+    "frame": "161",
+    "set": "Experimental",
+    "rarity": "rare",
+    "passives": {
+      "LevelUpClassOverride": "Jester",
+      "AddLevelUpRerolls": "3"
+    }
+  },
+  "MagicMirror": {
+    "name": "ARMOR_MAGICMIRROR_NAME",
+    "name_resolved": "Magic Mirror (Broken)",
+    "desc": "ARMOR_MAGICMIRROR_DESC",
+    "desc_resolved": "Side Quest Item. Your team has very bad luck during events. +2 Thorns.",
+    "kind": "face",
+    "frame": "147",
+    "quest_item": "true",
+    "cursed": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "MagicMirror_Fixed",
+    "passives": {
+      "Thorns": "2"
+    },
+    "global_tags": [
+      "fail_all_events"
+    ]
+  },
+  "MagicMirror_Fixed": {
+    "name": "ARMOR_MAGICMIRROR_FIXED_NAME",
+    "name_resolved": "Magic Mirror",
+    "desc": "ARMOR_MAGICMIRROR_FIXED_DESC",
+    "desc_resolved": "+20% chance to reflect projectiles. Spawn a friendly Spookie when downed.",
+    "kind": "face",
+    "frame": "148",
+    "rarity": "rare",
+    "passives": {
+      "ReflectProjectiles": "20%",
+      "SpawnOnDowned": "CharmedSpookie"
+    }
+  },
+  "MeStone": {
+    "name": "ITEM_MESTONE_NAME",
+    "name_resolved": "Me Stone",
+    "desc": "ITEM_MESTONE_DESC",
+    "desc_resolved": "Side Quest Item. This cat always levels up, and can level up even if it was downed.",
+    "kind": "trinket",
+    "frame": "227",
+    "set": "Rock",
+    "quest_item": "true",
+    "cursed": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "MeStone_Fixed",
+    "passives": {
+      "CanLevelUpWhenDead": "1",
+      "AlwaysChosenForLevelUp": "1"
+    }
+  },
+  "MeStone_Fixed": {
+    "name": "ITEM_MESTONE_FIXED_NAME",
+    "name_resolved": "Suck Stone",
+    "desc": "ITEM_MESTONE_FIXED_DESC",
+    "desc_resolved": "At the end of your turn, drain up to 5 mana from each of your allies.",
+    "kind": "trinket",
+    "frame": "228",
+    "set": "Rock",
+    "rarity": "rare",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "ForceUseAbility": "tk_SuckStone"
+      }
+    }
+  },
+  "AngryFace": {
+    "name": "ARMOR_ANGRYFACE_NAME",
+    "name_resolved": "Angry Face",
+    "desc": "ARMOR_ANGRYFACE_DESC",
+    "desc_resolved": "Side Quest Item. Equipped cat is an enemy, must be downed to win the battle, and can still receive level ups. Can't be equipped to a Collarless cat.",
+    "kind": "face",
+    "frame": "143",
+    "set": "Paper",
+    "quest_item": "true",
+    "cursed": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "AngryFace_Fixed",
+    "cant_equip_to_colorless": "true",
+    "passives": {
+      "SetFaction": "enemies",
+      "CanLevelUpWhenDead": "1",
+      "SpawnNearEnemies": "1",
+      "MoveAndUseAbilityEachTurnBeginIfPossible": "face_EatNeverstone",
+      "AddEndOfCombatRegen": "999999"
+    }
+  },
+  "AngryFace_Fixed": {
+    "name": "ARMOR_ANGRYFACE_FIXED_NAME",
+    "name_resolved": "Happy Face",
+    "desc": "ARMOR_ANGRYFACE_FIXED_DESC",
+    "desc_resolved": "Spawn near enemies and take an AI controlled bonus turn at the start of every battle.",
+    "kind": "face",
+    "frame": "144",
+    "set": "Paper",
+    "rarity": "rare",
+    "passives": {
+      "SpawnNearEnemies": "1",
+      "AlphaTurns": "1",
+      "AIControlNextTurn": {
+        "stacks": "1",
+        "include_spells": "true"
+      }
+    }
+  },
+  "FartFace": {
+    "name": "ARMOR_FARTFACE_NAME",
+    "name_resolved": "Fart Face",
+    "desc": "ARMOR_FARTFACE_DESC",
+    "desc_resolved": "Side Quest Item. Apply Poison 1 to everything at the start of the battle.",
+    "kind": "face",
+    "frame": "145",
+    "set": "HumanFlesh",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "FartFace_Fixed",
+    "passives": {
+      "AbilityOnBattleStart": "face_FartFace"
+    }
+  },
+  "FartFace_Fixed": {
+    "name": "ARMOR_FARTFACE_FIXED_NAME",
+    "name_resolved": "Robo Fart Face",
+    "desc": "ARMOR_FARTFACE_FIXED_DESC",
+    "desc_resolved": "Apply Poison 1 to all enemies at the start of the battle.",
+    "kind": "face",
+    "frame": "146",
+    "set": "Bionic",
+    "rarity": "rare",
+    "passives": {
+      "AbilityOnBattleStart": "face_FartFaceFixed"
+    }
+  },
+  "SpiderInjector": {
+    "name": "ARMOR_SPIDERINJECTOR_NAME",
+    "name_resolved": "Spider Injector",
+    "desc": "ARMOR_SPIDERINJECTOR_DESC",
+    "desc_resolved": "Side Quest Item. Apply Infested 4 to all allies at the start of each battle.",
+    "kind": "head",
+    "frame": "162",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "SpiderInjector_Fixed",
+    "passives": {
+      "AbilityOnBattleStart": "head_SpiderInjector"
+    }
+  },
+  "SpiderInjector_Fixed": {
+    "name": "ARMOR_SPIDERINJECTOR_FIXED_NAME",
+    "name_resolved": "Spider Baby",
+    "desc": "ARMOR_SPIDERINJECTOR_FIXED_DESC",
+    "desc_resolved": "Apply Infested 1 to all enemies at the start of each battle.",
+    "kind": "head",
+    "frame": "163",
+    "rarity": "rare",
+    "passives": {
+      "AbilityOnBattleStart": "head_SpiderInjectorFixed"
+    }
+  },
+  "PartyDetonator": {
+    "name": "ITEM_PARTYDETONATOR_NAME",
+    "name_resolved": "Party Detonator",
+    "desc": "ITEM_PARTYDETONATOR_DESC",
+    "desc_resolved": "Side Quest Item. All units explode when they die.\nUse: Explode a random other unit, once per battle.",
+    "kind": "weapon",
+    "frame": "170",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "PartyDetonator_Fixed",
+    "ability": "wp_PartyDetonator",
+    "passives": {
+      "AllUnitsExplodeOnDeath": "5"
+    }
+  },
+  "PartyDetonator_Fixed": {
+    "name": "ITEM_PARTYDETONATOR_FIXED_NAME",
+    "name_resolved": "Party Detonator (Fixed)",
+    "desc": "ITEM_PARTYDETONATOR_FIXED_DESC",
+    "desc_resolved": "Use: Explode a random unit within a target radius.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "171",
+    "rarity": "rare",
+    "ability": "wp_PartyDetonatorFixed"
+  },
+  "AirHorn": {
+    "name": "ITEM_AIRHORN_NAME",
+    "name_resolved": "Air Horn",
+    "desc": "ITEM_AIRHORN_DESC",
+    "desc_resolved": "Side Quest Item. You are Ambushed every battle. Use to make some noise!",
+    "kind": "weapon",
+    "frame": "200",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "AirHorn_Fixed",
+    "ability": "wp_AirHorn",
+    "global_tags": [
+      "always_ambushed"
+    ]
+  },
+  "AirHorn_Fixed": {
+    "name": "ITEM_AIRHORN_FIXED_NAME",
+    "name_resolved": "Amplified Air Horn",
+    "desc": "ITEM_AIRHORN_FIXED_DESC",
+    "desc_resolved": "Use: Apply Madness to a unit within 5 tiles in your line of sight.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "206",
+    "rarity": "rare",
+    "ability": "wp_AirHornFixed"
+  },
+  "TheLoner": {
+    "name": "ITEM_THELONER_NAME",
+    "name_resolved": "The Loner",
+    "desc": "ITEM_THELONER_DESC",
+    "desc_resolved": "Side Quest Item. Kill all of your allies at the start of each battle.",
+    "kind": "weapon",
+    "frame": "204",
+    "set": "Cool",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "TheLoner_Fixed",
+    "ability": "wp_TheLoner",
+    "passives": {
+      "AbilityOnBattleStart": "wp_TheLonerAuto"
+    }
+  },
+  "TheLoner_Fixed": {
+    "name": "ITEM_THELONER_FIXED_NAME",
+    "name_resolved": "The Loner Mark 2",
+    "desc": "ITEM_THELONER_FIXED_DESC",
+    "desc_resolved": "Use: Deals 5 damage to anything in your line of sight.\nRELOAD: Any ally dies.",
+    "kind": "weapon",
+    "frame": "209",
+    "set": [
+      "Cool,",
+      "Used"
+    ],
+    "rarity": "rare",
+    "ability": "wp_TheLonerFixed"
+  },
+  "GlassCannon": {
+    "name": "ITEM_GLASSCANNON_NAME",
+    "name_resolved": "Glass Cannon",
+    "desc": "ITEM_GLASSCANNON_DESC",
+    "desc_resolved": "Side Quest Item. Fill the map with glass at the start of each battle.\nUse: Shoot a glass ball.",
+    "kind": "weapon",
+    "frame": "205",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "GlassCannon_Fixed",
+    "ability": "wp_GlassCannon",
+    "passives": {
+      "ReplaceBlankTilesOnBattleStart": "GlassTile"
+    }
+  },
+  "GlassCannon_Fixed": {
+    "name": "ITEM_GLASSCANNON_FIXED_NAME",
+    "name_resolved": "Glass Cannon (Fixed)",
+    "desc": "ITEM_GLASSCANNON_FIXED_DESC",
+    "desc_resolved": "Use: Shoot a glass ball anywhere.",
+    "kind": "weapon",
+    "frame": "210",
+    "rarity": "rare",
+    "ability": "wp_GlassCannonFixed"
+  },
+  "PrincessHat": {
+    "name": "ARMOR_PRINCESSHAT_NAME",
+    "name_resolved": "Princess Hat",
+    "desc": "ARMOR_PRINCESSHAT_DESC",
+    "desc_resolved": "Side Quest Item. Fragile. Equipped cat cannot use any actions except Move.",
+    "kind": "head",
+    "frame": "201",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "PrincessHat_Fixed",
+    "shield": "10",
+    "passives": {
+      "Fragile": "1",
+      "DisableAbilities": "basic_attack"
+    }
+  },
+  "PrincessHat_Fixed": {
+    "name": "ARMOR_PRINCESSHAT_FIXED_NAME",
+    "name_resolved": "Used Princess Hat",
+    "desc": "ARMOR_PRINCESSHAT_FIXED_DESC",
+    "kind": "head",
+    "frame": "203",
+    "rarity": "rare",
+    "set": "Used",
+    "shield": "6"
+  },
+  "HardPill": {
+    "name": "ITEM_HARDPILL_NAME",
+    "name_resolved": "Unidentified Pills",
+    "desc": "ITEM_HARDPILL_DESC",
+    "desc_resolved": "Side Quest Item. The adventure is harder!",
+    "kind": "trinket",
+    "frame": "252",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "HardPill_Fixed",
+    "shield": "8",
+    "global_tags": [
+      "increase_difficulty"
+    ]
+  },
+  "HardPill_Fixed": {
+    "name": "ITEM_HARDPILL_FIXED_NAME",
+    "name_resolved": "Truck Stop Pills",
+    "desc": "ITEM_HARDPILL_FIXED_DESC",
+    "desc_resolved": "+3 Brace. You count as a rock.",
+    "kind": "trinket",
+    "frame": "257",
+    "rarity": "rare",
+    "passives": {
+      "Brace": "3",
+      "AddTag": "rock"
+    }
+  },
+  "BubbleBoy": {
+    "name": "ARMOR_BUBBLEBOY_NAME",
+    "name_resolved": "Bubble Boy",
+    "desc": "ARMOR_BUBBLEBOY_DESC",
+    "desc_resolved": "Side Quest Item. All units rebound with Knockback 5 on contact.",
+    "kind": "neck",
+    "frame": "153",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "BubbleBoy_Fixed",
+    "passives": {
+      "GlobalMeleeRevengeDamage": {
+        "knockback": "5"
+      }
+    }
+  },
+  "BubbleBoy_Fixed": {
+    "name": "ITEM_BUBBLEBOY_FIXED_NAME",
+    "name_resolved": "Bubbles",
+    "desc": "ITEM_BUBBLEBOY_FIXED_DESC",
+    "desc_resolved": "Use: Throw a bubble with Wind and Water Element that inflicts Confusion.",
+    "kind": "weapon",
+    "frame": "216",
+    "rarity": "rare",
+    "ability": "wp_BubbleBoyFixed"
+  },
+  "Redacted": {
+    "name": "ARMOR_REDACTED_NAME",
+    "name_resolved": "Redacted",
+    "desc": "ARMOR_REDACTED_DESC",
+    "desc_resolved": "Side Quest Item. Health bars and status icons are hidden in battle.",
+    "kind": "face",
+    "frame": "164",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "Redacted_Fixed",
+    "passives": {
+      "HideSomeHudStuff": "1"
+    }
+  },
+  "Redacted_Fixed": {
+    "name": "ARMOR_REDACTED_FIXED_NAME",
+    "name_resolved": "Paper Bag",
+    "desc": "ARMOR_REDACTED_FIXED_DESC",
+    "desc_resolved": "Your [img:cha] is equal to your highest other stat.",
+    "kind": "face",
+    "frame": "168",
+    "rarity": "rare",
+    "passives": {
+      "CharismaIsMaxStat": "1"
+    }
+  },
+  "Stopwatch": {
+    "name": "ITEM_STOPWATCH_NAME",
+    "name_resolved": "Stopwatch",
+    "desc": "ITEM_STOPWATCH_DESC",
+    "desc_resolved": "Side Quest Item. You have 5 seconds to make decisions in battle, otherwise cats will act randomly.",
+    "kind": "trinket",
+    "frame": "249",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "Stopwatch_Fixed",
+    "global_passives": {
+      "RealTimePressure": "5"
+    }
+  },
+  "Stopwatch_Fixed": {
+    "name": "ITEM_STOPWATCH_FIXED_NAME",
+    "name_resolved": "Stopwatch (Fixed)",
+    "desc": "ITEM_STOPWATCH_FIXED_DESC",
+    "desc_resolved": "Use: You or a target unit takes an AI controlled bonus turn.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "213",
+    "rarity": "rare",
+    "ability": "wp_StopwatchFixed"
+  },
+  "StorageLocker": {
+    "name": "ARMOR_STORAGELOCKER_NAME",
+    "name_resolved": "Storage Locker",
+    "desc": "ARMOR_STORAGELOCKER_DESC",
+    "desc_resolved": "Side Quest Item. Your team's active ability level ups offer rare items instead.",
+    "kind": "neck",
+    "frame": "150",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "StorageLocker_Fixed",
+    "global_tags": [
+      "item_levelup_quest"
+    ],
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "StorageLocker_Fixed": {
+    "name": "ARMOR_STORAGELOCKER_FIXED_NAME",
+    "name_resolved": "Armory Key",
+    "desc": "ARMOR_STORAGELOCKER_FIXED_DESC",
+    "desc_resolved": "Find an extra item after each battle.",
+    "kind": "neck",
+    "frame": "157",
+    "rarity": "rare",
+    "passives": {
+      "Metal": "1",
+      "FindExtraItemFromPoolOnBattleEnd": "combat_reward_easy"
+    }
+  },
+  "MysteriousDice": {
+    "name": "ITEM_MYSTERIOUSDICE_NAME",
+    "name_resolved": "Mysterious Dice",
+    "desc": "ITEM_MYSTERIOUSDICE_DESC",
+    "desc_resolved": "Side Quest Item. Your team's level up options are complete chaos!",
+    "kind": "trinket",
+    "frame": "255",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "MysteriousDice_Fixed",
+    "global_tags": [
+      "superchaos_levelups"
+    ]
+  },
+  "MysteriousDice_Fixed": {
+    "name": "ITEM_MYSTERIOUSDICE_FIXED_NAME",
+    "name_resolved": "The D6",
+    "desc": "ITEM_MYSTERIOUSDICE_FIXED_DESC",
+    "desc_resolved": "Use: Permanently upgrade one of your active abilities at random.",
+    "kind": "trinket",
+    "frame": "259",
+    "rarity": "rare",
+    "consumable": "true",
+    "durability": "1",
+    "ability": "cm_TheD6"
+  },
+  "ExperimentalTreatment": {
+    "name": "ARMOR_EXPERIMENTALTREATMENT_NAME",
+    "name_resolved": "Experimental Treatment",
+    "desc": "ARMOR_EXPERIMENTALTREATMENT_DESC",
+    "desc_resolved": "Side Quest Item. Your team's passive ability level ups offer disorders instead.",
+    "kind": "face",
+    "frame": "162",
+    "set": "Experimental",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "ExperimentalTreatment_Fixed",
+    "global_tags": [
+      "disorder_levelup_quest"
+    ]
+  },
+  "ExperimentalTreatment_Fixed": {
+    "name": "ARMOR_EXPERIMENTALTREATMENT_FIXED_NAME",
+    "name_resolved": "Disorder Decoder",
+    "desc": "ARMOR_EXPERIMENTALTREATMENT_FIXED_DESC",
+    "desc_resolved": "Your spells cost 1 less for each disorder you have.",
+    "kind": "face",
+    "frame": "167",
+    "set": "Experimental",
+    "rarity": "rare",
+    "passives": {
+      "ReduceSpellCostsPerDisorder": "1"
+    }
+  },
+  "UltraVision3000": {
+    "name": "ARMOR_ULTRAVISION3000_NAME",
+    "name_resolved": "Ultra Vision 3000",
+    "desc": "ARMOR_ULTRAVISION3000_DESC",
+    "desc_resolved": "Side Quest Item. Events are harder. All normal events trigger 2 extra events.",
+    "kind": "face",
+    "frame": "166",
+    "set": "Bionic",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "UltraVision3000_Fixed",
+    "global_tags": [
+      "increase_event_difficulty",
+      "increase_event_difficulty",
+      "trigger_extra_event",
+      "trigger_extra_event"
+    ]
+  },
+  "UltraVision3000_Fixed": {
+    "name": "ARMOR_ULTRAVISION3000_FIXED_NAME",
+    "name_resolved": "Ultra Vision 3000 v1.1",
+    "desc": "ARMOR_ULTRAVISION3000_FIXED_DESC",
+    "desc_resolved": "Your basic attack inflicts Marked.",
+    "kind": "face",
+    "frame": "169",
+    "set": "Bionic",
+    "rarity": "rare",
+    "cursed": "true",
+    "lck": "4",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Marked": "1"
+      }
+    }
+  },
+  "NuclearKnife": {
+    "name": "ITEM_NUCLEARKNIFE_NAME",
+    "name_resolved": "Nuclear Knife",
+    "desc": "ITEM_NUCLEARKNIFE_DESC",
+    "desc_resolved": "Side Quest Item. Use: Melee Attack with damage = charges ({aux}). Permanenetly gains 1 charge at the end of each turn.\nIf charges go above 10, this weapon explodes.\nLoses half of its charges when it gets a kill.",
+    "kind": "weapon",
+    "frame": "201",
+    "set": "Radioactive",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "NuclearKnife_Fixed",
+    "ability": "wp_NuclearKnife",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "AddWeaponAux": "1"
+      },
+      "ItemAuxTransform": {
+        "ge": [
+          "10",
+          "NuclearKnife_Glowing"
+        ]
+      }
+    }
+  },
+  "NuclearKnife_Glowing": {
+    "name": "ITEM_NUCLEARKNIFE_GLOWING_NAME",
+    "name_resolved": "Nuclear Knife (Glowing)",
+    "desc": "ITEM_NUCLEARKNIFE_GLOWING_DESC",
+    "desc_resolved": "Side Quest Item. It's about to explode! Get a kill with this now to quench it.",
+    "kind": "weapon",
+    "frame": "202",
+    "set": "Radioactive",
+    "quest_item": "true",
+    "rarity": "sidequest",
+    "quest_reward_item": "NuclearKnife_Fixed",
+    "quest_item_alias": "NuclearKnife",
+    "ability": "wp_NuclearKnife",
+    "aux": "10",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "ImmediateUseAbility": {
+          "ability": "wp_NuclearKnifeExplode",
+          "even_if_stunned": "true"
+        }
+      },
+      "ItemAuxTransform": {
+        "lt": [
+          "10",
+          "NuclearKnife"
+        ]
+      }
+    }
+  },
+  "NuclearKnife_Fixed": {
+    "name": "ITEM_NUCLEARKNIFE_FIXED_NAME",
+    "name_resolved": "Nuclear Gun",
+    "desc": "ITEM_NUCLEARKNIFE_FIXED_DESC",
+    "desc_resolved": "Use: Deals 40 damage to a target and 20 damage to EVERYTHING ELSE. 20% chance to break on use.",
+    "kind": "weapon",
+    "frame": "207",
+    "set": "Radioactive",
+    "rarity": "rare",
+    "ability": "wp_NuclearKnifeFixed"
+  }
+}

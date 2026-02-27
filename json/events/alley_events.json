@@ -1,0 +1,559 @@
+{
+  "TrashBin": {
+    "intro": {
+      "title": "EVENT_TRASHBIN_NAME",
+      "title_resolved": "Trash Bin",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "trashcan",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TRASHBIN_QUES",
+      "prompt_resolved": "{catname} finds a large trash bin. The lid is ajar, and stench from the refuse floods {catname}'s nostrils.",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "prompt": "EVENT_TRASHBIN_REW1",
+            "prompt_resolved": "{catname} carefully pushes the lid of the bin off and peers inside...",
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "party_heal": "5",
+                    "gain_food": [
+                      "2",
+                      "4"
+                    ]
+                  },
+                  {
+                    "prompt": "EVENT_TRASHBIN_REW2",
+                    "prompt_resolved": "{catname} knocks the bin over, spilling bags and scraps of food everywhere!\n\nAmidst the debris and trash {he} begins seeing movement...",
+                    "spawn_unit_next_fight": {
+                      "object": [
+                        "Junk",
+                        "Junk",
+                        "TrashBag"
+                      ],
+                      "count": [
+                        "3",
+                        "6"
+                      ],
+                      "spawn_side": "anywhere"
+                    }
+                  },
+                  {
+                    "full_heal": "1"
+                  },
+                  {
+                    "gain_coins": [
+                      "5",
+                      "15"
+                    ]
+                  }
+                ]
+              },
+              "rare": {
+                "random_pool": [
+                  {
+                    "party_heal": "100%",
+                    "gain_food": [
+                      "10",
+                      "25"
+                    ]
+                  },
+                  {
+                    "party_heal": "3",
+                    "party_permanent_stats": {
+                      "con": "1"
+                    }
+                  },
+                  {
+                    "get_item_from_pool": "food"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_TRASHBIN_REW3",
+            "prompt_resolved": "{catname} tries to get into the bin, but accidentally tips it over, spilling its spoiled contents all over {himself}!\n\n{catname} scurries away, covered in poisonous filth...",
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "self_status_next_fight": {
+                  "Poison": "2"
+                }
+              },
+              "rare": {
+                "self_status_next_fight": {
+                  "Poison": "2"
+                },
+                "get_parasite_from_pool": "sludge_armor"
+              }
+            }
+          }
+        },
+        "pick": {
+          "label": "EVENT_PICK_ANSW",
+          "label_resolved": "Pick",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "copy_results": "examine"
+        },
+        "open": {
+          "label": "EVENT_OPEN_ANSW",
+          "label_resolved": "Open",
+          "stat": "lck",
+          "copy_results": "examine"
+        }
+      }
+    }
+  },
+  "ClosedWindow": {
+    "intro": {
+      "title": "EVENT_CLOSEDWINDOW_NAME",
+      "title_resolved": "Closed Window",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "brokenwindow",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CLOSEDWINDOW_QUES",
+      "prompt_resolved": "{catname} discovers an old window.\n\nA shiny lattice of cracks spreads across the glass panes like a fragile patchwork of tiny mirrors.",
+      "options": {
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW1",
+                "prompt_resolved": "{catname} picks up a nearby rock and throws it through the window!\n\nStepping over the shards of broken glass, {catname} finds an alternate route to the next battle, allowing the cats to ambush!",
+                "get_item_from_pool": "consumables",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW2",
+                "prompt_resolved": "{catname} smashes in the window with {his} paw, sending fragments of glass flying into the interior.\n\n{He} looks through the hole and sees something interesting within reach!",
+                "get_item_from_pool": "treasure_easy"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW3",
+                "prompt_resolved": "{catname} punches the glass with {his} paw!\n\nThe window shatters and tiny glass shards fly everywhere, cutting into {catname} like a thousand tiny knives!",
+                "get_parasite": "PawShards",
+                "self_status_next_fight": {
+                  "Bleed": "2",
+                  "ChangeTileUnderCharacterAtStart": "GlassTile"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW4",
+                "prompt_resolved": "{catname} closes {his} eyes and tries to leap through the window!\n\nThe fragile pane shatters and glass embeds itself in {catname}'s face. {He} lets out a terrible yelp of pain!",
+                "get_parasite": "FaceShards"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW5",
+                "prompt_resolved": "{catname} examines the window, finds a latch, and pulls the window open!\n\n{He} jumps into the room and discovers a stealthy route to the next battle!",
+                "get_item_from_pool": "consumables",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_CLOSEDWINDOW_REW6",
+                "prompt_resolved": "Even without an exterior latch, {catname} deftly slides {his} paw under the frame and lifts the window open!",
+                "get_item_from_pool": "treasure_easy"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "prompt": "EVENT_CLOSEDWINDOW_REW7",
+            "prompt_resolved": "{catname} stares at the window and sees another cat staring back at {him}! {He} growls, making an imposing face, and the cat in the window scowls back!\n\nThe evil-looking cat matches {catname}'s every move with terrifying speed and ferocity, and {he} flees in terror!",
+            "reward": {
+              "common": {
+                "gain_disorder_from_pool": "mental_disorders"
+              },
+              "rare": {
+                "spawn_reflection_next_fight": "1"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_CLOSEDWINDOW_REW8",
+            "prompt_resolved": "All that broken glass looks dangerous!\n\n{catname} ignores the window and continues onwards.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MouseNest": {
+    "intro": {
+      "title": "EVENT_MOUSENEST_NAME",
+      "title_resolved": "Mouse nest",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mouse_nest",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MOUSENEST_QUES",
+      "prompt_resolved": "{catname} finds a nest full of mice. They seem to be sleeping for the moment...",
+      "options": {
+        "charm": {
+          "label": "EVENT_CHARM_ANSW",
+          "label_resolved": "Charm",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MOUSENEST_REW1",
+                "prompt_resolved": "{catname} sneaks among the snoozing mice and joins them for a nap.\n\nOne of the mice snuggles up in {his} fur. {catname} made a friend!",
+                "gain_familiar": "CharmedPinky"
+              },
+              "rare": {
+                "prompt": "EVENT_MOUSENEST_REW2",
+                "prompt_resolved": "{catname} approaches the mice and says hello.\n\nOne of the mice leaps up onto {his} back, eager to join in on the adventure!",
+                "gain_familiar": "CharmedLeaper"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MOUSENEST_REW3",
+                "prompt_resolved": "{catname} tries to make friends with the mice, but they squeak loudly and bite {him}!",
+                "damage": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_MOUSENEST_REW4",
+                "prompt_resolved": "{catname} attempts to join the mice in their nap, but one of the mice bites {him}, infecting {catname} with a disease!",
+                "gain_disorder_from_pool": "diseases"
+              }
+            }
+          }
+        },
+        "attack": {
+          "label": "EVENT_ATTACK_ANSW",
+          "label_resolved": "Attack",
+          "stat": "str",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MOUSENEST_REW5",
+                "prompt_resolved": "{catname} leaps into the tussle of mice and bites and claws at them!\n\n{catname} proudly displays {his} trophies to the other cats.",
+                "spawn_unit_next_fight": {
+                  "object": "DeadPinky",
+                  "count": "3",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MOUSENEST_REW6",
+                "prompt_resolved": "Carefully sneaking up first, {catname} lets out an intimidating roar and jumps on the mice.\n\nThey scurry in every direction, terrified!\n\n{catname} decides to try that move in the next battle too!",
+                "global_effect_next_fight": {
+                  "Fights": "1",
+                  "StatusRandomEnemiesOnBattleStart": {
+                    "count": "99",
+                    "Fear": "3"
+                  }
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MOUSENEST_REW7",
+                "prompt_resolved": "{catname} pounces into the mice nest, but they dart away too fast for {his} paws.\n\nThe mice scurry away with some of {his} food in the chaos!",
+                "gain_food": "-5"
+              },
+              "rare": {
+                "prompt": "EVENT_MOUSENEST_REW8",
+                "prompt_resolved": "{catname} jumps into the middle of the mice nest, attempting to catch one.\n\nThey turn on {him} and bite at {catname} savagely, tearing into {his} fur!",
+                "damage": "99%"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "WallOfCats": {
+    "intro": {
+      "title": "EVENT_WALLOFCATS_NAME",
+      "title_resolved": "Wall of cats",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "wall_of_cats",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_WALLOFCATS_QUES",
+      "prompt_resolved": "A large pile of trash blocks {catname}'s way ahead.\n\nThe large heap is composed of deceased cats... A truly horrifying sight!",
+      "options": {
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW1",
+                "prompt_resolved": "{catname} climbs onto the pile and pulls at some of the objects, looking for anything useful.\n\nMost of it looks like junk but {he} manages to salvage some scraps!",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "consumables"
+                },
+                "gain_food": [
+                  "5",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW2",
+                "prompt_resolved": "Wrinkling {his} nose at the stench of the pile, {catname} digs around until {he} feels an object against {his} paw, deep within the pile. {He} pulls it out!",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": [
+                    "weapon,",
+                    "trinket,",
+                    "armor"
+                  ]
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW3",
+                "prompt_resolved": "{catname} pulls at the pile, digging for scraps.\n\nTossing aside bodies and bags of trash, something cuts {his} arm, causing it to bleed!",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW4",
+                "prompt_resolved": "{catname} dives into the pile of bodies, searching for loot...\n\nA metal rod hidden in the heap impales {catname} in the head!",
+                "get_parasite": "MetalRod"
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW5",
+                "prompt_resolved": "{catname} tears through the pile, collecting useful scraps.",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "consumables"
+                },
+                "gain_food": [
+                  "1",
+                  "4"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW6",
+                "prompt_resolved": "{catname} smashes through the bodies, tearing them apart!\n\nDeep in the pile {he} finds something...",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": [
+                    "weapon,",
+                    "trinket,",
+                    "armor"
+                  ]
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW7",
+                "prompt_resolved": "{catname} tries to force {his} way into the pile of cat bodies but is scratched by some of their claws and starts to bleed!",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW8",
+                "prompt_resolved": "{catname} attacks the pile of bodies, trying to push it over...\n\nInstead the pile collapses on {catname}, and something sharp buried in the pile stabs {him}!",
+                "get_parasite": "MetalRod"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW9",
+                "prompt_resolved": "{catname} carefully searches through some of the nearby cats and finds some useful items in their pockets.",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "consumables"
+                },
+                "gain_food": [
+                  "1",
+                  "4"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW10",
+                "prompt_resolved": "{catname} sees something poking out from the pile and pulls it out!",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": [
+                    "weapon,",
+                    "trinket,",
+                    "armor"
+                  ]
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_WALLOFCATS_REW11",
+                "prompt_resolved": "Trying to get a better look, {catname} climbs onto the pile...\n\nSomething sharp on one of the bodies cuts {him}, causing {catname} to bleed!",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_WALLOFCATS_REW12",
+                "prompt_resolved": "{catname} thinks {he} sees something in the pile and tries to pull it out...\n\nA heap collapses on {him} and {catname} is struck in the head by falling debris!",
+                "get_parasite": "MetalRod"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "KnifeInTheWall": {
+    "requirements": {
+      "not_has_token": "WorldEventLegacyToken_MomsKnife"
+    },
+    "intro": {
+      "title": "EVENT_KNIFEINTHEWALL_NAME",
+      "title_resolved": "Knife in the wall",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "knife_in_the_wall",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_KNIFEINTHEWALL_QUES",
+      "prompt_resolved": "{catname} finds a knife stuck in a wall.",
+      "options": {
+        "pull": {
+          "label": "EVENT_PULLKNIFE_ANSW",
+          "label_resolved": "Pull out the knife",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_KNIFEINTHEWALL_REW1",
+                    "prompt_resolved": "Whoever put the knife here must have been very strong, because try as {he} might, {catname} can barely make it budge."
+                  },
+                  {
+                    "prompt": "EVENT_KNIFEINTHEWALL_REW2",
+                    "prompt_resolved": "{catname} pulls at the knife with all {his} strength but nothing happens."
+                  },
+                  {
+                    "prompt": "EVENT_KNIFEINTHEWALL_REW3",
+                    "prompt_resolved": "{catname} tries to pry the knife lose but fails. It is stuck fast."
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_KNIFEINTHEWALL_REW4",
+                "prompt_resolved": "With great effort, {catname} pulls on the knife... After a long moment, the knife pops out and {catname} lets out a loud meow in triumph!",
+                "get_item": "MomsKnife",
+                "set_legacy_token": "WorldEventLegacyToken_MomsKnife",
+                "trigger_adventure_unlock": "legacy_event_unlock_momsknife"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_KNIFEINTHEWALL_REW5",
+                "prompt_resolved": "{catname} pulls at the knife, but {his} paw slips and {he} cuts {himself} on the blade, causing {him} to start bleeding!",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_KNIFEINTHEWALL_REW5",
+                "prompt_resolved": "{catname} pulls at the knife, but {his} paw slips and {he} cuts {himself} on the blade, causing {him} to start bleeding!",
+                "self_status_next_fight": {
+                  "Bleed": "3"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

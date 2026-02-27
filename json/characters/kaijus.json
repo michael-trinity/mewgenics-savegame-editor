@@ -1,0 +1,596 @@
+{
+  "Pyrophina": {
+    "graphics": {
+      "movieclip": "Pyrophina",
+      "name": "ENEMY_PYROPHINA_NAME",
+      "name_resolved": "Pyrophina",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "3.5",
+      "move_speed_sync_frames": "50",
+      "water_mask": "big",
+      "tooltip": "ENEMY_PYROPHINASOLO_DESC",
+      "tooltip_resolved": "Pyrophina was baptized in the fires of hell and survived!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "kaiju",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "evenly_dispersed_bonus_turns": "2",
+      "dispersed_bonus_turns_before_cats": "false",
+      "initiative": "-100",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "600",
+      "weak_threshold": "150"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PyrophinaSoloAttack",
+      "spells": [
+        "PyrophinaVSWeatherRoar",
+        "PyrophinaSoloCatThrow",
+        "PyrophinaSoloFlamethrower",
+        "PyrophinaSoloEarthquakeStomp",
+        "PyrophinaSoloRoar",
+        "PyrophinaVSRun"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "KaijuKnockbackImmune": "1",
+      "ElementImmune": "Fire"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveForThrow": {
+          "ability": "move",
+          "move_for_ability": "PyrophinaSoloCatThrow",
+          "move_weights": "util_minmove"
+        },
+        "RunFar": {
+          "ability": "PyrophinaVSRun",
+          "move_weights": "run_far"
+        }
+      },
+      "bonusturn_pattern": {
+        "do_priority": [
+          "*PyrophinaVSWeatherRoar",
+          "MoveForThrow",
+          "*PyrophinaSoloCatThrow"
+        ]
+      },
+      "pattern": {
+        "do_all": [
+          "*PyrophinaVSWeatherRoar",
+          "*PyrophinaSoloRoar",
+          "RunFar"
+        ]
+      },
+      "fallback": {
+        "do_priority": [
+          "*attack",
+          "RunFar"
+        ]
+      },
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "true",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "Zaratana": {
+    "graphics": {
+      "movieclip": "Zaratana",
+      "name": "ENEMY_ZARATANA_NAME",
+      "name_resolved": "Zaratana",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "2",
+      "move_speed_sync_frames": "52",
+      "water_mask": "big",
+      "tooltip": "ENEMY_ZARATANASOLO_DESC",
+      "tooltip_resolved": "Zaratana's body radiates with galactic energy!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "kaiju",
+        "rock"
+      ],
+      "hidden_tag": "zaratana",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "evenly_dispersed_bonus_turns": "2",
+      "dispersed_bonus_turns_before_cats": "false",
+      "initiative": "-100",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "600",
+      "weak_threshold": "150"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ZaratanaSoloBasic",
+      "spells": [
+        "ZaratanaSoloMagnet",
+        "ZaratanaSoloBombardment",
+        "ZaratanaSoloTurtle",
+        "ZaratanaSoloRoar",
+        "ZaratanaSoloSpinDash",
+        "ZaratanaVSRevenge",
+        "ZaratanaSoloWeatherRoar",
+        "ZaratanaVSExitTurtle"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "KaijuKnockbackImmune": "1",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "ImmediateAbilityReaction": {
+              "ability": "ZaratanaVSRevenge",
+              "ability_damage_only": "true",
+              "damage_threshold": "10"
+            }
+          }
+        },
+        "Turtled": {
+          "attack": "None",
+          "move": "None",
+          "animation_suffix": "Turtle",
+          "passives": {
+            "Brace": "10"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "*ZaratanaVSExitTurtle"
+            },
+            "reset_pattern_on_formswitch": "true",
+            "stun_advances_pattern": "false"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "bonusturn_pattern": {
+        "do_priority": [
+          "*ZaratanaSoloWeatherRoar",
+          "attack"
+        ]
+      },
+      "fallback": {
+        "do_priority": [
+          "attack",
+          "move"
+        ]
+      },
+      "pattern": {
+        "do_all": [
+          "*ZaratanaSoloWeatherRoar",
+          "*ZaratanaSoloRoar"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "true"
+    }
+  },
+  "PyrophinaVS": {
+    "graphics": {
+      "movieclip": "Pyrophina",
+      "name": "ENEMY_PYROPHINA_NAME",
+      "name_resolved": "Pyrophina",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "3.5",
+      "move_speed_sync_frames": "50",
+      "water_mask": "big",
+      "tooltip": "ENEMY_PYROPHINAVS_DESC",
+      "tooltip_resolved": "She wants to kill Zaratana!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "kaiju",
+      "faction": "kaiju1",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "disperse_main_turns": "true",
+      "dispersed_bonus_turns_before_cats": "true",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "1000",
+      "weak_threshold": "150",
+      "must_start_facing_camera": "false",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "PyrophinaVSSpinThrow",
+        "PyrophinaVSWeatherRoar",
+        "PyrophinaVSCatThrow",
+        "PyrophinaVSFlamethrower",
+        "PyrophinaVSEarthquakeStomp",
+        "PyrophinaVSRoar",
+        "PyrophinaVSRun"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Buddy": {
+        "obj": "ZaratanaVS",
+        "allies_only": "false"
+      },
+      "KaijuKnockbackImmune": "1",
+      "KaijuWinCon": "pyrophina",
+      "ElementImmune": "Fire",
+      "BonusTurnPattern": [
+        {
+          "evenly_dispersed_bonus_turns": "1",
+          "round_end_bonus_turns": "1",
+          "initiative_adjustment": "50"
+        },
+        {
+          "evenly_dispersed_bonus_turns": "0",
+          "round_end_bonus_turns": "1",
+          "initiative_adjustment": "-50"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveForSpin": {
+          "ability": "PyrophinaVSRun",
+          "move_for_ability": "PyrophinaVSSpinThrow",
+          "move_weights": "stay_close"
+        },
+        "MoveForThrow": {
+          "ability": "move",
+          "move_for_ability": "PyrophinaVSCatThrow",
+          "move_weights": "util_minmove"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "*PyrophinaVSWeatherRoar",
+          "PyrophinaVSEarthquakeStomp"
+        ]
+      },
+      "round_end_bonusturn_pattern": {
+        "do_one": [
+          "**PyrophinaVSWeatherRoar",
+          "**PyrophinaVSRoar"
+        ],
+        "do_all": [
+          "*PyrophinaVSWeatherRoar",
+          "MoveForSpin",
+          "PyrophinaVSSpinThrow"
+        ]
+      },
+      "fallback": {
+        "do": "attack"
+      },
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "true",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "ZaratanaVS": {
+    "graphics": {
+      "movieclip": "Zaratana",
+      "name": "ENEMY_ZARATANA_NAME",
+      "name_resolved": "Zaratana",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "2",
+      "move_speed_sync_frames": "52",
+      "water_mask": "big",
+      "tooltip": "ENEMY_ZARATANAVS_DESC",
+      "tooltip_resolved": "She wants to kill Pyrophina!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "kaiju",
+        "rock"
+      ],
+      "hidden_tag": "zaratana",
+      "faction": "kaiju2",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "disperse_main_turns": "true",
+      "dispersed_bonus_turns_before_cats": "true",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "1000",
+      "weak_threshold": "150",
+      "must_start_facing_camera": "false",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ZaratanaBasic",
+      "spells": [
+        "ZaratanaVSSpinDash",
+        "ZaratanaVSWeatherRoar",
+        "ZaratanaVSMagnet",
+        "ZaratanaVSBombardment",
+        "ZaratanaVSTurtle",
+        "ZaratanaVSExitTurtle",
+        "ZaratanaVSRoar",
+        "ZaratanaVSRevenge",
+        "ZaratanaVSTurtleGuaranteed"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Buddy": {
+        "obj": "PyrophinaVS",
+        "allies_only": "false"
+      },
+      "KaijuKnockbackImmune": "1",
+      "KaijuWinCon": "zaratana",
+      "FormChanger": {
+        "Default": {
+          "passives": {
+            "ImmediateAbilityReaction": {
+              "ability": "ZaratanaVSRevenge",
+              "buddy_damage_only": "true",
+              "ability_damage_only": "true"
+            }
+          }
+        },
+        "Turtled": {
+          "attack": "None",
+          "move": "None",
+          "animation_suffix": "Turtle",
+          "passives": {
+            "Brace": "10"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "*ZaratanaVSExitTurtle"
+            },
+            "end_turn_on_formswitch": "true"
+          }
+        }
+      },
+      "BonusTurnPattern": [
+        {
+          "evenly_dispersed_bonus_turns": "0",
+          "round_end_bonus_turns": "1",
+          "initiative_adjustment": "-50"
+        },
+        {
+          "evenly_dispersed_bonus_turns": "1",
+          "round_end_bonus_turns": "1",
+          "initiative_adjustment": "50"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveForBarrage": {
+          "ability": "move",
+          "move_for_ability": "ZaratanaVSBombardment",
+          "move_weights": "stay_far"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "*ZaratanaVSWeatherRoar",
+          "attack",
+          "ZaratanaVSTurtle"
+        ]
+      },
+      "round_end_bonusturn_pattern": {
+        "do_all": [
+          "*ZaratanaVSWeatherRoar",
+          "ZaratanaVSSpinDash",
+          "ZaratanaVSTurtle"
+        ],
+        "do_one": [
+          "**ZaratanaVSWeatherRoar",
+          "**ZaratanaVSRoar"
+        ]
+      },
+      "fallback": {
+        "do_priority": [
+          "attack",
+          "ZaratanaVSTurtleGuaranteed"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "true"
+    }
+  },
+  "PyrophinaFamiliar": {
+    "graphics": {
+      "movieclip": "Pyrophina",
+      "name": "ENEMY_PYROPHINAFRIENDLY_NAME",
+      "name_resolved": "Pyrophina (Friendly)",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "3.5",
+      "move_speed_sync_frames": "50",
+      "water_mask": "big",
+      "tooltip": "ENEMY_KAIJUFRIENDLY_DESC",
+      "tooltip_resolved": "Shes here to help, and trying her best!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "kaiju",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "initiative": "-5",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "600",
+      "weak_threshold": "150",
+      "ai_scale": ".25"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PyrophinaSoloAttack",
+      "spells": [
+        "PyrophinaSoloFlamethrower"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "KaijuKnockbackImmune": "1",
+      "DissuadeInstakills": "1",
+      "ElementImmune": "Fire",
+      "ChanceToDisableActionsIfNotCharmed": "75%"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_random": [
+          "attack",
+          "PyrophinaSoloFlamethrower"
+        ]
+      },
+      "decision_weights": "careless",
+      "move_weights": "chaotic"
+    }
+  },
+  "ZaratanaFamiliar": {
+    "graphics": {
+      "movieclip": "Zaratana",
+      "name": "ENEMY_ZARATANAFRIENDLY_NAME",
+      "name_resolved": "Zaratana (Friendly)",
+      "shadow_size": "2.5",
+      "uifloaters_offset": "2",
+      "move_speed_sync_frames": "52",
+      "water_mask": "big",
+      "tooltip": "ENEMY_KAIJUFRIENDLY_DESC",
+      "tooltip_resolved": "Shes here to help, and trying her best!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "kaiju",
+        "rock"
+      ],
+      "hidden_tag": "zaratana",
+      "faction": "allies",
+      "inherit_faction": "true",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "initiative": "-5",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "600",
+      "weak_threshold": "150",
+      "ai_scale": ".25"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ZaratanaSoloBasic",
+      "spells": [
+        "ZaratanaSoloBombardment",
+        "ZaratanaVSRevenge"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "KaijuKnockbackImmune": "1",
+      "DissuadeInstakills": "1",
+      "ChanceToDisableActionsIfNotCharmed": "75%",
+      "ImmediateAbilityReaction": {
+        "ability": "ZaratanaVSRevenge",
+        "ability_damage_only": "true",
+        "damage_threshold": "10"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_random": [
+          "attack",
+          "ZaratanaSoloBombardment"
+        ]
+      },
+      "decision_weights": "careless",
+      "move_weights": "chaotic"
+    }
+  }
+}

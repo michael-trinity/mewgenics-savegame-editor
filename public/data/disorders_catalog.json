@@ -1,0 +1,1741 @@
+{
+  "ADHD": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ADHD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ADHD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ADHD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ASRFight": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ASRFIGHT_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ASRFIGHT_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ASRFIGHT_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ASRFlight": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ASRFLIGHT_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ASRFLIGHT_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ASRFLIGHT_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "AcidReflux": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ACIDREFLUX_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ACIDREFLUX_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ACIDREFLUX_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Albinism": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ALBINISM_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ALBINISM_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ALBINISM_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Anemia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ANEMIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ANEMIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ANEMIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Anxiety": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ANXIETY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ANXIETY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ANXIETY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Autism": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_AUTISM_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_AUTISM_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_AUTISM_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Bipolar": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BIPOLARDISORDER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BIPOLARDISORDER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BIPOLARDISORDER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BirdFlu": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BIRDFLU_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BIRDFLU_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BIRDFLU_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BlackFetin": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BLACKFETIN_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BLACKFETIN_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BLACKFETIN_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BlessingOfGlorg": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BLESSINGOFGLORG_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BLESSINGOFGLORG_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BLESSINGOFGLORG_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BloodFrenzy": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BLOODFRENZY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BLOODFRENZY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BLOODFRENZY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Boils": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BOILS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BOILS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BOILS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BorrowedTime": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BORROWEDTIME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BORROWEDTIME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BORROWEDTIME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BrainDamage": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BRAINDAMAGE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BRAINDAMAGE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BRAINDAMAGE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BrainDead": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BRAINDEAD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BRAINDEAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BRAINDEAD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Brave": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BRAVE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BRAVE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BRAVE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "BrokenLimb": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BROKENLIMB_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BROKENLIMB_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BROKENLIMB_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Cancer": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_CANCER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_CANCER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_CANCER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Cannibal": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_NECROPHAGE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_NECROPHAGE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_NECROPHAGE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Charred": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_CHARRED_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_CHARRED_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_CHARRED_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Chungus": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_CHUNGUS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_CHUNGUS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_CHUNGUS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "CommonCold": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_COMMONCOLD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_COMMONCOLD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_COMMONCOLD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Covid": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_COVID_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_COVID_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_COVID_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "CrohnsDisease": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_CROHNSDISEASE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_CROHNSDISEASE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_CROHNSDISEASE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "DarkOne": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DARKONE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DARKONE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DARKONE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Declawed": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DECLAWED_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DECLAWED_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DECLAWED_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "DeepCut": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DEEPCUT_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DEEPCUT_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DEEPCUT_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "DejaVu": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DEJAVU_DESC",
+    "max_tier": 3,
+    "name_token": "DISORDER_DEJAVU_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DEJAVU_DESC",
+        "passives": {
+          "DejaVu": "10%"
+        },
+        "stats": {}
+      },
+      "2": {
+        "desc_token": "DISORDER_DEJAVU_DESC",
+        "passives": {
+          "DejaVu": "10%"
+        },
+        "stats": {}
+      },
+      "3": {
+        "desc_token": "DISORDER_SEVEREDEJAVU_DESC",
+        "passives": {
+          "ReplaceBrain": "{",
+          "brain": "GenericBrain",
+          "decision_weights": "default",
+          "move_weights": "keep_distance"
+        },
+        "stats": {}
+      }
+    }
+  },
+  "Depression": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DEPRESSION_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DEPRESSION_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DEPRESSION_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Diabetes": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DIABETES_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DIABETES_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DIABETES_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Distemper": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DISTEMPER_DESC",
+    "max_tier": 10,
+    "name_token": "DISORDER_DISTEMPER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "25%",
+          "CritChanceUp": "10",
+          "MissChance": "5",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "10": {
+        "desc_token": "DISORDER_DISTEMPERMAX_DESC",
+        "passives": {
+          "AddCritMultiplier": "250%",
+          "CritChanceUp": "100",
+          "MissChance": "50",
+          "MoveRandomly": "1"
+        },
+        "stats": {}
+      },
+      "2": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "50%",
+          "CritChanceUp": "20",
+          "MissChance": "10",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "3": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "75%",
+          "CritChanceUp": "30",
+          "MissChance": "15",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "4": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "100%",
+          "CritChanceUp": "40",
+          "MissChance": "20",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "5": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "125%",
+          "CritChanceUp": "50",
+          "MissChance": "25",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "6": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "150%",
+          "CritChanceUp": "60",
+          "MissChance": "30",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "7": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "175%",
+          "CritChanceUp": "70",
+          "MissChance": "35",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "8": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "200%",
+          "CritChanceUp": "80",
+          "MissChance": "40",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      },
+      "9": {
+        "desc_token": "DISORDER_DISTEMPER_DESC",
+        "passives": {
+          "AddCritMultiplier": "225%",
+          "CritChanceUp": "90",
+          "MissChance": "45",
+          "PassiveLevelUpAtCombatEnd": "1"
+        },
+        "stats": {}
+      }
+    }
+  },
+  "DownsSyndrome": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DOWNSSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DOWNSSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DOWNSSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Dwarfism": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DWARFISM_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DWARFISM_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DWARFISM_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Dysentery": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DYSENTERY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DYSENTERY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DYSENTERY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Dyskinesia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DYSKINESIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DYSKINESIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DYSKINESIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Dyslexia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_DYSLEXIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_DYSLEXIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_DYSLEXIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "EatingDisorder": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_EATINGDISORDER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_EATINGDISORDER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_EATINGDISORDER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Ebola": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_EBOLA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_EBOLA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_EBOLA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Elephantiasis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ELEPHANTIASIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ELEPHANTIASIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ELEPHANTIASIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Empath": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_EMPATH_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_EMPATH_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_EMPATH_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "EternalYouth": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ETERNALYOUTH_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ETERNALYOUTH_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ETERNALYOUTH_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ExplosiveGas": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_BADGAS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_BADGAS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_BADGAS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "FattyLiver": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_FATTYLIVER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_FATTYLIVER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_FATTYLIVER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "FelineAids": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_FELINEAIDS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_FELINEAIDS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_FELINEAIDS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Fidgety": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_FIDGETY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_FIDGETY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_FIDGETY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "FlamingFists": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_FLAMINGFISTS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_FLAMINGFISTS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_FLAMINGFISTS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Flu": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_THEFLU_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_THEFLU_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_THEFLU_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Fossilized": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_FOSSILIZED_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_FOSSILIZED_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_FOSSILIZED_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "FrozenKnee": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ZOOMIES_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ZOOMIES_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ZOOMIES_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "GamblingAddict": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_GAMBLINGADDICT_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_GAMBLINGADDICT_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_GAMBLINGADDICT_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Gargantuan": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_GARGANTUAN_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_GARGANTUAN_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_GARGANTUAN_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Gastritis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_GASTRITIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_GASTRITIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_GASTRITIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Gigachad": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_GIGACHAD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_GIGACHAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_GIGACHAD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Gigantism": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_GIGANTISM_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_GIGANTISM_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_GIGANTISM_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "GlassBones": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_OSTEOGENESISIMPERFECTA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_OSTEOGENESISIMPERFECTA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_OSTEOGENESISIMPERFECTA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "HeadTrauma": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_HEADTRAUMA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_HEADTRAUMA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_HEADTRAUMA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Hypersomnia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_HYPERSOMNIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_HYPERSOMNIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_HYPERSOMNIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Hypomania": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_HYPOMANIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_HYPOMANIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_HYPOMANIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "IBS": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_IBS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_IBS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_IBS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ImposterSyndrome": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_IMPOSTERSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_IMPOSTERSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_IMPOSTERSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Incontinence": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_INCONTINENCE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_INCONTINENCE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_INCONTINENCE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Infestation": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_INFESTATION_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_INFESTATION_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_INFESTATION_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Insomnia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_INSOMNIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_INSOMNIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_INSOMNIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "IntestinalProlapse": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_INTESTINALPROLAPSE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_INTESTINALRPOLAPSE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_INTESTINALPROLAPSE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Invincible": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_IMMORTAL_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_IMMORTAL_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_IMMORTAL_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Kamikazee": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_KAMIKAZE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_KAMIKAZE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_KAMIKAZE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "KidneyStones": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_KIDNEYSTONE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_KIDNEYSTONE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_KIDNEYSTONE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Leprosy": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_LEPROSY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_LEPROSY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_LEPROSY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Lycanthropy": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_LYCANTHROPY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_LYCANTHROPY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_LYCANTHROPY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Narcolepsy": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_NARCOLEPSY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_NARCOLEPSY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_NARCOLEPSY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Necrosis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_NECROSIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_NECROSIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_NECROSIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Nudist": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_NUDIST_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_NUDIST_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_NUDIST_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "OCD": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_OCD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_OCD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_OCD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "OrangeFetin": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_ORANGEFETIN_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_ORANGEFETIN_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_ORANGEFETIN_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "PTSD": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PTSD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PTSD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PTSD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Pacifist": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PACIFIST_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PACIFIST_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PACIFIST_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Paralyzed": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PARAPELEGIC_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PARAPELEGIC_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PARAPELEGIC_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Paranoia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PARANOIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PARANOIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PARANOIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Phony": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PHONY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PHONY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PHONY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Pica": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PICA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PICA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PICA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "PillPopper": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PILLPOPPER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PILLPOPPER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PILLPOPPER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Pox": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_POX_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_POX_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_POX_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Premonitions": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_THESHINING_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_THESHINING_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_THESHINING_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "PrimordialDwarf": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PRIMORDIALDWARF_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PRIMORDIALDWARF_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PRIMORDIALDWARF_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Psychosis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PSYCHOSIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PSYCHOSIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PSYCHOSIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "PuncturedEye": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PUNCTUREDEYE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PUNCTUREDEYE_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PUNCTUREDEYE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "PurpleFetin": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_PURPLEFETIN_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_PURPLEFETIN_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_PURPLEFETIN_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Rabies": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_RABIES_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_RABIES_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_RABIES_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SavantSyndrome": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SAVANTSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SAVANTSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SAVANTSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ScalyScabs": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SCALYSCABS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SCALYSCABS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SCALYSCABS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Scatological": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SCATOLOGICAL_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SCATOLOGICAL_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SCATOLOGICAL_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Schizophrenia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SCHIZOPHRENIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SCHIZOPHRENIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SCHIZOPHRENIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SchrodingerDisorder": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SCHRODINGERDISORDER_DESC",
+    "max_tier": 1,
+    "name_token": null,
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SCHRODINGERDISORDER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Scleroderma": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SCLERODERMA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SCLERODERMA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SCLERODERMA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SensoryOverloadFace": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SENSORYOVERLOADFACE_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SENSORYOVERLOAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SENSORYOVERLOADFACE_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SensoryOverloadHead": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SENSORYOVERLOADHEAD_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SENSORYOVERLOAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SENSORYOVERLOADHEAD_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SensoryOverloadNeck": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SENSORYOVERLOADNECK_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SENSORYOVERLOAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SENSORYOVERLOADNECK_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SensoryOverloadTrinket": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SENSORYOVERLOADTRINKET_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SENSORYOVERLOAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SENSORYOVERLOADTRINKET_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SensoryOverloadWeapon": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SENSORYOVERLOADWEAPON_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SENSORYOVERLOAD_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SENSORYOVERLOADWEAPON_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SeveredThumb": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SEVEREDTHUMB_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SEVEREDTHUMB_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SEVEREDTHUMB_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Shunned": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SHUNNED_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SHUNNED_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SHUNNED_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Singleton": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SINGLETON_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SINGLETON_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SINGLETON_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SkillShare_Disorder": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SKILLSHAREDISORDER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SKILLSHAREDISORDER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SKILLSHAREDISORDER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SleepParalysis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SLEEPPARALYSIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SLEEPPARALYSIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SLEEPPARALYSIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Sociopathy": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SOCIOPATHY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SOCIOPATHY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SOCIOPATHY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Soulless": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SOULLESS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SOULLESS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SOULLESS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SpinaBifida": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SPINABIFIDA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SPINABIFIDA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SPINABIFIDA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "SpontaneousCombustion": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_SPONTANEOUSCOMBUSTION_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_SPONTANEOUSCOMBUSTION_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_SPONTANEOUSCOMBUSTION_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Stinky": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_STINKY_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_STINKY_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_STINKY_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "StockholmSyndrome": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_STOCKHOLMSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_STOCKHOLMSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_STOCKHOLMSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Tachysensia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TACHYSENSIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TACHYSENSIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TACHYSENSIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "TamperedGenes": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TAMPEREDGENES_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TAMPEREDGENES_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TAMPEREDGENES_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "TheHunger": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_THEHUNGER_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_THEHUNGER_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_THEHUNGER_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Touched": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TOUCHED_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TOUCHED_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TOUCHED_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Tourettes": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TOURETTES_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TOURETTES_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TOURETTES_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Toxoplasmosis": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TOXOPLASMOSIS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TOXOPLASMOSIS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TOXOPLASMOSIS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Traumatophobia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TRAUMATOPHOBIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TRAUMATOPHOBIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TRAUMATOPHOBIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Triskaidekaphobia": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_TRISKAIDEKAPHOBIA_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_TRISKAIDEKAPHOBIA_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_TRISKAIDEKAPHOBIA_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "Vegan": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_VEGAN_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_VEGAN_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_VEGAN_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "ViolentOutbursts": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_VIOLENTOUTBURSTS_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_VIOLENTOUTBURSTS_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_VIOLENTOUTBURSTS_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "WilliamsSyndrome": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_WILLIAMSSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_WILLIAMSSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_WILLIAMSSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "WobblyCat": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_WOBBLYCATSYNDROME_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_WOBBLYCATSYNDROME_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_WOBBLYCATSYNDROME_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  },
+  "WrenchedNeck": {
+    "class": "Disorder",
+    "desc_token": "DISORDER_WRENCHEDNECK_DESC",
+    "max_tier": 1,
+    "name_token": "DISORDER_WRENCHEDNECK_NAME",
+    "tiers": {
+      "1": {
+        "desc_token": "DISORDER_WRENCHEDNECK_DESC",
+        "passives": {},
+        "stats": {}
+      }
+    }
+  }
+}

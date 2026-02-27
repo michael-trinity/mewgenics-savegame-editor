@@ -1,0 +1,733 @@
+{
+  "Flying": {
+    "name": "PASSIVE_FLYING_NAME",
+    "name_resolved": "Antigravity",
+    "desc": "PASSIVE_FLYING_DESC",
+    "desc_resolved": "You have Flying Movement. When you use a Gravity element ability gain +1 [img:spd].\nGravity element spells cost -1 mana.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "Flying": "1",
+        "StatusOnUseElementAbility": {
+          "element": "Gravity",
+          "SpeedUp": "1"
+        },
+        "ElementalManaCostReduction": {
+          "element": "Gravity",
+          "reduction": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLYING2_DESC",
+      "desc_resolved": "You have Flying Movement. When you use a Gravity element ability gain +2 [img:spd].\nGravity element spells cost -2 mana.",
+      "passives": {
+        "Flying": "1",
+        "ExtraMovePoints": "1",
+        "StatusOnUseElementAbility": {
+          "element": "Gravity",
+          "SpeedUp": "2"
+        },
+        "ElementalManaCostReduction": {
+          "element": "Gravity",
+          "reduction": "2"
+        }
+      }
+    }
+  },
+  "SoulShatter": {
+    "name": "PASSIVE_SOULSHATTER_NAME",
+    "name_resolved": "Soul Shatter",
+    "desc": "PASSIVE_SOULSHATTER_DESC",
+    "desc_resolved": "When you kill a unit, deal 1 damage to all enemies.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "DamageEnemiesOnKill": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SOULSHATTER2_DESC",
+      "desc_resolved": "When you kill a unit, deal 2 damage to all enemies.",
+      "passives": {
+        "DamageEnemiesOnKill": "2"
+      }
+    }
+  },
+  "Glow": {
+    "name": "PASSIVE_GLOW_NAME",
+    "name_resolved": "Glow",
+    "desc": "PASSIVE_GLOW_DESC",
+    "desc_resolved": "Your basic attack inflicts Blind.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Blind": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GLOW2_DESC",
+      "desc_resolved": "All damage you deal inflicts Blind.",
+      "passives": {
+        "AddStatusToAllDamage": {
+          "Blind": "1"
+        }
+      }
+    }
+  },
+  "Blink": {
+    "name": "PASSIVE_BLINK_NAME",
+    "name_resolved": "Blink",
+    "desc": "PASSIVE_BLINK_DESC",
+    "desc_resolved": "33% chance to teleport to a random tile when targeted by an enemy.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "ChanceToBackflip": {
+          "ability": "BlinkDodge",
+          "chance": "33%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLINK2_DESC",
+      "desc_resolved": "50% chance to teleport to a random tile when targeted by an enemy.",
+      "passives": {
+        "ChanceToBackflip": {
+          "ability": "BlinkDodge",
+          "chance": "50%"
+        }
+      }
+    }
+  },
+  "FullPower": {
+    "name": "PASSIVE_FULLPOWER_NAME",
+    "name_resolved": "Full Power",
+    "desc": "PASSIVE_FULLPOWER_DESC",
+    "desc_resolved": "While at full mana, your basic attack deals triple damage and has +3 Knockback.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "FullPower": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FULLPOWER2_DESC",
+      "desc_resolved": "While at full mana, your basic attack deals triple damage and has +3 Knockback.\nBonus Ability: Grow Head.",
+      "passives": {
+        "FullPower": "3",
+        "BonusAbility": "GrowHead"
+      }
+    }
+  },
+  "RealityShatter": {
+    "name": "PASSIVE_REALITYSHATTER_NAME",
+    "name_resolved": "Reality Shatter",
+    "desc": "PASSIVE_REALITYSHATTER_DESC",
+    "desc_resolved": "Gravity element abilities spawn Floating Glass.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "ChangeTile": "FloatingGlassTile"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_REALITYSHATTER2_DESC",
+      "desc_resolved": "Gravity element abilities spawn Floating Glass and inflict Bleed 1.",
+      "passives": {
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "ChangeTile": "FloatingGlassTile",
+          "Bleed": "1"
+        }
+      }
+    }
+  },
+  "MentalStorm": {
+    "name": "PASSIVE_MENTALSTORM_NAME",
+    "name_resolved": "Mental Storm",
+    "desc": "PASSIVE_MENTALSTORM_DESC",
+    "desc_resolved": "Gain +1 Charge when you cast a spell.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "StatusOnCastSpell": {
+          "Charge": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MENTALSTORM2_DESC",
+      "desc_resolved": "Gain +2 Charge when you cast a spell.",
+      "passives": {
+        "StatusOnCastSpell": {
+          "Charge": "2"
+        }
+      }
+    }
+  },
+  "Wither": {
+    "name": "PASSIVE_WITHER_NAME",
+    "name_resolved": "Wither",
+    "desc": "PASSIVE_WITHER_DESC",
+    "desc_resolved": "Gravity element abilities inflict a random negative status effect when used on enemies.",
+    "class": "Psychic",
+    "1": {
+      "keyword_tooltips": {},
+      "passives": {
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "Conditional_Enemy": {
+            "RandomStatusFromPool": {
+              "Poison": "1",
+              "Burn": "1",
+              "Bleed": "1",
+              "Blind": "1",
+              "Bruise": "1",
+              "Stun": "1",
+              "Immobile": "1",
+              "Freeze": "1",
+              "Weakness": "1",
+              "Petrify": "1",
+              "MagicWeakness": "1",
+              "Marked": "1",
+              "Sleep": "1",
+              "Charmed": "1",
+              "Slow": "1",
+              "Madness": "1",
+              "Fear": "1",
+              "Confusion": "1",
+              "Tarred": "1"
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WITHER2_DESC",
+      "desc_resolved": "Gravity element abilities inflict a random negative status effect when used on enemies. When you inflict a negative status effect, inflict +1 of that status effect.",
+      "keyword_tooltips": {},
+      "passives": {
+        "AmplifyNegativeStatus": "1",
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "Conditional_Enemy": {
+            "RandomStatusFromPool": {
+              "Poison": "1",
+              "Burn": "1",
+              "Bleed": "1",
+              "Blind": "1",
+              "Bruise": "1",
+              "Stun": "1",
+              "Immobile": "1",
+              "Freeze": "1",
+              "Weakness": "1",
+              "Petrify": "1",
+              "MagicWeakness": "1",
+              "Marked": "1",
+              "Sleep": "1",
+              "Charmed": "1",
+              "Slow": "1",
+              "Madness": "1",
+              "Fear": "1",
+              "Confusion": "1",
+              "Tarred": "1",
+              "AllStatsUp": "-1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Flourish": {
+    "name": "PASSIVE_FLOURISH_NAME",
+    "name_resolved": "Flourish",
+    "desc": "PASSIVE_FLOURISH_DESC",
+    "desc_resolved": "Gravity element abilities do not harm allies. Gravity element abilities give a random positive status effect when used on allies. When you inflict a positive status effect, inflict +1 of that status effect.",
+    "class": "Psychic",
+    "1": {
+      "keyword_tooltips": {},
+      "passives": {
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "Conditional_Ally": {
+            "ClearNegativeEffects": "1",
+            "RandomStatusFromPool": {
+              "Quivered": "1",
+              "MoveQuivered": "1",
+              "Thorns": "1",
+              "Brace": "1",
+              "Shield": "1",
+              "DivineShield": "1",
+              "BleedThorns": "1",
+              "KineticSpikes": "1",
+              "Reflect": "1",
+              "DiminishingHealthRegen": "1",
+              "Charge": "1",
+              "AllStatsUp": "1"
+            }
+          }
+        },
+        "AmplifyPositiveStatus": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FLOURISH2_DESC",
+      "desc_resolved": "Gravity element abilities do not harm allies. Gravity element abilities give a random positive status effect when used on allies. When you inflict a positive status effect, inflict +2 of that status effect.",
+      "keyword_tooltips": {},
+      "passives": {
+        "AddStatusToElementAbilities": {
+          "element": "Gravity",
+          "Conditional_Ally": {
+            "ClearNegativeEffects": "1",
+            "RandomStatusFromPool": {
+              "Quivered": "1",
+              "MoveQuivered": "1",
+              "Thorns": "1",
+              "Brace": "1",
+              "Shield": "1",
+              "DivineShield": "1",
+              "BleedThorns": "1",
+              "KineticSpikes": "1",
+              "Reflect": "1",
+              "DiminishingHealthRegen": "1",
+              "Charge": "1",
+              "AllStatsUp": "1"
+            }
+          }
+        },
+        "AmplifyPositiveStatus": "2"
+      }
+    }
+  },
+  "PsySmack": {
+    "name": "PASSIVE_PSYSMACK_NAME",
+    "name_resolved": "Psy Smack",
+    "desc": "PASSIVE_PSYSMACK_DESC",
+    "desc_resolved": "Knockback damage you and your allies deal is doubled.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "AllyMultiplyKnockbackDamage": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PSYSMACK2_DESC",
+      "desc_resolved": "Knockback damage and distance you and your allies deal is doubled and has Chain Knockback.",
+      "passives": {
+        "AllyMultiplyKnockbackDamage": "2",
+        "AllyMultiplyKnockbackDistance": "2",
+        "AllyChainKnockback": "1"
+      }
+    }
+  },
+  "Beckon": {
+    "name": "PASSIVE_BECKON_NAME",
+    "name_resolved": "Beckon",
+    "desc": "PASSIVE_BECKON_DESC",
+    "desc_resolved": "Your basic attack has +4 Knockback.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Knockback": "4"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BECKON2_DESC",
+      "desc_resolved": "Your basic attack has +4 Knockback and Chain Knockback.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Knockback": "4",
+          "OverrideChainKnockback": "0",
+          "OverrideChainKnockbackDamage": "0"
+        }
+      }
+    }
+  },
+  "MindTempest": {
+    "name": "PASSIVE_MINDTEMPEST_NAME",
+    "name_resolved": "Mind Tempest",
+    "desc": "PASSIVE_MINDTEMPEST_DESC",
+    "desc_resolved": "After every sixth spell you cast, gain All Stats Up and +1 Magic Damage.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "StatusEveryXSpellCasts": {
+          "stacks": "6",
+          "AllStatsUp": "1",
+          "SpellDamageUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MINDTEMPEST2_DESC",
+      "desc_resolved": "After every sixth spell you cast, gain All Stats Up, +1 Magic Damage, and reduce the cost of your spells by 1 mana.",
+      "passives": {
+        "StatusEveryXSpellCasts": {
+          "stacks": "6",
+          "AllStatsUp": "1",
+          "ReduceManaCost": "1",
+          "SpellDamageUp": "1"
+        }
+      }
+    }
+  },
+  "Overflow": {
+    "name": "PASSIVE_OVERFLOW_NAME",
+    "name_resolved": "Overflow",
+    "desc": "PASSIVE_OVERFLOW_DESC",
+    "desc_resolved": "While at full mana, gain +2 Brace and Flying Movement. Your mana is uncapped.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "PassiveWhenAtFullMana": {
+          "Brace": "2",
+          "Flying": "1"
+        },
+        "UncappedMana": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OVERFLOW2_DESC",
+      "desc_resolved": "While at full mana, gain +2 Brace and Teleportation. Your mana is uncapped.",
+      "passives": {
+        "PassiveWhenAtFullMana": {
+          "Brace": "3",
+          "Flying": "1",
+          "AddMovement": "20",
+          "ReplaceBasicMove": "Teleport"
+        },
+        "UncappedMana": "1"
+      }
+    }
+  },
+  "Omniscience": {
+    "name": "PASSIVE_OMNISCIENCE_NAME",
+    "name_resolved": "Omniscience",
+    "desc": "PASSIVE_OMNISCIENCE_DESC",
+    "desc_resolved": "You can see EVERYTHING. Line of sight restrictions are ignored.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "RemoveLineOfSightRestrictions": "1",
+        "ShowHiddenThings": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OMNISCIENCE2_DESC",
+      "desc_resolved": "You can see EVERYTHING. Line of sight restrictions are ignored.",
+      "passives": {
+        "RemoveLineOfSightRestrictions": "1",
+        "ShowHiddenThings": "1"
+      },
+      "stats": {
+        "int": "4"
+      }
+    }
+  },
+  "PsionicRepel": {
+    "name": "PASSIVE_PSIONICREPEL_NAME",
+    "name_resolved": "Psionic Repel",
+    "desc": "PASSIVE_PSIONICREPEL_DESC",
+    "desc_resolved": "Units that attack or contact you get knocked back 10 tiles.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "RevengeDamage": {
+          "knockback": "10"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PSIONICREPEL2_DESC",
+      "desc_resolved": "Units that attack or contact you get knocked back 10 tiles and are Immobilized.",
+      "passives": {
+        "RevengeDamage": {
+          "knockback": "10",
+          "effects": {
+            "Immobile": "1"
+          }
+        }
+      }
+    }
+  },
+  "Enlightened": {
+    "name": "PASSIVE_ENLIGHTENED_NAME",
+    "name_resolved": "Enlightened",
+    "desc": "PASSIVE_ENLIGHTENED_DESC",
+    "desc_resolved": "While at full mana, the first spell you cast each turn is free.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "FreeSpellsAtFullMana": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENLIGHTENED2_DESC",
+      "desc_resolved": "While at full mana, all of your spells are free to cast once a turn.",
+      "passives": {
+        "EachSpellFreeAtFullMana": "1"
+      }
+    }
+  },
+  "MadVisage": {
+    "name": "PASSIVE_MADVISAGE_NAME",
+    "name_resolved": "Mad Visage",
+    "desc": "PASSIVE_MADVISAGE_DESC",
+    "desc_resolved": "All injuries you get are Disfigured.\nWhile at full mana, your basic action inflicts Madness.\nWhile you have 0 or less [img:cha] you can attack an additional time each turn.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "ForceSpecificInjury": "cha",
+        "PassiveWhenAtFullMana": {
+          "AddStatusToBasicAttack": {
+            "Madness": "1"
+          }
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "cha": "0"
+          },
+          "passives": {
+            "ExtraBasicAttacks": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MADVISAGE2_DESC",
+      "desc_resolved": "All injuries you get are Disfigured.\nUnits that contact or attack you get Madness.\nWhile at full mana, your basic attack inflicts Madness.\nWhile at 0 [img:cha] you can attack 2 additional times each turn.",
+      "passives": {
+        "ForceSpecificInjury": "cha",
+        "PassiveWhenAtFullMana": {
+          "AddStatusToBasicAttack": {
+            "Madness": "1"
+          }
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "cha": "0"
+          },
+          "passives": {
+            "ExtraBasicAttacks": "2"
+          }
+        },
+        "RevengeDamage": {
+          "effects": {
+            "Madness": "1"
+          }
+        }
+      }
+    }
+  },
+  "PowerUp": {
+    "name": "PASSIVE_POWERUP_NAME",
+    "name_resolved": "Power Up",
+    "desc": "PASSIVE_POWERUP_DESC",
+    "desc_resolved": "When you gain excess mana, gain +1 Magic Damage and +1 [img:int].",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "StatusOnOverMana": {
+          "SpellDamageUp": "1",
+          "IntelligenceUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_POWERUP2_DESC",
+      "desc_resolved": "When you gain excess mana, gain +1 Magic Damage, +1 [img:int]. and +1 [img:divineshield].",
+      "passives": {
+        "StatusOnOverMana": {
+          "SpellDamageUp": "1",
+          "IntelligenceUp": "1",
+          "DivineShield": "1"
+        }
+      }
+    }
+  },
+  "TrueSight": {
+    "name": "PASSIVE_TRUESIGHT_NAME",
+    "name_resolved": "True Sight",
+    "desc": "PASSIVE_TRUESIGHT_DESC",
+    "desc_resolved": "You and your allies can't miss enemies within your line of sight.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "LineOfSightTrueSightAura": "0"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TRUESIGHT2_DESC",
+      "desc_resolved": "You and your allies can't miss enemies within your line of sight. Allied physical attacks gain +50% critical hit chance against those enemies.",
+      "passives": {
+        "LineOfSightTrueSightAura": ".5"
+      }
+    }
+  },
+  "Radiation": {
+    "name": "PASSIVE_BRAINGEYSER_NAME",
+    "name_resolved": "Braingeyser",
+    "desc": "PASSIVE_BRAINGEYSER_DESC",
+    "desc_resolved": "When you gain excess mana, emit that many Sparkles.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "ScaledStatusOnOverMana": {
+          "RandomMagicMissile": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BRAINGEYSER2_DESC",
+      "desc_resolved": "When you gain excess mana, emit that many Sparkles and remove all your debuffs.",
+      "passives": {
+        "ScaledStatusOnOverMana": {
+          "RandomMagicMissile": "1",
+          "Cleanse": "0"
+        }
+      }
+    }
+  },
+  "GravityWell": {
+    "name": "PASSIVE_GRAVITYWELL_NAME",
+    "name_resolved": "Gravity Well",
+    "desc": "PASSIVE_GRAVITYWELL_DESC",
+    "desc_resolved": "When a unit is knocked through a tile adjacent to you, stop it and inflict Stun.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "GravityWell": {
+          "damage": "0",
+          "cant_miss": "true",
+          "type": "status",
+          "effects": {
+            "Stun": "1"
+          },
+          "elements": [
+            "Gravity"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GRAVITYWELL2_DESC",
+      "desc_resolved": "When a unit is knocked through a tile adjacent to you, stop it, inflict Stun and deal 5 damage to it.",
+      "passives": {
+        "GravityWell": {
+          "damage": "5",
+          "cant_miss": "true",
+          "type": "status",
+          "effects": {
+            "Stun": "1"
+          },
+          "elements": [
+            "Gravity"
+          ]
+        }
+      }
+    }
+  },
+  "Drag": {
+    "name": "PASSIVE_DRAG_NAME",
+    "name_resolved": "Drag",
+    "desc": "PASSIVE_DRAG_DESC",
+    "desc_resolved": "Units that you knockback take 1 damage for each tile they pass through.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "StatusThingsKnockedBack": {
+          "Drag": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DRAG2_DESC",
+      "desc_resolved": "Units that you knockback take 2 damage for each tile they pass through.",
+      "passives": {
+        "StatusThingsKnockedBack": {
+          "Drag": "2"
+        }
+      }
+    }
+  },
+  "Twiddle": {
+    "name": "PASSIVE_TWIDDLE_NAME",
+    "name_resolved": "Twiddle",
+    "desc": "PASSIVE_TWIDDLE_DESC",
+    "desc_resolved": "Your basic attack deals 0 damage, but you can use it 2 additional times each turn.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "BasicAttackDamageMultiplier": "0",
+        "ExtraBasicAttacks": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TWIDDLE2_DESC",
+      "desc_resolved": "Start each battle with +5 Bonus Attacks. Your basic attack deals 0 damage, but you can use it 2 additional times each turn.",
+      "passives": {
+        "BasicAttackDamageMultiplier": "0",
+        "ExtraBasicAttacks": "2",
+        "Quivered": "5"
+      }
+    }
+  },
+  "RepressedMemories": {
+    "name": "PASSIVE_REPRESSEDMEMORIES_NAME",
+    "name_resolved": "Repressed Memories",
+    "desc": "PASSIVE_REPRESSEDMEMORIES_DESC",
+    "desc_resolved": "When you spend mana, cast a random Psychic spell that costs less than the mana spent.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "ScaledStatusOnSpendMana": {
+          "RepressedMemoriesMetronome": {
+            "stacks": "1",
+            "pool": "Psychic"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_REPRESSEDMEMORIES2_DESC",
+      "desc_resolved": "When you spend mana, cast a random spell from any class that costs less than the mana spent.",
+      "passives": {
+        "ScaledStatusOnSpendMana": {
+          "RepressedMemoriesMetronome": {
+            "stacks": "1",
+            "pool": "Jester"
+          }
+        }
+      }
+    }
+  },
+  "EldritchVisage": {
+    "name": "PASSIVE_ELDRITCHVISAGE_NAME",
+    "name_resolved": "Eldritch Visage",
+    "desc": "PASSIVE_ELDRITCHVISAGE_DESC",
+    "desc_resolved": "At the start of your turn, inflict Magic Weakness 1 on all enemies in your line of sight.",
+    "class": "Psychic",
+    "1": {
+      "passives": {
+        "AutocastEachTurnBegin": "MindCrack_EldritchVisage"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ELDRITCHVISAGE2_DESC",
+      "desc_resolved": "At the start of your turn, inflict Magic Weakness 1 and Marked on all enemies in your line of sight.",
+      "passives": {
+        "AutocastEachTurnBegin": "MindCrack_EldritchVisage2"
+      }
+    }
+  }
+}

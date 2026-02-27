@@ -1,0 +1,609 @@
+{
+  "Guillotina2Head": {
+    "graphics": {
+      "movieclip": "Guillotina2Head",
+      "name": "ENEMY_GUILLOTINA_NAME",
+      "name_resolved": "Guillotina",
+      "move_speed_sync_frames": "29",
+      "tooltip": "ENEMY_TINA2HEAD_DESC",
+      "tooltip_resolved": "It may be separated from her body, but they are still working together."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "8",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "2",
+      "dispersed_bonus_turns_before_cats": "true",
+      "initiative": "999",
+      "corpse_health": "indestructible",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "250",
+      "weak_threshold": "50",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TinaHeadGutSpear",
+      "spells": [
+        "YeetTowardsBuddy",
+        "Magnetize",
+        "Guillotina2Rage",
+        "GuillotinaTossCollide",
+        "Tina2Call"
+      ]
+    },
+    "passives": {
+      "Buddy": "Guillotina2Body",
+      "FormChanger": {
+        "Normal": {
+          "passives": {
+            "AbilityWhenBuddyDies": "Guillotina2Rage"
+          }
+        },
+        "Rage": {
+          "partial_animation_suffix": "Rage",
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_random": [
+                "Magnetize,",
+                "attack,",
+                "GuillotinaTossCollide,",
+                "YeetTowardsBuddy,",
+                "Tina2Call,",
+                "Tina2Call"
+              ]
+            },
+            "fallback": {
+              "do_best": [
+                "Magnetize,",
+                "attack,",
+                "GuillotinaTossCollide,",
+                "YeetTowardsBuddy,",
+                "Tina2Call"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance_always_move",
+            "fallback_advances_pattern": "true",
+            "stun_advances_pattern": "true"
+          },
+          "turns": {
+            "dispersed_bonus_turns": "3"
+          }
+        },
+        "initial_form": "Normal"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "YeetTowardsBuddy"
+      },
+      "fallback": {
+        "do_priority": [
+          "attack,",
+          "Magnetize,",
+          "YeetTowardsBuddy"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "true"
+    }
+  },
+  "Guillotina2Body": {
+    "graphics": {
+      "movieclip": "Guillotina2Body",
+      "name": "ENEMY_GUILLOTINA_NAME",
+      "name_resolved": "Guillotina",
+      "shadow_size": "2",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_TINA2BODY_DESC",
+      "tooltip_resolved": "It may be separated from her head, but they are still working together."
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "initiative": "-999",
+      "movement": "1",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "250",
+      "weak_threshold": "50",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TinaBodySlam",
+      "spells": [
+        "TinaBodySlamMax",
+        "Guillotina2Rage",
+        "TinaBodySlamRage",
+        "TinaTantrum"
+      ]
+    },
+    "passives": {
+      "Buddy": "Guillotina2Head",
+      "Trample": "3",
+      "FormChanger": {
+        "Normal": {
+          "passives": {
+            "AbilityWhenBuddyDies": "Guillotina2Rage"
+          }
+        },
+        "Rage": {
+          "partial_animation_suffix": "Rage",
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "TinaBodySlamRage"
+            },
+            "decision_weights": "careless",
+            "move_weights": "stay_close_move_far"
+          },
+          "turns": {
+            "dispersed_bonus_turns": "1"
+          },
+          "passives": {
+            "AddMovement": "3"
+          }
+        },
+        "initial_form": "Normal"
+      },
+      "PassiveWhenDead": {
+        "AddStatusToTrampleDamage": {
+          "Bruise": "1"
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*TinaBodySlamMax,",
+          "*TinaBodySlam,",
+          "TinaBodySlamMax,",
+          "TinaBodySlam"
+        ]
+      },
+      "decision_weights": "careless",
+      "move_weights": "stay_close"
+    }
+  },
+  "Guillotina1": {
+    "graphics": {
+      "movieclip": "Guillotina1",
+      "name": "ENEMY_GUILLOTINA_NAME",
+      "name_resolved": "Guillotina",
+      "shadow_size": "2",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_TINA1_DESC",
+      "tooltip_resolved": "She lusts with a never ending hunger!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "4",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "corpse_health": "indestructible",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "dispersed_bonus_turns": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "400",
+      "weak_threshold": "50"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TinaBasicBigMelee",
+      "spells": [
+        "TinaBasicJump",
+        "TinaJumpAttack",
+        "TinaSuck",
+        "TinaSpit",
+        "TinaThrow",
+        "Guillotina1Rage",
+        "BellyPound",
+        "Digest",
+        "TinaSuck2",
+        "TinaSpit2"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "GuillotinaDeathHead": "1",
+      "FormChanger": {
+        "Normal": {
+          "attack": "TinaBasicBigMeleeA",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "MouthFull",
+              "form_hasnot": "Normal"
+            },
+            "AbilityHealthThreshold": {
+              "threshold": "200",
+              "ability": "Guillotina1Rage"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*Guillotina1Rage,",
+                "*TinaSuck"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "reset_pattern_on_formswitch": "true",
+            "fallback_advances_pattern": "true"
+          }
+        },
+        "MouthFull": {
+          "partial_animation_suffix": "MouthFull",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "MouthFull",
+              "form_hasnot": "Normal"
+            },
+            "ChanceToSpitOnDamage": {
+              "chance_per_damage": "2%",
+              "ability": "TinaSpit"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "*TinaSpit"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "Rage": {
+          "partial_animation_suffix": "Rage",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "BellyFull",
+              "form_hasnot": "Rage"
+            },
+            "AddMovement": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*TinaSuck2,",
+                "TinaSuck2,",
+                "*attack,",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "BellyFull": {
+          "partial_animation_suffix": "Belly",
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "BellyFull",
+              "form_hasnot": "Rage"
+            },
+            "ChanceToSpitOnDamage": {
+              "chance_per_damage": "2%",
+              "ability": "TinaSpit2"
+            },
+            "DigestDeadBodies": "Digest",
+            "AddMovement": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*attack,",
+                "attack,",
+                "BellyPound"
+              ],
+              "do": "*Digest"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "initial_form": "Normal"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Guillotina3Body": {
+    "graphics": {
+      "movieclip": "Guillotina3Body",
+      "name": "ENEMY_GUILLOTINA_NAME",
+      "name_resolved": "Guillotina",
+      "shadow_size": "2",
+      "uifloaters_offset": "2",
+      "tooltip": "ENEMY_TINA3BODY_DESC",
+      "tooltip_resolved": "It's trying to find it's head..."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "2",
+      "corpse_health": "0",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "dispersed_bonus_turns": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "400",
+      "weak_threshold": "50",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "spells": [
+        "G3RunToHead",
+        "G3GrabHead",
+        "G3TossHead",
+        "G3Scream_Hex",
+        "G3Shake",
+        "G3SpawnMama",
+        "G3RageShake"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "Buddy": "Guillotina3Head",
+      "FormChanger": {
+        "Normal": {
+          "passives": {
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "Holding",
+              "form_hasnot": "Normal"
+            },
+            "AbilityHealthThreshold": {
+              "threshold": "250",
+              "ability": "G3SpawnMama",
+              "use_ai": "true",
+              "also_use_if_buddy_is_dead": "true"
+            },
+            "AggroTargetIsBuddy": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "auto_orient": "false",
+            "virtual_abilities": {
+              "MoveToHead": {
+                "ability": "G3RunToHead",
+                "move_for_ability": "G3GrabHead",
+                "move_weights": "minimum_move"
+              }
+            },
+            "bonusturn_pattern": {
+              "do_priority": [
+                "G3GrabHead",
+                "move",
+                "*G3GrabHead"
+              ]
+            },
+            "pattern": {
+              "do": "**G3Shake"
+            },
+            "decision_weights": "default",
+            "move_weights": "towards_aggro",
+            "reset_pattern_on_formswitch": "true",
+            "fallback_advances_pattern": "true"
+          }
+        },
+        "Holding": {
+          "partial_animation_suffix": "Holding",
+          "passives": {
+            "AddMovement": "1",
+            "FormChangeWhileHasStatus": {
+              "status": "Consuming",
+              "form_has": "Holding",
+              "form_hasnot": "Normal"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "G3TossHead"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_far",
+            "end_turn_on_formswitch": "true",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "Rage": {
+          "partial_animation_suffix": "Rage",
+          "passives": {
+            "AddMovement": "1",
+            "SpawnThingOnDamage": {
+              "object": "Maggot",
+              "good": "false",
+              "spawn_on_death_hit": "false"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "move",
+              "do_all": [
+                "move",
+                "G3RageShake"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "blind_move_far",
+            "reset_pattern_on_formswitch": "true"
+          }
+        },
+        "initial_form": "Normal"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Guillotina3Head": {
+    "graphics": {
+      "movieclip": "Guillotina3Head",
+      "name": "ENEMY_GUILLOTINA_NAME",
+      "name_resolved": "Guillotina",
+      "tooltip": "ENEMY_TINA3HEAD_DESC",
+      "tooltip_resolved": "Sorry I'm dead..."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "corpse_health": "indestructible",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "200",
+      "weak_threshold": "50",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "G3PrisonSpit",
+      "spells": [
+        "G3CoughFly",
+        "G3CallForHelp"
+      ]
+    },
+    "passives": {
+      "Buddy": "Guillotina3Body",
+      "AbilityReaction": {
+        "ability": "G3CallForHelp",
+        "only_when_not_your_turn": "true",
+        "enemies_only": "true",
+        "ability_damage_only": "true"
+      },
+      "MinimumKnockbackFromPhysicalAttacks": "1",
+      "Trample": "3",
+      "FormChanger": {
+        "Normal": {
+          "turns": {
+            "takes_turns": "true"
+          }
+        },
+        "Holding": {
+          "turns": {
+            "takes_turns": "false"
+          }
+        },
+        "Rage": {
+          "turns": {
+            "takes_turns": "true"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "pattern": {
+              "do": "G3CallForHelp"
+            }
+          }
+        }
+      },
+      "SyncFormsWithBuddy": {
+        "no_buddy": "Rage"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close",
+      "pattern": {
+        "do_priority": [
+          "attack",
+          "G3CallForHelp"
+        ]
+      }
+    }
+  },
+  "MamaMaggotTina": {
+    "variant_of": "MaggotLord",
+    "graphics": {
+      "spawnin_animation": "tinaspawnin"
+    }
+  }
+}

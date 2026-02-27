@@ -1,0 +1,584 @@
+{
+  "Bunny": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Bunny",
+      "custom_cat_data": "Bunny",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "Bunny!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Beaver": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Beaver",
+      "custom_cat_data": "Beaver",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "Beaver!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Pig": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Pig",
+      "custom_cat_data": "Pig",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Pig!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Dog": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Dog",
+      "custom_cat_data": "Dog",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Dog!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Skunk": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Skunk",
+      "custom_cat_data": "Skunk",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "Skunk!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Porcupine": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Porcupine",
+      "custom_cat_data": "Porcupine",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "Porcupine!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Isaac": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Isaac",
+      "custom_cat_data": "Isaac",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Isaac!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Edmund": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Edmund",
+      "custom_cat_data": "Edmund",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Edmund!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Tyler": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Tyler",
+      "custom_cat_data": "Tyler",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Tyler!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "FijiMermaid": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Fiji Mermaid",
+      "custom_cat_data": "FijiMermaid",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "The Fiji Mermaid!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "JerseyDevil": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Jersey Devil",
+      "custom_cat_data": "JerseyDevil",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "The Jersey Devil!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Sonichu": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Sonichu",
+      "custom_cat_data": "Sonichu",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Sonichu!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Bigfoot": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Bigfoot",
+      "custom_cat_data": "Bigfoot",
+      "scale": "1.3",
+      "shadow_size": "1.3",
+      "tooltip": "Bigfoot!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Nessie": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Nessie",
+      "custom_cat_data": "Nessie",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Nessie!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Grey": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Grey Alien",
+      "custom_cat_data": "Grey",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Grey Alien!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Mothman": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Mothman",
+      "custom_cat_data": "Mothman",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Mothman!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Slenderman": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Slendermann",
+      "custom_cat_data": "Slenderman",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "Slenderman!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "YOffset": ".35",
+      "IgnoreTiles": "1",
+      "StatusImmunity": "Webbed"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  }
+}

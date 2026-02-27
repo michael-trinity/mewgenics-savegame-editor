@@ -1,0 +1,298 @@
+{
+  "StacyMutant1": {
+    "intro": {
+      "title": "QEVENT_STACYMUTANT1_NAME",
+      "title_resolved": "Stacy Experiment",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "stacy_buff",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "WorldEventLegacyToken_StacyMutant"
+          },
+          "reward": {
+            "prompt": "QEVENT_STACYMUTANT1_QUES2",
+            "prompt_resolved": "{catname} approaches the machine and considers {his} options.\n\nWhat body mutation should {he} give the Stacy clone?"
+          },
+          "else": {
+            "prompt": "QEVENT_STACYMUTANT1_QUES1",
+            "prompt_resolved": "{catname} finds a large machine with several buttons.\n\nThrough the transparent window {he} sees a strange cat with an extra head."
+          }
+        }
+      },
+      "options": {
+        "thorns": {
+          "label": "QEVENT_STACYMUTANT1_ANSW1",
+          "label_resolved": "Thorns",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT1_REW1",
+            "prompt_resolved": "A robotic arm swings down and injects the clone.\n\nThorns burst through the skin of the cat!",
+            "set_adventure_token": "StacyMutant_Thorns",
+            "event_now": "StacyMutant2"
+          }
+        },
+        "brace": {
+          "label": "QEVENT_STACYMUTANT1_ANSW2",
+          "label_resolved": "Brace",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT1_REW2",
+            "prompt_resolved": "A robotic arm swings down and injects the clone, giving it Brace!",
+            "set_adventure_token": "StacyMutant_Brace",
+            "event_now": "StacyMutant2"
+          }
+        },
+        "holy": {
+          "label": "QEVENT_STACYMUTANT1_ANSW3",
+          "label_resolved": "Holy Shield",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT1_REW3",
+            "prompt_resolved": "A robotic arm swings down and injects the clone...\n\nIt begins to glow with the aura of a Holy Shield!",
+            "set_adventure_token": "StacyMutant_Holy",
+            "event_now": "StacyMutant2"
+          }
+        },
+        "skip": {
+          "label": "QEVENT_STACYMUTANT1_ANSW4",
+          "label_resolved": "No Thanks",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "3",
+            "prompt": "QEVENT_STACYMUTANT1_REW4_B",
+            "prompt_resolved": "{catname} has been poisoned and feels sick...",
+            "gain_disorder_from_pool": "all_disorders",
+            "self_status_next_fight": {
+              "Poison": "3"
+            },
+            "event_now": "StacyMutant2"
+          }
+        }
+      }
+    }
+  },
+  "StacyMutant2": {
+    "intro": {
+      "title": "QEVENT_STACYMUTANT2_NAME",
+      "title_resolved": "Stacy Experiment",
+      "cat_choice": "random",
+      "different_from_last_x_cats": "1",
+      "subject_clip": "EventSubject",
+      "subject_frame": "stacy_element",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_STACYMUTANT2_QUES",
+      "prompt_resolved": "The machine presents buttons to {catname} with elemental symbols on them.",
+      "options": {
+        "fire": {
+          "label": "QEVENT_STACYMUTANT2_ANSW1",
+          "label_resolved": "Fire",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT2_REW1",
+            "prompt_resolved": "The machine injects the clone...\n\nIts fur turns crimson and a flaming orb appears above its head!",
+            "set_adventure_token": "StacyMutant_Fire",
+            "event_now": "StacyMutant3"
+          }
+        },
+        "ice": {
+          "label": "QEVENT_STACYMUTANT2_ANSW2",
+          "label_resolved": "Ice",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT2_REW2",
+            "prompt_resolved": "The clone turns icy blue as it is infused with elemental ice!",
+            "set_adventure_token": "StacyMutant_Ice",
+            "event_now": "StacyMutant3"
+          }
+        },
+        "lightning": {
+          "label": "QEVENT_STACYMUTANT2_ANSW3",
+          "label_resolved": "Lightning",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT2_REW3",
+            "prompt_resolved": "Sparks of lightning flicker through the clone's fur!",
+            "set_adventure_token": "StacyMutant_Lightning",
+            "event_now": "StacyMutant3"
+          }
+        },
+        "skip": {
+          "label": "QEVENT_STACYMUTANT2_ANSW4",
+          "label_resolved": "No Thanks",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "3",
+            "prompt": "QEVENT_STACYMUTANT2_REW4",
+            "prompt_resolved": "{catname} pulls the abort lever and the machine injects {him} instead!",
+            "gain_disorder_from_pool": "all_disorders",
+            "get_parasite_from_pool": "parasites",
+            "event_now": "StacyMutant3"
+          }
+        }
+      }
+    }
+  },
+  "StacyMutant3": {
+    "intro": {
+      "title": "QEVENT_STACYMUTANT3_NAME",
+      "title_resolved": "Stacy Experiment",
+      "cat_choice": "random",
+      "different_from_last_x_cats": "2",
+      "subject_clip": "EventSubject",
+      "subject_frame": "stacy_stats",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_STACYMUTANT3_QUES",
+      "prompt_resolved": "The clone through the window purrs with excitement as the machine presents {catname} with stat modification buttons...",
+      "options": {
+        "hp": {
+          "label": "QEVENT_STACYMUTANT3_ANSW1",
+          "label_resolved": "Health Up, Speed Down",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT3_REW1",
+            "prompt_resolved": "The clone has been modified with Health Up and Speed Down!",
+            "set_adventure_token": "StacyMutant_Health",
+            "event_now": "StacyMutant4"
+          }
+        },
+        "damage": {
+          "label": "QEVENT_STACYMUTANT3_ANSW2",
+          "label_resolved": "Damage Up, Health Down",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT3_REW2",
+            "prompt_resolved": "The clone has been modified with Damage Up and Health Down!",
+            "set_adventure_token": "StacyMutant_Damage",
+            "event_now": "StacyMutant4"
+          }
+        },
+        "speed": {
+          "label": "QEVENT_STACYMUTANT3_ANSW3",
+          "label_resolved": "Speed Up, Damage Down",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT3_REW3",
+            "prompt_resolved": "The clone has gained Speed Up and Damage Down!",
+            "set_adventure_token": "StacyMutant_Speed",
+            "event_now": "StacyMutant4"
+          }
+        },
+        "skip": {
+          "label": "QEVENT_STACYMUTANT3_ANSW4",
+          "label_resolved": "No Thanks",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "3",
+            "prompt": "QEVENT_STACYMUTANT3_REW4",
+            "prompt_resolved": "The machine injects {catname}. {He} screams in pain as {his} entire body is torn and broken!",
+            "injury": "lck",
+            "event_now": "StacyMutant4"
+          }
+        }
+      }
+    }
+  },
+  "StacyMutant4": {
+    "intro": {
+      "title": "QEVENT_STACYMUTANT4_NAME",
+      "title_resolved": "Stacy Experiment",
+      "cat_choice": "random",
+      "different_from_last_x_cats": "3",
+      "subject_clip": "EventSubject",
+      "subject_frame": "stacy_special",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_STACYMUTANT4_QUES",
+      "prompt_resolved": "The final phase of mutating the clone is here. {catname} must choose a head mutation!",
+      "options": {
+        "double": {
+          "label": "QEVENT_STACYMUTANT4_ANSW1",
+          "label_resolved": "Double Head",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT4_REW1",
+            "prompt_resolved": "An additional head bursts out of the clone!\n\nIt now has an extra turn every round.",
+            "set_adventure_token": "StacyMutant_DoubleHead",
+            "set_legacy_token": "WorldEventLegacyToken_StacyMutant"
+          }
+        },
+        "counter": {
+          "label": "QEVENT_STACYMUTANT4_ANSW2",
+          "label_resolved": "Third Paw",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT4_REW2",
+            "prompt_resolved": "The machine injects the clone for a final time...\n\nA third paw grows out of its head, giving it bleed and counter attacks!",
+            "set_adventure_token": "StacyMutant_Counter",
+            "set_legacy_token": "WorldEventLegacyToken_StacyMutant"
+          }
+        },
+        "reflect": {
+          "label": "QEVENT_STACYMUTANT4_ANSW3",
+          "label_resolved": "Mirror Shine",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "QEVENT_STACYMUTANT4_REW3",
+            "prompt_resolved": "The clone's eyes become reflective mirrors!\n\nIt has gained Projectile Reflection and Magic Release!",
+            "set_adventure_token": "StacyMutant_Mirror",
+            "set_legacy_token": "WorldEventLegacyToken_StacyMutant"
+          }
+        },
+        "skip": {
+          "label": "QEVENT_STACYMUTANT4_ANSW4",
+          "label_resolved": "No Thanks",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "3",
+            "prompt": "QEVENT_STACYMUTANT4_REW5",
+            "prompt_resolved": "{Catname} feels exhausted...",
+            "set_legacy_token": "WorldEventLegacyToken_StacyMutant",
+            "gain_disorder_from_pool": "all_disorders",
+            "self_status_next_fight": {
+              "NoHealthRegen": "1",
+              "NoManaRegen": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

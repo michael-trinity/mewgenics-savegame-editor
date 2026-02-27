@@ -1,0 +1,324 @@
+{
+  "TKNG_Roulette": {
+    "template": "spell",
+    "meta": {
+      "name": "EABILITY_ROULETTE_NAME",
+      "name_resolved": "Roulette."
+    },
+    "graphics": {
+      "prime_animation": "command3",
+      "custom_priming_animation": "idleCommand3",
+      "animation": "releaseCommand3",
+      "dont_visualize_ai": "true",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "60"
+      ],
+      "random_delay": [
+        "70",
+        "100"
+      ]
+    },
+    "cost": {
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all_except_random_empty",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "min_aoe": "6",
+      "max_aoe": "10",
+      "knockback_mode": "none",
+      "prioritize_face_camera": "true"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "EndTurn": "1"
+      }
+    }
+  },
+  "TKNG_Kneel": {
+    "template": "spell",
+    "meta": {
+      "name": "EABILITY_KNEEL_NAME",
+      "name_resolved": "Kneel."
+    },
+    "graphics": {
+      "prime_animation": "command2",
+      "custom_priming_animation": "idleCommand2",
+      "animation": "releaseCommand2",
+      "dont_visualize_ai": "true",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "60"
+      ],
+      "random_delay": [
+        "70",
+        "100"
+      ]
+    },
+    "cost": {
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1+size",
+      "max_aoe": "20",
+      "knockback_mode": "none",
+      "prioritize_face_camera": "true"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "EndTurn": "1"
+      }
+    }
+  },
+  "TKNG_GoAway": {
+    "template": "spell",
+    "meta": {
+      "name": "EABILITY_GOAWAY_NAME",
+      "name_resolved": "Go Away."
+    },
+    "graphics": {
+      "prime_animation": "command1",
+      "custom_priming_animation": "idleCommand1",
+      "animation": "releaseCommand1",
+      "dont_visualize_ai": "true",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "60"
+      ],
+      "random_delay": [
+        "70",
+        "100"
+      ]
+    },
+    "cost": {
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all_except_edges",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "none",
+      "prioritize_face_camera": "true"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "EndTurn": "1"
+      }
+    }
+  },
+  "TKNG_Spread": {
+    "template": "spell",
+    "meta": {
+      "name": "EABILITY_SPREADOUT_NAME",
+      "name_resolved": "Spread Out."
+    },
+    "graphics": {
+      "prime_animation": "command4",
+      "custom_priming_animation": "idleCommand4",
+      "animation": "releaseCommand4",
+      "dont_visualize_ai": "true",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "60"
+      ],
+      "random_delay": [
+        "70",
+        "100"
+      ]
+    },
+    "cost": {
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "area_around_all_player_cats",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "knockback_mode": "none",
+      "prioritize_face_camera": "true"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "EndTurn": "1"
+      }
+    }
+  },
+  "TKNG_Trash": {
+    "template": "spawn",
+    "meta": {
+      "name": "EABILITY_VOMITRAIN_NAME",
+      "name_resolved": "Vomit Rain"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "vomitrain",
+      "lob_height": "4",
+      "lob_speed": ".5",
+      "dont_visualize_ai": "true"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "max_aoe": "20",
+      "max_targets": "14",
+      "multihit": "14",
+      "stagger_multihit_targets": "true"
+    },
+    "spawn": {
+      "ai_base_score": "9999",
+      "object": [
+        "Clot",
+        "Dip",
+        "Poop",
+        "SmallRock",
+        "Tumor",
+        "RandomFoodPickup",
+        "RandomFoodPickup",
+        "PoisonFood",
+        "Coin"
+      ],
+      "post_spawn_statuses": {
+        "DoDamage": {
+          "damage": "0",
+          "type": "spell",
+          "damage_tiles": "all",
+          "effects": {
+            "ChangeTile": "WaterTile"
+          },
+          "elements": [
+            "Water"
+          ]
+        }
+      }
+    }
+  },
+  "TKNG_GutBall": {
+    "template": "lobbed_attack",
+    "graphics": {
+      "animation": "gutball",
+      "projectile": "Meatball"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "Slow": "2",
+        "Tangled": {
+          "stacks": "1",
+          "alt_art": "TangledMeat"
+        }
+      }
+    }
+  },
+  "TKNG_DeathExplode": {
+    "template": "spell",
+    "graphics": {
+      "animation": "dying",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "circle",
+      "min_aoe": "0",
+      "max_aoe": "20",
+      "aoe_excludes_self": "true",
+      "aoe_considers_character_size": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "ai_base_score": "999999"
+    }
+  },
+  "TKNG_Laser": {
+    "template": "laser",
+    "graphics": {
+      "animation": "shoot",
+      "beam_clip": "fx_kingbloodlaser",
+      "beam_cap": "fx_kingbloodlasercap"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "effects": {
+        "Bleed": "2"
+      }
+    }
+  },
+  "TKNG_Spawn": {
+    "template": "spawn",
+    "graphics": {
+      "lob": "true",
+      "animation": "spawn"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "-1,",
+          "0"
+        ]
+      ]
+    },
+    "spawn": {
+      "object": "Clot",
+      "ai_base_score": "9999"
+    }
+  },
+  "TKNG_Hop": {
+    "variant_of": "BasicJump",
+    "graphics": {
+      "full_jump_animation": "hop",
+      "full_jump_sync_frames": "45",
+      "full_jump_windup_frames": "18"
+    }
+  }
+}

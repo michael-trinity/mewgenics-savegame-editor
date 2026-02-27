@@ -1,0 +1,74 @@
+{
+  "levels": {
+    "folder": "junkyard",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "junkyard_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "Maggot",
+      "Fly"
+    ],
+    "medium": [
+      "Lumpy",
+      "GlassSpitter",
+      "Siren",
+      "Jekyll",
+      "SpikedCat",
+      "PopeyeCat",
+      "ChumBag",
+      "Chummy",
+      "Host"
+    ],
+    "large": []
+  },
+  "item_pools": {
+    "chapter_item_pool": "junkyarditems"
+  },
+  "minibosses": {
+    "cancreeper": "auto",
+    "trampy": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "boneyard.gon",
+      "locked": "true",
+      "override_art": "MapNodeExit_Boneyard"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "chubsandnubs"
+    }
+  },
+  "flags": {
+    "BoneyardUnlocked": {
+      "exit0": {
+        "locked": "false"
+      }
+    }
+  }
+}

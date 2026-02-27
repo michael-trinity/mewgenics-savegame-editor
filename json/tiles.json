@@ -1,0 +1,501 @@
+{
+  "0": {
+    "editor": {
+      "image": "empty.png",
+      "name": "Empty"
+    }
+  },
+  "1": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "blue",
+        "blue"
+      ],
+      "paint": "true",
+      "name": "Water",
+      "tile_layer": "0"
+    },
+    "tile": "WaterTile"
+  },
+  "2": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "green",
+        "green"
+      ],
+      "paint": "true",
+      "name": "Grass",
+      "tile_layer": "0"
+    },
+    "tile": {
+      "GrassTile": "80",
+      "TallGrassTile": "15",
+      "BlankTile": "5"
+    }
+  },
+  "3": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        [
+          "0,.5,0"
+        ],
+        ",",
+        [
+          "0,.5,0"
+        ]
+      ],
+      "paint": "true",
+      "name": "Tall Grass",
+      "tile_layer": "0"
+    },
+    "tile": {
+      "GrassTile": "15",
+      "TallGrassTile": "80",
+      "BlankTile": "5"
+    }
+  },
+  "4": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "red",
+        "red"
+      ],
+      "paint": "true",
+      "name": "Fire",
+      "tile_layer": "0"
+    },
+    "tile": "FireTile"
+  },
+  "5": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "cyan",
+        "cyan"
+      ],
+      "paint": "true",
+      "name": "Ice",
+      "tile_layer": "0"
+    },
+    "tile": "IceTile"
+  },
+  "6": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "orange",
+        "red"
+      ],
+      "paint": "true",
+      "name": "Lava",
+      "tile_layer": "0"
+    },
+    "tile": "LavaTile"
+  },
+  "7": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "grey",
+        "grey"
+      ],
+      "paint": "true",
+      "name": "Metal",
+      "tile_layer": "0"
+    },
+    "tile": "MetalTile"
+  },
+  "8": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "brown",
+        "black"
+      ],
+      "paint": "true",
+      "name": "Rock",
+      "tile_layer": "0"
+    },
+    "tile": "RockTile"
+  },
+  "9": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "purple",
+        "purple"
+      ],
+      "paint": "true",
+      "name": "Creep",
+      "tile_layer": "0"
+    },
+    "tile": "CreepTile"
+  },
+  "10": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "orange",
+        "yellow"
+      ],
+      "paint": "true",
+      "name": "Oil",
+      "tile_layer": "0"
+    },
+    "tile": "OilTile"
+  },
+  "11": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "green",
+        "yellow"
+      ],
+      "paint": "true",
+      "name": "Toxic Sludge",
+      "tile_layer": "0"
+    },
+    "tile": "ToxicTile"
+  },
+  "12": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "black",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Shadow",
+      "tile_layer": "0"
+    },
+    "tile": "ShadowTile"
+  },
+  "13": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "none",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Glass Shards",
+      "tile_layer": "0"
+    },
+    "tile": "GlassTile"
+  },
+  "14": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "none",
+        "cyan"
+      ],
+      "paint": "true",
+      "name": "Snow",
+      "tile_layer": "0"
+    },
+    "tile": "SnowTile"
+  },
+  "15": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png",
+        "north_arrow.png"
+      ],
+      "image_tint": [
+        "blue",
+        "blue",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Water with current",
+      "tile_layer": "0"
+    },
+    "tile": "WaterTile_Current",
+    "orientation": "north"
+  },
+  "16": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png",
+        "south_arrow.png"
+      ],
+      "image_tint": [
+        "blue",
+        "blue",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Water with current",
+      "tile_layer": "0"
+    },
+    "tile": "WaterTile_Current",
+    "orientation": "south"
+  },
+  "17": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png",
+        "east_arrow.png"
+      ],
+      "image_tint": [
+        "blue",
+        "blue",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Water with current",
+      "tile_layer": "0"
+    },
+    "tile": "WaterTile_Current",
+    "orientation": "east"
+  },
+  "18": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png",
+        "west_arrow.png"
+      ],
+      "image_tint": [
+        "blue",
+        "blue",
+        "none"
+      ],
+      "paint": "true",
+      "name": "Water with current",
+      "tile_layer": "0"
+    },
+    "tile": "WaterTile_Current",
+    "orientation": "west"
+  },
+  "19": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "brown",
+        "brown"
+      ],
+      "paint": "true",
+      "name": "Dirt",
+      "tile_layer": "0"
+    },
+    "tile": "DirtTile"
+  },
+  "20": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "none",
+        "brown"
+      ],
+      "paint": "true",
+      "name": "Stalagmites",
+      "tile_layer": "0"
+    },
+    "tile": "StalagmiteTile"
+  },
+  "21": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "grey",
+        "yellow"
+      ],
+      "paint": "true",
+      "name": "Road Tile",
+      "tile_layer": "0"
+    },
+    "tile": "RoadTile"
+  },
+  "22": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "green",
+        "black"
+      ],
+      "paint": "true",
+      "name": "Brambles",
+      "tile_layer": "0"
+    },
+    "tile": "BrambleTile"
+  },
+  "23": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "green",
+        "pink"
+      ],
+      "paint": "true",
+      "name": "Flowers",
+      "tile_layer": "0"
+    },
+    "tile": "FlowerTile"
+  },
+  "24": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "green",
+        "purple"
+      ],
+      "paint": "true",
+      "name": "Tall Flower Tile",
+      "tile_layer": "0"
+    },
+    "tile": "TallFlowerTile"
+  },
+  "25": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_spots.png"
+      ],
+      "image_tint": [
+        "blue",
+        "cyan"
+      ],
+      "paint": "true",
+      "name": "Supercooled Water Tile",
+      "tile_layer": "0"
+    },
+    "tile": "SupercooledWater"
+  },
+  "26": {
+    "editor": {
+      "category": "-100",
+      "subcategory": "4",
+      "image": [
+        "ground.png",
+        "ground_shards.png"
+      ],
+      "image_tint": [
+        "black",
+        "grey"
+      ],
+      "paint": "true",
+      "name": "Glitch Tile",
+      "tile_layer": "0"
+    },
+    "tile": "GlitchTile"
+  }
+}

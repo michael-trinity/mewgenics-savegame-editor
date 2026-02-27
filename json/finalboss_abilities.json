@@ -1,0 +1,748 @@
+{
+  "TheCreator_SpawnCloneTeam": {
+    "id": "TheCreator_SpawnCloneTeam",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "target": {
+      "target_mode": "none",
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "aoe_mode": "all",
+      "restructions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_special_tag",
+      "special_tile_tag": "FinalBossCloneSpot",
+      "shuffle_tile_order": "true"
+    },
+    "graphics": {
+      "lob": "false",
+      "animation": "summon",
+      "dont_visualize_ai": "true"
+    },
+    "spawn": {
+      "object": "PlayerCat_FinalBossClone",
+      "first_turn": "initiative",
+      "inherit_elite_buffs": "false",
+      "catdata": "teamclone",
+      "trigger_battle_start": "true",
+      "clone_items": "true",
+      "face_camera": "true"
+    }
+  },
+  "TheCreator_Reaction": {
+    "id": "TheCreator_Reaction",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "min_aoe": "0",
+      "max_aoe": "20",
+      "aoe_excludes_self": "true",
+      "aoe_considers_character_size": "true"
+    },
+    "graphics": {
+      "animation": "reaction",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10"
+    }
+  },
+  "BecomeTheDestroyer": {
+    "id": "BecomeTheDestroyer",
+    "template": "self_buff",
+    "graphics": {
+      "animation": "transform"
+    },
+    "damage_instance": {
+      "effects": {
+        "ClearFinalBossBattlefield": "1",
+        "PlayBackground": "0",
+        "PopAndSpawn": "TheDestroyer",
+        "SwitchMusic": {
+          "new_song": "same",
+          "new_layer": "map"
+        }
+      }
+    }
+  },
+  "DestroyerAttack": {
+    "id": "DestroyerAttack",
+    "variant_of": "BasicBigMelee",
+    "graphics": {
+      "animation": "swipe"
+    }
+  },
+  "DestroyerAttack2": {
+    "id": "DestroyerAttack2",
+    "variant_of": "BasicBigMelee",
+    "target": {
+      "multihit": "2"
+    },
+    "graphics": {
+      "animation": "swipe"
+    }
+  },
+  "DestroyerShieldBash": {
+    "id": "DestroyerShieldBash",
+    "variant_of": "BasicBigMelee",
+    "graphics": {
+      "animation": "bash"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10"
+    }
+  },
+  "DestroyerHolyAttack": {
+    "id": "DestroyerHolyAttack",
+    "template": "spell",
+    "name_key": "EABILITY_HOLYBLAST_NAME",
+    "name": "Holy Blast",
+    "cost": {
+      "cantrip": "true",
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "4",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "prime_animation": "chargeholy",
+      "custom_priming_animation": "priming",
+      "animation": "holy",
+      "dont_visualize_ai": "true",
+      "particle": "Holybeam",
+      "delay": "6"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "RemoveActPoints": "1"
+      }
+    }
+  },
+  "DestroyerPulse": {
+    "id": "DestroyerPulse",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "4"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "pulse"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "DestroyerThrowShield": {
+    "id": "DestroyerThrowShield",
+    "template": "lobbed_attack",
+    "target": {
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "graphics": {
+      "animation": "throwshield",
+      "projectile": "FinalBossShieldProjectile",
+      "speed": "15",
+      "use_rotation": "false",
+      "lob_height": "1"
+    },
+    "damage_instance": {
+      "damage": "99",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "the_nuke_bearer",
+          "OverrideDamage": "1"
+        }
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "CancelPrimedAbilities": "1",
+        "SignalFinalBossShieldBroke": "1",
+        "FaceCamera": "1",
+        "TimeDelayStatusApplication": {
+          "delay": "1.13333",
+          "FormChange": "DualSword",
+          "SwitchMusic": {
+            "new_song": "same",
+            "new_layer": "battle"
+          },
+          "CreateGlobalModifiers": {
+            "LowerAmbientLight": {
+              "amount": [
+                "50%",
+                "60%",
+                "60%"
+              ],
+              "speed": "4"
+            },
+            "BloodRain": "1"
+          }
+        }
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledAtHealthThreshold": "50%"
+    }
+  },
+  "DestroyerBreakShield": {
+    "id": "DestroyerBreakShield",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "breakshield"
+    },
+    "damage_instance": {
+      "effects": {
+        "CancelPrimedAbilities": "1",
+        "SignalFinalBossShieldBroke": "1",
+        "FormChange": "DualSword",
+        "FaceCamera": "1",
+        "SwitchMusic": {
+          "new_song": "same",
+          "new_layer": "battle"
+        },
+        "CreateGlobalModifiers": {
+          "LowerAmbientLight": {
+            "amount": [
+              "50%",
+              "60%",
+              "60%"
+            ],
+            "speed": "4"
+          },
+          "BloodRain": "1"
+        }
+      }
+    }
+  },
+  "Destroyer2HolyAttack": {
+    "id": "Destroyer2HolyAttack",
+    "template": "spell",
+    "cost": {
+      "cantrip": "true",
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "4",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "prime_animation": "chargeholy",
+      "custom_priming_animation": "priming",
+      "animation": "holy",
+      "dont_visualize_ai": "true",
+      "particle": "Holybeam",
+      "delay": "6"
+    },
+    "damage_instance": {
+      "damage": "16",
+      "ai_base_score": "9999"
+    },
+    "self_damage": {
+      "effects": {
+        "RemoveActPoints": "1"
+      }
+    }
+  },
+  "Destroyer2Pulse": {
+    "id": "Destroyer2Pulse",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "4"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "pulse"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "DestroyerDodge": {
+    "id": "DestroyerDodge",
+    "template": "move",
+    "target": {
+      "range_mode": "cross",
+      "max_range": "2",
+      "min_range": "2",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_any_orientation": "true",
+      "range_considers_character_size": "false"
+    },
+    "graphics": {
+      "sync_speed": "28",
+      "max_tiles_single_loop": "6",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "none",
+      "animation": "dodge",
+      "move_end_animation": "none",
+      "dont_orient": "true",
+      "use_directional_animations": "true",
+      "use_super_armor": "true"
+    }
+  },
+  "DestroyerChargeBackflips": {
+    "id": "DestroyerChargeBackflips",
+    "template": "self_buff",
+    "name_key": "EABILITY_PRECOGNITION_NAME",
+    "name": "Precognition",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "prioritize_dont_change_direction": "true"
+    },
+    "graphics": {
+      "animation": "chargedodges"
+    },
+    "damage_instance": {
+      "effects": {
+        "BackflipWhenTargeted": {
+          "stacks": "4",
+          "ability": "DestroyerDodge"
+        }
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledIfNotHasStatus": "BackflipWhenTargeted"
+    }
+  },
+  "DestroyerDashAttack": {
+    "id": "DestroyerDashAttack",
+    "template": "dash_attack",
+    "name_key": "EABILITY_ANNIHILATION_NAME",
+    "name": "Annihilation",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "10",
+      "consider_trample": "false",
+      "multihit": "4",
+      "aoe_mode": "square",
+      "knockback_mode": "character_to_tile",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "dash_start_animation": "dashbegin",
+      "dash_animation": "dashing",
+      "dash_attack_animation": "dashattack"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_damage"
+    }
+  },
+  "DestroyerRaise": {
+    "id": "DestroyerRaise",
+    "template": "spell",
+    "name_key": "EABILITY_RISE_NAME",
+    "name": "Rise",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": [
+        "must_have_player_cat",
+        "must_have_corpse"
+      ],
+      "restrictions": "aoe_must_exist",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "raise",
+      "particle": "HealBig",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "Revive": "50%",
+        "FlatAIBonus": "999999"
+      }
+    }
+  },
+  "TheChild_ReleaseBeams": {
+    "id": "TheChild_ReleaseBeams",
+    "template": "spell",
+    "name_key": "EABILITY_PURITY_NAME",
+    "name": "Purity",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "20",
+      "min_range": "0",
+      "multihit": "10"
+    },
+    "graphics": {
+      "animation": "holy",
+      "particle": "Holybeam",
+      "dont_visualize_ai": "true",
+      "delay": "5"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "IgnoreSelf": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "TheChild_TargetBeam": {
+    "id": "TheChild_TargetBeam",
+    "template": "targeted_status",
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "min_range": "0"
+    },
+    "graphics": {
+      "animation": "chargeholy",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "layer": "tiles",
+      "effects": {
+        "FinalBossQueueBeam": "1"
+      }
+    }
+  },
+  "TheChild_TransformHoly": {
+    "id": "TheChild_TransformHoly",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "transform1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Holy"
+      }
+    }
+  },
+  "TheChild_TransformExplosive": {
+    "id": "TheChild_TransformExplosive",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "transform3"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Explosive"
+      }
+    }
+  },
+  "TheChild_TransformBoris": {
+    "id": "TheChild_TransformBoris",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "transform2"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Boris"
+      }
+    }
+  },
+  "MegaGuppy_TransformHoly": {
+    "id": "MegaGuppy_TransformHoly",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "graphics": {
+      "animation": "transform1"
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Holy",
+        "SetCrazyEyeBackgroundWeights": {
+          "weights": [
+            "1",
+            "0",
+            "0"
+          ]
+        }
+      }
+    }
+  },
+  "MegaGuppy_TransformExplosive": {
+    "id": "MegaGuppy_TransformExplosive",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "graphics": {
+      "animation": "transform3"
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Explosive",
+        "SetCrazyEyeBackgroundWeights": {
+          "weights": [
+            "0",
+            "0",
+            "1"
+          ]
+        }
+      }
+    }
+  },
+  "MegaGuppy_TransformBoris": {
+    "id": "MegaGuppy_TransformBoris",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "graphics": {
+      "animation": "transform2"
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0",
+        "FormChange": "Boris",
+        "SetCrazyEyeBackgroundWeights": {
+          "weights": [
+            "0",
+            "1",
+            "0"
+          ]
+        }
+      }
+    }
+  },
+  "TheChild_Wrath": {
+    "id": "TheChild_Wrath",
+    "template": "spell",
+    "name_key": "EABILITY_WRATH_NAME",
+    "name": "Wrath",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "animation": "holy",
+      "particle": "Holybeam",
+      "dont_visualize_ai": "true",
+      "delay": "6"
+    },
+    "damage_instance": {
+      "damage": "12",
+      "elements": [
+        "Holy"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "ExistUntilIdleUpkeep": "1"
+      }
+    }
+  },
+  "TheChild_Pulse": {
+    "id": "TheChild_Pulse",
+    "template": "spell",
+    "name_key": "EABILITY_PULSE_NAME",
+    "name": "Pulse",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "circle",
+      "min_aoe": "0",
+      "max_aoe": "20",
+      "aoe_excludes_self": "true",
+      "aoe_considers_character_size": "true",
+      "distance_sort_targets": "true",
+      "aoe_restrictions": "must_have_animate_character"
+    },
+    "graphics": {
+      "animation": "pulse",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10"
+    },
+    "self_damage": {
+      "effects": {
+        "DoDistortionRing": {
+          "speed": "20",
+          "intensity": "1",
+          "radius": "5"
+        }
+      }
+    }
+  },
+  "MegaGuppy_SlamRight": {
+    "id": "MegaGuppy_SlamRight",
+    "template": "spell",
+    "name_key": "EABILITY_SLAM_NAME",
+    "name": "Slam",
+    "cost": {
+      "cantrip": "true",
+      "allow_offmap_casts": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "knockback_mode": "orientation",
+      "aoe_restrictions": "must_have_animate_character",
+      "/*visual_delay_but_simultaneous_damage": "50",
+      "delay_from_map_edge": "true",
+      "delay": "5*/"
+    },
+    "graphics": {
+      "animation": "attackL",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "effects": {
+        "OverrideKnockbackDamage": "3",
+        "FastKnockback": "4",
+        "Conditional_HasTag": {
+          "tag": "angeljunk",
+          "IgnoreDamage": "1"
+        }
+      },
+      "ai_base_score": "999999"
+    },
+    "self_damage": {
+      "effects": {
+        "TimeDelayStatusApplication": {
+          "delay": ".25",
+          "DoScreenShake": {
+            "time": "2",
+            "intensity": "10"
+          }
+        }
+      }
+    }
+  },
+  "MegaGuppy_SlamLeft": {
+    "id": "MegaGuppy_SlamLeft",
+    "variant_of": "MegaGuppy_SlamRight",
+    "target": {
+      "knockback_mode": "right_orientation"
+    },
+    "graphics": {
+      "animation": "attackR"
+    }
+  },
+  "MegaGuppy_DropTrash": {
+    "id": "MegaGuppy_DropTrash",
+    "template": "spawn",
+    "cost": {
+      "mana": "0",
+      "allow_offmap_casts": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "max_aoe": "20",
+      "max_targets": "7",
+      "knockback_mode": "random"
+    },
+    "graphics": {
+      "fall_from_sky": "true",
+      "fall_randomize_timing": ".3",
+      "animation": "none",
+      "precast_delay": ".25"
+    },
+    "spawn": {
+      "object": "Cherub_FinalBoss",
+      "start_dead": "true"
+    }
+  },
+  "MegaGuppy_SummonTheChild": {
+    "id": "MegaGuppy_SummonTheChild",
+    "template": "spawn",
+    "cost": {
+      "mana": "0",
+      "allow_offmap_casts": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "special_tagged_tiles",
+      "special_tile_tag": "FinalBossTheChildLocation",
+      "knockback_mode": "orientation",
+      "restrictions": "none",
+      "range_excludes_blocking": "false",
+      "aoe_restrictions": "none"
+    },
+    "graphics": {
+      "lob": "false",
+      "animation": "spawnChild"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "999999"
+    },
+    "spawn": {
+      "object": "TheChild"
+    }
+  }
+}

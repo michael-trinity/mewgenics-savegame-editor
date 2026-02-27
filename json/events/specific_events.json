@@ -1,0 +1,137 @@
+{
+  "CraterWeatherEvent": {
+    "intro": {
+      "title": "EVENT_CRATERWEATHER_NAME",
+      "title_resolved": "Stacy's Experiment",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "crater_weather",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CRATERWEATHER_QUES",
+      "prompt_resolved": "Amidst the vines and rocks a strange floating rock creature blocks the path forward.\n\nThe party must choose a weather option to proceed!",
+      "shuffle_options": "true",
+      "max_options": "3",
+      "options": {
+        "w1": {
+          "label": "EVENT_CRATERWEATHER_ANSW1",
+          "label_resolved": "Meteor Shower",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "7",
+            "prompt": "EVENT_HAPPENING_METEORSHOWER_REW",
+            "prompt_resolved": "The cats look up in wonder as majestic balls of fire streak through the sky.\n\nTheir awe shifts to terror as the loud booms of meteors striking the ground reverberate through the air!",
+            "add_weather": "MeteorShower",
+            "set_legacy_token": "MeteorShowerUnlocked"
+          }
+        },
+        "w2": {
+          "label": "EVENT_CRATERWEATHER_ANSW2",
+          "label_resolved": "Solar Flare",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_CRATERWEATHER_REW2",
+            "prompt_resolved": "A blinding light from the sky illuminates the landscape in terrifying clarity.\n\nThe cats cower and cover their eyes from the scorching rays!",
+            "add_weather": "SolarFlare",
+            "set_legacy_token": "SolarFlareUnlocked"
+          }
+        },
+        "w3": {
+          "label": "EVENT_CRATERWEATHER_ANSW3",
+          "label_resolved": "Geomagnetic Storm",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "3",
+            "prompt": "EVENT_CRATERWEATHER_REW3",
+            "prompt_resolved": "The cats look on in bewilderment as rocks around them begin hovering in the air and flying in every direction!",
+            "add_weather": "GeomagneticStorm",
+            "set_legacy_token": "GeomagneticStormUnlocked"
+          }
+        },
+        "w4": {
+          "label": "EVENT_CRATERWEATHER_ANSW4",
+          "label_resolved": "The Shimmer",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "6",
+            "prompt": "EVENT_CRATERWEATHER_REW4",
+            "prompt_resolved": "The air shimmers in vibrant hues and the cats retch as ripples in the air cause their bodies to warp and mutate!",
+            "add_weather": "TheShimmer",
+            "set_legacy_token": "TheShimmerUnlocked"
+          }
+        },
+        "w5": {
+          "label": "EVENT_CRATERWEATHER_ANSW5",
+          "label_resolved": "Strange Eggs",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "4",
+            "prompt": "EVENT_CRATERWEATHER_REW5",
+            "prompt_resolved": "Strange eggs begin to pop up all over the ground...\n\nThe cats look at them inquisitively, not sure what to do.",
+            "add_weather": "StrangeEggs",
+            "set_legacy_token": "StrangeEggsUnlocked"
+          }
+        },
+        "w6": {
+          "label": "EVENT_CRATERWEATHER_ANSW6",
+          "label_resolved": "Alien Overgrowth",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "5",
+            "prompt": "EVENT_CRATERWEATHER_REW6",
+            "prompt_resolved": "Brambles begin rapidly growing all around the cats...\n\nSomething about the strange bulbs growing amidst the thorns is very off-putting!",
+            "add_weather": "AlienOvergrowth",
+            "set_legacy_token": "AlienOvergrowthUnlocked"
+          }
+        }
+      }
+    }
+  },
+  "Butch_Tutorial": {
+    "intro": {
+      "title": "EVENT_BUTCH_NAME",
+      "title_resolved": "Butch",
+      "cat_choice": "random",
+      "choose_cat_with_highest_stat": "int",
+      "subject_clip": "EventSubject",
+      "subject_frame": "butch",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BUTCHTUTORIAL_QUES",
+      "prompt_resolved": "Butch blocks your path!\n\nShould you use brawn [img:str]\nor brains [img:int] to get past him?\n\nCheck your stats\nto see the odds of success!",
+      "options": {
+        "attack": {
+          "label": "EVENT_BUTCHTUTORIAL_ATTACK_ANSW",
+          "label_resolved": "Attack Butch",
+          "stat": "str",
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_BUTCHTUTORIAL_REW1",
+            "prompt_resolved": "{catname}'s punch misses completely, smashing hard into the ground!\n\n[i]\"You broke your paw just trying to hit me! Your [img:str] is so low, why would you pick that option?\"[/i]",
+            "injury": "str"
+          }
+        },
+        "outsmart": {
+          "label": "EVENT_BUTCHTUTORIAL_OUTSMART_ANSW",
+          "label_resolved": "Outsmart Butch",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_BUTCHTUTORIAL_REW2",
+            "prompt_resolved": "{catname} points cleverly behind Butch, distracting him.\n\n[i]\"Well hello mr. fancy pants! You're lucky your [img:int] is so high or you'd be chewin' rocks!\"[/i]",
+            "get_item": "Catnip"
+          }
+        }
+      }
+    }
+  }
+}

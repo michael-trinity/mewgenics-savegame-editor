@@ -1,0 +1,171 @@
+{
+  "guillotina_1": {
+    "level": "house_bosses/guillotina1.lvl",
+    "music": "guillotina",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "0"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_GUILLOTINA_1",
+    "initial_cutscene_night": "guillotina_1",
+    "rematch_cutscene_night": "house_boss_returns_tina1",
+    "arrival_unlock": "npc_houseboss_intro_guillotina_1",
+    "act": "1",
+    "index": "1"
+  },
+  "guillotina_2": {
+    "level": "house_bosses/guillotina2.lvl",
+    "music": "guillotina",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "3",
+      "7"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_GUILLOTINA_2",
+    "initial_cutscene_night": "guillotina_2",
+    "rematch_cutscene_night": "house_boss_returns_tina2",
+    "arrival_unlock": "npc_houseboss_intro_guillotina_2",
+    "act": "1",
+    "index": "2"
+  },
+  "guillotina_3": {
+    "level": "house_bosses/guillotina3.lvl",
+    "music": "guillotina",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "3",
+      "7"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_GUILLOTINA_3",
+    "initial_cutscene_night": "guillotina_3",
+    "rematch_cutscene_night": "house_boss_returns_tina3",
+    "arrival_unlock": "npc_houseboss_intro_guillotina_3",
+    "act": "1",
+    "index": "3"
+  },
+  "pyrophina": {
+    "level": "house_bosses/pyrophina.lvl",
+    "music": "kaiju",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "0"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_PYROPHINA",
+    "initial_cutscene_day": "pyro_intro",
+    "rematch_cutscene_day": "house_boss_returns_pyro",
+    "arrival_unlock": "npc_houseboss_intro_pyrophina",
+    "act": "2",
+    "index": "1"
+  },
+  "zaratana": {
+    "level": "house_bosses/zaratana.lvl",
+    "music": "kaiju",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "0"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_ZARATANA",
+    "initial_cutscene_day": "moonboss_intro",
+    "rematch_cutscene_day": "house_boss_returns_zara",
+    "arrival_unlock": "npc_houseboss_intro_zaratana",
+    "act": "2",
+    "index": "2"
+  },
+  "pyrophina_vs_zaratana": {
+    "level": "house_bosses/pyrophinavszaratana.lvl",
+    "music": "kaiju",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "3",
+      "7"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_KAIJUFIGHT",
+    "initial_cutscene_day": "kaiju_fight",
+    "rematch_cutscene_day": "house_boss_returns_kaijufight",
+    "arrival_unlock": "npc_houseboss_intro_pyrophina_vs_zaratana",
+    "act": "2",
+    "index": "3"
+  },
+  "terminator_1": {
+    "level": "house_bosses/terminator1.lvl",
+    "music": "terminator",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "0"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_TERMINATOR_1",
+    "initial_cutscene_night": "terminator_intro",
+    "rematch_cutscene_night": "house_boss_returns_t1",
+    "arrival_unlock": "npc_houseboss_intro_terminator_1",
+    "act": "3",
+    "index": "1"
+  },
+  "terminator_2": {
+    "level": "house_bosses/terminator2.lvl",
+    "music": "terminator",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "3",
+      "7"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_TERMINATOR_2",
+    "initial_cutscene_night": "t1000_intro",
+    "rematch_cutscene_night": "house_boss_returns_t2",
+    "arrival_unlock": "npc_houseboss_intro_terminator_2",
+    "act": "3",
+    "index": "2"
+  },
+  "terminator_3": {
+    "level": "house_bosses/terminator3.lvl",
+    "music": "hitler3",
+    "lead_time": "7",
+    "rematch_cooldown": [
+      "3",
+      "7"
+    ],
+    "initial_cooldown": [
+      "3",
+      "7"
+    ],
+    "savefile_string": "SAVE_FILE_FIGHT_HOUSEBOSS_TERMINATOR_3",
+    "initial_cutscene_night": "hitler_intro",
+    "rematch_cutscene_night": "house_boss_returns_t3",
+    "ending_cutscene": "hitler_end",
+    "ending_cutscene2": "credits_3",
+    "arrival_unlock": "npc_houseboss_intro_terminator_3",
+    "act": "3",
+    "index": "3"
+  }
+}

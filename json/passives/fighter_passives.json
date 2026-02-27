@@ -1,0 +1,634 @@
+{
+  "BloodLust": {
+    "name": "PASSIVE_FRENZY_NAME",
+    "name_resolved": "Frenzy",
+    "desc": "PASSIVE_FRENZY_DESC",
+    "desc_resolved": "When you down a unit, gain +2 [img:str].",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnKill": {
+          "StrengthUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FRENZY2_DESC",
+      "desc_resolved": "When you down a unit, gain +2 [img:str] and +2 [img:spd].",
+      "passives": {
+        "StatusOnKill": {
+          "StrengthUp": "2",
+          "SpeedUp": "2"
+        }
+      }
+    }
+  },
+  "Avenger": {
+    "name": "PASSIVE_AVENGER_NAME",
+    "name_resolved": "Avenger",
+    "desc": "PASSIVE_AVENGER_DESC",
+    "desc_resolved": "When an allied cat is downed, gain All Stats Up 2 and heal 8.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnAllyCatDeath": {
+          "AllStatsUp": "2",
+          "HealthGain": "8"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_AVENGER2_DESC",
+      "desc_resolved": "When an allied cat is downed, gain All Stats Up 2, heal 50% of your max HP, and take an extra turn.",
+      "passives": {
+        "StatusOnAllyCatDeath": {
+          "AllStatsUp": "2",
+          "PercentHeal": "50",
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "Scars": {
+    "name": "PASSIVE_SCARS_NAME",
+    "name_resolved": "Scars",
+    "desc": "PASSIVE_SCARS_DESC",
+    "desc_resolved": "+1 Brace.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "Brace": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SCARS2_DESC",
+      "desc_resolved": "+3 Brace.",
+      "passives": {
+        "Brace": "3"
+      }
+    }
+  },
+  "FasterWhenHit": {
+    "name": "PASSIVE_HULKUP_NAME",
+    "name_resolved": "Hulk Up",
+    "desc": "PASSIVE_HULKUP_DESC",
+    "desc_resolved": "When you take damage, gain +2 [img:spd].",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "SpeedUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HULKUP2_DESC",
+      "desc_resolved": "When you take damage, gain +2 [img:spd] and +10% dodge. This caps at 50%.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "SpeedUp": "2"
+        },
+        "StackingDodgeChanceOnTookDamage": {
+          "amount": "10%",
+          "cap": "50%"
+        }
+      },
+      "stats": {
+        "spd": "2"
+      }
+    }
+  },
+  "KillsHeal": {
+    "name": "PASSIVE_FERVOR_NAME",
+    "name_resolved": "Fervor",
+    "desc": "PASSIVE_FERVOR_DESC",
+    "desc_resolved": "When you down a unit, you heal 5 HP.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "KillsHeal": "5"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FERVOR2_DESC",
+      "desc_resolved": "When you down a unit, you heal 50% of your HP.",
+      "passives": {
+        "KillsHeal": "50%"
+      }
+    }
+  },
+  "Vengeful": {
+    "name": "PASSIVE_VENGEFUL_NAME",
+    "name_resolved": "Vengeful",
+    "desc": "PASSIVE_VENGEFUL_DESC",
+    "desc_resolved": "Your basic attack is always critical on enemies that have damaged you.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "Vengeful": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VENGEFUL2_DESC",
+      "desc_resolved": "Your basic attack is always critical on enemies units that have damaged you.\nInflict Marked on units that contact or attack you.",
+      "passives": {
+        "Vengeful": "1",
+        "RevengeDamage": {
+          "effects": {
+            "Marked": "1"
+          }
+        }
+      }
+    }
+  },
+  "HamsterStyle": {
+    "name": "PASSIVE_HAMSTERSTYLE_NAME",
+    "name_resolved": "Hamster Style",
+    "desc": "PASSIVE_HAMSTERSTYLE_DESC",
+    "desc_resolved": "+1 Health Regeneration.\nStart with 2 Bonus Moves.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "HealthRegenUp": "1",
+        "SizeScale": ".8",
+        "MoveQuivered": "2"
+      },
+      "stats": {
+        "str": "-1",
+        "con": "-1",
+        "int": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HAMSTERSTYLE2_DESC",
+      "desc_resolved": "+2 Health Regeneration.\nStart with 2 Bonus Moves.\nYour basic attack has a chance to attack multiple times.",
+      "passives": {
+        "HealthRegenUp": "2",
+        "SizeScale": ".6",
+        "AddTemporaryEffectsToBasicAttack": {
+          "Fury": "75"
+        },
+        "MoveQuivered": "2"
+      },
+      "stats": {
+        "str": "-1",
+        "con": "-1",
+        "int": "1"
+      }
+    }
+  },
+  "WeaponMaster": {
+    "name": "PASSIVE_WEAPONMASTER_NAME",
+    "name_resolved": "Weapon Master",
+    "desc": "PASSIVE_WEAPONMASTER_DESC",
+    "desc_resolved": "Your weapon and item abilities deal +2 Damage and get +25% critical chance. A pipe is added to your inventory.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "BoostWeaponDamage": {
+          "damage": "2",
+          "crit_chance": ".25"
+        }
+      },
+      "bonus_items": [
+        "Pipe"
+      ]
+    },
+    "2": {
+      "desc": "PASSIVE_WEAPONMASTER2_DESC",
+      "desc_resolved": "Your weapon and item abilities deal +3 Damage and get +50% critical chance.\nIf you don't have a weapon, gain a random temporary weapon at the beginning of the battle.",
+      "passives": {
+        "BoostWeaponDamage": {
+          "damage": "3",
+          "crit_chance": ".5"
+        },
+        "EquipRandomTemporaryItemFromPool": "weapons"
+      }
+    }
+  },
+  "ShoulderCheck": {
+    "name": "PASSIVE_SHOULDERCHECK_NAME",
+    "name_resolved": "Shoulder Check",
+    "desc": "PASSIVE_SHOULDERCHECK_DESC",
+    "desc_resolved": "If you're facing a unit after you move, automatically attack it at 33% damage.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "ShoulderCheck": "33%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHOULDERCHECK2_DESC",
+      "desc_resolved": "If you're facing a unit after you move, automatically attack the unit.",
+      "passives": {
+        "ShoulderCheck": "100%"
+      }
+    }
+  },
+  "SkullSmash": {
+    "name": "PASSIVE_SKULLSMASH_NAME",
+    "name_resolved": "Skullcrack",
+    "desc": "PASSIVE_SKULLSMASH_DESC",
+    "desc_resolved": "Your basic attack inflicts Bruise.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bruise": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SKULLSMASH2_DESC",
+      "desc_resolved": "Your basic attack inflicts Bruise 2.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bruise": "2"
+        }
+      }
+    }
+  },
+  "TurtleStyle": {
+    "name": "PASSIVE_TURTLESTYLE_NAME",
+    "name_resolved": "Turtle Style",
+    "desc": "PASSIVE_TURTLESTYLE_DESC",
+    "class": "Fighter",
+    "1": {
+      "shield": "4",
+      "stats": {
+        "con": "2",
+        "spd": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TURTLESTYLE2_DESC",
+      "desc_resolved": "+2 Brace",
+      "shield": "4",
+      "stats": {
+        "con": "2",
+        "spd": "-1"
+      },
+      "passives": {
+        "Brace": "2"
+      }
+    }
+  },
+  "Overpowered": {
+    "name": "PASSIVE_OVERPOWERED_NAME",
+    "name_resolved": "OVERPOWERED!!!",
+    "desc": "PASSIVE_OVERPOWERED_DESC",
+    "desc_resolved": "Excess damage you deal to units makes them explode, dealing the excess damage to units around it, except for you.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "ExplodeOverkilledEnemies": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OVERPOWERED2_DESC",
+      "desc_resolved": "Excess damage you deal to units makes them explode, dealing the excess damage to units within 2 tiles of it, except for you.",
+      "passives": {
+        "ExplodeOverkilledEnemies": "2"
+      }
+    }
+  },
+  "FightMe": {
+    "name": "PASSIVE_FIGHTME_NAME",
+    "name_resolved": "Underdog",
+    "desc": "PASSIVE_FIGHTME_DESC",
+    "desc_resolved": "You have +2 [img:str] and +1 Brace for each enemy adjacent to you.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StrengthForEachNeighboringEnemy": "2",
+        "BraceForEachNeighboringEnemy": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FIGHTME2_DESC",
+      "desc_resolved": "You have +3 [img:str] and +2 Brace for each enemy adjacent to you.",
+      "passives": {
+        "StrengthForEachNeighboringEnemy": "3",
+        "BraceForEachNeighboringEnemy": "2"
+      }
+    }
+  },
+  "HighAsYouCanCount": {
+    "name": "PASSIVE_MATHQ_NAME",
+    "name_resolved": "Math?",
+    "desc": "PASSIVE_MATHQ_DESC",
+    "desc_resolved": "Your spells cost 3 mana to cast, but each can be cast only once per turn.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "SetSpellCosts": "3",
+        "MakeSpellsRequireCharge": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MATHQ2_DESC",
+      "desc_resolved": "Your spells cost 0 mana to cast, but each can be cast only once per turn.",
+      "passives": {
+        "SetSpellCosts": "0",
+        "MakeSpellsRequireCharge": "1"
+      }
+    }
+  },
+  "DumbMuscle": {
+    "name": "PASSIVE_DUMBMUSCLE_NAME",
+    "name_resolved": "Dumb Muscle",
+    "desc": "PASSIVE_DUMBMUSCLE_DESC",
+    "desc_resolved": "Lose 1 [img:int] each time you take damage.\nIf you have 4 or less [img:int], gain +2 [img:str] and your basic attack inflicts Bruise. at 0 [img:int], gain +100% critical hit chance.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "IntelligenceUp": "-1"
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "int": "0"
+          },
+          "passives": {
+            "BasicAttackCritChance": "100%"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DUMBMUSCLE2_DESC",
+      "desc_resolved": "Lose 2 [img:int] each time you take damage.\nIf you have 4 or less [img:int], gain +2 [img:str] and your basic attack inflicts Bruise. At 0 [img:int], gain +100% critical hit chance. At -10 [img:int], you can use your basic move and attack an additional time each turn.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "IntelligenceUp": "-2"
+        },
+        "PassiveAtStatThreshold": {
+          "mode": "less_or_equal",
+          "threshold": {
+            "int": "-10"
+          },
+          "passives": {
+            "ExtraMovePoints": "1",
+            "ExtraBasicAttacks": "1"
+          }
+        }
+      }
+    }
+  },
+  "ThickSkull": {
+    "name": "PASSIVE_THICKSKULL_NAME",
+    "name_resolved": "Thick Skull",
+    "desc": "PASSIVE_THICKSKULL_DESC",
+    "desc_resolved": "All injuries you get are Concussions.\nYou get +3 [img:shield] for each concussion you have. This caps at 30 [img:shield].",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "ForceSpecificInjury": "int",
+        "StatusPerInjury": {
+          "injury": "int",
+          "cap": "10",
+          "Shield": "3"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THICKSKULL2_DESC",
+      "desc_resolved": "All injuries you get are Concussions.\nYou get +3 [img:shield] and +1 [img:str] for each concussion you have. This caps at 30 [img:shield] and 10 [img:str].",
+      "passives": {
+        "ForceSpecificInjury": "int",
+        "StatusPerInjury": {
+          "injury": "int",
+          "cap": "10",
+          "Shield": "3",
+          "StrengthUp": "1"
+        }
+      }
+    }
+  },
+  "MostValuableCat": {
+    "name": "PASSIVE_MOSTVALUABLECAT_NAME",
+    "name_resolved": "Most Valuable Cat",
+    "desc": "PASSIVE_MOSTVALUABLECAT_DESC",
+    "desc_resolved": "When you or an ally downs another unit, they become the Alpha.\nIf you're the Alpha, take an extra turn at the end of each round.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusAnyCatAllyWhoKills": {
+          "AlphaCat": "1"
+        },
+        "PassiveWhenTheAlpha": {
+          "TogglableRoundEndExtraTurn": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MOSTVALUABLECAT2_DESC",
+      "desc_resolved": "You start the battle as the Alpha.\nWhenever you or an ally downs another unit, they become the Alpha.\nIf you're the Alpha, take an extra turn at the end of each round.",
+      "passives": {
+        "AlphaCat": "1",
+        "StatusAnyCatAllyWhoKills": {
+          "AlphaCat": "1"
+        },
+        "PassiveWhenTheAlpha": {
+          "TogglableRoundEndExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "RatStyle": {
+    "name": "PASSIVE_RATSTYLE_NAME",
+    "name_resolved": "Rat Style",
+    "desc": "PASSIVE_RATSTYLE_DESC",
+    "desc_resolved": "+10% dodge chance.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "DodgeChance": "10%"
+      },
+      "stats": {
+        "spd": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RATSTYLE2_DESC",
+      "desc_resolved": "+30% dodge chance.",
+      "passives": {
+        "DodgeChance": "30%"
+      },
+      "stats": {
+        "spd": "4"
+      }
+    }
+  },
+  "Boned": {
+    "name": "PASSIVE_BONED_NAME",
+    "name_resolved": "Boned",
+    "desc": "PASSIVE_BONED_DESC",
+    "desc_resolved": "When you kill a unit, if you don't have a weapon, gain a Bone Club.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnKill": {
+          "EquipPermanentItem": "BoneClub"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BONED2_DESC",
+      "desc_resolved": "When you kill a unit, if you don't have a weapon, gain a Bone Club.\nBonus Ability: Throw Weapon.",
+      "passives": {
+        "StatusOnKill": {
+          "EquipPermanentItem": "BoneClub"
+        },
+        "BonusAbility": "FighterBonusThrow"
+      }
+    }
+  },
+  "DualWield": {
+    "name": "PASSIVE_DUALWIELD_NAME",
+    "name_resolved": "Dual Wield",
+    "desc": "PASSIVE_DUALWIELD_DESC",
+    "desc_resolved": "When you use your weapon, automatically use it again for free.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "DoubleCastWeapons": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DUALWIELD2_DESC",
+      "desc_resolved": "When you use your weapon, automatically use it again for free, and then again! for free!",
+      "passives": {
+        "DoubleCastWeapons": "2"
+      }
+    }
+  },
+  "ReflexPunch": {
+    "name": "PASSIVE_PATELLARREFLEX_NAME",
+    "name_resolved": "Patellar Reflex",
+    "desc": "PASSIVE_PATELLARREFLEX_DESC",
+    "desc_resolved": "When a unit damages you, counter-attack dealing 1 damage and inflicting Bruise.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "CounterAttack": "ReflexPunchJab"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PATELLARREFLEX2_DESC",
+      "desc_resolved": "When a unit damages you, counter-attack with your basic attack and inflict Bruise.",
+      "passives": {
+        "CounterAttack": "ReflexPunchJab2"
+      }
+    }
+  },
+  "HitMe": {
+    "name": "PASSIVE_HITME_NAME",
+    "name_resolved": "Hit Me",
+    "desc": "PASSIVE_HITME_DESC",
+    "desc_resolved": "When you take damage from an ally, basic attack in the direction you're facing.\nDamage you take from allies is reduced to 1.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "AllyDamageReaction": "attack",
+        "CapDamageFromAllies": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HITME2_DESC",
+      "desc_resolved": "When you take damage from an ally, basic attack in the direction you're facing.\nDamage you take from allies is reduced to 1.\nWhenever you take damage, gain +1 to a random stat.",
+      "passives": {
+        "AllyDamageReaction": "attack",
+        "CapDamageFromAllies": "1",
+        "StatusOnTookDamage": {
+          "RandomStatUp": "1"
+        }
+      }
+    }
+  },
+  "Smash": {
+    "name": "PASSIVE_SMASH_NAME",
+    "name_resolved": "Smash!",
+    "desc": "PASSIVE_SMASH_DESC",
+    "desc_resolved": "Your weapons deals triple damage, but they always break when you use them.\nThree Sticks are added to your inventory.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "WeaponDamageMultiplierBonus": "2",
+        "AddSelfStatusToWeapons": {
+          "ChanceToBreak": "100"
+        }
+      },
+      "bonus_items": [
+        "Stick",
+        "Stick",
+        "Stick"
+      ]
+    },
+    "2": {
+      "desc": "PASSIVE_SMASH2_DESC",
+      "desc_resolved": "Your weapons deals triple damage, but they have a 50% chance to break when you use them.\nThree more Sticks are added to your inventory.",
+      "passives": {
+        "WeaponDamageMultiplierBonus": "2",
+        "AddSelfStatusToWeapons": {
+          "ChanceToBreak": "50"
+        }
+      },
+      "bonus_items": [
+        "Stick",
+        "Stick",
+        "Stick"
+      ]
+    }
+  },
+  "PunchFace": {
+    "name": "PASSIVE_PUNCHFACE_NAME",
+    "name_resolved": "Punch Face",
+    "desc": "PASSIVE_PUNCHFACE_DESC",
+    "desc_resolved": "Your basic attacks are critical if they hit the front of a unit.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "FrontstabBasicAttackCritChance": "100%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PUNCHFACE2_DESC",
+      "desc_resolved": "Your physical attacks are critical if they hit the front of a unit.",
+      "passives": {
+        "FrontstabCritChance": "100%"
+      }
+    }
+  },
+  "Recoil": {
+    "name": "PASSIVE_MERCILESS_NAME",
+    "name_resolved": "Merciless",
+    "desc": "PASSIVE_MERCILESS_DESC",
+    "desc_resolved": "When you deal 10 or more damage in a single hit, gain +2 [img:shield] and refresh your movement action.",
+    "class": "Fighter",
+    "1": {
+      "passives": {
+        "StatusOnDealtDamageThreshold": {
+          "threshold": "10",
+          "count_overkill": "true",
+          "RefreshMovePoints": "1",
+          "Shield": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MERCILESS2_DESC",
+      "desc_resolved": "When you deal 10 or more damage in a single hit, gain +2 [img:shield], All Stats Up, and refresh your movement action.",
+      "passives": {
+        "StatusOnDealtDamageThreshold": {
+          "threshold": "10",
+          "count_overkill": "true",
+          "RefreshMovePoints": "1",
+          "Shield": "2",
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  }
+}

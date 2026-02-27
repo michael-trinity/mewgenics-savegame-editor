@@ -1,0 +1,70 @@
+{
+  "levels": {
+    "folder": "tutorial",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "Maggot",
+      "Fly",
+      "Flea",
+      "Pinky"
+    ],
+    "medium": [
+      "Rat",
+      "Leaper",
+      "Pooter",
+      "Kitten",
+      "TomTom",
+      "Mangy",
+      "CatCaller"
+    ],
+    "large": []
+  },
+  "item_pools": {},
+  "nodes": {
+    "start": {
+      "type": "enter"
+    },
+    "battle": {
+      "type": "battle"
+    },
+    "treasure": {
+      "type": "treasure",
+      "level": "TreasureTutorial"
+    },
+    "event": {
+      "type": "event",
+      "level": "Butch_Tutorial"
+    },
+    "home": {
+      "type": "home"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "pebbles"
+    }
+  }
+}

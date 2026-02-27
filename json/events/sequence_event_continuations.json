@@ -1,0 +1,1328 @@
+{
+  "Genie_Good": {
+    "intro": {
+      "title": "EVENT_GENIEOFTHELAMP_NAME",
+      "title_resolved": "The Genie of the Lamp",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "genie",
+      "subject_frame_inner": "2",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_GENIEOFTHELAMP_QUES",
+      "prompt_resolved": "[i]\"Hello my furry friend!\n\nI, the Genie of the Lamp, grant you a wish!\n\nWhat shall it be then?\"[/i]",
+      "options": {
+        "wealth": {
+          "label": "EVENT_GENIE_CHOICE_WEALTH",
+          "label_resolved": "Wealth!",
+          "stat": "none",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW1",
+                "prompt_resolved": "[i]\"Ahh yes. Wealth! Someone as shabby as yourself could certainly use it!\"[/i]\n\nA huge pile of coins appears before {catname}!",
+                "gain_coins": [
+                  "30",
+                  "60"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW2",
+                "prompt_resolved": "[i]\"Treasure! My favourite! You could certainly use a change of clothes!\"[/i]\n\nThe genie waves its arm and a pile of items appears before {catname}!",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare"
+                }
+              }
+            }
+          }
+        },
+        "looks": {
+          "label": "EVENT_GENIE_CHOICE_LOOKS",
+          "label_resolved": "Looks!",
+          "stat": "none",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW3",
+                "prompt_resolved": "[i]\"Why yes... a makeover! I was going to suggest that but I didn't want to be rude!\"[/i]\n\nThe Genie snorts in laughter and {catname} feels something change...",
+                "permanent_stats": {
+                  "cha": "4"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW4",
+                "prompt_resolved": "[i]\"Mmmmm... I know just the look for you!\"[/i]\n\nThe Genie waves its incorporeal arms and then bursts out laughing!\n\n{catname} doesn't know what's so funny.",
+                "gain_disorder": "Gigachad",
+                "permanent_stats": {
+                  "cha": "3"
+                },
+                "mutation": {
+                  "head": "305"
+                }
+              }
+            }
+          }
+        },
+        "power": {
+          "label": "EVENT_GENIE_CHOICE_POWER",
+          "label_resolved": "Power!",
+          "stat": "none",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW5",
+                "prompt_resolved": "[i]\"How bland! You know there are gyms for that, right?\"[/i]\n\n{catname} feels a lot stronger. {He} considers smashing the lamp.",
+                "permanent_stats": {
+                  "str": "4"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP_REW6",
+                "prompt_resolved": "[i]\"Power! MORE POWER!\n\nOkay fine. You types are never creative!\"[/i]\n\nThe Genie waves its arms at {catname}.",
+                "permanent_stats": {
+                  "str": "4"
+                },
+                "level_up": "self"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Genie_Bad": {
+    "intro": {
+      "title": "EVENT_GENIEOFTHELAMP_NAME",
+      "title_resolved": "The Genie of the Lamp",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "genie",
+      "subject_frame_inner": "4",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_GENIEOFTHELAMP2_QUES",
+      "prompt_resolved": "[i]\"How rude of you to bother me, the Genie of the Lamp, from my rest! I curse thee!\n\nBut I'm feeling... [b]generous[/b] today... so I will let you choose your own demise!\"[/i]\n\nThe Genie cackles in glee at {catname}'s distress.",
+      "options": {
+        "mind": {
+          "label": "EVENT_GENIE_CHOICE_CURSEMIND",
+          "label_resolved": "Curse Mind",
+          "stat": "none",
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW1",
+                "prompt_resolved": "[i]\"I love that one!\"[/i]\n\nThe Genie leans down and whispers a lot of really mean things to {catname} that no one else can hear.\n\n{catname} looks around confused and sad...",
+                "gain_disorder_from_pool": "mental_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW2",
+                "prompt_resolved": "[i]\"Smart choice!\"[/i]\n\nThe Genie cackles at its own joke and smacks {catname} on the top of the head!",
+                "gain_disorder_from_pool": "mental_disorders",
+                "permanent_stats": {
+                  "int": "-3"
+                }
+              }
+            }
+          }
+        },
+        "body": {
+          "label": "EVENT_GENIE_CHOICE_CURSEBODY",
+          "label_resolved": "Curse Body",
+          "stat": "none",
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW3",
+                "prompt_resolved": "[i]\"Seems only fair considering you were just practically punching me!\"[/i]\n\nThe Genie strikes {catname}, cursing {him} with an affliction...",
+                "gain_disorder_from_pool": "physical_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW4",
+                "prompt_resolved": "[i]\"Ooooh, fun! What would be most fitting ailment for you then?\"[/i]\n\nThe Genie pauses and thinks for a moment, weighing numerous ways to torture {catname} in its mind, then shrugs and punches {him} really hard!",
+                "gain_disorder_from_pool": "physical_disorders",
+                "permanent_stats": {
+                  "con": "-3"
+                }
+              }
+            }
+          }
+        },
+        "soul": {
+          "label": "EVENT_GENIE_CHOICE_CURSESOUL",
+          "label_resolved": "Curse Soul",
+          "stat": "none",
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW5",
+                "prompt_resolved": "[i]\"I would have let you ask a friend for help deciding, but I doubt you have any! Ha Ha Ha!\n\nHere, let me help you with that!\"[/i]\n\nThe Genie points its finger and something flies out and latches onto {catname}!",
+                "get_parasite_from_pool": "parasites"
+              },
+              "rare": {
+                "prompt": "EVENT_GENIEOFTHELAMP2_REW6",
+                "prompt_resolved": "[i]\"Your soul you say! I know just what will tickle your fancy! Literally!\"[/i]\n\nThe Genie spits and something wet and wriggling lands on {catname}!",
+                "get_parasite_from_pool": "parasites",
+                "permanent_stats": {
+                  "lck": "-3"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "WatchingHead2": {
+    "intro": {
+      "title": "EVENT_WATCHINGHEAD2_NAME",
+      "title_resolved": "Watching Head part 2",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "watching_head",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_WATCHINGHEAD2_QUES",
+      "prompt_resolved": "The giant deformed head is back...?\n\n{catname} pauses, confused. This isn't the way {he} came... yet here it is again?\n\nThe head's single eye stares straight at {him}.",
+      "options": {
+        "fight": {
+          "label": "EVENT_FIGHT_ANSW",
+          "label_resolved": "Fight",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_WATCHINGHEAD2_REW1",
+            "prompt_resolved": "{catname} strikes the monstrous head! It lets out a shudder, then deflates slowly like a balloon...\n\n{catname} digs into the remains and pulls something out...",
+            "get_item": "HumanBrain"
+          },
+          "bad": {
+            "set_frame": "5",
+            "prompt": "EVENT_WATCHINGHEAD2_REW2",
+            "prompt_resolved": "{catname} sneaks up to attack, but it rises up and makes a terrifying sucking sound!\n\nThe cats howl in pain as their faces are ripped towards it!\n\nEach cat lost part of their face!",
+            "party_random_mutation_from_set": {
+              "count": "1",
+              "ears": "-2",
+              "eyebrows": "-2",
+              "eyes": "-2",
+              "mouth": "-2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "MonkeyPawWish": {
+    "intro": {
+      "title": "EVENT_MONKEYPAWWISH_NAME",
+      "title_resolved": "Monkey Paw Wish",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "monkey_paw_4fingers",
+      "subject_frame_inner": "2",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "WorldEventLegacyToken_MonkeyPaw4"
+          },
+          "reward": {
+            "set_subject": "monkey_paw_1finger",
+            "set_frame": "2"
+          }
+        }
+      },
+      "prompt": "EVENT_MONKEYPAWWISH_QUES",
+      "prompt_resolved": "The monkey paw grants {catname} a wish!",
+      "options": {
+        "wish_strength": {
+          "requirements": {
+            "not_has_token": "WorldEventLegacyToken_MonkeyPawStrength"
+          },
+          "label": "EVENT_MONKEYPAW_WISH1",
+          "label_resolved": "Strength beyond your wildest dreams",
+          "stat": "none",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_MONKEYPAW_WISH1_REW",
+            "prompt_resolved": "{catname} feels {his} body swell as {he} grows larger and larger... So big {he} can barely move!",
+            "set_legacy_token": "WorldEventLegacyToken_MonkeyPawStrength",
+            "gain_disorder": "Gargantuan"
+          }
+        },
+        "wish_genes": {
+          "requirements": {
+            "not_has_token": "WorldEventLegacyToken_MonkeyPawGenes"
+          },
+          "label": "EVENT_MONKEYPAW_WISH2",
+          "label_resolved": "Enhanced genes to become the perfect cat",
+          "stat": "none",
+          "good": {
+            "prompt": "EVENT_MONKEYPAW_WISH2_REW",
+            "prompt_resolved": "{catname} feels {his} skin and organs begin to boil as {his} dna is scrambles into horrific concoctions!",
+            "set_legacy_token": "WorldEventLegacyToken_MonkeyPawGenes",
+            "gain_disorder": "TamperedGenes"
+          }
+        },
+        "wish_items": {
+          "requirements": {
+            "not_has_token": "WorldEventLegacyToken_MonkeyPawItems"
+          },
+          "label": "EVENT_MONKEYPAW_WISH3",
+          "label_resolved": "An immensely powerful item",
+          "stat": "none",
+          "good": {
+            "prompt": "EVENT_MONKEYPAW_WISH3_REW",
+            "prompt_resolved": "{catname} is granted their wish and an item magically materializes in front of {him}! {catname} discards the rest of his armor to focus on wearing his new one!",
+            "set_legacy_token": "WorldEventLegacyToken_MonkeyPawItems",
+            "random_pool": [
+              {
+                "gain_disorder": "SensoryOverloadTrinket",
+                "get_and_equip_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "trinket"
+                }
+              },
+              {
+                "gain_disorder": "SensoryOverloadFace",
+                "get_and_equip_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "face"
+                }
+              },
+              {
+                "gain_disorder": "SensoryOverloadHead",
+                "get_and_equip_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "head"
+                }
+              },
+              {
+                "gain_disorder": "SensoryOverloadNeck",
+                "get_and_equip_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "neck"
+                }
+              },
+              {
+                "gain_disorder": "SensoryOverloadWeapon",
+                "get_and_equip_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "weapon"
+                }
+              }
+            ]
+          }
+        },
+        "wish_levelups": {
+          "requirements": {
+            "not_has_token": "WorldEventLegacyToken_MonkeyPawKnowledge"
+          },
+          "label": "EVENT_MONKEYPAW_WISH4",
+          "label_resolved": "Learn unfathomably powerful abilities",
+          "stat": "none",
+          "good": {
+            "prompt": "EVENT_MONKEYPAW_WISH4_REW",
+            "prompt_resolved": "{catname} feels a splitting pain in {his} head as {he} suddenly fathoms the vast possibilities of all things. {He} begins to drool as {his} brain cells are overridden with new knowledge.",
+            "set_legacy_token": "WorldEventLegacyToken_MonkeyPawKnowledge",
+            "gain_disorder": "BrainDead",
+            "level_up": "self"
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTomb1": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTOMB_NAME",
+      "title_resolved": "Mysterious Tomb",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tomb_stairs",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTOMB1_QUES",
+      "prompt_resolved": "{catname} looks inside the door and sees steps leading downward into darkness.\n\nUnlike the outside, the stone here is in great condition, untouched by the passage of time.\n\nDecorative looking slots are etched into the walls beside each step.",
+      "options": {
+        "smash": {
+          "label": "EVENT_MYSTERIOUSTOMB1_ANSW",
+          "label_resolved": "Make your way down the stairs...",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB1_END",
+            "event_now_same_cat": "MysteriousTomb2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB1_REW1",
+                "prompt_resolved": "Poisoned darts fly out from the slots as {catname} runs down the stairs!\n\n{He} manages to dodge most of the darts but get stung by a few.",
+                "self_status_next_fight": {
+                  "Poison": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB1_REW2",
+                "prompt_resolved": "{catname} deftly leaps down from step to step, dodging flying darts that shoot from the slots!"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB1_REW3",
+                "prompt_resolved": "As {catname} walks down the stairs, poisoned darts shoot out and stab {him}!\n\n{catname} tries to press on but gets riddled with more darts and runs screaming from the tomb!",
+                "self_status_next_fight": {
+                  "Poison": "4"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB1_REW4",
+                "prompt_resolved": "Poisoned darts leap from the slots on the walls and sting {catname}. {He} retreats, howling in pain!\n\nThe darts must have been laced with something even worse than poison...",
+                "self_status_next_fight": {
+                  "Poison": "4"
+                },
+                "gain_disorder_from_pool": "diseases"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSTOMB1_REW5",
+            "prompt_resolved": "It looks way too spooky down there!\n\n{catname} turns back and continues on in the hot sun...",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTomb2": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTOMB_NAME",
+      "title_resolved": "Mysterious Tomb",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tomb_enter",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTOMB2_QUES",
+      "prompt_resolved": "{catname} finds a large ominous doorway leading into the crypt.\n\nThe skeletal remains of would-be grave robbers lay about within...",
+      "options": {
+        "smash": {
+          "label": "EVENT_MYSTERIOUSTOMB2_ANSW",
+          "label_resolved": "Enter tomb",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB2_REW1",
+                "prompt_resolved": "Try as {he} might, {catname} cannot muster up the courage to go on.\n\n{catname} stands there for frozen what feels like an eon, {his} heart throbbing in {his} chest.",
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB2_END_RETRY",
+                "event_now_same_cat": "MysteriousTomb2"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB2_REW2",
+                "prompt_resolved": "{catname} shakes the fear and doubt from {his} mind and steps bravely into the tomb chamber!",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                },
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB2_END_NEXT",
+                "event_now_same_cat": "MysteriousTomb3"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSTOMB2_REW3",
+                "prompt_resolved": "{catname}'s tail quivers in fear and {his} hair stands up on end...\n\n{He} dashes back up the stairs to safety!",
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB2_END_RETREAT",
+                "event_now_same_cat": "MysteriousTomb1"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_MYSTERIOUSTOMB2_REW4",
+                "prompt_resolved": "{catname} steps brazenly into the tomb, and doors in the entrance slam shut behind {him}!\n\nThe cats outside wait patiently for a while... but {catname} does not return.",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                },
+                "play_animation": "resultHole",
+                "leave_party_temporarily": {
+                  "fights_skipped": "1"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSTOMB2_REW5",
+            "prompt_resolved": "Not wanting to add another set of bones, {catname} quickly retreats back out of the tomb!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTomb3": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTOMB_NAME",
+      "title_resolved": "Mysterious Tomb",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tomb_sarcophagus",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTOMB3_QUES",
+      "prompt_resolved": "Within the crypt chamber {catname} finds a stone sarcophagus.",
+      "options": {
+        "smash": {
+          "label": "EVENT_MYSTERIOUSTOMB3_ANSW",
+          "label_resolved": "Open the sarcophagus",
+          "stat": "lck",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB3_REW1",
+                "prompt_resolved": "The treasure hoard of a long dead king lies within!\n\n{catname} retrieves the bounty and returns to the surface.",
+                "gain_coins": [
+                  "50",
+                  "100"
+                ],
+                "get_item_from_pool": "chapter_rare"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB3_REW2",
+                "prompt_resolved": "After pushing the lid clear, {catname} finds an artifact clasped in the hands of the long dead mummy within.",
+                "get_item": "EyeOfRa"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSTOMB3_REW3",
+                "prompt_resolved": "When the lid falls away {catname} looks down at the mummy lying within...\n\nIt's eyes snap open and it begins to rise up out of the sarcophagus!",
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB3_END_MUMMY",
+                "event_now_same_cat": "MysteriousTomb4"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_MYSTERIOUSTOMB3_REW4",
+                "prompt_resolved": "{catname} pulls at the lid of the sarcophagus, and triggers a trap!\n\nPurple gas rapidly fills the room and {catname} chokes on the foul fumes as {he} flees the tomb!",
+                "gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSTOMB3_REW5",
+            "prompt_resolved": "{catname} has seen enough!\n\nBest to let the dead rest.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTomb4": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTOMB_NAME",
+      "title_resolved": "Mysterious Tomb",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tomb_mummy",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTOMB4_QUES",
+      "prompt_resolved": "With a blood-curdling scream, the mummy attacks {catname}!\n\n[i]In the brief instant before {his} reflexes set in, {catname} ponders the strange series of events in {his} life that brought {him} here...[/i]",
+      "options": {
+        "smash": {
+          "label": "EVENT_MYSTERIOUSTOMB4_ANSW",
+          "label_resolved": "Think quickly!",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB4_REW1",
+                "prompt_resolved": "{catname} distracts the mummy by throwing bones from the tomb at it and manages to escape!"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB4_REW2",
+                "prompt_resolved": "{catname} deftly dodges the incoming attack and counters, striking the fragile skeleton in the jaw!\n\nThe mummy's head splits in half and it collapses back into the open sarcophagus!",
+                "get_item": "PharaohStaff"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB4_REW3",
+                "prompt_resolved": "Too startled to react, the mummy grips {catname}'s head with its bony hands...\n\n[b][i]Now you know how it feels to be mummified![/i][/b]\n\n{catname} howls as the mummy rips out {his} brain and returns it to {him} in a jar!",
+                "get_parasite": "BrainInAJar"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB4_REW4",
+                "prompt_resolved": "[b][i]How dare you disturb my sleep![/i][/b]\n\nThe mummy bites into {catname}'s skull, spewing {his} brain matter across the room.\n\n{catname}'s lifeless body is tossed aside to the floor and the mummy returns to its eternal slumber...",
+                "play_animation": "resultHole",
+                "kill": "cat"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ElephantsFootCloser": {
+    "intro": {
+      "title": "EVENT_ELEPHANTSFOOTCLOSER_NAME",
+      "title_resolved": "Elephant's Foot Closer",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "eliphants_foot_closer",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ELEPHANTSFOOTCLOSER_QUES",
+      "prompt_resolved": "Heat from the elephant's foot now permeates every cell of {catname}'s body...\n\n{catname} imagines this might be what it feels like to be nestled in {his} mother's womb.",
+      "options": {
+        "move_closer": {
+          "label": "EVENT_ELEPHANTSFOOTCLOSER_ANSW",
+          "label_resolved": "Move Even Closer!",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOTCLOSER_REW1",
+                "prompt_resolved": "The tingling on {catname}'s skin erupts as {his} body mutates into a strange new form...",
+                "random_mutation": "1",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOTCLOSER_REW2",
+                "prompt_resolved": "A euphoric sensation washes over {catname}. Now totally immersed in the sensation, {his} overstimulated mind craves more... more!",
+                "random_mutation": "1",
+                "permanent_stats": {
+                  "random": "1"
+                },
+                "event_now_same_cat": "ElephantsFootEvenCloser"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOTCLOSER_REW3",
+                "prompt_resolved": "The tingling heat turns to pain and {catname} whimpers as {he} begins to burn alive!",
+                "injury": "radiated"
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOTCLOSER_REW4",
+                "prompt_resolved": "Every cell in {catname}'s body screams in agony and {he} stumbles away from the room in a daze...",
+                "gain_disorder": "Cancer",
+                "self_status_next_fight": {
+                  "Poison": "5"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_ELEPHANTSFOOTCLOSER_REW5",
+            "prompt_resolved": "Coming to {his} senses, {catname} flees from the room!\n\nSmall dots sparkle in {catname}'s vision, like a sea of small stars being born then dying in the same instant.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ElephantsFootEvenCloser": {
+    "intro": {
+      "title": "EVENT_ELEPHANTSFOOTEVENCLOSER_NAME",
+      "title_resolved": "Elephant's Foot Even Closer",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "eliphants_foot_closer",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_QUES",
+      "prompt_resolved": "Where is {he}? Is this hell? Is this heaven?\n\n{His} brain is boiling yet {catname} wonders if {he} can hold out... just a little longer!",
+      "options": {
+        "withstand": {
+          "label": "EVENT_ELEPHANTSFOOTEVENCLOSER_ANSW",
+          "label_resolved": "Withstand",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_REW1",
+                "prompt_resolved": "{catname} stands transfixed for several moments longer facing the glowing shrine, sweat drenching {his} fur.\n\n{He} turns away at last, {his} body ravished and twisted by the radiation.",
+                "random_mutation": "2",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_REW2",
+                "prompt_resolved": "Time seems to drag on, and {catname} is lost in the overwhelming sensations of heat, death, and power!",
+                "random_mutation": "4",
+                "permanent_stats": {
+                  "random": "5"
+                },
+                "event_now_same_cat": "ElephantsFootEvenCloser"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_REW3",
+                "prompt_resolved": "{catname} can no longer feel the heat. {He} IS heat. \n\n{catname} finally manages to turn away from the glowing heap, a small cloud of steam following in {his} wake.",
+                "injury": "radiated"
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_REW4",
+                "prompt_resolved": "Sweat and blood are steaming out of {catname}'s fur like water off a hot iron. {catname} slumps to the floor unconscious, {his} body ravaged by the radiation. \n\nThe other cats hastily drag {him} away to safety.",
+                "injury": "radiated",
+                "gain_disorder": "Cancer",
+                "self_status_next_fight": {
+                  "Poison": "10"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_ELEPHANTSFOOTEVENCLOSER_REW5",
+            "prompt_resolved": "{catname} turns away from the strange mound, meandering into the cold, damp rooms beyond, {his} mind still longing for that deep, deep warmth...",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousStrangerForced": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSSTRANGER_NAME",
+      "title_resolved": "Mysterious Stranger",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_stranger",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSSTRANGER_QUES",
+      "prompt_resolved": "[i]Would you like to play a game? Just place your paw right here and we shall begin...[/i]\n\n{catname} peers beneath the stranger's patchwork cloak but can't see what is hiding within. Cats are pretty fast though... {He} might win!",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "HasPlayedMysteriousStranger"
+          },
+          "reward": {
+            "prompt": "EVENT_MYSTERIOUSSTRANGER_QUES2",
+            "prompt_resolved": "[i]Want to play again? You could get lucky this time, if you're fast enough![/i]"
+          }
+        }
+      },
+      "options": {
+        "play": {
+          "label": "EVENT_MYSTERIOUSSTRANGER_ANSW",
+          "label_resolved": "Play his game",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "set_adventure_token": "HasPlayedMysteriousStranger",
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW1",
+                "prompt_resolved": "{catname} barely pulls {his} paw back at the last second!\n\n[i]Impressive... Have your winnings.[/i]",
+                "gain_coins": [
+                  "5",
+                  "15"
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN",
+                "event_now_same_cat": "MysteriousStranger"
+              },
+              "rare": {
+                "set_frame": "4",
+                "set_adventure_token": "HasPlayedMysteriousStranger",
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW2",
+                "prompt_resolved": "Before the stranger could barely move the large knife, {catname} darts {his} paw away to safety!\n\n[i]Most impressive... I think you win today. I give up![/i]",
+                "gain_coins": [
+                  "20",
+                  "100"
+                ],
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "set_adventure_token": "HasPlayedMysteriousStranger",
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW3",
+                "prompt_resolved": "{catname} concentrates on the stranger's movements but {he} is caught by surprise and the knife slices down, removing {his} finger!\n\n[i]Not fast enough little feline![/i]",
+                "set_adventure_token": "MysteriousStranger_HasLostFinger",
+                "random_pool": [
+                  {
+                    "permanent_stats": {
+                      "str": "-1"
+                    }
+                  },
+                  {
+                    "permanent_stats": {
+                      "dex": "-1"
+                    }
+                  }
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN",
+                "event_now_same_cat": "MysteriousStranger"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSSTRANGER_REW4",
+                "prompt_resolved": "The knife slams down, cutting off {catname}'s finger!\n\n[i]Are you even trying?!? Pay attention this time![/i]\n\nThe stranger reaches out and grabs {catname}'s paw, forcing {him} to play again!",
+                "set_adventure_token": "MysteriousStranger_HasLostFinger",
+                "random_pool": [
+                  {
+                    "permanent_stats": {
+                      "str": "-1"
+                    }
+                  },
+                  {
+                    "permanent_stats": {
+                      "dex": "-1"
+                    }
+                  }
+                ],
+                "override_end_option_prompt": "EVENT_MYSTERIOUSSTRANGER_END_AGAIN2",
+                "event_now_same_cat": "MysteriousStrangerForced"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "JaggedPathwayStalactite": {
+    "intro": {
+      "title": "EVENT_JAGGEDPATHWAY_NAME",
+      "title_resolved": "Jagged Pathway",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "jagged_pathway",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_QUES",
+      "prompt_resolved": "{catname} howls in pain at the giant stalactite buried in {his} skull!\n\nThe other cats bet they could help {him} by pulling it out... Should they?",
+      "options": {
+        "pull_it_out": {
+          "label": "EVENT_JAGGEDPATHWAY_STALACTITE_ANSW1",
+          "label_resolved": "Pull it out",
+          "stat": "none",
+          "good": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW1",
+                "prompt_resolved": "The cats help {catname} carefully pull the stalactite out of {his} head...\n\nThey manage to pry it out, but {catname} passes out from the pain!",
+                "lose_specific_item": "SlagTight",
+                "get_item": "SlagMight",
+                "damage": [
+                  "5",
+                  "8"
+                ],
+                "self_status_next_fight": {
+                  "Sleep": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW2",
+                "prompt_resolved": "The other cats carefully help {catname} extract the protruding rock from {his} head...",
+                "lose_specific_item": "SlagTight",
+                "get_item": "SlagMight",
+                "damage": [
+                  "3",
+                  "4"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW3",
+                "prompt_resolved": "{catname} howls in pain as the cats yank at the stalactite stuck in {his} head!\n\nWith a lurch, it pulls free and {catname} begins bleeding profusely from the gash in his skull!",
+                "lose_specific_item": "SlagTight",
+                "get_item": "SlagMight",
+                "permanent_stats": {
+                  "int": "-2"
+                },
+                "self_status_next_fight": {
+                  "Bleed": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW4",
+                "prompt_resolved": "The cats pull at the stalactite in {catname}'s skull, and it breaks off in pieces...\n\nThey extract the remaining chunks and look down at the bloody chasm on top of {catname}'s head. They're pretty sure there are supposed to be more brains in there... oh well!",
+                "lose_specific_item": "SlagTight",
+                "gain_disorder": "BrainDamage",
+                "permanent_stats": {
+                  "int": "-2"
+                }
+              }
+            }
+          }
+        },
+        "leave_it_in": {
+          "label": "EVENT_JAGGEDPATHWAY_STALACTITE_ANSW2",
+          "label_resolved": "Leave it in",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW5",
+            "prompt_resolved": "{catname} is too afraid and won't let the cats get anywhere near the giant rock protruding from {his} skull!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_JAGGEDPATHWAY_STALACTITE_REW5",
+            "prompt_resolved": "{catname} is too afraid and won't let the cats get anywhere near the giant rock protruding from {his} skull!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "self_status_next_fight": {
+              "Fear": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousCave1": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCAVE1_NAME",
+      "title_resolved": "Mysterious Cave1 (Rappel)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_cave_hole",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCAVE1_QUES",
+      "prompt_resolved": "{catname} finds a rope tied above a deep shaft that leads into an abyss.\n\nShould {he} rappel down into the chasm?",
+      "options": {
+        "repell": {
+          "label": "EVENT_MYSTERIOUSCAVE1_RAPPEL_ANSW",
+          "label_resolved": "Rappel",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE1_REW1",
+                "prompt_resolved": "{catname} makes {his} way down the rope to the base of the chasm.\n\nThe darkness is broken by the soft glow of light splashing on the walls of the cavern ahead...",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_MysteriousCave_FamiliarVoice"
+                  },
+                  "reward": {
+                    "next_event_bonus": "1"
+                  }
+                },
+                "event_now_same_cat": "MysteriousCave2"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE1_REW2",
+                "prompt_resolved": "{catname} feels as if {he} was destined to travel this path!\n\n{He} rappels down the chasm effortlessly as if {he} has done it a thousand times before...",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_MysteriousCave_FamiliarVoice"
+                  },
+                  "reward": {
+                    "next_event_bonus": "2"
+                  },
+                  "else": {
+                    "next_event_bonus": "1"
+                  }
+                },
+                "event_now_same_cat": "MysteriousCave2"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE1_REW3",
+                "prompt_resolved": "Reverberating through the caves below, {catname} hears the stern voice of {his} father!\n\n{He} scrambles back up the rope and flees the cave in fear!",
+                "self_status_next_fight": {
+                  "Fear": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE1_REW4",
+                "prompt_resolved": "Strange sounds and voices fill the cave and {catname}'s mind fills with chaos!\n\n{He} scrambles to safety outside the cave, visibly shaken with fear.",
+                "self_status_next_fight": {
+                  "Fear": "2"
+                },
+                "gain_disorder_from_pool": "mental_disorders"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSCAVE1_REW5",
+            "prompt_resolved": "{catname} peers down the chasm past the rope which leads into the darkness below...\n\nBest not to risk it! {catname} returns to the surface.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousCave2": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCAVE2_NAME",
+      "title_resolved": "Mysterious Cave2 (Glowing One)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_cave_glowing_one",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCAVE2_QUES",
+      "prompt_resolved": "A strange glowing figure sits before {catname}!\n\nPower emanates from its body and strange words from the being echo in {catname}'s mind.",
+      "options": {
+        "repell": {
+          "label": "EVENT_MYSTERIOUSCAVE1_TALKTO_ANSW",
+          "label_resolved": "Talk to the Glowing One",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE2_REW1",
+                "prompt_resolved": "A long time passes as the glowing one explains, using spoken and unspoken words, the meaning of life to {catname}.\n\n{catname}'s mind is at peace and {his} heart is warmed by the knowledge imparted to {him}.",
+                "upgrade_ability": "random",
+                "event_now_same_cat": "MysteriousCave3"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE2_REW2",
+                "prompt_resolved": "The glowing one weaves together the story of {catname}'s life and purpose.\n\n{catname} now fully understands who {he} really is!",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                },
+                "upgrade_ability": "random",
+                "upgrade_passive": "random",
+                "event_now_same_cat": "MysteriousCave3"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE2_REW3",
+                "prompt_resolved": "The glowing one speaks to {catname}, but the words have no meaning and just fill {him} with confusion.\n\n{catname} turns away, ready to return to the surface.",
+                "event_now_same_cat": "MysteriousCave3"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE2_REW4",
+                "prompt_resolved": "The glowing one tells {catname} dark and terrible secrets about the world.\n\n{catname}'s blood runs cold and {his} ears invert back into {his} skull.\n\n{He} was not supposed to hear those terrible words!",
+                "gain_disorder": "Albinism",
+                "mutation": {
+                  "ears": "-2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousCave3": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCAVE2_NAME",
+      "title_resolved": "Mysterious Cave2 (Glowing One)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_cave_climb",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCAVE3_QUES",
+      "prompt_resolved": "{catname} turns to the base of the rope and looks up...\n\nIt sure is a long way back up to the entrance of the cave!",
+      "options": {
+        "repell": {
+          "label": "EVENT_MYSTERIOUSCAVE3_CLIMB_ANSW",
+          "label_resolved": "Climb out",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE3_REW1",
+                "prompt_resolved": "{catname} climbs back up the way {he} came in and exits the cave."
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE3_REW2",
+                "prompt_resolved": "As {he} climbs back up, {catname} ponders the words that the Glowing One spoke to {him}.\n\nA vigor and excitement for life fills {catname} as {he} thinks of the battle ahead!",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE3_REW3",
+                "prompt_resolved": "{catname} tries to climb up but falls back to the bottom and breaks {his} leg!\n\n{He} turns awkwardly back to the Glowing One who is now before {him} again...",
+                "injury": "spd",
+                "event_now_same_cat": "MysteriousCave2"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE3_REW4",
+                "prompt_resolved": "{catname} tries to use the rope to pull {himself} up, but slips and tumbles back down!",
+                "injury": "spd",
+                "event_now_same_cat": "MysteriousCave3"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousMachine_Good": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSMACHINE_GOOD_NAME",
+      "title_resolved": "Mysterious Machine is working good",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_machine",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSMACHINE_GOOD_QUES",
+      "prompt_resolved": "The machine is humming with life and waiting for {catname} to issue a command.",
+      "setup": {
+        "set_frame": "4"
+      },
+      "options": {
+        "copy": {
+          "label": "EVENT_MYSTERIOUSMACHINE_COPY_ANSW",
+          "label_resolved": "Copy",
+          "good": {
+            "set_frame": "5",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_GOOD_REW1",
+            "prompt_resolved": "The machine roars to life and prints out a copy of {catname}!\n\n{catname} hears something behind {him} and turns to see a cat standing next to {him} that looks just like {catname}!?",
+            "gain_clone_familiar": {
+              "object": "PlayerCat_MachineClone"
+            }
+          }
+        },
+        "scale": {
+          "label": "EVENT_MYSTERIOUSMACHINE_SCALE_ANSW",
+          "label_resolved": "Scale",
+          "good": {
+            "set_frame": "6",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_GOOD_REW2",
+            "prompt_resolved": "The machine beeps and groans, becoming larger and larger!\n\nOr are the cats all getting smaller!?",
+            "party_gain_disorder_from_pool": [
+              "Dwarfism"
+            ]
+          }
+        },
+        "print": {
+          "label": "EVENT_MYSTERIOUSMACHINE_PRINT_ANSW",
+          "label_resolved": "Print",
+          "good": {
+            "set_frame": "7",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_GOOD_REW3",
+            "prompt_resolved": "The strange machine starts spitting out sheet after sheet of paper, each with a bunch of different items!\n\nAll the items look just like the ones {catname} and the cats already have!",
+            "copy_party_items": "1"
+          }
+        }
+      }
+    }
+  },
+  "MysteriousMachine_Bad": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSMACHINE_BAD_NAME",
+      "title_resolved": "Mysterious Machine is working bad",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_machine",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSMACHINE_BAD_QUES",
+      "prompt_resolved": "The machine is beeping loudly and shaking all over!\n\n{catname} should press a button, quick!",
+      "setup": {
+        "set_frame": "4"
+      },
+      "options": {
+        "copy": {
+          "label": "EVENT_MYSTERIOUSMACHINE_COPY_ANSW",
+          "label_resolved": "Copy",
+          "good": {
+            "set_frame": "8",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_BAD_REW1",
+            "prompt_resolved": "{catname} presses the copy button and the machine springs to life!\n\nThe party of {catname}s gather around to watch while the device works. Not very exiting?\n\n{catname} looks around at the other {catname}s and then they move on to the next area.",
+            "play_animation": "resultBad",
+            "clone_self_to_party": "1"
+          }
+        },
+        "scale": {
+          "label": "EVENT_MYSTERIOUSMACHINE_SCALE_ANSW",
+          "label_resolved": "Scale",
+          "good": {
+            "set_frame": "9",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_BAD_REW2",
+            "prompt_resolved": "The machine angrily beeps at {catname}, growing smaller and smaller as it spits out a new sheet of paper.\n\nOr are the cats all getting bigger?",
+            "party_gain_disorder_from_pool": [
+              "Gigantism"
+            ]
+          }
+        },
+        "print": {
+          "label": "EVENT_MYSTERIOUSMACHINE_PRINT_ANSW",
+          "label_resolved": "Print",
+          "good": {
+            "set_frame": "10",
+            "prompt": "EVENT_MYSTERIOUSMACHINE_BAD_REW3",
+            "prompt_resolved": "The machine spits out a sheet with multiple copies of the same item on it.\n\nAlarmed, the cats check their pockets... all of their stuff got replaced with duplicates of {catname}'s items!",
+            "play_animation": "resultBad",
+            "copy_items_to_party": "1"
+          }
+        }
+      }
+    }
+  },
+  "BodyOfGlorg_Gift": {
+    "intro": {
+      "title": "EVENT_GIFTOFGLORG_NAME",
+      "title_resolved": "Gift of Glorg",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "body_of_glorg",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_GIFTOFGLORG_QUES",
+      "prompt_resolved": "Large parasites extends from Glorg's hand towards {catname}...\n\nWhere should Glorg gift {catname}?",
+      "setup": {
+        "set_frame": "4"
+      },
+      "options": {
+        "head": {
+          "label": "EVENT_GIFTOFGLORG_HEAD_ANSW",
+          "label_resolved": "Head",
+          "good": {
+            "prompt": "EVENT_GIFTOFGLORG_REW1",
+            "prompt_resolved": "A large parasite from Glorg's body latches onto {catname}'s skull...\n\n{catname} feels the rush of euphoria as {his} passive abilities become empowered!",
+            "set_frame": "5",
+            "get_parasite": "Beepis",
+            "gain_disorder": "BlessingOfGlorg"
+          }
+        },
+        "neck": {
+          "label": "EVENT_GIFTOFGLORG_NECK_ANSW",
+          "label_resolved": "Neck",
+          "good": {
+            "prompt": "EVENT_GIFTOFGLORG_REW2",
+            "prompt_resolved": "A parasite extends from Glorg's hand and wraps itself around {catname}'s neck.\n\n{catname} feels a rush of excitement as energy from the parasite surges through {his} body!",
+            "set_frame": "5",
+            "get_parasite": "Cunch",
+            "gain_disorder": "BlessingOfGlorg"
+          }
+        },
+        "face": {
+          "label": "EVENT_GIFTOFGLORG_FACE_ANSW",
+          "label_resolved": "Face",
+          "good": {
+            "prompt": "EVENT_GIFTOFGLORG_REW3",
+            "prompt_resolved": "Glorg's parasite reaches forward and latches onto {catname}'s face!\n\n{catname} feels an odd sucking sensation on {his} face as the creature empower's {his} abilities!",
+            "set_frame": "5",
+            "get_parasite": "Feebis",
+            "gain_disorder": "BlessingOfGlorg"
+          }
+        }
+      }
+    }
+  }
+}

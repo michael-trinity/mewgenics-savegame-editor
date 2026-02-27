@@ -1,0 +1,868 @@
+{
+  "BasicMelee": {
+    "template": "melee_attack",
+    "graphics": {
+      "animation": "Default",
+      "damage_threshold_altanimations": {
+        "heavyMelee": "10",
+        "heaviestMelee": "20"
+      }
+    },
+    "meta": {
+      "name": "ABILITY_MELEEATTACK_NAME",
+      "name_resolved": "Melee Attack",
+      "desc": "ABILITY_MELEEATTACK_DESC",
+      "desc_resolved": "Attack an adjacent unit.",
+      "animate_name": "false"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    }
+  },
+  "BasicMelee_Fighter": {
+    "variant_of": "BasicMelee",
+    "meta": {
+      "ability_icon": "BasicMelee",
+      "class": "Fighter"
+    }
+  },
+  "BasicBigMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BIGMELEEATTACK_NAME",
+      "name_resolved": "Melee Attack",
+      "desc": "ABILITY_BIGMELEEATTACK_DESC",
+      "desc_resolved": "Attack an adjacent unit.",
+      "animate_name": "false"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range"
+    }
+  },
+  "BasicRanged": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_LOBBEDSHOT_NAME",
+      "name_resolved": "Lobbed Shot",
+      "desc": "ABILITY_LOBBEDSHOT_DESC",
+      "desc_resolved": "Lob a shot over units and obstacles.",
+      "animate_name": "false"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage"
+    }
+  },
+  "BasicRanged_Hunter": {
+    "variant_of": "BasicRanged",
+    "meta": {
+      "ability_icon": "BasicRanged",
+      "class": "Hunter"
+    }
+  },
+  "BasicRanged_1DMG": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_LOBBEDSHOT1DMG_NAME",
+      "name_resolved": "Lobbed Shot",
+      "desc": "ABILITY_LOBBEDSHOT1DMG_DESC",
+      "desc_resolved": "Lob a shot over units and obstacles.",
+      "animate_name": "false"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "BasicShortRanged": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "ABILITY_SHORTSHOT_NAME",
+      "name_resolved": "Short Shot",
+      "desc": "ABILITY_SHORTSHOT_DESC",
+      "desc_resolved": "Shoot a unit in your line of sight.",
+      "animate_name": "false"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    }
+  },
+  "BasicMagicShortRanged": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "ABILITY_BASICMAGICSHORTRANGED_NAME",
+      "name_resolved": "Magic Dart",
+      "desc": "ABILITY_BASICMAGICSHORTRANGED_DESC",
+      "desc_resolved": "Shoot a charged projectile within your line of sight. This attack counts as both magical and physical.",
+      "animate_name": "false",
+      "class": "Mage"
+    },
+    "graphics": {
+      "projectile": "MagicSpikeProjectile",
+      "animation": "createmagic"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "physical_spell",
+      "ranged": "true"
+    }
+  },
+  "BasicShortLobbed": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_SHORTLOBBEDSHOT_NAME",
+      "name_resolved": "Short Lobbed Shot",
+      "desc": "ABILITY_SHORTLOBBEDSHOT_DESC",
+      "desc_resolved": "Lob a shot over units and obstacles.",
+      "animate_name": "false"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    }
+  },
+  "BasicStraightShot": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_NAILTHROW_NAME",
+      "name_resolved": "Nail Throw",
+      "desc": "ABILITY_NAILTHROW_DESC",
+      "desc_resolved": "Attack a unit in a straight line.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "BasicStraightShot_Thief": {
+    "variant_of": "BasicStraightShot",
+    "meta": {
+      "ability_icon": "BasicStraightShot",
+      "class": "Thief"
+    }
+  },
+  "BasicMedicMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_MELEEHEAL_NAME",
+      "name_resolved": "Melee Attack / Heal",
+      "desc": "ABILITY_MELEEHEAL_DESC",
+      "desc_resolved": "Heals allies but damages enemies.",
+      "animate_name": "false",
+      "class": "Medic"
+    },
+    "graphics": {
+      "ally_animation": "lickAttack",
+      "animation": "Default"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "ContextualHeal": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "BasicMedicRanged": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_RANGEDHEAL_NAME",
+      "name_resolved": "Ranged Attack / Heal",
+      "desc": "ABILITY_RANGEDHEAL_DESC",
+      "desc_resolved": "Heals allies but damages enemies.",
+      "animate_name": "false",
+      "class": "Medic"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "ContextualHeal": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "BasicTankMelee": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_PUSHATTACK_NAME",
+      "name_resolved": "Push Attack",
+      "desc": "ABILITY_PUSHATTACK_DESC",
+      "desc_resolved": "Dash forward one space, then melee attack with Knockback.",
+      "animate_name": "false",
+      "class": "Tank"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "target": {
+      "max_range": "1+bonus_range",
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "knockback": "1"
+    }
+  },
+  "BasicMonkMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_MONKMELEE_NAME",
+      "name_resolved": "Melee Attack",
+      "desc": "ABILITY_MONKMELEE_DESC",
+      "desc_resolved": "Attack an adjacent unit.",
+      "animate_name": "false",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "monkAttack"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "(5+bonus_melee_damage+1)/2"
+    }
+  },
+  "BasicMonkRanged": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_MONKLOBBED_NAME",
+      "name_resolved": "Lobbed Shot",
+      "desc": "ABILITY_MONKLOBBED_DESC",
+      "desc_resolved": "Lob a shot over units and obstacles.",
+      "animate_name": "false",
+      "class": "Monk"
+    },
+    "target": {
+      "min_range": "2",
+      "max_range": "4+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "(4+bonus_ranged_damage+1)/2"
+    }
+  },
+  "BasicButcherMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BUTCHERMELEE_NAME",
+      "name_resolved": "Cleave",
+      "desc": "ABILITY_BUTCHERMELEE_DESC",
+      "desc_resolved": "Attack a unit adjacent or diagonally with Cleave.",
+      "animate_name": "false",
+      "class": "Butcher"
+    },
+    "graphics": {
+      "animation": "butcherAttack"
+    },
+    "target": {
+      "target_mode": "direction8",
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Cleave": "1"
+      }
+    }
+  },
+  "BasicButcherMeleeWide": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BUTCHERWIDE_NAME",
+      "name_resolved": "Wide Cleave",
+      "desc": "ABILITY_BUTCHERWIDE_DESC",
+      "desc_resolved": "Attack a wide area with Cleave.",
+      "animate_name": "false",
+      "class": "Butcher"
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "aoe_symmetry": "none",
+      "custom_aoe": [
+        [
+          "1,",
+          "-1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ]
+      ]
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Cleave": "1"
+      }
+    }
+  },
+  "BasicButcherMeleeWideSpin": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BUTCHERSPIN_NAME",
+      "name_resolved": "Spin Cleave",
+      "desc": "ABILITY_BUTCHERSPIN_DESC",
+      "desc_resolved": "Attack everything around you with Cleave.",
+      "animate_name": "false",
+      "class": "Butcher"
+    },
+    "graphics": {
+      "animation": "singleSpin"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_mode": "square"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Cleave": "1"
+      }
+    }
+  },
+  "BasicButcherMeleeWideDoubleSpin": {
+    "variant_of": "BasicButcherMeleeWideSpin",
+    "class": "MultiHitMeleeAttackAbility",
+    "meta": {
+      "ability_icon": "BasicButcherMeleeWideSpin"
+    },
+    "graphics": {
+      "start": "spinattackstart",
+      "loop": "spinattackloop",
+      "end": "spinattackend"
+    },
+    "target": {
+      "multihit": "2"
+    }
+  },
+  "BasicDruidAbility": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_DRUIDSING_NAME",
+      "name_resolved": "Sing",
+      "desc": "ABILITY_DRUIDSING_DESC",
+      "desc_resolved": "Heal and give +1 Temporary Damage to units in a wide area.",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "None"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "cant_miss": "true",
+      "effects": {
+        "TempDamageUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "BasicDruidAbilityVersatile": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_DRUIDVERSATILE_NAME",
+      "name_resolved": "Sing",
+      "desc": "ABILITY_DRUIDVERSATILE_DESC",
+      "desc_resolved": "Heal and give +1 Temporary Damage to units in a wide area.",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "None"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "cant_miss": "true",
+      "effects": {
+        "ContextualHeal": "1",
+        "Conditional_Ally": {
+          "TempDamageUp": "1"
+        },
+        "Conditional_Enemy": {
+          "TempDamageUp": "-1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "TinkererCraft": {
+    "template": "self_buff",
+    "keyword_tooltips": {
+      "TemporaryItem": "1",
+      "BonusAbility": "TinkererThrow"
+    },
+    "meta": {
+      "name": "ABILITY_CRAFTWEAPON_NAME",
+      "name_resolved": "Craft Weapon",
+      "desc": "ABILITY_CRAFTWEAPON_DESC",
+      "desc_resolved": "Craft and equip a random temporary weapon.",
+      "animate_name": "false",
+      "class": "Tinkerer"
+    },
+    "graphics": {
+      "animation": "tinker"
+    },
+    "target": {
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_cat_with_empty_weapon_slot"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Craft": {
+          "pool": "tinkerer_default",
+          "slot": "weapon"
+        },
+        "IgnoreDebuffs": "1"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "TinkererThrow": {
+    "template": "ranged_attack",
+    "meta": {
+      "name": "ABILITY_THROWWEAPON_NAME",
+      "name_resolved": "Throw Weapon",
+      "desc": "ABILITY_THROWWEAPON_DESC",
+      "desc_resolved": "Throw your weapon at a unit.\n[s:.7]This breaks the weapon.[/s]",
+      "animate_name": "false",
+      "class": "Tinkerer"
+    },
+    "tags": [
+      "weapon_throw"
+    ],
+    "graphics": {
+      "animation": "weaponthrowstraight",
+      "projectile": "source_weapon"
+    },
+    "cost": {
+      "requires_destructible_weapon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "bonus_passives": {
+      "AbilityInheritsWeaponEffects": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "DestroyWeaponThrow": "1"
+      }
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "BasicPsychicPull": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PSYCHICPULL_NAME",
+      "name_resolved": "Psychic Pull",
+      "desc": "ABILITY_PSYCHICPULL_DESC",
+      "desc_resolved": "Pull a unit toward you from anywhere dealing low damage.",
+      "animate_name": "false",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "psyAttack3"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "knockback_mode": "target_to_character"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_basic_spell_damage",
+      "knockback": "1",
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "BasicNecroRanged": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_LEECHSHOT_NAME",
+      "name_resolved": "Leech Shot",
+      "desc": "ABILITY_LEECHSHOT_DESC",
+      "desc_resolved": "A lobbed attack that inflicts Leech 1.",
+      "animate_name": "false",
+      "class": "Necromancer"
+    },
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "effects": {
+        "Leeches": "1"
+      }
+    }
+  },
+  "BasicDrainMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DRAINATTACK_NAME",
+      "name_resolved": "Drain Attack",
+      "desc": "ABILITY_DRAINATTACK_DESC",
+      "desc_resolved": "A melee attack with Lifesteal.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "dashbite"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Leech": "1"
+      }
+    }
+  },
+  "BasicHook": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_HOOK_NAME",
+      "name_resolved": "Hook",
+      "desc": "ABILITY_HOOK_DESC",
+      "desc_resolved": "Pull an enemy to you.",
+      "animate_name": "false"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range",
+      "knockback_mode": "pull_to_character"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "Froghook",
+      "chain_movieclip": "Frogchain",
+      "chain_distance": ".25"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "PullSourceToKnockbackImmuneTarget": "1",
+        "CollectsPickups": "1"
+      }
+    }
+  },
+  "BasicMagicMissile": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BASICMAGICMISSILE_NAME",
+      "name_resolved": "Magic Missile",
+      "desc": "ABILITY_BASICMAGICMISSILE_DESC",
+      "desc_resolved": "Shoot an infinite-range projectile that can't miss.\n[s:.7](This attack's damage scales with your [img:int])[/s]",
+      "class": "Mage",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "1",
+      "speed": "20",
+      "animation": "castspell"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_basic_spell_damage+((int-5)*.5)",
+      "cant_miss": "true"
+    }
+  },
+  "BasicSuplex": {
+    "template": "melee_attack",
+    "class": "SuplexAbility",
+    "meta": {
+      "name": "ABILITY_SUPLEX_NAME",
+      "name_resolved": "Suplex",
+      "desc": "ABILITY_SUPLEX_DESC",
+      "desc_resolved": "Grab a unit in front of you and slam it into the tile behind you.",
+      "class": "Tank",
+      "animate_name": "false"
+    },
+    "tags": [
+      "cant_be_simulcast"
+    ],
+    "graphics": {
+      "animation": "suplex"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "knockback_mode": "zero",
+      "aoe_considers_character_size": "false",
+      "target_mode": "tile",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_have_character"
+      ],
+      "range_mode": "standard",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee",
+      "blocked_multiplier": "2",
+      "makes_contact": "false"
+    }
+  },
+  "BasicTwoHitMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BASICTWOHITMELEE_NAME",
+      "name_resolved": "Two-Hit Melee Attack",
+      "desc": "ABILITY_BASICTWOHITMELEE_DESC",
+      "desc_resolved": "Hits twice",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "doubleswat"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable",
+      "multihit": "2"
+    }
+  },
+  "BasicPuke": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_PUKESHOT_NAME",
+      "name_resolved": "Puke Shot",
+      "desc": "ABILITY_PUKESHOT_DESC",
+      "desc_resolved": "Lob projectiles in an area.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "pukeatk"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "(4+bonus_ranged_damage+1)/2",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "BasicExplosiveShot": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_EXPLOSIVESHOT_NAME",
+      "name_resolved": "Explosive Shot",
+      "desc": "ABILITY_EXPLOSIVESHOT_DESC",
+      "desc_resolved": "Lob a puke projectile that does splash damage to neighboring units.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "pukeatk",
+      "use_projectile": "true",
+      "projectile": "PukeBall",
+      "particle": "Explosion",
+      "delay": "2"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "4+bonus_range",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "type": "ranged",
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "BasicPoke": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_POKE_NAME",
+      "name_resolved": "Poke",
+      "desc": "ABILITY_POKE_DESC",
+      "desc_resolved": "A melee attack that deals 1 damage.",
+      "ability_icon": "Poke",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "tinyPunch"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "melee"
+    }
+  },
+  "GerdShot": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_GERDSHOT_NAME",
+      "name_resolved": "Gerd Shot",
+      "desc": "ABILITY_GERDSHOT_DESC",
+      "desc_resolved": "Lob a puke projectile that does splash damage to neighboring units. Damages you for 2 on use.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "use_projectile": "true",
+      "projectile": "PukeBall",
+      "animation": "pukeatk",
+      "particle": "Wave",
+      "center_particle": "none"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "max_aoe": "1"
+    },
+    "self_damage": {
+      "damage": "2"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "type": "ranged",
+      "elements": [
+        "Water"
+      ]
+    },
+    "splash_damage": {
+      "damage": "4",
+      "type": "spell",
+      "knockback": "1",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "BasicSpin": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BASICSPIN_NAME",
+      "name_resolved": "Spin Attack",
+      "desc": "ABILITY_BASICSPIN_DESC",
+      "desc_resolved": "Attack all adjacent units.",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "singleSpin"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage"
+    }
+  },
+  "BasicMetronome": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_METRONOME_NAME",
+      "name_resolved": "Metronome",
+      "desc": "ABILITY_METRONOME_DESC",
+      "desc_resolved": "Cast a random spell.",
+      "class": "Colorless",
+      "type_icon": "unknown"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "metronome"
+    },
+    "damage_instance": {
+      "effects": {
+        "Metronome": "1"
+      }
+    }
+  }
+}

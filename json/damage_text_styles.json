@@ -1,0 +1,220 @@
+{
+  "health_damage": {
+    "color": [
+      ".74",
+      ".39",
+      ".39"
+    ]
+  },
+  "shield_damage": {
+    "color": "gray",
+    "right_icon": "shield"
+  },
+  "divineshield_damage": {
+    "color": [
+      ".39",
+      ".74",
+      ".71"
+    ],
+    "right_icon": "divineshield"
+  },
+  "shield_loss": {
+    "color": "gray",
+    "right_icon": "shield"
+  },
+  "divineshield_loss": {
+    "color": [
+      ".39",
+      ".74",
+      ".71"
+    ],
+    "right_icon": "divineshield"
+  },
+  "damagescale_zero": {
+    "color": "gray"
+  },
+  "damagescale_small": {
+    "scale": ".75"
+  },
+  "damagescale_medium": {
+    "scale": "1"
+  },
+  "damagescale_large": {
+    "scale": "1.33"
+  },
+  "damagescale_extreme": {
+    "scale": "1.66"
+  },
+  "crit": {
+    "suffix": "!!!"
+  },
+  "miss": {
+    "color": "gray"
+  },
+  "blocked": {
+    "color": "gray"
+  },
+  "health_gain": {
+    "color": "white",
+    "right_icon": "heal"
+  },
+  "shield_gain": {
+    "color": [
+      ".75",
+      ".75",
+      ".75"
+    ],
+    "right_icon": "shield"
+  },
+  "divineshield_gain": {
+    "color": [
+      ".39",
+      ".74",
+      ".71"
+    ],
+    "right_icon": "divineshield"
+  },
+  "mana_gain": {
+    "color": [
+      ".63",
+      ".73",
+      ".94"
+    ],
+    "right_icon": "mana"
+  },
+  "mana_loss": {
+    "color": [
+      ".60",
+      ".45",
+      ".74"
+    ],
+    "right_icon": "mana"
+  },
+  "coin_gain": {
+    "color": [
+      ".74",
+      ".58",
+      ".37"
+    ],
+    "right_icon": "coin"
+  },
+  "injury": {
+    "color": [
+      ".32",
+      ".10",
+      ".10"
+    ]
+  },
+  "injury_heal": {
+    "color": [
+      ".80",
+      ".50",
+      ".50"
+    ]
+  },
+  "equipment_broke": {
+    "color": "gray"
+  },
+  "run_away": {
+    "color": [
+      ".91",
+      ".83",
+      ".83"
+    ]
+  },
+  "gained_disorder": {
+    "color": "black",
+    "outline_color": "white"
+  },
+  "caught_disease": {
+    "color": "black",
+    "outline_color": "white"
+  },
+  "cured_disease": {
+    "color": [
+      ".80",
+      ".99",
+      ".74"
+    ]
+  },
+  "caught_fire": {
+    "color": [
+      ".76",
+      ".43",
+      ".21"
+    ]
+  },
+  "damagesource_poison": {
+    "back_icon": "poison",
+    "color": [
+      ".27",
+      ".47",
+      ".18"
+    ]
+  },
+  "damagesource_burn": {
+    "back_icon": "burn",
+    "color": [
+      ".76",
+      ".43",
+      ".21"
+    ]
+  },
+  "damagesource_bleed": {
+    "back_icon": "bleed",
+    "color": [
+      ".54",
+      ".12",
+      ".12"
+    ]
+  },
+  "damagesource_thorns": {
+    "back_icon": "thorns"
+  },
+  "damagesource_leech": {
+    "back_icon": "leech"
+  },
+  "damagesource_manaleech": {
+    "back_icon": "mana_leech"
+  },
+  "damagesource_knockback": {
+    "back_icon": "knockback"
+  },
+  "damagesource_confusion": {
+    "back_icon": "confusion"
+  },
+  "status_default": {
+    "color": "white"
+  },
+  "status_stunned": {},
+  "status_immobile": {},
+  "status_frozen": {},
+  "status_petrified": {},
+  "status_mad": {},
+  "status_sleeping": {},
+  "status_exerted": {},
+  "status_fear": {},
+  "status_confused": {},
+  "status_hurt_confusion": {},
+  "status_breakfree": {},
+  "status_charged": {},
+  "status_exhausted": {},
+  "status_rot": {},
+  "status_study": {},
+  "status_takeaim": {},
+  "status_losetakeaim": {},
+  "status_holster": {},
+  "status_catch_projectile": {},
+  "status_reload": {},
+  "status_reload_move": {},
+  "status_rebirth": {},
+  "status_countered": {},
+  "status_energized": {},
+  "status_bugbite": {},
+  "status_burn": {},
+  "status_poison": {},
+  "status_bleed": {},
+  "status_hex": {},
+  "status_leech": {},
+  "status_manaleech": {}
+}

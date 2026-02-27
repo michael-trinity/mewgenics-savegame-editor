@@ -1,0 +1,84 @@
+{
+  "SpearGuy": {
+    "graphics": {
+      "movieclip": "SpearTestGuy",
+      "name": "Spear Test Guy"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "health": "30",
+      "faction": "enemies",
+      "exclude_from_hallucinate": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SpearPokeTest",
+      "can_get_bonus": "true",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "Dummy": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Dummy Cat"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "100",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "exclude_from_hallucinate": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Test2x2": {
+    "graphics": {
+      "movieclip": "test2x2",
+      "name": "Test 2x2"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "health": "30",
+      "faction": "enemies",
+      "exclude_from_hallucinate": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SpearPokeTest",
+      "can_get_bonus": "true",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  }
+}

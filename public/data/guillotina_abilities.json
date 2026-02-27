@@ -1,0 +1,1240 @@
+{
+  "YeetTowardsBuddy": {
+    "id": "YeetTowardsBuddy",
+    "template": "throw_attack",
+    "name_key": "EABILITY_TOSS_NAME",
+    "name": "Toss",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "7",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "animation": "throw",
+      "use_placeholder": "true",
+      "face_toss_target": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage",
+      "custom_additional_ai_weight": "toss_towards_buddy"
+    }
+  },
+  "GuillotinaTossCollide": {
+    "id": "GuillotinaTossCollide",
+    "template": "throw_attack",
+    "name_key": "EABILITY_TOSS_NAME",
+    "name": "Toss",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "7",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "animation": "throw",
+      "use_placeholder": "true",
+      "face_toss_target": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage",
+      "custom_additional_ai_weight": "toss_far"
+    }
+  },
+  "Magnetize_AI": {
+    "id": "Magnetize_AI",
+    "template": "spell",
+    "name_key": "EABILITY_GASP_NAME",
+    "name": "Gasp",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "2,",
+          "1"
+        ],
+        ",",
+        [
+          "3,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "5,",
+          "1"
+        ],
+        ",",
+        [
+          "6,",
+          "1"
+        ],
+        ",",
+        [
+          "7,",
+          "1"
+        ],
+        ",",
+        [
+          "8,",
+          "1"
+        ],
+        ",",
+        [
+          "9,",
+          "1"
+        ],
+        ",",
+        [
+          "10,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "3,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "5,",
+          "0"
+        ],
+        ",",
+        [
+          "6,",
+          "0"
+        ],
+        ",",
+        [
+          "7,",
+          "0"
+        ],
+        ",",
+        [
+          "8,",
+          "0"
+        ],
+        ",",
+        [
+          "9,",
+          "0"
+        ],
+        ",",
+        [
+          "10,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ],
+        ",",
+        [
+          "2,-1"
+        ],
+        ",",
+        [
+          "3,-1"
+        ],
+        ",",
+        [
+          "4,-1"
+        ],
+        ",",
+        [
+          "5,-1"
+        ],
+        ",",
+        [
+          "6,-1"
+        ],
+        ",",
+        [
+          "7,-1"
+        ],
+        ",",
+        [
+          "8,-1"
+        ],
+        ",",
+        [
+          "9,-1"
+        ],
+        ",",
+        [
+          "10,-1"
+        ]
+      ],
+      "knockback_mode": "perp_towards_facing"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "suck"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "0",
+      "custom_additional_ai_weight": "magnetize_favorlineup",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Magnetize": {
+    "id": "Magnetize",
+    "template": "spell",
+    "name_key": "EABILITY_GASP_NAME",
+    "name": "Gasp",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "2,",
+          "1"
+        ],
+        ",",
+        [
+          "3,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "5,",
+          "1"
+        ],
+        ",",
+        [
+          "6,",
+          "1"
+        ],
+        ",",
+        [
+          "7,",
+          "1"
+        ],
+        ",",
+        [
+          "8,",
+          "1"
+        ],
+        ",",
+        [
+          "9,",
+          "1"
+        ],
+        ",",
+        [
+          "10,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "3,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "5,",
+          "0"
+        ],
+        ",",
+        [
+          "6,",
+          "0"
+        ],
+        ",",
+        [
+          "7,",
+          "0"
+        ],
+        ",",
+        [
+          "8,",
+          "0"
+        ],
+        ",",
+        [
+          "9,",
+          "0"
+        ],
+        ",",
+        [
+          "10,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ],
+        ",",
+        [
+          "2,-1"
+        ],
+        ",",
+        [
+          "3,-1"
+        ],
+        ",",
+        [
+          "4,-1"
+        ],
+        ",",
+        [
+          "5,-1"
+        ],
+        ",",
+        [
+          "6,-1"
+        ],
+        ",",
+        [
+          "7,-1"
+        ],
+        ",",
+        [
+          "8,-1"
+        ],
+        ",",
+        [
+          "9,-1"
+        ],
+        ",",
+        [
+          "10,-1"
+        ]
+      ],
+      "knockback_mode": "perp_towards_facing_middle_pull"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "suck",
+      "visual_delay_but_simultaneous_damage": "10",
+      "delay": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "custom_additional_ai_weight": "magnetize_favorlineup",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "TinaHeadGutSpear": {
+    "id": "TinaHeadGutSpear",
+    "template": "melee_attack",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_aoe": "4"
+    },
+    "graphics": {
+      "animation": "attack",
+      "detatched_animation": "TinaSpear",
+      "detatched_animation_reach": "4"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "contact_requires_adjacency": "false"
+    }
+  },
+  "TinaBodySlamMax": {
+    "id": "TinaBodySlamMax",
+    "template": "jump_attack",
+    "cost": {
+      "act_points": "1"
+    },
+    "target": {
+      "max_range": "2",
+      "min_range": "2",
+      "range_mode": "cross",
+      "range_considers_character_size": "false",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "full_jump_animation": "attack",
+      "full_jump_sync_frames": "38",
+      "full_jump_windup_frames": "13"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "5+bonus_melee_damage",
+      "knockback": "10",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Bruise": "1",
+        "Stun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "TinaBodySlam": {
+    "id": "TinaBodySlam",
+    "template": "jump_attack",
+    "cost": {
+      "act_points": "1"
+    },
+    "target": {
+      "max_range": "2",
+      "min_range": "1",
+      "range_mode": "cross",
+      "range_considers_character_size": "false",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "full_jump_animation": "attack",
+      "full_jump_sync_frames": "38",
+      "full_jump_windup_frames": "13"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "5+bonus_melee_damage",
+      "knockback": "10",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Bruise": "1",
+        "Stun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "TinaBodySlamRage": {
+    "id": "TinaBodySlamRage",
+    "template": "jump_attack",
+    "cost": {
+      "act_points": "1"
+    },
+    "target": {
+      "max_range": "3",
+      "min_range": "1",
+      "range_considers_character_size": "false",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "full_jump_animation": "attack",
+      "full_jump_sync_frames": "49",
+      "full_jump_windup_frames": "13"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "5+bonus_melee_damage",
+      "knockback": "10",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Bruise": "1",
+        "Stun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "Guillotina2Rage": {
+    "id": "Guillotina2Rage",
+    "template": "self_buff",
+    "graphics": {
+      "dont_orient": "true",
+      "animation": "react",
+      "particle": "Cleanse"
+    },
+    "damage_instance": {
+      "heal": "100",
+      "effects": {
+        "FormChange": {
+          "form": "Rage"
+        },
+        "Cleanse": "0",
+        "MaxHPUp": "100"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "TinaTantrum": {
+    "id": "TinaTantrum",
+    "template": "spawn",
+    "name_key": "EABILITY_TANTRUM_NAME",
+    "name": "Tantrum",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "max_aoe": "20",
+      "max_targets": "15",
+      "multihit": "5",
+      "stagger_multihit_targets": "true"
+    },
+    "graphics": {
+      "fall_from_sky": "true",
+      "fall_randomize_timing": ".3",
+      "animation": "tantrum"
+    },
+    "spawn": {
+      "object": "Junk"
+    }
+  },
+  "Tina2Call": {
+    "id": "Tina2Call",
+    "template": "spell",
+    "name_key": "EABILITY_CALL_NAME",
+    "name": "Call",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "knockback_mode": "pull_to_character",
+      "restrictions": "must_have_buddy"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "call",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "damage": "0"
+    }
+  },
+  "TinaSuck": {
+    "id": "TinaSuck",
+    "template": "targeted_status",
+    "cost": {
+      "mana": "0",
+      "must_not_be_consuming": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "range_mode": "cross",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "animation": "suck1"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0",
+      "cant_miss": "true",
+      "layer": "characters",
+      "effects": {
+        "Consumed": {
+          "struggle_ability": "TinaFlail",
+          "force_contact": "true",
+          "wet": "true"
+        },
+        "GenericDebuff": "1"
+      }
+    }
+  },
+  "TinaSpit": {
+    "id": "TinaSpit",
+    "template": "throw_attack",
+    "name_key": "EABILITY_SPIT_NAME",
+    "name": "Spit",
+    "cost": {
+      "mana": "0",
+      "must_be_consuming": "true"
+    },
+    "target": {
+      "max_range": "5",
+      "min_range": "3",
+      "range_mode": "cross",
+      "restrictions": "none",
+      "prioritize_dont_change_direction": "true",
+      "throw_consumed_character": "true"
+    },
+    "graphics": {
+      "animation": "shoot"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage",
+      "ai_base_score": "9999",
+      "custom_additional_ai_weight": "toss_far"
+    }
+  },
+  "TinaSuck2": {
+    "id": "TinaSuck2",
+    "template": "targeted_status",
+    "cost": {
+      "mana": "0",
+      "must_not_be_consuming": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "animation": "suck2"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0",
+      "cant_miss": "true",
+      "layer": "characters",
+      "effects": {
+        "Consumed": {
+          "struggle_ability": "TinaFlailRage",
+          "force_contact": "true",
+          "wet": "true"
+        },
+        "GenericDebuff": "1"
+      }
+    }
+  },
+  "TinaSpit2": {
+    "id": "TinaSpit2",
+    "template": "throw_attack",
+    "name_key": "EABILITY_SPIT_NAME",
+    "name": "Spit",
+    "cost": {
+      "mana": "0",
+      "must_be_consuming": "true"
+    },
+    "target": {
+      "max_range": "5",
+      "min_range": "3",
+      "restrictions": "none",
+      "throw_consumed_character": "true",
+      "prioritize_dont_change_direction": "true",
+      "range_mode": "cross"
+    },
+    "graphics": {
+      "animation": "shoot"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage",
+      "ai_base_score": "9999"
+    }
+  },
+  "BellyPound": {
+    "id": "BellyPound",
+    "template": "self_buff",
+    "class": "DamageConsumedCharactersAbility",
+    "name_key": "EABILITY_BELLYPOUND_NAME",
+    "name": "Belly Pound",
+    "animate_name": "true",
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none"
+    },
+    "graphics": {
+      "animation": "bellypound"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee",
+      "contact_requires_adjacency": "false",
+      "ai_base_score": "9999"
+    }
+  },
+  "Digest": {
+    "id": "Digest",
+    "template": "self_buff",
+    "class": "DamageConsumedCharactersAbility",
+    "name_key": "EABILITY_DIGEST_NAME",
+    "name": "Digest",
+    "animate_name": "true",
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none"
+    },
+    "graphics": {
+      "animation": "digest"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "cant_miss": "true",
+      "ai_base_score": "9999",
+      "effects": {
+        "Vaporize": "1"
+      }
+    },
+    "self_damage": {
+      "heal": "25"
+    }
+  },
+  "TinaBasicJump": {
+    "id": "TinaBasicJump",
+    "template": "jump_attack",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "target": {
+      "max_range": "mov",
+      "min_range": "1",
+      "range_considers_character_size": "false",
+      "range_display_include_character_size": "true",
+      "aoe_considers_character_size": "false",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "restrictions": "must_be_moveable"
+    },
+    "graphics": {
+      "full_jump_animation": "jumpmove",
+      "full_jump_sync_frames": "46",
+      "full_jump_windup_frames": "22"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    }
+  },
+  "TinaJumpAttack": {
+    "id": "TinaJumpAttack",
+    "template": "jump_attack",
+    "cost": {
+      "act_points": "1"
+    },
+    "target": {
+      "max_range": "3",
+      "min_range": "1",
+      "range_considers_character_size": "false",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "full_jump_animation": "jumpattack",
+      "full_jump_sync_frames": "37",
+      "full_jump_windup_frames": "20"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "5+bonus_melee_damage",
+      "knockback": "4",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Bruise": "1"
+      }
+    }
+  },
+  "TinaBasicBigMelee": {
+    "id": "TinaBasicBigMelee",
+    "template": "melee_attack",
+    "target": {
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "knockback": "10"
+    }
+  },
+  "TinaBasicBigMeleeA": {
+    "id": "TinaBasicBigMeleeA",
+    "variant_of": "TinaBasicBigMelee",
+    "graphics": {
+      "animation": "attackRage"
+    }
+  },
+  "Guillotina1Rage": {
+    "id": "Guillotina1Rage",
+    "template": "self_buff",
+    "cost": {
+      "requires_hp_threshold": "200"
+    },
+    "graphics": {
+      "dont_orient": "true",
+      "animation": "enrage",
+      "particle": "Cleanse"
+    },
+    "damage_instance": {
+      "heal": "50",
+      "effects": {
+        "FormChange": {
+          "form": "Rage"
+        },
+        "Cleanse": "0",
+        "MaxHPUp": "100"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "TinaThrow": {
+    "id": "TinaThrow",
+    "template": "throw_attack",
+    "name_key": "EABILITY_TOSS_NAME",
+    "name": "Toss",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_be_empty"
+    },
+    "graphics": {
+      "grab_animation": "grab",
+      "animation": "throw",
+      "use_placeholder": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "custom_additional_ai_weight": "toss_far"
+    }
+  },
+  "G3GrabHead": {
+    "id": "G3GrabHead",
+    "template": "targeted_status",
+    "cost": {
+      "mana": "0",
+      "must_not_be_consuming": "true"
+    },
+    "target": {
+      "max_range": "1",
+      "range_mode": "cross"
+    },
+    "graphics": {
+      "animation": "grab",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_Buddy": {
+          "Consumed": {
+            "force_contact": "true",
+            "instant": "true"
+          }
+        }
+      },
+      "custom_additional_ai_weight": "must_target_buddy"
+    }
+  },
+  "G3RunToHead": {
+    "id": "G3RunToHead",
+    "template": "move",
+    "name_key": "EABILITY_HEADCHARGE_NAME",
+    "name": "Head Charge",
+    "target": {
+      "max_range": "mov"
+    },
+    "graphics": {
+      "move_start_animation": "runStart",
+      "animation": "run",
+      "speed": "2"
+    }
+  },
+  "G3TossHead": {
+    "id": "G3TossHead",
+    "template": "throw_attack",
+    "name_key": "EABILITY_TOSS_NAME",
+    "name": "Toss",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "none",
+      "damage_collided_only": "true",
+      "throw_consumed_character": "true",
+      "always_bounce": "true",
+      "reorient_thrown_character": "true"
+    },
+    "graphics": {
+      "animation": "throw"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Bruise": "1"
+      },
+      "custom_additional_ai_weight": "toss_far"
+    }
+  },
+  "G3Scream_Debuff": {
+    "id": "G3Scream_Debuff",
+    "template": "spell",
+    "name_key": "EABILITY_SHRIEK_NAME",
+    "name": "Shriek",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "scream",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "9999",
+      "effects": {
+        "Conditional_Enemy": {
+          "AllStatsUp": "-1"
+        },
+        "Conditional_Ally": {
+          "AllStatsUp": "1",
+          "HealthGain": "4"
+        }
+      }
+    }
+  },
+  "G3Scream_Fear": {
+    "id": "G3Scream_Fear",
+    "template": "spell",
+    "name_key": "EABILITY_SCREAM_NAME",
+    "name": "Scream",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "scream",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "9999",
+      "effects": {
+        "Conditional_Enemy": {
+          "Fear": "1"
+        },
+        "Conditional_Ally": {
+          "AllStatsUp": "1",
+          "HealthGain": "4"
+        }
+      }
+    }
+  },
+  "G3Shake": {
+    "id": "G3Shake",
+    "template": "spawn",
+    "name_key": "EABILITY_SHAKE_NAME",
+    "name": "Shake",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "max_targets": "1"
+    },
+    "graphics": {
+      "animation": "shake",
+      "lob": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "Cleanse": "0"
+      }
+    },
+    "spawn": {
+      "object": "Maggot",
+      "faction": "self"
+    }
+  },
+  "G3CoughFly": {
+    "id": "G3CoughFly",
+    "template": "spawn",
+    "name_key": "EABILITY_COUGH_NAME",
+    "name": "Cough",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "aoe_restrictions": "none",
+      "redirect_location_if_blocked": "true"
+    },
+    "graphics": {
+      "animation": "shoot",
+      "lob": "true"
+    },
+    "spawn": {
+      "object": "Fly",
+      "faction": "self"
+    }
+  },
+  "G3SpawnMama": {
+    "id": "G3SpawnMama",
+    "template": "spawn",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "5",
+      "aoe_mode": "custom",
+      "dont_orient_aoe": "true",
+      "custom_aoe": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_be_displaceable",
+      "aoe_restrictions": "none",
+      "range_display_include_aoe": "true",
+      "mouse_offset": [
+        ".5",
+        ".5"
+      ]
+    },
+    "graphics": {
+      "dont_orient": "true",
+      "animation": "spawnmama",
+      "lob": "false"
+    },
+    "self_damage": {
+      "damage": "130",
+      "non_lethal": "true"
+    },
+    "spawn": {
+      "object": "MamaMaggotTina",
+      "size": "2",
+      "face_camera": "true",
+      "ai_base_score": "999999"
+    }
+  },
+  "G3Rage": {
+    "id": "G3Rage",
+    "template": "self_buff",
+    "target": {
+      "X_is": "current_health"
+    },
+    "graphics": {
+      "dont_orient": "true",
+      "animation": "enrage",
+      "particle": "Cleanse"
+    },
+    "damage_instance": {
+      "raw_heal": "100-X",
+      "effects": {
+        "FormChange": {
+          "form": "Rage"
+        },
+        "Cleanse": "0"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "G3CallForHelp": {
+    "id": "G3CallForHelp",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "graphics": {
+      "dont_orient": "true",
+      "animation": "call",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_Buddy": {
+          "Conditional_InForm": {
+            "form": "Normal",
+            "ForceImmediateMoveAndAttack": {
+              "ability": "G3GrabHead",
+              "even_if_cant_reach": "true"
+            }
+          },
+          "Else": {
+            "ForceImmediateMove": "1"
+          }
+        }
+      }
+    }
+  },
+  "G3PrisonSpit": {
+    "id": "G3PrisonSpit",
+    "template": "lobbed_attack",
+    "name_key": "EABILITY_PRISON_NAME",
+    "name": "Prison",
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "projectile": "Gutball"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "Imprison": "Tumor",
+        "Poison": "1"
+      }
+    }
+  },
+  "G3Scream_Hex": {
+    "id": "G3Scream_Hex",
+    "template": "spell",
+    "name_key": "EABILITY_SHRIEK_NAME",
+    "name": "Shriek",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "scream",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "ai_base_score": "9999",
+      "effects": {
+        "Conditional_Enemy": {
+          "Hex": "1",
+          "Poison": "1"
+        }
+      }
+    }
+  },
+  "G3CoughMaggot": {
+    "id": "G3CoughMaggot",
+    "template": "spawn",
+    "name_key": "EABILITY_COUGH_NAME",
+    "name": "Cough",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "aoe_restrictions": "none",
+      "redirect_location_if_blocked": "true"
+    },
+    "graphics": {
+      "animation": "shoot",
+      "lob": "true"
+    },
+    "spawn": {
+      "object": [
+        "TumorousMaggot,",
+        "ChargeyMaggot,",
+        "SwappyMaggot"
+      ],
+      "faction": "self"
+    }
+  },
+  "G3RageShake": {
+    "id": "G3RageShake",
+    "variant_of": "G3Shake",
+    "spawn": {
+      "object": [
+        "Maggot,",
+        "Maggot,",
+        "Maggot,",
+        "TumorousMaggot,",
+        "ChargeyMaggot,",
+        "SwappyMaggot"
+      ],
+      "faction": "self"
+    }
+  }
+}

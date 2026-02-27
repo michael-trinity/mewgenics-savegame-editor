@@ -1,0 +1,2692 @@
+{
+  "GlassShard": {
+    "name": "ITEM_SHARDOFGLASS_NAME",
+    "name_resolved": "Shard of Glass",
+    "desc": "ITEM_SHARDOFGLASS_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bleed.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "2",
+    "durability": [
+      "7,",
+      "12"
+    ],
+    "ability": "wp_GlassShard"
+  },
+  "TinkererGlassShard": {
+    "variant_of": "GlassShard",
+    "durability": [
+      "4",
+      "9"
+    ]
+  },
+  "RailSpikes": {
+    "name": "ITEM_RAILROADSPIKE_NAME",
+    "name_resolved": "Railroad Spikes",
+    "desc": "ITEM_RAILROADSPIKE_DESC",
+    "desc_resolved": "Use: A ranged attack.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "3",
+    "durability": "8",
+    "set": "Lead",
+    "ability": "wp_RailSpikes"
+  },
+  "NailBoard": {
+    "name": "ITEM_NAILBOARD_NAME",
+    "name_resolved": "Nail Board",
+    "desc": "ITEM_NAILBOARD_DESC",
+    "desc_resolved": "Use: A wide melee attack.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "4",
+    "durability": "4",
+    "set": "Wood",
+    "ability": "wp_NailBoard"
+  },
+  "LilSlugger": {
+    "name": "ITEM_LILSLUGGER_NAME",
+    "name_resolved": "Lil' Slugger",
+    "desc": "ITEM_LILSLUGGER_DESC",
+    "desc_resolved": "Use: Knock back a unit 5 tiles.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "1",
+    "set": "Wood",
+    "ability": "wp_LilSlugger"
+  },
+  "ChumBucket": {
+    "name": "ITEM_CHUMBUCKET_NAME",
+    "name_resolved": "Chum Bucket",
+    "desc": "ITEM_CHUMBUCKET_DESC",
+    "desc_resolved": "Use: A lobbed attack that creates a creep puddle.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "5",
+    "durability": "6",
+    "set": [
+      "Guts,",
+      "Meat"
+    ],
+    "ability": "wp_ChumBucket"
+  },
+  "MeatHook": {
+    "name": "ITEM_MEATHOOK_NAME",
+    "name_resolved": "Meat Hook",
+    "desc": "ITEM_MEATHOOKTEMP_DESC",
+    "desc_resolved": "Use: Pull a unit toward you.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "6",
+    "set": [
+      "Barbed,",
+      "Butcher"
+    ],
+    "ability": "wp_MeatHook"
+  },
+  "Kebab": {
+    "name": "ITEM_KEBAB_NAME",
+    "name_resolved": "Kebab",
+    "desc": "ITEM_KEBAB_DESC",
+    "desc_resolved": "Use: A melee attack with +1 reach that penetrates through units.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "7",
+    "durability": "8",
+    "ability": "wp_Kebab"
+  },
+  "Pipe": {
+    "name": "ITEM_PIPE_NAME",
+    "name_resolved": "Pipe",
+    "desc": "ITEM_PIPE_DESC",
+    "desc_resolved": "Use: A melee attack with a 10% chance to inflict Stun.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "8",
+    "set": "Lead",
+    "ability": "wp_Pipe"
+  },
+  "ObsidianChunk": {
+    "name": "ITEM_OBSIDIANCHUNK_NAME",
+    "name_resolved": "Obsidian Chunk",
+    "desc": "ITEM_OBSIDIANCHUNK_DESC",
+    "desc_resolved": "Use: A melee attack.\nThis weapon gains +2 damage each time it's used.\nDamage resets at the end of the adventure.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "9",
+    "durability": "9",
+    "aux": "1",
+    "set": "Obelisk",
+    "reset_aux_on_store": "1",
+    "ability": "wp_ObsidianChunk"
+  },
+  "SoulClaw": {
+    "name": "ITEM_SOULCLAW_NAME",
+    "name_resolved": "Soul Claw",
+    "desc": "ITEM_SOULCLAW_DESC",
+    "desc_resolved": "Use: A melee attack that deals damage equal to the number of uses this has left.\nWhen this weapon kills a unit, it gains +2 uses.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "10",
+    "durability": "7",
+    "set": "Demonic",
+    "ability": "wp_SoulClaw"
+  },
+  "Bomb": {
+    "name": "ITEM_BOMB_NAME",
+    "name_resolved": "Bomb",
+    "desc": "ITEM_BOMB_DESC",
+    "desc_resolved": "Use: Throw a bomb that explodes.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "11",
+    "durability": "1",
+    "ability": "wp_Bomb"
+  },
+  "BoneClub": {
+    "name": "ITEM_BONECLUB_NAME",
+    "name_resolved": "Bone Club",
+    "desc": "ITEM_BONECLUB_DESC",
+    "desc_resolved": "Use: A melee attack.\nThis weapon has a 15% chance to break each time it's used.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "13",
+    "set": "Bone",
+    "ability": "wp_BoneClub"
+  },
+  "Molars": {
+    "name": "ITEM_MOLAR_NAME",
+    "name_resolved": "Molars",
+    "desc": "ITEM_MOLAR_DESC",
+    "desc_resolved": "Use: A low-damage lobbed attack.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "14",
+    "durability": [
+      "10",
+      "20"
+    ],
+    "set": "Bone",
+    "ability": "wp_Molars"
+  },
+  "Whetstone": {
+    "name": "ITEM_WHETSTONE_NAME",
+    "name_resolved": "Whetstone",
+    "desc": "ITEM_WHETSTONE_DESC",
+    "desc_resolved": "Use: Gain +1 Damage for the rest of the battle.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "15",
+    "set": "Rock",
+    "ability": "wp_Whetstone"
+  },
+  "Hairspray": {
+    "name": "ITEM_MODDEDHAIRSPRAY_NAME",
+    "name_resolved": "Modded Hairspray",
+    "desc": "ITEM_MODDEDHAIRSPRAY_DESC",
+    "desc_resolved": "Use: Deal fire damage in a cone.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "25",
+    "durability": [
+      "8",
+      "12"
+    ],
+    "ability": "wp_HairSpray"
+  },
+  "Lighter": {
+    "name": "ITEM_LIGHTER_NAME",
+    "name_resolved": "Lighter",
+    "desc": "ITEM_LIGHTER_DESC",
+    "desc_resolved": "Use: Inflict Burn 1 on an adjacent unit.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "26",
+    "durability": [
+      "8",
+      "12"
+    ],
+    "set": "Cool",
+    "ability": "wp_Lighter"
+  },
+  "SeedBombs": {
+    "name": "ITEM_SEEDBOMBS_NAME",
+    "name_resolved": "Seed Bombs",
+    "desc": "ITEM_SEEDBOMBS_DESC",
+    "desc_resolved": "Use: A lobbed projectile that spawns tall grass.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "27",
+    "ability": "wp_SeedBomb"
+  },
+  "Battery": {
+    "name": "ITEM_BATTERY_NAME",
+    "name_resolved": "Battery",
+    "desc": "ITEM_BATTERY_DESC",
+    "desc_resolved": "Use: A ranged lightning attack with a 10% chance to Stun.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "30",
+    "durability": [
+      "3",
+      "6"
+    ],
+    "ability": "wp_Battery"
+  },
+  "TinkererBattery": {
+    "variant_of": "Battery",
+    "durability": [
+      "2",
+      "3"
+    ]
+  },
+  "OldHose": {
+    "name": "ITEM_OLDHOSE_NAME",
+    "name_resolved": "Old Hose",
+    "desc": "ITEM_OLDHOSE_DESC",
+    "desc_resolved": "Use: A water attack that hits an entire line with Knockback 10.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "31",
+    "set": "Rubber",
+    "ability": "wp_Hose"
+  },
+  "SixPack": {
+    "name": "ITEM_SIXPACK_NAME",
+    "name_resolved": "Six Pack",
+    "desc": "ITEM_SIXPACK_DESC",
+    "desc_resolved": "Use: A lobbed water attack that deals splash damage.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "32",
+    "durability": "6",
+    "ability": "wp_SixPack"
+  },
+  "IceCubes": {
+    "name": "ITEM_ICECUBES_NAME",
+    "name_resolved": "Ice Cubes",
+    "desc": "ITEM_ICECUBES_DESC",
+    "desc_resolved": "Use: A lobbed attack that Freezes units.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "35",
+    "set": "Frozen",
+    "ability": "wp_IceCubes"
+  },
+  "DryIce": {
+    "name": "ITEM_DRYICE_NAME",
+    "name_resolved": "Dry Ice",
+    "desc": "ITEM_DRYICE_DESC",
+    "desc_resolved": "Use: An Ice Element melee attack that inflicts Slow.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "36",
+    "set": "Frozen",
+    "ability": "wp_DryIce"
+  },
+  "Bottles": {
+    "name": "ITEM_BOTTLES_NAME",
+    "name_resolved": "Bottles",
+    "desc": "ITEM_BOTTLES_DESC",
+    "desc_resolved": "Use: A lobbed attack that spawns a glass tile.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "17",
+    "durability": "6",
+    "ability": "wp_Bottles"
+  },
+  "TinkererBottles": {
+    "variant_of": "Bottles",
+    "durability": "4"
+  },
+  "Stick": {
+    "name": "ITEM_STICK_NAME",
+    "name_resolved": "Stick",
+    "desc": "ITEM_STICK_DESC",
+    "desc_resolved": "Use: A melee attack with +1 reach.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "16",
+    "durability": "4",
+    "set": "Wood",
+    "ability": "wp_Stick"
+  },
+  "TinkererStick": {
+    "variant_of": "Stick",
+    "durability": [
+      "2",
+      "4"
+    ]
+  },
+  "TutorialStick": {
+    "variant_of": "Stick",
+    "durability": "4"
+  },
+  "RubberFist": {
+    "name": "ITEM_RUBBERFIST_NAME",
+    "name_resolved": "Rubber Fist",
+    "desc": "ITEM_RUBBERFIST_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 1 that inflicts Confusion.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "19",
+    "set": "Rubber",
+    "ability": "wp_RubberFist"
+  },
+  "BarbedPaw": {
+    "name": "ITEM_BARBEDPAW_NAME",
+    "name_resolved": "Barbed Paw",
+    "desc": "ITEM_BARBEDPAW_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bleed 1.\nPassive: +1 Thorns.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "24",
+    "set": "Barbed",
+    "con": "-1",
+    "passives": {
+      "Thorns": "1"
+    },
+    "ability": "wp_BarbedPaw"
+  },
+  "GnarledClaw": {
+    "name": "ITEM_GNARLEDCLAW_NAME",
+    "name_resolved": "Gnarled Claw",
+    "desc": "ITEM_GNARLEDCLAW_DESC",
+    "desc_resolved": "Use: A melee attack.\nThis weapon gains +1 damage and +1 use when it gets a kill.\nDamage resets at the end of the adventure.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "21",
+    "aux": "1",
+    "durability": "13",
+    "reset_aux_on_store": "1",
+    "ability": "wp_GnarledClaw"
+  },
+  "Garbage": {
+    "name": "ITEM_GARBAGE_NAME",
+    "name_resolved": "Garbage",
+    "desc": "ITEM_GARBAGE_DESC",
+    "desc_resolved": "Use: A lobbed attack that inflicts Poison 1.",
+    "kind": "weapon",
+    "frame": "39",
+    "durability": "1",
+    "set": "Recycled",
+    "ability": "wp_Garbage"
+  },
+  "Shotgun": {
+    "name": "ITEM_SHOTGUN_NAME",
+    "name_resolved": "Shotgun",
+    "desc": "ITEM_SHOTGUN_DESC",
+    "desc_resolved": "Use: Fires 5 projectiles in a cone.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "50",
+    "durability": "2",
+    "ability": "wp_Shotgun"
+  },
+  "Revolver": {
+    "name": "ITEM_REVOLVER_NAME",
+    "name_resolved": "Revolver",
+    "desc": "ITEM_REVOLVER_DESC",
+    "desc_resolved": "Use: Fire a shot in a straight line that instakills units and deals 25 damage to bosses.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "51",
+    "durability": "6",
+    "ability": "wp_Revolver"
+  },
+  "Sniper": {
+    "name": "ITEM_SNIPERRIFLE_NAME",
+    "name_resolved": "Sniper Rifle",
+    "desc": "ITEM_SNIPERRIFLE_DESC",
+    "desc_resolved": "Use: Fire a shot that instakills units and deals 25 damage to bosses.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "52",
+    "durability": [
+      "2",
+      "4"
+    ],
+    "ability": "wp_Sniper"
+  },
+  "SmallBomb": {
+    "name": "ITEM_SMALLBOMB_NAME",
+    "name_resolved": "Small Bomb",
+    "desc": "ITEM_SMALLBOMB_DESC",
+    "desc_resolved": "Use: Throw a bomb that explodes.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "74",
+    "durability": "1",
+    "ability": "wp_SmallBomb"
+  },
+  "PogoStick": {
+    "name": "ITEM_POGOSTICK_NAME",
+    "name_resolved": "Pogo Stick",
+    "desc": "ITEM_POGOSTICK_DESC",
+    "desc_resolved": "Use: Jump to a tile and damage units you land on.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "72",
+    "durability": [
+      "3",
+      "7"
+    ],
+    "ability": "wp_PogoStick"
+  },
+  "Spitball": {
+    "name": "ITEM_SPITBALL_NAME",
+    "name_resolved": "Spitball",
+    "desc": "ITEM_SPITBALL_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Slow.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "73",
+    "durability": [
+      "4",
+      "8"
+    ],
+    "ability": "wp_Spitball"
+  },
+  "MiniJetpack": {
+    "name": "ITEM_MINIJETPACK_NAME",
+    "name_resolved": "Mini Jetpack",
+    "desc": "ITEM_MINIJETPACK_DESC",
+    "desc_resolved": "Use: Fly to a random tile within a target area. If you land on a unit, explode dealing 5 damage in an area (including to yourself).",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "77",
+    "durability": [
+      "3",
+      "6"
+    ],
+    "set": "Experimental",
+    "ability": "wp_MiniJetpack"
+  },
+  "BigStick": {
+    "name": "ITEM_BIGSTICK_NAME",
+    "name_resolved": "Big Stick",
+    "desc": "ITEM_BIGSTICK_DESC",
+    "desc_resolved": "Use: A melee attack with +2 reach.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "75",
+    "durability": [
+      "8",
+      "12"
+    ],
+    "set": "Wood",
+    "ability": "wp_BigStick"
+  },
+  "TinkererBigStick": {
+    "variant_of": "BigStick",
+    "durability": [
+      "5",
+      "8"
+    ]
+  },
+  "BiggestStick": {
+    "name": "ITEM_BIGGESTSTICK_NAME",
+    "name_resolved": "Biggest Stick",
+    "desc": "ITEM_BIGGESTSTICK_DESC",
+    "desc_resolved": "Use: A melee attack with +3 reach.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "82",
+    "durability": [
+      "8",
+      "12"
+    ],
+    "set": "Wood",
+    "ability": "wp_BiggestStick"
+  },
+  "TinkererBiggestStick": {
+    "variant_of": "BiggestStick",
+    "durability": [
+      "5",
+      "8"
+    ]
+  },
+  "Log": {
+    "name": "ITEM_LOG_NAME",
+    "name_resolved": "Log",
+    "desc": "ITEM_LOG_DESC",
+    "desc_resolved": "Use: A wide attack that hits all units in an area.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "76",
+    "durability": "8",
+    "set": "Wood",
+    "ability": "wp_Log"
+  },
+  "TinkererLog": {
+    "variant_of": "Log",
+    "durability": "4"
+  },
+  "Taser": {
+    "name": "ITEM_TASER_NAME",
+    "name_resolved": "Zapper",
+    "desc": "ITEM_TASER_DESC",
+    "desc_resolved": "Use: A ranged electric attack that inflicts Stun.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "84",
+    "durability": "4",
+    "ability": "wp_Taser"
+  },
+  "TinkererTaser": {
+    "variant_of": "Taser",
+    "durability": "3"
+  },
+  "Deathbot": {
+    "name": "ITEM_DEATHBOT_NAME",
+    "name_resolved": "Deathbot",
+    "desc": "ITEM_DEATHBOT_DESC",
+    "desc_resolved": "Use: Spawn a Deathbot with a flamethrower.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "81",
+    "durability": "1",
+    "set": "Tinkerer",
+    "ability": "wp_Deathbot"
+  },
+  "Crossbow": {
+    "name": "ITEM_CROSSBOW_NAME",
+    "name_resolved": "Crossbow",
+    "desc": "ITEM_CROSSBOW_DESC",
+    "desc_resolved": "Use: A ranged attack that ignores shield and inflicts Bleed 1.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "80",
+    "durability": "6",
+    "set": "Wood",
+    "ability": "wp_Crossbow"
+  },
+  "TinkererCrossbow": {
+    "variant_of": "Crossbow",
+    "durability": "4"
+  },
+  "BucketOfAcid": {
+    "name": "ITEM_BUCKETOFACID_NAME",
+    "name_resolved": "Vial of Acid",
+    "desc": "ITEM_BUCKETOFACID_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts random status effects.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "78",
+    "durability": "1",
+    "ability": "wp_BucketOfAcid"
+  },
+  "StunGun": {
+    "name": "ITEM_STUNGUN_NAME",
+    "name_resolved": "Stun Gun",
+    "desc": "ITEM_STUNGUN_DESC",
+    "desc_resolved": "Use: An electric melee attack with a 50% chance to inflict Stun.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "79",
+    "durability": [
+      "2",
+      "4"
+    ],
+    "ability": "wp_StunGun"
+  },
+  "SlingShot": {
+    "name": "ITEM_SLINGSHOT_NAME",
+    "name_resolved": "Slingshot",
+    "desc": "ITEM_SLINGSHOT_DESC",
+    "desc_resolved": "Use: A ranged attack with a 33% chance to inflict Blind 2.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "83",
+    "durability": [
+      "5",
+      "9"
+    ],
+    "set": "Wood",
+    "ability": "wp_SlingShot"
+  },
+  "TinkererSlingShot": {
+    "variant_of": "SlingShot",
+    "durability": [
+      "4",
+      "7"
+    ]
+  },
+  "Uzi": {
+    "name": "ITEM_UZI_NAME",
+    "name_resolved": "Submachine Gun",
+    "desc": "ITEM_UZI_DESC",
+    "desc_resolved": "Use: Fire 5 shots in a straight line.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "137",
+    "durability": "3",
+    "ability": "wp_Uzi"
+  },
+  "22Rifle": {
+    "name": "ITEM_22RIFLE_NAME",
+    "name_resolved": ".22 Rifle",
+    "desc": "ITEM_22RIFLE_DESC",
+    "desc_resolved": "Use: Fire a shot anywhere within your line of sight.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "152",
+    "durability": [
+      "2",
+      "4"
+    ],
+    "ability": "wp_22Rifle"
+  },
+  "BagOfRocks": {
+    "name": "ITEM_BAGOFROCKS_NAME",
+    "name_resolved": "Bag of Rocks",
+    "desc": "ITEM_BAGOFROCKS_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bruise.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "86",
+    "set": "Rock",
+    "ability": "wp_BagOfRocks"
+  },
+  "Textbook": {
+    "name": "ITEM_TEXTBOOK_NAME",
+    "name_resolved": "Textbook",
+    "desc": "ITEM_TEXTBOOK_DESC",
+    "desc_resolved": "Use: Gain +1 [img:int] for the rest of the battle.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "90",
+    "set": "Paper",
+    "ability": "wp_Textbook"
+  },
+  "BucketOfLard": {
+    "name": "ITEM_BUCKETOFLARD_NAME",
+    "name_resolved": "Bucket of Lard",
+    "desc": "ITEM_BUCKETOFLARD_DESC",
+    "desc_resolved": "Use: Gain +2 [img:con] and -1 [img:spd], then heal 4 HP.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "91",
+    "durability": [
+      "4",
+      "7"
+    ],
+    "set": "Fatty",
+    "ability": "wp_BucketOfLard"
+  },
+  "NailGun": {
+    "name": "ITEM_NAILGUN_NAME",
+    "name_resolved": "Nail Gun",
+    "desc": "ITEM_NAILGUN_DESC",
+    "desc_resolved": "Use: Fire a shot in a straight line that inflicts +1 Thorns.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "92",
+    "ability": "wp_NailGun"
+  },
+  "StrongMagnet": {
+    "name": "ITEM_STRONGMAGNET_NAME",
+    "name_resolved": "Strong Magnet",
+    "desc": "ITEM_STRONGMAGNET_DESC",
+    "desc_resolved": "Use: Pull a unit 2 tiles toward you.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "93",
+    "ability": "wp_StrongMagnet"
+  },
+  "SawBlades": {
+    "name": "ITEM_SAWBLADES_NAME",
+    "name_resolved": "Sawblades",
+    "desc": "ITEM_SAWBLADES_DESC",
+    "desc_resolved": "Use: Throw a blade in a straight line that inflicts Bleed 1 and passes through units.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "94",
+    "durability": [
+      "9",
+      "16"
+    ],
+    "ability": "wp_SawBlades"
+  },
+  "OddRemote": {
+    "name": "ITEM_ODDREMOTE_NAME",
+    "name_resolved": "Odd Remote",
+    "desc": "ITEM_ODDREMOTE_DESC",
+    "desc_resolved": "Use: Cast a random spell.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "95",
+    "durability": [
+      "6",
+      "8"
+    ],
+    "set": "Experimental",
+    "ability": "wp_OddRemote"
+  },
+  "ButterflyKnife": {
+    "name": "ITEM_BUTTERFLYKNIFE_NAME",
+    "name_resolved": "Butterfly Knife",
+    "desc": "ITEM_BUTTERFLYKNIFE_DESC",
+    "desc_resolved": "Use: A multi-hit melee attack that inflicts Bleed.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "97",
+    "set": "Cool",
+    "ability": "wp_ButterflyKnife"
+  },
+  "BearTraps": {
+    "name": "ITEM_BEARTRAPS_NAME",
+    "name_resolved": "Bear Traps",
+    "desc": "ITEM_BEARTRAPS_DESC",
+    "desc_resolved": "Use: Place a Bear Trap.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "99",
+    "durability": "6",
+    "set": [
+      "Hunter,",
+      "Survivalist"
+    ],
+    "ability": "wp_BearTraps"
+  },
+  "RustyRazor": {
+    "name": "ITEM_RUSTYRAZOR_NAME",
+    "name_resolved": "Rusty Razor",
+    "desc": "ITEM_RUSTYRAZOR_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Poison 1 and Bleed 1.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "89",
+    "durability": [
+      "6",
+      "9"
+    ],
+    "ability": "wp_RustyRazor"
+  },
+  "Bricks": {
+    "name": "ITEM_BRICKS_NAME",
+    "name_resolved": "Bricks",
+    "desc": "ITEM_BRICKS_DESC",
+    "desc_resolved": "Use: A lobbed attack that inflicts Stun.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "18",
+    "set": "Brick",
+    "ability": "wp_Bricks"
+  },
+  "Mjolnir": {
+    "name": "ITEM_MJOLNIR_NAME",
+    "name_resolved": "Mjolnir",
+    "desc": "ITEM_MJOLNIR_DESC",
+    "desc_resolved": "Use: A ranged attack that passes through units and returns to you after you throw it. At its apex, it deals electric damage.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "12",
+    "set": "Superhero",
+    "ability": "wp_Mjolnir"
+  },
+  "Blackjack": {
+    "name": "ITEM_BLACKJACK_NAME",
+    "name_resolved": "Blackjack",
+    "desc": "ITEM_BLACKJACK_DESC",
+    "desc_resolved": "Use: A melee attack with a 5% chance to Stun.\nAutomatically use this when you stop next to an enemy or an enemy stops next to you.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "85",
+    "set": [
+      "Thief,",
+      "Prowler"
+    ],
+    "ability": "wp_Blackjack",
+    "passives": {
+      "MovementReaction": {
+        "ability": "wp_Blackjack_Auto",
+        "enemies_only": "true",
+        "on_self_move_too": "true",
+        "create_temp_ability": "true"
+      }
+    }
+  },
+  "BigSpring": {
+    "name": "ITEM_BIGSPRING_NAME",
+    "name_resolved": "Big Spring",
+    "desc": "ITEM_BIGSPRING_DESC",
+    "desc_resolved": "Use: Throw an adjacent unit to a tile.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "87",
+    "set": "Scrap",
+    "ability": "wp_BigSpring"
+  },
+  "Grenade": {
+    "name": "ITEM_GRENADE_NAME",
+    "name_resolved": "Grenade",
+    "desc": "ITEM_GRENADE_DESC",
+    "desc_resolved": "Use: Throw a grenade that explodes and shreds 5 stacks of random buffs off of whatever it hits.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "98",
+    "durability": "1",
+    "ability": "wp_Grenade"
+  },
+  "Pinwheel": {
+    "name": "ITEM_PINWHEEL_NAME",
+    "name_resolved": "Pinwheel",
+    "desc": "ITEM_PINWHEEL_DESC",
+    "desc_resolved": "Use: A melee wind attack with Knockback 1.\nCan be used 3 times per turn.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "34",
+    "durability": [
+      "10",
+      "16"
+    ],
+    "set": "Paper",
+    "ability": "wp_Pinwheel",
+    "passives": {
+      "ExtraWeaponAttacks": "2"
+    }
+  },
+  "CrispPaper": {
+    "name": "ITEM_CRISPPAPER_NAME",
+    "name_resolved": "Crisp Paper",
+    "desc": "ITEM_CRISPPAPER_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Bleed 3.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "56",
+    "set": "Paper",
+    "ability": "wp_CrispPaper"
+  },
+  "PurpleMushroom": {
+    "name": "ITEM_PURPLEMUSHROOM_NAME",
+    "name_resolved": "Purple Mushroom",
+    "desc": "ITEM_PURPLEMUSHROOM_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Confusion 2.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "57",
+    "durability": [
+      "2",
+      "4"
+    ],
+    "set": "Druid",
+    "ability": "wp_PurpleMushroom"
+  },
+  "BlackMushroom": {
+    "name": "ITEM_BLACKMUSHROOM_NAME",
+    "name_resolved": "Black Mushroom",
+    "desc": "ITEM_BLACKMUSHROOM_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Weakness 2.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "58",
+    "set": "Druid",
+    "ability": "wp_BlackMushroom"
+  },
+  "RedMushroom": {
+    "name": "ITEM_REDMUSHROOM_NAME",
+    "name_resolved": "Red Mushroom",
+    "desc": "ITEM_REDMUSHROOM_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Charm 3.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "59",
+    "set": "Druid",
+    "ability": "wp_RedMushroom"
+  },
+  "PoisonVial": {
+    "name": "ITEM_POISONVIAL_NAME",
+    "name_resolved": "Les Toxin",
+    "desc": "ITEM_POISONVIAL_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Poison 2.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "60",
+    "set": "Thief",
+    "ability": "wp_PoisonVial"
+  },
+  "PopCap": {
+    "name": "ITEM_POPCAP_NAME",
+    "name_resolved": "Pop Cap",
+    "desc": "ITEM_POPCAP_DESC",
+    "desc_resolved": "Use: A lobbed attack with Knockback 1.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "42",
+    "durability": [
+      "6",
+      "10"
+    ],
+    "ability": "wp_PopCap"
+  },
+  "CreepyPhoto": {
+    "name": "ITEM_CREEPYPHOTO_NAME",
+    "name_resolved": "Creepy Photo",
+    "desc": "ITEM_CREEPYPHOTO_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Fear 1.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "62",
+    "ability": "wp_CreepyPhoto"
+  },
+  "FingerBone": {
+    "name": "ITEM_FINGERBONE_NAME",
+    "name_resolved": "Finger Bone",
+    "desc": "ITEM_FINGERBONE_DESC",
+    "desc_resolved": "Use: A straight ranged attack that inflicts Immobile 3.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "63",
+    "set": "Bone",
+    "ability": "wp_FingerBone"
+  },
+  "SpringBoard": {
+    "name": "ITEM_SPRINGBOARD_NAME",
+    "name_resolved": "Spring Board",
+    "desc": "ITEM_SPRINGBOARD_DESC",
+    "desc_resolved": "Use: A melee attack that lobs a unit back 3 tiles.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "45",
+    "set": "Wood",
+    "ability": "wp_SpringBoard"
+  },
+  "Shovel": {
+    "name": "ITEM_SHOVEL_NAME",
+    "name_resolved": "Shovel",
+    "desc": "ITEM_SHOVEL_DESC",
+    "desc_resolved": "Use: A melee attack that lobs a unit back 2 tiles and digs up a corpse.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "37",
+    "ability": "wp_Shovel"
+  },
+  "Trowel": {
+    "name": "ITEM_TROWEL_NAME",
+    "name_resolved": "Trowel",
+    "desc": "ITEM_TROWEL_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 1 that spawns a rock.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "38",
+    "durability": [
+      "6",
+      "8"
+    ],
+    "ability": "wp_Trowel"
+  },
+  "StaffOfFlame": {
+    "name": "ITEM_STAFFOFFLAME_NAME",
+    "name_resolved": "Staff of Flame",
+    "desc": "ITEM_STAFFOFFLAME_DESC",
+    "desc_resolved": "Use: A fire attack that inflicts Burn 5.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "139",
+    "set": "Mage",
+    "ability": "wp_StaffOfFlame"
+  },
+  "LacedNeedle": {
+    "name": "ITEM_LACEDNEEDLE_NAME",
+    "name_resolved": "Laced Needle",
+    "desc": "ITEM_LACEDNEEDLE_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Poison 1.\nCan be used 3 times per turn.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "140",
+    "durability": [
+      "10",
+      "14"
+    ],
+    "set": "Thief",
+    "ability": "wp_LacedNeedle",
+    "passives": {
+      "ExtraWeaponAttacks": "2"
+    }
+  },
+  "BattleAxe": {
+    "name": "ITEM_BATTLEAXE_NAME",
+    "name_resolved": "Battle Axe",
+    "desc": "ITEM_BATTLEAXE_DESC",
+    "desc_resolved": "Use: A melee spin attack.\nThis uses up both your movement and attack action.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "141",
+    "set": "Fighter",
+    "ability": "wp_BattleAxe"
+  },
+  "AnointingOil": {
+    "name": "ITEM_ANOINTINGOIL_NAME",
+    "name_resolved": "Anointing Oil",
+    "desc": "ITEM_ANOINTINGOIL_DESC",
+    "desc_resolved": "Use: Cleanse debuffs from an adjacent unit or yourself.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "142",
+    "set": "Cleric",
+    "ability": "wp_AnointingOil"
+  },
+  "Girder": {
+    "name": "ITEM_GIRDER_NAME",
+    "name_resolved": "Girder",
+    "desc": "ITEM_GIRDER_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 10 and Chain Knockback.\n[s:.7](Usable once per battle.)[/s]\nPassive: +1 Brace while this weapon is usable.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "143",
+    "set": "Tank",
+    "ability": "wp_Girder",
+    "passives": {
+      "PassiveIfWeaponIsUsable": {
+        "Brace": "1"
+      }
+    }
+  },
+  "InfinityArrow": {
+    "name": "ITEM_INFINITYARROW_NAME",
+    "name_resolved": "Arrow of Infinity",
+    "desc": "ITEM_INFINITYARROW_DESC",
+    "desc_resolved": "Use: Your next basic attack has +5 range, +100% Crit Chance, ignores shield and can't miss.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "144",
+    "set": "Hunter",
+    "ability": "wp_InfinityArrow",
+    "passives": {}
+  },
+  "BentSpoon": {
+    "name": "ITEM_BENTSPOON_NAME",
+    "name_resolved": "Bent Spoon",
+    "desc": "ITEM_BENTSPOON_DESC",
+    "desc_resolved": "Use: Pull any unit 1 tile toward you and deal 1 damage to it.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "145",
+    "set": "Psychic",
+    "ability": "wp_BentSpoon",
+    "passives": {}
+  },
+  "UnderworldStaff": {
+    "name": "ITEM_UNDERWORLDSTAFF_NAME",
+    "name_resolved": "Staff of the Underworld",
+    "desc": "ITEM_UNDERWORLDSTAFF_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 1.\nPassive: Start each battle with a Zombie Cat familiar.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "146",
+    "set": [
+      "Necromancer,",
+      "Bone"
+    ],
+    "ability": "wp_UnderworldStaff",
+    "passives": {
+      "SpawnOnBattleStart": "ZombieCatFamiliar"
+    }
+  },
+  "Bo": {
+    "name": "ITEM_BO_NAME",
+    "name_resolved": "Bo",
+    "desc": "ITEM_BO_DESC",
+    "desc_resolved": "Use: A melee attack. On hit, jump forward 2 tiles.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "147",
+    "set": [
+      "Monk,",
+      "Wood"
+    ],
+    "ability": "wp_Bo",
+    "passives": {}
+  },
+  "BallPeenHammer": {
+    "name": "ITEM_BALLPEENHAMMER_NAME",
+    "name_resolved": "Ball-Peen Hammer",
+    "desc": "ITEM_BALLPEENHAMMER_DESC",
+    "desc_resolved": "Use: A melee attack. If used on an ally, give +1 use to all of their items instead of dealing damage.\n5% chance to break when used to repair items.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "148",
+    "set": "Tinkerer",
+    "ability": "wp_BallPeenHammer",
+    "passives": {}
+  },
+  "ButchersCleaver": {
+    "name": "ITEM_BUTCHERSCLEAVER_NAME",
+    "name_resolved": "Butcher's Cleaver",
+    "desc": "ITEM_BUTCHERSCLEAVER_DESC",
+    "desc_resolved": "Use: A melee attack with Cleave that can hit diagonally.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "149",
+    "set": "Butcher",
+    "ability": "wp_ButchersCleaver",
+    "passives": {}
+  },
+  "RainStaff": {
+    "name": "ITEM_RAINSTAFF_NAME",
+    "name_resolved": "Rain Staff",
+    "desc": "ITEM_RAINSTAFF_DESC",
+    "desc_resolved": "Use: Spawn a large puddle of water anywhere.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "150",
+    "set": [
+      "Druid,",
+      "Wood"
+    ],
+    "ability": "wp_RainStaff",
+    "passives": {}
+  },
+  "LilKitty": {
+    "name": "ITEM_LILKITTY_NAME",
+    "name_resolved": "Lil' Kitty",
+    "desc": "ITEM_LILKITTY_DESC",
+    "desc_resolved": "Use: Spawn a Flea familiar.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "167",
+    "ability": "wp_LilKitty",
+    "passives": {}
+  },
+  "TractorBeam": {
+    "name": "ITEM_TRACTORBEAM_NAME",
+    "name_resolved": "Tractor Beam",
+    "desc": "ITEM_TRACTORBEAM_DESC",
+    "desc_resolved": "Use: Pull a unit within 3 tiles all the way towards you. Requires line of sight.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "106",
+    "set": "Space",
+    "ability": "wp_TractorBeam"
+  },
+  "RollOfPennies": {
+    "name": "ITEM_ROLLOFPENNIES_NAME",
+    "name_resolved": "Roll of Pennies",
+    "desc": "ITEM_ROLLOFPENNIES_DESC",
+    "desc_resolved": "Use: A weak melee attack that has a 50% chance to spawn a coin. \n5% chance to break when used.\nGain a lot of coins when it breaks.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "107",
+    "ability": "wp_RollOfPennies",
+    "passives": {
+      "StatusOnBreak": {
+        "GainCoinsRange": {
+          "min": "30",
+          "max": "60"
+        }
+      }
+    }
+  },
+  "GrapplingHook": {
+    "name": "ITEM_GRAPPLINGHOOK_NAME",
+    "name_resolved": "Grappling Hook",
+    "desc": "ITEM_GRAPPLINGHOOK_DESC",
+    "desc_resolved": "Use: Pull yourself toward a unit or object.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "108",
+    "set": [
+      "Barbed,",
+      "Ninja"
+    ],
+    "ability": "wp_GrapplingHook"
+  },
+  "Chainsaw": {
+    "name": "ITEM_CHAINSAW_NAME",
+    "name_resolved": "Chainsaw",
+    "desc": "ITEM_CHAINSAW_DESC",
+    "desc_resolved": "Use: A multi-hit melee attack with a 25% chance to Cleave.\n[s:.7](Usable once per battle.)[/s]\nPassive: +2 Thorns.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "109",
+    "set": "Cool",
+    "equip_sound": "SE_CatWeaponPoke_Chainsaw",
+    "ability": "wp_Chainsaw",
+    "passives": {
+      "Thorns": "2"
+    }
+  },
+  "BurningCoal": {
+    "name": "ITEM_BURNINGCOAL_NAME",
+    "name_resolved": "Burning Coals",
+    "desc": "ITEM_BURNINGCOAL_DESC",
+    "desc_resolved": "Use: A lobbed attack that inflicts Burn 2 and +2 [img:spd].\nPassive: Gain Burn 1 and +2 [img:spd] at the start of each turn.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "69",
+    "set": "Molten",
+    "ability": "wp_BurningCoal",
+    "passives": {
+      "StatusEachTurnBegin": {
+        "Burn": "1",
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "RainbowRemote": {
+    "name": "ITEM_RAINBOWREMOTE_NAME",
+    "name_resolved": "Rainbow Remote",
+    "desc": "ITEM_RAINBOWREMOTE_DESC",
+    "desc_resolved": "Use: Cast a targeted random spell.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "66",
+    "set": "Experimental",
+    "ability": "wp_RainbowRemote"
+  },
+  "RubberBat": {
+    "name": "ITEM_RUBBERBAT_NAME",
+    "name_resolved": "Rubber Bat",
+    "desc": "ITEM_RUBBERBAT_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Confusion 1 and turns the unit to the right.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "40",
+    "set": "Rubber",
+    "ability": "wp_RubberBat"
+  },
+  "RustedRod": {
+    "name": "ITEM_RUSTEDROD_NAME",
+    "name_resolved": "Rusted Rod",
+    "desc": "ITEM_RUSTEDROD_DESC",
+    "desc_resolved": "Use: A melee attack with damage equal to uses.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "41",
+    "durability": "9",
+    "ability": "wp_RustedRod"
+  },
+  "MeatCleaver": {
+    "name": "ITEM_MEATCLEAVER_NAME",
+    "name_resolved": "Meat Cleaver",
+    "desc": "ITEM_MEATCLEAVER_DESC",
+    "desc_resolved": "Use: A melee attack with Cleave that deals damage equal to half the target's current HP.\nBosses take 1/6th of their current HP in damage instead.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "43",
+    "set": "Butcher",
+    "ability": "wp_MeatCleaver"
+  },
+  "SharpStraw": {
+    "name": "ITEM_SHARPSTRAW_NAME",
+    "name_resolved": "Sharp Straw",
+    "desc": "ITEM_SHARPSTRAW_DESC",
+    "desc_resolved": "Use: A weak melee attack.\nIf it kills a unit, heal 10 HP.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "44",
+    "ability": "wp_SharpStraw"
+  },
+  "BagOfGlass": {
+    "name": "ITEM_BAGOFGLASS_NAME",
+    "name_resolved": "Bag o' Glass",
+    "desc": "ITEM_BAGOFGLASS_DESC",
+    "desc_resolved": "Use: Spawn Glass on an adjacent tile.\n5% chance to break when used.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "46",
+    "ability": "wp_BagOfGlass"
+  },
+  "BagOfMeat": {
+    "name": "ITEM_BAGOFMEAT_NAME",
+    "name_resolved": "Bag o' Meat",
+    "desc": "ITEM_BAGOFMEAT_DESC",
+    "desc_resolved": "Use: Spawn Meat on an adjacent tile.\n5% chance to break when used.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "47",
+    "set": "Meat",
+    "ability": "wp_BagOfMeat"
+  },
+  "BagOfGlitter": {
+    "name": "ITEM_BAGOFGLITTER_NAME",
+    "name_resolved": "Bag o' Glitter",
+    "desc": "ITEM_BAGOFGLITTER_DESC",
+    "desc_resolved": "Use: Inflict Blind 2 on an adjacent unit.\n5% chance to break when used.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "48",
+    "set": "Stunning",
+    "ability": "wp_BagOfGlitter"
+  },
+  "BagOfStuff": {
+    "name": "ITEM_BAGOFSTUFF_NAME",
+    "name_resolved": "Bag o' Stuff",
+    "desc": "ITEM_BAGOFSTUFF_DESC",
+    "desc_resolved": "Use: Spawn a random pickup on an adjacent tile.\n5% chance to break when used.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "49",
+    "ability": "wp_BagOfStuff"
+  },
+  "Pickaxe": {
+    "name": "ITEM_PICKAXE_NAME",
+    "name_resolved": "Pickaxe",
+    "desc": "ITEM_PICKAXE_DESC",
+    "desc_resolved": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Rock. Restore 1 use when used this way.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "88",
+    "set": "Miner",
+    "ability": "wp_Pickaxe"
+  },
+  "RocketLauncher": {
+    "name": "ITEM_ROCKETLAUNCHER_NAME",
+    "name_resolved": "Rocket Launcher",
+    "desc": "ITEM_ROCKETLAUNCHER_DESC",
+    "desc_resolved": "Use: Fire a rocket anywhere that explodes.",
+    "kind": "weapon",
+    "rarity": "very_rare",
+    "frame": "160",
+    "durability": "5",
+    "ability": "wp_RocketLauncher"
+  },
+  "FreyedWires": {
+    "name": "ITEM_FREYEDWIRES_NAME",
+    "name_resolved": "Frayed Wires",
+    "desc": "ITEM_FREYEDWIRES_DESC",
+    "desc_resolved": "Use: An electric melee attack that can chain through adjacent units.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "29",
+    "ability": "wp_FreyedWires"
+  },
+  "OldExtinguisher": {
+    "name": "ITEM_OLDEXTINGUISHER_NAME",
+    "name_resolved": "Old Extinguisher",
+    "desc": "ITEM_OLDEXTINGUISHER_DESC",
+    "desc_resolved": "Use: Extinguishes fires in a cone with Knockback 5.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "33",
+    "ability": "wp_OldExtinguisher"
+  },
+  "TrashCanLid": {
+    "name": "ITEM_TRASHCANLID_NAME",
+    "name_resolved": "Trash Can Lid",
+    "desc": "ITEM_TRASHCANLID_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 1.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "54",
+    "shield": "5",
+    "ability": "wp_TrashCanLid"
+  },
+  "MiniNuke": {
+    "name": "ITEM_MININUKE_NAME",
+    "name_resolved": "Mini Nuke",
+    "desc": "ITEM_MININUKE_DESC",
+    "desc_resolved": "Use: Throw a mini nuke that makes a HUGE explosion that spawns toxic sludge.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "96",
+    "durability": "1",
+    "set": "Radioactive",
+    "ability": "wp_MiniNuke"
+  },
+  "Kandarian": {
+    "name": "ITEM_KANDARIAN_NAME",
+    "name_resolved": "The Kandarian",
+    "desc": "ITEM_KANDARIAN_DESC",
+    "desc_resolved": "Use: A melee attack that always crits and inflicts Bleed 10.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "135",
+    "durability": "1",
+    "set": [
+      "Demonic,",
+      "Bone"
+    ],
+    "ability": "wp_Kandarian"
+  },
+  "Geode": {
+    "name": "ITEM_GEODE_NAME",
+    "name_resolved": "Geode",
+    "desc": "ITEM_GEODE_DESC",
+    "desc_resolved": "Use: A melee attack with a 5% chance to break when used.\nWhen it breaks, gain 15-30 coins.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "100",
+    "set": [
+      "Rock,",
+      "Gemstone"
+    ],
+    "ability": "wp_Geode",
+    "passives": {
+      "StatusOnBreak": {
+        "GainCoinsRange": {
+          "min": "15",
+          "max": "30"
+        }
+      }
+    }
+  },
+  "Rocks": {
+    "name": "ITEM_ROCKS_NAME",
+    "name_resolved": "Rocks",
+    "desc": "ITEM_ROCKS_DESC",
+    "desc_resolved": "Use: A lobbed attack.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "55",
+    "durability": "8",
+    "set": "Rock",
+    "ability": "wp_Rocks"
+  },
+  "ExtraLimb": {
+    "name": "ITEM_EXTRALIMB_NAME",
+    "name_resolved": "Extra Limb",
+    "desc": "ITEM_EXTRALIMB_DESC",
+    "desc_resolved": "Use: An attack that copies your basic attack.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "65",
+    "durability": "6",
+    "set": "Hybrid",
+    "ability": "wp_ExtraLimb"
+  },
+  "GripTrainer": {
+    "name": "ITEM_GRIPTRAINER_NAME",
+    "name_resolved": "Grip Trainer",
+    "desc": "ITEM_GRIPTRAINER_DESC",
+    "desc_resolved": "Use: Gain +1 [img:str].",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "101",
+    "set": "Fighter",
+    "ability": "wp_GripTrainer"
+  },
+  "ShoeHorn": {
+    "name": "ITEM_SHOEHORN_NAME",
+    "name_resolved": "Shoe Horn",
+    "desc": "ITEM_SHOEHORN_DESC",
+    "desc_resolved": "Use: Gain +2 [img:spd].",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "102",
+    "ability": "wp_ShoeHorn"
+  },
+  "Cheese": {
+    "name": "ITEM_CHEESE_NAME",
+    "name_resolved": "Cheese",
+    "desc": "ITEM_CHEESE_DESC",
+    "desc_resolved": "Use: Gain +1 [img:con] and heal 2 HP.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "103",
+    "ability": "wp_Cheese"
+  },
+  "LipFiller": {
+    "name": "ITEM_LIPFILLER_NAME",
+    "name_resolved": "Lip Filler",
+    "desc": "ITEM_LIPFILLER_DESC",
+    "desc_resolved": "Use: Gain +1 [img:cha] and 2 mana.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "104",
+    "ability": "wp_LipFiller"
+  },
+  "EnergyDrink": {
+    "name": "ITEM_ENERGYDRINK_NAME",
+    "name_resolved": "Energy Drink",
+    "desc": "ITEM_ENERGYDRINK_DESC",
+    "desc_resolved": "Use: Gain +1 [img:dex] and +1 [img:spd].",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "105",
+    "ability": "wp_EnergyDrink"
+  },
+  "CatPaw": {
+    "name": "ITEM_CATPAW_NAME",
+    "name_resolved": "Cat Paw",
+    "desc": "ITEM_CATPAW_DESC",
+    "desc_resolved": "Use: A melee attack that has a 25% chance to refresh itself when used.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "20",
+    "set": "Hybrid",
+    "lck": "2",
+    "ability": "wp_CatPaw"
+  },
+  "FlowerMix": {
+    "name": "ITEM_FLOWERMIX_NAME",
+    "name_resolved": "Flower Mix",
+    "desc": "ITEM_FLOWERMIX_DESC",
+    "desc_resolved": "Use: Plant flowers in a large area. \n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "28",
+    "set": "Flower",
+    "ability": "wp_FlowerMix"
+  },
+  "PuzzleBox": {
+    "name": "ITEM_PUZZLEBOX_NAME",
+    "name_resolved": "Puzzle Box",
+    "desc": "ITEM_PUZZLEBOX_DESC",
+    "desc_resolved": "Use: Shoot hooks in 8 directions that inflict Bleed 1 and pull units towards you.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "111",
+    "set": [
+      "Gimp,",
+      "Demonic"
+    ],
+    "ability": "wp_PuzzleBox"
+  },
+  "Crowbar": {
+    "name": "ITEM_CROWBAR_NAME",
+    "name_resolved": "Crowbar",
+    "desc": "ITEM_CROWBAR_DESC",
+    "desc_resolved": "Use: A melee attack that destroys trash bags and crates, scattering extra pickups.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "110",
+    "ability": "wp_Crowbar",
+    "passives": {
+      "AddAdvantageToEvent": {
+        "type": "treasure_box",
+        "options": [
+          "smash",
+          "bash",
+          "open"
+        ],
+        "add": "5"
+      }
+    }
+  },
+  "FireFlower": {
+    "name": "ITEM_FIREFLOWER_NAME",
+    "name_resolved": "Fire Flower",
+    "desc": "ITEM_FIREFLOWER_DESC",
+    "desc_resolved": "Use: Shoot a fireball that inflicts Burn 2 in an area.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "112",
+    "set": "Flower",
+    "ability": "wp_FireFlower"
+  },
+  "Bible": {
+    "name": "ITEM_BIBLE_NAME",
+    "name_resolved": "The Bible",
+    "desc": "ITEM_BIBLE_DESC",
+    "desc_resolved": "Use: Cleanse one stack of a random debuff from a unit at melee range. \nPassive: Your heals heal for 1 extra.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "114",
+    "set": "Cleric",
+    "ability": "wp_Bible",
+    "passives": {
+      "BoostHeals": "1"
+    }
+  },
+  "CarBattery": {
+    "name": "ITEM_CARBATTERY_NAME",
+    "name_resolved": "Car Battery",
+    "desc": "ITEM_CARBATTERY_DESC",
+    "desc_resolved": "Use: An electric melee attack that has a 50% chance to chain to another enemy within 3 tiles. Can only be used while at full mana.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "115",
+    "ability": "wp_CarBattery"
+  },
+  "ModelingClay": {
+    "name": "ITEM_MODELINGCLAY_NAME",
+    "name_resolved": "Modeling Clay",
+    "desc": "ITEM_MODELINGCLAY_DESC",
+    "desc_resolved": "{str_aux_item_desc}\n[s:.7](This changes into a different weapon each time it's used.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "68",
+    "set": "DirtClod",
+    "str_aux": "ModelingClay_Default",
+    "reset_str_aux_on_store": "ModelingClay_Default",
+    "str_aux_is_copy_item_active": "true",
+    "str_aux_is_copy_item_passive": "true",
+    "str_aux_is_copy_item_icon": "true",
+    "passives": {
+      "ModelingClayPassive": "1",
+      "TintItem": {
+        "ignore_if_str_aux_equals": "ModelingClay_Default",
+        "add": [
+          "0.05",
+          "0.05",
+          "0.05"
+        ],
+        "mul": [
+          "0.45",
+          "0.3",
+          "0.25"
+        ]
+      }
+    }
+  },
+  "ModelingClay_Default": {
+    "name": "ITEM_MODELINGCLAY_NAME",
+    "name_resolved": "Modeling Clay",
+    "desc": "ITEM_MODELINGCLAY_DEFAULT_DESC",
+    "desc_resolved": "Use: A lobbed attack.",
+    "kind": "weapon",
+    "frame": "68",
+    "ability": "wp_ModelingClay"
+  },
+  "PharaohStaff": {
+    "name": "ITEM_PHARAOHSTAFF_NAME",
+    "name_resolved": "Pharaoh's Staff",
+    "desc": "ITEM_PHARAOHSTAFF_DESC",
+    "desc_resolved": "Use: Summon a swarm of charmed flies.\nWhen you destroy a corpse, restore this weapon's use.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "172",
+    "durability": "1",
+    "max_durability": "1",
+    "dont_destroy_on_0": "true",
+    "ability": "wp_PharaohStaff",
+    "passives": {
+      "StatusOnPopCorpse": {
+        "RepairWeapon": "1"
+      }
+    }
+  },
+  "SlagMight": {
+    "name": "ITEM_SLAGMIGHT_NAME",
+    "name_resolved": "Slag Might",
+    "desc": "ITEM_SLAGMIGHT_DESC",
+    "desc_resolved": "Use: A melee attack with Bruise 1 and Knockback 5.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "173",
+    "set": "Rock",
+    "ability": "wp_SlagMight"
+  },
+  "MomsToeNail": {
+    "name": "ITEM_MOMSTOENAIL_NAME",
+    "name_resolved": "Mom's Toenail",
+    "desc": "ITEM_MOMSTOENAIL_DESC",
+    "desc_resolved": "Use: A melee attack.",
+    "kind": "weapon",
+    "frame": "219",
+    "set": "Mother",
+    "ability": "wp_MomsToeNail"
+  },
+  "AlienBlaster": {
+    "name": "ITEM_ALIENBLASTER_NAME",
+    "name_resolved": "Alien Blaster",
+    "desc": "ITEM_ALIENBLASTER_DESC",
+    "desc_resolved": "Use: A laser attack. Gains +1 damage for the rest of the battle each time it's used.",
+    "kind": "weapon",
+    "frame": "218",
+    "set": "Space",
+    "ability": "wp_AlienBlaster"
+  },
+  "PolymorphRemote": {
+    "name": "ITEM_POLYMORPHREMOTE_NAME",
+    "name_resolved": "Polymorph Remote",
+    "desc": "ITEM_POLYMORPHREMOTE_DESC",
+    "desc_resolved": "Use: Transform a non-boss enemy into another random enemy from the same chapter.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "67",
+    "ability": "wp_PolymorphRemote"
+  },
+  "MelonBaller": {
+    "name": "ITEM_MELONBALLER_NAME",
+    "name_resolved": "Melon Baller",
+    "desc": "ITEM_MELONBALLER_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Blind 3 and gives you a random eye trinket if you don't have a trinket equipped.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "120",
+    "durability": [
+      "4,",
+      "6"
+    ],
+    "ability": "wp_MelonBaller"
+  },
+  "EtherSoakedRag": {
+    "name": "ITEM_ETHERSOAKEDRAG_NAME",
+    "name_resolved": "Ether Soaked Rag",
+    "desc": "ITEM_ETHERSOAKEDRAG_DESC",
+    "desc_resolved": "Use: Put an adjacent unit or yourself to sleep. That unit gets +5 Health Regen and +5 Mana Regen until it wakes up.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "121",
+    "set": "Rag",
+    "ability": "wp_EtherSoakedRag"
+  },
+  "DeathsScythe": {
+    "name": "ITEM_DEATHSSCYTHE_NAME",
+    "name_resolved": "Death's Scythe",
+    "desc": "ITEM_DEATHSSCYTHE_DESC",
+    "desc_resolved": "Use: A spin attack. After using this, die at the end of your turn.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "122",
+    "ability": "wp_DeathsScythe"
+  },
+  "Necronomicon": {
+    "name": "ITEM_NECRONOMICON_NAME",
+    "name_resolved": "Necronomicon",
+    "desc": "ITEM_NECRONOMICON_DESC",
+    "desc_resolved": "Use: Unearth 5 zombies. These zombies have a 33% chance of having Madness.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "123",
+    "set": [
+      "Necromancer,",
+      "Demonic"
+    ],
+    "ability": "wp_Necronomicon"
+  },
+  "Jitte": {
+    "name": "ITEM_JITTE_NAME",
+    "name_resolved": "Jitte",
+    "desc": "ITEM_JITTE_DESC",
+    "desc_resolved": "Use: A melee attack that deals damage equal to half your [img:str] rounded up, inflicts Weakness 1, and gives you +1 [img:str] and +1 HP on hit.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "124",
+    "set": "Ninja",
+    "ability": "wp_Jitte"
+  },
+  "AnarchistCookbook": {
+    "name": "ITEM_ANARCHISTCOOKBOOK_NAME",
+    "name_resolved": "Anarchist Cookbook",
+    "desc": "ITEM_ANARCHISTCOOKBOOK_DESC",
+    "desc_resolved": "Use: Summon 3-5 grenades that explode at the end of the round or when destroyed.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "125",
+    "set": "Paper",
+    "ability": "wp_AnarchistCookbook"
+  },
+  "MomsKnife": {
+    "name": "ITEM_MOMSKNIFE_NAME",
+    "name_resolved": "Mom's Knife",
+    "desc": "ITEM_MOMSKNIFE_DESC",
+    "desc_resolved": "Use: Throw a penetrating projectile that returns to you.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "126",
+    "set": "Mother",
+    "ability": "wp_MomsKnife"
+  },
+  "MysteriousBone": {
+    "name": "ITEM_MYSTERIOUSBONE_NAME",
+    "name_resolved": "Mysterious Bone",
+    "desc": "ITEM_MYSTERIOUSBONE_DESC",
+    "desc_resolved": "Use: A melee attack with a 25% chance to inflict Charm.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "127",
+    "set": "Bone",
+    "ability": "wp_MysteriousBone"
+  },
+  "HolyGrail": {
+    "name": "ITEM_HOLYGRAIL_NAME",
+    "name_resolved": "Holy Grail",
+    "desc": "ITEM_HOLYGRAIL_DESC",
+    "desc_resolved": "Use: Heal an adjacent unit or yourself for 5 HP.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "128",
+    "set": "Cleric",
+    "ability": "wp_HolyGrail"
+  },
+  "SpearOfDestiny": {
+    "name": "ITEM_SPEAROFDESTINY_NAME",
+    "name_resolved": "Spear of Destiny",
+    "desc": "ITEM_SPEAROFDESTINY_DESC",
+    "desc_resolved": "Use: A melee attack with +1 reach that penetrates through units.\nRELOAD: Collect a blessing pickup or get hit by a Holy Element spell.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "129",
+    "ability": "wp_SpearOfDestiny"
+  },
+  "HeavyMace": {
+    "name": "ITEM_HEAVYMACE_NAME",
+    "name_resolved": "Heavy Mace",
+    "desc": "ITEM_HEAVYMACE_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 2 that deals damage equal to your [img:str].\nCleaves and deals double damage to units with [img:shield].",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "131",
+    "set": "Fighter",
+    "spd": "-6",
+    "ability": "wp_HeavyMace"
+  },
+  "UraniumRod": {
+    "name": "ITEM_URANIUMROD_NAME",
+    "name_resolved": "Uranium Rod",
+    "desc": "ITEM_URANIUMROD_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts -1 [img:con], Poison 2 and Weakness 1.\nAt the end of each battle, if you are downed, gain a random mutation.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "132",
+    "set": "Radioactive",
+    "con": "-6",
+    "ability": "wp_UraniumRod",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "Conditional_Corpse": {
+          "RandomMutation": "1"
+        }
+      }
+    }
+  },
+  "Ocarina": {
+    "name": "ITEM_OCARINA_NAME",
+    "name_resolved": "Ocarina",
+    "desc": "ITEM_OCARINA_DESC",
+    "desc_resolved": "Use: Cast a random musical spell.",
+    "rarity": "medium",
+    "kind": "weapon",
+    "frame": "134",
+    "ability": "wp_Ocarina"
+  },
+  "SmallMeteor": {
+    "name": "ITEM_SMALLMETEOR_NAME",
+    "name_resolved": "Small Meteor",
+    "desc": "ITEM_SMALLMETEOR_DESC",
+    "desc_resolved": "- {str_aux_active_name} -\n{str_aux_active_desc}",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "175",
+    "randomize_piece_frames": "true",
+    "set": "Planet",
+    "str_aux_initialize": "random_copyable_colorless_ability",
+    "str_aux_is_copy_ability": {
+      "bonus_passives": {
+        "ModifyAbility": {
+          "meta": {
+            "is_basic_attack": "false",
+            "is_weapon": "true"
+          },
+          "cost": {
+            "mana": "0",
+            "charge": "1"
+          }
+        }
+      }
+    },
+    "ability": "None"
+  },
+  "GlowingBone": {
+    "name": "ITEM_GLOWINGBONE_NAME",
+    "name_resolved": "Glowing Bone",
+    "desc": "ITEM_GLOWINGBONE_DESC",
+    "desc_resolved": "- {str_aux_active_name} -\n{str_aux_active_desc}",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "174",
+    "randomize_piece_frames": "true",
+    "set": "Bone",
+    "str_aux_initialize": "random_copyable_class_ability",
+    "str_aux_is_copy_ability": {
+      "bonus_passives": {
+        "ModifyAbility": {
+          "meta": {
+            "is_basic_attack": "false",
+            "is_weapon": "true"
+          },
+          "cost": {
+            "mana": "0",
+            "charge": "1"
+          }
+        }
+      }
+    },
+    "ability": "None"
+  },
+  "IrradiatedObject": {
+    "name": "ITEM_IRRADIATEDOBJECT_NAME",
+    "name_resolved": "Irradiated Object",
+    "desc": "ITEM_IRRADIATEDOBJECT_DESC",
+    "desc_resolved": "{str_aux_item_desc}",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "176",
+    "randomize_piece_frames": "true",
+    "set": "Radioactive",
+    "str_aux_initialize": "random_passive_trinket",
+    "str_aux_is_copy_item_passive": "true",
+    "ability": "wp_IrradiatedObject"
+  },
+  "IrradiatedObject_Burn": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_BURN_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Burn 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Burn"
+  },
+  "IrradiatedObject_Stun": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_STUN_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Stun 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Stun"
+  },
+  "IrradiatedObject_Bleed": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_BLEED_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bleed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Bleed"
+  },
+  "IrradiatedObject_Bruise": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_BRUISE_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bruise 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Bruise"
+  },
+  "IrradiatedObject_Poison": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_POISON_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Poison 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Poison"
+  },
+  "IrradiatedObject_Sleep": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_SLEEP_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Sleep 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Sleep"
+  },
+  "IrradiatedObject_Fear": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_FEAR_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Fear 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Fear"
+  },
+  "IrradiatedObject_Charmed": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_CHARMED_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Charmed 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Charmed"
+  },
+  "IrradiatedObject_Weakness": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_WEAKNESS_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Weakness 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Weakness"
+  },
+  "IrradiatedObject_Confusion": {
+    "variant_of": "IrradiatedObject",
+    "desc": "ITEM_IRRADIATEDOBJECT_CONFUSION_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Confusion 1.\n{str_aux_item_desc}\n[s:.7](Usable once per battle.)[/s]",
+    "ability": "wp_IrradiatedObject_Confusion"
+  },
+  "SteelBall": {
+    "name": "ITEM_STEELBALL_NAME",
+    "name_resolved": "Steel Ball",
+    "desc": "ITEM_STEELBALL_DESC",
+    "desc_resolved": "Use: Summon an invulnerable Fly familiar.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "157",
+    "ability": "wp_SteelBall"
+  },
+  "USAShield": {
+    "name": "ITEM_USASHIELD_NAME",
+    "name_resolved": "USA Shield",
+    "desc": "ITEM_USASHIELD_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Stun.\n[s:.7](Usable once per battle.)[/s]\nPassive: +2 Brace while this weapon is usable.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "158",
+    "set": "Superhero",
+    "passives": {
+      "PassiveIfWeaponIsUsable": {
+        "Brace": "2"
+      }
+    },
+    "ability": "wp_USAShield"
+  },
+  "TeslaCannon": {
+    "name": "ITEM_TESLACANNON_NAME",
+    "name_resolved": "Tesla Cannon",
+    "desc": "ITEM_TESLACANNON_DESC",
+    "desc_resolved": "Use: Fire a ranged electric shot that passes through units in a straight line with a 50% chance to Stun.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "185",
+    "durability": "3",
+    "set": "Experimental",
+    "ability": "wp_TeslaCannon"
+  },
+  "MeatBomb": {
+    "name": "ITEM_MEATBOMB_NAME",
+    "name_resolved": "Meat Bomb",
+    "desc": "ITEM_MEATBOMB_DESC",
+    "desc_resolved": "Use: Throw a bomb that explodes.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "191",
+    "set": "Meat",
+    "ability": "wp_SmallBomb"
+  },
+  "BloodyStick": {
+    "name": "ITEM_BLOODYSTICK_NAME",
+    "name_resolved": "Bloody Stick",
+    "desc": "ITEM_BLOODYSTICK_DESC",
+    "desc_resolved": "+1 Health Regen.\nUse: A melee attack with +1 reach.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "192",
+    "set": "Wood",
+    "passives": {
+      "HealthRegenUp": "1"
+    },
+    "ability": "wp_Stick"
+  },
+  "BucketOfBlood": {
+    "name": "ITEM_BUCKETOFBLOOD_NAME",
+    "name_resolved": "Bucket of Blood",
+    "desc": "ITEM_BUCKETOFBLOOD_DESC",
+    "desc_resolved": "Use: Gain +2 [img:con] and -1 [img:spd], then heal 4 HP.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "196",
+    "ability": "wp_BucketOfLard"
+  },
+  "BloodyButterflyKnife": {
+    "name": "ITEM_BLOODYBUTTERFLYKNIFE_NAME",
+    "name_resolved": "Bloody Knife",
+    "desc": "ITEM_BLOODYBUTTERFLYKNIFE_DESC",
+    "desc_resolved": "Use: A multi-hit melee attack with Lifesteal that inflicts Bleed.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "197",
+    "ability": "wp_BloodyButterflyKnife"
+  },
+  "BloodyBearTraps": {
+    "name": "ITEM_BLOODYBEARTRAPS_NAME",
+    "name_resolved": "Bloody Bear Traps",
+    "desc": "ITEM_BLOODYBEARTRAPS_DESC",
+    "desc_resolved": "Use: Place a Bear Trap.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "198",
+    "set": [
+      "Hunter,",
+      "Survivalist"
+    ],
+    "ability": "wp_BearTraps"
+  },
+  "BloodyBagOfGlass": {
+    "name": "ITEM_BLOODYBAGOFGLASS_NAME",
+    "name_resolved": "Bloody Bag of Glass",
+    "desc": "ITEM_BLOODYBAGOFGLASS_DESC",
+    "desc_resolved": "Use: Throw a projectile that creates glass.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "194",
+    "ability": "wp_BloodyBagOfGlass"
+  },
+  "MeatSlugger": {
+    "name": "ITEM_MEATSLUGGER_NAME",
+    "name_resolved": "Meat Slugger",
+    "desc": "ITEM_MEATSLUGGER_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 10 that inflicts Bruise.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "186",
+    "ability": "wp_MeatSlugger"
+  },
+  "BloodyMeatHook": {
+    "name": "ITEM_BLOODYMEATHOOK_NAME",
+    "name_resolved": "Bloody Meat Hook",
+    "desc": "ITEM_BLOODYMEATHOOK_DESC",
+    "desc_resolved": "Use: Pull a unit towards you, Cleaving and inflicting Bleed 1.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "189",
+    "set": [
+      "Butcher,",
+      "Barbed"
+    ],
+    "ability": "wp_BloodyMeatHook"
+  },
+  "BloodySoulClaw": {
+    "name": "ITEM_BLOODYSOULCLAW_NAME",
+    "name_resolved": "Bloody Soul Claw",
+    "desc": "ITEM_BLOODYSOULCLAW_DESC",
+    "desc_resolved": "Use: A melee attack that deals damage equal to the number of uses this has left.\nWhen this weapon kills a unit, it gains +2 uses and you heal 5 HP.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "190",
+    "durability": "8",
+    "ability": "wp_BloodySoulClaw"
+  },
+  "BloodBucket": {
+    "name": "ITEM_BLOODBUCKET_NAME",
+    "name_resolved": "Blood Bucket",
+    "desc": "ITEM_BLOODBUCKET_DESC",
+    "desc_resolved": "Use: A lobbed attack that creates a creep puddle.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "188",
+    "ability": "wp_ChumBucket"
+  },
+  "BloodySpikes": {
+    "name": "ITEM_BLOODYSPIKES_NAME",
+    "name_resolved": "Bloody Spikes",
+    "desc": "ITEM_BLOODYSPIKES_DESC",
+    "desc_resolved": "+1 Thorns.\nUse: A ranged attack.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "187",
+    "passives": {
+      "Thorns": "1"
+    },
+    "ability": "wp_RailSpikes"
+  },
+  "BottlesOfBlood": {
+    "name": "ITEM_BOTTLESOFBLOOD_NAME",
+    "name_resolved": "Bottles of Blood",
+    "desc": "ITEM_BOTTLESOFBLOOD_DESC",
+    "desc_resolved": "Use: A lobbed attack that creates glass tiles in an area.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "193",
+    "ability": "wp_BloodBottles"
+  },
+  "BlessedAnointingOil": {
+    "name": "ITEM_BLESSEDANOINTINGOIL_NAME",
+    "name_resolved": "Blessed Anointing Oil",
+    "desc": "ITEM_BLESSEDANOINTINGOIL_DESC",
+    "desc_resolved": "Use: Cleanse debuffs and heal an adjacent unit or yourself.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "221",
+    "set": "Cleric",
+    "ability": "wp_BlessedAnointingOil"
+  },
+  "HarpysClaw": {
+    "name": "ITEM_HARPYSCLAW_NAME",
+    "name_resolved": "Harpy's Claw",
+    "desc": "ITEM_HARPYSCLAW_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Poison 1, Bleed 1, Confusion 1, Weakness 1, and Slow 1.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "199",
+    "ability": "wp_HarpyClaw"
+  },
+  "RatBomb": {
+    "name": "ITEM_RATBOMB_NAME",
+    "name_resolved": "Rat Bomb",
+    "desc": "ITEM_RATBOMB_DESC",
+    "desc_resolved": "Use: Toss a Bomb that explodes at the end of the round.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "222",
+    "durability": "5",
+    "set": "Rat",
+    "ability": "wp_RatBomb"
+  },
+  "Spinnerets": {
+    "name": "ITEM_SPINNERETS_NAME",
+    "name_resolved": "Spinnerets",
+    "desc": "ITEM_SPINNERETS_DESC",
+    "desc_resolved": "Use: A ranged attack that inflicts Webbed.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "223",
+    "durability": "6",
+    "ability": "wp_SpiderWebber"
+  },
+  "ZodiacsSixshooter": {
+    "name": "ITEM_ZODIACSSIXSHOOTER_NAME",
+    "name_resolved": "Zodiac's Six Shooter",
+    "desc": "ITEM_ZODIACSSIXSHOOTER_DESC",
+    "desc_resolved": "Use: Fire a shot anywhere within your line of sight.\nAutomatically use this whenever an enemy ends movement within your line of sight.\nReloads at the end of each battle.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "224",
+    "durability": "6",
+    "max_durability": "6",
+    "dont_destroy_on_0": "true",
+    "set": "Cool",
+    "ability": "wp_ZodiacsSixshooter",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "RepairWeapon": "6"
+      },
+      "PassiveWhileHasDurability": {
+        "MovementReaction": {
+          "ability": "wp_ZodiacsSixshooter_Auto",
+          "enemies_only": "true",
+          "create_temp_ability": "true"
+        }
+      }
+    }
+  },
+  "GambitsDice": {
+    "name": "ITEM_GAMBITSDICE_NAME",
+    "name_resolved": "Gambit's Dice",
+    "desc": "ITEM_GAMBITSDICE_DESC",
+    "desc_resolved": "Use: Throw a projectile that deals 1-6 damage at random.\nRELOAD: Cast a spell that costs exactly 6 mana.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "225",
+    "ability": "wp_GambitsDice"
+  },
+  "JohnnysStool": {
+    "name": "ITEM_JOHNNYSSTOOL_NAME",
+    "name_resolved": "Johnny's Stool",
+    "desc": "ITEM_JOHNNYSSTOOL_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 2.\nIf you end your turn with a unused movement actions, heal 3 HP and gain 3 Charge.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "226",
+    "set": "Wood",
+    "ability": "wp_Stoolatk",
+    "passives": {
+      "StatusIfUnusedMovePoints": {
+        "HealthGain": "3",
+        "Charge": "3"
+      }
+    }
+  },
+  "AlienTech": {
+    "name": "ITEM_ALIENTECH_NAME",
+    "name_resolved": "Alien Tech",
+    "desc": "ITEM_ALIENTECH_DESC",
+    "desc_resolved": "Use: Target an area. Unleash a hyper beam attack in that area at the start of your next turn.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "227",
+    "set": "Space",
+    "ability": "AlienBeam"
+  },
+  "Stacy100": {
+    "name": "ITEM_STACY100_NAME",
+    "name_resolved": "Stacy 100",
+    "desc": "ITEM_STACY100_DESC",
+    "desc_resolved": "Use: Spawn a Stacy.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "228",
+    "ability": "wp_SpawnStacy"
+  },
+  "BungasBone": {
+    "name": "ITEM_BUNGASBONE_NAME",
+    "name_resolved": "Bunga's Bone",
+    "desc": "ITEM_BUNGASBONE_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 5.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "229",
+    "set": "Bone",
+    "ability": "wp_BungaClub"
+  },
+  "HitlersPistol": {
+    "name": "ITEM_HITLERSPISTOL_NAME",
+    "name_resolved": "Hitler's Pistol",
+    "desc": "ITEM_HITLERSPISTOL_DESC",
+    "desc_resolved": "Use: Fire a shot in a straight line.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "230",
+    "durability": "8",
+    "ability": "wp_Lugar"
+  },
+  "Bug": {
+    "name": "ITEM_BUG_NAME",
+    "name_resolved": "Bug",
+    "desc": "ITEM_BUG_DESC",
+    "desc_resolved": "Your basic attack is Metronome.\nUse: Cast a random spell.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "231",
+    "attack": "BasicMetronome",
+    "ability": "wp_OddRemote",
+    "passives": {
+      "OverrideBasicAttack": "BasicMetronome"
+    }
+  },
+  "Fate": {
+    "name": "ITEM_FATE_NAME",
+    "name_resolved": "Fate",
+    "desc": "ITEM_FATE_DESC",
+    "desc_resolved": "Use: Summon meteors that hit random tiles everywhere. These meteors have a chance to stun, spawn fires, or leave rocks behind.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "232",
+    "ability": "wp_Fate"
+  },
+  "MammothTusk": {
+    "name": "ITEM_MAMMOTHTUSK_NAME",
+    "name_resolved": "Mammoth Tusk",
+    "desc": "ITEM_MAMMOTHTUSK_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Bruise 2 and Confusion. Become Drowsy after use.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "233",
+    "set": "Wooly",
+    "ability": "wp_TuskThrow"
+  },
+  "AmericanFlag": {
+    "name": "ITEM_AMERICANFLAG_NAME",
+    "name_resolved": "American Flag",
+    "desc": "ITEM_AMERICANFLAG_DESC",
+    "desc_resolved": "Use: Force a unit to attack one of its enemies.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "234",
+    "str": "1",
+    "dex": "1",
+    "con": "1",
+    "spd": "1",
+    "int": "1",
+    "lck": "1",
+    "cha": "1",
+    "ability": "wp_Rally"
+  },
+  "BookOfBelial": {
+    "name": "ITEM_BOOKOFBELIAL_NAME",
+    "name_resolved": "Book Of Belial",
+    "desc": "ITEM_BOOKOFBELIAL_DESC",
+    "desc_resolved": "Use: Gain +3 Damage.\nRELOAD: Kill an enemy.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "235",
+    "set": [
+      "Demonic,",
+      "Paper"
+    ],
+    "ability": "wp_BookofBelial"
+  },
+  "MegaAlienBlaster": {
+    "name": "ITEM_MEGAALIENBLASTER_NAME",
+    "name_resolved": "Mega Alien Blaster",
+    "desc": "ITEM_MEGAALIENBLASTER_DESC",
+    "desc_resolved": "Use: A laser attack. Gains +5 damage for the rest of the battle each time it's used.\nTake 5 damage when used.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "236",
+    "set": "Space",
+    "ability": "wp_MegaAlienBlaster"
+  },
+  "HellHook": {
+    "name": "ITEM_HELLHOOK_NAME",
+    "name_resolved": "Hell Hook",
+    "desc": "ITEM_HELLHOOK_DESC",
+    "desc_resolved": "Use: Pull a unit toward you.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "237",
+    "set": [
+      "Demonic,",
+      "Barbed,",
+      "Butcher"
+    ],
+    "ability": "wp_MeatHookB"
+  },
+  "DemonCore": {
+    "name": "ITEM_DEMONCORE_NAME",
+    "name_resolved": "Demon Core",
+    "desc": "ITEM_DEMONCORE_DESC",
+    "desc_resolved": "Start each battle with Poison 5. Inflict All Stats Down 2 on bosses and minibosses at the start of the battle.\nUse: A melee attack that causes a unit to die at the end of its next turn. Bosses fall asleep at the end of their next turn instead.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "238",
+    "set": "Radioactive",
+    "ability": "wp_DemonDoom",
+    "passives": {
+      "Poison": "5",
+      "StatusAllCharactersOnSpawn": {
+        "Conditional_Boss": {
+          "AllStatsUp": "-2"
+        }
+      }
+    }
+  },
+  "BagOfChum": {
+    "name": "ITEM_BAGOFCHUM_NAME",
+    "name_resolved": "Bag Of Chum",
+    "desc": "ITEM_BAGOFCHUM_DESC",
+    "desc_resolved": "Use: Spawn a Charmed Maggot.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "240",
+    "set": "Guts",
+    "ability": "wp_ChumShot"
+  },
+  "GoldenPickaxe": {
+    "name": "ITEM_GOLDENPICKAXE_NAME",
+    "name_resolved": "Golden Pickaxe",
+    "desc": "ITEM_GOLDENPICKAXE_DESC",
+    "desc_resolved": "Use: A melee attack that ignores shield.\nIf used on static or inanimate objects it destroys them and spawns a Coin.\nSpawn a coin on a random tile at the end of each turn.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "241",
+    "set": "Miner",
+    "ability": "wp_GoldPickaxe",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "SpawnCoinAnywhere": "1"
+      }
+    }
+  },
+  "ManholeCover": {
+    "name": "ITEM_MANHOLECOVER_NAME",
+    "name_resolved": "Manhole Cover",
+    "desc": "ITEM_MANHOLECOVER_DESC",
+    "desc_resolved": "Brace 2.\nUse: A ranged attack with Knockback 2 that passes through units and returns to you.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "242",
+    "ability": "wp_Manhole",
+    "passives": {
+      "Brace": "2"
+    }
+  },
+  "TinasLarynx": {
+    "name": "ITEM_TINASLARYNX_NAME",
+    "name_resolved": "Tina's Larynx",
+    "desc": "ITEM_TINASLARYNX_DESC",
+    "desc_resolved": "Use: Inflict Fear on all enemies.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "183",
+    "set": "Guts",
+    "ability": "wp_TinaScream"
+  },
+  "RoboticArm": {
+    "name": "ITEM_ROBOTICARM_NAME",
+    "name_resolved": "Robotic Arm",
+    "desc": "ITEM_ROBOTICARM_DESC",
+    "desc_resolved": "Use: A melee attack with a chance to repeat. Gains 1 damage for the rest of the battle each time it's used.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "184",
+    "set": "Cyborg",
+    "ability": "wp_FuryArm",
+    "passives": {
+      "RefreshEquipmentAbilityOnElement": {
+        "element": "Electric",
+        "text": "COMBAT_POPUP_RECHARGED",
+        "text_resolved": "Recharged!"
+      }
+    }
+  },
+  "StevensShotgun": {
+    "name": "ITEM_STEVENSSHOTGUN_NAME",
+    "name_resolved": "Steven's Shotgun",
+    "desc": "ITEM_STEVENSSHOTGUN_DESC",
+    "desc_resolved": "Use: Fires 5 projectiles in a cone. Using this recoils you 10 tiles backwards and Confuses you.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "177",
+    "ability": "wp_ShotgunSteven"
+  },
+  "StevensGristle": {
+    "name": "ITEM_STEVENSGRISTLE_NAME",
+    "name_resolved": "Steven's Gristle",
+    "desc": "ITEM_STEVENSGRISTLE_DESC",
+    "desc_resolved": "Units don't leave corpses.\nUse: A melee attack.\nThis weapon gains +1 damage and +1 use when it gets a kill.\nDamage resets at the end of the adventure.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "178",
+    "durability": "99",
+    "aux": "1",
+    "set": "Steven",
+    "reset_aux_on_store": "1",
+    "ability": "wp_GnarledClaw",
+    "passives": {
+      "CreateGlobalModifiers": {
+        "NoCorpses": "1"
+      }
+    }
+  },
+  "StevensBagofRocks": {
+    "name": "ITEM_STEVENSBAGOFROCKS_NAME",
+    "name_resolved": "Steven's Bag of Rocks",
+    "desc": "ITEM_STEVENSBAGOFROCKS_DESC",
+    "desc_resolved": "Use: A melee attack with a chance to repeat that inflicts Bruise.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "179",
+    "set": "Steven",
+    "ability": "wp_StevensBagOfRocks"
+  },
+  "StevensBottle": {
+    "name": "ITEM_STEVENSBOTTLE_NAME",
+    "name_resolved": "Steven's Bottle",
+    "desc": "ITEM_STEVENSBOTTLE_DESC",
+    "desc_resolved": "Use: A ranged attack that creates a Tar tile.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "180",
+    "set": "Steven",
+    "ability": "wp_StevensBottles"
+  },
+  "StevenWeapon1": {
+    "name": "ITEM_STEVENWEAPON1_NAME",
+    "name_resolved": "Steven",
+    "desc": "ITEM_STEVENWEAPON1_DESC",
+    "desc_resolved": "Use: A melee attack. If this hits an allied cat, spawn a quarter-sized copy of them with 25% of their stats. The copy is AI controlled.\nRELOAD: An allied cat dies.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "181",
+    "set": "Steven",
+    "ability": "wp_StevenWeapon1"
+  },
+  "StevenWeapon2": {
+    "name": "ITEM_STEVENWEAPON2_NAME",
+    "name_resolved": "Steven",
+    "desc": "ITEM_STEVENWEAPON2_DESC",
+    "desc_resolved": "Use: A lobbed attack that inflicts Petrify.\nRELOAD: Kill a rock.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "182",
+    "set": "Steven",
+    "ability": "wp_StevenWeapon2"
+  },
+  "ToyGun": {
+    "name": "ITEM_TOYGUN_NAME",
+    "name_resolved": "Toy Gun",
+    "desc": "ITEM_TOYGUN_DESC",
+    "desc_resolved": "Use: A melee attack with Knockback 10 and Chain Knockback that inflicts Bruise.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "220",
+    "set": "Jester",
+    "ability": "wp_BangGun"
+  },
+  "Pliers": {
+    "name": "ITEM_PLIERS_NAME",
+    "name_resolved": "Pliers",
+    "desc": "ITEM_PLIERS_DESC",
+    "desc_resolved": "Use: A melee attack that inflicts Weakness 3.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "133",
+    "ability": "wp_Pliers"
+  },
+  "FeatherDarts": {
+    "name": "ITEM_FEATHERDARTS_NAME",
+    "name_resolved": "Feather Darts",
+    "desc": "ITEM_FEATHERDARTS_DESC",
+    "desc_resolved": "Use: A ranged attack that can hit any unit in your line of sight.\nCan be used 3 times per turn.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "153",
+    "set": "Feathered",
+    "durability": "99",
+    "ability": "wp_FeatherDarts",
+    "passives": {
+      "ExtraWeaponAttacks": "2"
+    }
+  },
+  "FeatheredWing": {
+    "name": "ITEM_FEATHEREDWING_NAME",
+    "name_resolved": "Feathered Wing",
+    "desc": "ITEM_FEATHEREDWING_DESC",
+    "desc_resolved": "Use: A wide wind attack with Knockback 3.",
+    "kind": "weapon",
+    "frame": "155",
+    "set": "Feathered",
+    "durability": "20",
+    "ability": "wp_FeatheredWing"
+  },
+  "MoneyBag_Small": {
+    "name": "ITEM_MONEYBAG_SMALL_NAME",
+    "name_resolved": "Money Bag",
+    "desc": "ITEM_MONEYBAG_SMALL_DESC",
+    "desc_resolved": "Becomes {aux} coins when you return home.\nUse: A melee attack.",
+    "rarity": "common",
+    "kind": "weapon",
+    "frame": "243",
+    "on_store": "become_aux_coins",
+    "aux": "10",
+    "ability": "wp_MoneyBag_Small",
+    "passives": {
+      "BreakAtAux": "0"
+    }
+  },
+  "MoneyBag_Medium": {
+    "name": "ITEM_MONEYBAG_MEDIUM_NAME",
+    "name_resolved": "Money Bag",
+    "desc": "ITEM_MONEYBAG_MEDIUM_DESC",
+    "desc_resolved": "Becomes {aux} coins when you return home.\nUse: A melee attack.",
+    "rarity": "uncommon",
+    "kind": "weapon",
+    "frame": "244",
+    "on_store": "become_aux_coins",
+    "aux": "25",
+    "ability": "wp_MoneyBag_Medium",
+    "passives": {
+      "ItemAuxTransform": {
+        "le": [
+          "10",
+          "MoneyBag_Small"
+        ]
+      },
+      "BreakAtAux": "0"
+    }
+  },
+  "MoneyBag_Large": {
+    "name": "ITEM_MONEYBAG_LARGE_NAME",
+    "name_resolved": "Money Bag",
+    "desc": "ITEM_MONEYBAG_LARGE_DESC",
+    "desc_resolved": "Becomes {aux} coins when you return home.\nUse: A melee attack.",
+    "rarity": "rare",
+    "kind": "weapon",
+    "frame": "245",
+    "on_store": "become_aux_coins",
+    "aux": "50",
+    "ability": "wp_MoneyBag_Large",
+    "passives": {
+      "ItemAuxTransform": {
+        "le": [
+          "25",
+          "MoneyBag_Medium"
+        ]
+      },
+      "BreakAtAux": "0"
+    }
+  },
+  "MoneyBag_Huge": {
+    "name": "ITEM_MONEYBAG_HUGE_NAME",
+    "name_resolved": "Money Bag",
+    "desc": "ITEM_MONEYBAG_HUGE_DESC",
+    "desc_resolved": "Becomes {aux} coins when you return home.\nUse: A melee attack.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "246",
+    "on_store": "become_aux_coins",
+    "aux": "100",
+    "ability": "wp_MoneyBag_Huge",
+    "passives": {
+      "ItemAuxTransform": {
+        "le": [
+          "50",
+          "MoneyBag_Large"
+        ]
+      },
+      "BreakAtAux": "0"
+    }
+  },
+  "ThePact": {
+    "name": "ITEM_THEPACT_NAME",
+    "name_resolved": "The Pact",
+    "desc": "ITEM_THEPACT_DESC",
+    "desc_resolved": "Use: Permanently lose 1 [img:con] to gain +1 [img:str], +2 [img:dex] and +2 [img:spd] for the rest of the battle.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "247",
+    "set": "Demonic",
+    "ability": "wp_ThePact"
+  },
+  "Probe": {
+    "name": "ITEM_PROBE_NAME",
+    "name_resolved": "Probe",
+    "desc": "ITEM_PROBE_DESC",
+    "desc_resolved": "Use: Inflict Charm 3. Can only hit from behind.",
+    "rarity": "very_rare",
+    "kind": "weapon",
+    "frame": "248",
+    "set": "Space",
+    "ability": "wp_Probe"
+  }
+}

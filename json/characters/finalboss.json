@@ -1,0 +1,679 @@
+{
+  "TheCreator": {
+    "graphics": {
+      "movieclip": "FinalBossPhase1",
+      "name": "ENEMY_THECREATOR_NAME",
+      "name_resolved": "The Creator",
+      "uifloaters_offset": "4",
+      "water_mask": "square",
+      "shadow_size": "2",
+      "dont_sink": "true",
+      "tooltip": "ENEMY_THECREATOR_DESC",
+      "tooltip_resolved": "Nosce te Ipsum!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "0",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "boss",
+      "tag": [
+        "god",
+        "humanoid"
+      ],
+      "health": "999",
+      "size": "2x2",
+      "movement": "0",
+      "move_block": "everything_even_when_dead",
+      "knockback_immune": "true",
+      "takes_turns": "false",
+      "lock_orientation": [
+        "0",
+        "-1"
+      ],
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "TheCreator_SpawnCloneTeam",
+        "TheCreator_Reaction",
+        "BecomeTheDestroyer"
+      ]
+    },
+    "passives": {
+      "CharacterLightSource": {
+        "color": [
+          "1,",
+          "1,",
+          "1"
+        ],
+        "glow": [
+          "1,",
+          "1,",
+          "1,",
+          ".5"
+        ],
+        "size": "4"
+      },
+      "FullBlockEverythingTo0Damage": "1",
+      "AbilityOnBattleStart_UseAI": "TheCreator_SpawnCloneTeam",
+      "DebuffImmunity": "1",
+      "BuffImmunity": "1",
+      "AbilityReaction": {
+        "ability": "TheCreator_Reaction",
+        "even_on_0_damage": "true"
+      },
+      "BungaEntrance": {
+        "warrior_tag": "finalboss_clonecat",
+        "ability": "BecomeTheDestroyer",
+        "health_threshold": "-1",
+        "even_if_stunned": "true"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_nothing": []
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "PlayerCat_FinalBossClone": {
+    "variant_of": "PlayerCat",
+    "graphics": {
+      "spawnin_animation": "portin",
+      "name": "ENEMY_CREATORCLONE_NAME",
+      "name_resolved": "Good {Catname}"
+    },
+    "properties": {
+      "faction": "enemies",
+      "hidden_tag": "finalboss_clonecat",
+      "can_be_overkilled": "true",
+      "allow_passive_spelltransforming": "true",
+      "access_to_player_inventory": "false",
+      "corpse_health": "1",
+      "is_player_cat": "false",
+      "exclude_from_hallucinate": "true",
+      "base_initiative": "-1",
+      "disallow_items": "all",
+      "force_not_familiar": "true"
+    },
+    "passives": {
+      "AdvancedTint": [
+        ".6,",
+        ".6,",
+        ".6,",
+        "1",
+        ".5,",
+        ".5,",
+        ".5,",
+        "0"
+      ]
+    },
+    "ai": {
+      "brain": "GenericBrain"
+    }
+  },
+  "PlayerCat_FinalBossClone_Champion": {
+    "variant_of": "PlayerCat_FinalBossClone",
+    "properties": {
+      "disallow_items": "Nuke",
+      "champion": "true"
+    }
+  },
+  "PlayerCat_FinalBossClone_Elite": {
+    "variant_of": "PlayerCat_FinalBossClone",
+    "properties": {
+      "disallow_items": "Nuke",
+      "champion": "true",
+      "elite": "true"
+    }
+  },
+  "TheDestroyer": {
+    "graphics": {
+      "movieclip": "FinalBossPhase2",
+      "name": "ENEMY_DESTROYER_NAME",
+      "name_resolved": "The Destroyer",
+      "uifloaters_offset": "4",
+      "water_mask": "square",
+      "shadow_size": "2",
+      "no_splatter": "true",
+      "tooltip": "ENEMY_DESTROYER_DESC",
+      "tooltip_resolved": "Memento Mori!"
+    },
+    "stats": {
+      "strength": "9",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "boss",
+      "tag": [
+        "god",
+        "cat"
+      ],
+      "health": "500",
+      "size": "2x2",
+      "movement": "3",
+      "move_block": "everything_even_when_dead",
+      "dispersed_bonus_turns": "1",
+      "corpse_health": "0",
+      "can_be_overkilled": "false",
+      "banned_elite_buffs": [
+        "Twin"
+      ],
+      "weak_threshold": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "DestroyerAttack",
+      "spells": [
+        "DestroyerChargeBackflips",
+        "DestroyerHolyAttack",
+        "DestroyerThrowShield",
+        "DestroyerDashAttack",
+        "Destroyer2HolyAttack",
+        "DestroyerPulse",
+        "Destroyer2Pulse",
+        "DestroyerDodge",
+        "DestroyerBreakShield",
+        "DestroyerRaise"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "FinalBossShieldHealth": {
+        "state_health": [
+          "0",
+          "35",
+          "35",
+          "35",
+          "35",
+          "0"
+        ],
+        "break_ability": "DestroyerBreakShield"
+      },
+      "FinalBossBecomeTheChild": {
+        "GlobalSpawnCharacter": "MegaGuppy",
+        "PlayBackground": "1",
+        "SwitchMusic": {
+          "new_song": "same",
+          "new_layer": "event"
+        }
+      },
+      "StatusOnDie": {
+        "RemoveAmbientLightEffects": "4",
+        "RemoveGlobalModifiers": [
+          "BloodRain"
+        ]
+      },
+      "FormChanger": {
+        "SwordAndShield": {
+          "attack": "DestroyerAttack",
+          "passives": {
+            "FaceLastDamage": {
+              "use_turn_animations": "true"
+            },
+            "FinalBossShield": "DestroyerShieldBash",
+            "FormChangeWhilePrimingAbility": {
+              "priming": "SwordAndShield_Primed",
+              "not_priming": "SwordAndShield"
+            },
+            "AbilityOnRoundEnd": {
+              "ability": "DestroyerRaise",
+              "force_display_name": "true"
+            },
+            "CharacterLightSource": {
+              "color": [
+                "1,",
+                "1,",
+                "1"
+              ],
+              "glow": [
+                "1,",
+                "1,",
+                "1,",
+                ".5"
+              ],
+              "size": "2"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "**DestroyerThrowShield",
+                "attack"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "fallback_advances_pattern": "true"
+          }
+        },
+        "SwordAndShield_Primed": {
+          "animation_suffix": "Holy",
+          "attack": "DestroyerAttack",
+          "passives": {
+            "FinalBossShield": "None",
+            "ImmediateAbilityReaction": {
+              "ability": "DestroyerPulse",
+              "even_if_blocked": "true"
+            },
+            "FormChangeWhilePrimingAbility": {
+              "priming": "SwordAndShield_Primed",
+              "not_priming": "SwordAndShield"
+            },
+            "CharacterLightSource": {
+              "color": [
+                "1,",
+                "1,",
+                "1"
+              ],
+              "glow": [
+                "1,",
+                "1,",
+                "1,",
+                ".5"
+              ],
+              "size": "8"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "move"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close",
+            "fallback_advances_pattern": "true"
+          }
+        },
+        "DualSword": {
+          "move_speed_multiplier": "1.5",
+          "animation_suffix": "2",
+          "attack": "DestroyerAttack2",
+          "tooltip": "ENEMY_DESTROYER2_DESC",
+          "tooltip_resolved": "Tenebris Aeternae!",
+          "passives": {
+            "StatusWhenStatusCompletelyRemoved": {
+              "status": "BackflipWhenTargeted",
+              "UseAbility": {
+                "ability": "Destroyer2HolyAttack",
+                "respect_prime": "true"
+              }
+            },
+            "FormChangeWhilePrimingAbility": {
+              "priming": "DualSword_Primed",
+              "not_priming": "DualSword"
+            },
+            "AbilityOnRoundEnd": {
+              "ability": "DestroyerRaise",
+              "force_display_name": "true"
+            },
+            "CharacterLightSource": {
+              "color": [
+                "1,",
+                ".9,",
+                ".9"
+              ],
+              "size": "4"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "attack",
+                "*DestroyerDashAttack",
+                "DestroyerDashAttack",
+                "DestroyerChargeBackflips"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance",
+            "fallback_advances_pattern": "true"
+          }
+        },
+        "DualSword_Primed": {
+          "move_speed_multiplier": "1.5",
+          "animation_suffix": "Holy2",
+          "attack": "DestroyerAttack2",
+          "tooltip": "ENEMY_DESTROYER2_DESC",
+          "tooltip_resolved": "Tenebris Aeternae!",
+          "passives": {
+            "ImmediateAbilityReaction": {
+              "ability": "Destroyer2Pulse",
+              "even_if_blocked": "true"
+            },
+            "FormChangeWhilePrimingAbility": {
+              "priming": "DualSword_Primed",
+              "not_priming": "DualSword"
+            },
+            "CharacterLightSource": {
+              "color": [
+                "1,",
+                ".9,",
+                ".9"
+              ],
+              "size": "8"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "attack",
+                "*DestroyerDashAttack",
+                "DestroyerDashAttack",
+                "DestroyerChargeBackflips"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance",
+            "fallback_advances_pattern": "true"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_nothing": []
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "TheDestroyer2": {
+    "variant_of": "TheDestroyer",
+    "graphics": {},
+    "passives": {
+      "FormChanger": {
+        "initial_form": "DualSword"
+      },
+      "CreateGlobalModifiers": {
+        "LowerAmbientLight": {
+          "amount": [
+            "50%",
+            "60%",
+            "60%"
+          ],
+          "speed": "4"
+        },
+        "BloodRain": "1"
+      }
+    }
+  },
+  "TheChild": {
+    "graphics": {
+      "movieclip": "FinalBossPhase3",
+      "name": "ENEMY_THECHILD_NAME",
+      "name_resolved": "The Child",
+      "uifloaters_offset": "2",
+      "shadow_size": "2",
+      "water_mask": "square",
+      "tooltip": "ENEMY_THECHILD_DESC",
+      "tooltip_resolved": "Respice Finem!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "boss",
+      "tag": [
+        "god",
+        "cat",
+        "fetus"
+      ],
+      "health": "400",
+      "size": "2x2",
+      "movement": "3",
+      "flying": "true",
+      "move_block": "everything_even_when_dead",
+      "takes_turns": "false",
+      "corpse_health": "indestructible",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "spells": [
+        "TheChild_ReleaseBeams",
+        "TheChild_TargetBeam",
+        "TheChild_Wrath",
+        "TheChild_Pulse",
+        "TheChild_TransformHoly",
+        "TheChild_TransformExplosive",
+        "TheChild_TransformBoris"
+      ]
+    },
+    "passives": {
+      "CharacterLightSource": {
+        "color": [
+          "1,",
+          "1,",
+          "1"
+        ],
+        "glow": [
+          "1,",
+          ".75,",
+          ".5,",
+          ".5"
+        ],
+        "size": "2"
+      },
+      "Trample": "3",
+      "StunImmunity": "1",
+      "FinalBossSyncAnimations": {
+        "other_character": "MegaGuppy",
+        "other_form_change_abilities": {
+          "Holy": "MegaGuppy_TransformHoly",
+          "Boris": "MegaGuppy_TransformBoris",
+          "Explosive": "MegaGuppy_TransformExplosive"
+        }
+      },
+      "FormChanger": {
+        "Holy": {
+          "animation_suffix": "1",
+          "passives": {
+            "FinalBossHitCountdownHoly": {
+              "stacks": "7",
+              "icon": "804",
+              "icon_ready": "805"
+            },
+            "FinalBossBeamQueue": {
+              "queue": "TheChild_TargetBeam",
+              "release": "TheChild_ReleaseBeams",
+              "transform": "TheChild_TransformBoris"
+            }
+          }
+        },
+        "Boris": {
+          "animation_suffix": "2",
+          "passives": {
+            "MoveTowardsDamageSource": {
+              "move_ability": "MoveOne",
+              "check_in_form": "Boris",
+              "check_has_status": "FinalBossHitCountdownBoris"
+            },
+            "FinalBossHitCountdownBoris": {
+              "stacks": "7",
+              "icon": "802",
+              "icon_ready": "803",
+              "ForceUseAbility": "TheChild_TransformExplosive"
+            }
+          }
+        },
+        "Explosive": {
+          "animation_suffix": "3",
+          "passives": {
+            "FinalBossHitCountdownExplosive": {
+              "stacks": "7",
+              "icon": "800",
+              "icon_ready": "801",
+              "ForceUseAbility": "TheChild_TransformHoly"
+            },
+            "PassiveWhileNotHasStatus": {
+              "status": "ExistUntilIdleUpkeep",
+              "passives": {
+                "DisplayDangerAOE": "TheChild_Wrath"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_nothing": []
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "MegaGuppy": {
+    "graphics": {
+      "movieclip": "FinalBossMegaGuppy",
+      "name": "ENEMY_THEFATHER_NAME",
+      "name_resolved": "The Father",
+      "uifloaters_offset": "2",
+      "shadow_size": "2",
+      "non_blocking_animations": [
+        "hit",
+        ",",
+        "critical"
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "faction": "enemies",
+      "type": "boss",
+      "tag": [
+        "god",
+        "cat"
+      ],
+      "health": "999",
+      "size": "1x1",
+      "initiative": "-999",
+      "move_block": "everything_even_when_dead",
+      "can_be_champion": "false",
+      "lock_orientation": [
+        "0",
+        "-1"
+      ],
+      "allow_offmap_corpse": "true",
+      "weak_threshold": "0"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": [
+        "MegaGuppy_SlamRight",
+        "MegaGuppy_SlamLeft",
+        "MegaGuppy_TransformHoly",
+        "MegaGuppy_TransformExplosive",
+        "MegaGuppy_TransformBoris",
+        "MegaGuppy_SummonTheChild"
+      ]
+    },
+    "passives": {
+      "StartOffMap": "1",
+      "InsertIntoBackgroundPlaceholder": "1",
+      "UseAbility": "MegaGuppy_SummonTheChild",
+      "FinalBossPupils": {
+        "radius": "13",
+        "virtual_head_position": [
+          "11",
+          "2",
+          "11"
+        ],
+        "look_at_offset": [
+          "0",
+          "2.5",
+          "0"
+        ],
+        "teleport_tracking_halflife": ".01",
+        "reset_center_because_of_animation_halflife": ".05",
+        "reset_center_because_no_target_halflife": ".1",
+        "tracking_acquisition_halflife": ".1"
+      },
+      "FormChanger": {
+        "Holy": {
+          "animation_suffix": "1"
+        },
+        "Boris": {
+          "animation_suffix": "2"
+        },
+        "Explosive": {
+          "animation_suffix": "3"
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "MegaGuppy_SlamLeft"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Debug_MegaGuppyPhase3": {
+    "variant_of": "Dummy",
+    "passives": {
+      "StartOffMap": "1"
+    },
+    "properties": {
+      "takes_main_turn": "false",
+      "round_start_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "DbgBackgroundTransitionTest"
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "DbgBackgroundTransitionTest"
+      }
+    }
+  }
+}

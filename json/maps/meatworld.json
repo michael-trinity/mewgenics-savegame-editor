@@ -1,0 +1,121 @@
+{
+  "levels": {
+    "folder": "meatworld",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "Clot",
+      "Maggot"
+    ],
+    "medium": [
+      "Skinned",
+      "ThrobbingTurret",
+      "FleshLad",
+      "Parasiter",
+      "MeatSlime",
+      "StemCat",
+      "TumorousMaggot",
+      "ChargeyMaggot",
+      "SwappyMaggot"
+    ],
+    "large": []
+  },
+  "item_pools": {
+    "chapter_item_pool": "meatworlditems"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "mw_altar": {
+      "type": "special_event",
+      "level": "Quest_MeatWorldAltar",
+      "override_art": "MapNode_MeatAltar"
+    },
+    "mw_earlyhome": {
+      "type": "home"
+    },
+    "mw_battle1": {
+      "type": "battle",
+      "hidden": "true"
+    },
+    "mw_hard1": {
+      "type": "hard",
+      "hidden": "true",
+      "musiclayer": "boss"
+    },
+    "mw_event1": {
+      "type": "event",
+      "hidden": "true"
+    },
+    "mw_treasure": {
+      "type": "treasure",
+      "hidden": "true"
+    },
+    "mw_boss": {
+      "type": "boss",
+      "boss_cutscene": "throbbingking",
+      "hidden": "true",
+      "override_music": "throbbingking"
+    },
+    "mw_quest_event": {
+      "type": "special_event",
+      "level": "Quest_DeadKing",
+      "override_art": "MapNode_DeadKing",
+      "hidden": "true"
+    },
+    "mw_home": {
+      "type": "home",
+      "hidden": "true"
+    }
+  },
+  "flags": {
+    "MeatWorldUnlockedFull": {
+      "mw_battle1": {
+        "hidden": "false"
+      },
+      "mw_hard1": {
+        "hidden": "false"
+      },
+      "mw_event1": {
+        "hidden": "false"
+      },
+      "mw_treasure": {
+        "hidden": "false"
+      },
+      "mw_boss": {
+        "hidden": "false"
+      },
+      "mw_quest_event": {
+        "hidden": "false"
+      },
+      "mw_home": {
+        "hidden": "false"
+      },
+      "mw_earlyhome": {
+        "hidden": "true"
+      }
+    }
+  }
+}

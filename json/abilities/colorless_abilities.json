@@ -1,0 +1,4793 @@
+{
+  "Block": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BLOCK_NAME",
+      "name_resolved": "Block",
+      "desc": "ABILITY_BLOCK_DESC",
+      "desc_resolved": "Gain +2 [img:shield].",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "block"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "2"
+      }
+    }
+  },
+  "Block2": {
+    "variant_of": "Block",
+    "meta": {
+      "desc": "ABILITY_BLOCK2_DESC",
+      "desc_resolved": "Gain +5 [img:shield]."
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "5"
+      }
+    }
+  },
+  "Rest": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_REST_NAME",
+      "name_resolved": "Rest",
+      "desc": "ABILITY_REST_DESC",
+      "desc_resolved": "Heal some HP, then fall asleep.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "heal": "10",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "Rest2": {
+    "variant_of": "Rest",
+    "meta": {
+      "desc": "ABILITY_REST2_DESC",
+      "desc_resolved": "Heal a lot of HP, then fall asleep."
+    },
+    "damage_instance": {
+      "heal": "20",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "Brace": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABLITY_BRACE_NAME",
+      "name_resolved": "Brace",
+      "desc": "ABLITY_BRACE_DESC",
+      "desc_resolved": "Gain +1 temporary Brace until your next turn.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "brace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "Brace2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABLITY_BRACE_NAME",
+      "name_resolved": "Brace",
+      "desc": "ABLITY_BRACE2_DESC",
+      "desc_resolved": "Gain +1 temporary Brace and +1 temporary Thorns until your next turn.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "brace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "Thorns",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "Groom": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_GROOM_NAME",
+      "name_resolved": "Groom",
+      "desc": "ABILITY_GROOM_DESC",
+      "desc_resolved": "Remove all of the debuffs on yourself or an adjacent unit.",
+      "class": "Colorless",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "animation": "lickAttack",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "1",
+      "min_range": "0"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "makes_contact": "true",
+      "effects": {
+        "Cleanse": "0"
+      }
+    }
+  },
+  "Groom2": {
+    "variant_of": "Groom",
+    "meta": {
+      "desc": "ABILITY_GROOM2_DESC",
+      "desc_resolved": "Remove all of the debuffs and heal a little HP to yourself or an adjacent unit."
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "Cleanse": "0"
+      }
+    }
+  },
+  "Roll": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_ROLL_NAME",
+      "name_resolved": "Roll",
+      "desc": "ABILITY_ROLL_DESC",
+      "desc_resolved": "Roll up to three tiles in a straight line.",
+      "class": "Colorless",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "sync_speed": "22",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "3",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true"
+    }
+  },
+  "Roll2": {
+    "variant_of": "Roll",
+    "meta": {
+      "desc": "ABILITY_ROLL2_DESC",
+      "desc_resolved": "Roll up to ten tiles in a straight line."
+    },
+    "target": {
+      "max_range": "10"
+    }
+  },
+  "SharpenClaws": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SHARPENCLAWS_NAME",
+      "name_resolved": "Sharpen Claws",
+      "desc": "ABILITY_SHARPENCLAWS_DESC",
+      "desc_resolved": "Gain +1 [img:str].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "SharpenClaws2": {
+    "variant_of": "SharpenClaws",
+    "meta": {
+      "desc": "ABILITY_SHARPENCLAWS2_DESC",
+      "desc_resolved": "Gain +1 [img:str].\nBonus Passive: Your basic attack inflicts Bleed."
+    },
+    "bonus_passives": {
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "Reach": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_REACH_NAME",
+      "name_resolved": "Reach",
+      "desc": "ABILITY_REACH_DESC",
+      "desc_resolved": "Your next basic attack has +1 range.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "NextAttackBonusRange": "1"
+      }
+    }
+  },
+  "Reach2": {
+    "variant_of": "Reach",
+    "meta": {
+      "desc": "ABILITY_REACH2_DESC",
+      "desc_resolved": "Your next basic attack has +3 range."
+    },
+    "damage_instance": {
+      "effects": {
+        "NextAttackBonusRange": "3"
+      }
+    }
+  },
+  "ManaDrain": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_BORROWMANA_NAME",
+      "name_resolved": "Borrow Mana",
+      "desc": "ABILITY_BORROWMANA_DESC",
+      "desc_resolved": "Steal up to 5 mana from an ally.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "0",
+      "act_points": "0",
+      "charge": "1"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_ally"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaSteal": "5"
+      }
+    }
+  },
+  "ManaDrain2": {
+    "variant_of": "ManaDrain",
+    "meta": {
+      "desc": "ABILITY_BORROWMANA2_DESC",
+      "desc_resolved": "Steal all of an ally's mana.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaSteal": "-1"
+      }
+    }
+  },
+  "SoothingGlow": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SOOTHINGGLOW_NAME",
+      "name_resolved": "Soothing Glow",
+      "desc": "ABILITY_SOOTHINGGLOW_DESC",
+      "desc_resolved": "Heal yourself 1.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "HealSmall"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "SoothingGlow2": {
+    "variant_of": "SoothingGlow",
+    "meta": {
+      "desc": "ABILITY_SOOTHINGGLOW2_DESC",
+      "desc_resolved": "Heal yourself 1 and gain +1 to a random stat."
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatUp": "1"
+      }
+    }
+  },
+  "Ponder": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PONDER_NAME",
+      "name_resolved": "Ponder",
+      "desc": "ABILITY_PONDER_DESC",
+      "desc_resolved": "Gain +1 [img:int].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "Ponder2": {
+    "variant_of": "Ponder",
+    "meta": {
+      "desc": "ABILITY_PONDER2_DESC",
+      "desc_resolved": "Gain +1 [img:int] and conjure a random bonus ability."
+    },
+    "damage_instance": {
+      "effects": {
+        "ConjureBonusAbility": "random"
+      }
+    }
+  },
+  "Focus": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FOCUS_NAME",
+      "name_resolved": "Focus",
+      "desc": "ABILITY_FOCUS_DESC",
+      "desc_resolved": "Gain +1 [img:dex].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "backflipLoop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "DexterityUp": "1"
+      }
+    }
+  },
+  "Focus2": {
+    "variant_of": "Focus",
+    "meta": {
+      "desc": "ABILITY_FOCUS2_DESC",
+      "desc_resolved": "Gain +1 [img:dex].\nBonus Passive: +25% critical hit chance."
+    },
+    "bonus_passives": {
+      "CritChanceUp": "25"
+    }
+  },
+  "Metabolize": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_METABOLIZE_NAME",
+      "name_resolved": "Metabolize",
+      "desc": "ABILITY_METABOLIZE_DESC",
+      "desc_resolved": "Gain +1 [img:con].",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": "1"
+      }
+    }
+  },
+  "Metabolize2": {
+    "variant_of": "Metabolize",
+    "meta": {
+      "desc": "ABILITY_METABOLIZE2_DESC",
+      "desc_resolved": "Gain +1 [img:con].\nBonus Passive: +3 Health Regeneration."
+    },
+    "bonus_passives": {
+      "HealthRegenUp": "3"
+    }
+  },
+  "Brainstorm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BRAINSTORM_NAME",
+      "name_resolved": "Brainstorm",
+      "desc": "ABILITY_BRAINSTORM_DESC",
+      "desc_resolved": "Reduce the costs of your other spells by 1 mana.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "ReduceManaCostExcludeBrainstorm": "1"
+      }
+    }
+  },
+  "Brainstorm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BRAINSTORM_NAME",
+      "name_resolved": "Brainstorm",
+      "desc": "ABILITY_BRAINSTORM2_DESC",
+      "desc_resolved": "Reduce the cost of ALL of your spells by 1 mana.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "ReduceManaCost": "1"
+      }
+    }
+  },
+  "Momentum": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Momentum",
+      "desc": "This turn, every time you move a tile, increase crit chance by 5% until the end of the turn",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "TilesMovedToCritChance": "1"
+      }
+    }
+  },
+  "Momentum2": {
+    "variant_of": "Momentum",
+    "damage_instance": {
+      "effects": {
+        "TilesMovedToStrength": "1"
+      }
+    }
+  },
+  "TapLand": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Tap Land",
+      "desc": "At the end of your turn, gain 1 mana for each tile you moved this turn after casting this ability.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "TilesMovedToMana": "1"
+      }
+    }
+  },
+  "TapLand2": {
+    "variant_of": "TapLand"
+  },
+  "GainThorns": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CLAWSOUT_NAME",
+      "name_resolved": "Claws Out",
+      "desc": "ABILITY_CLAWSOUT_DESC",
+      "desc_resolved": "Gain +1 Thorns.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "showclaws"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Thorns": "1"
+      }
+    }
+  },
+  "GainThorns2": {
+    "variant_of": "GainThorns",
+    "meta": {
+      "desc": "ABILITY_CLAWSOUT2_DESC",
+      "desc_resolved": "Gain +1 Thorns.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "HolyStep": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Holy Step",
+      "desc": "At the end of your turn, heal neighbors for 1 health for each tile you moved after casting this ability.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "TilesMovedToNeighborHeal": "level"
+      }
+    }
+  },
+  "HolyStep2": {
+    "variant_of": "HolyStep"
+  },
+  "LoveTap": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Love Tap",
+      "desc": "Your next attack or spell heals instead of doing damage",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "NextAbilityHeals": "1"
+      }
+    }
+  },
+  "LoveTap2": {
+    "variant_of": "LoveTap"
+  },
+  "PrepareToJump": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_PREPARETOJUMP_NAME",
+      "name_resolved": "Hop",
+      "desc": "ABILITY_PREPARETOJUMP_DESC",
+      "desc_resolved": "Hop up to 2 tiles away.",
+      "class": "Colorless",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "2",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    }
+  },
+  "PrepareToJump2": {
+    "variant_of": "PrepareToJump",
+    "meta": {
+      "desc": "ABILITY_PREPARETOJUMP2_DESC",
+      "desc_resolved": "Hop up to 4 tiles away."
+    },
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "MarkJump": {
+    "variant_of": "BasicJump",
+    "graphics": {},
+    "target": {
+      "min_range": "1",
+      "max_range": "mov",
+      "target_mode": "tile",
+      "aoe_mode": "cross",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    },
+    "damage_instance": {
+      "type": "spell",
+      "damage": "0",
+      "effects": {
+        "Marked": "1"
+      }
+    }
+  },
+  "BoostSpellRange": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SPELLBOOSTRANGE_NAME",
+      "name_resolved": "Boost",
+      "desc": "ABILITY_SPELLBOOSTRANGE_DESC",
+      "desc_resolved": "Gain +1 Magic Damage until end of turn.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempSpellDamageUp": "1"
+      }
+    }
+  },
+  "BoostSpellRange2": {
+    "variant_of": "BoostSpellRange",
+    "meta": {
+      "desc": "ABILITY_SPELLBOOSTRANGE2_DESC",
+      "desc_resolved": "Gain +1 Magic Damage until end of turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempSpellDamageUp": "1"
+      }
+    }
+  },
+  "PushMove": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_STEAMROLLER_NAME",
+      "name_resolved": "Steam Roller",
+      "desc": "ABILITY_STEAMROLLER_DESC",
+      "desc_resolved": "Trample over 1 tile.",
+      "class": "Colorless",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true"
+    },
+    "damage_instance": {
+      "override_trample_damage": "true",
+      "damage": "3"
+    }
+  },
+  "PushMove2": {
+    "variant_of": "PushMove",
+    "meta": {
+      "desc": "ABILITY_STEAMROLLER2_DESC",
+      "desc_resolved": "Trample over 3 tiles."
+    },
+    "target": {
+      "range_mode": "ground_move",
+      "max_range": "3",
+      "straight_shot": "false"
+    }
+  },
+  "Gamble": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_GAMBLE_NAME",
+      "name_resolved": "Gamble",
+      "desc": "ABILITY_GAMBLE_DESC",
+      "desc_resolved": "Gain +2% critical hit chance. If your next attack is critical, deal +100% more damage and spawn coins.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "coinFlip"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "CritChanceUp": "2",
+        "NextAttackSpecialCrit": "1"
+      }
+    }
+  },
+  "Gamble2": {
+    "variant_of": "Gamble",
+    "meta": {
+      "desc": "ABILITY_GAMBLE2_DESC",
+      "desc_resolved": "Gain +2% critical hit chance. If your next attack is critical, deal +200% more damage and spawn more coins."
+    },
+    "damage_instance": {
+      "effects": {
+        "CritChanceUp": "2",
+        "NextAttackSpecialCrit": {
+          "extra_coins_per_stack": "2",
+          "crit_multiplier_bonus": "2",
+          "luck_increase": "1"
+        }
+      }
+    }
+  },
+  "/*SoulReap": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Soul Reap",
+      "desc": "This turn, whenever you kill something, gain 4 mana",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "KillsToManaThisTurn": {
+          "mana": "4",
+          "stacks": "1"
+        }
+      }
+    }
+  },
+  "SoulReap2": {
+    "variant_of": "SoulReap",
+    "meta": {
+      "desc": "ABILITY_SOULREAP2_DESC",
+      "desc_resolved": "Deal 1 damage to any unit. If this kills it, gain 5 mana."
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "ManaGain": "5",
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "SoulReap": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SOULREAP_NAME",
+      "name_resolved": "Soul Reap",
+      "desc": "ABILITY_SOULREAP_DESC",
+      "desc_resolved": "Deal 1 damage to a unit within five tiles. If this kills it, gain 5 mana.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "ManaGain": "5"
+        }
+      }
+    }
+  },
+  "/*Hunt": {
+    "template": "self_buff",
+    "meta": {
+      "name": "Hunt",
+      "desc": "This turn, whenever you kill something, it becomes meat and you regain health",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "KillsToMeatAndHealthThisTurn": "1"
+      }
+    }
+  },
+  "Hunt2": {
+    "variant_of": "Hunt",
+    "meta": {
+      "desc": "ABILITY_HUNT2_DESC",
+      "desc_resolved": "A stronger ranged attack that turns anything it kills into meat."
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "effects": {
+        "SpawnThingIfHitKills": "BiggestFood"
+      }
+    }
+  },
+  "Hunt": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_HUNT_NAME",
+      "name_resolved": "Hunt",
+      "desc": "ABILITY_HUNT_DESC",
+      "desc_resolved": "A ranged attack that turns anything it kills into meat.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "projectile": "ArrowProjectile",
+      "animation": "throwArrow"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "effects": {
+        "SpawnThingIfHitKills": "BigFood"
+      }
+    }
+  },
+  "Flex": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FLEX_NAME",
+      "name_resolved": "Flex",
+      "desc": "ABILITY_FLEX_DESC",
+      "desc_resolved": "Gain +1 temporary Brace until your next turn and deal 1 knockback to each adjacent unit.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "flex"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "max_aoe": "1",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "layer": "all"
+    }
+  },
+  "Flex2": {
+    "variant_of": "Flex",
+    "meta": {
+      "desc": "ABILITY_FLEX2_DESC",
+      "desc_resolved": "Gain +1 temporary Brace until your next turn and deal 3 knockback to each adjacent unit.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3"
+    }
+  },
+  "HolyBlood": {
+    "template": "self_buff",
+    "meta": {
+      "name": "HolyBlood",
+      "desc": "Reduce the next damage you take, then heal all neignbors by the amount of damage you take.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "NextDamageReduceAndHealAllies": "1"
+      }
+    }
+  },
+  "HolyBlood2": {
+    "variant_of": "HolyBlood"
+  },
+  "Dart": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_DART_NAME",
+      "name_resolved": "Dart",
+      "desc": "ABILITY_DART_DESC",
+      "desc_resolved": "Throw a nail that ignores shield.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "piercing": "true"
+    }
+  },
+  "Dart2": {
+    "variant_of": "Dart",
+    "meta": {
+      "desc": "ABILITY_DART2_DESC",
+      "desc_resolved": "Throw a stronger nail that ignores shield.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "damage_instance": {
+      "damage": "4"
+    }
+  },
+  "Smack": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SMACK_NAME",
+      "name_resolved": "Smack",
+      "desc": "ABILITY_SMACK_DESC",
+      "desc_resolved": "A weak melee attack.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "type": "melee"
+    }
+  },
+  "Smack2": {
+    "variant_of": "Smack",
+    "meta": {
+      "desc": "ABILITY_SMACK2_DESC",
+      "desc_resolved": "A weak melee attack with a chance to repeat."
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "temporary_effects": {
+      "Fury": "75"
+    }
+  },
+  "Spit": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_SPIT_NAME",
+      "name_resolved": "Spit",
+      "desc": "ABILITY_SPIT_DESC",
+      "desc_resolved": "Spit attack with infinite range that deals 1 damage.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "single_projectile": "true",
+      "projectile": "spitprojectile"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "Spit2": {
+    "variant_of": "Spit",
+    "meta": {
+      "desc": "ABILITY_SPIT2_DESC",
+      "desc_resolved": "Spit attack with infinite range that deals 2 damage in an area."
+    },
+    "target": {
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "2"
+    }
+  },
+  "FetusSpit": {
+    "variant_of": "Spit",
+    "meta": {
+      "ability_icon": "Spit"
+    },
+    "cost": {
+      "infcantrip": "false",
+      "mana": "0"
+    }
+  },
+  "MiniHook": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_MINIHOOK_NAME",
+      "name_resolved": "Minihook",
+      "desc": "ABILITY_MINIHOOK_DESC",
+      "desc_resolved": "Pull a unit towards you.",
+      "class": "Colorless",
+      "type_icon": "ranged"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "3",
+      "knockback_mode": "pull_to_character"
+    },
+    "graphics": {
+      "animation": "weaponthrowstraight",
+      "projectile": "HookProjectile",
+      "chain_movieclip": "ChainLink",
+      "chain_distance": ".25"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "CollectsPickups": "1"
+      }
+    }
+  },
+  "MiniHook2": {
+    "variant_of": "MiniHook",
+    "meta": {
+      "desc": "ABILITY_MINIHOOK2_DESC",
+      "desc_resolved": "Pull a unit towards you. Deal 1 damage and inflict 1 Bleed on them."
+    },
+    "target": {
+      "max_aoe": "5"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "MiniDistract": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_OVERTHERE_NAME",
+      "name_resolved": "Over There!",
+      "desc": "ABILITY_OVERTHERE_DESC",
+      "desc_resolved": "Adjacent units turn away from you.",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile_4snap"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "MiniDistract2": {
+    "variant_of": "MiniDistract",
+    "meta": {
+      "desc": "ABILITY_OVERTHERE2_DESC",
+      "desc_resolved": "Units within three tiles of you turn away from you."
+    },
+    "target": {
+      "max_aoe": "3"
+    }
+  },
+  "ButtScoot": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_BUTTSCOOT_NAME",
+      "name_resolved": "Butt Scoot",
+      "desc": "ABILITY_BUTTSCOOT_DESC",
+      "desc_resolved": "Move 1 tile, leaving a maggot familiar behind you.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "max_tiles_single_loop": "1",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "buttScootStart",
+      "animation": "buttScootLoop",
+      "move_end_animation": "buttScootEnd"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "move_points": "0",
+      "mana": "4"
+    },
+    "temporary_effects": {
+      "LeaveBehind": {
+        "object": "CharmedMaggot"
+      }
+    },
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "ButtScoot2": {
+    "variant_of": "ButtScoot",
+    "meta": {
+      "desc": "ABILITY_BUTTSCOOT2_DESC",
+      "desc_resolved": "Move up to 3 tiles, leaving a maggot familiar behind you."
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "Confusion": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CONFUSION_NAME",
+      "name_resolved": "Confusion",
+      "desc": "ABILITY_CONFUSION_DESC",
+      "desc_resolved": "Inflict Confusion 2 on a unit.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "confusionStars"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Confusion": "2"
+      }
+    }
+  },
+  "Confusion2": {
+    "variant_of": "Confusion",
+    "meta": {
+      "desc": "ABILITY_CONFUSION2_DESC",
+      "desc_resolved": "Inflict Confusion 4 on units in an area."
+    },
+    "target": {
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Confusion": "4"
+      }
+    }
+  },
+  "PlayDead": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PLAYDEAD_NAME",
+      "name_resolved": "Play Dead",
+      "desc": "ABILITY_PLAYDEAD_DESC",
+      "desc_resolved": "Down yourself. You don't get injured.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "SafeDie": "1"
+      }
+    }
+  },
+  "PlayDead2": {
+    "variant_of": "PlayDead",
+    "meta": {
+      "desc": "ABILITY_PLAYDEAD2_DESC",
+      "desc_resolved": "Down yourself. You don't get injured. Revive at the end of the next round at full HP."
+    },
+    "damage_instance": {
+      "effects": {
+        "ReviveNextRound": "2"
+      }
+    }
+  },
+  "Reflect": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_REFLECT_NAME",
+      "name_resolved": "Reflect",
+      "desc": "ABILITY_REFLECT_DESC",
+      "desc_resolved": "Reflect the next projectile that hits you back at the attacker.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Reflect": "1"
+      }
+    }
+  },
+  "Reflect2": {
+    "variant_of": "Reflect",
+    "meta": {
+      "desc": "ABILITY_REFLECT2_DESC",
+      "desc_resolved": "You or another unit reflects the next projectile that hits them back at the attacker."
+    },
+    "graphics": {},
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "4"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "HealBolt": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HEALINGBOLT_NAME",
+      "name_resolved": "Healing Bolt",
+      "desc": "ABILITY_HEALINGBOLT_DESC",
+      "desc_resolved": "A lightning bolt that heals and has a chance to Stun.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "Bolt"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".25"
+        ]
+      },
+      "elements": [
+        "Electric",
+        "Holy"
+      ]
+    }
+  },
+  "HealBolt2": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HEALINGBOLT_NAME",
+      "name_resolved": "Healing Bolt",
+      "desc": "ABILITY_HEALINGBOLT2_DESC",
+      "desc_resolved": "A lightning bolt that heals allies and has a chance to Stun enemies.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "Bolt"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "Conditional_Enemy": {
+          "Stun": [
+            "1,",
+            ".25"
+          ]
+        },
+        "DontHealEnemies": "1"
+      },
+      "elements": [
+        "Electric",
+        "Holy"
+      ]
+    }
+  },
+  "SlipThrough": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_SLIPTHROUGH_NAME",
+      "name_resolved": "Slip Through",
+      "desc": "ABILITY_SLIPTHROUGH_DESC",
+      "desc_resolved": "Roll up to two tiles in a diagonal line.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "sync_speed": "22",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "range_mode": "diagcross",
+      "max_range": "2",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    }
+  },
+  "SlipThrough2": {
+    "variant_of": "SlipThrough",
+    "meta": {
+      "desc": "ABILITY_SLIPTHROUGH2_DESC",
+      "desc_resolved": "Roll any number of tiles in a diagonal line."
+    },
+    "target": {
+      "max_range": "10"
+    }
+  },
+  "Dump": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DUMP_NAME",
+      "name_resolved": "Dump",
+      "desc": "ABILITY_DUMP_DESC",
+      "desc_resolved": "Spawn a poop on an adjacent tile.",
+      "class": "Colorless",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "poopfart"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "aoe_must_exist"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "Displace": "1",
+        "ObjectOnHit": {
+          "object": "Poop"
+        }
+      }
+    }
+  },
+  "Dump2": {
+    "variant_of": "Dump",
+    "meta": {
+      "desc": "ABILITY_DUMP2_DESC",
+      "desc_resolved": "Spawn a poop on an adjacent tile. Inflict Poison 3 and a 15% chance to Stun if you poop on a unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "Poison": "3",
+        "Stun": [
+          "1",
+          ".15"
+        ]
+      }
+    }
+  },
+  "Snacks": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SNACK_NAME",
+      "name_resolved": "Snacks",
+      "desc": "ABILITY_SNACK_DESC",
+      "desc_resolved": "Heal yourself or another unit within four tiles 1 HP.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "affected_particle": "HealMed",
+      "use_projectile": "true",
+      "animation": "throwobject",
+      "projectile": "Fishball"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "0",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "type": "spell"
+    }
+  },
+  "Snacks2": {
+    "variant_of": "Snacks",
+    "meta": {
+      "desc": "ABILITY_SNACK2_DESC",
+      "desc_resolved": "Heal yourself or another unit 1 HP. 50% chance to also give +1 [img:con]."
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "FeatherFeet": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FEATHERFEET_NAME",
+      "name_resolved": "Feather Feet",
+      "desc": "ABILITY_FEATHERFEET_DESC",
+      "desc_resolved": "Gain +1 [img:spd].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "hopinplace"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpeedUp": "1"
+      }
+    }
+  },
+  "FeatherFeet2": {
+    "variant_of": "FeatherFeet",
+    "meta": {
+      "desc": "ABILITY_FEATHERFEET2_DESC",
+      "desc_resolved": "Gain +1 [img:spd].\nBonus Passive: You're unaffected by tile effects."
+    },
+    "bonus_passives": {
+      "IgnoreTiles": "1"
+    }
+  },
+  "Reduce": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_REDUCE_NAME",
+      "name_resolved": "Reduce",
+      "desc": "ABILITY_REDUCE_DESC",
+      "desc_resolved": "Gain +20% dodge chance, +4 [img:spd], and -2 Damage.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "once_per_fight": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpeedUp": "4",
+        "DamageUp": "-2",
+        "DodgeChance_Status": "20",
+        "SizeScale": ".6"
+      }
+    }
+  },
+  "Reduce2": {
+    "variant_of": "Reduce",
+    "meta": {
+      "desc": "ABILITY_REDUCE2_DESC",
+      "desc_resolved": "Gain +20% dodge chance, +4 [img:spd], and -2 Damage.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Nerf": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_NERF_NAME",
+      "name_resolved": "Nerf",
+      "desc": "ABILITY_NERF_DESC",
+      "desc_resolved": "Inflict -1 Damage on a unit.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statdown",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "3",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DamageUp": "-1"
+      }
+    }
+  },
+  "Nerf2": {
+    "variant_of": "Nerf",
+    "meta": {
+      "desc": "ABILITY_NERF2_DESC",
+      "desc_resolved": "Inflict -1 Damage and -1 [img:con] on a unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": "-1"
+      }
+    }
+  },
+  "Trip": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_TRIP_NAME",
+      "name_resolved": "Trip",
+      "desc": "ABILITY_TRIP_DESC",
+      "desc_resolved": "Immobilize an adjacent unit.\n[s:.7]This only has a 25% chance to work on boss units and large enemies.[/s]",
+      "class": "Colorless",
+      "type_icon": "debuff"
+    },
+    "graphics": {
+      "animation": "trip"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "effects": {
+        "Conditional_BossOrBig": {
+          "Immobile": [
+            "1",
+            ".25"
+          ]
+        },
+        "Conditional_NotBossOrBig": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "Trip2": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_TRIP_NAME",
+      "name_resolved": "Trip",
+      "desc": "ABILITY_TRIP2_DESC",
+      "desc_resolved": "Immobilize a unit in range 4.\n[s:.7]This only has a 25% chance to work on boss units and large enemies.[/s]",
+      "class": "Colorless",
+      "type_icon": "debuff"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "range_min": "1",
+      "range_max": "4"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "ranged",
+      "effects": {
+        "Conditional_BossOrBig": {
+          "Immobile": [
+            "1",
+            ".25"
+          ]
+        },
+        "Conditional_NotBossOrBig": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "Copycat": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_COPYCAT_NAME",
+      "name_resolved": "Copycat",
+      "desc": "ABILITY_COPYCAT_DESC",
+      "desc_resolved": "This spell is a copy of the most recent spell an allied cat cast.",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "thumbsup"
+    },
+    "cost": {
+      "cant_cast": "true",
+      "mana": "5"
+    },
+    "bonus_passives": {
+      "CopyCatPassive_Initializer": "1"
+    }
+  },
+  "Copycat2": {
+    "variant_of": "Copycat",
+    "meta": {
+      "desc": "ABILITY_COPYCAT2_DESC",
+      "desc_resolved": "This spell is an upgraded copy of the most recent spell an allied cat cast."
+    },
+    "bonus_passives": {
+      "CopyCatPassive_Initializer": "2"
+    }
+  },
+  "Metronome": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_METRONOME_NAME",
+      "name_resolved": "Metronome",
+      "desc": "ABILITY_METRONOME_DESC",
+      "desc_resolved": "Cast a random spell.",
+      "class": "Colorless",
+      "type_icon": "unknown"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "metronome"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "Metronome": "1"
+      }
+    }
+  },
+  "Metronome2": {
+    "variant_of": "Metronome",
+    "meta": {
+      "desc": "ABILITY_METRONOME2_DESC",
+      "desc_resolved": "Cast a random upgraded spell."
+    },
+    "damage_instance": {
+      "effects": {
+        "Metronome": "2"
+      }
+    }
+  },
+  "DollUp": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DOLLUP_NAME",
+      "name_resolved": "Doll Up",
+      "desc": "ABILITY_DOLLUP_DESC",
+      "desc_resolved": "Gain +1 [img:cha].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "blowKiss"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "CharismaUp": "1"
+      }
+    }
+  },
+  "DollUp2": {
+    "variant_of": "DollUp",
+    "meta": {
+      "desc": "ABILITY_DOLLUP2_DESC",
+      "desc_resolved": "Gain +1 [img:cha].\nBonus Passive: You have a chance to inflict Charm on units that contact or attack you. This chance increases with your [img:cha]."
+    },
+    "bonus_passives": {
+      "RevengeDamage": {
+        "effects": {
+          "Charmed": [
+            "1,",
+            ".1+.02*cha"
+          ]
+        }
+      }
+    }
+  },
+  "StackTheDeck": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_STACKTHEDECK_NAME",
+      "name_resolved": "Stack the Deck",
+      "desc": "ABILITY_STACKTHEDECK_DESC",
+      "desc_resolved": "Gain +1 [img:lck].",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "cheat"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "LuckUp": "1"
+      }
+    }
+  },
+  "StackTheDeck2": {
+    "variant_of": "StackTheDeck",
+    "meta": {
+      "desc": "ABILITY_STACKTHEDECK2_DESC",
+      "desc_resolved": "Gain +1 [img:lck]. You have +99 [img:lck] during your next action."
+    },
+    "damage_instance": {
+      "effects": {
+        "LuckUp": "1",
+        "NextActionLuckUp": "99"
+      }
+    }
+  },
+  "Infiltrate": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_INFILTRATE_NAME",
+      "name_resolved": "Tunnel",
+      "desc": "ABILITY_INFILTRATE_DESC",
+      "desc_resolved": "Dig to any open tile.\n[s:.7](Castable once per battle.)[/s]",
+      "animate_name": "true",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Infiltrate2": {
+    "variant_of": "Infiltrate",
+    "meta": {
+      "desc": "ABILITY_INFILTRATE2_DESC",
+      "desc_resolved": "Dig to any open tile.\n[s:.7](Castable once per battle. This spell costs 0 mana.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Burst": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BURST_NAME",
+      "name_resolved": "Burst",
+      "desc": "ABILITY_BURST_DESC",
+      "desc_resolved": "Fire a magical blast.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "1",
+      "speed": "20",
+      "animation": "castspell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "10"
+    }
+  },
+  "Burst2": {
+    "variant_of": "Burst",
+    "meta": {
+      "desc": "ABILITY_BURST2_DESC",
+      "desc_resolved": "Fire a magical blast.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Suppress": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_SUPPRESS_NAME",
+      "name_resolved": "Stun",
+      "desc": "ABILITY_SUPPRESS_DESC",
+      "desc_resolved": "Chuck a rock at a unit, inflicting Stun on that unit.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "projectile": "SmallRock",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "Stun": "1",
+        "BounceObject": "SmallRock"
+      }
+    }
+  },
+  "Suppress2": {
+    "variant_of": "Suppress",
+    "meta": {
+      "desc": "ABILITY_SUPPRESS2_DESC",
+      "desc_resolved": "Chuck a rock at a unit, inflicting Stun on that unit.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Endeavor": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SECONDWIND_NAME",
+      "name_resolved": "Second Wind",
+      "desc": "ABILITY_SECONDWIND_DESC",
+      "desc_resolved": "Refresh your basic attack, movement, weapon, and trinket action.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "proud"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8",
+      "once_per_fight": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePoints": "1",
+        "RefreshActPoints": "1",
+        "RefreshItemAbilities": "1"
+      }
+    }
+  },
+  "Endeavor2": {
+    "variant_of": "Endeavor",
+    "meta": {
+      "desc": "ABILITY_SECONDWIND2_DESC",
+      "desc_resolved": "Refresh your basic attack, movement, weapon, and trinket action.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Endeavor_Auto": {
+    "variant_of": "Endeavor",
+    "damage_instance": {
+      "effects": {
+        "CanceledQueuedInput": "1"
+      }
+    }
+  },
+  "LotteryShottery": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_RATROULETTE_NAME",
+      "name_resolved": "Rat Roulette",
+      "desc": "ABILITY_RATROULETTE_DESC",
+      "desc_resolved": "Deal 1 damage to a random unit. If you kill that unit, take an extra turn.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "0",
+      "max_range": "20",
+      "restrictions": "must_have_animate_character"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "LotteryShottery2": {
+    "variant_of": "LotteryShottery",
+    "meta": {
+      "desc": "ABILITY_RATROULETTE2_DESC",
+      "desc_resolved": "Deal 2 damage to a random unit. If you kill that unit, take an extra turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "2"
+    }
+  },
+  "CatNap": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_CATNAP_NAME",
+      "name_resolved": "Cat Nap",
+      "desc": "ABILITY_CATNAP_DESC",
+      "desc_resolved": "Remove all of your debuffs, then fall asleep.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "Sleep": "1"
+      }
+    }
+  },
+  "CatNap2": {
+    "variant_of": "CatNap",
+    "meta": {
+      "desc": "ABILITY_CATNAP2_DESC",
+      "desc_resolved": "Remove all of your debuffs, gain All Stats Up, then fall asleep."
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "PissYourself": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PISSYOURSELF_NAME",
+      "name_resolved": "Number One",
+      "desc": "ABILITY_PISSYOURSELF_DESC",
+      "desc_resolved": "Spawn \"water\" tiles in an area around yourself.",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pissYourself",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1",
+      "aoe_excludes_self": "false"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "status_spell",
+      "effects": {
+        "ChangeTile": "WaterTile"
+      }
+    }
+  },
+  "PissYourself2": {
+    "variant_of": "PissYourself",
+    "meta": {
+      "desc": "ABILITY_PISSYOURSELF2_DESC",
+      "desc_resolved": "Spawn \"water\" tiles in a larger area around yourself."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "FindARock": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_FINDAROCK_NAME",
+      "name_resolved": "Find a Rock",
+      "desc": "ABILITY_FINDAROCK_DESC",
+      "desc_resolved": "Dig up a small rock.",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "dig"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "spawn": {
+      "object": "SmallRock",
+      "lob": "false"
+    }
+  },
+  "FindARock2": {
+    "variant_of": "FindARock",
+    "meta": {
+      "desc": "ABILITY_FINDAROCK2_DESC",
+      "desc_resolved": "Dig up a small rock.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Gassy_AssBlast": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_GASSYASSBLAST_NAME",
+      "name_resolved": "Ass Blast",
+      "desc": "ABILITY_GASSYASSBLAST_DESC",
+      "desc_resolved": "Knock back all adjacent units.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "poopfart"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "max_aoe": "1",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "type": "spell",
+      "damage": "0",
+      "knockback": "1",
+      "incidentally_collects_pickups": "false"
+    }
+  },
+  "Gassy_AssBlast2": {
+    "variant_of": "Gassy_AssBlast",
+    "meta": {
+      "desc": "ABILITY_GASSYASSBLAST2_DESC",
+      "desc_resolved": "Knock back all adjacent units 3 tiles and inflict Poison 1."
+    },
+    "damage_instance": {
+      "type": "spell",
+      "damage": "0",
+      "knockback": "3",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "Poison": "1"
+      }
+    }
+  },
+  "BurgeoningBlast": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BURGEONINGBLAST_NAME",
+      "name_resolved": "Burgeoning Blast",
+      "desc": "ABILITY_BURGEONINGBLAST_DESC",
+      "desc_resolved": "A spell that deals {v0} damage. Increase this spell's damage by 2 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless",
+      "tooltip_values": [
+        "max((X-1)*2, 0)"
+      ]
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "animation": "createmagic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3",
+      "X_is": "turn_count"
+    },
+    "damage_instance": {
+      "raw_damage": "max((X-1)*2, 0)"
+    }
+  },
+  "BurgeoningBlast2": {
+    "variant_of": "BurgeoningBlast",
+    "meta": {
+      "desc": "ABILITY_BURGEONINGBLAST2_DESC",
+      "desc_resolved": "A spell that deals {v0} damage. Increase this spell's damage by 3 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "tooltip_values": [
+        "max(X*3, 0)"
+      ]
+    },
+    "damage_instance": {
+      "damage": "max(X*3, 0)"
+    }
+  },
+  "BurgeoningBarrier": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BURGEONINGBARRIER_NAME",
+      "name_resolved": "Burgeoning Barrier",
+      "desc": "ABILITY_BURGEONINGBARRIER_DESC",
+      "desc_resolved": "Gain {v0} [img:shield]. Increase this spell's [img:shield] by 2 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless",
+      "tooltip_values": [
+        "max((X-1)*2, 0)"
+      ]
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "X_is": "turn_count"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "max((X-1)*2, 0)"
+      }
+    }
+  },
+  "BurgeoningBarrier2": {
+    "variant_of": "BurgeoningBarrier",
+    "meta": {
+      "desc": "ABILITY_BURGEONINGBARRIER2_DESC",
+      "desc_resolved": "Gain {v0} [img:shield]. Increase this spell's [img:shield] by 3 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "tooltip_values": [
+        "max(X*3, 0)"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "max(X*3, 0)"
+      }
+    }
+  },
+  "BurgeoningBattery": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BURGEONINGBATTERY_NAME",
+      "name_resolved": "Burgeoning Battery",
+      "desc": "ABILITY_BURGEONINGBATTERY_DESC",
+      "desc_resolved": "Gain {v0} mana. Increase this spell's mana gain by 2 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless",
+      "tooltip_values": [
+        "max((X-1)*2, 0)"
+      ]
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "X_is": "turn_count"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "max((X-1)*2, 0)"
+      }
+    }
+  },
+  "BurgeoningBattery2": {
+    "variant_of": "BurgeoningBattery",
+    "meta": {
+      "desc": "ABILITY_BURGEONINGBATTERY2_DESC",
+      "desc_resolved": "Gain {v0} mana. Increase this spell's mana gain by 3 at the end of each turn.\n[s:.7](Castable once per battle.)[/s]",
+      "tooltip_values": [
+        "max(X*3, 0)"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "max(X*3, 0)"
+      }
+    }
+  },
+  "HoseOff": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HOSEOFF_NAME",
+      "name_resolved": "Hose Off",
+      "desc": "ABILITY_HOSEOFF_DESC",
+      "desc_resolved": "Spray a unit with water, cleansing its debuffs and making a puddle.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "knockback_mode": "none"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "ChangeTile": "WaterTile"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "HoseOff2": {
+    "variant_of": "HoseOff",
+    "meta": {
+      "desc": "ABILITY_HOSEOFF2_DESC",
+      "desc_resolved": "Spray a unit with water, cleansing its debuffs and making a puddle.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Taint": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PROLIFERATE_NAME",
+      "name_resolved": "Proliferate",
+      "desc": "ABILITY_PROLIFERATE_DESC",
+      "desc_resolved": "Double a unit's Poison, Bleed, and Burn.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleStatus": "Burn"
+      }
+    }
+  },
+  "Taint2": {
+    "variant_of": "Taint",
+    "meta": {
+      "desc": "ABILITY_PROLIFERATE2_DESC",
+      "desc_resolved": "Double a unit's Poison, Bleed, and Burn.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "PokeWound": {
+    "template": "targeted_status",
+    "graphics": {
+      "animation": "pointout"
+    },
+    "meta": {
+      "name": "ABILITY_SUDDENAFFLICTION_NAME",
+      "name_resolved": "Sudden Affliction",
+      "desc": "ABILITY_SUDDENAFFLICTION_DESC",
+      "desc_resolved": "Trigger the Poison, Bleed, and Burn effects on a unit.",
+      "class": "Colorless"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "makes_contact": "true",
+      "effects": {
+        "TriggerDOTStatuses": "0"
+      }
+    }
+  },
+  "PokeWound2": {
+    "variant_of": "PokeWound",
+    "meta": {
+      "desc": "ABILITY_SUDDENAFFLICTION2_DESC",
+      "desc_resolved": "Trigger the Poison, Bleed, and Burn effects on a unit. If that unit isn't Poisoned, Bleeding, or Burning, they gain 1 of each."
+    },
+    "damage_instance": {
+      "effects": {
+        "TriggerDOTStatuses": "1"
+      }
+    }
+  },
+  "WasteTime": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WASTETIME_NAME",
+      "name_resolved": "Waste Time",
+      "desc": "ABILITY_WASTETIME_DESC",
+      "desc_resolved": "Do nothing.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "damage_instance": {}
+  },
+  "WasteTime2": {
+    "variant_of": "WasteTime",
+    "meta": {
+      "desc": "ABILITY_WASTETIME2_DESC",
+      "desc_resolved": "Gain 1 Charge."
+    },
+    "damage_instance": {
+      "effects": {
+        "Charge": "1"
+      }
+    }
+  },
+  "Desecrate": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_DESECRATE_NAME",
+      "name_resolved": "Desecrate",
+      "desc": "ABILITY_DESECRATE_DESC",
+      "desc_resolved": "Destroy a body.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "VaporizeCorpse": "1"
+      }
+    }
+  },
+  "Desecrate2": {
+    "variant_of": "Desecrate",
+    "meta": {
+      "desc": "ABILITY_DESECRATE2_DESC",
+      "desc_resolved": "Destroy a body and gain 2 mana."
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyToSource": {
+          "ManaGain": "2"
+        }
+      }
+    }
+  },
+  "Contort": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_INVERT_NAME",
+      "name_resolved": "Invert",
+      "desc": "ABILITY_INVERT_DESC",
+      "desc_resolved": "Swap your highest and lowest stats.\n[s:.7](Ties are chosen at random)[/s]",
+      "class": "Colorless"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "SwapHighestAndLowestStat": "1"
+      }
+    }
+  },
+  "Contort2": {
+    "variant_of": "Contort",
+    "meta": {
+      "desc": "ABILITY_INVERT2_DESC",
+      "desc_resolved": "Swap a unit's highest and lowest stats.\n[s:.7](Ties are chosen at random)[/s]"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "20"
+    }
+  },
+  "RussianRoulette": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_RUSSIANSHORTHAIRROULETTE_NAME",
+      "name_resolved": "Russian Shorthair Roulette",
+      "desc": "ABILITY_RUSSIANSHORTHAIRROULETTE_DESC",
+      "desc_resolved": "There is a 1 in 6 chance this will kill you. If it doesn't, gain +1 to a random stat and 1-2 coins.",
+      "class": "Colorless"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_BadRoll": {
+          "odds": ".16666666",
+          "DieViolently": "1"
+        },
+        "Else": {
+          "RandomStatUp": "1",
+          "GainCoinsRange": {
+            "min": "1",
+            "max": "2"
+          }
+        }
+      }
+    }
+  },
+  "RussianRoulette2": {
+    "variant_of": "RussianRoulette",
+    "meta": {
+      "desc": "ABILITY_RUSSIANSHORTHAIRROULETTE2_DESC",
+      "desc_resolved": "There is a 1 in 6 chance this will kill you. If it doesn't, gain +2 to a random stat and 2-4 coins."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_BadRoll": {
+          "odds": ".16666666",
+          "Instakill": "25"
+        },
+        "Else": {
+          "RandomStatUp": "2",
+          "GainCoinsRange": {
+            "min": "2",
+            "max": "4"
+          }
+        }
+      }
+    }
+  },
+  "Step": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_STEP_NAME",
+      "name_resolved": "Step",
+      "desc": "ABILITY_STEP_DESC",
+      "desc_resolved": "Move one tile.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "true",
+      "class": "Colorless"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "Step2": {
+    "variant_of": "Step",
+    "meta": {
+      "desc": "ABILITY_STEP2_DESC",
+      "desc_resolved": "Move two tiles.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "Interchange": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_INTERCHANGE_NAME",
+      "name_resolved": "Interchange",
+      "desc": "ABILITY_INTERCHANGE_DESC",
+      "desc_resolved": "Exchange your movement action for an additional basic attack, and vice versa.",
+      "animate_name": "true",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "runincircles"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "InterchangeDisabler": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "InterchangeMoveActPoints": "1"
+      }
+    }
+  },
+  "Interchange2": {
+    "variant_of": "Interchange",
+    "meta": {
+      "desc": "ABILITY_INTERCHANGE2_DESC",
+      "desc_resolved": "Exchange your movement action for an additional basic attack, and vice versa.\n[s:.7](This spell costs 0 mana the first time you cast it each turn.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "1"
+    }
+  },
+  "LookAtMe": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_LOOKATME_NAME",
+      "name_resolved": "Look at me!",
+      "desc": "ABILITY_LOOKATME_DESC",
+      "desc_resolved": "Each unit turns to face you.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "tauntwiggle",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "tile_to_character"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "LookAtMe2": {
+    "variant_of": "LookAtMe",
+    "meta": {
+      "desc": "ABILITY_LOOKATME2_DESC",
+      "desc_resolved": "Each unit turns to face you. 20% chance to Confuse enemies."
+    },
+    "damage_instance": {
+      "effects": {
+        "FaceAway": "1",
+        "Conditional_Enemy": {
+          "Confusion": [
+            "1",
+            ".2"
+          ]
+        }
+      }
+    }
+  },
+  "Rouse": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_ROUSE_NAME",
+      "name_resolved": "Rouse",
+      "desc": "ABILITY_ROUSE_DESC",
+      "desc_resolved": "Give an adjacent unit +2 Charge.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Charge": "2"
+      }
+    }
+  },
+  "Rouse2": {
+    "variant_of": "Rouse",
+    "meta": {
+      "desc": "ABILITY_ROUSE2_DESC",
+      "desc_resolved": "Give any unit +2 Charge.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "Shift": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_SHIFT_NAME",
+      "name_resolved": "Shift",
+      "desc": "ABILITY_SHIFT_DESC",
+      "desc_resolved": "Swap positions with an adjacent unit.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "true",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn",
+      "mode": "yeet"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_range": "1"
+    }
+  },
+  "Shift2": {
+    "variant_of": "Shift",
+    "meta": {
+      "desc": "ABILITY_SHIFT2_DESC",
+      "desc_resolved": "Swap positions with any unit.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_range": "3"
+    }
+  },
+  "Donate": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_MAKEAWISH_NAME",
+      "name_resolved": "Make a Wish",
+      "desc": "ABILITY_MAKEAWISH_DESC",
+      "desc_resolved": "Spend a coin to spawn a random pickup on a random tile.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "lob": "true"
+    },
+    "sounds": {
+      "ontrigger": "Spawn_Donate"
+    },
+    "cost": {
+      "mana": "0",
+      "coins": "1",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "max_aoe": "20",
+      "min_targets": "1",
+      "max_targets": "1",
+      "aoe_restrictions": [
+        "must_be_empty"
+      ]
+    },
+    "spawn": {
+      "object": "RandomPickup",
+      "layer": "pickups"
+    }
+  },
+  "Donate2": {
+    "variant_of": "Donate",
+    "meta": {
+      "desc": "ABILITY_MAKEAWISH2_DESC",
+      "desc_resolved": "Spend a coin to spawn a random pickup on an empty tile of your choice.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": [
+        "must_be_empty"
+      ]
+    }
+  },
+  "Magnet": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MAGNET_NAME",
+      "name_resolved": "Magnet",
+      "desc": "ABILITY_MAGNET_DESC",
+      "desc_resolved": "Pull a pickup one tile toward you.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "psyAttack3"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "knockback_mode": "target_to_character",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "Magnet2": {
+    "variant_of": "Magnet",
+    "meta": {
+      "desc": "ABILITY_MAGNET2_DESC",
+      "desc_resolved": "Pull a pickup all the way toward you.\n[s:.7](Castable once per turn)[/s]"
+    },
+    "target": {
+      "knockback_mode": "pull_to_character_plus1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "ScuffItOff": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SHRUGITOFF_NAME",
+      "name_resolved": "Shrug It Off",
+      "desc": "ABILITY_SHRUGITOFF_DESC",
+      "desc_resolved": "Heal yourself HP equal to half your [img:str], rounded up.",
+      "class": "Colorless",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "animation": "flex"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "raw_heal": "(str+1)/2"
+    }
+  },
+  "ScuffItOff2": {
+    "variant_of": "ScuffItOff",
+    "meta": {
+      "desc": "ABILITY_SHRUGITOFF2_DESC",
+      "desc_resolved": "Heal yourself HP equal to half your [img:str], rounded up.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "BarfBall": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_BARFBALL_NAME",
+      "name_resolved": "Barf Ball",
+      "desc": "ABILITY_BARFBALL_DESC",
+      "desc_resolved": "A ranged attack that deals damage equal to half your [img:con], rounded up.",
+      "class": "Colorless",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "raw_damage": "(con+1)/2"
+    }
+  },
+  "BarfBall2": {
+    "variant_of": "BarfBall",
+    "meta": {
+      "desc": "ABILITY_BARFBALL2_DESC",
+      "desc_resolved": "A ranged attack that deals damage equal to half your [img:con], rounded up.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "DexterousHit": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DEXTEROUSHIT_NAME",
+      "name_resolved": "Dexterous Hit",
+      "desc": "ABILITY_DEXTEROUSHIT_DESC",
+      "desc_resolved": "A melee attack that deals damage equal to half your [img:dex], rounded up.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "karateKid"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "(dex+1)/2"
+    }
+  },
+  "DexterousHit2": {
+    "variant_of": "DexterousHit",
+    "meta": {
+      "desc": "ABILITY_DEXTEROUSHIT2_DESC",
+      "desc_resolved": "A melee attack that deals damage equal to half your [img:dex], rounded up.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "Till": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_RANDOMIZE_NAME",
+      "name_resolved": "Randomize",
+      "desc": "ABILITY_RANDOMIZE_DESC",
+      "desc_resolved": "Spawn a random tile anywhere.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "ChangeTile": "RandomDifferentTile"
+      }
+    }
+  },
+  "Till2": {
+    "variant_of": "Till",
+    "meta": {
+      "desc": "ABILITY_RANDOMIZE2_DESC",
+      "desc_resolved": "Tiles in an area become random tiles."
+    },
+    "target": {
+      "max_range": "6",
+      "max_aoe": "2"
+    }
+  },
+  "PathOfTheMage": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEMAGE_NAME",
+      "name_resolved": "Path of the Mage",
+      "desc": "ABILITY_PATHOFTHEMAGE_DESC",
+      "desc_resolved": "Transform this spell into a random Mage spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "floatingmagic"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "12"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "Mage"
+      }
+    }
+  },
+  "PathOfTheMage2": {
+    "variant_of": "PathOfTheMage",
+    "meta": {
+      "desc": "ABILITY_PATHOFTHEMAGE2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Mage spell permanently."
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Mage",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheHunter": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEHUNTER_NAME",
+      "name_resolved": "Path of the Hunter",
+      "desc": "ABILITY_PATHOFTHEHUNTER_DESC",
+      "desc_resolved": "A lobbed attack that deals 1 damage. If this kills an enemy, this spell becomes a random Hunter spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "throwArrow",
+      "projectile": "ArrowProjectile"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Conditional_Enemy": {
+          "ApplyToSourceOnKill": {
+            "EvolveAbilityFromPool": "Hunter"
+          }
+        }
+      }
+    }
+  },
+  "PathOfTheHunter2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEHUNTER_NAME",
+      "name_resolved": "Path of the Hunter",
+      "desc": "ABILITY_PATHOFTHEHUNTER2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Hunter spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Hunter",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheThief": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_PATHOFTHETHIEF_NAME",
+      "name_resolved": "Path of the Thief",
+      "desc": "ABILITY_PATHOFTHETHIEF_DESC",
+      "desc_resolved": "A straight shot attack that deals 1 damage. If this makes a critical hit, this spell becomes a random Thief spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "ApplyStatusIfCrit": {
+          "ApplyToSource": {
+            "EvolveAbilityFromPool": "Thief"
+          }
+        }
+      }
+    }
+  },
+  "PathOfTheThief2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHETHIEF_NAME",
+      "name_resolved": "Path of the Thief",
+      "desc": "ABILITY_PATHOFTHETHIEF2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Thief spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Thief",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheFighter": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEFIGHTER_NAME",
+      "name_resolved": "Path of the Fighter",
+      "desc": "ABILITY_PATHOFTHEFIGHTER_DESC",
+      "desc_resolved": "Your [img:int] becomes 0 until the end of the battle, then this spell becomes a random Fighter spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "Fighter",
+        "IntelligenceUp": "-int"
+      }
+    }
+  },
+  "PathOfTheFighter2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEFIGHTER_NAME",
+      "name_resolved": "Path of the Fighter",
+      "desc": "ABILITY_PATHOFTHEFIGHTER2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Fighter spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "angry"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Fighter",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheTank": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHETANK_NAME",
+      "name_resolved": "Path of the Tank",
+      "desc": "ABILITY_PATHOFTHETANK_DESC",
+      "desc_resolved": "Transform this spell into a random Tank spell permanently. Castable only if you have 5 or less health.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "cant_cast": "X-5"
+    },
+    "target": {
+      "X_is": "current_health"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "Tank"
+      }
+    }
+  },
+  "PathOfTheTank2": {
+    "variant_of": "PathOfTheTank",
+    "meta": {
+      "desc": "ABILITY_PATHOFTHETANK2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Tank spell permanently."
+    },
+    "cost": {
+      "cant_cast": "false"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Tank",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheCleric": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PATHOFTHECLERIC_NAME",
+      "name_resolved": "Path of the Cleric",
+      "desc": "ABILITY_PATHOFTHECLERIC_DESC",
+      "desc_resolved": "Give an enemy All Stats Up and fully heal it, then this spell becomes a random Cleric spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "pray"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "1",
+      "restrictions": "must_have_enemy"
+    },
+    "damage_instance": {
+      "effects": {
+        "Revive": "100%",
+        "AllStatsUp": "1",
+        "FullHeal": "1",
+        "ApplyToSource": {
+          "EvolveAbilityFromPool": "Medic"
+        }
+      }
+    }
+  },
+  "PathOfTheCleric2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHECLERIC_NAME",
+      "name_resolved": "Path of the Cleric",
+      "desc": "ABILITY_PATHOFTHECLERIC2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Cleric spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Medic",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheButcher": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEBUTCHER_NAME",
+      "name_resolved": "Path of the Butcher",
+      "desc": "ABILITY_PATHOFTHEBUTCHER_DESC",
+      "desc_resolved": "Collect an adjacent food pickup, then this spell becomes a random Butcher spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "attack"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_range": "1",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "food"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CollectsPickups": "1",
+        "CanApplyToInanimate": {
+          "ApplyToSource": {
+            "EvolveAbilityFromPool": "Butcher"
+          }
+        }
+      }
+    }
+  },
+  "PathOfTheButcher2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEBUTCHER_NAME",
+      "name_resolved": "Path of the Butcher",
+      "desc": "ABILITY_PATHOFTHEBUTCHER2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Butcher spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Butcher",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfThePsychic": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEPSYCHIC_NAME",
+      "name_resolved": "Path of the Psychic",
+      "desc": "ABILITY_PATHOFTHEPSYCHIC_DESC",
+      "desc_resolved": "This spell becomes a random Psychic spell permanently. Castable only if you have full mana.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "cant_cast": "1-X"
+    },
+    "target": {
+      "X_is": "is_at_max_mana"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "Psychic"
+      }
+    }
+  },
+  "PathOfThePsychic2": {
+    "variant_of": "PathOfThePsychic",
+    "meta": {
+      "desc": "ABILITY_PATHOFTHEPSYCHIC2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Psychic spell permanently."
+    },
+    "cost": {
+      "cant_cast": "false"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Psychic",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheTinkerer": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHETINKERER_NAME",
+      "name_resolved": "Path of the Tinkerer",
+      "desc": "ABILITY_PATHOFTHETINKERER_DESC",
+      "desc_resolved": "Destroy your weapon, then this spell becomes a random Tinkerer spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "requires_destructible_weapon": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "DestroyWeapon": "1",
+        "EvolveAbilityFromPool": "Tinkerer"
+      }
+    }
+  },
+  "PathOfTheTinkerer2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHETINKERER_NAME",
+      "name_resolved": "Path of the Tinkerer",
+      "desc": "ABILITY_PATHOFTHETINKERER2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Tinkerer spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Tinkerer",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheMonk": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEMONK_NAME",
+      "name_resolved": "Path of the Monk",
+      "desc": "ABILITY_PATHOFTHEMONK_DESC",
+      "desc_resolved": "Gain All Stats Down, then this spell becomes a random Monk spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {
+      "animation": "meditate"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "Monk",
+        "AllStatsUp": "-1"
+      }
+    }
+  },
+  "PathOfTheMonk2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEMONK_NAME",
+      "name_resolved": "Path of the Monk",
+      "desc": "ABILITY_PATHOFTHEMONK2_DESC",
+      "desc_resolved": "This spell becomes a random upgraded Monk spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Monk",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheDruid": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEDRUID_NAME",
+      "name_resolved": "Path of the Druid",
+      "desc": "ABILITY_PATHOFTHEDRUID_DESC",
+      "desc_resolved": "Plant flowers on the tile you're standing on, then this spell becomes a random Druid spell permanently. Castable only if you're standing on a grass tile.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable,",
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing1"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "restrictions": [
+        "must_have_element"
+      ],
+      "target_requires_element": [
+        "grass"
+      ]
+    },
+    "damage_instance": {
+      "layer": "all",
+      "effects": {
+        "EvolveAbilityFromPool": "Druid",
+        "FlowersOnHit": "1"
+      }
+    }
+  },
+  "PathOfTheDruid2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEDRUID_NAME",
+      "name_resolved": "Path of the Druid",
+      "desc": "ABILITY_PATHOFTHEDRUID2_DESC",
+      "desc_resolved": "Transform this spell into a random upgraded Druid spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Druid",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheNecromancer": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PATHOFTHENECROMANCER_NAME",
+      "name_resolved": "Path of the Necromancer",
+      "desc": "ABILITY_PATHOFTHENECROMANCER_DESC",
+      "desc_resolved": "Destroy a corpse, then this spell becomes a random Necromancer spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "EvolveAbilityFromPool": "Necromancer"
+        }
+      }
+    }
+  },
+  "PathOfTheNecromancer2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHENECROMANCER_NAME",
+      "name_resolved": "Path of the Necromancer",
+      "desc": "ABILITY_PATHOFTHENECROMANCER2_DESC",
+      "desc_resolved": "Transform this spell into a random Necromancer spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "Necromancer",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "Itch": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ITCH_NAME",
+      "name_resolved": "Itch",
+      "desc": "ABILITY_ITCH_DESC",
+      "desc_resolved": "Deal 1 damage to yourself. 50% chance to spawn a friendly flea.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "scratchear"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "ObjectOnHitCharacter": {
+          "object": "CharmedFlea",
+          "chance": ".5"
+        }
+      }
+    }
+  },
+  "Itch2": {
+    "variant_of": "Itch",
+    "meta": {
+      "desc": "ABILITY_ITCH2_DESC",
+      "desc_resolved": "Deal 1 damage to yourself. Spawn a friendly flea."
+    },
+    "damage_instance": {
+      "effects": {
+        "ObjectOnHitCharacter": {
+          "object": "CharmedFlea",
+          "chance": "1"
+        }
+      }
+    }
+  },
+  "Meow": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MEOW_NAME",
+      "name_resolved": "Meow",
+      "desc": "ABILITY_MEOW_DESC",
+      "desc_resolved": "Your closest ally moves toward you.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "howl"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyToRandomClosestAlly": {
+          "ForceMoveTowards": "1"
+        }
+      }
+    }
+  },
+  "Meow2": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_MEOW_NAME",
+      "name_resolved": "Meow",
+      "desc": "ABILITY_MEOW2_DESC",
+      "desc_resolved": "A target ally moves toward you.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "howl"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_ally"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "ForceMoveTowards": "1"
+      }
+    }
+  },
+  "Swat": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SWAT_NAME",
+      "name_resolved": "Swat",
+      "desc": "ABILITY_SWAT_DESC",
+      "desc_resolved": "Knockback a unit 3 tiles.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "knockswatatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3"
+    }
+  },
+  "Swat2": {
+    "variant_of": "Swat",
+    "meta": {
+      "desc": "ABILITY_SWAT2_DESC",
+      "desc_resolved": "Knockback a unit 10 tiles.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "knockback": "10"
+    }
+  },
+  "LickHeal": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_LICK_NAME",
+      "name_resolved": "Lick",
+      "desc": "ABILITY_LICK_DESC",
+      "desc_resolved": "Heal an adjacent unit by 2 HP.",
+      "class": "Colorless",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "animation": "lickAttack"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "elements": [
+        "Water",
+        "Holy"
+      ]
+    }
+  },
+  "LickHeal2": {
+    "variant_of": "LickHeal",
+    "meta": {
+      "desc": "ABILITY_LICK2_DESC",
+      "desc_resolved": "Heal an adjacent unit by 2 HP. Healed enemies gain Confusion 3."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "Confusion": "3"
+        }
+      }
+    }
+  },
+  "Purr": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PURR_NAME",
+      "name_resolved": "Purr",
+      "desc": "ABILITY_PURR_DESC",
+      "desc_resolved": "Remove 1 stack of a random debuff from yourself and all adjacent units.",
+      "class": "Colorless"
+    },
+    "target": {
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "animation": "knead"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "PartialCleanse": "1"
+      }
+    }
+  },
+  "Purr2": {
+    "variant_of": "Purr",
+    "meta": {
+      "desc": "ABILITY_PURR2_DESC",
+      "desc_resolved": "Remove 1 stack of a random debuff from and heal 1 HP to yourself and all adjacent units."
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "layer": "all"
+    }
+  },
+  "Hiss": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HISS_NAME",
+      "name_resolved": "Hiss",
+      "desc": "ABILITY_HISS_DESC",
+      "desc_resolved": "Adjacent units move away from you. You have a 25% chance to inflict Fear on them.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "hiss",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceMoveAway": "1",
+        "Fear": [
+          "1",
+          ".25"
+        ]
+      }
+    }
+  },
+  "Hiss2": {
+    "variant_of": "Hiss",
+    "meta": {
+      "desc": "ABILITY_HISS2_DESC",
+      "desc_resolved": "Adjacent units move away from you. Inflict fear on them."
+    },
+    "damage_instance": {
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "Knead": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_KNEAD_NAME",
+      "name_resolved": "Knead",
+      "desc": "ABILITY_KNEAD_DESC",
+      "desc_resolved": "Knead another unit. Allies gain +1 Damage, enemies gain Weakness 1.",
+      "class": "Colorless",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "knead"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Ally": {
+          "DamageUp": "1"
+        },
+        "Conditional_Enemy": {
+          "Weakness": "1"
+        }
+      }
+    }
+  },
+  "Knead2": {
+    "variant_of": "Knead",
+    "meta": {
+      "desc": "ABILITY_KNEAD2_DESC",
+      "desc_resolved": "Knead another unit. Allies gain +2 Damage, enemies gain Weakness 2."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Ally": {
+          "DamageUp": "2"
+        },
+        "Conditional_Enemy": {
+          "Weakness": "2"
+        }
+      }
+    }
+  },
+  "BuyCatnip": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BUYCATNIP_NAME",
+      "name_resolved": "Buy Catnip",
+      "desc": "ABILITY_BUYCATNIP_DESC",
+      "desc_resolved": "Spend 5 coins, gain 10 mana.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "statusReaction",
+      "particle": "none"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "coins": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "10"
+      }
+    }
+  },
+  "BuyCatnip2": {
+    "variant_of": "BuyCatnip",
+    "meta": {
+      "desc": "ABILITY_BUYCATNIP2_DESC",
+      "desc_resolved": "Spend 5 coins, gain 15 mana.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "15"
+      }
+    }
+  },
+  "VetVisit": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_VETVISIT_NAME",
+      "name_resolved": "Vet Visit",
+      "desc": "ABILITY_VETVISIT_DESC",
+      "desc_resolved": "Spend 5 coins, heal 10 HP.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "coins": "5"
+    },
+    "damage_instance": {
+      "heal": "10"
+    }
+  },
+  "VetVisit2": {
+    "variant_of": "VetVisit",
+    "meta": {
+      "desc": "ABILITY_VETVISIT2_DESC",
+      "desc_resolved": "Spend 5 coins, heal 15 HP.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "damage_instance": {
+      "heal": "15"
+    }
+  },
+  "HireHitman": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_HIREHITMAN_NAME",
+      "name_resolved": "Hire Hitman",
+      "desc": "ABILITY_HIREHITMAN_DESC",
+      "desc_resolved": "Spend 7 coins, summon a bounty hunter.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "lob": "false"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "coins": "7"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "spawn": {
+      "object": "GunCat",
+      "faction": "self"
+    }
+  },
+  "HireHitman2": {
+    "variant_of": "HireHitman",
+    "meta": {
+      "desc": "ABILITY_HIREHITMAN2_DESC",
+      "desc_resolved": "Spend 7 coins, summon a bounty hunter with All Stats Up 2.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "spawn": {
+      "additional_passives": {
+        "AllStatsUp": "2",
+        "HealthGain": "8"
+      }
+    }
+  },
+  "SubwayRide": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_SUBWAYRIDE_NAME",
+      "name_resolved": "Subway Ride",
+      "desc": "ABILITY_SUBWAYRIDE_DESC",
+      "desc_resolved": "Spend 5 coins, teleport to any tile.\n[s:.7](Castable once per turn.)[/s]",
+      "animate_name": "true",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "coins": "5"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "SubwayRide2": {
+    "variant_of": "SubwayRide",
+    "meta": {
+      "desc": "ABILITY_SUBWAYRIDE2_DESC",
+      "desc_resolved": "Spend 2 coins, teleport to any tile.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "cost": {
+      "coins": "2"
+    }
+  },
+  "GymMembership": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_GYMMEMBERSHIP_NAME",
+      "name_resolved": "Gym Membership",
+      "desc": "ABILITY_GYMMEMBERSHIP_DESC",
+      "desc_resolved": "Spend 5 coins, gain All Stats Up.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "coins": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "GymMembership2": {
+    "variant_of": "GymMembership",
+    "meta": {
+      "desc": "ABILITY_GYMMEMBERSHIP2_DESC",
+      "desc_resolved": "Spend 5 coins, gain All Stats Up and refresh your basic attack and movement actions.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1",
+        "RefreshActPoints": "1",
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "SuperCrateBox": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUPERCRATEBOX_NAME",
+      "name_resolved": "Super Crate Box",
+      "desc": "ABILITY_SUPERCRATEBOX_DESC",
+      "desc_resolved": "Spawn a crate on an adjacent tile.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "lob": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "spawn": {
+      "object": "Crate"
+    }
+  },
+  "SuperCrateBox2": {
+    "variant_of": "SuperCrateBox",
+    "meta": {
+      "desc": "ABILITY_SUPERCRATEBOX2_DESC",
+      "desc_resolved": "Spawn a crate within range 5."
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "BBQ": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_BBQ_NAME",
+      "name_resolved": "BBQ",
+      "desc": "ABILITY_BBQ_DESC",
+      "desc_resolved": "Spawn a cooked meat pickup.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "lob": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "2"
+    },
+    "spawn": {
+      "object": "CookedFood"
+    }
+  },
+  "BBQ2": {
+    "variant_of": "BBQ",
+    "meta": {
+      "desc": "ABILITY_BBQ2_DESC",
+      "desc_resolved": "Spawn a big cooked meat pickup."
+    },
+    "spawn": {
+      "object": "CookedBiggestFood"
+    }
+  },
+  "CPR": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_CPR_NAME",
+      "name_resolved": "CPR",
+      "desc": "ABILITY_CPR_DESC",
+      "desc_resolved": "Revive an adjacent body to 1 HP.",
+      "class": "Colorless",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig",
+      "animation": "knead"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "type": "spell",
+      "can_revive": "true"
+    }
+  },
+  "CPR2": {
+    "variant_of": "CPR",
+    "meta": {
+      "desc": "ABILITY_CPR2_DESC",
+      "desc_resolved": "Revive an adjacent body to 5 HP.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "heal": "5"
+    }
+  },
+  "Blow": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BLOW_NAME",
+      "name_resolved": "Blow",
+      "desc": "ABILITY_BLOW_DESC",
+      "desc_resolved": "Blow units in a cone back 1 tile.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "blowFire"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Blow2": {
+    "variant_of": "Blow",
+    "meta": {
+      "desc": "ABILITY_BLOW2_DESC",
+      "desc_resolved": "Blow units in a larger cone back 1 tile."
+    },
+    "target": {
+      "max_aoe": "4"
+    }
+  },
+  "Toast": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_TOAST_NAME",
+      "name_resolved": "Toast",
+      "desc": "ABILITY_TOAST_DESC",
+      "desc_resolved": "Inflict Burn 1 on an adjacent unit.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "BurnTrigger",
+      "animation": "createmagic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Burn": "1"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Toast2": {
+    "variant_of": "Toast",
+    "meta": {
+      "desc": "ABILITY_TOAST2_DESC",
+      "desc_resolved": "Inflict Burn 1 on a unit in range 5."
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "Landscape": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_LANDSCAPE_NAME",
+      "name_resolved": "Landscape",
+      "desc": "ABILITY_LANDSCAPE_DESC",
+      "desc_resolved": "Turn an adjacent tile into a small grass tile.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "animation": "knead"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "ChangeTile": "GrassTile"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "Landscape2": {
+    "variant_of": "Landscape",
+    "meta": {
+      "desc": "ABILITY_LANDSCAPE2_DESC",
+      "desc_resolved": "Turn any tile into a small grass tile."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Zap": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_ZAP_NAME",
+      "name_resolved": "Zap",
+      "desc": "ABILITY_ZAP_DESC",
+      "desc_resolved": "Deal 1 electric damage at infinite range.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "animation": "castspell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Zap2": {
+    "variant_of": "Zap",
+    "meta": {
+      "desc": "ABILITY_ZAP2_DESC",
+      "desc_resolved": "Deal 1 electric damage with a 25% chance to Stun at infinite range."
+    },
+    "damage_instance": {
+      "effects": {
+        "Stun": [
+          "1",
+          ".25"
+        ]
+      }
+    }
+  },
+  "Sunburn": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SUNBURN_NAME",
+      "name_resolved": "Sunburn",
+      "desc": "ABILITY_SUNBURN_DESC",
+      "desc_resolved": "Inflicts Burn 1 and Blind 1 at infinite range.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "FireSpin",
+      "palette": "6",
+      "animation": "castspell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Burn": "1",
+        "Blind": "1"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Sunburn2": {
+    "variant_of": "Sunburn",
+    "meta": {
+      "desc": "ABILITY_SUNBURN2_DESC",
+      "desc_resolved": "Inflict Burn 1 and Blind 1 in an area at infinite range."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "ColdShoulder": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_COLDSHOULDER_NAME",
+      "name_resolved": "Cold Shoulder",
+      "desc": "ABILITY_COLDSHOULDER_DESC",
+      "desc_resolved": "Deal 1 ice damage and inflict Slow 1 at infinite range.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "IcePoof",
+      "animation": "castspell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Slow": "1"
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "ColdShoulder2": {
+    "variant_of": "ColdShoulder",
+    "meta": {
+      "desc": "ABILITY_COLDSHOULDER2_DESC",
+      "desc_resolved": "Deal 1 ice damage and inflict Slow 1 at infinite range.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "BlowKiss": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BLOWKISS_NAME",
+      "name_resolved": "Blow Kiss",
+      "desc": "ABILITY_BLOWKISS_DESC",
+      "desc_resolved": "Heal another unit by 1 HP at infinite range.",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "blowKiss"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "elements": [
+        "Holy",
+        "Wind"
+      ]
+    }
+  },
+  "BlowKiss2": {
+    "variant_of": "BlowKiss",
+    "meta": {
+      "desc": "ABILITY_BLOWKISS2_DESC",
+      "desc_resolved": "Heal another unit by 2 HP at infinite range."
+    },
+    "damage_instance": {
+      "heal": "2"
+    }
+  },
+  "ForbiddenFart": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_FORRBIDDENFART_NAME",
+      "name_resolved": "Forbidden Fart",
+      "desc": "ABILITY_FORRBIDDENFART_DESC",
+      "desc_resolved": "Damage, Inflict Poison 4 and Knock Up nearby units.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Colorless"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "fartoom"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "circle",
+      "max_aoe": "2",
+      "aoe_excludes_self": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    },
+    "damage_instance": {
+      "damage": "4",
+      "effects": {
+        "Poison": "4",
+        "KnockUpAndAway": {
+          "distance": "3"
+        }
+      },
+      "elements": [
+        "Poison"
+      ]
+    }
+  },
+  "ForbiddenFart2": {
+    "variant_of": "ForbiddenFart",
+    "meta": {
+      "desc": "ABILITY_FORRBIDDENFART2_DESC",
+      "desc_resolved": "Damage, Inflict Poison 6 and Knock Up nearby units in a larger area.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "Poison": "6"
+      }
+    }
+  },
+  "WetHairball": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_WETHAIRBALL_NAME",
+      "name_resolved": "Wet Hairball",
+      "desc": "ABILITY_WETHAIRBALL_DESC",
+      "desc_resolved": "Shoot a wet hairball that deals damage in an area."
+    },
+    "cost": {
+      "mana": "7",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "max_aoe": "1",
+      "can_multihit": "false"
+    },
+    "graphics": {
+      "use_projectile": "true",
+      "single_projectile": "true",
+      "particle": "Wave",
+      "delay": "15",
+      "animation": "pukeatk"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "WetHairball2": {
+    "variant_of": "WetHairball",
+    "meta": {
+      "desc": "ABILITY_WETHAIRBALL2_DESC",
+      "desc_resolved": "Shoot a wet hairball that deals more damage in an area."
+    },
+    "target": {
+      "max_range": "7+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "5"
+    }
+  },
+  "PathOfTheVoid": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEVOID_NAME",
+      "name_resolved": "Path Of The Void",
+      "desc": "ABILITY_PATHOFTHEVOID_DESC",
+      "desc_resolved": "Conjure a random Collarless spell into your bonus spell slot.",
+      "class": "Colorless"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConjureBonusAbility": "Colorless"
+      }
+    }
+  },
+  "PathOfTheVoid2": {
+    "variant_of": "PathOfTheVoid",
+    "meta": {
+      "desc": "ABILITY_PATHOFTHEVOID2_DESC",
+      "desc_resolved": "Conjure a random upgraded Collarless spell into your bonus spell slot."
+    },
+    "damage_instance": {
+      "effects": {
+        "ConjureBonusAbility": {
+          "ability": "Colorless",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "PathOfTheJester": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEJESTER_NAME",
+      "name_resolved": "Path of the Jester",
+      "desc": "ABILITY_PATHOFTHEJESTER_DESC",
+      "desc_resolved": "Gain 10 random stat ups and 5 random stat downs, then transform this spell into a random class spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": "JesterMinusColorless",
+        "RandomStatUp": "-5"
+      }
+    }
+  },
+  "PathOfTheJester2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PATHOFTHEJESTER_NAME",
+      "name_resolved": "Path of the Jester",
+      "desc": "ABILITY_PATHOFTHEJESTER2_DESC",
+      "desc_resolved": "Gain 10 random stat ups, then transform this spell into a random upgraded class spell permanently.",
+      "class": "Colorless"
+    },
+    "tags": [
+      "noncopyable"
+    ],
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EvolveAbilityFromPool": {
+          "pool": "JesterMinusColorless",
+          "upgraded": "true"
+        },
+        "RandomStatUp": "10"
+      }
+    }
+  }
+}

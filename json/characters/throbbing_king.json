@@ -1,0 +1,155 @@
+{
+  "ThrobbingKing": {
+    "graphics": {
+      "movieclip": "ThrobbingKing",
+      "name": "ENEMY_THROBBINGKING_NAME",
+      "name_resolved": "Throbbing King",
+      "shadow_size": "2",
+      "uifloaters_offset": "2.5",
+      "water_mask": "big",
+      "move_speed_sync_frames": "28",
+      "tooltip": "ENEMY_THROBBINGKING_DESC",
+      "tooltip_resolved": "Follow his orders! OR ELSE!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "3",
+      "mana_regen": "999",
+      "mana": "100",
+      "corpse_health": "0",
+      "health": "460",
+      "size": "2x2",
+      "move_block": "everything_even_when_dead",
+      "dispersed_bonus_turns": "2",
+      "round_end_bonus_turns": "1",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TKNG_GutBall",
+      "spells": [
+        "TKNG_Trash",
+        "TKNG_Spread",
+        "TKNG_Kneel",
+        "TKNG_Roulette",
+        "TKNG_GoAway",
+        "TKNG_DeathExplode"
+      ]
+    },
+    "passives": {
+      "FormChanger": {
+        "NotPriming": {
+          "turns": {
+            "takes_main_turn": "true",
+            "dispersed_bonus_turns": "2",
+            "round_end_bonus_turns": "1",
+            "wait_till_next_round_to_update_turns": "true"
+          }
+        },
+        "Priming": {
+          "turns": {
+            "takes_main_turn": "false",
+            "round_end_bonus_turns": "1",
+            "wait_till_next_round_to_update_turns": "true"
+          },
+          "passives": {
+            "StunImmunity": "1"
+          }
+        }
+      },
+      "FormChangeWhilePrimingAbility": {
+        "priming": "Priming",
+        "not_priming": "NotPriming"
+      },
+      "Trample": "3",
+      "TransformOnDeath": "ThrobbingKing2",
+      "DeathRattle": "TKNG_DeathExplode"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move",
+      "stun_advances_pattern": "true",
+      "auto_orient": "false",
+      "mainturn_pattern": {
+        "do": "*TKNG_Trash"
+      },
+      "dispersed_bonusturn_pattern": {
+        "do": "attack"
+      },
+      "round_end_bonusturn_pattern": {
+        "do_random": [
+          "TKNG_Spread",
+          "TKNG_Kneel",
+          "TKNG_Roulette",
+          "TKNG_GoAway"
+        ]
+      }
+    }
+  },
+  "ThrobbingKing2": {
+    "graphics": {
+      "movieclip": "ThrobbingKing2",
+      "name": "ENEMY_THROBBINGKING_NAME",
+      "name_resolved": "Throbbing King",
+      "uifloaters_offset": "1.75",
+      "water_mask": "medmed",
+      "tooltip": "ENEMY_THROBBINGKING2_DESC",
+      "tooltip_resolved": "Oh no, now hes agile!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "5",
+      "mana_regen": "999",
+      "mana": "100",
+      "dispersed_bonus_turns": "2",
+      "corpse_health": "indestructible",
+      "health": "150",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TKNG_Laser",
+      "spells": [
+        "TKNG_Spawn",
+        "TKNG_Hop"
+      ]
+    },
+    "passives": {
+      "MoveWhenDamaged": "TKNG_Hop"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "TKNG_Spawn"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move",
+      "auto_orient": "false"
+    }
+  }
+}

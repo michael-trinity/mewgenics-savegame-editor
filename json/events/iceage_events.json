@@ -1,0 +1,290 @@
+{
+  "FrozenHumanoid": {
+    "intro": {
+      "title": "EVENT_FROZENHUMANOID_NAME",
+      "title_resolved": "Frozen Humanoid",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "frozen_humanoid",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FROZENHUMANOID_QUES",
+      "prompt_resolved": "A large block of ice is before {catname}.\n\nLooking deep into the ice, {catname} can see a humanoid figure frozen within!",
+      "options": {
+        "break_ice": {
+          "label": "EVENT_FROZENHUMANOID_BREAKICE_ANSW",
+          "label_resolved": "Break ice",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FROZENHUMANOID_REW1",
+                "prompt_resolved": "{catname} breaks through the ice, and frees a cave baby stuck inside!\n\nIt gurgles at {catname} and crawls around following {him}.",
+                "set_frame": "2",
+                "gain_familiar": {
+                  "object": "CharmedCaveBaby",
+                  "initial_health": "10"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_FROZENHUMANOID_REW2",
+                "prompt_resolved": "{catname} tries to break through the ice but it is so terribly cold...\n\n{His} paws go numb all over, but {he} likes the sensation!",
+                "set_frame": "3",
+                "learn_passive": "IcePaws"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FROZENHUMANOID_REW3",
+                "prompt_resolved": "{catname} tries to break through the ice but only ends up exhausted and cold...",
+                "set_frame": "4",
+                "self_status_next_fight": {
+                  "Slow": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_FROZENHUMANOID_REW4",
+                "prompt_resolved": "It's alive! The caveman trapped inside breaks out and charges towards the cats!",
+                "set_frame": "5",
+                "spawn_unit_next_fight": {
+                  "object": "CaveMan",
+                  "count": "1",
+                  "spawn_side": "cats"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_FROZENHUMANOID_REW5",
+            "prompt_resolved": "{catname} is cold enough already!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "DeadMammoth": {
+    "intro": {
+      "title": "EVENT_DEADMAMMOTH_NAME",
+      "title_resolved": "Dead Mammoth",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dead_mammoth",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DEADMAMMOTH_QUES",
+      "prompt_resolved": "Beneath a towering mound of ice and fur, {catname} sees a dead mammoth.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADMAMMOTH_REW1",
+                "prompt_resolved": "Although a bit crunchy from being frozen, the meat is still edible and the cats enjoy a feast!",
+                "party_heal": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADMAMMOTH_REW2",
+                "prompt_resolved": "{catname} bites into the large mammoth...\n\nThe meat is still tender and fresh!",
+                "full_heal": "1",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADMAMMOTH_REW3",
+                "prompt_resolved": "{catname} eats some of the meat, but it has spoiled!\n\n{catname} has been poisoned.",
+                "self_status_next_fight": {
+                  "Poison": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DEADMAMMOTH_REW4",
+                "prompt_resolved": "There is so much meat! {catname} just keeps eating and eating until {he} is completely stuffed...",
+                "full_heal": "1",
+                "permanent_stats": {
+                  "spd": "-2"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADMAMMOTH_REW5",
+                "prompt_resolved": "{catname} tears apart the mammoth and extracts some of the bones...",
+                "get_item_from_pool": "bone_equipment"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADMAMMOTH_REW6",
+                "prompt_resolved": "What an immense creature! {catname} and the cats pull it apart, fashioning all sorts of gear!",
+                "get_item_from_pool": "hide_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADMAMMOTH_REW7",
+                "prompt_resolved": "It wasn't dead!\n\nThe mammoth strikes {catname} savagely before {he} can react.",
+                "random_pool": [
+                  {
+                    "injury": "str"
+                  },
+                  {
+                    "injury": "spd"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADMAMMOTH_REW8",
+                "prompt_resolved": "The mammoth wasn't dead! It rears up and ferociously attacks the cats!",
+                "party_damage": "5",
+                "party_injury": "random"
+              }
+            }
+          }
+        },
+        "revive": {
+          "label": "EVENT_REVIVE_ANSW",
+          "label_resolved": "Revive",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_DEADMAMMOTH_REW9",
+                "prompt_resolved": "After approaching the frozen mammoth, {catname} finds a scared mammoth kitten hiding behind it...\n\n{catname} coaxes it out and convinces it to join the party!",
+                "gain_familiar": "CharmedMammothBaby"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_DEADMAMMOTH_REW10",
+                "prompt_resolved": "The mammoth is almost frozen to death. The cats warm it up with wet kisses and it becomes a friend!",
+                "gain_familiar": "CharmedMammoth"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADMAMMOTH_REW11",
+                "prompt_resolved": "{catname} tries to revive the mammoth, but it appears to have been dead for a long time."
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_DEADMAMMOTH_REW12",
+                "prompt_resolved": "The mammoth wakes up in a fury and charges the cats!",
+                "spawn_unit_next_fight": {
+                  "object": "Mammoth",
+                  "count": "1",
+                  "spawn_side": "anywhere"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTent": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTENT_NAME",
+      "title_resolved": "Mysterious Tent",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tent",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTENT_QUES",
+      "prompt_resolved": "{catname} finds a mysterious tent made of old hides.\n\nThrough cracks in the tent {catname} thinks {he} can see movement.",
+      "options": {
+        "enter": {
+          "label": "EVENT_ENTER_ANSW",
+          "label_resolved": "Enter",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTENT_REW1",
+                "prompt_resolved": "{catname} pushes open the flap of the door. There is a warm fire lit inside!\n\nThe cats rest around the fire, waiting out the long cold night...",
+                "party_heal": "100%"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTENT_REW2",
+                "prompt_resolved": "{catname} pushes {his} way through the tent door and finds a shop inside!",
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTENT_PROMPT",
+                "shop_now": "Event_RareShop"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_MYSTERIOUSTENT_REW3",
+                "prompt_resolved": "Inside the tent {catname} finds a bedraggled shop keeper with a few wares.",
+                "override_end_option_prompt": "EVENT_MYSTERIOUSTENT_PROMPT",
+                "shop_now": "Event_SmallShop"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSTENT_REW4",
+                "prompt_resolved": "{catname} bursts into the tent, disturbing a caveman in the middle of dinner!\n\nIt screams at {him} in anger and chases {him} out.",
+                "spawn_unit_next_fight": {
+                  "object": "CaveManNoSpear",
+                  "count": "1",
+                  "spawn_side": "cats"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSTENT_REW5",
+            "prompt_resolved": "{catname} ignores the tent and moves on to the next area.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

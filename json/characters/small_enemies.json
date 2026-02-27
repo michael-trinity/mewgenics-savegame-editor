@@ -1,0 +1,654 @@
+{
+  "Fly": {
+    "graphics": {
+      "movieclip": "Fly",
+      "name": "ENEMY_FLY_NAME",
+      "name_resolved": "Fly",
+      "shadow_size": ".4",
+      "tooltip": "ENEMY_FLY_DESC",
+      "tooltip_resolved": "Melee attacker.\nFlying."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "bug",
+      "faction": "enemies",
+      "corpse_health": "0",
+      "movement": "4",
+      "health": "1",
+      "base_mana_regen": "999",
+      "flying": "true",
+      "type": "small",
+      "deathpoof_size": "1",
+      "can_be_backstabbed": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Maggot": {
+    "graphics": {
+      "movieclip": "Maggot",
+      "name": "ENEMY_MAGGOT_NAME",
+      "name_resolved": "Maggot",
+      "shadow_size": ".4",
+      "tooltip": "ENEMY_MAGGOT_DESC",
+      "tooltip_resolved": "Melee attacker."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "1",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "worm",
+      "health": "1",
+      "corpse_health": "0",
+      "movement": "2",
+      "faction": "enemies",
+      "type": "small",
+      "initiative": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "CanMutateTo": [
+        "TumorousMaggot,",
+        "ChargeyMaggot,",
+        "SwappyMaggot"
+      ]
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Flea": {
+    "graphics": {
+      "movieclip": "Flea",
+      "name": "ENEMY_FLEA_NAME",
+      "name_resolved": "Flea",
+      "shadow_size": ".50",
+      "tooltip": "ENEMY_FLEA_DESC",
+      "tooltip_resolved": "Its melee attack damages itself."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "bug",
+      "health": "2",
+      "corpse_health": "0",
+      "movement": "4",
+      "faction": "enemies",
+      "type": "small",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SuicideMelee",
+      "spells": []
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Pinky": {
+    "graphics": {
+      "movieclip": "Pinky",
+      "name": "ENEMY_PINKY_NAME",
+      "name_resolved": "Pinky",
+      "shadow_size": ".6",
+      "tooltip": "ENEMY_PINKY_DESC",
+      "tooltip_resolved": "Melee attacker.\nMoves randomly."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "rat",
+      "health": "1",
+      "movement": "2",
+      "faction": "enemies",
+      "type": "small"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "move_then_do": "attack"
+      },
+      "decision_weights": "simple",
+      "move_weights": "random"
+    }
+  },
+  "MeatMinion": {
+    "graphics": {
+      "movieclip": "MeatMinion",
+      "name": "ENEMY_MEATMINION_NAME",
+      "name_resolved": "Meat Minion",
+      "shadow_size": ".20"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "health": "2",
+      "corpse_health": "0",
+      "movement": "3",
+      "faction": "enemies",
+      "type": "small",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "MeatMinionMelee",
+      "spells": []
+    },
+    "passives": {
+      "SpawnThingOnDeath": "Food"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Dip": {
+    "graphics": {
+      "movieclip": "Dip",
+      "name": "ENEMY_DIP_NAME",
+      "name_resolved": "Dip",
+      "shadow_size": ".5",
+      "tooltip": "ENEMY_DIP_DESC",
+      "tooltip_resolved": "Melee attacker."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "poop",
+      "health": "1",
+      "corpse_health": "0",
+      "movement": "3",
+      "faction": "enemies",
+      "type": "small",
+      "inherit_faction": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "RattleSnake": {
+    "graphics": {
+      "movieclip": "Snake",
+      "name": "ENEMY_RATTLESNEK_NAME",
+      "name_resolved": "Rattlesnek",
+      "piece_alt_frame": "3",
+      "scale": ".80",
+      "shadow_size": ".60",
+      "tooltip": "ENEMY_RATTLESNEK_DESC",
+      "tooltip_resolved": "Ambushes enemies who walk past it.\nIts attacks inflict Poison."
+    },
+    "sound": {
+      "animation_prefix": "RattleSnake"
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "2",
+      "constitution": "2",
+      "intelligence": "2",
+      "speed": "5",
+      "charisma": "2"
+    },
+    "properties": {
+      "tag": "animal",
+      "type": "small",
+      "faction": "enemies",
+      "movement": "4",
+      "health": "3",
+      "weak_threshold": "0",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "RattleSnakeAttack",
+      "spells": [
+        "RattleSnakeTrap"
+      ]
+    },
+    "passives": {
+      "Trapper": "RattleSnakeTrap"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "rattle_distance",
+      "consider_spells": "false"
+    }
+  },
+  "TinySpider": {
+    "graphics": {
+      "movieclip": "BabySpider",
+      "name": "ENEMY_SPIDERLING_NAME",
+      "name_resolved": "Spiderling",
+      "shadow_size": ".5",
+      "move_speed_multiplier": "2",
+      "tooltip": "ENEMY_SPIDERLING_DESC",
+      "tooltip_resolved": "Burrows inside its victims, inflicting Infested."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "bug",
+      "health": "2",
+      "corpse_health": "0",
+      "movement": "4",
+      "faction": "enemies",
+      "type": "small",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SpiderSuicideMelee",
+      "spells": []
+    },
+    "passives": {
+      "StatusImmunity": "Webbed"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Wisp": {
+    "graphics": {
+      "movieclip": "Wisp",
+      "name": "ENEMY_WISP_NAME",
+      "name_resolved": "Wisp",
+      "uifloaters_offset": "1.5",
+      "tooltip": "ENEMY_WISP_DESC",
+      "tooltip_resolved": "Its melee attack inflicts Burn.\nDodges one attack per turn."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "ghost",
+      "faction": "enemies",
+      "corpse_health": "0",
+      "movement": "4",
+      "health": "1",
+      "base_mana_regen": "999",
+      "flying": "true",
+      "type": "small",
+      "deathpoof_size": "1",
+      "can_be_backstabbed": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "WispDodge": "1",
+      "AddStatusToBasicAttack": {
+        "Burn": "2"
+      },
+      "CharacterLightSource": {
+        "color": [
+          ".7,",
+          ".3,",
+          "1"
+        ],
+        "glow": [
+          ".7,",
+          ".3,",
+          "1,",
+          ".5"
+        ],
+        "size": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "MoonWorm": {
+    "graphics": {
+      "movieclip": "MoonWorm",
+      "name": "ENEMY_MOONWORM_NAME",
+      "name_resolved": "Moon Worm",
+      "shadow_size": ".5",
+      "tooltip": "ENEMY_MOONWORM_DESC",
+      "tooltip_resolved": "Lobs shots at all of its enemies within range.\nGains +1 Brace when damaged."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "worm",
+      "type": "small",
+      "health": "12",
+      "movement": "3",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "Teleport",
+      "attack": "MoonWormShot",
+      "spells": [
+        "MoonWormCurl"
+      ]
+    },
+    "passives": {
+      "AbilityReaction": "MoonWormCurl"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Invader": {
+    "graphics": {
+      "movieclip": "Invader",
+      "name": "ENEMY_INVADER_NAME",
+      "name_resolved": "Schpidenbot",
+      "shadow_size": ".40",
+      "move_speed_multiplier": "2",
+      "scale": ".8",
+      "tooltip": "ENEMY_INVADER_DESC",
+      "tooltip_resolved": "Melee attacker that inflicts Poison."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "robot",
+        "bug"
+      ],
+      "health": "5",
+      "corpse_health": "0",
+      "movement": "4",
+      "faction": "enemies",
+      "type": "small",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "InvaderAttack",
+      "spells": []
+    },
+    "passives": {
+      "Brace": "2",
+      "StatusImmunity": "Webbed",
+      "Robot": "1",
+      "DeathRattle": "InvaderExplode"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "TinyTumor": {
+    "graphics": {
+      "movieclip": [
+        "TinyTumorA",
+        "TinyTumorB",
+        "TinyTumorC"
+      ],
+      "name": "ENEMY_TINYTUMOR_NAME",
+      "name_resolved": "Tiny Tumor",
+      "shadow_size": ".5",
+      "tooltip": "ENEMY_TINYTUMOR_DESC",
+      "tooltip_resolved": "Its melee attack causes cats it hits to lose 1 [img:con] permanently and has a chance to give them cancer."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "tumor",
+      "faction": "enemies",
+      "type": "small",
+      "corpse_health": "0",
+      "movement": "4",
+      "health": "4",
+      "flying": "true",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CancerMelee",
+      "spells": []
+    },
+    "passives": {
+      "Brace": "2"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Clot": {
+    "graphics": {
+      "movieclip": "Clot",
+      "name": "ENEMY_CLOT_NAME",
+      "name_resolved": "Clot",
+      "shadow_size": ".5",
+      "scale": ".7",
+      "tooltip": "ENEMY_CLOT_DESC",
+      "tooltip_resolved": "Has a chance to become a Stem Cat at the end of its turn."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "blob",
+      "faction": "enemies",
+      "inherit_faction": "true",
+      "type": "small",
+      "corpse_health": "0",
+      "movement": "4",
+      "health": "1",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "spells": [
+        "ClotEvolve",
+        "ClotFailEvolve"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "move_then_do_random": [
+          "ClotEvolve",
+          "ClotFailEvolve"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_far"
+    }
+  },
+  "FrankPinky": {
+    "graphics": {
+      "movieclip": "PinkyX",
+      "name": "ENEMY_FRANKSBEAN_NAME",
+      "name_resolved": "Frank's Bean",
+      "shadow_size": ".6",
+      "scale": ".7",
+      "tooltip": "ENEMY_PINKY_DESC",
+      "tooltip_resolved": "Melee attacker.\nMoves randomly."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "tumor",
+      "health": "8",
+      "movement": "2",
+      "faction": "enemies",
+      "type": "small",
+      "dispersed_bonus_turns": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "Brace": "5"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "move_then_do": "attack"
+      },
+      "decision_weights": "simple",
+      "move_weights": "random"
+    }
+  },
+  "Lice": {
+    "graphics": {
+      "movieclip": "Flea",
+      "name": "ENEMY_LOUSE_NAME",
+      "name_resolved": "Louse",
+      "shadow_size": ".50",
+      "scale": ".5",
+      "no_splatter": "true",
+      "tooltip": "ENEMY_LOUSE_DESC",
+      "tooltip_resolved": "Its melee attacks inflict Bruise."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "bug",
+      "health": "1",
+      "corpse_health": "0",
+      "movement": "3",
+      "faction": "enemies",
+      "type": "small",
+      "deathpoof_size": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "LiceBite",
+      "spells": []
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  }
+}

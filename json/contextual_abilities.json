@@ -1,0 +1,368 @@
+{
+  "BreakWeb": {
+    "id": "BreakWeb",
+    "template": "self_buff",
+    "tags": [
+      "contextual"
+    ],
+    "name_key": "ABILITY_BREAKWEB_NAME",
+    "name": "Break Free",
+    "desc_key": "ABILITY_BREAKWEB_DESC",
+    "description": "Break out of what you're tangled in.",
+    "class": "Colorless",
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "prioritize_dont_change_direction": "true"
+    },
+    "graphics": {
+      "animation": "attack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "disallow_modifications": "true",
+      "elements": [
+        "Break_Web"
+      ],
+      "ai_base_score": "9999"
+    }
+  },
+  "BreakShortCircuit": {
+    "id": "BreakShortCircuit",
+    "template": "self_buff",
+    "tags": [
+      "contextual"
+    ],
+    "name_key": "ABILITY_BREAKSHORTCIRCUIT_NAME",
+    "name": "Break Circuit",
+    "desc_key": "ABILITY_BREAKSHORTCIRCUIT_DESC",
+    "description": "Break out of short circuit",
+    "class": "Colorless",
+    "ability_icon": "BreakShortCircuit",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "prioritize_dont_change_direction": "true"
+    },
+    "graphics": {
+      "animation": "attack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "disallow_modifications": "true",
+      "effects": {
+        "TickDownStatus": "ShortCircuit"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "BreakShortCircuit_Familiar": {
+    "id": "BreakShortCircuit_Familiar",
+    "variant_of": "BreakShortCircuit",
+    "graphics": {
+      "animation": "none"
+    }
+  },
+  "BreakShortCircuit_Manaless": {
+    "id": "BreakShortCircuit_Manaless",
+    "variant_of": "BreakShortCircuit",
+    "cost": {
+      "infcantrip": "false",
+      "act_points": "1",
+      "mana": "0"
+    },
+    "graphics": {
+      "animation": "none"
+    }
+  },
+  "EnterMech": {
+    "id": "EnterMech",
+    "template": "targeted_status",
+    "tags": [
+      "contextual"
+    ],
+    "name_key": "ABILITY_ENTERMECH_NAME",
+    "name": "Enter Mech",
+    "desc_key": "ABILITY_ENTERMECH_DESC",
+    "description": "Get in the mech suit.",
+    "class": "Colorless",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "random_closest_tile",
+      "recalc_target_on_castpoint": "true",
+      "min_range": "1",
+      "max_range": "1",
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "mount"
+    },
+    "graphics": {
+      "animation": "portout"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "EnterMount": "enter"
+      }
+    }
+  },
+  "StruggleBase": {
+    "id": "StruggleBase",
+    "template": "melee_attack",
+    "name_key": "ABILITY_STRUGGLE_NAME",
+    "name": "Struggle",
+    "desc_key": "ABILITY_STRUGGLE_DESC",
+    "description": "25% chance to break free. If you fail, take damage.",
+    "ability_icon": "Struggle",
+    "animate_name": "true",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none",
+      "aoe_mode": "hit_consumer",
+      "aoe_considers_character_size": "false"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "effects": {
+        "ChanceToBreakFree": {
+          "stacks": "25",
+          "ability": "XXX",
+          "fail_ability": "XXX"
+        }
+      }
+    }
+  },
+  "LennyStruggle": {
+    "id": "LennyStruggle",
+    "variant_of": "StruggleBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "LennyDrop",
+          "fail_ability": "LennyStruggleFail"
+        }
+      }
+    }
+  },
+  "CHuskStruggle": {
+    "id": "CHuskStruggle",
+    "variant_of": "StruggleBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "CHuskDrop",
+          "fail_ability": "CHuskDropFail"
+        }
+      }
+    }
+  },
+  "FlailBase": {
+    "id": "FlailBase",
+    "template": "melee_attack",
+    "name_key": "ABILITY_FLAIL_NAME",
+    "name": "Flail",
+    "desc_key": "ABILITY_FLAIL_DESC",
+    "description": "Attack the unit restraining you. 25% chance to break free.",
+    "ability_icon": "Flail",
+    "animate_name": "true",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none",
+      "aoe_mode": "hit_consumer",
+      "aoe_considers_character_size": "false"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "ChanceToBreakFree": {
+          "stacks": "25",
+          "ability": "XXX"
+        }
+      }
+    }
+  },
+  "TinaFlail": {
+    "id": "TinaFlail",
+    "variant_of": "FlailBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "TinaSpit"
+        }
+      }
+    }
+  },
+  "TinaFlailRage": {
+    "id": "TinaFlailRage",
+    "variant_of": "FlailBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "TinaSpit2"
+        }
+      }
+    }
+  },
+  "MoonHandFlail": {
+    "id": "MoonHandFlail",
+    "variant_of": "FlailBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "MoonHandDrop"
+        }
+      }
+    }
+  },
+  "MoonHeadFlail": {
+    "id": "MoonHeadFlail",
+    "variant_of": "FlailBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "MoonHead_SpitCat"
+        }
+      }
+    }
+  },
+  "EscapeBase": {
+    "id": "EscapeBase",
+    "template": "melee_attack",
+    "name_key": "ABILITY_ESCAPE_NAME",
+    "name": "Escape?",
+    "desc_key": "ABILITY_ESCAPE_DESC",
+    "description": "25% chance to break free.",
+    "ability_icon": "Escape",
+    "animate_name": "true",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none",
+      "aoe_mode": "hit_consumer",
+      "aoe_considers_character_size": "false"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "effects": {
+        "ChanceToBreakFree": {
+          "stacks": "25",
+          "ability": "XXX"
+        }
+      }
+    }
+  },
+  "CaveWomanEscape": {
+    "id": "CaveWomanEscape",
+    "variant_of": "EscapeBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "CaveWomanDrop"
+        }
+      }
+    }
+  },
+  "PteroTryEscape": {
+    "id": "PteroTryEscape",
+    "variant_of": "EscapeBase",
+    "damage_instance": {
+      "effects": {
+        "ChanceToBreakFree": {
+          "ability": "PteroEscape"
+        }
+      }
+    }
+  },
+  "Thrash": {
+    "id": "Thrash",
+    "template": "melee_attack",
+    "name_key": "ABILITY_THRASH_NAME",
+    "name": "Thrash",
+    "desc_key": "ABILITY_THRASH_DESC",
+    "description": "Attack the unit restraining you.",
+    "ability_icon": "Thrash",
+    "animate_name": "true",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none",
+      "aoe_mode": "hit_consumer",
+      "aoe_considers_character_size": "false"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage"
+    }
+  },
+  "MoonHeadCommandStopHittingYourself": {
+    "id": "MoonHeadCommandStopHittingYourself",
+    "template": "melee_attack",
+    "name_key": "ABILITY_MOONHEADCOMMANDSTOPHITTINGYOURSELF_NAME",
+    "name": "Stop Hitting Yourself",
+    "desc_key": "ABILITY_MOONHEADCOMMANDSTOPHITTINGYOURSELF_DESC",
+    "description": "Command all the moon hands to attack the face.",
+    "animate_name": "true",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true",
+      "mana": "10",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "knockback_mode": "none",
+      "aoe_mode": "hit_consumer",
+      "aoe_considers_character_size": "false"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "cant_miss": "true",
+      "makes_contact": "false",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "moonhead",
+          "UseAbility": "MoonHead_CommandHeadPunch"
+        }
+      }
+    }
+  }
+}

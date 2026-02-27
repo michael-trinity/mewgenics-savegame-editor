@@ -1,0 +1,303 @@
+{
+  "SmartMetronome": {
+    "id": "SmartMetronome",
+    "template": "self_buff",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_SMARTMETRONOME_NAME",
+    "name": "Smart Metronome",
+    "desc_key": "ABILITY_SMARTMETRONOME_DESC",
+    "description": "Cast any random spell. The spell is usually good.",
+    "class": "Jester",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "metronome"
+    },
+    "damage_instance": {
+      "effects": {
+        "SmartMetronome": "20"
+      }
+    }
+  },
+  "SmartMetronome2": {
+    "id": "SmartMetronome2",
+    "variant_of": "SmartMetronome",
+    "desc_key": "ABILITY_SMARTMETRONOME2_DESC",
+    "description": "Cast any random upgraded spell. The spell is usually good.",
+    "damage_instance": {
+      "effects": {
+        "SmartMetronome": {
+          "stacks": "20",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "RNGCannon": {
+    "id": "RNGCannon",
+    "template": "spell",
+    "name_key": "ABILITY_RNGCANNON_NAME",
+    "name": "RNG Cannon",
+    "desc_key": "ABILITY_RNGCANNON_DESC",
+    "description": "Deals a random amount of damage. Requires line of sight",
+    "class": "Jester",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "5",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "animation": "hadouken",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "0",
+      "speed": "20"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "show_damage_on_0": "true",
+      "effects": {
+        "RNGCannonRandomDamage": "100"
+      }
+    }
+  },
+  "RNGCannon2": {
+    "id": "RNGCannon2",
+    "variant_of": "RNGCannon",
+    "desc_key": "ABILITY_RNGCANNON2_DESC",
+    "description": "Deals a random amount of damage and inflicts random debuffs. Requires line of sight",
+    "keyword_tooltips": {},
+    "damage_instance": {
+      "effects": {
+        "RandomStatusFromPool": {
+          "Poison": "1",
+          "Burn": "1",
+          "Bleed": "1",
+          "Blind": "1",
+          "Bruise": "1",
+          "Stun": "1",
+          "Immobile": "1",
+          "Freeze": "1",
+          "Weakness": "1",
+          "Petrify": "1",
+          "MagicWeakness": "1",
+          "Marked": "1",
+          "Sleep": "1",
+          "Charmed": "1",
+          "Slow": "1",
+          "Madness": "1",
+          "Fear": "1",
+          "Confusion": "1",
+          "Tarred": "1",
+          "Rot": "1"
+        },
+        "Poison": [
+          "1",
+          ".1"
+        ],
+        "Burn": [
+          "1",
+          ".1"
+        ],
+        "Bleed": [
+          "1",
+          ".1"
+        ],
+        "Blind": [
+          "1",
+          ".1"
+        ],
+        "Bruise": [
+          "1",
+          ".1"
+        ],
+        "Stun": [
+          "1",
+          ".1"
+        ],
+        "Immobile": [
+          "1",
+          ".1"
+        ],
+        "Freeze": [
+          "1",
+          ".1"
+        ],
+        "Weakness": [
+          "1",
+          ".1"
+        ],
+        "Petrify": [
+          "1",
+          ".1"
+        ],
+        "MagicWeakness": [
+          "1",
+          ".1"
+        ],
+        "Marked": [
+          "1",
+          ".1"
+        ],
+        "Sleep": [
+          "1",
+          ".1"
+        ],
+        "Charmed": [
+          "1",
+          ".1"
+        ],
+        "Slow": [
+          "1",
+          ".1"
+        ],
+        "Madness": [
+          "1",
+          ".1"
+        ],
+        "Fear": [
+          "1",
+          ".1"
+        ],
+        "Confusion": [
+          "1",
+          ".1"
+        ],
+        "Tarred": [
+          "1",
+          ".1"
+        ],
+        "Rot": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "Bump": {
+    "id": "Bump",
+    "template": "targeted_status",
+    "name_key": "ABILITY_BUMP_NAME",
+    "name": "Bump",
+    "desc_key": "ABILITY_BUMP_DESC",
+    "description": "Displace a target unit to a random location.",
+    "class": "Jester",
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "range_excludes_self": "false",
+      "knockback_mode": "none",
+      "restrictions": "aoe_must_be_displaceable"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "RandomDistanceDisplace": "20"
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "Bump2": {
+    "id": "Bump2",
+    "variant_of": "Bump",
+    "desc_key": "ABILITY_BUMP2_DESC",
+    "description": "Displace a target unit to a random location. If its an enemy, deal 1 damage to it.",
+    "damage_instance": {
+      "raw_damage": "1",
+      "effects": {
+        "Conditional_Enemy": {},
+        "Else": {
+          "OverrideDamage": "0"
+        }
+      }
+    }
+  },
+  "PowerUp": {
+    "id": "PowerUp",
+    "template": "self_buff",
+    "name_key": "ABILITY_POWERUP_NAME",
+    "name": "Power Up",
+    "desc_key": "ABILITY_POWERUP_DESC",
+    "description": "Spend all of your mana and gain that many random buffs.",
+    "class": "Jester",
+    "keyword_tooltips": {},
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "X_is": "current_mana"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyMultipleTimes": {
+          "stacks": "X",
+          "RandomStatusFromPool": {
+            "Quivered": "1",
+            "MoveQuivered": "1",
+            "Thorns": "1",
+            "Brace": "1",
+            "Shield": "1",
+            "DivineShield": "1",
+            "BleedThorns": "1",
+            "KineticSpikes": "1",
+            "Reflect": "1",
+            "DiminishingHealthRegen": "1",
+            "Charge": "1",
+            "AllStatsUp": "1",
+            "StrengthUp": "1",
+            "DexterityUp": "1",
+            "SpeedUp": "1",
+            "ConstitutionUp": "1",
+            "IntelligenceUp": "1",
+            "CharismaUp": "1",
+            "LuckUp": "1",
+            "PoisonLace": "1",
+            "Lifesteal": "1",
+            "CritChanceUp": "1",
+            "DodgeChance_Status": "1",
+            "HealthRegenUp": "1",
+            "BackflipWhenTargeted": "1",
+            "TempCounterAttack": "1"
+          }
+        }
+      }
+    }
+  },
+  "PowerUp2": {
+    "id": "PowerUp2",
+    "variant_of": "PowerUp",
+    "desc_key": "ABILITY_POWERUP2_DESC",
+    "description": "Spend all of your mana and give that many random buffs to yourself or another unit.",
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "20"
+    }
+  }
+}

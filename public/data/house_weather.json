@@ -1,0 +1,49 @@
+{
+  "[": {
+    "None": "14",
+    "Snow": "1"
+  },
+  "}": {
+    "None": "14",
+    "Windy": "1"
+  },
+  "Weather": {
+    "Rain": {
+      "adventure_weather": "Rain",
+      "ambient_sound": "amb_rain.ogg",
+      "particles": [
+        "Rain"
+      ],
+      "prewarm": "5",
+      "skybox_frame": "day_rain"
+    },
+    "Thunderstorm": {
+      "adventure_weather": "Thunderstorm",
+      "ambient_sound": "amb_heavyrain.ogg",
+      "particles": [
+        "Thunderstorm"
+      ],
+      "prewarm": "5",
+      "lightning_fx": "true",
+      "skybox_frame": "day_thunderstorm"
+    },
+    "Windy": {
+      "adventure_weather": "Windy",
+      "ambient_sound": "amb_windy.ogg",
+      "particles": [
+        "WindFull"
+      ],
+      "prewarm": "5",
+      "skybox_frame": "day_windy"
+    },
+    "Snow": {
+      "adventure_weather": "Snow",
+      "ambient_sound": "amb_snow.ogg",
+      "particles": [
+        "Snow"
+      ],
+      "prewarm": "20",
+      "skybox_frame": "day_snow"
+    }
+  }
+}

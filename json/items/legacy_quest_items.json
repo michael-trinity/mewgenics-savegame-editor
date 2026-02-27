@@ -1,0 +1,430 @@
+{
+  "ThrobbingGristle": {
+    "name": "ITEM_THROBBINGGRISTLE_NAME",
+    "name_resolved": "Throbbing Gristle",
+    "desc": "ITEM_THROBBINGGRISTLE_DESC",
+    "desc_resolved": "Take it to the Wall of Flesh in the Caves.\nAll units die when they get downed.\nUse: A melee attack that turns things it kills into Meat.",
+    "kind": "weapon",
+    "frame": "162",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "caves",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Meat",
+    "ability": "wp_ThrobbingGristle",
+    "global_passives": {
+      "NoCorpses": "1"
+    }
+  },
+  "PutridLeech": {
+    "name": "ARMOR_PUTRIDLEECH_NAME",
+    "name_resolved": "Putrid Leech",
+    "desc": "ARMOR_PUTRIDLEECH_DESC",
+    "desc_resolved": "Take it to the Throbbing Artery in the Boneyard.\nYou never level up and die when downed. You have Lifesteal on all of your attacks and abilities.",
+    "kind": "head",
+    "frame": "97",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "boneyard",
+    "rarity": "quest",
+    "indestructible": "true",
+    "cursed": "true",
+    "parasite": "true",
+    "set": "Leech",
+    "prevent_level_up": "true",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Leech": "1"
+      },
+      "AddStatusToSpells": {
+        "Leech": "1"
+      },
+      "AddStatusToWeapons": {
+        "Leech": "1"
+      },
+      "AddCorpseHealth": "-999999",
+      "SpawnOnDeath": {
+        "obj": "BeefyCharmedLeech",
+        "faction": "solitary_enemies"
+      }
+    }
+  },
+  "GuillotinasHead": {
+    "name": "ARMOR_GUILLOTINASHEAD_NAME",
+    "name_resolved": "Guillotina's Head",
+    "desc": "ARMOR_GUILLOTINASHEAD_DESC",
+    "desc_resolved": "Take it to the Meat Altar in the Throbbing Domain.\nAll battles are Hard battles. Enemies will attack you instead of your allies if they can. Units that contact or attack you have a chance to be Feared. Your basic attack has a +10% chance to inflict Fear.",
+    "kind": "face",
+    "frame": "95",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "meatworld",
+    "hint_prerequisite_flag": "mapflag_MeatWorldUnlocked",
+    "rarity": "quest",
+    "indestructible": "true",
+    "cursed": "true",
+    "set": [
+      "Meat,",
+      "Guts"
+    ],
+    "global_tags": [
+      "upgrade_basic_combats_to_hard"
+    ],
+    "passives": {
+      "TauntAlways": "1",
+      "RevengeDamage": {
+        "effects": {
+          "Fear": [
+            "1,",
+            ".5"
+          ]
+        }
+      },
+      "AddStatusToBasicAttack": {
+        "Fear": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "ScaldingOrb": {
+    "name": "ITEM_SCALDINGORB_NAME",
+    "name_resolved": "Scalding Orb",
+    "desc": "ITEM_SCALDINGORB_DESC",
+    "desc_resolved": "Feed it to the Man in the Moon.\nToss it to allies with open weapon slots to avoid taking Burn 3 each turn!\nApplies Burn 3 to units adjacent to allies that catch it.",
+    "kind": "weapon",
+    "frame": "163",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "moon",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Molten",
+    "ability": "wp_ScaldingOrb",
+    "spd": "3",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Burn": "3"
+      },
+      "ScaldingOrbMoonBossOneShot": {
+        "CompleteItemQuest": "ScaldingOrb",
+        "RemoveItem": "ScaldingOrb"
+      }
+    }
+  },
+  "BlackShard": {
+    "name": "ITEM_BLACKSHARD_NAME",
+    "name_resolved": "Black Shard",
+    "desc": "ITEM_BLACKSHARD_DESC",
+    "desc_resolved": "Use: Absorb a unit with {aux} or less health to power this item up.\nTransforms after 20 absorptions.\n[s:.7](Saves its power across multiple runs.)[/s]\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "164",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "core",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Obelisk",
+    "aux": "1",
+    "ability": "wp_BlackShard",
+    "passives": {
+      "ItemAuxTransform": {
+        "ge": [
+          "20",
+          "BlackShard_Glowing"
+        ]
+      }
+    }
+  },
+  "BlackShard_Glowing": {
+    "name": "ITEM_BLACKSHARD_GLOWING_NAME",
+    "name_resolved": "Glowing Black Shard",
+    "desc": "ITEM_BLACKSHARD_GLOWING_DESC",
+    "desc_resolved": "Stab it into The Coven! \nUse: Deal 5 damage with Lifesteal, inflict Burn 5, and purge all buffs. Instantly kills The Coven.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "weapon",
+    "frame": "166",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "core",
+    "rarity": "quest",
+    "quest_item_alias": "BlackShard",
+    "indestructible": "true",
+    "set": "Obelisk",
+    "ability": "wp_BlackShard_Glowing"
+  },
+  "PyrophinasCollar": {
+    "name": "ITEM_PYROPHINASCOLLAR_NAME",
+    "name_resolved": "Pyrophina's Collar",
+    "desc": "ITEM_PYROPHINASCOLLAR_DESC",
+    "desc_resolved": "Pyrophina joins you on your journey. She wishes to activate an obelisk on the moon.",
+    "kind": "trinket",
+    "frame": "219",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "moon",
+    "hint_prerequisite_flag": "mapflag_BothObelisksUnlocked",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Used",
+    "global_tags": [
+      "pyrophina_following"
+    ],
+    "passives": {
+      "SpawnItemLinkedFamiliar": {
+        "object": "PyrophinaFamiliar",
+        "break_on_pop_only": "true"
+      }
+    }
+  },
+  "ZaratanasCollar": {
+    "name": "ITEM_ZARATANASCOLLAR_NAME",
+    "name_resolved": "Zaratana's Collar",
+    "desc": "ITEM_ZARATANASCOLLAR_DESC",
+    "desc_resolved": "Zaratana joins you on your journey. She wishes to activate an obelisk in the Core.",
+    "kind": "trinket",
+    "frame": "220",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "core",
+    "hint_prerequisite_flag": "mapflag_BothObelisksUnlocked",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Used",
+    "global_tags": [
+      "zaratana_following"
+    ],
+    "passives": {
+      "SpawnItemLinkedFamiliar": {
+        "object": "ZaratanaFamiliar",
+        "break_on_pop_only": "true"
+      }
+    }
+  },
+  "CryogenicTimeChamber_Empty": {
+    "name": "ITEM_CRYOGENICTIMECHAMBER_EMPTY_NAME",
+    "name_resolved": "Cryogenic Time Chamber",
+    "desc": "ITEM_CRYOGENICTIMECHAMBER_EMPTY_DESC",
+    "desc_resolved": "Put the Throbbing King's heart inside it.\nAll enemy bodies revive to 30% health at the end of each round (except bosses). Find a random pill at the end of each battle.",
+    "kind": "trinket",
+    "frame": "224",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "meatworld",
+    "hint_prerequisite_flag": "mapflag_MeatWorldUnlockedFull",
+    "rarity": "quest",
+    "indestructible": "true",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "FindItemFromPool": "pills"
+      }
+    },
+    "global_passives": {
+      "GlobalEnemyAutoRevive": "30%"
+    }
+  },
+  "CryogenicTimeChamber_Full": {
+    "name": "ITEM_CRYOGENICTIMECHAMBER_FULL_NAME",
+    "name_resolved": "Cryogenic Time Chamber (Throbbing)",
+    "desc": "ITEM_CRYOGENICTIMECHAMBER_FULL_DESC",
+    "desc_resolved": "Use it on the time machine in the Lab.\nAll enemy bodies revive to full health at the end of each round (except bosses). +2 Health Regen.",
+    "kind": "trinket",
+    "frame": "225",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "lab",
+    "rarity": "quest",
+    "indestructible": "true",
+    "passives": {
+      "HealthRegenUp": "2"
+    },
+    "global_passives": {
+      "GlobalEnemyAutoRevive": "100%"
+    }
+  },
+  "ReceiverAntenna": {
+    "name": "ARMOR_RECEIVERANTENNA_NAME",
+    "name_resolved": "Receiver Antenna",
+    "desc": "ARMOR_RECEIVERANTENNA_DESC",
+    "desc_resolved": "Place it far in the past.\nAll events cause special happenings.\nGain +2 Charge whenever an ally spends mana.",
+    "kind": "head",
+    "frame": "98",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "jurassic",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": [
+      "Bionic,",
+      "Cyborg"
+    ],
+    "global_tags": [
+      "all_normal_events_are_weather"
+    ],
+    "shield": "8",
+    "passives": {
+      "Metal": "1",
+      "StatusWhenAllySpendsMana": {
+        "Charge": "2"
+      }
+    }
+  },
+  "TransmitterAntenna": {
+    "name": "ARMOR_TRANSMITTERANTENNA_NAME",
+    "name_resolved": "Transmitter Antenna",
+    "desc": "ARMOR_TRANSMITTERANTENNA_DESC",
+    "desc_resolved": "Place it far in the future.\nYour spells cost -2 mana. Every time you or another cat casts a spell, scramble that spell for the rest of the battle.",
+    "kind": "head",
+    "frame": "99",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "theend",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": [
+      "Bionic,",
+      "Cyborg"
+    ],
+    "passives": {
+      "Metal": "1",
+      "AlliesScrambleSpellAfterCast": "1",
+      "ReduceManaCost": "2"
+    }
+  },
+  "SignalAmplifier": {
+    "name": "ITEM_SIGNALAMPLIFIER_NAME",
+    "name_resolved": "Signal Amplifier",
+    "desc": "ITEM_SIGNALAMPLIFIER_DESC",
+    "desc_resolved": "Place it on a floating head inside The Rift.\nSpawn a random robot miniboss with Madness at the end of the first round.\nUse: Energize all robots and give yourself All Stats Up.",
+    "kind": "weapon",
+    "frame": "165",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "dimensionx",
+    "hint_prerequisite_flag": "mapflag_DimensionXUnlocked",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": [
+      "Bionic,",
+      "Cyborg"
+    ],
+    "ability": "wp_SignalAmplifier",
+    "passives": {
+      "AbilityOnRoundEndOnce": {
+        "ability": "wp_SignalAmplifierSpawnTerminator",
+        "even_of_stunned": "true"
+      }
+    }
+  },
+  "JarOfRadiation": {
+    "name": "ITEM_JAROFRADIATION_NAME",
+    "name_resolved": "Jar of Radiation",
+    "desc": "ITEM_JAROFRADIATION_DESC",
+    "desc_resolved": "Fill it with the blood of the Throbbing King.\nAt the end of your turn, deal 1 damage to EVERYTHING. At the end of each battle, gain +1 to a random stat and -1 to a random stat, permanently.",
+    "kind": "trinket",
+    "frame": "222",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "meatworld",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Radioactive",
+    "failable": "true",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "ForceUseAbility": "tk_JarOfRadiation"
+      },
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "RandomPermanentStat": "-1"
+      }
+    }
+  },
+  "JarOfRadiatedBlood": {
+    "name": "ITEM_JAROFRADIATEDBLOOD_NAME",
+    "name_resolved": "Jar of Radiated Blood",
+    "desc": "ITEM_JAROFRADIATEDBLOOD_DESC",
+    "desc_resolved": "Add a bit of Chaos to it from The Rift.\nWhenever you take damage, spawn a friendly Clot that can grow into a copy of yourself. At the end of each battle, gain +2 to a random stat and -2 to a random stat, permanently.",
+    "kind": "trinket",
+    "frame": "223",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "dimensionx",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Radioactive",
+    "failable": "true",
+    "passives": {
+      "SpawnThingOnDamage": {
+        "object": "CatCopyClot",
+        "good": "false",
+        "spawn_on_death_hit": "false"
+      },
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "RandomPermanentStat": "-2"
+      }
+    }
+  },
+  "JarOfChaos": {
+    "name": "ITEM_JAROFCHAOS_NAME",
+    "name_resolved": "Jar Of Chaos",
+    "desc": "ITEM_JAROFCHAOS_DESC",
+    "desc_resolved": "Bring it to Dr. Beanies.\n...or drink it to permanently gain All Stats Up 2 and upgrade all of your spells.",
+    "kind": "trinket",
+    "frame": "239",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "indestructible": "true",
+    "rarity": "quest",
+    "consumable": "true",
+    "durability": "1",
+    "dont_destroy_on_0": "true",
+    "set": "Radioactive",
+    "failable": "true",
+    "ability": "cm_JarOfChaos",
+    "passives": {
+      "DurabilityTransform": {
+        "eq": [
+          "0",
+          "JarOfNothing"
+        ]
+      }
+    }
+  },
+  "JarOfNothing": {
+    "name": "ITEM_JAROFNOTHING_NAME",
+    "name_resolved": "Jar Of Nothing",
+    "desc": "ITEM_JAROFNOTHING_DESC",
+    "desc_resolved": "It's trash now.",
+    "kind": "trinket",
+    "frame": "242",
+    "rarity": "common",
+    "dont_destroy_on_0": "true"
+  },
+  "Nuke": {
+    "name": "ARMOR_NUKE_NAME",
+    "name_resolved": "Nuke",
+    "desc": "ARMOR_NUKE_DESC",
+    "desc_resolved": "Take it to The Infinite and wait for the signal from Dr. Beanies to set it off.\n+2 Brace. If this cat dies, it explodes and damages everything for 50.\nBonus Ability: Trigger the Nuke.",
+    "kind": "neck",
+    "frame": "77",
+    "quest_item": "true",
+    "legacy_quest": "true",
+    "hint_destination": "endoftime",
+    "rarity": "quest",
+    "indestructible": "true",
+    "set": "Radioactive",
+    "shield": "10",
+    "spd": "-2",
+    "failable": "true",
+    "passives": {
+      "Metal": "1",
+      "AddHiddenTag": "the_nuke_bearer",
+      "BonusAbility": "neck_NukeBonus",
+      "DeathRattle": "neck_NukeExplode",
+      "Brace": "2"
+    }
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ],
+      "verycloseup": [
+        "verycloseup"
+      ],
+      "closeup": [
+        "closeup"
+      ],
+      "zoomedout": [
+        "zoomedout"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unprompted": {
+      "do_random_sequence": [
+        "unprompted1,",
+        "unprompted2,",
+        "unprompted3,",
+        "unprompted4,",
+        "unprompted5,",
+        "unprompted6"
+      ]
+    },
+    "unprompted1": {
+      "dialog": "NPC_BEANIES_UNPROMPTED1_1"
+    },
+    "unprompted2": {
+      "dialog": "NPC_BEANIES_UNPROMPTED2_2"
+    },
+    "unprompted3": {
+      "dialog": "NPC_BEANIES_UNPROMPTED3_3"
+    },
+    "unprompted4": {
+      "dialog": "NPC_BEANIES_UNPROMPTED4_1"
+    },
+    "unprompted5": {
+      "dialog": "NPC_BEANIES_UNPROMPTED5_2"
+    },
+    "unprompted6": {
+      "dialog": "NPC_BEANIES_UNPROMPTED6_3"
+    },
+    "also": {
+      "dialog": "NPC_BEANIES_ALSO_1"
+    },
+    "beanies_begin_accepting_cats": {
+      "dialog": "NPC_BEANIES_BEANIES_BEGIN_ACCEPTING_CATS_7",
+      "set_state": "closeup",
+      "begin_accepting_cats": "beanies"
+    },
+    "beanies_quests_intro": {
+      "dialog": "NPC_BEANIES_BEANIES_QUESTS_INTRO_4",
+      "set_state": "idle",
+      "get": "npc_reward",
+      "gather_questitem_info": "newest",
+      "do_sidequest_sequence": "beaniesquest_intro"
+    },
+    "beanies_quests_repeat": {
+      "set_state": "idle",
+      "dialog": "NPC_BEANIES_BEANIES_QUESTS_REPEAT_3",
+      "get": "npc_reward",
+      "gather_questitem_info": "newest",
+      "do_sidequest_sequence": "beaniesquest_intro"
+    },
+    "beanies_quest_complete": {
+      "gather_questitem_info": "success",
+      "do_sidequest_sequence": "beaniesquest_complete"
+    },
+    "beanies_quest_fail": {
+      "gather_questitem_info": "fail",
+      "do_sidequest_sequence": "beaniesquest_fail"
+    },
+    "beaniesquest_intro_PersuasionDevice": {
+      "set_state": "idle",
+      "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_PERSUASIONDEVICE_7"
+    },
+    "beaniesquest_complete_PersuasionDevice": {
+      "set_state": "idle",
+      "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_PERSUASIONDEVICE_5",
+      "get": "sidequest_reward"
+    },
+    "beaniesquest_fail_PersuasionDevice": {
+      "set_state": "idle",
+      "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_PERSUASIONDEVICE_7",
+      "get": "sidequest_fail"
+    },
+    "/*": "copy",
+    "paste": "template",
+    "for": "new",
+    "items": "(paste",
+    "iten": "name",
+    "after": "the",
+    "_,": "make",
+    "sure": "theres",
+    "no": "space",
+    "tho!)": "beaniesquest_intro_"
+  },
+  "beaniesquest_complete_": {
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_": {
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_MagicMirror": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_MAGICMIRROR_9"
+  },
+  "beaniesquest_complete_MagicMirror": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_MAGICMIRROR_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_MagicMirror": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_MAGICMIRROR_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_ChaosDevice": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_CHAOSDEVICE_7"
+  },
+  "beaniesquest_complete_ChaosDevice": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_CHAOSDEVICE_3",
+    "set_state": "closeup",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_ChaosDevice": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_CHAOSDEVICE_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_MeStone": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_MESTONE_5"
+  },
+  "beaniesquest_complete_MeStone": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_MESTONE_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_MeStone": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_MESTONE_3",
+    "set_state": "closeup",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_AngryFace": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_ANGRYFACE_4"
+  },
+  "beaniesquest_complete_AngryFace": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_ANGRYFACE_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_AngryFace": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_ANGRYFACE_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_FartFace": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_FARTFACE_7"
+  },
+  "beaniesquest_complete_FartFace": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_FARTFACE_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_FartFace": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_FARTFACE_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_SpiderInjector": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_SPIDERINJECTOR_8"
+  },
+  "beaniesquest_complete_SpiderInjector": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_SPIDERINJECTOR_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_SpiderInjector": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_SPIDERINJECTOR_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_PartyDetonator": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_PARTYDETONATOR_10"
+  },
+  "beaniesquest_complete_PartyDetonator": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_PARTYDETONATOR_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_PartyDetonator": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_PARTYDETONATOR_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_AirHorn": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_AIRHORN_6"
+  },
+  "beaniesquest_complete_AirHorn": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_AIRHORN_10",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_AirHorn": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_AIRHORN_13",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_NuclearKnife": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_NUCLEARKNIFE_7"
+  },
+  "beaniesquest_complete_NuclearKnife": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_NUCLEARKNIFE_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_NuclearKnife": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_NUCLEARKNIFE_9",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_AnimalHands": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_ANIMALHANDS_8"
+  },
+  "beaniesquest_complete_AnimalHands": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_ANIMALHANDS_10",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_AnimalHands": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_ANIMALHANDS_3",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_TheLoner": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_THELONER_4"
+  },
+  "beaniesquest_complete_TheLoner": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_THELONER_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_TheLoner": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_THELONER_12",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_GlassCannon": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_GLASSCANNON_4"
+  },
+  "beaniesquest_complete_GlassCannon": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_GLASSCANNON_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_GlassCannon": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_GLASSCANNON_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_Stopwatch": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_STOPWATCH_6"
+  },
+  "beaniesquest_complete_Stopwatch": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_STOPWATCH_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_Stopwatch": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_STOPWATCH_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_FigLeaf": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_FIGLEAF_7"
+  },
+  "beaniesquest_complete_FigLeaf": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_FIGLEAF_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_FigLeaf": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_FIGLEAF_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_DiseaseJar": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_DISEASEJAR_7"
+  },
+  "beaniesquest_complete_DiseaseJar": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_DISEASEJAR_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_DiseaseJar": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_DISEASEJAR_9",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_HardPill": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_HARDPILL_6"
+  },
+  "beaniesquest_complete_HardPill": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_HARDPILL_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_HardPill": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_HARDPILL_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_DimensionalDivider": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_DIMENSIONALDIVIDER_7"
+  },
+  "beaniesquest_complete_DimensionalDivider": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_DIMENSIONALDIVIDER_8",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_DimensionalDivider": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_DIMENSIONALDIVIDER_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_Trapfest99": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_TRAPFEST99_7"
+  },
+  "beaniesquest_complete_Trapfest99": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_TRAPFEST99_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_Trapfest99": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_TRAPFEST99_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_MysteriousDice": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_MYSTERIOUSDICE_6"
+  },
+  "beaniesquest_complete_MysteriousDice": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_MYSTERIOUSDICE_8",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_MysteriousDice": {
+    "set_state": "zoomedout",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_MYSTERIOUSDICE_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_TheIOU": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_THEIOU_12"
+  },
+  "beaniesquest_complete_TheIOU": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_THEIOU_8",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_TheIOU": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_THEIOU_8",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_ExperimentalTreatment": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_EXPERIMENTALTREATMENT_6"
+  },
+  "beaniesquest_complete_ExperimentalTreatment": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_EXPERIMENTALTREATMENT_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_ExperimentalTreatment": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_EXPERIMENTALTREATMENT_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_MysteriousGlasses": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_MYSTERIOUSGLASSES_6"
+  },
+  "beaniesquest_complete_MysteriousGlasses": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_MYSTERIOUSGLASSES_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_MysteriousGlasses": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_MYSTERIOUSGLASSES_3",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_Redacted": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_REDACTED_11"
+  },
+  "beaniesquest_complete_Redacted": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_REDACTED_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_Redacted": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_REDACTED_5",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_PartialLobotomy": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_PARTIALLOBOTOMY_7"
+  },
+  "beaniesquest_complete_PartialLobotomy": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_PARTIALLOBOTOMY_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_PartialLobotomy": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_PARTIALLOBOTOMY_6",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_UltraVision3000": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_ULTRAVISION3000_10"
+  },
+  "beaniesquest_complete_UltraVision3000": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_ULTRAVISION3000_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_UltraVision3000": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_ULTRAVISION3000_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_ChadImplant": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_CHADIMPLANT_10"
+  },
+  "beaniesquest_complete_ChadImplant": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_CHADIMPLANT_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_ChadImplant": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_CHADIMPLANT_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_StorageLocker": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_STORAGELOCKER_6"
+  },
+  "beaniesquest_complete_StorageLocker": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_STORAGELOCKER_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_StorageLocker": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_STORAGELOCKER_9",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_AI": {
+    "set_state": "zoomedout",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_AI_7"
+  },
+  "beaniesquest_complete_AI": {
+    "set_state": "zoomedout",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_AI_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_AI": {
+    "set_state": "zoomedout",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_AI_11",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_RealityScrambler": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_REALITYSCRAMBLER_6"
+  },
+  "beaniesquest_complete_RealityScrambler": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_REALITYSCRAMBLER_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_RealityScrambler": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_REALITYSCRAMBLER_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_BubbleBoy": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_BUBBLEBOY_8"
+  },
+  "beaniesquest_complete_BubbleBoy": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_BUBBLEBOY_8",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_BubbleBoy": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_BUBBLEBOY_8",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_PersonalHeater": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_PERSONALHEATER_8"
+  },
+  "beaniesquest_complete_PersonalHeater": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_PERSONALHEATER_7",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_PersonalHeater": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_PERSONALHEATER_10",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_NDEDevice": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_NDEDEVICE_8"
+  },
+  "beaniesquest_complete_NDEDevice": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_NDEDEVICE_8",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_NDEDevice": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_NDEDEVICE_8",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_MultilinkCable": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_MULTILINKCABLE_8"
+  },
+  "beaniesquest_complete_MultilinkCable": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_MULTILINKCABLE_9",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_MultilinkCable": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_MULTILINKCABLE_2",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_HiveMind": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_HIVEMIND_9"
+  },
+  "beaniesquest_complete_HiveMind": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_HIVEMIND_6",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_HiveMind": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_HIVEMIND_4",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_PrincessHat": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_PRINCESSHAT_7"
+  },
+  "beaniesquest_complete_PrincessHat": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_PRINCESSHAT_5",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_PrincessHat": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_PRINCESSHAT_7",
+    "get": "sidequest_fail"
+  },
+  "beaniesquest_intro_Generic": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_INTRO_GENERIC_3"
+  },
+  "beaniesquest_complete_Generic": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_COMPLETE_GENERIC_3",
+    "get": "sidequest_reward"
+  },
+  "beaniesquest_fail_Generic": {
+    "dialog": "NPC_BEANIES_BEANIESQUEST_FAIL_GENERIC_3",
+    "get": "sidequest_fail"
+  },
+  "unknown": {
+    "dialog": "NPC_BEANIES_UNKNOWN_1",
+    "get": "npc_reward"
+  },
+  "beanies_lab_intro": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_LAB_INTRO_24",
+    "play_cutscene": "credits_1",
+    "trigger_unlock": "song_unlock_get_in_the_cage",
+    "restart_npc_music": "1"
+  },
+  "beanies_timemachine_intro": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_TIMEMACHINE_INTRO_12",
+    "trigger_unlock": "time_machine_quest_begin"
+  },
+  "beanies_timemachine_2": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_TIMEMACHINE_2_20"
+  },
+  "beanies_jurassic_intro": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_JURASSIC_INTRO_5"
+  },
+  "beanies_future_intro": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_FUTURE_INTRO_11"
+  },
+  "beanies_seefuture": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_SEEFUTURE_15"
+  },
+  "beanies_theend_intro": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_THEEND_INTRO_5"
+  },
+  "beanies_seetheend": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_SEETHEEND_12"
+  },
+  "beanies_terminator1_defeat": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_TERMINATOR1_DEFEAT_10",
+    "trigger_unlock": "quest_begin_receiver2"
+  },
+  "beanies_terminator2_defeat": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_TERMINATOR2_DEFEAT_7",
+    "trigger_unlock": "quest_begin_transmitter2"
+  },
+  "beanies_hitler3": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_HITLER3_12"
+  },
+  "beanies_hitler3_defeat": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_HITLER3_DEFEAT_13",
+    "trigger_unlock": "quest_begin_amplifier2"
+  },
+  "beanies_bombquest_begin": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_BEGIN_13",
+    "trigger_unlock": "reset_nuke_quest"
+  },
+  "beanies_bombquest_2": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_2_6"
+  },
+  "beanies_bombquest_3": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_3_10",
+    "trigger_unlock": "nuke_quest_get_nuke"
+  },
+  "beanies_bombquest_fail_jarofradiation": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_FAIL_JAROFRADIATION_7",
+    "trigger_unlock": "reset_nuke_quest"
+  },
+  "beanies_bombquest_fail_jarofblood": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_FAIL_JAROFBLOOD_13",
+    "trigger_unlock": "reset_nuke_quest"
+  },
+  "beanies_bombquest_fail_jarofchaos": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_FAIL_JAROFCHAOS_10",
+    "trigger_unlock": "reset_nuke_quest"
+  },
+  "beanies_bombquest_fail_nuke": {
+    "set_state": "closeup",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_FAIL_NUKE_12",
+    "trigger_unlock": "reset_nuke_quest"
+  },
+  "beanies_bombquest_amnesia": {
+    "set_state": "idle",
+    "dialog": "NPC_BEANIES_BEANIES_BOMBQUEST_AMNESIA_6"
+  },
+  "beanies_iloveyou": {
+    "dialog": "NPC_BEANIES_BEANIES_ILOVEYOU_3"
+  },
+  "beanies_screenshake_test": {
+    "dialog": "NPC_BEANIES_BEANIES_SCREENSHAKE_TEST_7",
+    "screenshake": [
+      ".5,",
+      "10"
+    ],
+    "sfx": "PickupCoin"
+  }
+}

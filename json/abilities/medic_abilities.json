@@ -1,0 +1,2480 @@
+{
+  "RangedHeal": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HEALINGWORD_NAME",
+      "name_resolved": "Healing Word",
+      "desc": "ABILITY_HEALINGWORD_DESC",
+      "desc_resolved": "Heal a unit at range.",
+      "class": "Medic"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing1",
+      "affected_particle": "HealMed"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "3",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "type": "spell",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "RangedHeal2": {
+    "variant_of": "RangedHeal",
+    "meta": {
+      "desc": "ABILITY_HEALINGWORD2_DESC",
+      "desc_resolved": "Heal other units in an area at range."
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "6",
+      "max_aoe": "1"
+    }
+  },
+  "MeleeHeal": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_CUREWOUNDS_NAME",
+      "name_resolved": "Cure Wounds",
+      "desc": "ABILITY_CUREWOUNDS_DESC",
+      "desc_resolved": "Heal an adjacent unit.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "heal": "10",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "MeleeHeal2": {
+    "variant_of": "MeleeHeal",
+    "meta": {
+      "desc": "ABILITY_CUREWOUNDS2_DESC",
+      "desc_resolved": "Heal all adjacent units."
+    },
+    "target": {
+      "aoe_mode": "cross"
+    }
+  },
+  "Malaise": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MALAISE_NAME",
+      "name_resolved": "Malaise",
+      "desc": "ABILITY_MALAISE_DESC",
+      "desc_resolved": "Inflict Weakness on units in an area.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Weakness": "2"
+      },
+      "elements": [
+        "Poison"
+      ]
+    }
+  },
+  "Malaise2": {
+    "variant_of": "Malaise",
+    "meta": {
+      "desc": "ABILITY_MALAISE2_DESC",
+      "desc_resolved": "Inflict Weakness and Poison on units in an area."
+    },
+    "damage_instance": {
+      "effects": {
+        "Weakness": "3",
+        "Poison": "3"
+      }
+    }
+  },
+  "OpenWounds": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_OPENWOUNDS_NAME",
+      "name_resolved": "Open Wounds",
+      "desc": "ABILITY_OPENWOUNDS_DESC",
+      "desc_resolved": "An attack that deals more damage the less health the target unit has.\n[s:.7](based on their health percent)[/s]",
+      "class": "Medic",
+      "type_icon": "melee",
+      "icon_shell_frame": "big_damage",
+      "icon_damage_display": "0-25"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "show_damage_on_0": "true",
+      "effects": {
+        "DamageBasedOnMissingHealth": "25"
+      }
+    }
+  },
+  "OpenWounds2": {
+    "variant_of": "OpenWounds",
+    "meta": {
+      "desc": "ABILITY_OPENWOUNDS2_DESC",
+      "desc_resolved": "An attack that deals even more damage the less health the target unit has.\n[s:.7](based on their health percent)[/s]",
+      "icon_damage_display": "0-50"
+    },
+    "damage_instance": {
+      "effects": {
+        "DamageBasedOnMissingHealth": "50"
+      }
+    }
+  },
+  "Prayer": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PRAYER_NAME",
+      "name_resolved": "Prayer",
+      "desc": "ABILITY_PRAYER_DESC",
+      "desc_resolved": "Heal units in an area.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "HealSmall",
+      "animation": "pray"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Prayer2": {
+    "variant_of": "Prayer",
+    "meta": {
+      "desc": "ABILITY_PRAYER2_DESC",
+      "desc_resolved": "Heal units in a larger area. Infinite range."
+    },
+    "target": {
+      "max_aoe": "3",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "heal": "2"
+    }
+  },
+  "Convert": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CONVERT_NAME",
+      "name_resolved": "Convert",
+      "desc": "ABILITY_CONVERT_DESC",
+      "desc_resolved": "Inflict Charm 2 on an adjacent unit.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "particle": "CharmedHearts"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "level",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "Charmed": "2"
+      }
+    }
+  },
+  "Convert2": {
+    "variant_of": "Convert",
+    "meta": {
+      "desc": "ABILITY_CONVERT2_DESC",
+      "desc_resolved": "Inflict Charm 2 on an adjacent unit. Non-boss enemies with less than 25% health join your party."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "Conditional_NotBoss": {
+            "Conditional_HealthThreshold": {
+              "threshold_flat": "5",
+              "threshold_percent": "25%",
+              "CaptureFamiliar": "1",
+              "FactionConversion": "1",
+              "FullHeal": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Cleanse": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CLEANSE_NAME",
+      "name_resolved": "Cleanse",
+      "desc": "ABILITY_CLEANSE_DESC",
+      "desc_resolved": "Remove all debuffs from units in an area.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "Cleanse"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "2+level*2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Cleanse": "0"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Cleanse2": {
+    "variant_of": "Cleanse",
+    "meta": {
+      "desc": "ABILITY_CLEANSE2_DESC",
+      "desc_resolved": "Remove all debuffs from units in an area. Those units get +1 [img:divineshield] for each debuff removed."
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "1"
+      }
+    }
+  },
+  "Purge": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PURGEMEDIC_NAME",
+      "name_resolved": "Purge",
+      "desc": "ABILITY_PURGEMEDIC_DESC",
+      "desc_resolved": "Remove all buffs from a unit.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "affected_particle": "Purge"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Purge": "0"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Purge2": {
+    "variant_of": "Purge",
+    "meta": {
+      "desc": "ABILITY_PURGEMEDIC2_DESC",
+      "desc_resolved": "Remove all buffs from a unit. Deal 3 damage to that unit for each unique status effect removed."
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Purge": "3"
+      }
+    }
+  },
+  "HereticMark": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HERETICMARK_NAME",
+      "name_resolved": "Heretic Mark",
+      "desc": "ABILITY_HERETICMARK_DESC",
+      "desc_resolved": "Inflict Ostracized 2 on a unit.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "affected_particle": "fx_heretic",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "max_range": "7",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Ostracized": "2"
+      }
+    }
+  },
+  "HereticMark2": {
+    "variant_of": "HereticMark",
+    "meta": {
+      "desc": "ABILITY_HERETICMARK2_DESC",
+      "desc_resolved": "Inflict Ostracized 4 on a unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "Ostracized": "4"
+      }
+    }
+  },
+  "Zealot": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ZEALOT_NAME",
+      "name_resolved": "Zealot",
+      "desc": "ABILITY_ZEALOT_DESC",
+      "desc_resolved": "Gain +1 [img:divineshield].",
+      "class": "Medic",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "pray"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "DivineShield": "1"
+      }
+    }
+  },
+  "Zealot2": {
+    "variant_of": "Zealot",
+    "meta": {
+      "desc": "ABILITY_ZEALOT2_DESC",
+      "desc_resolved": "Gain +1 [img:divineshield].\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Haste": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HASTE_NAME",
+      "name_resolved": "Haste",
+      "desc": "ABILITY_HASTE_DESC",
+      "desc_resolved": "Give a unit +10 [img:spd] until the end of its next turn.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "fx_haste",
+      "animation": "pointout"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+2*level",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TempSpeedUp": "10"
+      }
+    }
+  },
+  "Haste2": {
+    "variant_of": "Haste",
+    "meta": {
+      "desc": "ABILITY_HASTE2_DESC",
+      "desc_resolved": "Give units in an area +10 [img:spd] until the end of their next turns."
+    },
+    "target": {
+      "max_aoe": "1"
+    }
+  },
+  "Rally": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_RALLY_NAME",
+      "name_resolved": "Rally",
+      "desc": "ABILITY_RALLY_DESC",
+      "desc_resolved": "Force a unit to attack one of its enemies.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "ForceAttack": "1"
+      }
+    }
+  },
+  "Rally2": {
+    "variant_of": "Rally",
+    "meta": {
+      "desc": "ABILITY_RALLY2_DESC",
+      "desc_resolved": "Force units in an area to each attack one of their enemies."
+    },
+    "target": {
+      "max_aoe": "1"
+    }
+  },
+  "BuddyUp": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_BUDDYUP_NAME",
+      "name_resolved": "Buddy Up",
+      "desc": "ABILITY_BUDDYUP_DESC",
+      "desc_resolved": "Jump to an open tile next to an ally.",
+      "class": "Medic",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_adjacent_to_ally"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none"
+    }
+  },
+  "BuddyUp2": {
+    "variant_of": "BuddyUp",
+    "meta": {
+      "desc": "ABILITY_BUDDYUP2_DESC",
+      "desc_resolved": "Jump to an open tile next to an ally.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    }
+  },
+  "HealingFall": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_HEALINGFALL_NAME",
+      "name_resolved": "Healing Fall",
+      "desc": "ABILITY_HEALINGFALL_DESC",
+      "desc_resolved": "Jump to an open tile, then heal each adjacent unit.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "cost": {
+      "mana": "8",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "4",
+      "restrictions": [
+        "must_be_moveable"
+      ]
+    },
+    "damage_instance": {
+      "heal": "5",
+      "type": "spell",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "HealingFall2": {
+    "variant_of": "HealingFall",
+    "meta": {
+      "desc": "ABILITY_HEALINGFALL2_DESC",
+      "desc_resolved": "Jump to an open tile, then heal each adjacent unit.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    }
+  },
+  "RallyCharge": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_RALLYCHARGE_NAME",
+      "name_resolved": "Holy Dash",
+      "desc": "ABILITY_RALLYCHARGE_DESC",
+      "desc_resolved": "Dash forward, heal a unit and give it a random stat up.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "dashatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {},
+    "damage_instance": {
+      "heal": "5",
+      "type": "spell",
+      "effects": {
+        "RandomStatUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "RallyCharge2": {
+    "variant_of": "RallyCharge",
+    "meta": {
+      "desc": "ABILITY_RALLYCHARGE2_DESC",
+      "desc_resolved": "Dash forward, heal a unit and give it 3 random stat ups."
+    },
+    "cost": {
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatUp": "3"
+      }
+    }
+  },
+  "ReverseDamage": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_REVERSEDAMAGE_NAME",
+      "name_resolved": "Reverse Damage",
+      "desc": "ABILITY_REVERSEDAMAGE_DESC",
+      "desc_resolved": "Reverse the last damage an adjacent unit took.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "effects": {
+        "UndoDamage": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "ReverseDamage2": {
+    "variant_of": "ReverseDamage",
+    "meta": {
+      "desc": "ABILITY_REVERSEDAMAGE2_DESC",
+      "desc_resolved": "Reverse the last damage a unit within range took."
+    },
+    "target": {
+      "target_mode": "tile",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "4",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    }
+  },
+  "Rebuke": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_REBUKE_NAME",
+      "name_resolved": "Rebuke",
+      "desc": "ABILITY_REBUKE_DESC",
+      "desc_resolved": "Deal damage to a unit equal to the damage that unit last dealt.",
+      "class": "Medic",
+      "type_icon": "magic",
+      "icon_shell_frame": "attack",
+      "icon_damage_display": "?"
+    },
+    "graphics": {
+      "particle": "rebuke"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "show_damage_on_0": "true",
+      "effects": {
+        "RebukeDamage": "1"
+      }
+    }
+  },
+  "Rebuke2": {
+    "variant_of": "Rebuke",
+    "meta": {
+      "desc": "ABILITY_REBUKE2_DESC",
+      "desc_resolved": "Deal damage to a unit equal to twice the damage that unit last dealt."
+    },
+    "damage_instance": {
+      "effects": {
+        "RebukeDamage": "2"
+      }
+    }
+  },
+  "Wish": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_WISH_NAME",
+      "name_resolved": "Wish",
+      "desc": "ABILITY_WISH_DESC",
+      "desc_resolved": "Target an area. At the beginning of your next turn, heal all units in that area.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "delayed_trigger": "true",
+      "max_aoe": "1",
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "heal": "10",
+      "type": "spell",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Wish2": {
+    "variant_of": "Wish",
+    "meta": {
+      "desc": "ABILITY_WISH2_DESC",
+      "desc_resolved": "Target an area. At the beginning of your next turn, heal all units in that area. This spell tracks its target if you directly targeted a unit.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "track_target": "true"
+    }
+  },
+  "WitchHunt": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_WITCHHUNT_NAME",
+      "name_resolved": "Witch Hunt",
+      "desc": "ABILITY_WITCHHUNT_DESC",
+      "desc_resolved": "Put a bounty on a unit. When that unit dies, its killer gains All Stats Up.",
+      "class": "Medic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "StatBounty": "1"
+      }
+    }
+  },
+  "WitchHunt2": {
+    "variant_of": "WitchHunt",
+    "meta": {
+      "desc": "ABILITY_WITCHHUNT2_DESC",
+      "desc_resolved": "Put a bounty on a unit. When that unit dies, it becomes meat and its killer gains All Stats Up.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "Meaty": "1"
+      }
+    }
+  },
+  "FriendOrFoe": {
+    "template": "spell",
+    "meta": {
+      "name": "ABIITY_FRIENDORFOE_NAME",
+      "name_resolved": "Friend or Foe",
+      "desc": "ABIITY_FRIENDORFOE_DESC",
+      "desc_resolved": "A ranged spell that heals allies and damages enemies.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "HealMed",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "type": "spell",
+      "effects": {
+        "DamageOrHealConditionally": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "FriendOrFoe2": {
+    "variant_of": "FriendOrFoe",
+    "meta": {
+      "desc": "ABIITY_FRIENDORFOE2_DESC",
+      "desc_resolved": "An infinitely ranged spell that heals allies and damages enemies."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Revive": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_REVIVE_NAME",
+      "name_resolved": "Revive",
+      "desc": "ABILITY_REVIVE_DESC",
+      "desc_resolved": "Revive a body to 50% HP and cure one of its injuries.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig",
+      "animation": "pray"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "can_revive": "true",
+      "effects": {
+        "Conditional_Corpse": {
+          "Revive": "50%",
+          "HealRandomInjury": "1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Revive2": {
+    "variant_of": "Revive",
+    "meta": {
+      "desc": "ABILITY_REVIVE2_DESC",
+      "desc_resolved": "Revive a body to 100% HP and cure one of its injuries. If it was an enemy, it gets charmed."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Corpse": {
+          "Revive": "100%",
+          "Conditional_Enemy": {
+            "PermanentCharm": "1"
+          }
+        }
+      }
+    }
+  },
+  "HolyLight": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HOLYLIGHT_NAME",
+      "name_resolved": "Holy Light",
+      "desc": "ABILITY_HOLYLIGHT_DESC",
+      "desc_resolved": "Heal allies and damage enemies in an area. This spell has half effect outside its center.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "center_particle": "Holybeam",
+      "area_particle": "Holybeam",
+      "animation": "pray"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "max_aoe": "1",
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "type": "spell",
+      "effects": {
+        "DamageOrHealConditionally": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    },
+    "splash_damage": {
+      "damage": "5",
+      "type": "spell",
+      "effects": {
+        "DamageOrHealConditionally": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "HolyLight2": {
+    "variant_of": "HolyLight",
+    "meta": {
+      "desc": "ABILITY_HOLYLIGHT2_DESC",
+      "desc_resolved": "Heal allies and damage enemies in an area. This spell has half effect outside its center.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "8"
+    }
+  },
+  "Ethereal": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ETHEREAL_NAME",
+      "name_resolved": "Ethereal",
+      "desc": "ABILITY_ETHEREAL_DESC",
+      "desc_resolved": "Gain 4 [img:divineshield], 3 [img:shield], heal 2 HP, and Brace 1.",
+      "class": "Medic",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "proud"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "16"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "DivineShield": "4",
+        "Shield": "3",
+        "Brace": "1"
+      }
+    }
+  },
+  "Ethereal2": {
+    "variant_of": "Ethereal",
+    "meta": {
+      "desc": "ABILITY_ETHEREAL2_DESC",
+      "desc_resolved": "Gain Thorns 6, Reflect 5, 4 [img:divineshield],\n3 [img:shield], heal 2 HP and Brace 1."
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "Thorns": "6",
+        "Reflect": "5",
+        "DivineShield": "4",
+        "Shield": "3",
+        "Brace": "1"
+      }
+    }
+  },
+  "BornAgain": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_BORNAGAIN_NAME",
+      "name_resolved": "Born Again",
+      "desc": "ABILITY_BORNAGAIN_DESC",
+      "desc_resolved": "Revive a body to 100% HP and give it All Stats Up, then you fall asleep.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist",
+      "max_range": "7"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "self_damage": {
+      "effects": {
+        "Sleep": "4"
+      }
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "can_revive": "true",
+      "effects": {
+        "Conditional_Corpse": {
+          "Revive": "100%",
+          "AllStatsUp": "1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "BornAgain2": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_BORNAGAIN_NAME",
+      "name_resolved": "Born Again",
+      "desc": "ABILITY_BORNAGAIN2_DESC",
+      "desc_resolved": "Revive a body to 100% HP and give it All Stats Up.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist",
+      "max_range": "7"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "can_revive": "true",
+      "effects": {
+        "Conditional_Corpse": {
+          "Revive": "100%",
+          "AllStatsUp": "1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Benediction": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BENEDICTION_NAME",
+      "name_resolved": "Benediction",
+      "desc": "ABILITY_BENEDICTION_DESC",
+      "desc_resolved": "Heal EVERYTHING for 2 HP.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "particle": "HealSmall"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Benediction2": {
+    "variant_of": "Benediction",
+    "meta": {
+      "desc": "ABILITY_BENEDICTION2_DESC",
+      "desc_resolved": "Heal EVERYTHING for 2 HP.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    }
+  },
+  "Crusade": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CRUSADE_NAME",
+      "name_resolved": "Crusade",
+      "desc": "ABILITY_CRUSADE_DESC",
+      "desc_resolved": "You and your allies move toward the nearest enemy.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "ForceMoveTowardsEnemies": "1"
+      }
+    }
+  },
+  "Crusade2": {
+    "variant_of": "Crusade",
+    "meta": {
+      "desc": "ABILITY_CRUSADE2_DESC",
+      "desc_resolved": "You and your allies move toward the nearest enemy and gain +1 [img:str]."
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "HallowedGround": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_HALLOWEDGROUND_NAME",
+      "name_resolved": "Hallowed Ground",
+      "desc": "ABILITY_HALLOWEDGROUND_DESC",
+      "desc_resolved": "Spawn a blessing pickup on an empty tile in range.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "restrictions": [
+        "must_be_empty",
+        "aoe_must_exist"
+      ]
+    },
+    "spawn": {
+      "object": "Blessing",
+      "layer": "pickups"
+    }
+  },
+  "HallowedGround2": {
+    "variant_of": "HallowedGround",
+    "meta": {
+      "desc": "ABILITY_HALLOWEDGROUND2_DESC",
+      "desc_resolved": "Spawn a blessing pickup on any empty tile."
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Enlighten": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_ENLIGHTEN_NAME",
+      "name_resolved": "Enlighten",
+      "desc": "ABILITY_ENLIGHTEN_DESC",
+      "desc_resolved": "Another unit's next spell is free.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "affected_particle": "HealBig"
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "FreeSpell": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Enlighten2": {
+    "variant_of": "Enlighten",
+    "meta": {
+      "desc": "ABILITY_ENLIGHTEN2_DESC",
+      "desc_resolved": "Another unit's next spell is free. Infinite range.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20"
+    }
+  },
+  "Anoint": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_ANOINT_NAME",
+      "name_resolved": "Anoint",
+      "desc": "ABILITY_ANOINT_DESC",
+      "desc_resolved": "Give +2 Diminishing Health Regeneration and +1 to a random stat to an adjacent unit.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "affected_particle": "HealBig"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "effects": {
+        "DiminishingHealthRegen": "2",
+        "RandomStatUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Anoint2": {
+    "variant_of": "Anoint",
+    "meta": {
+      "desc": "ABILITY_ANOINT2_DESC",
+      "desc_resolved": "Give +2 Diminishing Health Regeneration and +1 to 2 random stats to any unit."
+    },
+    "target": {
+      "target_mode": "tile",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "4",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "effects": {
+        "RandomStatUp": "2"
+      }
+    }
+  },
+  "EyeForAnEye": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_EYEFORANEYE_NAME",
+      "name_resolved": "An Eye for an Eye",
+      "desc": "ABILITY_EYEFORANEYE_DESC",
+      "desc_resolved": "A melee attack that inflicts Blind 5 and Bleed 1.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "Blind": "5",
+        "Bleed": "1",
+        "ApplyStatusIfCrit": {
+          "ApplyToSource": {
+            "Craft": {
+              "pool": "eyes_nonrare",
+              "slot": "trinket",
+              "temporary": "false"
+            }
+          }
+        }
+      }
+    }
+  },
+  "EyeForAnEye2": {
+    "variant_of": "EyeForAnEye",
+    "meta": {
+      "desc": "ABILITY_EYEFORANEYE2_DESC",
+      "desc_resolved": "A melee attack that inflicts Blind 5, Bleed 1, and Madness 1."
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Madness": "1"
+      }
+    }
+  },
+  "WrathOfGod": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_WRATHOFGOD_NAME",
+      "name_resolved": "Wrath of God",
+      "desc": "ABILITY_WRATHOFGOD_DESC",
+      "desc_resolved": "Deal holy damage and inflict Blind to everything except for a safe circle around you. This vaporizes units it kills.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "Holybeam",
+      "delay": "6"
+    },
+    "cost": {
+      "mana": "10",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "20",
+      "min_aoe": "4"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "Blind": "1",
+        "CorpseVaporizer": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "WrathOfGod2": {
+    "variant_of": "WrathOfGod",
+    "meta": {
+      "desc": "ABILITY_WRATHOFGOD2_DESC",
+      "desc_resolved": "Deal holy damage and inflict Blind to all enemies. This vaporizes units it kills."
+    },
+    "target": {
+      "min_aoe": "1",
+      "aoe_restrictions": "exclude_allies"
+    }
+  },
+  "Adoubement": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_ADOUBMENT_NAME",
+      "name_resolved": "Adoubment",
+      "desc": "ABILITY_ADOUBMENT_DESC",
+      "desc_resolved": "Heal a unit and remove its debuffs. That unit gets +1 to a random stat and becomes the Alpha.\nIf there is an Alpha, this spell has infinite range and must target it.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "affected_particle": "HealMed",
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "2",
+      "restrictions": "must_target_alpha_if_exists",
+      "range_bonuses": "include_alpha"
+    },
+    "damage_instance": {
+      "heal": "4",
+      "effects": {
+        "Cleanse": "0",
+        "AlphaCat": "1",
+        "RandomStatUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Adoubement2": {
+    "variant_of": "Adoubement",
+    "meta": {
+      "desc": "ABILITY_ADOUBMENT2_DESC",
+      "desc_resolved": "Heal or revive a unit and remove its debuffs. That unit gets +1 to 3 random stats and becomes the Alpha.\nIf there is an Alpha, this spell has infinite range and must target it."
+    },
+    "damage_instance": {
+      "heal": "6",
+      "can_revive": "true",
+      "effects": {
+        "RandomStatUp": "3"
+      }
+    }
+  },
+  "DivineProtection": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_DIVINEPROTECTION_NAME",
+      "name_resolved": "Divine Protection",
+      "desc": "ABILITY_DIVINEPROTECTION_DESC",
+      "desc_resolved": "Give a unit +1 [img:divineshield] and +1 Kinetic Spikes. That unit becomes the Alpha.\nIf there is an Alpha, this spell costs less and must target it.",
+      "class": "Medic"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10-X*6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "restrictions": "must_target_alpha_if_exists",
+      "X_is": "alpha_exists"
+    },
+    "damage_instance": {
+      "effects": {
+        "DivineShield": "1",
+        "KineticSpikes": "1",
+        "AlphaCat": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "DivineProtection2": {
+    "variant_of": "DivineProtection",
+    "meta": {
+      "desc": "ABILITY_DIVINEPROTECTION2_DESC",
+      "desc_resolved": "Give a unit anywhere +1 [img:divineshield] and +2 Kinetic Spikes. That unit becomes the Alpha.\nIf there is an Alpha, this spell costs less and must target it."
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "KineticSpikes": "2"
+      }
+    }
+  },
+  "ChosenWarrior": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_CHOSENWARRIOR_NAME",
+      "name_resolved": "Chosen Warrior",
+      "desc": "ABILITY_CHOSENWARRIOR_DESC",
+      "desc_resolved": "Give a unit +1 Damage. That unit becomes the Alpha.\nIf there is an Alpha, this spell must target it and it gives +1 bonus attack.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "restrictions": "must_target_alpha_if_exists"
+    },
+    "damage_instance": {
+      "effects": {
+        "DamageUp": "1",
+        "Conditional_HasStatus": {
+          "status": "AlphaCat",
+          "Quivered": "1"
+        },
+        "AlphaCat": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "ChosenWarrior2": {
+    "variant_of": "ChosenWarrior",
+    "meta": {
+      "desc": "ABILITY_CHOSENWARRIOR2_DESC",
+      "desc_resolved": "Give a unit +1 Damage and +1 Magic Damage. That unit becomes the Alpha.\nIf there is an Alpha, this spell must target it and it gives +1 bonus attack.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpellDamageUp": "1"
+      }
+    }
+  },
+  "SwiftSanctify": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_SWIFTSERVANT_NAME",
+      "name_resolved": "Swift Servant",
+      "desc": "ABILITY_SWIFTSERVANT_DESC",
+      "desc_resolved": "Give a unit +1 Bonus Move. That unit becomes the Alpha.\nIf there is an Alpha, this spell must target it and it gives you +1 Bonus Move too.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "restrictions": "must_target_alpha_if_exists"
+    },
+    "damage_instance": {
+      "effects": {
+        "MoveQuivered": "1",
+        "Conditional_HasStatus": {
+          "status": "AlphaCat",
+          "ApplyToSource": {
+            "MoveQuivered": "1"
+          }
+        },
+        "AlphaCat": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "SwiftSanctify2": {
+    "variant_of": "SwiftSanctify",
+    "meta": {
+      "desc": "ABILITY_SWIFTSERVANT2_DESC",
+      "desc_resolved": "Give a unit +1 Bonus Move. That unit becomes the Alpha.\nIf there is an Alpha, this spell has infinite range, costs less and must target it, and it gives you +1 Bonus Move too."
+    },
+    "cost": {
+      "mana": "4-X"
+    },
+    "target": {
+      "range_bonuses": "include_alpha",
+      "X_is": "alpha_exists"
+    }
+  },
+  "DivineGift": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DIVINEGIFT_NAME",
+      "name_resolved": "Divine Gift",
+      "desc": "ABILITY_DIVINEGIFT_DESC",
+      "desc_resolved": "Gain All Stats Up. This spell costs 1 mana less for each HP you healed other units this turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Medic"
+    },
+    "graphics": {},
+    "cost": {
+      "cantrip": "true",
+      "mana": "10-X"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsOtherHealsThisTurn": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "DivineGift2": {
+    "variant_of": "DivineGift",
+    "meta": {
+      "desc": "ABILITY_DIVINEGIFT2_DESC",
+      "desc_resolved": "Gain All Stats Up and +1 [img:divineshield]. This spell costs 1 mana less for each HP you healed other units this turn.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1",
+        "DivineShield": "1"
+      }
+    }
+  },
+  "HolyWeapon": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_HOLYWEAPON_NAME",
+      "name_resolved": "Holy Weapon",
+      "desc": "ABILITY_HOLYWEAPON_DESC",
+      "desc_resolved": "A dash attack with range, damage, and knockback equal to the amount of HP you healed other units this turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Medic",
+      "type_icon": "melee",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "dash_attack_animation": "knockswatatk"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "X_is": "custom",
+      "max_range": "X"
+    },
+    "bonus_passives": {
+      "XIsOtherHealsThisTurn": "1"
+    },
+    "damage_instance": {
+      "raw_damage": "X",
+      "knockback": "X",
+      "show_damage_on_0": "true",
+      "effects": {
+        "VisualFX": "Holyatk"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "HolyWeapon2": {
+    "variant_of": "HolyWeapon",
+    "meta": {
+      "desc": "ABILITY_HOLYWEAPON2_DESC",
+      "desc_resolved": "A dash attack with range, damage, and knockback equal to twice the amount of HP you healed other units this turn.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_range": "X*2"
+    },
+    "damage_instance": {
+      "raw_damage": "X*2",
+      "knockback": "X*2"
+    }
+  },
+  "GetDown": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_STANDIN_NAME",
+      "name_resolved": "Stand In",
+      "desc": "ABILITY_STANDIN_DESC",
+      "desc_resolved": "Swap positions with any unit. That unit becomes the Alpha.\nIf there is an Alpha, this spell must target it.",
+      "animate_name": "true",
+      "class": "Medic"
+    },
+    "graphics": {
+      "mode": "yeet"
+    },
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist",
+        "must_target_alpha_if_exists",
+        "must_have_animate_character"
+      ]
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "cant_miss": "true",
+      "effects": {
+        "AlphaCat": "1"
+      }
+    }
+  },
+  "GetDown2": {
+    "variant_of": "GetDown",
+    "meta": {
+      "desc": "ABILITY_STANDIN2_DESC",
+      "desc_resolved": "Swap positions with any unit and heal it by 1 HP. That unit becomes the Alpha.\nIf there is an Alpha, this spell must target it."
+    },
+    "damage_instance": {
+      "heal": "1",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "MedicObey": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_OBEY_NAME",
+      "name_resolved": "Obey"
+    },
+    "graphics": {
+      "animate_name": "pointout",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "random_closest_tile",
+      "max_aoe": "0",
+      "max_range": "1",
+      "restrictions": [
+        "must_have_living_character",
+        "must_have_enemy"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "Charmed": "1"
+      }
+    }
+  },
+  "MedicObey2": {
+    "variant_of": "MedicObey",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Awaken": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_AWAKEN_NAME",
+      "name_resolved": "Awaken",
+      "desc": "ABILITY_AWAKEN_DESC",
+      "desc_resolved": "Revive a body to 1 HP.",
+      "class": "Medic",
+      "type_icon": "heal"
+    },
+    "graphics": {
+      "affected_particle": "HealBig"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse_or_sleeping",
+      "restrictions": "aoe_must_exist",
+      "max_range": "5",
+      "max_aoe": "0"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "type": "spell",
+      "can_revive": "true",
+      "effects": {
+        "RemoveStatus": "Drowsy"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Awaken2": {
+    "variant_of": "Awaken",
+    "meta": {
+      "desc": "ABILITY_AWAKEN2_DESC",
+      "desc_resolved": "Revive a body to 1 HP. Give that unit +1 [img:divineshield] and All Stats Up."
+    },
+    "damage_instance": {
+      "effects": {
+        "DivineShield": "1",
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "Baptism": {
+    "class": "MultiHitMeleeAttackAbility",
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_BAPTISM_NAME",
+      "name_resolved": "Fury Heal",
+      "desc": "ABILITY_BAPTISM_DESC",
+      "desc_resolved": "Heal an adjacent unit 2 to 6 times.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "start": "lickAttack",
+      "loop": "lickAttack",
+      "end": "lickAttack"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "multihit_min": "2",
+      "multihit_max": "6"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "elements": [
+        "Holy",
+        "Water"
+      ]
+    }
+  },
+  "Baptism2": {
+    "variant_of": "Baptism",
+    "meta": {
+      "desc": "ABILITY_BAPTISM2_DESC",
+      "desc_resolved": "Heal an adjacent unit 2 to 6 times. Each heal gives +1 to a random stat."
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatUp": "1"
+      }
+    }
+  },
+  "Pray": {
+    "template": "spell",
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "pray"
+    },
+    "meta": {
+      "name": "ABILITY_PRAY_NAME",
+      "name_resolved": "Pray",
+      "desc": "ABILITY_PRAY_DESC",
+      "desc_resolved": "Give another unit +5 [img:lck] until the end of its next turn.",
+      "class": "Medic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "LuckUp",
+          "stacks": "5",
+          "turns": "1",
+          "expires_on_end_turn": "true"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Pray2": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PRAY_NAME",
+      "name_resolved": "Pray",
+      "desc": "ABILITY_PRAY2_DESC",
+      "desc_resolved": "Give allies +5 [img:lck] and enemies -5 [img:lck] until the end of their next turns, in an area.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "pray"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Ally": {
+          "Temporary": {
+            "status": "LuckUp",
+            "stacks": "5",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        },
+        "Conditional_Enemy": {
+          "Temporary": {
+            "status": "LuckUp",
+            "stacks": "-5",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Emergency": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_EMERGENCY_NAME",
+      "name_resolved": "Emergency",
+      "desc": "ABILITY_EMERGENCY_DESC",
+      "desc_resolved": "Run next to the ally with the most missing health. Trample all in the way.",
+      "animate_name": "true",
+      "class": "Medic"
+    },
+    "graphics": {
+      "speed": "2",
+      "animation": "dash"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    },
+    "target": {
+      "target_mode": "random_closest_tile",
+      "max_range": "100",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move",
+        "must_be_adjacent_to_most_hurt_ally"
+      ],
+      "trample_allies_too": "true"
+    }
+  },
+  "Emergency2": {
+    "variant_of": "Emergency",
+    "meta": {
+      "desc": "ABILITY_EMERGENCY2_DESC",
+      "desc_resolved": "Run next to the ally with the most missing health. Trample all in the way.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "GuardianAngel": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_GUARDIANANGEL_NAME",
+      "name_resolved": "Guardian Angel",
+      "desc": "ABILITY_GUARDIANANGEL_DESC",
+      "desc_resolved": "Make a unit The Alpha.\nBonus Passive: The Alpha has +50% dodge chance.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pray",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4"
+    },
+    "bonus_passives": {
+      "AlphaDodgeChance": "50%"
+    },
+    "damage_instance": {
+      "effects": {
+        "AlphaCat": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "GuardianAngel2": {
+    "variant_of": "GuardianAngel",
+    "meta": {
+      "desc": "ABILITY_GUARDIANANGEL2_DESC",
+      "desc_resolved": "Make a unit anywhere The Alpha.\n[s:.7](This spell costs less.)[/s]\nBonus Passive: The Alpha has +50% dodge chance."
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0"
+      }
+    }
+  },
+  "Booster": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BOOSTER_NAME",
+      "name_resolved": "Booster",
+      "desc": "ABILITY_BOOSTER_DESC",
+      "desc_resolved": "Heal an adjacent unit. Excess healing is converted to an equal amount of random stat ups.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pray",
+      "affected_particle": "HealBig"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "1",
+      "min_range": "1"
+    },
+    "damage_instance": {
+      "heal": "4",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "OverHealToStatuses": {
+          "RandomStatUp": "1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Booster2": {
+    "variant_of": "Booster",
+    "meta": {
+      "desc": "ABILITY_BOOSTER2_DESC",
+      "desc_resolved": "Heal a unit at range. Excess healing is converted to an equal amount of random stat ups."
+    },
+    "target": {
+      "max_range": "4"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Stimulants": {
+    "template": "spell",
+    "graphics": {
+      "particle": "fx_statup",
+      "animation": "hopinplace"
+    },
+    "meta": {
+      "name": "ABILITY_STIMULANTS_NAME",
+      "name_resolved": "Stimulants",
+      "desc": "ABILITY_STIMULANTS_DESC",
+      "desc_resolved": "You and adjacent units gain +2 [img:spd].",
+      "class": "Medic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "Stimulants2": {
+    "variant_of": "Stimulants",
+    "meta": {
+      "desc": "ABILITY_STIMULANTS2_DESC",
+      "desc_resolved": "You and adjacent units gain +2 [img:spd] and +1 [img:int]."
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "BlindingLight": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BLINDINGLIGHT_NAME",
+      "name_resolved": "Blinding Lights",
+      "desc": "ABILITY_BLINDINGLIGHT_DESC",
+      "desc_resolved": "Inflict Blind 1 on each unit in an area.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "particle": "Holybeam",
+      "animation": "majormagic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "5",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Blind": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "BlindingLight2": {
+    "variant_of": "BlindingLight",
+    "meta": {
+      "desc": "ABILITY_BLINDINGLIGHT2_DESC",
+      "desc_resolved": "Inflict Blind 2 on each unit in a larger area."
+    },
+    "target": {
+      "max_range": "8",
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "Blind": "2"
+      }
+    }
+  },
+  "CircleOfProtection": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CIRCLEOFPROTECTION_NAME",
+      "name_resolved": "Circle of Protection",
+      "desc": "ABILITY_CIRCLEOFPROTECTION_DESC",
+      "desc_resolved": "Give +1 [img:divineshield] to each unit within 2 tiles of you.",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "pray",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_aoe": "2",
+      "target_mode": "none",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DivineShield": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "CircleOfProtection2": {
+    "variant_of": "CircleOfProtection",
+    "meta": {
+      "desc": "ABILITY_CIRCLEOFPROTECTION2_DESC",
+      "desc_resolved": "Give +1 [img:divineshield] and +1 Health Regeneration to each unit within 2 tiles of you.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "DivineShield": "1",
+        "HealthRegenUp": "1"
+      }
+    }
+  },
+  "CallOver": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_CALLOVER_NAME",
+      "name_resolved": "Call Over",
+      "desc": "ABILITY_CALLOVER_DESC",
+      "desc_resolved": "Make an ally move toward you.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "howl",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0",
+      "restrictions": "must_have_ally"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceMoveTowards": "1"
+      }
+    }
+  },
+  "CallOver2": {
+    "variant_of": "CallOver",
+    "meta": {
+      "desc": "ABILITY_CALLOVER2_DESC",
+      "desc_resolved": "Make an ally move toward you. Infinite range."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Grace": {
+    "template": "targeted_status",
+    "keyword_tooltips": {},
+    "meta": {
+      "name": "ABILITY_GRACE_NAME",
+      "name_resolved": "Grace",
+      "desc": "ABILITY_GRACE_DESC",
+      "desc_resolved": "You or an adjacent unit gains a random positive effect.",
+      "class": "Medic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "pray",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "effects": {
+        "Conditional_CanBeHealed": {
+          "RandomStatusFromPool": {
+            "BonusDamage": "-3",
+            "DivineShield": "1",
+            "GainCoins": "1",
+            "Shield": "2",
+            "RandomStatUp": "1"
+          }
+        },
+        "Else": {
+          "RandomStatusFromPool": {
+            "DivineShield": "1",
+            "GainCoins": "1",
+            "Shield": "2",
+            "RandomStatUp": "1"
+          }
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Grace2": {
+    "template": "targeted_status",
+    "keyword_tooltips": {},
+    "meta": {
+      "name": "ABILITY_GRACE_NAME",
+      "name_resolved": "Grace",
+      "desc": "ABILITY_GRACE2_DESC",
+      "desc_resolved": "You or an adjacent unit heals a random amount of HP, gains +1 to a random stat, and gains a random positive effect.",
+      "class": "Medic",
+      "type_icon": "buff",
+      "icon_shell_frame": "big_damage",
+      "icon_damage_display": "1-5"
+    },
+    "graphics": {
+      "animation": "pray",
+      "particle": "HealSmall"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1",
+      "X_is": "random_0_to_N",
+      "N": "4"
+    },
+    "damage_instance": {
+      "heal": "X+1",
+      "effects": {
+        "RandomStatUp": "1",
+        "RandomStatusFromPool": {
+          "DivineShield": "1",
+          "GainCoins": "1",
+          "Shield": "2",
+          "Quivered": "1",
+          "MoveQuivered": "1",
+          "KineticSpikes": "1",
+          "SpellDamageUp": "1",
+          "DamageUp": "1"
+        }
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "TurnFoe": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_TURNFOE_NAME",
+      "name_resolved": "Turn Foe",
+      "desc": "ABILITY_TURNFOE_DESC",
+      "desc_resolved": "Force a nearby unit to move away from you.",
+      "class": "Medic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceMoveAway": "1"
+      }
+    }
+  },
+  "TurnFoe2": {
+    "variant_of": "TurnFoe",
+    "meta": {
+      "desc": "ABILITY_TURNFOE2_DESC",
+      "desc_resolved": "Force a nearby unit to move away from you. If it was an enemy, inflict Madness 1 and Confusion 1."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "Madness": "1",
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "HealingSalve": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_HEALINGSALVE_NAME",
+      "name_resolved": "Healing Salve",
+      "desc": "ABILITY_HEALINGSALVE_DESC",
+      "desc_resolved": "You or an adjacent unit gains +1 Health Regeneration.",
+      "class": "Medic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "knead",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "effects": {
+        "HealthRegenUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "HealingSalve2": {
+    "variant_of": "HealingSalve",
+    "meta": {
+      "desc": "ABILITY_HEALINGSALVE2_DESC",
+      "desc_resolved": "You or an adjacent unit gains +2 Health Regeneration."
+    },
+    "damage_instance": {
+      "effects": {
+        "HealthRegenUp": "2"
+      }
+    }
+  },
+  "Heathens": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HEATHENS_NAME",
+      "name_resolved": "Heathens!",
+      "class": "Medic"
+    },
+    "graphics": {
+      "animation": "howl",
+      "particle": "fx_statdown"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Weakness": "3"
+      }
+    }
+  },
+  "Heathens2": {
+    "variant_of": "Heathens",
+    "damage_instance": {
+      "effects": {
+        "Weakness": "4",
+        "MagicWeakness": "4"
+      }
+    }
+  }
+}

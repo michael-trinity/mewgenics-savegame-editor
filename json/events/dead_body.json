@@ -1,0 +1,3604 @@
+{
+  "DeadRat": {
+    "intro": {
+      "title": "EVENT_DEADRAT_NAME",
+      "title_resolved": "Dead Rat",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "deadrat",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DEADRAT_QUES",
+      "prompt_resolved": "{catname} finds a dead rat...\n\nStench from the corpse fills {his} nose, a powerful but intriguing smell.",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADRAT_REW1",
+                "prompt_resolved": "{catname} decimates the corpse!\n\nTiny screams can be heard as nearby rats scamper away in fear!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "Rat",
+                    "Pinky"
+                  ],
+                  "count": "2",
+                  "spawn_side": "enemies"
+                },
+                "global_effect_next_fight": {
+                  "CharacterTypeGainsStatusAtBattleStart": {
+                    "tag": "rat",
+                    "Fear": "1"
+                  }
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW2",
+                "prompt_resolved": "{catname} rips the body apart!\n\nAmong the remains {he} sees something interesting...",
+                "get_item_from_pool": "rat_trinkets"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADRAT_REW3",
+                "prompt_resolved": "{catname} smashes the rat corpse, tearing it limb from limb!\n\nFrom around {him}, {catname} hears chittering through the walls as angry rats prepare to ambush!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "Rat",
+                    "Pinky",
+                    "Leaper"
+                  ],
+                  "count": "2",
+                  "spawn_side": "enemies"
+                },
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW4",
+                "prompt_resolved": "With a surprising fervor, {catname} rips apart the poor dead rat, scattering its remains across the room!\n\nThe other cats look on in shock at the extremely violent action!",
+                "gain_disorder": "BloodFrenzy"
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADRAT_REW5",
+                "prompt_resolved": "{catname} rips apart the rat's plump body, devouring the tough but delicious flesh!\n\nSatisfied, {catname} saves some for later.",
+                "full_heal": "1",
+                "gain_food": [
+                  "2",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW6",
+                "prompt_resolved": "{catname} opens {his} mouth and swallows the rat whole! {He} starts to feel a little funny...\n\n{catname} lets out a startled meow as {his} body mutates into a new shape!",
+                "random_mutation_from_set": {
+                  "tail": "1500",
+                  "ears": "1500",
+                  "mouth": "1500"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADRAT_REW7",
+                "prompt_resolved": "{catname} rashly devours the dead rat without hesitation...\n\n{He} starts to get sick and feels weak!",
+                "self_status_next_fight": {
+                  "Poison": "2"
+                },
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW8",
+                "prompt_resolved": "{catname} gnaws the rat's head off. Its brain is delicious!",
+                "gain_disorder": "Rabies"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_DEADRAT_REW9",
+                    "prompt_resolved": "{catname} pulls apart the rat's body and finds money in its stomach!",
+                    "gain_coins": [
+                      "5",
+                      "10"
+                    ]
+                  },
+                  {
+                    "prompt": "EVENT_DEADRAT_REW10",
+                    "prompt_resolved": "No need to get messy digging around inside, {catname} thinks...\n\nThe rat is already a great snack!",
+                    "get_item_from_pool": "food"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW11",
+                "prompt_resolved": "{catname} discovers an object lodged in the rat's throat and pulls it out...",
+                "get_item_from_pool": "rat_trinkets"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADRAT_REW12",
+                "prompt_resolved": "{catname} tosses the rat's body around, looking for anything useful.\n\n{He} gets a strange feeling like {he} is being watched and sees several sets of eyes peering at {him} from the darkness…\n\nIt's an ambush!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "Rat",
+                    "Pinky",
+                    "Leaper"
+                  ],
+                  "count": "2",
+                  "spawn_side": "enemies"
+                },
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADRAT_REW13",
+                "prompt_resolved": "{catname} pokes at the body... It wasn't dead! \n\nThe rat jumps up and bites {him}!",
+                "gain_disorder": "Rabies"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "DeadCat": {
+    "intro": {
+      "title": "EVENT_DEADCAT_NAME",
+      "title_resolved": "Dead Cat",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "deadcat",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DEADCAT_QUES",
+      "prompt_resolved": "{catname} finds a deceased cat, its body sprawled out in contortions from the pain it experienced in its final moments of life...",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADCAT_REW1",
+                "prompt_resolved": "The corpse is fresh. {catname} devours it, not complaining about a good meal.",
+                "heal": "10",
+                "gain_food": [
+                  "2",
+                  "10"
+                ],
+                "global_effect_next_fight": {
+                  "KillEnemyOfTypeAtBattleStart": {
+                    "enemy_type": "cat",
+                    "fallback_spawn": [
+                      "TomTom",
+                      "Kitten",
+                      "CatCaller",
+                      "Mangy"
+                    ]
+                  }
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW2",
+                "prompt_resolved": "{catname} ravenously consumes the dead cat while the rest of the party looks on awkwardly...\n\n{catname} appears to relish this opportunity far too much!",
+                "gain_disorder": "Cannibal"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADCAT_REW3",
+                "prompt_resolved": "A gang of cats walks in on {catname}, {his} mouth still full of fur and whiskers.\n\nThey beat up the party for desecrating the dead!",
+                "party_damage": "3",
+                "self_damage": "8"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW4",
+                "prompt_resolved": "Assuming {catname} will stay clear of the corpse, the cats look back in horror as {catname} begins cannibalizing the corpse!\n\nThey will never look at {catname} the same again... What a monster!",
+                "gain_disorder": "Shunned"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADCAT_REW5",
+                "prompt_resolved": "{catname} digs through the dead cat's pockets and finds some catnip!",
+                "get_item_from_pool": [
+                  "Catnip,",
+                  "CatnipBig,",
+                  "KiloOfCatnip"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW6",
+                "prompt_resolved": "After closer examination, {catname} discovers it was just sleeping!\n\nWho sleeps in a position like that?",
+                "gain_cat_familiar": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADCAT_REW7",
+                "prompt_resolved": "{catname} checks for a pulse on the cat with {his} paw...\n\nIt wasn't dead! Rudely startled from a deep slumber, the cat scratches and bites at the cats!",
+                "party_damage": [
+                  "1",
+                  "6"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW8",
+                "prompt_resolved": "After sniffing the cat, {catname} realizes that he might have known it.\n\n{catname} is suddenly in a very bad mood...",
+                "gain_disorder": "Distemper"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DEADCAT_REW9",
+                "prompt_resolved": "{catname} reaches beneath the cat and finds something!",
+                "gain_coins": [
+                  "1",
+                  "10"
+                ],
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW10",
+                "prompt_resolved": "This cat has been dead for a while... it won't be needing that fur anymore!\n\n{catname} tears off its hide and repurposes it!",
+                "get_item_from_pool": "cat_armor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_DEADCAT_REW11",
+                    "prompt_resolved": "{catname} turns over the body. The body is infested with maggots!\n\nThe maggots spill out everywhere!",
+                    "spawn_unit_next_fight": {
+                      "object": "Maggot",
+                      "count": "2",
+                      "spawn_side": "cats"
+                    }
+                  },
+                  {
+                    "prompt": "EVENT_DEADCAT_REW12",
+                    "prompt_resolved": "{catname} turns over the body...\n\nIt was a trick! The cat snatches something from {catname}'s pockets and scurries away!",
+                    "lose_item": "inventory"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_DEADCAT_REW13",
+                "prompt_resolved": "{catname} turns over the body only to see {his} own face staring back at {him}!\n\n{catname}'s hair stands up on end as a chill goes down {his} spine...",
+                "spawn_reflection_next_fight": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "BonePile": {
+    "intro": {
+      "title": "EVENT_BONEPILE_NAME",
+      "title_resolved": "Bone Pile",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "bonepile",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BONEPILE_QUES",
+      "prompt_resolved": "Bones from some long-dead creature lie piled on the ground in front of {catname}.",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BONEPILE_REW1",
+                "prompt_resolved": "{catname} rummages through the bones, looking for anything useful...",
+                "get_item_from_pool": "bone_equipment"
+              },
+              "rare": {
+                "prompt": "EVENT_BONEPILE_REW2",
+                "prompt_resolved": "{catname} sifts through the pile of bones, hunting for something useful...",
+                "get_item": "SnaggleTooth"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BONEPILE_REW3",
+                "prompt_resolved": "{catname} approaches the bones, reaching out to touch them...\n\nRattling and clicking, the bones reassemble into a skeletal monster!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "SkeletonCat",
+                    "TallSkeletonCat"
+                  ],
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BONEPILE_REW4",
+                "prompt_resolved": "{catname} sees something staring back at {him} from inside the skull's eyeless sockets.\n\n{catname} stares back at it, unblinking, for what seems like years as terror envelops {his} mind with an iron grip...",
+                "self_status_next_fight": {
+                  "Fear": "10"
+                }
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "prompt": "EVENT_BONEPILE_REW5",
+            "prompt_resolved": "{catname} cracks open the bones, exposing the moist, red and juicy marrow within.",
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "heal": "10",
+                "gain_food": [
+                  "10",
+                  "25"
+                ]
+              },
+              "rare": {
+                "get_item": "BoneMarrow"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BONEPILE_REW6",
+                "prompt_resolved": "{catname} trips and lands among the sharp, jagged bones.",
+                "self_damage": [
+                  "1",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_BONEPILE_REW7",
+                "prompt_resolved": "{catname} tries to break a particularly large bone, but it snaps back on {him}, breaking {his} arm!",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "prompt": "EVENT_BONEPILE_REW8",
+            "prompt_resolved": "{catname} assembles some of the bones into makeshift equipment!",
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "get_item_from_pool": "bone_weapons"
+              },
+              "rare": {
+                "get_item_from_pool": "bone_armor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BONEPILE_REW9",
+                "prompt_resolved": "An ominous noise comes from the bones as wind passes through them…\n\n{catname} hears a terrible cracking sound as {his} leg snaps in half!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_BONEPILE_REW10",
+                "prompt_resolved": "{catname} contorts as {his} bones vibrate painfully within {his} body...\n\nMultiple bones shatter, and {catname} collapses to the ground, screaming in agony!",
+                "injury": "spd"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "GutPile": {
+    "intro": {
+      "title": "EVENT_GUTPILE_NAME",
+      "title_resolved": "Gut Pile",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "gutspile",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_GUTPILE_QUES",
+      "prompt_resolved": "{catname} finds a grotesque mound of guts heaped into a large pile...\n\nWhat a strange sight!",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW1",
+                "prompt_resolved": "The whole party joins in on the feast! The guts taste tangy, but they go down easily.\n\nSometime later the cats feel a bit ill…\n\nThe cats are poisoned!",
+                "party_heal": "100%",
+                "gain_food": [
+                  "5",
+                  "15"
+                ],
+                "party_status_next_fight": {
+                  "Poison": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW2",
+                "prompt_resolved": "{catname} wolfs down a particularly delicious and fatty liver!",
+                "gain_food": [
+                  "2",
+                  "5"
+                ],
+                "permanent_stats": {
+                  "con": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW3",
+                "prompt_resolved": "{catname} gobbles up the guts, but {he} can't get the taste of rotting, undigested food out of {his} mouth...",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW4",
+                "prompt_resolved": "As {catname} slurps down the slimy guts, {he} feels something wriggling in {his} throat...",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW5",
+                "prompt_resolved": "As {catname} pulls apart the large intestine, money spills out onto the ground!",
+                "gain_coins": [
+                  "1",
+                  "15"
+                ],
+                "gain_food": [
+                  "1",
+                  "15"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW6",
+                "prompt_resolved": "{catname} riffles through the sticky guts. {He} thinks they look stylish!",
+                "get_item_from_pool": "guts_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW7",
+                "prompt_resolved": "When {catname} disturbs the pile, a swarm of flies rises up to protect their dinner!\n\nThe flies chase the party into the next battle.",
+                "spawn_unit_next_fight": {
+                  "object": "Fly",
+                  "count": "3",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW8",
+                "prompt_resolved": "A strange bug leaps from the pile and burrows its way deep into {catname}'s belly button!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW9",
+                "prompt_resolved": "{catname} looks around in the pile of guts and finds some edible scraps.",
+                "get_item_from_pool": "food",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW10",
+                "prompt_resolved": "{catname} notices that a stomach in the pile looks particularly bloated and tears it open...\n\nIt's full of undigested food!",
+                "gain_food": [
+                  "1",
+                  "5"
+                ],
+                "get_item_from_pool": "food"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GUTPILE_REW11",
+                "prompt_resolved": "{catname} and the cats eat some of the organs, but they are rotten and taste disgusting!",
+                "party_damage": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_GUTPILE_REW12",
+                "prompt_resolved": "{catname} discovers something amazing hidden among the guts...\n\nA small doodie! {He} hides {his} findings from the party. Such a precious turd will no doubt cause jealousy!",
+                "get_parasite": "AlluringDoodie"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SeveredHead": {
+    "intro": {
+      "title": "EVENT_SEVEREDHEAD_NAME",
+      "title_resolved": "Severed Head",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "severedhead",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SEVEREDHEAD_QUES",
+      "prompt_resolved": "{catname} finds a severed head lying on the ground. Its unblinking eye stares right through {him}.\n\nWhat should {he} do?",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW1",
+                "prompt_resolved": "The head whispers something to {catname} as {he} gets close, but {catname} can't make out what it's saying."
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW2",
+                "prompt_resolved": "{catname} finds a small boil on the back of the head. Pushing the boil causes the head's eyeball to drop to the floor, blinking in seemingly random intervals.",
+                "get_item": "BlinkingEyeball"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW3",
+                "prompt_resolved": "A chill runs up {catname}'s spine as the head tells {him} a secret. {He} will no doubt take this to the grave.",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW4",
+                "prompt_resolved": "The head screams, and its eye rolls back into its head!\n\n{catname}'s brain flashes with memories that are not {his} own.",
+                "gain_disorder_from_pool": "mental_disorders"
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW5",
+                "prompt_resolved": "{catname} attempts to attack the fleshy head, but stops short when {he} hears it start to whimper. A single tear drops from its quivering eyeball."
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW6",
+                "prompt_resolved": "The head weeps as {catname} tears it apart with all of {his} might.\n\nA single tooth flies from its gaping maw… It looks valuable!",
+                "get_item": "GoldenTooth"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW7",
+                "prompt_resolved": "{catname}'s paw snags on the large head's tooth, tearing {his} flesh. The head seems to smile as {catname} bleeds profusely.",
+                "self_damage": [
+                  "4",
+                  "8"
+                ],
+                "self_status_next_fight": {
+                  "Bleed": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW8",
+                "prompt_resolved": "The head's mouth opens impossibly wide as {catname} moves in to attack. It snaps down on {his} arm, tearing muscle from the bone!",
+                "self_damage": [
+                  "6",
+                  "10"
+                ],
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW9",
+                "prompt_resolved": "{catname} bites into the head. It tastes bland and unsatisfying."
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW10",
+                "prompt_resolved": "{catname} bites through the skull of the strange head, tasting its salty brains…\n\n{He} feels invigorated!",
+                "permanent_stats": {
+                  "con": "2"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEVEREDHEAD_REW11",
+                "prompt_resolved": "As {catname} gets close, the head shoots something from its eye socket that attaches to {catname}'s head.\n\n{catname} feels strange...",
+                "get_parasite": "CursedHairball"
+              },
+              "rare": {
+                "prompt": "EVENT_SEVEREDHEAD_REW12",
+                "prompt_resolved": "{catname} stops short as a guttural gurgling begins to resonate from the bottom half of the head.\n\n{catname}'s stomach churns, and {he} begins to vomit profusely.",
+                "injury": "con"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "CatPelts": {
+    "intro": {
+      "title": "EVENT_PILEOFCATPELTS_NAME",
+      "title_resolved": "Pile of Cat Pelts",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "catpelts",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_PILEOFCATPELTS_QUES",
+      "prompt_resolved": "{catname} finds a giant pile of cat pelts... How terrible!",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW1",
+                "prompt_resolved": "Among the skinned cats, {catname} discovers a variety of useful stuff.",
+                "get_item_from_pool": "consumables",
+                "heal": "3",
+                "party_heal": "1",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW2",
+                "prompt_resolved": "{catname} dons one of the pelts, and wears it fiercely!",
+                "get_item_from_pool": [
+                  "CatHideHat",
+                  "CatHideMask",
+                  "CatHideArmor"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW3",
+                "prompt_resolved": "{catname} digs through the pile of cat pelts, but only ends up with dried blood and maggots stuck in {his} paws...\n\nThis was a mistake!",
+                "self_status_next_fight": {
+                  "ConstitutionUp": "-1",
+                  "StrengthUp": "-1",
+                  "Poison": "1"
+                },
+                "damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW4",
+                "prompt_resolved": "As {catname} looks closely, {he} recognizes some of the faces on these pelts…\n\n{catname} is holding the skins of {his} grandparents! Who did this!?",
+                "gain_disorder": "Anxiety"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW5",
+                "prompt_resolved": "Among the skinned cats, {catname} discovers a variety of useful stuff.",
+                "get_item_from_pool": "consumables",
+                "heal": "3",
+                "party_heal": "1",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW6",
+                "prompt_resolved": "{catname} thinks the pelts would make a great outfit!",
+                "get_item_from_pool": [
+                  "CatHideHat",
+                  "CatHideMask",
+                  "CatHideArmor"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW7",
+                "prompt_resolved": "The pile is riddled with maggots. They burrow into {catname}'s skin!",
+                "self_status_next_fight": {
+                  "ConstitutionUp": "-1",
+                  "StrengthUp": "-1",
+                  "Poison": "1"
+                },
+                "damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW8",
+                "prompt_resolved": "{catname} notices the faces on the pelts are moving. {He} leans closer to hear what they are whispering...\n\n[i]HELP US!![/i]",
+                "gain_disorder": "Anxiety"
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW9",
+                "prompt_resolved": "{catname} digs around in the pile and finds some useful stuff.",
+                "get_item_from_pool": "consumables",
+                "heal": "3",
+                "party_heal": "1",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW10",
+                "prompt_resolved": "{catname} tears apart one of the better pelts and fashions it into something {he} can wear!",
+                "get_item_from_pool": [
+                  "CatHideHat",
+                  "CatHideMask",
+                  "CatHideArmor"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW11",
+                "prompt_resolved": "Ripping apart the cat skins, {catname} becomes covered in fleas!",
+                "self_status_next_fight": {
+                  "ConstitutionUp": "-1",
+                  "StrengthUp": "-1",
+                  "Poison": "1"
+                },
+                "damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFCATPELTS_REW12",
+                "prompt_resolved": "{catname} notices something odd about the pelts…\n\nThey seem to be letting out faint screams each time {catname} hits them…",
+                "gain_disorder": "Anxiety"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Stain": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSSTAIN_NAME",
+      "title_resolved": "Mysterious Stain",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysteriousstain",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSSTAIN_QUES",
+      "prompt_resolved": "There is a mysterious stain on the ground here...\n\n{catname} wonders what type of strange happenings could have caused it?",
+      "options": {
+        "lick": {
+          "label": "EVENT_LICK_ANSW",
+          "label_resolved": "Lick",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSSTAIN_REW1",
+                "prompt_resolved": "{catname} licks the strange surface...\n\nIt tastes sweet, with lumps of brain matter hiding beneath the dried blood. Delicious!\n\n{catname} feels a surge of energy for the next battle!",
+                "random_pool": [
+                  {
+                    "self_status_next_fight": {
+                      "StrengthUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "DexterityUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "ConstitutionUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "IntelligenceUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "SpeedUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "CharismaUp": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "LuckUp": "2"
+                    }
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSSTAIN_REW2",
+                "prompt_resolved": "The stain on the ground tastes funny, but {catname} keeps licking it, swallowing flakes of dried blood and hair.\n\nWhen {he} is done licking it clean, {catname} feels a strange sensation grip {him} as {his} body mutates!",
+                "random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSSTAIN_REW3",
+                "prompt_resolved": "{catname} drags {his} tongue over the ground, tearing up dry flakes of the material into {his} mouth...\n\n{catname} retches as old hairs in the stain get stuck in {his} teeth!",
+                "random_pool": [
+                  {
+                    "self_status_next_fight": {
+                      "StrengthUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "DexterityUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "ConstitutionUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "IntelligenceUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "SpeedUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "CharismaUp": "-2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "LuckUp": "-2"
+                    }
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSSTAIN_REW4",
+                "prompt_resolved": "Dried blood and hairs from the stain make {catname}'s stomach turn as {he} digests the rough surface, giving {him} cramps!",
+                "gain_disorder_from_pool": "physical_disorders"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSSTAIN_REW5",
+            "prompt_resolved": "{catname} opts to not place {his} soft tongue on the new surface. Who knows what it could have been?",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "DecayingCarcass": {
+    "intro": {
+      "title": "EVENT_DECAYINGCARCASS_NAME",
+      "title_resolved": "Decaying Carcass",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "decaying_carcass",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DECAYINGCARCASS_QUES",
+      "prompt_resolved": "{catname} comes across the decaying remains of a long dead creature. It appears to move slightly, but {he} thinks it might have just been the numerous insects slowly devouring it.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW1",
+                "prompt_resolved": "{catname}'s eyes glint as {he} catches the scent of decay. Drawn by the odor {he} leans in and bites into the decaying flesh...",
+                "get_parasite_from_pool": "parasites",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW2",
+                "prompt_resolved": "{catname} feasts on the ripe flesh, it's been a while since {his} last meal. {He} briefly feels an itching sensation, then a surge of energy!",
+                "get_parasite_from_pool": "good_parasites"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW3",
+                "prompt_resolved": "{catname} bites into the rotting carcass and swallows the flesh, still writhing with small things.",
+                "get_parasite_from_pool": "parasites"
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW4",
+                "prompt_resolved": "{catname}'s primal instincts overcome {his} better judgement and he tears into the putrid flesh, ignoring the many creatures lurking within the decayed meat.",
+                "get_parasite_from_pool": "parasites",
+                "gain_disorder_from_pool": "physical_disorders"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW5",
+                "prompt_resolved": "As {catname} investigates the carcass, a large maggot crawls out, looking inquisitively at {him}. It seems friendly?",
+                "gain_familiar": "CharmedMaggot"
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW6",
+                "prompt_resolved": "Scavenging through the corpse, {catname} finds a small larva buried in the boney flesh.",
+                "get_and_equip_item": "FlyLarva"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW7",
+                "prompt_resolved": "As {catname} approaches the corpse, it shudders, as if letting out a final gasp of breath. Before {he} can react, the creature lashes out with a half decomposed limb and claws at {him}.",
+                "self_damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW8",
+                "prompt_resolved": "{catname} digs through the decomposing flesh and exposed bone, searching for something valuable. With {his} arm deep in the mass, {he} feels something latch onto {him}...",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW9",
+                "prompt_resolved": "{catname} circles the carcass, nose wrinkling at the foul odor and does not see anything of note."
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW10",
+                "prompt_resolved": "{His} eyes alert, {catname} takes in every detail of the corpse. By studying the inverted flesh of bones and sinews, {catname} feels like {he} has a better grasp of anatomy.",
+                "permanent_stats": {
+                  "int": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW11",
+                "prompt_resolved": "The pungent stench of the decaying carcass overwhelms {catname}'s senses. Unable to focus {he} turns away instead."
+              },
+              "rare": {
+                "prompt": "EVENT_DECAYINGCARCASS_REW12",
+                "prompt_resolved": "{catname} extends a paw, prodding the carcass gently. As {he} does, a swarm of flies takes to the air and {catname} jumps back. It's too late however, as an opportunistic parasite latches on.",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "APoop": {
+    "intro": {
+      "title": "EVENT_APOOP_NAME",
+      "title_resolved": "A Poop",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "a_poop",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_APOOP_QUES",
+      "prompt_resolved": "{catname} finds a small pile of excrement.\n\n{He} wrinkles {his} nose as the dropping permeates the room with a foul stench...",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW1",
+                "prompt_resolved": "With a well aimed strike, {catname} strikes at the poop and quickly dispatches it!\n\n{He} feels something metallic...",
+                "gain_coins": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW2",
+                "prompt_resolved": "Without hesitation, {catname} pounces on the poop and eviscerates it.\n\nWhatever creature who left it behind must have liked eating gold!",
+                "gain_coins": "10"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW3",
+                "prompt_resolved": "Not taking any chances, {catname} strikes the small pile of excrement, spraying the walls with debris.\n\n{He} made a mess but nothing else seems to have happened."
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW4",
+                "prompt_resolved": "{catname} pounces forward, crushing the poop in {his} paws! Excrement sprays everywhere, covering {catname}'s fur with stench.\n\nThe rest of the party takes a step back, clearly disgusted.",
+                "gain_disorder": "Stinky"
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW5",
+                "prompt_resolved": "Without thinking twice, {catname} takes a large bite of poop.\n\n{He} feels a little better.",
+                "heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW6",
+                "prompt_resolved": "{catname} approaches the poop slowly, enjoying the fragrant stench.\n\n{He} chows down on it furiously. Is there any more?",
+                "gain_disorder": "Scatological"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW7",
+                "prompt_resolved": "As it slides down, {catname} starts to realize how bad of an idea this was.\n\n{His} stomach turns and {he} starts to feel sick...",
+                "gain_disorder_from_pool": "stomach_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW8",
+                "prompt_resolved": "{catname} begins to eat the poop but lets out a cry of pain as {he} swallows.\n\nThe strange excrement shifts and expands inside of {him}...",
+                "gain_disorder": "IntestinalProlapse"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW9",
+                "prompt_resolved": "{catname} looks carefully at the poop and finds a small object sticking out...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW10",
+                "prompt_resolved": "Buried in the poop {catname} thinks {he} sees something shiny!",
+                "get_item_from_pool": "poop_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_APOOP_REW11",
+                "prompt_resolved": "{catname} looks closely at the poop...\n\n[i]\"This is incredible! It will make a fantastic hat!\"[/i]\n\n{catname} is obsessed with the poop and plops it on {his} head.",
+                "get_parasite": "EnchantingPoop_Cursed"
+              },
+              "rare": {
+                "prompt": "EVENT_APOOP_REW12",
+                "prompt_resolved": "{catname} digs around in the excrement, but only manages to get {himself} covered in feces!\n\nThe rest of the party turn their noses away from {him} in horror at the stench...",
+                "gain_disorder": "Stinky"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ALargePoop": {
+    "intro": {
+      "title": "EVENT_ALARGEPOOP_NAME",
+      "title_resolved": "A Large Poop",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "a_large_poop",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ALARGEPOOP_QUES",
+      "prompt_resolved": "{catname} finds a large mound of poop.\n\n{catname} covers {his} nose with {his} paw to keep {himself} from gagging at the smell.",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW1",
+                "prompt_resolved": "{catname} smashes the poop, spraying it across the floor.\n\nThe distinct [i]plink!, plink![/i] of coins scattering on the ground reverberates throughout the room.",
+                "gain_coins": "10"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW2",
+                "prompt_resolved": "{catname} pulls apart the pile and finds a large number of coins buried inside!",
+                "gain_coins": "25"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW3",
+                "prompt_resolved": "{catname} strikes the mound and sprays excrement all over {himself}...\n\nThe other cats jump back in horror at the stench!",
+                "gain_disorder": "Stinky"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW4",
+                "prompt_resolved": "{catname} dives into the pile of poop, destroying it from the inside out!\n\n{He} emerges a few moments later, absolutely covered in brown, smelly excrement...",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalHood_Cursed"
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW5",
+                "prompt_resolved": "{catname} bites into the soft heap... it tastes great!\n\n{catname} can't get enough of it. {His} eyes dart around, hungry for more poop...",
+                "gain_disorder": "Scatological"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW6",
+                "prompt_resolved": "{catname} devours the poop, excrement flying everywhere as he feasts.",
+                "gain_disorder": "Scatological",
+                "get_item": "EnchantingPoop"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW7",
+                "prompt_resolved": "{catname} takes a large bite of the feces.\n\n{His} insides begin to gurgle and twist!",
+                "gain_disorder": "IntestinalProlapse"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW8",
+                "prompt_resolved": "{catname} eagerly gobbles down large bites of the poop.\n\n{His} insides swell and groan as {his} stomach reacts to the foul meal!",
+                "injury": "con",
+                "gain_disorder": "Incontinence"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW9",
+                "prompt_resolved": "{catname} discovers that the poop has become fossilized!\n\n{He} gingerly picks up the poop and stashes it in {his} pocket.",
+                "get_item_from_pool": "poop_items"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW10",
+                "prompt_resolved": "{catname} examines the heap of poop, and finds some items inside!",
+                "get_item_from_pool": {
+                  "pool": "chapter",
+                  "restrict": "trinket"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ALARGEPOOP_REW11",
+                "prompt_resolved": "{catname} bets there is something valuable hiding inside the poop and makes it {his} mission to dig through every last brown log!",
+                "gain_disorder": "Stinky"
+              },
+              "rare": {
+                "prompt": "EVENT_ALARGEPOOP_REW12",
+                "prompt_resolved": "{catname} believes {he} sees something inside the poop and leaps into the pile, desperately searching for valuables!\n\nHopefully that was at least a valuable lesson.",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalMask_Cursed"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AMegaHugePoop": {
+    "intro": {
+      "title": "EVENT_AMEGAHUGEPOOP_NAME",
+      "title_resolved": "A Mega Huge Poop",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "a_mega_large_poop",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_AMEGAHUGEPOOP_QUES",
+      "prompt_resolved": "{catname} has found a mega huge poop!\n\n{catname} looks up in awe at the massive monument to defecation towering above {him}.",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW1",
+                "prompt_resolved": "{catname} lays into the massive poop with {his} paws, sending chunks flying everywhere!\n\nWhatever laid this beauty must have also eaten a whole lot of coins!",
+                "gain_coins": "25"
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW2",
+                "prompt_resolved": "Layers of brown poop crumble before {catname} as {he} pulls back the side of the pile, revealing a massive pile of coins hidden inside!",
+                "gain_coins": "50"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW3",
+                "prompt_resolved": "{catname}'s paws splatter excrement everywhere as {he} punches {his} way through the massive poop.\n\n{He} steps away, proud of {his} work, but covered in feces!",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalHood_Cursed"
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW4",
+                "prompt_resolved": "{catname} dives face first into the massive poop and gets covered in feces!\n\nThe other cats run in terror from {his} stench!",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalNecklace_Cursed"
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW5",
+                "prompt_resolved": "{catname} eats {his} fill from the huge pile of poop, acquiring an insatiable appetite for the peculiar flavor!",
+                "gain_disorder": "Scatological",
+                "get_item": "EnchantingPoop"
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW6",
+                "prompt_resolved": "The poop tastes delicious and {catname} eats until {his} belly is almost bursting!",
+                "gain_disorder": "Scatological",
+                "get_item": "EnchantingPoop",
+                "permanent_stats": {
+                  "con": "2"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW7",
+                "prompt_resolved": "{catname} devours many rolls of the brown stool...\n\n{His} stomach rumbles and {he} collapses in pain!",
+                "injury": "con",
+                "gain_disorder": "Incontinence"
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW8",
+                "prompt_resolved": "{catname} consumes the poop but it tastes gross!\n\n{He} feels a growing pressure from {his} stomach as gasses from the feces begin to expand!",
+                "gain_disorder": "ExplosiveGas"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW9",
+                "prompt_resolved": "{catname} carefully digs through the huge pile and finds a section that has fossilized!",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "trinket"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW10",
+                "prompt_resolved": "{catname} meticulously searches through the gargantuan pile of stool and finds several trinkets!",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "trinket"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW11",
+                "prompt_resolved": "{catname} pokes the huge pile of poop, looking for loot, and it collapses down on top of {him}!",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalMask_Cursed"
+              },
+              "rare": {
+                "prompt": "EVENT_AMEGAHUGEPOOP_REW12",
+                "prompt_resolved": "{catname} leaps into the huge pile of feces, looking for treasure!\n\nMoments later {catname} crawls out, drenched in poop!",
+                "gain_disorder": "Stinky",
+                "get_parasite": "FecalNecklace_Cursed"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MummifiedCorpse": {
+    "intro": {
+      "title": "EVENT_MUMMIFIEDCORPSE_NAME",
+      "title_resolved": "Mummified Corpse",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mummified_corpse",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MUMMIFIEDCORPSE_QUES",
+      "prompt_resolved": "{catname} comes across a mummified corpse.\n\nThe body is dried and hardened, frozen in time in the tragic pose of its final moment.",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW1",
+                "prompt_resolved": "{catname} tears into the fragile body, crumbling the bones and dry skin to dust.\n\n{catname} feels very strong!",
+                "self_status_next_fight": {
+                  "TempStrengthUp": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW2",
+                "prompt_resolved": "{catname} mercilessly pulls the mummified body apart.\n\n{catname} purrs as {his} demonstration of strength impresses the others!",
+                "permanent_stats": {
+                  "str": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "1",
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW3",
+                "prompt_resolved": "{catname} pulls at the body but it is hard as rock and {he} is unable to break it.\n\nHow embarrassing! {catname} lags behind to lick {his} ego.",
+                "self_status_next_fight": {
+                  "Stun": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW4",
+                "prompt_resolved": "{catname} tears the corpse apart, and a swarm of fleas bursts out, biting {him} all over!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW5",
+                "prompt_resolved": "{catname} looks closely at the body...\n\nThere are holes in its neck and the skin is chalk white as if all the blood was drained from the body.\n\nWhat a horrifying way to go... {catname} shudders at the thought!"
+              },
+              "rare": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW6",
+                "prompt_resolved": "{catname} senses a creature lurking in the dark nearby...\n\n{He} leads the party in an ambush!",
+                "battle": "events/chupacabra.lvl"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW7",
+                "prompt_resolved": "{catname} tries to pry into the fossilized remains but cuts {himself} on the hard exterior.",
+                "self_damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW8",
+                "prompt_resolved": "{catname}'s fur stands up on end as {he} senses something quietly entering the room...\n\n{catname} turns to see the creature standing right behind {him}!",
+                "ambush": "events/chupacabra.lvl"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW9",
+                "prompt_resolved": "Lumps of mummified flesh tumble away from the corpse as {catname} digs into it looking for treasure.",
+                "get_item_from_pool": "deadcat_equipment"
+              },
+              "rare": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW10",
+                "prompt_resolved": "{catname} examines the body and notices it is clutching something...",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "trinket"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW11",
+                "prompt_resolved": "As {catname} is attempting to loot the corpse, it rolls oddly almost like it is alive and {catname} leaps in fright!",
+                "self_status_next_fight": {
+                  "Fear": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUMMIFIEDCORPSE_REW12",
+                "prompt_resolved": "As {catname} is looking around the body for something useful, {he} catches its eye and could swear it winks at {him}.\n\n{catname} cannot shake that image from {his} mind.",
+                "gain_disorder": "Anxiety"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Fetus": {
+    "intro": {
+      "title": "EVENT_FETUS_NAME",
+      "title_resolved": "Fetus",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "fetus",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FETUS_QUES",
+      "prompt_resolved": "{catname} finds a small, helpless fetus lying on the floor.\n\nIt stares up at {him} with large, round eyes.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FETUS_REW1",
+                "prompt_resolved": "The cats chow down on the fetus. It is delicious!",
+                "party_heal": "100%"
+              },
+              "rare": {
+                "prompt": "EVENT_FETUS_REW2",
+                "prompt_resolved": "{catname} digs in, eating {his} fill of the soft flesh...\n\n{He} feels invigorated!",
+                "permanent_stats": {
+                  "con": "1"
+                },
+                "self_status_next_fight": {
+                  "HealthRegenUp": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FETUS_REW3",
+                "prompt_resolved": "{catname} eats the fetus, but it tastes vile!\n\n{He} starts to feel sick from eating the strange meat.\n\n{catname} is poisoned!",
+                "self_status_next_fight": {
+                  "Poison": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_FETUS_REW4",
+                "prompt_resolved": "As {catname} bites into the fetus, a parasite hiding inside the body breaks off and latches onto {catname}!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "charm": {
+          "label": "EVENT_CHARM_ANSW",
+          "label_resolved": "Charm",
+          "stat": "cha",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FETUS_REW5",
+                "prompt_resolved": "{catname} comforts the little fellow with kind words and the fetus becomes a friend!",
+                "gain_familiar": "CharmedPinky"
+              },
+              "rare": {
+                "prompt": "EVENT_FETUS_REW6",
+                "prompt_resolved": "{catname} gives the fetus lots of wet kisses and it giggles in delight!\n\nThe fetus and its other pinky friends join the party on their adventure!",
+                "gain_familiar": "CharmedPinky"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FETUS_REW7",
+                "prompt_resolved": "{catname} moves close to give the fetus a kiss but it bites {catname} on the nose!",
+                "damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_FETUS_REW8",
+                "prompt_resolved": "{catname} attempts to comfort the fetus, but when {he} gets close it transforms and grabs onto {catname}!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_FETUS_REW9",
+            "prompt_resolved": "{catname} ignores the fetus.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_FETUS_REW10",
+            "prompt_resolved": "{catname} leaves the fetus alone...\n\n{He} can't shake the feeling of guilt over abandoning it and lags behind the party, feeling sad.\n\n{catname} will go last next battle.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "self_status_next_fight": {
+              "AddInitiative": "-99"
+            }
+          }
+        }
+      }
+    }
+  },
+  "BloodStain": {
+    "intro": {
+      "title": "EVENT_BLOODSTAIN_NAME",
+      "title_resolved": "Blood Stain",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "blood_stain",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "is_chapter": [
+              "theend"
+            ]
+          },
+          "reward": {
+            "prompt": "EVENT_BLOODSTAIN_ALT_THEEND_QUES",
+            "prompt_resolved": "A dark pool of liquid is on the ground.\n\nBubbles rise from the surface of the pool as {catname} approaches it."
+          }
+        }
+      },
+      "options": {
+        "lick": {
+          "label": "EVENT_LICK_ANSW",
+          "label_resolved": "Lick",
+          "stat": "con",
+          "requirements": {
+            "is_not_chapter": [
+              "future",
+              "theend"
+            ]
+          },
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BLOODSTAIN_REW1",
+                "prompt_resolved": "It tastes almost sweet. {catname} laps up the thick surface.",
+                "heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BLOODSTAIN_REW2",
+                "prompt_resolved": "{catname} leans over and stares into the warm pool.\n\nBehind {his} reflection, {he} sees something looking back at {him}.",
+                "get_parasite": "CrimsonMask_Cursed"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BLOODSTAIN_REW3",
+                "prompt_resolved": "The blood tastes bitter and stale. {catname} swallows repeatedly, trying to remove the metallic taste from {his} mouth.",
+                "self_damage": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BLOODSTAIN_REW4",
+                "prompt_resolved": "As {catname} dips {his} tongue into the viscous liquid, {he} feels something leap up from the pool and latch onto {him}!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "lick_alt": {
+          "label": "EVENT_LICK_ANSW",
+          "label_resolved": "Lick",
+          "stat": "con",
+          "requirements": {
+            "is_chapter": [
+              "future",
+              "theend"
+            ]
+          },
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BLOODSTAIN_ALT_REW1",
+                "prompt_resolved": "It takes time, but {catname} manages to lap up a lot of the liquid.\n\nIt tastes good and {catname} feels stronger.",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BLOODSTAIN_ALT_REW2",
+                "prompt_resolved": "{catname} laps up the strange liquid. It is tangy, but tastes delicious!",
+                "upgrade_passive": "random"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BLOODSTAIN_ALT_REW3",
+                "prompt_resolved": "{catname} drinks the liquid but it tastes very bitter.\n\n{His} stomach begins to ache and {catname} feels hot.",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BLOODSTAIN_ALT_REW4",
+                "prompt_resolved": "{catname} leans {his} face down into the viscous liquid to drink...\n\nThe pool begins to splash and bubble as small parasites latch onto {catname}!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_BLOODSTAIN_REW5",
+            "prompt_resolved": "{catname} steps carefully around the dark pool without disturbing it.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "RottenMeat": {
+    "intro": {
+      "title": "EVENT_ROTTENMEAT_NAME",
+      "title_resolved": "Rotten Meat",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "rotten_meat",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ROTTENMEAT_QUES",
+      "prompt_resolved": "{catname} discovers a hunk of rotting meat, partially decomposed.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ROTTENMEAT_REW1",
+                "prompt_resolved": "\"A meal is a meal,\" thinks {catname}, as {he} gobbles down the rancid flesh.",
+                "heal": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_ROTTENMEAT_REW2",
+                "prompt_resolved": "The poisonous flesh tastes gross. {catname} feels an odd sensation in {his} paws and looks down to see {his} claws have become discolored.",
+                "learn_passive": "PoisonTips"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ROTTENMEAT_REW3",
+                "prompt_resolved": "What might have once been a nutritious meal has long since become toxic waste.",
+                "self_damage": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_ROTTENMEAT_REW4",
+                "prompt_resolved": "Overcome with hunger, {catname} consumes the rotting meat. Feeling sick to {his} stomach, {he} feels a growing urge to puke...",
+                "permanent_stats": {
+                  "con": "-1"
+                },
+                "learn_ability": "BarfBall"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ROTTENMEAT_REW5",
+                "prompt_resolved": "Although aged, much of the meat still appears edible. {catname} stashes it away for later.",
+                "set_frame": "4",
+                "gain_food": [
+                  "1",
+                  "5"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_ROTTENMEAT_REW6",
+                "prompt_resolved": "{catname} notices a maggot looking inquisitively at the meat. Knowing the rotting meal will be much more enjoyed by the maggot, {catname} offers it the meal and gains a friend!",
+                "set_frame": "5",
+                "gain_familiar": "FamiliarChargeyMaggot"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ROTTENMEAT_REW7",
+                "prompt_resolved": "As {catname} pokes at the aging flesh, a bunch of angry maggots jump out and attack!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "Maggot"
+                  ],
+                  "count": "2",
+                  "spawn_side": "cats"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_ROTTENMEAT_REW8",
+                "prompt_resolved": "{catname} leans in close to the foul pile and sniffs carefully. The rank stench intrigues {him} and {he} doesn't notice a small creature wriggle into {his} fur.",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_ROTTENMEAT_REW9",
+                    "prompt_resolved": "Tearing away the moldy flesh {catname} discovers the remaining bones could make a great weapon.",
+                    "get_item_from_pool": "bone_weapons"
+                  },
+                  {
+                    "prompt": "EVENT_ROTTENMEAT_REW10",
+                    "prompt_resolved": "{catname} pulls the rotten bits of flesh away, revealing more edible meat below.",
+                    "gain_food": [
+                      "1",
+                      "5"
+                    ]
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "1",
+                "prompt": "EVENT_ROTTENMEAT_REW11",
+                "prompt_resolved": "After picking it up, {catname} realizes it would make a great weapon.",
+                "get_item": "RottenMeat"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ROTTENMEAT_REW12",
+                "prompt_resolved": "{catname} gingerly picks up the hunk of meat showing it off to {his} party members. It explodes, splattering everyone with toxic chunks!",
+                "party_damage": [
+                  "2",
+                  "6"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_ROTTENMEAT_REW13",
+                "prompt_resolved": "As {he} greedily digs through the rotting flesh, looking for treasure within, {catname} becomes infected!",
+                "gain_disorder": "LooseMeat"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "OminousSign": {
+    "intro": {
+      "title": "EVENT_OMINOUSSIGN_NAME",
+      "title_resolved": "Ominous Sign",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "ominous_sign",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_OMINOUSSIGN_QUES",
+      "prompt_resolved": "A strange figure made of sticks and twine hangs before {catname}.\n\nA shiver runs down {his} spine. This is an ominous sign...",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW1",
+                "prompt_resolved": "{catname} tears down the weird figure and pulls it apart easily, grinning in triumph.\n\nA calm settles over {catname}. {He} feels reassured that this deed will be rewarded in the coming battle.",
+                "self_status_next_fight": {
+                  "DivineShield": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW2",
+                "prompt_resolved": "{catname} rips the ominous figure down and pulls it apart with {his} paws.\n\nA strange light briefly glows from {his} body as some distant entity blesses {catname} for destroying the foul sign.",
+                "learn_passive": "Blessed"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW3",
+                "prompt_resolved": "{catname} swats at the hanging sign with {his} paw, but can't pull it down.\n\nA sudden sense of foreboding tingles down {catname}'s spine...",
+                "event_now_same_cat": "Happening"
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW4",
+                "prompt_resolved": "{catname} reaches up and touches the strange wooden figure, and lets out a cry of pain!",
+                "injury": "cursed"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW5",
+                "prompt_resolved": "{catname} examines the ominous sign... It appears to be a warning!\n\nThe party takes care moving forward, allowing them to ambush the next battle!",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW6",
+                "prompt_resolved": "{catname} stares at the strange sign and ponders its meaning...\n\nAfter some time, an idea forms in {catname}'s mind for a new spell!",
+                "learn_ability_from_pool": "Necromancer"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW7",
+                "prompt_resolved": "{catname} ponders the strange wooden figure for a while, not paying attention to {his} surroundings...\n\nIt's a trap!",
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW8",
+                "prompt_resolved": "The strange shape creeps into {catname}'s mind, and {he} begins seeing them everywhere!\n\nStill shaking with fear at an image {he} can't unsee, the other cats manage to corral {catname} onward...",
+                "self_status_next_fight": {
+                  "Fear": "3"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW9",
+                "prompt_resolved": "{catname} gingerly pulls the ratty figure down and pockets it.",
+                "get_item_from_pool": "rat_trinkets"
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW10",
+                "prompt_resolved": "{catname} carefully detaches the wooden shape and brings it back to the other cats.",
+                "get_item": "CursedStickman"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OMINOUSSIGN_REW11",
+                "prompt_resolved": "{catname} tries to pull it down, but it keeps slipping through {his} paws!",
+                "permanent_stats": {
+                  "lck": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_OMINOUSSIGN_REW12",
+                "prompt_resolved": "A terrifying screech echoes in {catname}'s mind as {he} touches the ominous sign... \n\n{He} recoils in pain, trying to pull {himself} away, but the wooden figure latches onto {him}!",
+                "get_parasite": "CursedStickman",
+                "gain_disorder_from_pool": [
+                  "Psychosis,",
+                  "Touched,",
+                  "Soulless"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "StrangeFlowers": {
+    "intro": {
+      "title": "EVENT_STRANGEFLOWERS_NAME",
+      "title_resolved": "Strange Flowers",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "strange_flowers",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_STRANGEFLOWERS_QUES",
+      "prompt_resolved": "A scent is in the air. It's sweet, almost intoxicating, but something about it feels unnatural.\n\n{catname} finds the source: a patch of strange flowers.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW1",
+                "prompt_resolved": "Delicious. {catname} ravenously devours the flowers, rolling on the ground as a strange sensation washes over {him}.",
+                "get_and_equip_item": "Catnip"
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW2",
+                "prompt_resolved": "As {catname} consumes the soft petals, {he} feels a rush of clarity in {his} mind.",
+                "permanent_stats": {
+                  "int": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW3",
+                "prompt_resolved": "{catname} blinks rapidly as {his} senses are bombarded by the sharp flavor of the plant.\n\n{He} raises a paw in an odd, inquisitive manner, batting at the air in confusion.",
+                "self_status_next_fight": {
+                  "Confusion": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW4",
+                "prompt_resolved": "{catname} devours the pale flowers.\n\nSuddenly, {his} muscles clench as {his} senses become sharpened. There is a crazed look in {his} eyes!",
+                "gain_disorder_from_pool": [
+                  "Psychosis,",
+                  "Pica,",
+                  "Vegan"
+                ]
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW5",
+                "prompt_resolved": "As {catname} shreds the plant, a delicious and intoxicating odor fills the air.\n\n{catname} decides to keep the fragrant mulch for later.",
+                "get_item": "CatnipBig"
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW6",
+                "prompt_resolved": "{catname} pulls the flowers apart, ripping up the roots. A strange bulb is revealed beneath!",
+                "get_item": "StrangeMarble"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW7",
+                "prompt_resolved": "When the delicate petals are bruised and cut, a powerful fragrance fills {his} lungs.\n\n{catname} blinks, then stumbles back as a wave of drowsiness overtakes {him}...",
+                "self_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "FlowerEventSleep"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW8",
+                "prompt_resolved": "As {catname} lashes out at the plant, it strikes back!\n\nA thorny stem wraps around {his} outstretched arm and {he} jumps back, howling in pain.",
+                "injury": "spd",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW9",
+                "prompt_resolved": "{catname} digs around underneath the soft leaves of the plant, and finds a collection of powerful looking seeds!",
+                "get_item": "SeedBombs"
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW10",
+                "prompt_resolved": "Hiding beneath the alluring flowers {catname} finds a rare patch of delicious, luminescent grass!",
+                "get_item": "BagOfGrass"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW11",
+                "prompt_resolved": "As {catname} carefully looks beneath the flowers, they let out a soft pollen.\n\n{catname} sneezes! {He} then suddenly decides that now would be an ideal time for a nap...",
+                "self_status_next_fight": {
+                  "Sleep": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STRANGEFLOWERS_REW12",
+                "prompt_resolved": "{catname}'s eyes grow heavy. Since nothing is going on, {he} decides now is a good time to sleep. {he}'s suddenly so tired...",
+                "gain_disorder": "Narcolepsy"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Mushroom": {
+    "intro": {
+      "title": "EVENT_MUSHROOM_NAME",
+      "title_resolved": "Mushroom",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mushroom",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MUSHROOM_QUES",
+      "prompt_resolved": "{catname} has found a large mushroom. What should {he} do with it?",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW1",
+                "prompt_resolved": "{catname} munches on the soft flesh of the mushroom.\n\n{He} feels {his} mind expanding with a temporary rush of brilliance. The possibilities are endless!",
+                "self_status_next_fight": {
+                  "IntelligenceUp": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW2",
+                "prompt_resolved": "Taking a large bite out of the mushroom, {catname} considers the many paths that led {him} to this strange situation.",
+                "permanent_stats": {
+                  "int": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW3",
+                "prompt_resolved": "As {he} chews on the soft flesh of the mushroom, {catname}'s mind begins to spin. Despite having trouble focusing, {he} stumbles on.",
+                "self_status_next_fight": {
+                  "IntelligenceUp": "-3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW4",
+                "prompt_resolved": "{catname} takes a timid bite. Then another bite. {He} then furiously devours the supple mushroom!\n\n{catname} looks around, eager for more...",
+                "gain_disorder_from_pool": [
+                  "EatingDisorder,",
+                  "Pica"
+                ]
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW5",
+                "prompt_resolved": "{catname} plucks the mushroom up by the stem. It might be useful later in a pinch.",
+                "get_item_from_pool": [
+                  "Mushrooms,",
+                  "PurpleMushroom,",
+                  "BlackMushroom"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW6",
+                "prompt_resolved": "In the dim light {catname} notices luminescent veins running down the stem of the mushroom. {He} delicately uproots the mushroom and tucks it away.",
+                "get_item_from_pool": [
+                  "SpottedMushroom,",
+                  "RedMushroom"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW7",
+                "prompt_resolved": "As {catname} attempts to pull up the mushroom, it releases a cloud of spores!\n\n{catname} stumbles back, {his} senses confused by the potent cloud.",
+                "self_status_next_fight": {
+                  "Confusion": "4"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW8",
+                "prompt_resolved": "As {catname} roughly pulls at the mushroom, it releases a toxic cloud of spores!\n\nBreathing in the dense particles, {catname} shudders. {His} eyes begin darting around menacingly.",
+                "gain_disorder": "Paranoia"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW9",
+                "prompt_resolved": "{catname} notices that the mushroom has grown up over the body of some long deceased creature.\n\nDigging into the remains reveals something that could make great armor!",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": "bone_armor"
+                  },
+                  {
+                    "get_item_from_pool": "cat_armor"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW10",
+                "prompt_resolved": "Beneath the innocent looking shroom is the carcass of a powerful creature. {catname} pulls it out...",
+                "get_item_from_pool": "rotten_armor"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MUSHROOM_REW11",
+                "prompt_resolved": "{catname} sees something poking out from beneath the mushroom...\n\nAs {he} moves closer to investigate, a skeletal arm reaches out and strikes {him}!",
+                "self_damage": [
+                  "3",
+                  "8"
+                ],
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MUSHROOM_REW12",
+                "prompt_resolved": "Distracted sniffing the odd mushroom, a rotting skeletal hand reaches out from beneath it and strikes {catname}!\n\n{He} howls as {his} skin begins to rot from some horrible disease.",
+                "gain_disorder": "Necrosis"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SmellyBag": {
+    "intro": {
+      "title": "EVENT_SMELLYBAG_NAME",
+      "title_resolved": "Smelly Bag",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "smelly_bag",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SMELLYBAG_QUES",
+      "prompt_resolved": "A putrid stench is on the air.\n\n{catname} wrinkles {his} nose as {he} finds the source, an incredibly smelly bag.",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW1",
+                "prompt_resolved": "{catname} sees something poking out through the top of the bag and pulls it out...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW2",
+                "prompt_resolved": "{catname} finds an old string holding the bag shut and carefully pulls it open...",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": [
+                    "weapon",
+                    "consumables",
+                    "armor"
+                  ]
+                },
+                "random_pool": [
+                  {},
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": [
+                        "weapon",
+                        "consumables",
+                        "armor"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW3",
+                "prompt_resolved": "{catname} gets close to the bag and a large worm slides out and bites {him}!",
+                "damage": [
+                  "2",
+                  "4"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW4",
+                "prompt_resolved": "As {catname} approaches the bag, a parasite leaps out and latches onto {him}!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW5",
+                "prompt_resolved": "{catname} rips open the smelly bag and finds something among the trash...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW6",
+                "prompt_resolved": "The rotting bag succumbs to {catname}'s assault and breaks open, revealing several items within!",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": [
+                    "weapon",
+                    "consumables",
+                    "armor"
+                  ]
+                },
+                "random_pool": [
+                  {},
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": [
+                        "weapon",
+                        "consumables",
+                        "armor"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW7",
+                "prompt_resolved": "The bag leaps forward and attacks {catname}!\n\n{catname} bolts in surprise and the Chum Bag pursues {him} to the next area!",
+                "spawn_unit_next_fight": {
+                  "object": "ChumBag",
+                  "count": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW8",
+                "prompt_resolved": "As {catname} goes to strike what {he} thought was just a bag, it bites {his} face!",
+                "injury": "cha"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW9",
+                "prompt_resolved": "{catname} pries open the bag and reaches in, looking for something useful...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW10",
+                "prompt_resolved": "{catname} pulls the stinky bag open and a bunch of items tumble out!",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": [
+                    "weapon",
+                    "consumables",
+                    "armor"
+                  ]
+                },
+                "random_pool": [
+                  {},
+                  {
+                    "get_item_from_pool": {
+                      "pool": "chapter_common",
+                      "restrict": [
+                        "weapon",
+                        "consumables",
+                        "armor"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SMELLYBAG_REW11",
+                "prompt_resolved": "{catname} reaches into the bag and digs around. {He} feels something latch onto {him}!",
+                "get_parasite_from_pool": "sludge_armor"
+              },
+              "rare": {
+                "prompt": "EVENT_SMELLYBAG_REW12",
+                "prompt_resolved": "As {catname} digs through the bag, the waste and filth stick to {his} fur like glue!",
+                "get_parasite": "PutridPile"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ASmallPileOfStones": {
+    "intro": {
+      "title": "EVENT_ASMALLPILEOFSTONES_NAME",
+      "title_resolved": "A small pile of stones",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "a_small_pile_of_stones",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ASMALLPILEOFSTONES_QUES",
+      "prompt_resolved": "{catname} finds a small pile of stones scattered on the ground.",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW1",
+                "prompt_resolved": "{catname} gobbles up the rocks. They are quite crunchy.",
+                "heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW2",
+                "prompt_resolved": "With great effort, {catname} chews on the rocks and swallows them.",
+                "permanent_stats": {
+                  "str": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW3",
+                "prompt_resolved": "{catname} tries to bite through a rock but cracks {his} tooth instead!",
+                "damage": "1",
+                "permanent_stats": {
+                  "str": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW4",
+                "prompt_resolved": "{catname} fills {his} mouth with rocks and tries to chew them...\n\n{catname} howls in pain as {his} jaw breaks!",
+                "injury": "cha"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW5",
+                "prompt_resolved": "{catname} gathers up the rocks to use for later.",
+                "get_item": "Rocks"
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW6",
+                "prompt_resolved": "{catname} spends time meticulously picking up every rock {he} can find in the area.\n\nIt takes a while but {catname} is rewarded for {his} efforts!",
+                "get_item": "Rocks",
+                "get_item_from_pool": "rock_items"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW7",
+                "prompt_resolved": "{catname} fills {his} pockets to the brim with rocks!\n\nIt slows {him} down considerably.",
+                "self_status_next_fight": {
+                  "SpeedUp": "-2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW8",
+                "prompt_resolved": "[i]\"Wow! What a cute rock!\"[/i] exclaims {catname}, and picks up one of the larger rocks.\n\nThe other cats look on skeptically but no one has the heart to tell {catname} it's just a rock.",
+                "get_parasite": "CursedRock"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW9",
+                "prompt_resolved": "{catname} looks closely at the rocks, and finds some coins mixed in!",
+                "gain_coins": [
+                  "3",
+                  "7"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW10",
+                "prompt_resolved": "Upon closer examination, {catname} discovers that the rocks are made of gold!\n\n[i]\"We're rich!\"[/i]",
+                "gain_coins": [
+                  "15",
+                  "30"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW11",
+                "prompt_resolved": "Convinced there is something here that doesn't meet the eye, {catname} stares transfixed at the rocks for hours.\n\nThe party waits so long they are ambushed!",
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_ASMALLPILEOFSTONES_REW12",
+                "prompt_resolved": "{catname} examines the rocks for ages, getting more and more excited the longer that goes on.\n\nThey are just rocks, but {catname} is obsessed with them!",
+                "gain_disorder": "Fossilized"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "FruitBasket": {
+    "intro": {
+      "title": "EVENT_FRUITBASKET_NAME",
+      "title_resolved": "Fruit Basket",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "fruit_basket",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FRUITBASKET_QUES",
+      "prompt_resolved": "{catname} discovers a basket of fruit. The warm smell of fresh citrus and bananas lingers in the air. A refreshing reprieve!",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRUITBASKET_REW1",
+                "prompt_resolved": "Warm juice from the fruit runs down {catname}'s chin as {he} devours the delicious fruit.",
+                "full_heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_FRUITBASKET_REW2",
+                "prompt_resolved": "The fruit is tasty! {catname} and the other cats gobble up the whole basket.",
+                "party_heal": "100%"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRUITBASKET_REW3",
+                "prompt_resolved": "{catname} bites into a piece of fruit, then spits it out in disgust! It's poisoned!",
+                "self_status_next_fight": {
+                  "Poison": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_FRUITBASKET_REW4",
+                "prompt_resolved": "The fruit tastes great, at first... But after {catname} and the other cats devour it, they look down and notice that the remains are all rotted. They begin to feel sick as poison sets in...",
+                "party_status_next_fight": {
+                  "Poison": "3"
+                }
+              }
+            }
+          }
+        },
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRUITBASKET_REW5",
+                "prompt_resolved": "{catname} crushes the fruit, spraying juice everywhere.\n\nIt smells nice but nothing happens..."
+              },
+              "rare": {
+                "prompt": "EVENT_FRUITBASKET_REW6",
+                "prompt_resolved": "{catname} tears open the fruit and pokes through the remains, looking for something useful...",
+                "get_item_from_pool": [
+                  "MagicSeed,",
+                  "BagOfSeeds,",
+                  "GlowingSeed"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_FRUITBASKET_REW7",
+                "prompt_resolved": "{catname} pushes the basket of fruit over and steps on the fruit, squeezing their juices out onto the ground."
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_FRUITBASKET_REW8",
+                "prompt_resolved": "{catname} smashes the fruit, and a swarm of fruit flies surround the cats!",
+                "spawn_unit_next_fight": {
+                  "object": "Fly",
+                  "count": [
+                    "6",
+                    "8"
+                  ],
+                  "spawn_side": "cats"
+                }
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRUITBASKET_REW9",
+                "prompt_resolved": "{catname} examines the fruit in the basket and finds one that looks fresh. {He} shares it with the rest of the party.",
+                "party_heal": "3"
+              },
+              "rare": {
+                "prompt": "EVENT_FRUITBASKET_REW10",
+                "prompt_resolved": "Upon closer inspection, {catname} notices that the fruit is shimmering in the dim light.\n\nThe cats carefully bite into the ripe fruit... It's the most delicious thing they've ever tasted!",
+                "party_heal": "6",
+                "party_status_next_fight": {
+                  "DivineShield": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRUITBASKET_REW11",
+                "prompt_resolved": "As {catname} was examining the fruit, {he} was not paying attention to {his} surroundings... It's a trap!",
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_FRUITBASKET_REW12",
+                "prompt_resolved": "{catname} picks up one of the strange fruits, and it rots in {his} paws!\n\n{catname} jumps back in fear as the whole basket begins to rapidly decompose!",
+                "self_status_next_fight": {
+                  "Fear": "5"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "HumanSkin": {
+    "intro": {
+      "title": "EVENT_HUMANSKIN_NAME",
+      "title_resolved": "Human Skin",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "human_skin",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_HUMANSKIN_QUES",
+      "prompt_resolved": "{catname} sees something ahead. At first {he} is unable to distinguish the strange lump hanging loosely from the ceiling.\n\n{His} ears go back and {his} eyes grow wide as {he} realizes it is the skin of a human head, dry and boneless...",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_HUMANSKIN_REW1",
+                "prompt_resolved": "{catname} tugs at the loose skin with {his} teeth, pulling chunks off and eating them. Tasty!",
+                "heal": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_HUMANSKIN_REW2",
+                "prompt_resolved": "{catname} twitches as {he} chews on the dry skin. {He} feels a terrible itching sensation in {his} head as {catname}'s eyes mutate and become round!",
+                "mutation": {
+                  "eyes": "702"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_HUMANSKIN_REW3",
+                "prompt_resolved": "{catname} bites into the leathery skin. It is chewy and tastes weird. {He} feels {his} stomach begin to turn...",
+                "random_pool": [
+                  {
+                    "self_status_next_fight": {
+                      "Poison": "1"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "Poison": "2"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "Poison": "3"
+                    }
+                  },
+                  {
+                    "self_status_next_fight": {
+                      "Poison": "4"
+                    }
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_HUMANSKIN_REW4",
+                "prompt_resolved": "{catname} chews on the tough skin. {His} eyes glaze over and {he} starts shaking uncontrollably!",
+                "gain_disorder_from_pool": "mental_disorders"
+              }
+            }
+          }
+        },
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_HUMANSKIN_REW5",
+                "prompt_resolved": "{catname} examines the loose flaps of skin. Looking into the... mouth?\n\n{He} sees something hidden there...",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_HUMANSKIN_REW6",
+                "prompt_resolved": "{catname} sticks {his} head inside the strange head, looking for anything within.\n\nBefore {he} can react, the leathery husk falls on {him}!",
+                "mutation": {
+                  "ears": "310"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_HUMANSKIN_REW7",
+                "prompt_resolved": "Even though it has no eyes, {catname} feels as if it is staring right at {him}...\n\nA shudder runs down {catname}'s spine and {his} hair stands on end.",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_HUMANSKIN_REW8",
+                "prompt_resolved": "{catname} stares at the ghastly head...\n\n{He} blinks and shudders. How long has {he} been sitting here staring at it?\n\n{catname} turns away, but when {he} closes {his} eyes, the face is still haunting {him}.",
+                "gain_disorder_from_pool": "mental_disorders"
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_HUMANSKIN_REW9",
+                "prompt_resolved": "{catname} walks around the strange husk but doesn't see anything worth taking."
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_HUMANSKIN_REW10",
+                "prompt_resolved": "{catname} notices that the eyebrows on the head seem intact. {catname} tears the eyebrows off and wears them!",
+                "mutation": {
+                  "eyebrows": "440"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "set_frame": "2",
+              "common": {
+                "prompt": "EVENT_HUMANSKIN_REW11",
+                "prompt_resolved": "{catname} tugs at the skin, trying to find something useful to do with it, but is disappointed."
+              },
+              "rare": {
+                "prompt": "EVENT_HUMANSKIN_REW12",
+                "prompt_resolved": "{catname} pulls at the skin, and a large hunk tears off.\n\n{He} tries to eat it, but as {catname} swallows the tough leather, {he} chokes!",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "BottleOfViperBooze": {
+    "intro": {
+      "title": "EVENT_BOTTLEOFVIPERBOOZE_NAME",
+      "title_resolved": "Bottle of Viper Booze",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "bottle_of_viper_booze",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BOTTLEOFVIPERBOOZE_QUES",
+      "prompt_resolved": "{catname} discovers a strange bottle with a Viper label on it.\n\n{He} thinks it might be some kind of booze..?",
+      "options": {
+        "drink": {
+          "label": "EVENT_DRINK_ANSW",
+          "label_resolved": "Drink",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW1",
+                "prompt_resolved": "{catname} cautiously drinks the dark liquid. It tastes odd... but very good.",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW2",
+                "prompt_resolved": "{catname} pops off the lid and downs the strange liquid...\n\n{He} feels {his} stomach bubbling and a toxic taste splashes onto {his} tongue. {catname} feels a strong urge to spit!",
+                "learn_ability": "BarfBall"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW3",
+                "prompt_resolved": "{catname} takes a gulp of the liquid and immediately begins convulsing as poison ravages {his} body.",
+                "self_status_next_fight": {
+                  "Poison": "7"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW4",
+                "prompt_resolved": "{catname} downs the bottle and lets out a loud belch...\n\nThen a howl! The powerful toxin melts {him} from the inside out!",
+                "random_mutation": {
+                  "tag": "melted"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW5",
+                "prompt_resolved": "{catname} picks up the bottle and dumps out the unknown liquid.",
+                "get_item": "Bottles"
+              },
+              "rare": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW6",
+                "prompt_resolved": "{catname} tucks away the bottle. Maybe {he}'ll drink it later?",
+                "get_item": "ViperBottle"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW7",
+                "prompt_resolved": "{catname} picks up the bottle and cracks the lid to sniff at what might be inside.\n\nIt bursts open and acid bubbles over {him}!",
+                "damage": "5",
+                "permanent_stats": {
+                  "str": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW8",
+                "prompt_resolved": "{catname} goes to pick up the bottle, but a venomous snake comes out of the bottle and bites {him}!\n\n{catname}'s body is wracked with pain!",
+                "damage": "10",
+                "permanent_stats": {
+                  "str": "-1",
+                  "spd": "-1",
+                  "dex": "-1"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_BOTTLEOFVIPERBOOZE_REW9",
+            "prompt_resolved": "{catname} opts to leave the bottle alone and moves on.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Hairball": {
+    "intro": {
+      "title": "EVENT_HAIRBALL_NAME",
+      "title_resolved": "Hairball",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "hairball",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_HAIRBALL_QUES",
+      "prompt_resolved": "{catname} finds a hairball made of chunks of fur and hair.\n\nIt has small bones sticking out of it. It's honestly quite disgusting... Or is it?",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_HAIRBALL_REW1",
+                "prompt_resolved": "{catname} takes a bite of the grey mass.\n\nIt's crunchy and bits of fur get stuck in {his} teeth.",
+                "heal": "1"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_HAIRBALL_REW2",
+                "prompt_resolved": "{catname} bites into the lumpy ball. There is a raw primal quality to it that makes it a very enjoyable experience!",
+                "get_item": "RatBeezer"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_HAIRBALL_REW3",
+                "prompt_resolved": "{catname} starts eating the hairball, and starts gagging involuntarily. {He} starts to feel sick...",
+                "self_status_next_fight": {
+                  "Poison": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_HAIRBALL_REW4",
+                "prompt_resolved": "This might just be the worst thing {catname} has ever put in {his} mouth, and there has been a lot!\n\nThe hairball is both crunchy and mushy. {catname} thinks {he} might never eat again.",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_HAIRBALL_REW5",
+                "prompt_resolved": "{catname} examines the hairball and feels something hard and metal buried inside...",
+                "gain_coins": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_HAIRBALL_REW6",
+                "prompt_resolved": "The dim light must have tricked {him}!\n\n{catname} stares in awe at the hairball, which is made entirely of gold!",
+                "gain_coins": "20"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_HAIRBALL_REW7",
+                "prompt_resolved": "{catname} picks up the hairball and pulls it apart, trying to wear it as a sweater.\n\nThe other cats don't have the heart to tell {him} how absolutely hideous it looks!",
+                "self_status_next_fight": {
+                  "CharismaUp": "-2"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_HAIRBALL_REW8",
+                "prompt_resolved": "{catname} grabs the hairball and tries putting it on {his} head like a hat.\n\nSomething slimy moves inside it and bites {him}!",
+                "get_parasite": "CursedHairball"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_HAIRBALL_REW9",
+            "prompt_resolved": "That thing looks gross. {catname} leaves it alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "TallGrass": {
+    "intro": {
+      "title": "EVENT_TALLGRASS_NAME",
+      "title_resolved": "TallGrass",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tall_grass",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TALLGRASS_QUES",
+      "prompt_resolved": "A field of tall grass stands before {catname}, blocking {his} way. {catname} ponders what to do...",
+      "options": {
+        "destroy": {
+          "label": "EVENT_DESTROY_ANSW",
+          "label_resolved": "Destroy",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_TALLGRASS_REW1",
+                "prompt_resolved": "{catname} beats {his} way through the dense brush, and discovers a hidden path leading to the next battle!",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_TALLGRASS_REW2",
+                "prompt_resolved": "{catname} rips through the tall grass, revealing a secret stash!",
+                "gain_coins": [
+                  "10",
+                  "20"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_TALLGRASS_REW3",
+                "prompt_resolved": "{catname} leaps into the tall grass, striking with {his} paws.\n\nThe grass makes way to thorny brambles beneath which tear into {catname}'s skin!",
+                "damage": "8"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_TALLGRASS_REW4",
+                "prompt_resolved": "{catname} strikes at the grass. Before {he} can react, large brambles lash out at them, grabbing all the cats!",
+                "party_damage": "5",
+                "party_status_next_fight": {
+                  "Tangled": "2",
+                  "AbilityOnBattleStart_Immediate": "SummonBrambles2"
+                }
+              }
+            }
+          }
+        },
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_TALLGRASS_REW5",
+                "prompt_resolved": "{catname} chews on the tall grass. Delicious! {He} devours the tasty greens.",
+                "full_heal": "1",
+                "self_status_next_fight": {
+                  "HealthRegenUp": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_TALLGRASS_REW6",
+                "prompt_resolved": "As {he} carefully chews the tender blades, the grass begins spreading around {him}, engulfing the party in fragrant flowers!",
+                "party_heal": "5",
+                "party_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "GrassEvent"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_TALLGRASS_REW7",
+                "prompt_resolved": "{catname} attempts to bite the grass but before {he} can, large brambles wrap around {him}!",
+                "self_status_next_fight": {
+                  "Bleed": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_TALLGRASS_REW8",
+                "prompt_resolved": "{catname} chews on the grass. It is dry and tastes pretty gross.\n\nMaybe the next bite will taste good? {catname}'s stomach starts to hurt...",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              }
+            }
+          }
+        },
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "dex",
+          "animation": "choice_dex_alt",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TALLGRASS_REW9",
+                "prompt_resolved": "As {catname} digs through the tall grass, {he} smells something DELICIOUS!\n\n{catname} frantically searches for the source and finds it!",
+                "random_pool": [
+                  {
+                    "get_item": "KiloOfCatnip"
+                  },
+                  {
+                    "get_item": "CatnipBig"
+                  },
+                  {
+                    "get_item": "Catnip"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_TALLGRASS_REW10",
+                "prompt_resolved": "{catname} wades through the tall grass, and sees something sticking out beneath the weeds!",
+                "get_item_from_pool": "grass_items"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_TALLGRASS_REW11",
+                "prompt_resolved": "{catname} attempts to push through the grass looking for loot, but gets tangled in thick brambles!",
+                "damage": "2",
+                "self_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "SummonBrambles2"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_TALLGRASS_REW12",
+                "prompt_resolved": "{catname} approaches the tall grass...\n\nSuddenly, large brambles reach out and grapple {him}!",
+                "self_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "BrambleRandomTileEvent"
+                },
+                "spawn_unit_next_fight": {
+                  "object": "BrambleBaby",
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Fountain": {
+    "intro": {
+      "title": "EVENT_FOUNTAIN_NAME",
+      "title_resolved": "Fountain",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "fountain",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FOUNTAIN_QUES",
+      "prompt_resolved": "A giant stone fountain sits in front of {catname}. It's pouring water majestically.",
+      "options": {
+        "drink": {
+          "label": "EVENT_DRINK_ANSW",
+          "label_resolved": "Drink",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FOUNTAIN_REW1",
+                "prompt_resolved": "{catname} laps up water from the fountain. {He} feels a tingling sensation as all of {his} wounds and scars wash away.",
+                "full_heal": "1",
+                "heal_injury": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_FOUNTAIN_REW2",
+                "prompt_resolved": "{catname} feels a flood of stillness wash over {his} body, as all of {his} aches and pains are removed in an instant. {He} looks up at the fountain with renewed vigor for life.\n\n{catname} has become a baby kitten again!",
+                "set_age": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FOUNTAIN_REW3",
+                "prompt_resolved": "{catname} feels a terrible squeezing sensation in {his} skull as {his} head shrinks! {He} lets out a pitiful \"Mew!\" as {his} brain becomes that of a kitten.",
+                "permanent_stats": {
+                  "int": "-4",
+                  "cha": "+1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_FOUNTAIN_REW4",
+                "prompt_resolved": "The other cats look on in surprise as {catname} shrinks down into a small kitten after drinking from the fountain!",
+                "gain_disorder": "EternalYouth"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_FOUNTAIN_LEAVE",
+            "prompt_resolved": "{catname} isn't thirsty.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

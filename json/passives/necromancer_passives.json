@@ -1,0 +1,648 @@
+{
+  "Vampirism": {
+    "name": "PASSIVE_VAMPIRISM_NAME",
+    "name_resolved": "Vampirism",
+    "desc": "PASSIVE_VAMPIRISM_DESC",
+    "desc_resolved": "Your basic attack has lifesteal.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Leech": "1"
+        },
+        "NoReflection": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VAMPIRISM2_DESC",
+      "desc_resolved": "Your basic attack has lifesteal.\nYour spells have 50% lifesteal.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Leech": "1"
+        },
+        "AddStatusToSpells": {
+          "LeechPercent": "50"
+        },
+        "AddStatusToWeapons": {
+          "LeechPercent": "50"
+        },
+        "NoReflection": "1"
+      }
+    }
+  },
+  "OneWithNothing": {
+    "name": "PASSIVE_ONEWITHNOTHING_NAME",
+    "name_resolved": "One With Nothing",
+    "desc": "PASSIVE_ONEWITHNOTHING_DESC",
+    "desc_resolved": "If you end your turn with 0 mana, your Mana Regeneration is doubled.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "ManaRegenMultiplierIfManaEmpty": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ONEWITHNOTHING2_DESC",
+      "desc_resolved": "If you end your turn with 0 mana, your Mana Regeneration is doubled.\nBonus ability: Slit Wrists",
+      "passives": {
+        "ManaRegenMultiplierIfManaEmpty": "2",
+        "BonusAbility": "SlitWrists"
+      }
+    }
+  },
+  "BedBugs": {
+    "name": "PASSIVE_BEDBUGS_NAME",
+    "name_resolved": "Bed Bugs",
+    "desc": "PASSIVE_BEDBUGS_DESC",
+    "desc_resolved": "You start battles with 2 beefy leech familiars.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "SpawnOnBattleStart": "BeefyCharmedLeech"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BEDBUGS2_DESC",
+      "desc_resolved": "You start battles with 4 beefy leech familiars.",
+      "passives": {
+        "SpawnOnBattleStart": {
+          "object": "BeefyCharmedLeech",
+          "number": "4"
+        }
+      }
+    }
+  },
+  "WormLord": {
+    "name": "PASSIVE_WORMLORD_NAME",
+    "name_resolved": "Worm Lord",
+    "desc": "PASSIVE_WORMLORD_DESC",
+    "desc_resolved": "When you take damage, spawn a leech familiar.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "CharmedLeech",
+          "good": "false",
+          "spawn_on_death_hit": "false"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WORMLORD2_DESC",
+      "desc_resolved": "When you take damage, spawn a leech familiar.\nYour basic attack spawns leech familiars.",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "CharmedLeech",
+          "good": "false",
+          "spawn_on_death_hit": "false"
+        },
+        "AddStatusToBasicAttack": {
+          "BounceObject": "CharmedLeech"
+        }
+      }
+    }
+  },
+  "InfiniteRebirth": {
+    "name": "PASSIVE_INFINITEREBIRTH_NAME",
+    "name_resolved": "Infinite Rebirth",
+    "desc": "PASSIVE_INFINITEREBIRTH_DESC",
+    "desc_resolved": "At the end of each round, if there is a body on the map and you're downed, you respawn on that tile with 1 HP and +10 temporary Speed. If that body was a party member, you spawn with full HP instead.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "InfiniteRebirth": {
+          "health": "1",
+          "playercat_health": "100%",
+          "TempSpeedUp": "10"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INFINITEREBIRTH2_DESC",
+      "desc_resolved": "At the end of each round, if there is a body on the map and you're downed, you respawn on that tile with 25% HP and +10 temporary Speed. If that body was a party member, you spawn with full HP instead.",
+      "passives": {
+        "InfiniteRebirth": {
+          "health": "25%",
+          "playercat_health": "100%",
+          "TempSpeedUp": "10"
+        }
+      }
+    }
+  },
+  "SacrificialLamb": {
+    "name": "PASSIVE_SACRIFICIALLAMB_NAME",
+    "name_resolved": "Sacrificial Lamb",
+    "desc": "PASSIVE_SACRIFICIALLAMB_DESC",
+    "desc_resolved": "When you're downed, allies gain All Stats Up and take an extra turn.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "AllStatsUp": "1",
+          "TakeExtraTurn": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SACRIFICIALLAMB2_DESC",
+      "desc_resolved": "When you're downed, allies gain All Stats Up and take an extra turn.\nYou can't get injuries.",
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "AllStatsUp": "1",
+          "TakeExtraTurn": "1"
+        },
+        "InjuryImmunity": "1"
+      }
+    }
+  },
+  "DeathIncarnate": {
+    "name": "PASSIVE_SERVUSMORTEM_NAME",
+    "name_resolved": "Servus Mortem",
+    "desc": "PASSIVE_SERVUSMORTEM_DESC",
+    "desc_resolved": "Destroy a random non-boss enemy at the start of each battle.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AbilityOnBattleStart": "RandomReap"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SERVUSMORTEM2_DESC",
+      "desc_resolved": "Destroy a random enemy at the start of each battle. If this hits a boss, deal 50 damage instead.",
+      "passives": {
+        "AbilityOnBattleStart": "RandomReap2"
+      }
+    }
+  },
+  "OffloadPain": {
+    "name": "PASSIVE_OFFLOADPAIN_NAME",
+    "name_resolved": "Offload Pain",
+    "desc": "PASSIVE_OFFLOADPAIN_DESC",
+    "desc_resolved": "When you heal, deal 1 damage to each enemy.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "DamageEnemiesOnHeal": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_OFFLOADPAIN2_DESC",
+      "desc_resolved": "When you heal, deal 2 damage to each enemy and you gain +1 Thorns.",
+      "passives": {
+        "DamageEnemiesOnHeal": "2",
+        "StatusOnHealed": {
+          "Thorns": "1"
+        }
+      }
+    }
+  },
+  "CambionConception": {
+    "name": "PASSIVE_CAMBIONCONCEPTION_NAME",
+    "name_resolved": "Cambion Conception",
+    "desc": "PASSIVE_CAMBIONCONCEPTION_DESC",
+    "desc_resolved": "When you're downed, spawn a demon kitten familiar.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "SpawnThingOnDeath": "CharmedDemonKitten"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CAMBIONCONCEPTION2_DESC",
+      "desc_resolved": "When you're downed, spawn 2 demon kitten familiars.",
+      "passives": {
+        "SpawnThingOnDeath": "CharmedDemonKitten"
+      }
+    }
+  },
+  "Leechmother": {
+    "name": "PASSIVE_LEECHMOTHER_NAME",
+    "name_resolved": "Leech Mother",
+    "desc": "PASSIVE_LEECHMOTHER_DESC",
+    "desc_resolved": "Your basic attack spawns a leech familiar.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "BounceObject": "CharmedLeech"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LEECHMOTHER2_DESC",
+      "desc_resolved": "Your basic attack spawns a beefy leech familiar.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "BounceObject": "BeefyCharmedLeech"
+        }
+      }
+    }
+  },
+  "Infected": {
+    "name": "PASSIVE_INFECTED_NAME",
+    "name_resolved": "Infected",
+    "desc": "PASSIVE_INFECTED_DESC",
+    "desc_resolved": "When you down a unit, reanimate it with 50% HP.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "StatusKilledCharacters": {
+          "AutoReanimate": "50%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INFECTED2_DESC",
+      "desc_resolved": "When you down a unit, reanimate it with full HP.",
+      "passives": {
+        "StatusKilledCharacters": {
+          "AutoReanimate": "100%"
+        }
+      }
+    }
+  },
+  "LastGasp": {
+    "name": "PASSIVE_LASTGRASP_NAME",
+    "name_resolved": "Last Grasp",
+    "desc": "PASSIVE_LASTGRASP_DESC",
+    "desc_resolved": "When you're downed, deal 6 damage to each enemy and heal 6 HP to all allies.\nBonus ability: Seppuku",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "DeathRattle": {
+          "ability": "LastGasp",
+          "pop_corpse": "false"
+        },
+        "BonusAbility": "Seppuku"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LASTGRASP2_DESC",
+      "desc_resolved": "When you're downed, deal 10 damage to each enemy and heal 10 HP to all allies.\nBonus ability: Seppuku",
+      "passives": {
+        "DeathRattle": {
+          "ability": "LastGasp2",
+          "pop_corpse": "false"
+        },
+        "BonusAbility": "Seppuku"
+      }
+    }
+  },
+  "RelentlessDead": {
+    "name": "PASSIVE_RELENTLESSDEAD_NAME",
+    "name_resolved": "Relentless Dead",
+    "desc": "PASSIVE_RELENTLESSDEAD_DESC",
+    "desc_resolved": "At the end of each round, spawn a zombie kitten familiar onto a random tile.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AutocastEachRound": {
+          "ability": "RaiseTheDead",
+          "even_if_stunned": "true"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RELENTLESSDEAD2_DESC",
+      "desc_resolved": "At the end of each round, spawn 2 zombie kitten familiars onto random tiles.",
+      "passives": {
+        "AutocastEachRound": {
+          "ability": "RaiseTheDead2",
+          "even_if_stunned": "true"
+        }
+      }
+    }
+  },
+  "ChainsOfGuilt": {
+    "name": "PASSIVE_CHAINSOFGUILT_NAME",
+    "name_resolved": "Chains of Guilt",
+    "desc": "PASSIVE_CHAINSOFGUILT_DESC",
+    "desc_resolved": "When an enemy downs you and it wasn't a boss, it joins your party permanently.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "StatusKillers": {
+          "Conditional_Boss": {
+            "Charmed": "1"
+          },
+          "Conditional_NotBoss": {
+            "Conditional_Enemy": {
+              "Conditional_PartyMember": {
+                "Charmed": "5"
+              },
+              "Else": {
+                "PermanentCharm": "1",
+                "FactionConversion": "1",
+                "CaptureFamiliar": "1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CHAINSOFGUILT2_DESC",
+      "desc_resolved": "When an enemy downs you and it wasn't a boss, it joins your party permanently. If it was a boss, inflict Stun 3 on it.",
+      "passives": {
+        "StatusKillers": {
+          "Conditional_Boss": {
+            "Stun": "3"
+          },
+          "Conditional_NotBoss": {
+            "Conditional_Enemy": {
+              "Conditional_PartyMember": {
+                "Charmed": "5"
+              },
+              "Else": {
+                "PermanentCharm": "1",
+                "FactionConversion": "1",
+                "CaptureFamiliar": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "DarkPriest": {
+    "name": "PASSIVE_DARKPRIEST_NAME",
+    "name_resolved": "Dark Priest",
+    "desc": "PASSIVE_DARKPRIEST_DESC",
+    "desc_resolved": "At the start of each battle, if you don't have a weapon, gain a temporary Soul Dagger weapon.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "EquipTemporaryItem": "Necro_SoulDagger_Uncharged"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DARKPRIEST2_DESC",
+      "desc_resolved": "At the start of each battle, if you don't have a weapon, gain a temporary Soul Dagger weapon. You can use your weapon action an extra time each turn.",
+      "passives": {
+        "EquipTemporaryItem": "Necro_SoulDagger_Uncharged",
+        "ExtraWeaponAttacks": "1"
+      }
+    }
+  },
+  "Undeath": {
+    "name": "PASSIVE_UNDEATH_NAME",
+    "name_resolved": "Undeath",
+    "desc": "PASSIVE_UNDEATH_DESC",
+    "desc_resolved": "When you're downed, reanimate each ally to 33% HP. (Once per battle.)",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "triggers_limit": "1",
+          "Reanimate": "33%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_UNDEATH2_DESC",
+      "desc_resolved": "When you're downed, reanimate each ally to max HP. (Once per battle.)",
+      "passives": {
+        "StatusAlliesOnDeath": {
+          "triggers_limit": "1",
+          "Reanimate": "100%"
+        }
+      }
+    }
+  },
+  "NumbingLeeches": {
+    "name": "PASSIVE_NUMBINGLEECHES_NAME",
+    "name_resolved": "Numbing Leeches",
+    "desc": "PASSIVE_NUMBINGLEECHES_DESC",
+    "desc_resolved": "Your basic attack deals 0 damage but its status and hit effects are tripled.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "NumbingLeeches": "3"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NUMBINGLEECHES2_DESC",
+      "desc_resolved": "Your basic attack deals 0 damage, but its status and hit effects are tripled.\nYour basic attack inflicts Mana Leech.",
+      "passives": {
+        "NumbingLeeches": "3",
+        "AddStatusToBasicAttack": {
+          "ManaLeeches": "1"
+        }
+      }
+    }
+  },
+  "EternalHealth": {
+    "name": "PASSIVE_ETERNALHEALTH_NAME",
+    "name_resolved": "Eternal Health",
+    "desc": "PASSIVE_ETERNALHEALTH_DESC",
+    "desc_resolved": "Suffer only Jinxed when downed. When your party wins a battle, if you were downed, heal to full.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "ForceSpecificInjury": "lck",
+        "ReviveOnWin": "100%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ETERNALHEALTH2_DESC",
+      "desc_resolved": "Suffer only Jinxed when downed. When your party wins a battle, if you were downed, heal to full. Your body is indestructible. When you're downed, allies get +1 [img:lck] for each Jinxed injury you have.",
+      "passives": {
+        "ForceSpecificInjury": "lck",
+        "ReviveOnWin": "100%",
+        "AddCorpseHealth": "999999",
+        "StatusAlliesScaledByCursedOnDeath": {
+          "max": "10",
+          "LuckUp": "1"
+        }
+      }
+    }
+  },
+  "Torpor": {
+    "name": "PASSIVE_TORPOR_NAME",
+    "name_resolved": "Torpor",
+    "desc": "PASSIVE_TORPOR_DESC",
+    "desc_resolved": "While you're downed, your basic attack is Haunt. Your body gains +6 corpse HP.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "ReplaceBasicAttackWhenDead": "Haunt",
+        "AddCorpseHealth": "6"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TORPOR2_DESC",
+      "desc_resolved": "While you're downed, your basic attack is Haunt and your spells are Spook. Your body gains +6 corpse HP.",
+      "passives": {
+        "ReplaceBasicAttackWhenDead": "Haunt",
+        "ReplaceSpellsWhenDead": "Spook",
+        "AddCorpseHealth": "6"
+      }
+    }
+  },
+  "SoulBound": {
+    "name": "PASSIVE_SOULBOND_NAME",
+    "name_resolved": "Soul Bond",
+    "desc": "PASSIVE_SOULBOND_DESC",
+    "desc_resolved": "Your basic attack inflicts Soul Link.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SoulLink": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SOULBOND2_DESC",
+      "desc_resolved": "Your basic attack inflicts Soul Link. Inflict Soul Link on a random enemy at the start of the battle.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SoulLink": "1"
+        },
+        "AbilityOnBattleStart": "RandomSoulLink"
+      }
+    }
+  },
+  "Superstition": {
+    "name": "PASSIVE_SUPERSTITION_NAME",
+    "name_resolved": "Superstition",
+    "desc": "PASSIVE_SUPERSTITION_DESC",
+    "desc_resolved": "Your basic attack inflicts -1[img:lck]. \nWhen a unit damages you, inflict -1[img:lck] on it.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "LuckUp": "-1"
+        },
+        "StatusDamagers": {
+          "LuckUp": "-1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SUPERSTITION2_DESC",
+      "desc_resolved": "Your basic attack inflicts -1[img:lck] and has a 15% chance to inflict Fear.\nWhen a unit damages you, inflict -1[img:lck] and a 15% to Fear on it.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "LuckUp": "-1",
+          "Fear": [
+            "1",
+            ".25"
+          ]
+        },
+        "StatusDamagers": {
+          "LuckUp": "-1",
+          "Fear": [
+            "1",
+            ".25"
+          ]
+        }
+      }
+    }
+  },
+  "ImmortalLeeches": {
+    "name": "PASSIVE_IMMORTALLEECHES_NAME",
+    "name_resolved": "Immortal Leeches",
+    "desc": "PASSIVE_IMMORTALLEECHES_DESC",
+    "desc_resolved": "When a unit you inflicted Leeches on dies or loses its leeches, your next basic attack inflicts that many additional leeches.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "ImmortalLeeches": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_IMMORTALLEECHES2_DESC",
+      "desc_resolved": "When a unit you inflicted Leeches on dies or loses its leeches, your next basic attack inflicts that many additional leeches.\nYour basic attack inflicts +1 leech.",
+      "passives": {
+        "ImmortalLeeches": "1",
+        "AddStatusToBasicAttack": {
+          "Leeches": "1"
+        }
+      }
+    }
+  },
+  "CorpseConnoisseur": {
+    "name": "PASSIVE_CORPSECONNOISSEUR_NAME",
+    "name_resolved": "Corpse Connoisseur",
+    "desc": "PASSIVE_CORPSECONNOISSEUR_DESC",
+    "desc_resolved": "Start each battle with 2-3 corpses near you.\nWhen you destroy a corpse, heal 2 HP and spawn a food pickup.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "SpawnOnBattleStart": {
+          "number": [
+            "2",
+            "3"
+          ],
+          "object": "chapter_corpse_medium"
+        },
+        "SpawnObjectOnPopCorpse": "Food",
+        "StatusOnPopCorpse": {
+          "HealthGain": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CORPSECONNOISSEUR2_DESC",
+      "desc_resolved": "Start each battle with 3-4 corpses near you.\nWhen you destroy a corpse, heal 8 HP and spawn a food pickup.",
+      "passives": {
+        "SpawnOnBattleStart": {
+          "number": [
+            "3",
+            "4"
+          ],
+          "object": "chapter_corpse_medium"
+        },
+        "SpawnObjectOnPopCorpse": "Food",
+        "StatusOnPopCorpse": {
+          "HealthGain": "8"
+        }
+      }
+    }
+  },
+  "Parasitic": {
+    "name": "PASSIVE_PARASITIC_NAME",
+    "name_resolved": "Parasitic",
+    "desc": "PASSIVE_PARASITIC_DESC",
+    "desc_resolved": "When you gain health, spawn a leech familiar.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "StatusOnHealed": {
+          "ObjectOnHitCharacter": "CharmedLeech"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PARASITIC2_DESC",
+      "desc_resolved": "When you gain health, spawn a leech familiar. 50% of the time, spawn a beefy leech instead.",
+      "passives": {
+        "StatusOnHealed": {
+          "RandomStatusFromPool": {
+            "ObjectOnHitCharacter": "BeefyCharmedLeech"
+          }
+        }
+      }
+    }
+  },
+  "SpreadSorrow": {
+    "name": "PASSIVE_SPREADSORROW_NAME",
+    "name_resolved": "Spread Sorrow",
+    "desc": "PASSIVE_SPREADSORROW_DESC",
+    "desc_resolved": "When you inflict a debuff to an enemy, inflict that same debuff on another random enemy.",
+    "class": "Necromancer",
+    "1": {
+      "passives": {
+        "SpreadExtraDebuffs": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SPREADSORROW2_DESC",
+      "desc_resolved": "When you inflict a debuff to an enemy, inflict that same debuff on 2 other random enemies.",
+      "passives": {
+        "SpreadExtraDebuffs": "2"
+      }
+    }
+  }
+}

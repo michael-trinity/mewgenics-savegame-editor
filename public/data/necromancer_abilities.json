@@ -1,0 +1,2783 @@
+{
+  "MaggotArmy": {
+    "id": "MaggotArmy",
+    "template": "spell",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_DECOMPOSE_NAME",
+    "name": "Decompose",
+    "desc_key": "ABILITY_DECOMPOSE_DESC",
+    "description": "Explode a body and spawn 3 Leeches.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "CanApplyToInanimate": {
+          "ObjectOnHitCharacter": "CharmedLeech"
+        }
+      }
+    }
+  },
+  "MaggotArmy2": {
+    "id": "MaggotArmy2",
+    "template": "spell",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_DECOMPOSE_NAME",
+    "name": "Decompose",
+    "desc_key": "ABILITY_DECOMPOSE2_DESC",
+    "description": "Explode a body and spawn 5 Leeches.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "CanApplyToInanimate": {
+          "ObjectOnHitCharacter": "CharmedLeech"
+        }
+      }
+    }
+  },
+  "Reanimate": {
+    "id": "Reanimate",
+    "template": "targeted_status",
+    "name_key": "ABILITY_REANIMATE_NAME",
+    "name": "Reanimate",
+    "desc_key": "ABILITY_REANIMATE_DESC",
+    "description": "Resurrect a body to half HP. It becomes a Zombie and joins your team.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "affected_particle": "HealBig"
+    },
+    "damage_instance": {
+      "effects": {
+        "Reanimate": "50%"
+      }
+    }
+  },
+  "Reanimate2": {
+    "id": "Reanimate2",
+    "variant_of": "Reanimate",
+    "desc_key": "ABILITY_REANIMATE2_DESC",
+    "description": "Resurrect a body to full HP. It becomes a Zombie and joins your team.",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "Reanimate": "100%"
+      }
+    }
+  },
+  "Rebirth": {
+    "id": "Rebirth",
+    "template": "teleport",
+    "name_key": "ABILITY_REBIRTH_NAME",
+    "name": "Rebirth",
+    "desc_key": "ABILITY_REBIRTH_DESC",
+    "description": "Teleport into a body, destroying it to heal 4 HP, gain +1 [img:int] and +1 [img:con].",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "20",
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "true",
+      "effects": {
+        "VaporizeCorpse": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "ConstitutionUp": "1",
+        "IntelligenceUp": "1",
+        "HealthGain": "4"
+      }
+    }
+  },
+  "Rebirth2": {
+    "id": "Rebirth2",
+    "template": "teleport",
+    "name_key": "ABILITY_REBIRTH_NAME",
+    "name": "Rebirth",
+    "desc_key": "ABILITY_REBIRTH2_DESC",
+    "description": "Teleport into a body, destroying it to heal 4 HP and gain All Stats Up.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "20",
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "true",
+      "effects": {
+        "VaporizeCorpse": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "AllStatsUp": "1",
+        "HealthGain": "4"
+      }
+    }
+  },
+  "Pestilence": {
+    "id": "Pestilence",
+    "template": "spell",
+    "name_key": "ABILITY_PESTILENCE_NAME",
+    "name": "Pestilence",
+    "desc_key": "ABILITY_PESTILENCE_DESC",
+    "description": "Deal 1 damage to all units.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "evilMagic"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "Pestilence2": {
+    "id": "Pestilence2",
+    "variant_of": "Pestilence",
+    "desc_key": "ABILITY_PESTILENCE2_DESC",
+    "description": "Deal 1 damage to all units.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Weakness": {
+    "id": "Weakness",
+    "template": "targeted_status",
+    "name_key": "ABILITY_WEAKNESS_NAME",
+    "name": "Weakness",
+    "desc_key": "ABILITY_WEAKNESS_DESC",
+    "description": "Inflict Weakness 5 on a unit.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "4"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "evilMagic"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Weakness": "5"
+      }
+    }
+  },
+  "Weakness2": {
+    "id": "Weakness2",
+    "variant_of": "Weakness",
+    "desc_key": "ABILITY_WEAKNESS2_DESC",
+    "description": "Give a unit Weakness 5 and All Stats Down.",
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "-1"
+      }
+    }
+  },
+  "SoulSuck": {
+    "id": "SoulSuck",
+    "template": "melee_attack",
+    "name_key": "ABILITY_DARKRITUAL_NAME",
+    "name": "Dark Ritual",
+    "desc_key": "ABILITY_DARKRITUAL_DESC",
+    "description": "Destroy an adjacent body. The next spell you cast costs 0 mana.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "FreeSpell": "1"
+        }
+      }
+    }
+  },
+  "SoulSuck2": {
+    "id": "SoulSuck2",
+    "variant_of": "SoulSuck",
+    "desc_key": "ABILITY_DARKRITUAL2_DESC",
+    "description": "Destroy an adjacent body. The next 2 spells you cast cost 0 mana."
+  },
+  "EvilIncarnate": {
+    "id": "EvilIncarnate",
+    "template": "spell",
+    "name_key": "ABILITY_EVILINCARNATE_NAME",
+    "name": "Evil Incarnate",
+    "desc_key": "ABILITY_EVILINCARNATE_DESC",
+    "description": "Inflict Fear on all enemies.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "15",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "graphics": {
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "false",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true",
+      "particle": "FearEffect"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "EvilIncarnate2": {
+    "id": "EvilIncarnate2",
+    "variant_of": "EvilIncarnate",
+    "desc_key": "ABILITY_EVILINCARNATE2_DESC",
+    "description": "Inflict Fear 1 and Weakness 2 on all enemies.",
+    "cost": {
+      "mana": "12"
+    },
+    "damage_instance": {
+      "effects": {
+        "Weakness": "2"
+      }
+    }
+  },
+  "SoulLink": {
+    "id": "SoulLink",
+    "template": "targeted_status",
+    "name_key": "ABILITY_SOULLINK_NAME",
+    "name": "Soul Link",
+    "desc_key": "ABILITY_SOULLINK_DESC",
+    "description": "Inflict Soul Link on units in an area.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "1",
+      "min_range": "0",
+      "max_range": "4"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "effects": {
+        "SoulLink": "1"
+      }
+    }
+  },
+  "SoulLink2": {
+    "id": "SoulLink2",
+    "variant_of": "SoulLink",
+    "desc_key": "ABILITY_SOULLINK2_DESC",
+    "description": "Inflict Soul Link on units in a large area.",
+    "target": {
+      "max_range": "6",
+      "max_aoe": "2"
+    }
+  },
+  "WeAreOne": {
+    "id": "WeAreOne",
+    "template": "spell",
+    "name_key": "ABILITY_WEAREONE_NAME",
+    "name": "We Are One",
+    "desc_key": "ABILITY_WEAREONE_DESC",
+    "description": "Inflict Soul Link on yourself and every enemy.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "15",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "floatingmagic"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "SoulLink": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "SoulLink": "1"
+      }
+    }
+  },
+  "WeAreOne2": {
+    "id": "WeAreOne2",
+    "variant_of": "WeAreOne",
+    "desc_key": "ABILITY_WEAREONE2_DESC",
+    "description": "Inflict Soul Link on yourself and every enemy. Gain +2 [img:con] and heal 8 HP.",
+    "self_damage": {
+      "heal": "8",
+      "effects": {
+        "ConstitutionUp": "2"
+      }
+    }
+  },
+  "BloodRain": {
+    "id": "BloodRain",
+    "template": "spell",
+    "name_key": "ABILITY_BLOODRAIN_NAME",
+    "name": "Blood Rain",
+    "desc_key": "ABILITY_BLOODRAIN_DESC",
+    "description": "Take 1 damage and heal all allies 1 HP.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "allies_only",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "heal": "1"
+    },
+    "self_damage": {
+      "damage": "1"
+    }
+  },
+  "BloodRain2": {
+    "id": "BloodRain2",
+    "variant_of": "BloodRain",
+    "desc_key": "ABILITY_BLOODRAIN2_DESC",
+    "description": "Take 1 damage, heal all allies 1 HP and give them +1 mana.",
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "1"
+      }
+    }
+  },
+  "AnimateDead": {
+    "id": "AnimateDead",
+    "template": "spell",
+    "name_key": "ABILITY_ETERNALSERVITUDE_NAME",
+    "name": "Eternal Servitude",
+    "desc_key": "ABILITY_ETERNALSERVITUDE_DESC",
+    "description": "Resurrect an enemy body to full HP. It joins your team.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "aoe_restrictions": [
+        "must_have_corpse",
+        "enemies_only"
+      ],
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "type": "spell",
+      "can_revive": "true",
+      "effects": {
+        "HealPercentMaxHP": "100",
+        "FactionConversion": "1",
+        "CaptureFamiliar": "1"
+      }
+    }
+  },
+  "AnimateDead2": {
+    "id": "AnimateDead2",
+    "variant_of": "AnimateDead",
+    "desc_key": "ABILITY_ETERNALSERVITUDE2_DESC",
+    "description": "Resurrect an enemy body to full HP. It joins your team and takes an extra turn after this one.",
+    "damage_instance": {
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "DeathBloom": {
+    "id": "DeathBloom",
+    "template": "targeted_status",
+    "name_key": "ABILITY_DEATHBLOOM_NAME",
+    "name": "Death Bloom",
+    "desc_key": "ABILITY_DEATHBLOOM_DESC",
+    "description": "Explode a body, dealing damage and Knockback to adjacent units.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "splash_damage_aoe_begin": "1",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "ExplodeCharacter_DeathBloom": "5"
+      }
+    }
+  },
+  "DeathBloom2": {
+    "id": "DeathBloom2",
+    "template": "targeted_status",
+    "name_key": "ABILITY_DEATHBLOOM_NAME",
+    "name": "Death Bloom",
+    "desc_key": "ABILITY_DEATHBLOOM2_DESC",
+    "description": "Explode a body, dealing damage and Knockback to units in a large area.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_range": "20",
+      "splash_damage_aoe_begin": "1",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "ExplodeCharacter_DeathBloom2": "5"
+      }
+    }
+  },
+  "Scare": {
+    "id": "Scare",
+    "template": "teleport",
+    "name_key": "ABILITY_SCARE_NAME",
+    "name": "Scare",
+    "desc_key": "ABILITY_SCARE_DESC",
+    "description": "Teleport in front of an enemy then Knockback each adjacent unit 4 tiles.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "aoe_mode": "normal",
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_directly_in_front_of_enemy"
+      ],
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation_out": "teleportOut",
+      "animation_in": "teleportIn"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "4",
+      "type": "spell",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "Scare2": {
+    "id": "Scare2",
+    "variant_of": "Scare",
+    "desc_key": "ABILITY_SCARE2_DESC",
+    "description": "Teleport in front of an enemy then inflict Knockback 4 and Fear on each adjacent unit.",
+    "damage_instance": {
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "SoulTransfer": {
+    "id": "SoulTransfer",
+    "template": "targeted_status",
+    "name_key": "ABILITY_SOULTRANSFER_NAME",
+    "name": "Soul Transfer",
+    "desc_key": "ABILITY_SOULTRANSFER_DESC",
+    "description": "Give a unit +1 [img:con] and heal it 4 HP. You gain -1 [img:con] and lose 4 health.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "4",
+      "X_is": "max_health"
+    },
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "heal": "4",
+      "piercing": "true",
+      "cant_miss": "true",
+      "effects": {
+        "ConstitutionUp": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "4",
+      "piercing": "true",
+      "cant_miss": "true",
+      "effects": {
+        "ConstitutionUp": "-1"
+      }
+    }
+  },
+  "SoulTransfer2": {
+    "id": "SoulTransfer2",
+    "variant_of": "SoulTransfer",
+    "desc_key": "ABILITY_SOULTRANSFER2_DESC",
+    "description": "Give a unit +1 [img:con] and heal it 4 HP. You gain -1 [img:con] and lose 4 health.\nThis spell can revive units. If the unit revived was an enemy it gets charmed for the battle.",
+    "damage_instance": {
+      "can_revive": "true",
+      "effects": {
+        "Conditional_Corpse": {
+          "PermanentCharm": "1"
+        }
+      }
+    }
+  },
+  "RandomReap": {
+    "id": "RandomReap",
+    "template": "spell",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "15"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_living_character",
+        "must_not_have_boss",
+        "must_have_enemy"
+      ]
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "sytheCut",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "cant_miss": "true",
+      "can_instapop": "false",
+      "effects": {
+        "Instakill": "25"
+      }
+    }
+  },
+  "RandomReap2": {
+    "id": "RandomReap2",
+    "template": "spell",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "15"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_living_character",
+        "must_have_enemy"
+      ]
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "sytheCut",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "cant_miss": "true",
+      "can_instapop": "false",
+      "effects": {
+        "Instakill": "50"
+      }
+    }
+  },
+  "SlitWrists": {
+    "id": "SlitWrists",
+    "template": "self_buff",
+    "name_key": "ABILITY_SLITWRISTS_NAME",
+    "name": "Slit Wrists",
+    "desc_key": "ABILITY_SLITWRISTS_DESC",
+    "description": "Deal 2 damage to yourself.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "type": "melee"
+    }
+  },
+  "Whisper": {
+    "id": "Whisper",
+    "template": "melee_spell",
+    "name_key": "ABILITY_WHISPER_NAME",
+    "name": "Whisper",
+    "desc_key": "ABILITY_WHISPER_DESC",
+    "description": "Inflict Fear and Madness on an adjacent unit.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "angry",
+      "particle": "FearEffect"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "Fear": "1",
+        "Madness": "level"
+      }
+    }
+  },
+  "Whisper2": {
+    "id": "Whisper2",
+    "variant_of": "Whisper",
+    "desc_key": "ABILITY_WHISPER2_DESC",
+    "description": "Inflict Fear 1 and Madness 2 on a unit in range 4.",
+    "target": {
+      "target_mode": "tile",
+      "aoe_mode": "standard",
+      "max_range": "4",
+      "min_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_considers_character_size": "false"
+    }
+  },
+  "SummonShade": {
+    "id": "SummonShade",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SUMMONSHADE_NAME",
+    "name": "Summon Shade",
+    "desc_key": "ABILITY_SUMMONSHADE_DESC",
+    "description": "Spawn a shadow copy of yourself that fades after its first turn.\n[s:.7](The copy can't cast this ability or give extra turns to units.)[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "13",
+      "must_not_be_a_summon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "spawn": {
+      "object": "PlayerCat_Shade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true",
+      "additional_passives": {
+        "SafeDoomed": "1",
+        "InjuryImmunity": "1"
+      }
+    }
+  },
+  "SummonShade2": {
+    "id": "SummonShade2",
+    "variant_of": "SummonShade",
+    "desc_key": "ABILITY_SUMMONSHADE2_DESC",
+    "description": "Spawn a shadow copy of yourself that fades after its second turn.\n[s:.7](The copy can't cast this ability or give extra turns to units.)[/s]",
+    "spawn": {
+      "additional_passives": {
+        "SafeDoomed": "2"
+      }
+    }
+  },
+  "DarkStep": {
+    "id": "DarkStep",
+    "template": "teleport",
+    "name_key": "ABILITY_DARKSTEP_NAME",
+    "name": "Dark Step",
+    "desc_key": "ABILITY_DARKSTEP_DESC",
+    "description": "Teleport to an open tile.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "4"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    }
+  },
+  "DarkStep2": {
+    "id": "DarkStep2",
+    "variant_of": "DarkStep",
+    "desc_key": "ABILITY_DARKSTEP2_DESC",
+    "description": "Teleport to a tile. If you teleport into a unit you both take 5 damage, then inflict Fear on it.",
+    "target": {
+      "restrictions": [
+        "aoe_must_be_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Fear": "1",
+        "ApplyToSource": {
+          "DoDamage": {
+            "damage": "5",
+            "type": "melee"
+          }
+        }
+      }
+    }
+  },
+  "Leeches": {
+    "id": "Leeches",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_LEECHES_NAME",
+    "name": "Leeches",
+    "desc_key": "ABILITY_LEECHES_DESC",
+    "description": "Inflict Leech 1 on a unit.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Leeches": "1"
+      }
+    }
+  },
+  "Leeches2": {
+    "id": "Leeches2",
+    "variant_of": "Leeches",
+    "desc_key": "ABILITY_LEECHES2_DESC",
+    "description": "Inflict Leech 1 and Mana Leech 1 on a unit.",
+    "damage_instance": {
+      "effects": {
+        "Leeches": "1",
+        "ManaLeeches": "1"
+      }
+    }
+  },
+  "Shriek": {
+    "id": "Shriek",
+    "template": "spell",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_SHRIEK_NAME",
+    "name": "Shriek",
+    "desc_key": "ABILITY_SHRIEK_DESC",
+    "description": "Inflict Fear 1, Confusion 2, and Madness 2 on units within a cone.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "sing3",
+      "particle": "FearEffect"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Fear": "1",
+        "Confusion": "2",
+        "Madness": "2"
+      }
+    }
+  },
+  "Shriek2": {
+    "id": "Shriek2",
+    "variant_of": "Shriek",
+    "desc_key": "ABILITY_SHRIEK2_DESC",
+    "description": "Inflict Fear 1, Confusion 2, Madness 2 and drain 2 HP from units within a cone.",
+    "damage_instance": {
+      "damage": "2",
+      "piercing": "true",
+      "effects": {
+        "Leech": "1"
+      }
+    }
+  },
+  "LastGasp": {
+    "id": "LastGasp",
+    "template": "spell",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_animate_character"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "ContextualHeal": "1"
+      }
+    }
+  },
+  "LastGasp2": {
+    "id": "LastGasp2",
+    "variant_of": "LastGasp",
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "ContextualHeal": "1"
+      }
+    }
+  },
+  "Seppuku": {
+    "id": "Seppuku",
+    "template": "self_buff",
+    "name_key": "ABILITY_SEPPUKU_NAME",
+    "name": "Seppuku",
+    "desc_key": "ABILITY_SEPPUKU_DESC",
+    "description": "Down yourself.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "selfHarm",
+      "particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "effects": {
+        "Die": "1"
+      }
+    }
+  },
+  "RaiseTheDead": {
+    "id": "RaiseTheDead",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "square",
+      "max_aoe": "20",
+      "min_targets": "1",
+      "max_targets": "1",
+      "aoe_restrictions": [
+        "must_be_empty"
+      ]
+    },
+    "graphics": {
+      "lob": "false",
+      "animation": "none"
+    },
+    "spawn": {
+      "object": "ZombieCatFamiliar",
+      "lob": "false"
+    }
+  },
+  "RaiseTheDead2": {
+    "id": "RaiseTheDead2",
+    "variant_of": "RaiseTheDead",
+    "target": {
+      "min_targets": "2",
+      "max_targets": "2"
+    }
+  },
+  "FullMoon": {
+    "id": "FullMoon",
+    "template": "spell",
+    "name_key": "ABILITY_BESTOWLEECHES_NAME",
+    "name": "Full Moon",
+    "desc_key": "ABILITY_BESTOWLEECHES_DESC",
+    "description": "Give Lifesteal 1 to units in an area.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "5"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "Holybeam"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Lifesteal": "1"
+      }
+    }
+  },
+  "FullMoon2": {
+    "id": "FullMoon2",
+    "variant_of": "FullMoon",
+    "desc_key": "ABILITY_BESTOWLEECHES2_DESC",
+    "description": "Give Lifesteal 3 to units in an area.",
+    "target": {
+      "max_range": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "Lifesteal": "3"
+      }
+    }
+  },
+  "Unearth": {
+    "id": "Unearth",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_UNEARTH_NAME",
+    "name": "Unearth",
+    "desc_key": "ABILITY_UNEARTH_DESC",
+    "description": "Dig up a body. It reanimates at the end of the round.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "graphics": {
+      "animation": "dig"
+    },
+    "spawn": {
+      "object": "ZombieCatFamiliar",
+      "lob": "false",
+      "start_dead": "true",
+      "additional_passives": {
+        "ReviveNextRound": {
+          "revive_health": "100%"
+        }
+      }
+    }
+  },
+  "Unearth2": {
+    "id": "Unearth2",
+    "variant_of": "Unearth",
+    "desc_key": "ABILITY_UNEARTH2_DESC",
+    "description": "Dig up a body. It reanimates at the end of the round.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "BloodGeyser": {
+    "id": "BloodGeyser",
+    "template": "spell",
+    "name_key": "ABILITY_BLOODGEYSER_NAME",
+    "name": "Blood Geyser",
+    "desc_key": "ABILITY_BLOODGEYSER_DESC",
+    "description": "Take damage equal to half of your max HP, then deal that much damage and inflict Fear 2 on another unit.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "4",
+      "X_is": "max_health"
+    },
+    "graphics": {
+      "particle": "bloodywave"
+    },
+    "damage_instance": {
+      "damage": "ceil(X/2)",
+      "effects": {
+        "Fear": "2"
+      }
+    },
+    "self_damage": {
+      "damage": "ceil(X/2)",
+      "piercing": "true",
+      "cant_miss": "true"
+    }
+  },
+  "BloodGeyser2": {
+    "id": "BloodGeyser2",
+    "variant_of": "BloodGeyser",
+    "desc_key": "ABILITY_BLOODGEYSER2_DESC",
+    "description": "Take damage equal to half of your max HP, then deal that much damage and inflict Fear 2 on units in an area.",
+    "target": {
+      "max_aoe": "2",
+      "max_range": "6"
+    }
+  },
+  "Flatline": {
+    "id": "Flatline",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_FLATLINE_NAME",
+    "name": "Flatline",
+    "desc_key": "ABILITY_FLATLINE_DESC",
+    "description": "Down yourself. You don't get injured. Spawn a shadow copy of yourself that fades after its first turn.\n[s:.7]The copy can't cast this ability or give extra turns to units.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "must_not_be_a_summon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "none"
+    },
+    "self_damage": {
+      "effects": {
+        "SafeDie": "1"
+      }
+    },
+    "spawn": {
+      "object": "PlayerCat_Shade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true",
+      "additional_passives": {
+        "SafeDoomed": "level",
+        "InjuryImmunity": "1"
+      }
+    }
+  },
+  "Flatline2": {
+    "id": "Flatline2",
+    "variant_of": "Flatline",
+    "desc_key": "ABILITY_FLATLINE2_DESC",
+    "description": "Down yourself. You don't get injured. Spawn a shadow copy of yourself that fades after its first turn.\n[s:.7]The copy can't cast this ability or give extra turns to units.[/s]\n[s:.7](This spell costs 0 mana.)[/s]",
+    "cost": {
+      "mana": "0"
+    },
+    "spawn": {
+      "additional_passives": {
+        "FillMana": "1"
+      }
+    }
+  },
+  "Replace": {
+    "id": "Replace",
+    "template": "teleport",
+    "name_key": "ABILITY_REPLACE_NAME",
+    "name": "Replace",
+    "desc_key": "ABILITY_REPLACE_DESC",
+    "description": "Teleport into a familiar and destroy it. Refresh your basic attack.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "familiars_only"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "IgnoreSelf": "1",
+        "VaporizeTarget": "1",
+        "ApplyToSource": {
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "Replace2": {
+    "id": "Replace2",
+    "variant_of": "Replace",
+    "desc_key": "ABILITY_REPLACE2_DESC",
+    "description": "Teleport into a familiar and destroy it. Refresh your basic attack and heal 5 HP.",
+    "damage_instance": {
+      "effects": {
+        "IgnoreSelf": "1",
+        "VaporizeTarget": "1",
+        "ApplyToSource": {
+          "HealthGain": "5"
+        }
+      }
+    }
+  },
+  "SummonBones": {
+    "id": "SummonBones",
+    "template": "spell",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SUMMONBONES_NAME",
+    "name": "Summon Bones",
+    "desc_key": "ABILITY_SUMMONBONES_DESC",
+    "description": "Summon a skeleton from a body.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "restrictions": "must_have_destructible_corpse"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ObjectOnHitCharacter": "SkeletonCatFamiliar"
+      }
+    }
+  },
+  "SummonBones2": {
+    "id": "SummonBones2",
+    "variant_of": "SummonBones",
+    "desc_key": "ABILITY_SUMMONBONES2_DESC",
+    "description": "Summon a skeleton from a body, anywhere.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "GigaDrain": {
+    "id": "GigaDrain",
+    "template": "melee_attack",
+    "name_key": "ABILITY_GIGADRAIN_NAME",
+    "name": "Giga Drain",
+    "desc_key": "ABILITY_GIGADRAIN_DESC",
+    "description": "Spend all of your mana, then drain that much HP from an adjacent unit. Ignores shield.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "X_is": "current_mana"
+    },
+    "graphics": {
+      "animation": "floatingmagic"
+    },
+    "damage_instance": {
+      "damage": "X",
+      "type": "spell",
+      "piercing": "true",
+      "effects": {
+        "Leech": "1"
+      }
+    }
+  },
+  "GigaDrain2": {
+    "id": "GigaDrain2",
+    "variant_of": "GigaDrain",
+    "desc_key": "ABILITY_GIGADRAIN2_DESC",
+    "description": "Spend all of your mana, then drain that much HP from a unit in range 3. Ignores shield.",
+    "target": {
+      "target_mode": "tile",
+      "max_range": "3",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "restrictions": "none"
+    }
+  },
+  "Bloodletting": {
+    "id": "Bloodletting",
+    "template": "targeted_status",
+    "name_key": "ABILITY_BLOODLETTING_NAME",
+    "name": "Bloodletting",
+    "desc_key": "ABILITY_BLOODLETTING_DESC",
+    "description": "Remove all status effects from another unit, then inflict Bleed 5 on it.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Cleanse": "0",
+        "Purge": "0",
+        "Bleed": "5"
+      }
+    }
+  },
+  "Bloodletting2": {
+    "id": "Bloodletting2",
+    "variant_of": "Bloodletting",
+    "desc_key": "ABILITY_BLOODLETTING2_DESC",
+    "description": "Remove all status effects from another unit, then inflict Bleed 5 on it.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    }
+  },
+  "MassPsychosis": {
+    "id": "MassPsychosis",
+    "template": "spell",
+    "name_key": "ABILITY_MASSPSYCHOSIS_NAME",
+    "name": "Mass Psychosis",
+    "desc_key": "ABILITY_MASSPSYCHOSIS_DESC",
+    "description": "Inflict Madness on all enemies.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "15",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "graphics": {
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "false",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true",
+      "particle": "FearEffect",
+      "animation": "floatingmagic"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Madness": "1"
+      }
+    }
+  },
+  "MassPsychosis2": {
+    "id": "MassPsychosis2",
+    "variant_of": "MassPsychosis",
+    "desc_key": "ABILITY_MASSPSYCHOSIS2_DESC",
+    "description": "Inflict Madness on all enemies.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "11"
+    }
+  },
+  "Debone": {
+    "id": "Debone",
+    "template": "melee_attack",
+    "name_key": "ABILITY_DEBONE_NAME",
+    "name": "Debone",
+    "desc_key": "ABILITY_DEBONE_DESC",
+    "description": "Deal damage and inflict Weakness on an adjacent unit. If you have no weapon, equip a bone.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "7",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "sliceOpen"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "Weakness": "1",
+        "ApplyToSource": {
+          "EquipPermanentItem": "BoneClub"
+        }
+      }
+    }
+  },
+  "Debone2": {
+    "id": "Debone2",
+    "variant_of": "Debone",
+    "desc_key": "ABILITY_DEBONE2_DESC",
+    "description": "Deal damage, inflict Weakness and Immobile on an adjacent unit. If you have no weapon, equip a bone.",
+    "damage_instance": {
+      "effects": {
+        "Immobile": "1"
+      }
+    }
+  },
+  "Reap": {
+    "id": "Reap",
+    "template": "teleport",
+    "name_key": "ABILITY_REAP_NAME",
+    "name": "Reap",
+    "desc_key": "ABILITY_REAP_DESC",
+    "description": "Teleport into a unit with 5 or less health and destroy it.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_low_health_character",
+      "low_health_character_threshold": "5"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn",
+      "particle": "sytheCut"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "IgnoreSelf": "1",
+        "VaporizeTarget": "1",
+        "VisualFXTile": "sytheCut"
+      }
+    }
+  },
+  "Reap2": {
+    "id": "Reap2",
+    "variant_of": "Reap",
+    "desc_key": "ABILITY_REAP2_DESC",
+    "description": "Teleport into a unit with 10 or less health and destroy it.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "5"
+    },
+    "target": {
+      "low_health_character_threshold": "10"
+    }
+  },
+  "Haunt": {
+    "id": "Haunt",
+    "template": "spell",
+    "name_key": "ABILITY_HAUNT_NAME",
+    "name": "Haunt",
+    "desc_key": "ABILITY_HAUNT_DESC",
+    "description": "Damage any unit and inflict Fear.\n[s:.7]Castable while downed.[/s]",
+    "cost": {
+      "move_points": "0",
+      "act_points": "1",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "graphics": {
+      "particle": "FearEffect",
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_basic_spell_damage",
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "Spook": {
+    "id": "Spook",
+    "template": "spell",
+    "name_key": "ABILITY_SPOOK_NAME",
+    "name": "Spook",
+    "desc_key": "ABILITY_SPOOK_DESC",
+    "description": "Deal damage to any unit. This has a 25% chance to inflict Fear.\n[s:.7]Castable while downed.[/s]",
+    "cost": {
+      "cantrip": "true",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "graphics": {
+      "particle": "FearEffect",
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_basic_spell_damage",
+      "effects": {
+        "Fear": [
+          "1",
+          ".25"
+        ]
+      }
+    }
+  },
+  "CarrionShot": {
+    "id": "CarrionShot",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CARRIONSHOT_NAME",
+    "name": "Carrion Shot",
+    "desc_key": "ABILITY_CARRIONSHOT_DESC",
+    "description": "Deal 1 damage and inflict Leech 1.\n[s:.7]This spell is stronger and castable while you're downed.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Leeches": "1"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "CarrionShot_Afterlife"
+    }
+  },
+  "CarrionShot_Afterlife": {
+    "id": "CarrionShot_Afterlife",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CARRIONSHOT_NAME",
+    "name": "Carrion Shot",
+    "desc_key": "ABILITY_CARRIONSHOT_DESC",
+    "description": "Deal 1 damage and inflict Leech 1.\n[s:.7]This spell is stronger and castable while you're downed.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20"
+    },
+    "graphics": {
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "effects": {
+        "Leeches": "1"
+      }
+    }
+  },
+  "CarrionShot2": {
+    "id": "CarrionShot2",
+    "variant_of": "CarrionShot",
+    "desc_key": "ABILITY_CARRIONSHOT2_DESC",
+    "description": "Deal 2 damage and inflict Leech 2.\n[s:.7]This spell is stronger and castable while you're downed.[/s]",
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "Leeches": "2"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "CarrionShot_Afterlife2"
+    }
+  },
+  "CarrionShot_Afterlife2": {
+    "id": "CarrionShot_Afterlife2",
+    "variant_of": "CarrionShot_Afterlife",
+    "desc_key": "ABILITY_CARRIONSHOT2_DESC",
+    "description": "Deal 2 damage and inflict Leech 2.\n[s:.7]This spell is stronger and castable while you're downed.[/s]",
+    "damage_instance": {
+      "damage": "8+bonus_ranged_damage",
+      "effects": {
+        "Leeches": "2"
+      }
+    }
+  },
+  "LifeDrain": {
+    "id": "LifeDrain",
+    "template": "spell",
+    "name_key": "ABILITY_LIFEDRAIN_NAME",
+    "name": "Lifedrain",
+    "desc_key": "ABILITY_LIFEDRAIN_DESC",
+    "description": "Drain 2 HP at melee range.\n[s:.7]This spell is much stronger and castable while you're downed. If this kills a unit, revive with 50% hp.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "Leech": "1"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "LifeDrain_Afterlife"
+    }
+  },
+  "LifeDrain_Afterlife": {
+    "id": "LifeDrain_Afterlife",
+    "template": "spell",
+    "name_key": "ABILITY_LIFEDRAIN_NAME",
+    "name": "Lifedrain",
+    "desc_key": "ABILITY_LIFEDRAIN_DESC",
+    "description": "Drain 2 HP at melee range.\n[s:.7]This spell is much stronger and castable while you're downed. If this kills a unit, revive with 50% hp.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "none",
+      "particle": "SpookyDarkness"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "Revive": "50%"
+        },
+        "Leech": "1"
+      }
+    }
+  },
+  "LifeDrain2": {
+    "id": "LifeDrain2",
+    "variant_of": "LifeDrain",
+    "desc_key": "ABILITY_LIFEDRAIN2_DESC",
+    "description": "Drain 2 HP at melee range.\n[s:.7]This spell is much stronger and castable while you're downed. If this kills a unit, revive with max hp.[/s]",
+    "target": {
+      "max_range": "2"
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "LifeDrain_Afterlife2"
+    }
+  },
+  "LifeDrain_Afterlife2": {
+    "id": "LifeDrain_Afterlife2",
+    "variant_of": "LifeDrain_Afterlife",
+    "desc_key": "ABILITY_LIFEDRAIN2_DESC",
+    "description": "Drain 2 HP at melee range.\n[s:.7]This spell is much stronger and castable while you're downed. If this kills a unit, revive with max hp.[/s]",
+    "target": {
+      "max_range": "2"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "ApplyToSourceOnKill": {
+          "Revive": "100%"
+        },
+        "Leech": "1"
+      }
+    }
+  },
+  "CoffinFlop": {
+    "id": "CoffinFlop",
+    "template": "jump_attack",
+    "name_key": "ABILITY_COFFINFLOP_NAME",
+    "name": "Coffin Flop",
+    "desc_key": "ABILITY_COFFINFLOP_DESC",
+    "description": "Jump to an open tile in range 2.\n[s:.7]This spell is stronger and castable while you're downed. When downed you can land on units dealing damage and inflicting Madness. [/s]",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "2",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "CoffinFlop_Afterlife"
+    }
+  },
+  "CoffinFlop_Afterlife": {
+    "id": "CoffinFlop_Afterlife",
+    "template": "jump_attack",
+    "name_key": "ABILITY_COFFINFLOP_NAME",
+    "name": "Coffin Flop",
+    "desc_key": "ABILITY_COFFINFLOP_DESC",
+    "description": "Jump to an open tile in range 2.\n[s:.7]This spell is stronger and castable while you're downed. When downed you can land on units dealing damage and inflicting Madness. [/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "max_range": "5",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_start_animation": "none",
+      "jump_attack_animation": "none",
+      "land_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Madness": "1"
+      }
+    }
+  },
+  "CoffinFlop2": {
+    "id": "CoffinFlop2",
+    "variant_of": "CoffinFlop",
+    "desc_key": "ABILITY_COFFINFLOP2_DESC",
+    "description": "Jump to an open tile in range 3.\n[s:.7]This spell is stronger and castable while you're downed. When downed you can land on units anywhere dealing damage and inflicting Madness 2. [/s]",
+    "target": {
+      "max_range": "3"
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "CoffinFlop_Afterlife2"
+    }
+  },
+  "CoffinFlop_Afterlife2": {
+    "id": "CoffinFlop_Afterlife2",
+    "variant_of": "CoffinFlop_Afterlife",
+    "desc_key": "ABILITY_COFFINFLOP2_DESC",
+    "description": "Jump to an open tile in range 3.\n[s:.7]This spell is stronger and castable while you're downed. When downed you can land on units anywhere dealing damage and inflicting Madness 2. [/s]",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Madness": "2"
+      }
+    }
+  },
+  "DonateBlood": {
+    "id": "DonateBlood",
+    "template": "spell",
+    "name_key": "ABILITY_DONATEBLOOD_NAME",
+    "name": "Donate Blood",
+    "desc_key": "ABILITY_DONATEBLOOD_DESC",
+    "description": "Heal a unit 5 HP, then take 10 damage.\n[s:.7]Castable while you're downed. If you do, take no damage and give what you heal All Stats Up.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "heal": "5"
+    },
+    "self_damage": {
+      "damage": "10"
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "DonateBlood_Afterlife"
+    }
+  },
+  "DonateBlood_Afterlife": {
+    "id": "DonateBlood_Afterlife",
+    "template": "spell",
+    "name_key": "ABILITY_DONATEBLOOD_NAME",
+    "name": "Donate Blood",
+    "desc_key": "ABILITY_DONATEBLOOD_DESC",
+    "description": "Heal a unit 5 HP, then take 10 damage.\n[s:.7]Castable while you're downed. If you do, take no damage and give what you heal All Stats Up.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "DonateBlood2": {
+    "id": "DonateBlood2",
+    "variant_of": "DonateBlood",
+    "desc_key": "ABILITY_DONATEBLOOD2_DESC",
+    "description": "Heal all units in an area 5 HP, then take 10 damage.\n[s:.7]Castable while you're downed. If you do, take no damage and give what you heal All Stats Up.[/s]",
+    "target": {
+      "max_range": "5",
+      "max_aoe": "1"
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "DonateBlood_Afterlife2"
+    }
+  },
+  "DonateBlood_Afterlife2": {
+    "id": "DonateBlood_Afterlife2",
+    "variant_of": "DonateBlood_Afterlife",
+    "desc_key": "ABILITY_DONATEBLOOD2_DESC",
+    "description": "Heal all units in an area 5 HP, then take 10 damage.\n[s:.7]Castable while you're downed. If you do, take no damage and give what you heal All Stats Up.[/s]",
+    "target": {
+      "max_range": "5",
+      "max_aoe": "1"
+    }
+  },
+  "Seance": {
+    "id": "Seance",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SEANCE_NAME",
+    "name": "Seance",
+    "desc_key": "ABILITY_SEANCE_DESC",
+    "description": "Spawn a ghost Familiar that fades after its first turn.\n[s:.7]Castable while you're downed. If you do, spawn a shadow copy of yourself instead.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "spawn": {
+      "object": "Spookie",
+      "faction": "self",
+      "additional_passives": {
+        "SafeDoomed": "1"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "Seance_Afterlife"
+    }
+  },
+  "Seance_Afterlife": {
+    "id": "Seance_Afterlife",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SEANCE_NAME",
+    "name": "Seance",
+    "desc_key": "ABILITY_SEANCE_DESC",
+    "description": "Spawn a ghost Familiar that fades after its first turn.\n[s:.7]Castable while you're downed. If you do, spawn a shadow copy of yourself instead.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true",
+      "must_not_be_a_summon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "none"
+    },
+    "spawn": {
+      "object": "PlayerCat_Shade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true",
+      "additional_passives": {
+        "SafeDoomed": "1",
+        "InjuryImmunity": "1"
+      }
+    }
+  },
+  "Seance2": {
+    "id": "Seance2",
+    "variant_of": "Seance",
+    "desc_key": "ABILITY_SEANCE2_DESC",
+    "description": "Spawn a ghost Familiar that fades after its second turn.\n[s:.7]Castable while you're downed. If you do, spawn a shadow copy of yourself instead.[/s]",
+    "spawn": {
+      "additional_passives": {
+        "SafeDoomed": "2"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "Seance_Afterlife2"
+    }
+  },
+  "Seance_Afterlife2": {
+    "id": "Seance_Afterlife2",
+    "variant_of": "Seance_Afterlife",
+    "desc_key": "ABILITY_SEANCE2_DESC",
+    "description": "Spawn a ghost Familiar that fades after its second turn.\n[s:.7]Castable while you're downed. If you do, spawn a shadow copy of yourself instead.[/s]",
+    "spawn": {
+      "additional_passives": {
+        "SafeDoomed": "2"
+      }
+    }
+  },
+  "GoLimp": {
+    "id": "GoLimp",
+    "template": "self_buff",
+    "name_key": "ABILITY_GOLIMP_NAME",
+    "name": "Go Limp",
+    "desc_key": "ABILITY_GOLIMP_DESC",
+    "description": "Until your next turn, you won't get injured if you're downed.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "hithard"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempInjuryImmunity": "1"
+      }
+    }
+  },
+  "GoLimp2": {
+    "id": "GoLimp2",
+    "variant_of": "GoLimp",
+    "desc_key": "ABILITY_GOLIMP2_DESC",
+    "description": "Until your next turn, you won't get injured if you're downed.\nWhen downed, inflict Confusion 10 on the unit that downed you.",
+    "bonus_passives": {
+      "StatusKillers": {
+        "Confusion": "10"
+      }
+    }
+  },
+  "DemonicPact": {
+    "id": "DemonicPact",
+    "template": "self_buff",
+    "name_key": "ABILITY_DEMONICPACT_NAME",
+    "name": "Demonic Pact",
+    "desc_key": "ABILITY_DEMONICPACT_DESC",
+    "description": "Injure yourself and take an extra turn.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10",
+      "main_turn_only": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomInjury": "1",
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "DemonicPact2": {
+    "id": "DemonicPact2",
+    "variant_of": "DemonicPact",
+    "desc_key": "ABILITY_DEMONICPACT2_DESC",
+    "description": "Injure yourself and take an extra turn.\n[s:.7](This spell costs less. This spell can't be cast on extra turns.)[/s]",
+    "cost": {
+      "mana": "7"
+    }
+  },
+  "RandomSoulLink": {
+    "id": "RandomSoulLink",
+    "template": "spell",
+    "target": {
+      "target_mode": "random_tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_living_character",
+        "must_have_enemy"
+      ]
+    },
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "SoulLink": "1"
+      }
+    }
+  },
+  "RandomDualSoulLink": {
+    "id": "RandomDualSoulLink",
+    "template": "spell",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": "enemies_only",
+      "max_targets": "2"
+    },
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "SoulLink": "1"
+      }
+    }
+  },
+  "Curse": {
+    "id": "Curse",
+    "template": "targeted_status",
+    "name_key": "ABILITY_CURSE_NAME",
+    "name": "Curse",
+    "desc_key": "ABILITY_CURSE_DESC",
+    "description": "Give a unit -4 [img:lck].",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "LuckUp": "-4"
+      }
+    }
+  },
+  "Curse2": {
+    "id": "Curse2",
+    "variant_of": "Curse",
+    "desc_key": "ABILITY_CURSE2_DESC",
+    "description": "Give a unit -4 [img:lck].\n[s:.7](This spell has increased range)[/s]",
+    "target": {
+      "max_range": "8"
+    }
+  },
+  "LeechSwarm": {
+    "id": "LeechSwarm",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_LEECHSWARM_NAME",
+    "name": "Leech Swarm",
+    "desc_key": "ABILITY_LEECHSWARM_DESC",
+    "description": "Inflict Leech 3 on all units, except yourself.",
+    "class": "Necromancer",
+    "cost": {
+      "mana": "12",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "zero"
+    },
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Leeches": "3"
+      }
+    }
+  },
+  "LeechSwarm2": {
+    "id": "LeechSwarm2",
+    "variant_of": "LeechSwarm",
+    "desc_key": "ABILITY_LEECHSWARM2_DESC",
+    "description": "Inflict Leech 1 on each allied unit and Leech 3 on all other units, except yourself.",
+    "damage_instance": {
+      "effects": {
+        "Leeches": "1",
+        "Conditional_Ally": {},
+        "Else": {
+          "Leeches": "2"
+        }
+      }
+    }
+  },
+  "Feed": {
+    "id": "Feed",
+    "template": "melee_attack",
+    "name_key": "ABILITY_FEED_NAME",
+    "name": "Feed",
+    "desc_key": "ABILITY_FEED_DESC",
+    "description": "Destroy an adjacent body. Your basic attack inflicts +1 Leech for the rest of the battle.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "AddLeechesStatus": "1"
+        }
+      }
+    }
+  },
+  "Feed2": {
+    "id": "Feed2",
+    "template": "targeted_status",
+    "name_key": "ABILITY_FEED_NAME",
+    "name": "Feed",
+    "desc_key": "ABILITY_FEED2_DESC",
+    "description": "Destroy a body at range. Your basic attack inflicts +1 Leech for the rest of the battle.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "5",
+      "aoe_restrictions": "must_have_destructible_corpse",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VaporizeCorpse": "1",
+        "ApplyToSource": {
+          "AddLeechesStatus": "1"
+        }
+      }
+    }
+  },
+  "Hush": {
+    "id": "Hush",
+    "template": "targeted_status",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_HUSH_NAME",
+    "name": "Hush",
+    "desc_key": "ABILITY_HUSH_DESC",
+    "description": "Inflict Sleep 1 on an adjacent unit.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "Hush2": {
+    "id": "Hush2",
+    "variant_of": "Hush",
+    "desc_key": "ABILITY_HUSH2_DESC",
+    "description": "Inflict Sleep 1 on a unit in range 4.",
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "ReaperStep": {
+    "id": "ReaperStep",
+    "template": "teleport",
+    "name_key": "ABILITY_REAPERSTEP_NAME",
+    "name": "Reaper Step",
+    "desc_key": "ABILITY_REAPERSTEP_DESC",
+    "description": "Teleport to an open tile in range 1. Whenever a unit dies, this spell's range increases by 1.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "1+X",
+      "X_is": "custom"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "bonus_passives": {
+      "XIsCountDeaths": "1"
+    }
+  },
+  "ReaperStep2": {
+    "id": "ReaperStep2",
+    "variant_of": "ReaperStep",
+    "desc_key": "ABILITY_REAPERSTEP2_DESC",
+    "description": "Teleport to a tile in range 1, dealing damage to units you land on. Whenever a unit dies, this spell's range and damage increase by 1.",
+    "target": {
+      "restrictions": [
+        "aoe_must_be_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "damage": "1+X",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "ForbiddenFamine": {
+    "id": "ForbiddenFamine",
+    "template": "spell",
+    "name_key": "ABILITY_FORBIDDENFAMINE_NAME",
+    "name": "Forbidden Famine",
+    "desc_key": "ABILITY_FORBIDDENFAMINE_DESC",
+    "description": "Inflict Weakness 5, Poison 2, and Madness 2 on all enemies.\nThere are permanent consequences for casting this spell… but maybe not for you. \n[s:.7](Castable once per battle.)[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Weakness": "5",
+        "Poison": "2",
+        "Madness": "2"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "ApplyToRandomPartyMemberIfPossible": {
+          "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+        }
+      }
+    }
+  },
+  "ForbiddenFamine2": {
+    "id": "ForbiddenFamine2",
+    "variant_of": "ForbiddenFamine",
+    "desc_key": "ABILITY_FORBIDDENFAMINE2_DESC",
+    "description": "Inflict Leech 2, Weakness 5, Poison 2, and Madness 2 on all enemies.\nThere are permanent consequences for casting this spell… but maybe not for you. \n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Weakness": "5",
+        "Poison": "5",
+        "Madness": "2",
+        "Leeches": "2"
+      }
+    }
+  },
+  "FleshGolem": {
+    "id": "FleshGolem",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_FLESHGOLEM_NAME",
+    "name": "Flesh Golem",
+    "desc_key": "ABILITY_FLESHGOLEM_DESC",
+    "description": "You and all allies lose 10 HP. Summon a flesh golem with one random spell from each of those units.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "self_damage": {
+      "effects": {
+        "DrainAllyCatsForFleshGolem": "10"
+      }
+    },
+    "spawn": {
+      "object": "PlayerCat_FleshGolem",
+      "catdata": "fleshgolem",
+      "appearance": "GolemCat",
+      "faction": "self"
+    }
+  },
+  "FleshGolem2": {
+    "id": "FleshGolem2",
+    "variant_of": "FleshGolem",
+    "desc_key": "ABILITY_FLESHGOLEM2_DESC",
+    "description": "You and all allies lose 10 HP. Summon a flesh golem with one random spell and random passives from each of those units.\n[s:.7](Castable once per battle.)[/s]",
+    "spawn": {
+      "include_passives": "true"
+    }
+  },
+  "TradeLife": {
+    "id": "TradeLife",
+    "template": "spell",
+    "name_key": "ABILITY_TRADELIFE_NAME",
+    "name": "Trade Life",
+    "desc_key": "ABILITY_TRADELIFE_DESC",
+    "description": "Swap HP with an ally in range 3.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "restrictions": [
+        "must_have_ally",
+        "must_not_have_boss"
+      ]
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TradeLife": "1"
+      }
+    },
+    "bonus_passives": {
+      "DeadAltAbility": "TradeLife_Afterlife"
+    }
+  },
+  "TradeLife2": {
+    "id": "TradeLife2",
+    "variant_of": "TradeLife",
+    "desc_key": "ABILITY_TRADELIFE2_DESC",
+    "description": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "TradeLife_Afterlife": {
+    "id": "TradeLife_Afterlife",
+    "template": "spell",
+    "name_key": "ABILITY_TRADELIFE_NAME",
+    "name": "Trade Life",
+    "desc_key": "ABILITY_TRADELIFE_DESC",
+    "description": "Swap HP with an ally in range 3.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "restrictions": [
+        "must_have_ally",
+        "must_not_have_boss"
+      ]
+    },
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TradeLife": "1"
+      }
+    }
+  },
+  "TradeLife_Afterlife2": {
+    "id": "TradeLife_Afterlife2",
+    "variant_of": "TradeLife_Afterlife",
+    "desc_key": "ABILITY_TRADELIFE2_DESC",
+    "description": "Swap HP with any ally.\n[s:.7]Castable while you're downed. If this spell downs you or the ally, neither are injured.[/s]",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "AbsorbSoul": {
+    "id": "AbsorbSoul",
+    "template": "spell",
+    "name_key": "ABILITY_ABSORBSOUL_NAME",
+    "name": "Absorb Soul",
+    "desc_key": "ABILITY_ABSORBSOUL_DESC",
+    "description": "Down an ally in range 5 and steal their mana. It doesn't get injured.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Necromancer",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0",
+      "restrictions": [
+        "must_have_ally",
+        "must_not_have_boss",
+        "must_have_living_character"
+      ]
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ManaSteal": "-1",
+        "SafeDie": "1"
+      }
+    }
+  },
+  "AbsorbSoul2": {
+    "id": "AbsorbSoul2",
+    "variant_of": "AbsorbSoul",
+    "desc_key": "ABILITY_ABSORBSOUL2_DESC",
+    "description": "Down any ally and steal their mana. It doesn't get injured.\n[s:.7](Castable once per turn.)[/s]",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Leech": "1",
+        "ManaSteal": "-1",
+        "SafeDie": "1"
+      }
+    }
+  },
+  "Gravecrawl": {
+    "id": "Gravecrawl",
+    "template": "teleport",
+    "name_key": "ABILITY_GRAVECRAWL_NAME",
+    "name": "Gravecrawl",
+    "desc_key": "ABILITY_GRAVECRAWL_DESC",
+    "description": "Dig to any tile and unearth a body.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "BounceObject": "chapter_corpse_medium"
+      }
+    }
+  },
+  "Gravecrawl2": {
+    "id": "Gravecrawl2",
+    "template": "teleport",
+    "name_key": "ABILITY_GRAVECRAWL_NAME",
+    "name": "Gravecrawl",
+    "desc_key": "ABILITY_GRAVECRAWL2_DESC",
+    "description": "Dig to any tile and unearth 1-3 bodies.\n[s:.7](This spell costs less.)[/s]",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "BounceObject": {
+          "chance": ".25",
+          "obj": "chapter_corpse_medium"
+        }
+      }
+    }
+  },
+  "DigUpTheDead": {
+    "id": "DigUpTheDead",
+    "template": "teleport",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_DIGUPTHEDEAD_NAME",
+    "name": "Dig Up the Dead",
+    "desc_key": "ABILITY_DIGUPTHEDEAD_DESC",
+    "description": "Dig to any tile and unearth 4 zombies.",
+    "class": "Necromancer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "16"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "BounceObject": "ZombieCatFamiliar"
+      }
+    }
+  },
+  "DigUpTheDead2": {
+    "id": "DigUpTheDead2",
+    "variant_of": "DigUpTheDead",
+    "desc_key": "ABILITY_DIGUPTHEDEAD2_DESC",
+    "description": "Dig to any tile and unearth 4 zombies.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "9"
+    }
+  },
+  "SpiderEgg": {
+    "id": "SpiderEgg",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SPIDEREGG_NAME",
+    "name": "Spider Egg",
+    "desc_key": "ABILITY_SPIDEREGG_DESC",
+    "description": "Inflict Infested 1 on a unit in range 3.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "SpiderInfested": "1"
+      }
+    }
+  },
+  "SpiderEgg2": {
+    "id": "SpiderEgg2",
+    "variant_of": "SpiderEgg",
+    "desc_key": "ABILITY_SPIDEREGG2_DESC",
+    "description": "Deal 1 damage and inflict Infested 1 on any unit.",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "ClewOfLeeches": {
+    "id": "ClewOfLeeches",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CLEWOFLEECHES_NAME",
+    "name": "Clew of Leeches",
+    "desc_key": "ABILITY_CLEWOFLEECHES_DESC",
+    "description": "Surround a unit with leeches.",
+    "class": "Necromancer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+bonus_range",
+      "restrictions": [
+        "must_have_animate_character"
+      ]
+    },
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Imprison": "CharmedLeech"
+      }
+    }
+  },
+  "ClewOfLeeches2": {
+    "id": "ClewOfLeeches2",
+    "variant_of": "ClewOfLeeches",
+    "desc_key": "ABILITY_CLEWOFLEECHES2_DESC",
+    "description": "Surround a unit with beefy leeches.",
+    "damage_instance": {
+      "effects": {
+        "Imprison": "BeefyCharmedLeech"
+      }
+    }
+  }
+}

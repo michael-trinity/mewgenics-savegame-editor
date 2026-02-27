@@ -1,0 +1,66 @@
+{
+  "levels": {
+    "folder": "dimensionx",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "FrankPinky"
+    ],
+    "medium": [
+      "JackCat",
+      "ChaosStacy",
+      "FrankFetus",
+      "BeaniesRat"
+    ],
+    "large": [
+      "ButchTinkBoris",
+      "TracyFetus"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "dimensionxitems"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "chaos",
+      "override_music": "chaos_boss"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_DimensionXRift",
+      "override_art": "MapNode_DeadChaos"
+    }
+  },
+  "flags": {
+    "ChaosAntennaAttached": {
+      "quest_event": {
+        "override_art": "MapNode_DeadChaosAntenna"
+      }
+    }
+  }
+}

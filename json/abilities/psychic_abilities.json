@@ -1,0 +1,2473 @@
+{
+  "Telekinesis": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_TELEKINESIS_NAME",
+      "name_resolved": "Telekinesis",
+      "desc": "ABILITY_TELEKINESIS_DESC",
+      "desc_resolved": "Push a unit within your line of sight away from you 10 tiles.",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "knockback_mode": "character_to_target",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "effects": {},
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "Telekinesis2": {
+    "variant_of": "Telekinesis",
+    "meta": {
+      "desc": "ABILITY_TELEKINESIS2_DESC",
+      "desc_resolved": "Push a unit within your line of sight away from you 10 tiles with Chain Knockback."
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "OverrideChainKnockback": "10"
+      }
+    }
+  },
+  "Suggestion": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SUGGESTION_NAME",
+      "name_resolved": "Suggestion",
+      "desc": "ABILITY_SUGGESTION_DESC",
+      "desc_resolved": "Cause an enemy within your line of sight to attack another enemy if it can.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "slowPawMagic",
+      "particle": "ExclamationPointEnemy"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": [
+        "aoe_must_exist",
+        "must_have_line_of_sight"
+      ],
+      "aoe_restrictions": [
+        "enemies_only",
+        "must_have_living_character"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CharmedForceAttack": "1"
+      }
+    }
+  },
+  "Suggestion2": {
+    "variant_of": "Suggestion",
+    "meta": {
+      "desc": "ABILITY_SUGGESTION2_DESC",
+      "desc_resolved": "Cause enemies in a target area within your line of sight to each attack another enemy if they can."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "MindControl": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MINDCONTROL_NAME",
+      "name_resolved": "Mind Control",
+      "desc": "ABILITY_MINDCONTROL_DESC",
+      "desc_resolved": "Charm an enemy within your line of sight for the rest of the battle.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "slowPawMagic",
+      "particle": "ExclamationPointEnemy"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "15"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": [
+        "aoe_must_exist",
+        "must_have_line_of_sight"
+      ],
+      "aoe_restrictions": [
+        "enemies_only"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_Boss": {
+          "Charmed": "1"
+        },
+        "Conditional_NotBoss": {
+          "PermanentCharm": "1"
+        }
+      }
+    }
+  },
+  "MindControl2": {
+    "variant_of": "MindControl",
+    "meta": {
+      "desc": "ABILITY_MINDCONTROL2_DESC",
+      "desc_resolved": "Charm an enemy within your line of sight for the rest of the battle. That unit immediately takes an extra turn."
+    },
+    "effects": {
+      "TakeExtraTurn": "1"
+    }
+  },
+  "MegaGrav": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MEGAGRAV_NAME",
+      "name_resolved": "Mega Grav",
+      "desc": "ABILITY_MEGAGRAV_DESC",
+      "desc_resolved": "Damage and throw each unit near you to random tiles.",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "animation": "psyAttack2",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "3",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "TwisterDisplaceWithDamage": {
+          "min_dist": "3",
+          "max_dist": "20",
+          "damage": "inherit"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "MegaGrav2": {
+    "variant_of": "MegaGrav",
+    "meta": {
+      "desc": "ABILITY_MEGAGRAV2_DESC",
+      "desc_resolved": "Damage and throw each unit in a target area to random tiles."
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_range": "20"
+    }
+  },
+  "PsyFlutter": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_PSYFLUTTER_NAME",
+      "name_resolved": "Psyflutter",
+      "desc": "ABILITY_PSYFLUTTER_DESC",
+      "desc_resolved": "Teleport exactly three tiles away.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "3",
+      "range_mode": "normal"
+    }
+  },
+  "PsyFlutter2": {
+    "variant_of": "PsyFlutter",
+    "meta": {
+      "desc": "ABILITY_PSYFLUTTER2_DESC",
+      "desc_resolved": "Teleport exactly three tiles away.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "MagnetPull": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MAGNETPULL_NAME",
+      "name_resolved": "Gravity Pull",
+      "desc": "ABILITY_MAGNETPULL_DESC",
+      "desc_resolved": "Pull units toward a tile within range 5.",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "animation": "psyAttack3",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "max_range": "5",
+      "knockback_mode": "tile_to_target"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "MagnetPull2": {
+    "variant_of": "MagnetPull",
+    "meta": {
+      "desc": "ABILITY_MAGNETPULL2_DESC",
+      "desc_resolved": "Pull units in a larger area toward a tile at infinite range."
+    },
+    "target": {
+      "max_range": "20",
+      "max_aoe": "2"
+    }
+  },
+  "MindBlast": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MINDBLAST_NAME",
+      "name_resolved": "Mindblast",
+      "desc": "ABILITY_MINDBLAST_DESC",
+      "desc_resolved": "Push away each unit near you. This inflicts Madness and has a small chance to inflict Stun.",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "animation": "psyAttack2",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "none",
+      "min_aoe": "1",
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3",
+      "effects": {
+        "Stun": [
+          "1",
+          ".1"
+        ],
+        "Madness": "1"
+      },
+      "elements": [
+        "Explosion",
+        "Gravity"
+      ]
+    }
+  },
+  "MindBlast2": {
+    "variant_of": "MindBlast",
+    "meta": {
+      "desc": "ABILITY_MINDBLAST2_DESC",
+      "desc_resolved": "Push away each unit near a target area. This inflicts Madness and has a small chance to inflict Stun."
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_range": "20",
+      "knockback_mode": "target_to_tile"
+    }
+  },
+  "BlinkDodge": {
+    "template": "teleport",
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "PsychicChoke": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PSYCHICCHOKE_NAME",
+      "name_resolved": "Psychic Choke",
+      "desc": "ABILITY_PSYCHICCHOKE_DESC",
+      "desc_resolved": "Deal damage to and inflict Bruise on a unit within your line of sight.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "affected_particle": "fx_GravitySlam",
+      "fx_is_placeholder_animation": "true",
+      "animation": "slowPawMagic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "knockback_mode": "zero",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "Bruise": "1"
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "PsychicChoke2": {
+    "variant_of": "PsychicChoke",
+    "meta": {
+      "desc": "ABILITY_PSYCHICCHOKE2_DESC",
+      "desc_resolved": "Deal damage to and inflict Bruise on a unit within your line of sight. This damage counts as physical damage and scales with [img:str]."
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "type": "physical_spell"
+    }
+  },
+  "SkyShatter": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SKYSHATTER_NAME",
+      "name_resolved": "Shatter the Sky",
+      "desc": "ABILITY_SKYSHATTER_DESC",
+      "desc_resolved": "Create floating glass shards on a tile within your line of sight.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "psyAttack1",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "FloatingGlassTile"
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "SkyShatter2": {
+    "variant_of": "SkyShatter",
+    "meta": {
+      "desc": "ABILITY_SKYSHATTER2_DESC",
+      "desc_resolved": "Create floating glass shards in an area within your line of sight."
+    },
+    "target": {
+      "max_aoe": "1"
+    }
+  },
+  "Supernova": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SUPERNOVA_NAME",
+      "name_resolved": "Supernova",
+      "desc": "ABILITY_SUPERNOVA_DESC",
+      "desc_resolved": "Deal damage to and inflict Blind on every unit within your line of sight.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "psyMegaAttack",
+      "particle": "MagicMissleBlast",
+      "delay": "3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "12",
+      "effects": {
+        "Blind": "3"
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "Supernova2": {
+    "variant_of": "Supernova",
+    "meta": {
+      "desc": "ABILITY_SUPERNOVA2_DESC",
+      "desc_resolved": "Deal damage to and inflict Blind on every unit within your line of sight, excluding your allies."
+    },
+    "target": {
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "Burn": "3"
+      }
+    }
+  },
+  "ReadMind": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_READMIND_NAME",
+      "name_resolved": "Read Mind",
+      "desc": "ABILITY_READMIND_DESC",
+      "desc_resolved": "Replace your spells with the spells of an ally cat until the end of the turn.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "slowPawMagic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": [
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "must_have_player_cat"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CopySpells": "1"
+      }
+    }
+  },
+  "ReadMind2": {
+    "variant_of": "ReadMind",
+    "meta": {
+      "desc": "ABILITY_READMIND2_DESC",
+      "desc_resolved": "Replace your spells with upgraded versions of the spells of an ally cat until the end of the turn."
+    },
+    "damage_instance": {
+      "effects": {
+        "CopySpells": {
+          "stacks": "1",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "AlterDNA": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_ALTERDNA_NAME",
+      "name_resolved": "Alter DNA",
+      "desc": "ABILITY_ALTERDNA_DESC",
+      "desc_resolved": "Spend all your mana. Give a unit within your line of sight a random stat up for every 3 mana spent (rounded up). Give enemies random stat downs instead.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "slowPawMagic",
+      "particle": "SparklingClean"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "X",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "X_is": "current_mana",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_Ally": {
+          "RandomStatUp": "ceil(X/3)"
+        },
+        "Else": {
+          "RandomStatDown": "ceil(X/3)"
+        }
+      }
+    }
+  },
+  "AlterDNA2": {
+    "variant_of": "AlterDNA",
+    "meta": {
+      "desc": "ABILITY_ALTERDNA2_DESC",
+      "desc_resolved": "Spend all your mana. Give a unit within your line of sight a random stat up for every 2 mana spent (rounded up). Give enemies random stat downs instead."
+    },
+    "target": {
+      "min_range": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Ally": {
+          "RandomStatUp": "ceil(X/2)"
+        },
+        "Else": {
+          "RandomStatDown": "ceil(X/2)"
+        }
+      }
+    }
+  },
+  "Flicker": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_FLICKER_NAME",
+      "name_resolved": "Flicker",
+      "desc": "ABILITY_FLICKER_DESC",
+      "desc_resolved": "Teleport two tiles away. Displace any units you teleport into.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "2",
+      "max_range": "2",
+      "range_mode": "normal",
+      "restrictions": [
+        "aoe_must_be_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Displace": "1"
+      }
+    }
+  },
+  "Flicker2": {
+    "variant_of": "Flicker",
+    "meta": {
+      "desc": "ABILITY_FLICKER2_DESC",
+      "desc_resolved": "Teleport two tiles away. Displace any units you teleport into and inflict them with Confusion 2 and Blind 2."
+    },
+    "damage_instance": {
+      "damage": "0",
+      "makes_contact": "true",
+      "effects": {
+        "Confusion": "2",
+        "Blind": "2"
+      }
+    }
+  },
+  "MindMeld": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MINDMELD_NAME",
+      "name_resolved": "Mind Meld",
+      "desc": "ABILITY_MINDMELD_DESC",
+      "desc_resolved": "Give another unit an extra turn after this one.\nThis spell can't be cast during extra turns.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "clockanim"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10",
+      "main_turn_only": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "MindMeld2": {
+    "variant_of": "MindMeld",
+    "meta": {
+      "desc": "ABILITY_MINDMELD2_DESC",
+      "desc_resolved": "Give another unit +10 mana and an extra turn after this one.\nThis spell can't be cast during extra turns."
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "10"
+      }
+    }
+  },
+  "Vaccuum": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_VACUUM_NAME",
+      "name_resolved": "Vacuum",
+      "desc": "ABILITY_VACUUM_DESC",
+      "desc_resolved": "Teleport all enemies within an area as close to the center of that area as possible.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "delay": "1",
+      "animation": "psyAttack1",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_range": "20",
+      "max_aoe": "4",
+      "shuffle_tile_order": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Enemy": {
+          "DisplaceToAbilityTarget": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "Vaccuum2": {
+    "variant_of": "Vaccuum",
+    "meta": {
+      "desc": "ABILITY_VACUUM2_DESC",
+      "desc_resolved": "Teleport all enemies within a large area as close to the center of that area as possible and inflict Confusion on those units."
+    },
+    "target": {
+      "max_aoe": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Enemy": {
+          "DisplaceToAbilityTarget": "1",
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "GrowHead": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_GROWHEAD_NAME",
+      "name_resolved": "Grow Head",
+      "desc": "ABILITY_GROWHEAD_DESC",
+      "desc_resolved": "Gain +1 [img:int] and -1 [img:cha].",
+      "class": "Psychic"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "1",
+        "CharismaUp": "-1"
+      }
+    }
+  },
+  "Ping": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_PING_NAME",
+      "name_resolved": "Ping",
+      "desc": "ABILITY_PING_DESC",
+      "desc_resolved": "Deal 1 damage to any unit within your line of sight.\nRELOAD: Spend mana",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "fx_magicSplash",
+      "animation": "psyAttack3"
+    },
+    "cost": {
+      "requires_reload": "true",
+      "mana": "0"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "bonus_passives": {
+      "ReloadOnSpendMana": "1"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "Ping2": {
+    "variant_of": "Ping",
+    "meta": {
+      "desc": "ABILITY_PING2_DESC",
+      "desc_resolved": "Deal 1 damage to any unit within your line of sight.\nRELOAD: Spend mana\nBonus Passive: +2 [img:int]."
+    },
+    "bonus_passives": {
+      "IntelligenceUp": "2"
+    }
+  },
+  "FlashForward": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_FLASHFORWARD_NAME",
+      "name_resolved": "Flash Forward",
+      "desc": "ABILITY_FLASHFORWARD_DESC",
+      "desc_resolved": "Teleport to any tile. At the end of your turn, teleport back to your original tile and deal 10 damage to any unit you teleport into.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "range_mode": "normal"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "TeleportBackAtTurnEnd": "FlashBack"
+      }
+    }
+  },
+  "FlashForward2": {
+    "variant_of": "FlashForward",
+    "meta": {
+      "desc": "ABILITY_FLASHFORWARD2_DESC",
+      "desc_resolved": "Teleport to any tile. At the end of your turn, teleport back to your original tile and deal 10 damage to any unit you teleport into.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    }
+  },
+  "FlashBack": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_FLASHBACK_NAME",
+      "name_resolved": "Flashback",
+      "desc": "ABILITY_FLASHBACK_DESC",
+      "desc_resolved": "Teleport back.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "range_mode": "normal",
+      "restrictions": [
+        "aoe_must_be_force_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "damage": "10",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Displace": "1"
+      }
+    }
+  },
+  "Order": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_ORDER_NAME",
+      "name_resolved": "Order",
+      "desc": "ABILITY_ORDER_DESC",
+      "desc_resolved": "Force a unit within your line of sight to move and attack one of its enemies.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "ExclamationPoint"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "ForceMoveAndAttack": "1"
+      }
+    }
+  },
+  "Order2": {
+    "variant_of": "Order",
+    "meta": {
+      "desc": "ABILITY_ORDER2_DESC",
+      "desc_resolved": "Give a unit within your line of sight All Stats Up and force it to move and attack one of its enemies."
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "TemporalShards": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_TEMPORALSHARDS_NAME",
+      "name_resolved": "Temporal Shards",
+      "desc": "ABILITY_TEMPORALSHARDS_DESC",
+      "desc_resolved": "Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn.",
+      "class": "Psychic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "Glasspop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Temporary": {
+          "status": "BleedThorns",
+          "stacks": "3",
+          "turns": "1"
+        }
+      }
+    }
+  },
+  "TemporalShards2": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_TEMPORALSHARDS_NAME",
+      "name_resolved": "Temporal Shards",
+      "desc": "ABILITY_TEMPORALSHARDS2_DESC",
+      "desc_resolved": "Give a unit within your line of sight +3 temporary Bleed Thorns until the end of its turn. If its was an ally, the bleed thorns last for the rest of the battle.",
+      "class": "Psychic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "Glasspop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_Ally": {
+          "BleedThorns": "3"
+        },
+        "Conditional_NotAlly": {
+          "Temporary": {
+            "status": "BleedThorns",
+            "stacks": "3",
+            "turns": "1"
+          }
+        }
+      }
+    }
+  },
+  "RealityScramble": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_REALITYSCRAMBLE_NAME",
+      "name_resolved": "Reality Scramble",
+      "desc": "ABILITY_REALITYSCRAMBLE_DESC",
+      "desc_resolved": "Randomize the positions of all units. Enemies get Confused.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "self_damage": {
+      "effects": {
+        "ScrambleEverything": "0"
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "cant_miss": "true"
+    }
+  },
+  "RealityScramble2": {
+    "variant_of": "RealityScramble",
+    "meta": {
+      "desc": "ABILITY_REALITYSCRAMBLE2_DESC",
+      "desc_resolved": "Randomize the positions of all units. Enemies get Confused. Non-boss enemies have a 10% chance to be erased from existence."
+    },
+    "self_damage": {
+      "effects": {
+        "ScrambleEverything": "10%"
+      }
+    }
+  },
+  "Glare": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_GLARE_NAME",
+      "name_resolved": "Glare",
+      "desc": "ABILITY_GLARE_DESC",
+      "desc_resolved": "Inflict Madness on a unit in your line of sight.",
+      "class": "Psychic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "glare",
+      "particle": "ExclamationPointEnemy"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Madness": "1"
+      }
+    }
+  },
+  "Glare2": {
+    "variant_of": "Glare",
+    "meta": {
+      "desc": "ABILITY_GLARE2_DESC",
+      "desc_resolved": "Inflict Madness and Confusion on a unit in your line of sight."
+    },
+    "damage_instance": {
+      "effects": {
+        "Confusion": "1"
+      }
+    }
+  },
+  "BlindingFlash": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BLINDINGFLASH_NAME",
+      "name_resolved": "Blinding Flash",
+      "desc": "ABILITY_BLINDINGFLASH_DESC",
+      "desc_resolved": "Inflict Blind 2 on each unit near you in your line of sight.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "flex"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "3",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Blind": "2"
+      }
+    }
+  },
+  "BlindingFlash2": {
+    "variant_of": "BlindingFlash",
+    "meta": {
+      "desc": "ABILITY_BLINDINGFLASH2_DESC",
+      "desc_resolved": "Inflict Blind 2 on each enemy within five tiles of you in your line of sight."
+    },
+    "target": {
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ],
+      "max_aoe": "5"
+    }
+  },
+  "Snatch": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SNATCH_NAME",
+      "name_resolved": "Snatch",
+      "desc": "ABILITY_SNATCH_DESC",
+      "desc_resolved": "Collect any pickup within your line of sight.",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "animation": "psyAttack1",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_tag",
+        "must_have_line_of_sight"
+      ],
+      "target_requires_tag": "pickup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "CollectsPickups": "1"
+      }
+    }
+  },
+  "Snatch2": {
+    "variant_of": "Snatch",
+    "meta": {
+      "desc": "ABILITY_SNATCH2_DESC",
+      "desc_resolved": "Collect any pickup within your line of sight.\nGain +1 [img:lck]."
+    },
+    "self_damage": {
+      "effects": {
+        "LuckUp": "1"
+      }
+    }
+  },
+  "FutureSight": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_FUTURESIGHT_NAME",
+      "name_resolved": "Future Sight",
+      "desc": "ABILITY_FUTURESIGHT_DESC",
+      "desc_resolved": "A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.",
+      "class": "Psychic",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "ExclamationPoint"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "BackflipWhenTargeted": "1"
+      }
+    }
+  },
+  "FutureSight2": {
+    "variant_of": "FutureSight",
+    "meta": {
+      "desc": "ABILITY_FUTURESIGHT2_DESC",
+      "desc_resolved": "A unit within your line of sight backflips out of the way the next time they're targeted by an enemy.\n [s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "MassManaLeech": {
+    "template": "spell",
+    "graphics": {
+      "particle": "none",
+      "animation": "floatingmagic"
+    },
+    "meta": {
+      "name": "ABILITY_MASSMANALEECH_NAME",
+      "name_resolved": "Mass Mana Leech",
+      "desc": "ABILITY_MASSMANALEECH_DESC",
+      "desc_resolved": "Inflict Mana Leech 2 and Weakness 2 on all units within 3 tiles of you.",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "3",
+      "target_mode": "none",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "ManaLeeches": "2",
+        "Weakness": "2"
+      }
+    }
+  },
+  "MassManaLeech2": {
+    "variant_of": "MassManaLeech",
+    "meta": {
+      "desc": "ABILITY_MASSMANALEECH2_DESC",
+      "desc_resolved": "Inflict Mana Leech 2 and Weakness 2 on all units within 5 tiles of you."
+    },
+    "target": {
+      "max_aoe": "5"
+    }
+  },
+  "BecomeEntropy": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BECOMEENTROPY_NAME",
+      "name_resolved": "Become Entropy",
+      "desc": "ABILITY_BECOMEENTROPY_DESC",
+      "desc_resolved": "Vaporize everything on a tile within your line of sight. Against a boss, this deals damage and inflicts Stun instead.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "14"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_NotBoss": {
+          "CanApplyToInanimate": {
+            "PreventDeathTransforms": "1",
+            "Vaporize": "1"
+          }
+        },
+        "Conditional_Boss": {
+          "Stun": "1",
+          "OverrideDamage": "10"
+        },
+        "ChangeTile": "BlankTile",
+        "DeleteTraps": "1"
+      }
+    }
+  },
+  "BecomeEntropy2": {
+    "variant_of": "BecomeEntropy",
+    "meta": {
+      "desc": "ABILITY_BECOMEENTROPY2_DESC",
+      "desc_resolved": "Vaporize everything on a tile within your line of sight. Against a boss, this deals massive damage and inflicts Stun instead."
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Boss": {
+          "Stun": "1",
+          "OverrideDamage": "25"
+        }
+      }
+    }
+  },
+  "FastForward": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_FASTFORWARD_NAME",
+      "name_resolved": "Fast Forward",
+      "desc": "ABILITY_FASTFORWARD_DESC",
+      "desc_resolved": "Every ally that hasn't taken their turn yet takes their turn right after yours. You go first next round.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "affected_particle": "fx_haste"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "false",
+      "aoe_restrictions": [
+        "allies_only",
+        "character_has_turns_left"
+      ]
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "TempInitiativeChange": "9999"
+      }
+    }
+  },
+  "FastForward2": {
+    "variant_of": "FastForward",
+    "meta": {
+      "desc": "ABILITY_FASTFORWARD2_DESC",
+      "desc_resolved": "Every ally that hasn't taken their turn yet takes their turn right after yours. Those units get +4 temporary [img:spd]. You go first next round."
+    },
+    "damage_instance": {
+      "effects": {
+        "TempSpeedUp": "4"
+      }
+    }
+  },
+  "AncestralRecall": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ANCESTRALRECALL_NAME",
+      "name_resolved": "Ancestral Recall",
+      "desc": "ABILITY_ANCESTRALRECALL_DESC",
+      "desc_resolved": "Upgrade one of your spells at random for the rest of the battle.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "mana": "8",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "UpgradeRandomAbility": "1",
+        "Conditional_Enemy": {
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "AncestralRecall2": {
+    "variant_of": "AncestralRecall",
+    "meta": {
+      "desc": "ABILITY_ANCESTRALRECALL2_DESC",
+      "desc_resolved": "Target yourself or a unit within your line of sight and upgrade one of their spells at random for the rest of the battle."
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight",
+      "target_mode": "tile"
+    }
+  },
+  "CumulativeBlast": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CUMULATIVEBLAST_NAME",
+      "name_resolved": "Cumulative Blast",
+      "desc": "ABILITY_CUMULATIVEBLAST_DESC",
+      "desc_resolved": "Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "fx_magicSplash",
+      "animation": "psyAttack3"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": "must_have_line_of_sight",
+      "X_is": "custom"
+    },
+    "self_damage": {
+      "effects": {
+        "IncreaseCumulativeBlastDamage": "1"
+      }
+    },
+    "damage_instance": {
+      "damage": "1+X"
+    }
+  },
+  "CumulativeBlast2": {
+    "variant_of": "CumulativeBlast",
+    "meta": {
+      "desc": "ABILITY_CUMULATIVEBLAST2_DESC",
+      "desc_resolved": "Deal damage to a unit in your line of sight, then increase this spell's damage by 1 for the rest of the battle.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Hallucinate": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_HALLUCINATE_NAME",
+      "name_resolved": "Hallucinate",
+      "desc": "ABILITY_HALLUCINATE_DESC",
+      "desc_resolved": "Spawn a friendly illusion of a random unit that fades away after one turn.",
+      "class": "Psychic"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight",
+      "aoe_restrictions": [
+        "exclude_blocking"
+      ]
+    },
+    "spawn": {
+      "object": "RANDOM_1X1_ENEMY",
+      "faction": "self",
+      "additional_passives": {
+        "SafeDoomed": "1",
+        "InjuryImmunity": "1",
+        "FadeInsteadOfDie": "1",
+        "IllusionTint": "1"
+      }
+    }
+  },
+  "Hallucinate2": {
+    "variant_of": "Hallucinate",
+    "meta": {
+      "desc": "ABILITY_HALLUCINATE2_DESC",
+      "desc_resolved": "Spawn a friendly illusion of a random unit that fades away after one turn. The illusion gets +4 [img:spd] and +2 Damage."
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "spawn": {
+      "additional_passives": {
+        "SpeedUp": "4",
+        "DamageUp": "2"
+      }
+    }
+  },
+  "MassHysteria": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MASSHYSTERIA_NAME",
+      "name_resolved": "Mass Hysteria",
+      "desc": "ABILITY_MASSHYSTERIA_DESC",
+      "desc_resolved": "Every enemy in your line of sight takes an extra turn. They are charmed on that turn.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "affected_particle": "ExclamationPointEnemy"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_Enemy": {
+          "Charmed": "1",
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "MassHysteria2": {
+    "variant_of": "MassHysteria",
+    "meta": {
+      "desc": "ABILITY_MASSHYSTERIA2_DESC",
+      "desc_resolved": "Every enemy in your line of sight takes an extra turn. They are charmed on that turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "7"
+    }
+  },
+  "ExtraTurnQuestion": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_EXTRATURNQ_NAME",
+      "name_resolved": "Extra Turn?",
+      "desc": "ABILITY_EXTRATURNQ_DESC",
+      "desc_resolved": "Take an extra turn. You're stunned and don't regenerate mana on that turn.\n[s:.7](This spell can't be cast on extra turns.)[/s]",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "doublevision"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4",
+      "main_turn_only": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeBonusTurnWithStatus": {
+          "Stun": "1",
+          "TempNoManaRegen": "1"
+        }
+      }
+    }
+  },
+  "ExtraTurnQuestion2": {
+    "variant_of": "ExtraTurnQuestion",
+    "meta": {
+      "desc": "ABILITY_EXTRATURNQ2_DESC",
+      "desc_resolved": "Take an extra turn. You have a 75% chance to be stunned and don't regenerate mana on that turn.\n[s:.7](This spell can't be cast on extra turns.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeBonusTurnWithStatus": {
+          "Stun": [
+            "1",
+            ".75"
+          ],
+          "TempNoManaRegen": "1"
+        }
+      }
+    }
+  },
+  "MindCrack": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MINDCRACK_NAME",
+      "name_resolved": "Mindcrack",
+      "desc": "ABILITY_MINDCRACK_DESC",
+      "desc_resolved": "Inflict Magic Weakness 2 on all units in your line of sight.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "psyMegaAttack",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "MagicWeakness": "2"
+      }
+    }
+  },
+  "MindCrack2": {
+    "variant_of": "MindCrack",
+    "meta": {
+      "desc": "ABILITY_MINDCRACK2_DESC",
+      "desc_resolved": "Inflict Magic Weakness 2 and Confusion 1 on all non-allied units in your line of sight."
+    },
+    "target": {
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "MagicWeakness": "2",
+        "Confusion": "1"
+      }
+    }
+  },
+  "Reset": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_RESET_NAME",
+      "name_resolved": "Reset",
+      "desc": "ABILITY_RESET_DESC",
+      "desc_resolved": "Revive all bodies, fully heal all units, and clear all status effects.\n[s:.7](This spell can be cast only once per battle.)[/s]",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "psyMegaAttack",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "16",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "false",
+      "aoe_restrictions": "none"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "PurgeAll": "1",
+        "Revive": "100%",
+        "FullHeal": "1"
+      }
+    }
+  },
+  "Reset2": {
+    "variant_of": "Reset",
+    "meta": {
+      "desc": "ABILITY_RESET2_DESC",
+      "desc_resolved": "Revive all bodies, fully heal all units, and clear all status effects.\nCastable while you're downed. It costs 0 mana if you're downed.\n[s:.7](This spell can be cast only once per battle.)[/s]"
+    },
+    "graphics": {
+      "animation": "psyMegaAttack",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "16-X*16",
+      "once_per_fight": "true",
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "X_is": "is_dead"
+    }
+  },
+  "Mimic": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_MIMIC_NAME",
+      "name_resolved": "Mimic",
+      "desc": "ABILITY_MIMIC_DESC",
+      "desc_resolved": "Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).",
+      "class": "Psychic",
+      "type_icon": "unknown"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": [
+        "must_have_line_of_sight",
+        "must_have_player_cat"
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "MimicMetronome": "1"
+      }
+    }
+  },
+  "Mimic2": {
+    "variant_of": "Mimic",
+    "meta": {
+      "desc": "ABILITY_MIMIC2_DESC",
+      "desc_resolved": "Target an allied cat within your line of sight. Cast one of their spells at random for free (or use their basic attack if theres no good spells).\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    }
+  },
+  "ChaosSwap": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_CHAOSSWAP_NAME",
+      "name_resolved": "Chaos Swap",
+      "desc": "ABILITY_CHAOSSWAP_DESC",
+      "desc_resolved": "Swap positions with a random unit.",
+      "animate_name": "false",
+      "class": "Psychic"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_range": "20"
+    }
+  },
+  "ChaosSwap2": {
+    "variant_of": "ChaosSwap",
+    "meta": {
+      "desc": "ABILITY_CHAOSSWAP2_DESC",
+      "desc_resolved": "Swap positions with a random unit. If that unit was an enemy, you inflict Confusion on it."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Enemy": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "Asteroid": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_ASTEROID_NAME",
+      "name_resolved": "Asteroid",
+      "desc": "ABILITY_ASTEROID_DESC",
+      "desc_resolved": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage and leaves a rock.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "MeteorFall",
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Burn": "1",
+        "BounceRock": "SmallLavaRock"
+      },
+      "elements": [
+        "Gravity",
+        "Fire",
+        "Napalm"
+      ]
+    }
+  },
+  "Asteroid2": {
+    "variant_of": "Asteroid",
+    "meta": {
+      "desc": "ABILITY_ASTEROID2_DESC",
+      "desc_resolved": "Make an asteroid fall onto a tile within your line of sight. The asteroid deals damage, bruises and leaves a boulder."
+    },
+    "damage_instance": {
+      "damage": "8",
+      "effects": {
+        "Bruise": "1",
+        "Displace": "1",
+        "BounceRock": "LavaBoulder"
+      }
+    }
+  },
+  "Stasis": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_STASIS_NAME",
+      "name_resolved": "Stasis",
+      "desc": "ABILITY_STASIS_DESC",
+      "desc_resolved": "Inflict Freeze on a unit within your line of sight.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "IcePoof",
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "effects": {
+        "Freeze": "1"
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "Stasis2": {
+    "variant_of": "Stasis",
+    "meta": {
+      "desc": "ABILITY_STASIS2_DESC",
+      "desc_resolved": "Inflict Freeze 1, Blind 2, and Confusion 2 on a unit within your line of sight."
+    },
+    "damage_instance": {
+      "effects": {
+        "Freeze": "1",
+        "Blind": "2",
+        "Confusion": "2"
+      }
+    }
+  },
+  "Pass": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PASS_NAME",
+      "name_resolved": "Pass",
+      "desc": "ABILITY_PASS_DESC",
+      "desc_resolved": "Give a unit within your line of sight an extra turn immediately, then end your turn. \nCastable only if you haven't taken any actions this turn.\n[s:.7](This can't be cast on extra turns.)[/s]",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "pointout"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "must_be_first_action": "true",
+      "main_turn_only": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "self_damage": {
+      "effects": {
+        "EndTurn": "1"
+      }
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "Pass2": {
+    "variant_of": "Pass",
+    "meta": {
+      "desc": "ABILITY_PASS2_DESC",
+      "desc_resolved": "Give a unit within your line of sight an extra turn immediately, then end your turn.\nCastable only if you haven't taken any actions this turn other than your movement action.\n[s:.7](This can't be cast on extra turns.)[/s]"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "must_be_first_action": "false",
+      "must_be_first_nonmove_action": "true"
+    }
+  },
+  "ThinkDeep": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_THINKDEEP_NAME",
+      "name_resolved": "Think Deep",
+      "desc": "ABILITY_THINKDEEP_DESC",
+      "desc_resolved": "Restore all of your mana and fall asleep.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Psychic"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "5",
+      "cantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "FillMana": "1",
+        "Sleep": "1"
+      }
+    }
+  },
+  "ThinkDeep2": {
+    "variant_of": "ThinkDeep",
+    "meta": {
+      "desc": "ABILITY_THINKDEEP2_DESC",
+      "desc_resolved": "Restore all of your mana and fall asleep.\n[s:.7](Castable once per turn. This spell costs 0 mana.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Puppet": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PUPPET_NAME",
+      "name_resolved": "Puppet",
+      "desc": "ABILITY_PUPPET_DESC",
+      "desc_resolved": "Force an enemy within your line of sight to attack in the direction it's facing.",
+      "class": "Psychic",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "ExclamationPointEnemy"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": [
+        "aoe_must_exist",
+        "must_have_line_of_sight"
+      ],
+      "aoe_restrictions": [
+        "enemies_only"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CharmedFacingForceAttack": "1"
+      }
+    }
+  },
+  "Puppet2": {
+    "variant_of": "Puppet",
+    "meta": {
+      "desc": "ABILITY_PUPPET2_DESC",
+      "desc_resolved": "Force a unit within your line of sight to attack in the direction it's facing."
+    },
+    "target": {
+      "restrictions": "must_have_line_of_sight",
+      "aoe_restrictions": "none"
+    }
+  },
+  "YouSeeNothing": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_LOOKAWAY_NAME",
+      "name_resolved": "Look Away",
+      "desc": "ABILITY_LOOKAWAY_DESC",
+      "desc_resolved": "Every unit within your line of sight turns away from you.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "FaceAway": "1"
+      }
+    }
+  },
+  "YouSeeNothing2": {
+    "variant_of": "YouSeeNothing",
+    "meta": {
+      "desc": "ABILITY_LOOKAWAY2_DESC",
+      "desc_resolved": "Every unit within your line of sight turns away from you and is inflicted with Blind 1."
+    },
+    "damage_instance": {
+      "effects": {
+        "Blind": "1"
+      }
+    }
+  },
+  "ForceBlast": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_GRAVITYBLAST_NAME",
+      "name_resolved": "Gravity Blast",
+      "desc": "ABILITY_GRAVITYBLAST_DESC",
+      "desc_resolved": "Deal 10 Knockback to adjacent units. If you cast this from full mana, the units take 10 damage on collision.",
+      "class": "Psychic",
+      "icon_shell_frame": "attack",
+      "icon_damage_display_eq": "X*10",
+      "icon_damage_type": "physical"
+    },
+    "graphics": {
+      "animation": "flex",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1",
+      "aoe_excludes_self": "true",
+      "X_is": "is_at_max_mana"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "X*10",
+          "OverrideKnockbackDamage": "X*10"
+        }
+      },
+      "elements": [
+        "Gravity",
+        "Explosion"
+      ]
+    }
+  },
+  "ForceBlast2": {
+    "variant_of": "ForceBlast",
+    "meta": {
+      "desc": "ABILITY_GRAVITYBLAST2_DESC",
+      "desc_resolved": "Deal 10 Knockback to adjacent units. If you cast this from full mana, the units take 10 damage on collision and get stunned."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "Stun": "1"
+        }
+      }
+    }
+  },
+  "IncreaseGravity": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_INCREASEGRAVITY_NAME",
+      "name_resolved": "Increase Gravity",
+      "desc": "ABILITY_INCREASEGRAVITY_DESC",
+      "desc_resolved": "Inflict Slow 1 on a unit within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage.",
+      "class": "Psychic",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "animation": "pointout",
+      "particle": "fx_statdown"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "aoe_excludes_self": "true",
+      "restrictions": "must_have_line_of_sight",
+      "X_is": "is_at_max_mana"
+    },
+    "damage_instance": {
+      "raw_damage": "X*6",
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "X",
+          "Immobile": "1"
+        },
+        "Else": {
+          "Slow": "1"
+        }
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "IncreaseGravity2": {
+    "variant_of": "IncreaseGravity",
+    "meta": {
+      "desc": "ABILITY_INCREASEGRAVITY2_DESC",
+      "desc_resolved": "Inflict Slow 1 on each unit in an area around a tile within your line of sight. If you cast this from full mana, instead inflict Immobilize 1 and deal 6 damage."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "Manifest": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_MANIFEST_NAME",
+      "name_resolved": "Manifest",
+      "desc": "ABILITY_MANIFEST_DESC",
+      "desc_resolved": "Teleport in a straight line into a unit within your line of sight. Deal damage and displace it.",
+      "animate_name": "true",
+      "class": "Psychic",
+      "type_icon": "magic"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "20",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_have_animate_character",
+        "must_have_line_of_sight"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "Manifest2": {
+    "variant_of": "Manifest",
+    "meta": {
+      "desc": "ABILITY_MANIFEST2_DESC",
+      "desc_resolved": "Teleport into a unit within your line of sight. Deal damage and displace it."
+    },
+    "target": {
+      "range_mode": "normal"
+    }
+  },
+  "Flip": {
+    "template": "spell",
+    "graphics": {
+      "animation": "thinking",
+      "particle": "confusionStars"
+    },
+    "meta": {
+      "name": "ABILITY_FLIP_NAME",
+      "name_resolved": "Flip",
+      "desc": "ABILITY_FLIP_DESC",
+      "desc_resolved": "Turn a unit within your line of sight 180 degrees. Inflict Confusion 1 on that unit.",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Confusion": "1",
+        "TurnAround": "1"
+      }
+    }
+  },
+  "Flip2": {
+    "variant_of": "Flip",
+    "meta": {
+      "desc": "ABILITY_FLIP2_DESC",
+      "desc_resolved": "Turn a unit within your line of sight 180 degrees. Inflict Confusion 2 and Magic Weakness 1 on that unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "Confusion": "2",
+        "MagicWeakness": "1"
+      }
+    }
+  },
+  "Withdraw": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_WITHDRAW_NAME",
+      "name_resolved": "Withdraw",
+      "desc": "ABILITY_WITHDRAW_DESC",
+      "desc_resolved": "Pull any unit within your line of sight to a tile adjacent to you.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DisplaceTowardsSource": "1"
+      }
+    }
+  },
+  "Withdraw2": {
+    "variant_of": "Withdraw",
+    "meta": {
+      "desc": "ABILITY_WITHDRAW2_DESC",
+      "desc_resolved": "Pull any unit within your line of sight to a tile adjacent to you.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "ForceCone": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_GRAVITYWAVE_NAME",
+      "name_resolved": "Gravity Wave",
+      "desc": "ABILITY_GRAVITYWAVE_DESC",
+      "desc_resolved": "Deal damage with Knockback 4 and Chain Knockback in a cone.",
+      "class": "Psychic"
+    },
+    "graphics": {
+      "animation": "psyAttack1",
+      "particle": "BigMagicMissileBlast",
+      "delay": "0"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "knockback": "4",
+      "effects": {
+        "OverrideChainKnockback": "1"
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "ForceCone2": {
+    "variant_of": "ForceCone",
+    "meta": {
+      "desc": "ABILITY_GRAVITYWAVE2_DESC",
+      "desc_resolved": "Deal damage with Knockback 4, Chain Knockback and inflict Bruise 1 in a cone."
+    },
+    "target": {
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "Inversion": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_INVERSION_NAME",
+      "name_resolved": "Inversion",
+      "desc": "ABILITY_INVERSION_DESC",
+      "desc_resolved": "Swap positions with a unit in your line of sight.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "must_have_line_of_sight"
+      ]
+    }
+  },
+  "Inversion2": {
+    "variant_of": "Inversion",
+    "meta": {
+      "desc": "ABILITY_INVERSION2_DESC",
+      "desc_resolved": "Swap positions with a unit in your line of sight.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "Echo": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_ECHO_NAME",
+      "name_resolved": "Echo",
+      "desc": "ABILITY_ECHO_DESC",
+      "desc_resolved": "Teleport to the last tile you targeted with an ability if it's empty.",
+      "animate_name": "true",
+      "class": "Psychic"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "20",
+      "range_mode": "last_targeted_tile"
+    }
+  },
+  "Echo2": {
+    "variant_of": "Echo",
+    "meta": {
+      "desc": "ABILITY_ECHO2_DESC",
+      "desc_resolved": "Teleport to the last tile you targeted with an ability. Displace and damage any units on that tile."
+    },
+    "target": {
+      "restrictions": [
+        "aoe_must_be_force_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Displace": "1"
+      }
+    }
+  },
+  "Slipstream": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_SLIPSTEAM_NAME",
+      "name_resolved": "Slipstream",
+      "desc": "ABILITY_SLIPSTEAM_DESC",
+      "desc_resolved": "Dash up to three tiles in a straight line or diagonally. Leave floating glass shards on tiles you pass through.",
+      "class": "Psychic",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "speed": "6",
+      "ignore_slowtiles": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "temporary_effects": {
+      "TileTrail": "FloatingGlassTile"
+    },
+    "target": {
+      "range_mode": "8cross",
+      "max_range": "3",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    }
+  },
+  "Slipstream2": {
+    "variant_of": "Slipstream",
+    "meta": {
+      "desc": "ABILITY_SLIPSTEAM2_DESC",
+      "desc_resolved": "Dash up to five tiles in a straight line or diagonally. Leave floating glass shards on tiles you pass through."
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "MindCrack_EldritchVisage": {
+    "template": "spell",
+    "graphics": {
+      "animation": "psyMegaAttack",
+      "particle": "none"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ]
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "MagicWeakness": "1"
+      }
+    }
+  },
+  "MindCrack_EldritchVisage2": {
+    "variant_of": "MindCrack_EldritchVisage",
+    "target": {
+      "aoe_restrictions": [
+        "must_have_line_of_sight",
+        "exclude_allies"
+      ]
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "effects": {
+        "MagicWeakness": "1",
+        "Marked": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "MonkFist": {
+    "name": "ITEM_MONKFIST_NAME",
+    "name_resolved": "Monk Fist",
+    "desc": "ITEM_MONKFIST_DESC",
+    "desc_resolved": "You can use your basic attack an extra time each turn.\nInnate",
+    "kind": "weapon",
+    "frame": "71",
+    "sticky": "true",
+    "fragile": "true",
+    "indestructible": "true",
+    "passives": {
+      "ExtraBasicAttacks": "1"
+    }
+  },
+  "MonkStyleChanger": {
+    "name": "ITEM_STANCESWITCHER_NAME",
+    "name_resolved": "Stance Switcher",
+    "desc": "ITEM_STANCESWITCHER_DESC",
+    "desc_resolved": "Use: Switch between melee and ranged stances.\nYou have Brace 1 while in melee stance.\nInnate",
+    "kind": "trinket",
+    "frame": "80",
+    "sticky": "true",
+    "fragile": "true",
+    "indestructible": "true",
+    "ability": "tk_MonkStyleChange",
+    "passives": {
+      "PassiveWhileInMonkMeleeStance": {
+        "Brace": "1"
+      }
+    }
+  },
+  "ButcherHook": {
+    "name": "ITEM_MEATHOOK_NAME",
+    "name_resolved": "Meat Hook",
+    "desc": "ITEM_MEATHOOK_DESC",
+    "desc_resolved": "Use: Pull a unit toward you.\nInnate",
+    "kind": "weapon",
+    "frame": "6",
+    "sticky": "true",
+    "fragile": "true",
+    "indestructible": "true",
+    "ability": "wp_MeatHookB"
+  },
+  "ButcherHook_Temporary": {
+    "name": "ITEM_MEATHOOK_NAME",
+    "name_resolved": "Meat Hook",
+    "desc": "ITEM_MEATHOOKTEMP_DESC",
+    "desc_resolved": "Use: Pull a unit toward you.",
+    "kind": "weapon",
+    "frame": "6",
+    "ability": "wp_MeatHookB"
+  },
+  "Necro_SoulDagger_Uncharged": {
+    "name": "ITEM_SOULDAGGER_NAME",
+    "name_resolved": "Soul Dagger",
+    "desc": "ITEM_SOULDAGGER_DESC",
+    "desc_resolved": "Use: A melee attack. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nIf this weapon downs an ally it becomes Charged for the rest of the battle.",
+    "kind": "weapon",
+    "frame": "118",
+    "ability": "wp_NecroSoulDagger"
+  },
+  "Necro_SoulDagger_Charged": {
+    "name": "ITEM_SOULDAGGERCHARGED_NAME",
+    "name_resolved": "Charged Soul Dagger",
+    "desc": "ITEM_SOULDAGGERCHARGED_DESC",
+    "desc_resolved": "Use: A melee attack with Lifesteal. If this weapon damages an allied cat, gain one of their spells at random in your bonus ability slot.\nLoses its charge at the end of the battle.",
+    "kind": "weapon",
+    "frame": "119",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "TransformWeapon": {
+          "from": "Necro_SoulDagger_Charged",
+          "to": "Necro_SoulDagger_Uncharged"
+        }
+      }
+    },
+    "ability": "wp_NecroSoulDaggerCharged"
+  },
+  "SleepDart": {
+    "name": "ITEM_SLEEPDART_NAME",
+    "name_resolved": "Sleep Dart",
+    "desc": "ITEM_SLEEPDART_DESC",
+    "desc_resolved": "Use: A straight ranged attack that inflicts Sleep 1.",
+    "kind": "weapon",
+    "frame": "151",
+    "durability": "1",
+    "ability": "wp_SleepDart"
+  },
+  "SleepDart2": {
+    "name": "ITEM_SLEEPDART_NAME",
+    "name_resolved": "Sleep Dart",
+    "desc": "ITEM_SLEEPDART_DESC",
+    "desc_resolved": "Use: A straight ranged attack that inflicts Sleep 1.",
+    "kind": "weapon",
+    "frame": "151",
+    "durability": "2",
+    "ability": "wp_SleepDart"
+  }
+}

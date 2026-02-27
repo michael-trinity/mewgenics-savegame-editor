@@ -1,0 +1,340 @@
+{
+  "ZodiacShootX": {
+    "id": "ZodiacShootX",
+    "template": "straightshot_attack",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "100",
+      "max_targets": "-X",
+      "X_is": "enable_if_has_ammo"
+    },
+    "graphics": {
+      "projectile": "Bullet",
+      "animation": "shoot",
+      "empty_animation": "empty",
+      "speed": "25"
+    },
+    "damage_instance": {
+      "damage": "7+bonus_ranged_damage",
+      "knockback": "1",
+      "effects": {}
+    },
+    "self_damage": {
+      "effects": {
+        "Ammo": "-1"
+      }
+    }
+  },
+  "ChaosSwitchSides": {
+    "id": "ChaosSwitchSides",
+    "template": "teleport",
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "special_tagged_tiles",
+      "special_tile_tag": "ChaosValidPosition",
+      "restrictions": [
+        "must_move"
+      ]
+    },
+    "graphics": {
+      "animation_out": "portout",
+      "animation_in": "portin",
+      "self_damage_mid_port": "true",
+      "dont_visualize_ai": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "ChaosBossFlipMidTeleport": "1"
+      }
+    }
+  },
+  "DbgChaosSwitchFormsA": {
+    "id": "DbgChaosSwitchFormsA",
+    "template": "self_buff",
+    "name_key": "Dbg Switch Forms (Random Active)",
+    "name": "Dbg Switch Forms (Random Active)",
+    "animate_name": "false",
+    "cost": {
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "change"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatusFromPool": {
+          "FormChange": {
+            "form": "Flush"
+          }
+        }
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "DbgChaosSwitchFormsP": {
+    "id": "DbgChaosSwitchFormsP",
+    "template": "self_buff",
+    "name_key": "Dbg Switch Forms (Random Active+Passive)",
+    "name": "Dbg Switch Forms (Random Active+Passive)",
+    "animate_name": "false",
+    "cost": {
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "change"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatusFromPool": {
+          "FormChange": {
+            "form": "FlushBubs"
+          }
+        }
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "FlushX": {
+    "id": "FlushX",
+    "variant_of": "Flush",
+    "name_key": "EABILITY_HSULF_NAME",
+    "name": "Hsulf",
+    "graphics": {
+      "animation": "flush",
+      "delay_from_map_edge": "false",
+      "delay_from_reverse_map_edge": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "OverrideKnockbackDamage": "3"
+      },
+      "ai_base_score": "999999"
+    }
+  },
+  "MegablastX": {
+    "id": "MegablastX",
+    "template": "spell",
+    "name_key": "EABILITY_TSALBDNIMAGEM_NAME",
+    "name": "Tsalb Dnim Agem",
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "circle",
+      "min_aoe": "0",
+      "max_aoe": "20",
+      "aoe_excludes_self": "true",
+      "aoe_considers_character_size": "true",
+      "distance_sort_targets": "true",
+      "knockback_mode": "tile_to_character"
+    },
+    "graphics": {
+      "animation": "megablast",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "layer": "characters",
+      "knockback": "10",
+      "effects": {
+        "/*Conditional_NotBig": {
+          "KnockUpTowardsAndCollide": {
+            "stacks": "1",
+            "height": "1"
+          }
+        },
+        "*/": true
+      },
+      "ai_base_score": "999999"
+    },
+    "self_damage": {
+      "effects": {
+        "DoDistortionRing": {
+          "speed": "-30",
+          "intensity": "-2",
+          "radius": "5"
+        }
+      }
+    }
+  },
+  "SpreadX": {
+    "id": "SpreadX",
+    "template": "spell",
+    "name_key": "EABILITY_TUODAERPS_NAME",
+    "name": "Tuo Daerps.",
+    "cost": {
+      "prime": "1",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "area_around_all_player_cats",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "knockback_mode": "none",
+      "prioritize_face_camera": "true"
+    },
+    "graphics": {
+      "animation": "order",
+      "dont_visualize_ai": "true",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "60"
+      ],
+      "random_delay": [
+        "70",
+        "100"
+      ]
+    },
+    "damage_instance": {
+      "damage": "8",
+      "ai_base_score": "9999"
+    }
+  },
+  "ThornUpX": {
+    "id": "ThornUpX",
+    "template": "self_buff",
+    "graphics": {
+      "animation": "spikes"
+    },
+    "damage_instance": {
+      "effects": {
+        "Thorns": "1",
+        "RandomMagicMissile": "1"
+      }
+    }
+  },
+  "CerberubsShotgunReactionX": {
+    "id": "CerberubsShotgunReactionX",
+    "template": "straightshot_attack",
+    "target": {
+      "max_aoe": "3+bonus_range",
+      "shotgun_mode": "true",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "4,",
+          "3"
+        ],
+        ",",
+        [
+          "4,",
+          "2"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "-1"
+        ],
+        ",",
+        [
+          "4,",
+          "-2"
+        ]
+      ],
+      "custom_aoe_util": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "1,",
+          "0"
+        ]
+      ]
+    },
+    "graphics": {
+      "animation": "lava",
+      "projectile": "Projectile"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "effects": {
+        "Burn": "2",
+        "ChangeTile": "LavaTile"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "ChaosSwitchForms": {
+    "id": "ChaosSwitchForms",
+    "template": "self_buff",
+    "cost": {
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "change",
+      "dont_visualize_ai": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "PurgeAll": "1",
+        "ChaosBossFormChange": "1"
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "ChaosSpawnIn": {
+    "id": "ChaosSpawnIn",
+    "template": "return",
+    "target": {
+      "max_range": "20",
+      "aoe_excludes_self": "true",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "animation": "intro"
+    },
+    "self_damage": {
+      "effects": {
+        "FormChange": "Default"
+      }
+    }
+  }
+}

@@ -1,0 +1,684 @@
+{
+  "VersionTwo": {
+    "name": "PASSIVE_VERSIONTWO_NAME",
+    "name_resolved": "v2.0",
+    "desc": "PASSIVE_VERSIONTWO_DESC",
+    "desc_resolved": "Start with 1 Tech.\nYour Tech can't drop below 1.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "Tech": "1",
+        "MinimumTech": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VERSIONTWO2_DESC",
+      "desc_resolved": "Start with 1 Tech.\nYour Tech can't drop below 1.\nYour Tech isn't removed when you craft.",
+      "passives": {
+        "Tech": "1",
+        "MinimumTech": "1",
+        "CapTechSpent": "0"
+      }
+    }
+  },
+  "WeaponProficiency": {
+    "name": "PASSIVE_WEAPONPROFICIENCY_NAME",
+    "name_resolved": "Weapon Proficiency",
+    "desc": "PASSIVE_WEAPONPROFICIENCY_DESC",
+    "desc_resolved": "Your weapon damage scales with your stats and counts as a basic attack.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "AddWeaponScaling": "1",
+        "WeaponCountsAsBasicAttack": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WEAPONPROFICIENCY2_DESC",
+      "desc_resolved": "Your weapon damage scales with your stats and counts as a basic attack.\nYou can use your weapon an extra time each turn.",
+      "passives": {
+        "AddWeaponScaling": "1",
+        "WeaponCountsAsBasicAttack": "1",
+        "ExtraWeaponAttacks": "1"
+      }
+    }
+  },
+  "LivingBattery": {
+    "name": "PASSIVE_LIVINGBATTERY_NAME",
+    "name_resolved": "Living Battery",
+    "desc": "PASSIVE_LIVINGBATTERY_DESC",
+    "desc_resolved": "When an adjacent ally spends mana, gain that much mana.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "AbsorbManaAura": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIVINGBATTERY2_DESC",
+      "desc_resolved": "When an adjacent ally spends mana, gain that much mana. You have no mana cap.",
+      "passives": {
+        "AbsorbManaAura": "1",
+        "UncappedMana": "1"
+      }
+    }
+  },
+  "FuzzyFeet": {
+    "name": "PASSIVE_FUZZYFEET_NAME",
+    "name_resolved": "Fuzzy Feet",
+    "desc": "PASSIVE_FUZZYFEET_DESC",
+    "desc_resolved": "When you end your movement, deal 1 Electric Damage to all adjacent units for each tile you moved.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "DamageNeighborsAfterMove": {
+          "type": "spell",
+          "damage": "X",
+          "effects": {
+            "VisualFXTile": "WaterConduct"
+          },
+          "elements": [
+            "Electric"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FUZZYFEET2_DESC",
+      "desc_resolved": "When you end your movement, deal 1 Electric Damage to all adjacent units for each tile you moved. This damage has a chance to inflict Stun.",
+      "passives": {
+        "DamageNeighborsAfterMove": {
+          "type": "spell",
+          "damage": "X",
+          "effects": {
+            "Stun": [
+              "1,",
+              ".05*X"
+            ],
+            "VisualFXTile": "WaterConduct"
+          },
+          "elements": [
+            "Electric"
+          ]
+        }
+      }
+    }
+  },
+  "ArmorSpecialist": {
+    "name": "PASSIVE_ARMORSPECIALIST_NAME",
+    "name_resolved": "Armor Specialist",
+    "desc": "PASSIVE_ARMORSPECIALIST_DESC",
+    "desc_resolved": "Your equipment passive effects are doubled.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "EquipmentPassiveMultiplierBonus": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ARMORSPECIALIST2_DESC",
+      "desc_resolved": "Your equipment passive and active effects are doubled.",
+      "passives": {
+        "EquipmentPassiveMultiplierBonus": "1",
+        "AddTemporaryEffectsToEquipment": {
+          "CastAgain": "1"
+        }
+      }
+    }
+  },
+  "EMP": {
+    "name": "PASSIVE_EMP_NAME",
+    "name_resolved": "EMP",
+    "desc": "PASSIVE_EMP_DESC",
+    "desc_resolved": "Your explosions are Electric element and deal +1 damage.\nInstead of knockback, explosions have a chance to inflict Stun.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "EMP": {
+          "spell_graphics_override": {
+            "particle": "WaterConduct",
+            "center_particle": "WaterConduct",
+            "area_particle": "WaterConduct",
+            "palette": "-1"
+          },
+          "status_explosion_override": "WaterConduct"
+        },
+        "IncreaseExplosionDamage": "1",
+        "AddPassivesToMinions": {
+          "EMP": {
+            "spell_graphics_override": {
+              "particle": "WaterConduct",
+              "center_particle": "WaterConduct",
+              "area_particle": "WaterConduct",
+              "palette": "-1"
+            },
+            "status_explosion_override": "WaterConduct"
+          },
+          "IncreaseExplosionDamage": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_EMP2_DESC",
+      "desc_resolved": "Your explosions are Electric element and deal +1 damage.\nInstead of knockback, explosions have a chance to inflict Stun. Your explosions don't affect allies.",
+      "passives": {
+        "EMP": {
+          "spell_graphics_override": {
+            "particle": "WaterConduct",
+            "center_particle": "WaterConduct",
+            "area_particle": "WaterConduct",
+            "palette": "-1"
+          },
+          "status_explosion_override": "WaterConduct"
+        },
+        "SafeExplosions": "1",
+        "IncreaseExplosionDamage": "2",
+        "AddPassivesToMinions": {
+          "EMP": {
+            "spell_graphics_override": {
+              "particle": "WaterConduct",
+              "center_particle": "WaterConduct",
+              "area_particle": "WaterConduct",
+              "palette": "-1"
+            },
+            "status_explosion_override": "WaterConduct"
+          },
+          "SafeExplosions": "1",
+          "IncreaseExplosionDamage": "2"
+        }
+      }
+    }
+  },
+  "MrMega": {
+    "name": "PASSIVE_MRMEGA_NAME",
+    "name_resolved": "Mr. Mega",
+    "desc": "PASSIVE_MRMEGA_DESC",
+    "desc_resolved": "Your explosions are larger and deal +1 damage.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "IncreaseExplosionSize": "1",
+        "IncreaseExplosionDamage": "1",
+        "AddPassivesToMinions": {
+          "IncreaseExplosionSize": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MRMEGA2_DESC",
+      "desc_resolved": "Your explosions are larger and deal +2 damage.\nYou have explosion immunity.",
+      "passives": {
+        "IncreaseExplosionSize": "1",
+        "ExplosionImmunity": "1",
+        "IncreaseExplosionDamage": "2",
+        "AddPassivesToMinions": {
+          "IncreaseExplosionSize": "1"
+        }
+      }
+    }
+  },
+  "EscapeSequence": {
+    "name": "PASSIVE_ESCAPESEQUENCE_NAME",
+    "name_resolved": "Escape Sequence",
+    "desc": "PASSIVE_ESCAPESEQUENCE_DESC",
+    "desc_resolved": "When you take damage, explode and get launched to a random tile. This explosion doesn't damage you.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "EscapeSequence": {
+          "SafeExplosionIfHitSomething": "5",
+          "RandomDistanceDisplace": "20"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ESCAPESEQUENCE2_DESC",
+      "desc_resolved": "When you take damage, explode with a large blast radious and get launched to a random tile. This explosion doesn't damage you.",
+      "passives": {
+        "EscapeSequence": {
+          "SafeExplosionIfHitSomething": "10",
+          "RandomDistanceDisplace": "20"
+        }
+      }
+    }
+  },
+  "ItemProxy": {
+    "name": "PASSIVE_ITEMPROXY_NAME",
+    "name_resolved": "Item Proxy",
+    "desc": "PASSIVE_ITEMPROXY_DESC",
+    "desc_resolved": "You need one fewer piece of equipment to get set bonuses.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "EquipmentSetBonusBonus": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ITEMPROXY2_DESC",
+      "desc_resolved": "You need two fewer pieces of equipment to get set bonuses.",
+      "passives": {
+        "EquipmentSetBonusBonus": "2"
+      }
+    }
+  },
+  "LightningRod": {
+    "name": "PASSIVE_LIGHTNINGROD_NAME",
+    "name_resolved": "Lightning Rod",
+    "desc": "PASSIVE_LIGHTNINGROD_DESC",
+    "desc_resolved": "You have Electric immunity.\nElectric damage you deal is increased by 1. Gain 1 charge when you are hit with electric damage.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "LightningRod": "0",
+        "AddDamageToElementDamage": {
+          "element": "Electric",
+          "damage": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LIGHTNINGROD2_DESC",
+      "desc_resolved": "You have Electric immunity.\nElectric damage you deal is increased by 2. Gain 1 charge for each damage prevented when you are hit with electric damage.",
+      "passives": {
+        "LightningRod": "1",
+        "AddDamageToElementDamage": {
+          "element": "Electric",
+          "damage": "2"
+        }
+      }
+    }
+  },
+  "ItsAlive": {
+    "name": "PASSIVE_ITSALIVE_NAME",
+    "name_resolved": "IT'S ALIVE!",
+    "desc": "PASSIVE_ITSALIVE_DESC",
+    "desc_resolved": "Hitting a body with electric damage revives it with 1 HP. The revived corpse is charmed and takes an extra turn, then dies.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "AddStatusToElementDamage": {
+          "element": "Electric",
+          "Conditional_Corpse": {
+            "OverrideDamage": "0",
+            "Revive": "1",
+            "TakeExtraTurn": "1",
+            "Charmed": "1",
+            "SafeDoomed": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ITSALIVE2_DESC",
+      "desc_resolved": "Hitting a body with electric damage revives it with 1 HP, +8 [img:spd], and +2 Damage. The revived corpse is charmed and takes an extra turn, then dies.",
+      "passives": {
+        "AddStatusToElementDamage": {
+          "element": "Electric",
+          "Conditional_Corpse": {
+            "OverrideDamage": "0",
+            "Revive": "1",
+            "TakeExtraTurn": "1",
+            "Charmed": "1",
+            "SafeDoomed": "1",
+            "DamageUp": "2",
+            "SpeedUp": "8"
+          }
+        }
+      }
+    }
+  },
+  "Energizer": {
+    "name": "PASSIVE_ENERGIZER_NAME",
+    "name_resolved": "Energizer",
+    "desc": "PASSIVE_ENERGIZER_DESC",
+    "desc_resolved": "When you cast a spell, your weapon gets +1 Damage.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnCastSpell": {
+          "CurrentWeaponDamageUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENERGIZER2_DESC",
+      "desc_resolved": "When you cast a spell, your weapon gets +1 Damage.\nEvery third spell you cast, repair 1 use to your weapon.",
+      "passives": {
+        "StatusOnCastSpell": {
+          "CurrentWeaponDamageUp": "1"
+        },
+        "StatusEveryXSpellCasts": {
+          "stacks": "3",
+          "RepairWeapon": "1",
+          "RepairWeaponCondition": "1"
+        }
+      }
+    }
+  },
+  "ReactiveArmor": {
+    "name": "PASSIVE_REACTIVEARMOR_NAME",
+    "name_resolved": "Reactive Armor",
+    "desc": "PASSIVE_REACTIVEARMOR_DESC",
+    "desc_resolved": "When you take damage, craft a Tinkerer weapon or armor piece and equip it in an empty slot.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "Craft": {
+            "pool": "tinkerer_default",
+            "slot": "random_empty_armor_or_weapon"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_REACTIVEARMOR2_DESC",
+      "desc_resolved": "When you take damage, craft a Tinkerer weapon or armor piece and equip it in an empty slot and gain +1 [img:shield].",
+      "passives": {
+        "StatusOnTookDamage": {
+          "Craft": {
+            "pool": "tinkerer_default",
+            "slot": "random_empty_armor_or_weapon"
+          },
+          "Shield": "1"
+        }
+      }
+    }
+  },
+  "Nanobots": {
+    "name": "PASSIVE_NANOBOTS_NAME",
+    "name_resolved": "Nanobots",
+    "desc": "PASSIVE_NANOBOTS_DESC",
+    "desc_resolved": "Gain +2 Diminishing Health Regeneration every time you take damage from an attack or spell.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnTookDamageFromAbility": {
+          "DiminishingHealthRegen": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NANOBOTS2_DESC",
+      "desc_resolved": "Gain +2 Diminishing Health Regeneration every time you take damage from an attack or spell and +1 Diminishing Health Regeneration each time you take damage from any other source.",
+      "passives": {
+        "StatusOnTookDamageFromAbility": {
+          "DiminishingHealthRegen": "1"
+        },
+        "StatusOnTookDamage": {
+          "DiminishingHealthRegen": "1"
+        }
+      }
+    }
+  },
+  "Scrapper": {
+    "name": "PASSIVE_SCRAPPER_NAME",
+    "name_resolved": "Scrapper",
+    "desc": "PASSIVE_SCRAPPER_DESC",
+    "desc_resolved": "Find an extra consumable item at the end of each battle.\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnBattleEnd": {
+          "FindItemFromPool": "consumables"
+        },
+        "AutoEquipConsumables": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SCRAPPER2_DESC",
+      "desc_resolved": "Find an extra item at the end of each battle.\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+      "passives": {
+        "StatusOnBattleEnd": {
+          "FindItemFromPool": "chapter"
+        },
+        "AutoEquipConsumables": "1"
+      }
+    }
+  },
+  "DemoMan": {
+    "name": "PASSIVE_DEMOMAN_NAME",
+    "name_resolved": "Demo Man",
+    "desc": "PASSIVE_DEMOMAN_DESC",
+    "desc_resolved": "Always craft a bomb at Tech 1 or less.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "AlternateCraftingPools": {
+          "tinkerer_0": "tinkerer_0_bombs",
+          "tinkerer_1": "tinkerer_1_bombs"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DEMOMAN2_DESC",
+      "desc_resolved": "Always craft a bomb at Tech 1 or less. You can use your basic action an additional time on each of your turns.",
+      "passives": {
+        "AlternateCraftingPools": {
+          "tinkerer_0": "tinkerer_0_bombs",
+          "tinkerer_1": "tinkerer_1_bombs"
+        },
+        "ExtraBasicAttacks": "1"
+      }
+    }
+  },
+  "DuctTape": {
+    "name": "PASSIVE_DUCTTAPE_NAME",
+    "name_resolved": "Duct Tape",
+    "desc": "PASSIVE_DUCTTAPE_DESC",
+    "desc_resolved": "Items you craft stay with you between battles, but become cursed.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "PermanentItems": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DUCTTAPE2_DESC",
+      "desc_resolved": "Items you craft stay with you between battles.",
+      "passives": {
+        "PermanentItems": "2"
+      }
+    }
+  },
+  "ArmoredPlating": {
+    "name": "PASSIVE_ARMOREDPLATING_NAME",
+    "name_resolved": "Armored Plating",
+    "desc": "PASSIVE_ARMOREDPLATING_DESC",
+    "desc_resolved": "Robots you spawn gain the stats and [img:shield] of your equipped armor.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "RobotsInheritArmor": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ARMOREDPLATING2_DESC",
+      "desc_resolved": "Robots you spawn gain the stats, [img:shield] and passive effects of your equipped armor.",
+      "passives": {
+        "RobotsInheritArmor": "2"
+      }
+    }
+  },
+  "BoobyTrap": {
+    "name": "PASSIVE_BOOBYTRAP_NAME",
+    "name_resolved": "Booby Trap",
+    "desc": "PASSIVE_BOOBYTRAP_DESC",
+    "desc_resolved": "When an item you have equipped breaks, it explodes!",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "BoobyTrapItems": {
+          "on_throw": {
+            "HitExplosion": "5"
+          },
+          "on_break": {
+            "SafeExplosionIfHitSomething": "5"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BOOBYTRAP2_DESC",
+      "desc_resolved": "When an item you have equipped breaks, it explodes with bonus damage!",
+      "passives": {
+        "BoobyTrapItems": {
+          "on_throw": {
+            "HitExplosion": "10"
+          },
+          "on_break": {
+            "SafeExplosionIfHitSomething": "10"
+          }
+        }
+      }
+    }
+  },
+  "RobotArms": {
+    "name": "PASSIVE_ROBOTARMS_NAME",
+    "name_resolved": "Robot Arms",
+    "desc": "PASSIVE_ROBOTARMS_DESC",
+    "desc_resolved": "You can use your weapon an additional time each turn.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "ExtraWeaponAttacks": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ROBOTARMS2_DESC",
+      "desc_resolved": "You can use your weapon and trinket an additional time each turn.\nWhenever you equip a new item during battle it gains +1 use.",
+      "passives": {
+        "ExtraWeaponAttacks": "1",
+        "ExtraTrinketUses": "1",
+        "IncreaseItemUsesOnEquip": "1"
+      }
+    }
+  },
+  "Conductor": {
+    "name": "PASSIVE_CONDUCTOR_NAME",
+    "name_resolved": "Conductor",
+    "desc": "PASSIVE_CONDUCTOR_DESC",
+    "desc_resolved": "Electric damage you deal is increased by 2 for each piece of metal armor you have equipped.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "Conductor": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CONDUCTOR2_DESC",
+      "desc_resolved": "Electric damage you deal is increased by 2 for each piece of metal armor you have equipped. You have +2 Mana Regeneration for each piece of metal armor.",
+      "passives": {
+        "Conductor": "2",
+        "ConductorManaRegen": "2"
+      }
+    }
+  },
+  "Napalm": {
+    "name": "PASSIVE_NAPALM_NAME",
+    "name_resolved": "Napalm",
+    "desc": "PASSIVE_NAPALM_DESC",
+    "desc_resolved": "Your explosions inflict Burn 1 and light tiles on fire.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "AddStatusToExplosions": {
+          "AddElement": "Fire",
+          "Burn": "1"
+        },
+        "AddPassivesToMinions": {
+          "AddStatusToExplosions": {
+            "AddElement": "Fire",
+            "Burn": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NAPALM2_DESC",
+      "desc_resolved": "Your explosions inflict Burn 3 and light tiles on fire.",
+      "passives": {
+        "AddStatusToExplosions": {
+          "AddElement": "Fire",
+          "Burn": "3"
+        },
+        "AddPassivesToMinions": {
+          "AddStatusToExplosions": {
+            "AddElement": "Fire",
+            "Burn": "3"
+          }
+        }
+      }
+    }
+  },
+  "Ingenuity": {
+    "name": "PASSIVE_INGENUITY_NAME",
+    "name_resolved": "Ingenuity",
+    "desc": "PASSIVE_INGENUITY_DESC",
+    "desc_resolved": "Pickups give you +1 Tech in addition to their other effects.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnCollectPickup": {
+          "Tech": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INGENUITY2_DESC",
+      "desc_resolved": "Pickups give you +1 Tech in addition to their other effects.\n10 extra pickups spawn at the start of each battle.",
+      "passives": {
+        "StatusOnCollectPickup": {
+          "Tech": "1"
+        },
+        "SpawnOnBattleStartRandomEmptyTile": {
+          "object": "RandomPickup",
+          "number": "10"
+        }
+      }
+    }
+  },
+  "Shrapnel_Tinkerer": {
+    "name": "PASSIVE_SHRAPNEL_TINKERER_NAME",
+    "name_resolved": "Shrapnel",
+    "desc": "PASSIVE_SHRAPNEL_TINKERER_DESC",
+    "desc_resolved": "When you break an item, gain +1 Thorns.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "StatusOnBreakItem": {
+          "Thorns": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHRAPNEL2_TINKERER_DESC",
+      "desc_resolved": "When you break an item, gain +2 Thorns and +3 [img:shield].",
+      "passives": {
+        "StatusOnBreakItem": {
+          "Thorns": "2",
+          "Shield": "3"
+        }
+      }
+    }
+  },
+  "Blacksmith": {
+    "name": "PASSIVE_BLACKSMITH_NAME",
+    "name_resolved": "Blacksmith",
+    "desc": "PASSIVE_BLACKSMITH_DESC",
+    "desc_resolved": "If you have a weapon, your basic attack becomes Hone.",
+    "class": "Tinkerer",
+    "1": {
+      "passives": {
+        "ReplaceBasicAttackWhenCastable": "Hone"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLACKSMITH2_DESC",
+      "desc_resolved": "If you have a weapon, your basic attack becomes Hone+.",
+      "passives": {
+        "ReplaceBasicAttackWhenCastable": "Hone2"
+      }
+    }
+  }
+}

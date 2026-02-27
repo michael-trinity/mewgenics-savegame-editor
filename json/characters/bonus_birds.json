@@ -1,0 +1,452 @@
+{
+  "BirdBase": {
+    "graphics": {
+      "movieclip": "BirdSmall",
+      "name": "ENEMY_BIRD_NAME",
+      "name_resolved": "Bird",
+      "tooltip": "ENEMY_BIRD_DESC",
+      "tooltip_resolved": "Whoever kills this gets All Stats Up and finds a bonus item!"
+    },
+    "properties": {
+      "tag": "animal",
+      "hidden_tag": [
+        "bird",
+        "bonusbird"
+      ],
+      "faction": "birds",
+      "kill_required": "false",
+      "movement": "3",
+      "health": "2",
+      "initiative": "-999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "BirdFly"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "attack",
+      "MoveAwayFromDamageSource": {
+        "move_ability": "BirdFly"
+      },
+      "Bird": "CookedChickenLeg",
+      "TrackAmountKilledByPlayer": "BonusBirdsKilled"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "bird"
+    }
+  },
+  "BirdSmall": {
+    "variant_of": "BirdBase",
+    "graphics": {
+      "movieclip": "BirdSmall",
+      "name": "ENEMY_LITTLEBIRD_NAME",
+      "name_resolved": "Little Bird",
+      "shadow_size": ".5"
+    },
+    "properties": {
+      "health": "2",
+      "movement": "5"
+    },
+    "passives": {
+      "BirdRewards": {
+        "statuses": {
+          "AllStatsUp": "1"
+        },
+        "ally_rewards": {
+          "FindItemFromPool": "chapter"
+        }
+      },
+      "RunInXTurns": "1"
+    }
+  },
+  "BirdMed": {
+    "variant_of": "BirdBase",
+    "graphics": {
+      "movieclip": "BirdMed",
+      "name": "ENEMY_MEDBIRD_NAME",
+      "name_resolved": "Medium Bird"
+    },
+    "properties": {
+      "health": "7",
+      "movement": "4"
+    },
+    "passives": {
+      "BirdRewards": {
+        "statuses": {
+          "AllStatsUp": "1"
+        },
+        "ally_rewards": {
+          "FindItemFromPool": "chapter"
+        }
+      },
+      "RunInXTurns": "2"
+    }
+  },
+  "BirdLarge": {
+    "variant_of": "BirdBase",
+    "graphics": {
+      "movieclip": "BirdLarge",
+      "name": "ENEMY_BIGBIRD_NAME",
+      "name_resolved": "Big Bird"
+    },
+    "properties": {
+      "health": "16",
+      "movement": "3"
+    },
+    "passives": {
+      "BirdRewards": {
+        "statuses": {
+          "AllStatsUp": "1"
+        },
+        "ally_rewards": {
+          "FindItemFromPool": "chapter"
+        }
+      },
+      "RunInXTurns": "3"
+    }
+  },
+  "BlackBird": {
+    "variant_of": "BirdSmall",
+    "graphics": {
+      "name": "ENEMY_BLACKBIRD_NAME",
+      "name_resolved": "Black Bird",
+      "scale": ".8"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdSmall_DyingCall",
+          "SE_BirdDying_Blackbird"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "blackbird_pool"
+        }
+      }
+    }
+  },
+  "Dove": {
+    "variant_of": "BirdSmall",
+    "graphics": {
+      "name": "ENEMY_DOVE_NAME",
+      "name_resolved": "Dove",
+      "piece_alt_frame": "3",
+      "scale": ".8"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdSmall_DyingCall",
+          "SE_BirdDying_Dove"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "dove_pool"
+        }
+      }
+    }
+  },
+  "HummingBird": {
+    "variant_of": "BirdSmall",
+    "graphics": {
+      "name": "ENEMY_HUMMINGBIRD_NAME",
+      "name_resolved": "Hummingbird",
+      "piece_alt_frame": "5",
+      "scale": ".5"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdSmall_DyingCall",
+          "SE_BirdDying_Hummingbird"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "hummingbird_pool"
+        }
+      }
+    }
+  },
+  "Cherub": {
+    "variant_of": "BirdSmall",
+    "graphics": {
+      "name": "ENEMY_CHERUB_NAME",
+      "name_resolved": "Cherub",
+      "piece_alt_frame": "7"
+    },
+    "passives": {
+      "Angel": "1",
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "cherub_pool"
+        }
+      }
+    }
+  },
+  "Cherub_FinalBoss": {
+    "variant_of": "Cherub",
+    "graphics": {
+      "override_portrait": "Cherub",
+      "tooltip": "ENEMY_CHERUB_FINALBOSS_DESC",
+      "tooltip_resolved": "Whoever kills this gets All Stats Up!"
+    },
+    "properties": {
+      "hidden_tag": "angeljunk"
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "none"
+        }
+      }
+    }
+  },
+  "Pigeon": {
+    "variant_of": "BirdMed",
+    "graphics": {
+      "name": "ENEMY_PIGEON_NAME",
+      "name_resolved": "Pigeon",
+      "piece_alt_frame": "9",
+      "scale": ".8"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdMed_DyingCall",
+          "SE_BirdDying_Pigeon"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "pigeon_pool"
+        }
+      }
+    }
+  },
+  "Seagull": {
+    "variant_of": "BirdMed",
+    "graphics": {
+      "name": "ENEMY_SEAGULL_NAME",
+      "name_resolved": "Seagull",
+      "piece_alt_frame": "11",
+      "scale": ".9"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdMed_DyingCall",
+          "SE_BirdDying_Seagull"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "seagull_pool"
+        }
+      }
+    }
+  },
+  "Raven": {
+    "variant_of": "BirdMed",
+    "graphics": {
+      "name": "ENEMY_RAVEN_NAME",
+      "name_resolved": "Raven",
+      "piece_alt_frame": "13"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdMed_DyingCall",
+          "SE_BirdDying_Raven"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "raven_pool"
+        }
+      },
+      "AddStatusToBasicAttack": {
+        "Madness": "1"
+      }
+    }
+  },
+  "Mutant": {
+    "variant_of": "BirdMed",
+    "graphics": {
+      "name": "ENEMY_MUTANT_NAME",
+      "name_resolved": "Mutant",
+      "piece_alt_frame": "15"
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "none",
+          "RandomStatusFromPool": {
+            "StatusGroup": {
+              "FindItemFromPool": "parasites"
+            }
+          }
+        }
+      },
+      "AddStatusToBasicAttack": {
+        "Bruise": "1",
+        "Knockback": "3"
+      }
+    }
+  },
+  "Chicken": {
+    "variant_of": "BirdLarge",
+    "graphics": {
+      "name": "ENEMY_CHICKEN_NAME",
+      "name_resolved": "Chicken",
+      "piece_alt_frame": "17"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdLarge_DyingCall",
+          "SE_BirdDying_Chicken"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "chicken_pool"
+        }
+      }
+    }
+  },
+  "Turkey": {
+    "variant_of": "BirdLarge",
+    "graphics": {
+      "name": "ENEMY_TURKEY_NAME",
+      "name_resolved": "Turkey",
+      "piece_alt_frame": "19"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdLarge_DyingCall",
+          "SE_BirdDying_Turkey"
+        ]
+      ]
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "turkey_pool"
+        }
+      }
+    }
+  },
+  "Eagle": {
+    "variant_of": "BirdLarge",
+    "graphics": {
+      "name": "ENEMY_EAGLE_NAME",
+      "name_resolved": "Eagle",
+      "piece_alt_frame": "21"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_BirdLarge_DyingCall",
+          "SE_BirdDying_Eagle"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "8"
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "eagle_pool"
+        }
+      },
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "Harpy": {
+    "variant_of": "BirdLarge",
+    "graphics": {
+      "name": "ENEMY_HARPY_NAME",
+      "name_resolved": "Harpy",
+      "piece_alt_frame": "23"
+    },
+    "passives": {
+      "BirdRewards": {
+        "ally_rewards": {
+          "FindItemFromPool": "harpy_pool"
+        }
+      },
+      "AddStatusToBasicAttack": {
+        "Fear": "1"
+      }
+    }
+  },
+  "SmallBirdPool": {
+    "alt_spawn_pool": {
+      "BlackBird": "3000",
+      "Dove": "1000",
+      "HummingBird": "300",
+      "Cherub": "1"
+    },
+    "properties": {
+      "can_be_champion": "false"
+    }
+  },
+  "MedBirdPool": {
+    "alt_spawn_pool": {
+      "Pigeon": "3000",
+      "Seagull": "1000",
+      "Raven": "300",
+      "Mutant": "1"
+    },
+    "properties": {
+      "can_be_champion": "false"
+    }
+  },
+  "LargeBirdPool": {
+    "alt_spawn_pool": {
+      "Chicken": "3000",
+      "Turkey": "1000",
+      "Eagle": "300",
+      "Harpy": "1"
+    },
+    "properties": {
+      "can_be_champion": "false"
+    }
+  },
+  "Bird": {
+    "alt_spawn_pool": {
+      "SmallBirdPool": "1",
+      "MedBirdPool": "1",
+      "LargeBirdPool": "1"
+    },
+    "properties": {
+      "can_be_champion": "false"
+    }
+  }
+}

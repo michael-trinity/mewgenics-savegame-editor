@@ -1,0 +1,1424 @@
+{
+  "Terminator1": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR1_NAME",
+      "name_resolved": "C-800",
+      "custom_cat_data": "TerminatorCat",
+      "scale": "1.2",
+      "shadow_size": "1.2",
+      "move_speed_multiplier": ".66",
+      "uifloaters_offset": "1.4",
+      "tooltip": "ENEMY_TERMINATOR1_DESC",
+      "tooltip_resolved": "Primary objective: Destroy all cats.",
+      "alt_animations": [
+        [
+          "idle",
+          "catbotIdle"
+        ],
+        [
+          "walk",
+          "stompwalk"
+        ]
+      ]
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_Cat_StompWalk",
+          "SE_Terminator1_WalkStep"
+        ],
+        [
+          "SE_Cat_StompLegMove",
+          "SE_Terminator1_WalkLeg"
+        ],
+        [
+          "SE_Cat_equipWeapon",
+          "SE_TerminatorSwapWeapon"
+        ],
+        [
+          "SE_Cat_WeaponRaise",
+          "SE_Terminator_WeaponRaise"
+        ],
+        [
+          "SE_Cat_WeaponLower",
+          "SE_Terminator_WeaponLower"
+        ],
+        [
+          "SE_CatSwishThrow",
+          "SE_ThrowGrenade"
+        ],
+        [
+          "SE_Cat_bearHug",
+          "SE_Terminator_bearHug"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "10",
+      "dexterity": "8",
+      "constitution": "10",
+      "intelligence": "6",
+      "speed": "6",
+      "charisma": "4",
+      "luck": "7"
+    },
+    "equipment": {
+      "face": "TerminatorCoolGlasses"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "robot"
+      ],
+      "type": "boss",
+      "health": "250",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "999",
+      "evenly_dispersed_bonus_turns": "2",
+      "first_turn_is_main_turn": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "T1Pummel",
+        "T1SwapWeapon",
+        "T1ThrowGrenadeA",
+        "T1ThrowGrenadeB",
+        "MoveOne",
+        "T1ChokeReaction"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "Brace": "50",
+      "Trample": "3",
+      "AggroTargetIsCurrentTurn": "1",
+      "StatusOnTookDamage": {
+        "RemoveStatusStacks": {
+          "status": "Brace",
+          "stacks": "1"
+        }
+      },
+      "TerminatorChase": {
+        "move": "MoveOne",
+        "ability": "T1ChokeReaction"
+      },
+      "PrioritizePlayerCats": "1",
+      "TerminatorSkin": {
+        "status": "Brace",
+        "groups": [
+          {
+            "stacks": "48",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1057"
+            }
+          },
+          {
+            "stacks": "46",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "ear1": "1038"
+            }
+          },
+          {
+            "stacks": "44",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "leg1": "1061"
+            }
+          },
+          {
+            "stacks": "42",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "body": "1057"
+            }
+          },
+          {
+            "stacks": "40",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "tail": "1058"
+            }
+          },
+          {
+            "stacks": "38",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "eye2": "1071"
+            }
+          },
+          {
+            "stacks": "36",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1058"
+            }
+          },
+          {
+            "stacks": "32",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "arm2": "1061"
+            }
+          },
+          {
+            "stacks": "28",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1059",
+              "body": "1057",
+              "tail": "1058",
+              "leg1": "1062",
+              "leg2": "1060",
+              "arm1": "1060",
+              "arm2": "1061",
+              "ear1": "1038",
+              "mouth": "1000"
+            }
+          },
+          {
+            "stacks": "24",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "TransformEquipment": {
+              "from": "TerminatorCoolGlasses",
+              "to": "TerminatorCoolGlasses2"
+            },
+            "CatPartsTransform": {
+              "head": "1059",
+              "body": "1057",
+              "tail": "1058",
+              "leg1": "1061",
+              "leg2": "1060",
+              "arm1": "1061",
+              "arm2": "1061",
+              "ear1": "1038",
+              "mouth": "1000"
+            }
+          },
+          {
+            "stacks": "20",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1059",
+              "body": "1058",
+              "tail": "1059",
+              "leg1": "1061",
+              "leg2": "1062",
+              "arm1": "1061",
+              "arm2": "1062",
+              "ear2": "1037",
+              "ear1": "1038"
+            }
+          },
+          {
+            "stacks": "16",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "DestroyFaceArmor": "1",
+            "CatPartsTransform": {
+              "head": "1059",
+              "body": "1058",
+              "tail": "1059",
+              "leg1": "1061",
+              "leg2": "1062",
+              "arm1": "1061",
+              "arm2": "1062",
+              "eye1": "1071"
+            }
+          },
+          {
+            "stacks": "12",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1060",
+              "body": "1058",
+              "tail": "1059",
+              "leg1": "1061",
+              "leg2": "1062",
+              "arm1": "1061",
+              "arm2": "1062"
+            }
+          },
+          {
+            "stacks": "8",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1061",
+              "body": "1058",
+              "tail": "1059",
+              "leg1": "1061",
+              "leg2": "1062",
+              "arm1": "1061",
+              "arm2": "1062",
+              "mouth": "1072"
+            }
+          },
+          {
+            "stacks": "4",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1062",
+              "body": "1058",
+              "tail": "1059",
+              "leg1": "1061",
+              "leg2": "1062",
+              "arm1": "1062",
+              "arm2": "1062",
+              "mouth": "1072"
+            }
+          },
+          {
+            "stacks": "0",
+            "ParticleBurst": "Gibs_terminatorskin",
+            "CatPartsTransform": {
+              "head": "1062",
+              "body": "1059",
+              "tail": "1059",
+              "leg1": "1062",
+              "leg2": "1062",
+              "arm1": "1062",
+              "arm2": "1062",
+              "mouth": "1072"
+            }
+          }
+        ]
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveSpaced": {
+          "ability": "move",
+          "move_weights": "terminator_keep_distance_always_move"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "*weapon",
+          "*T1ThrowGrenadeA",
+          "*T1ThrowGrenadeB",
+          "MoveSpaced",
+          "T1SwapWeapon"
+        ]
+      },
+      "bonusturn_pattern": {
+        "do_all": [
+          "*T1Pummel",
+          "*weapon",
+          "MoveSpaced",
+          "T1SwapWeapon"
+        ]
+      },
+      "decision_weights": "terminator",
+      "move_weights": "terminator_stay_close"
+    }
+  },
+  "Terminator2": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR2_NAME",
+      "name_resolved": "C-1000",
+      "custom_cat_data": "Terminator2Cat",
+      "scale": "1.2",
+      "shadow_size": "1.2",
+      "uifloaters_offset": "1.4",
+      "tooltip": "ENEMY_TERMINATOR2_DESC",
+      "tooltip_resolved": "Primary objective: Destroy all cats, again!",
+      "alt_animations": [
+        [
+          "dying",
+          "liquidmetalDying"
+        ],
+        [
+          "dodge",
+          "liquidmetaldodge"
+        ]
+      ],
+      "no_splatter": "true"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_Terminator2_WalkStep"
+        ],
+        [
+          "SE_Cat_StompLegMove",
+          "SE_Terminator2_WalkLeg"
+        ],
+        [
+          "SE_Cat_ShadowStepOut",
+          "SE_Terminator_ShadowStepOut"
+        ],
+        [
+          "SE_Cat_ShadowStepIn",
+          "SE_Terminator_ShadowStepIn"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "robot"
+      ],
+      "type": "boss",
+      "health": "500",
+      "faction": "enemies",
+      "allow_passive_spelltransforming": "true",
+      "evenly_dispersed_bonus_turns": "3",
+      "last_turn_is_main_turn": "true",
+      "movement": "1",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "T2SpearMelee",
+      "spells": [
+        "DoNothing",
+        "DoNothing",
+        "DoNothing",
+        "DoNothing",
+        "DoNothing",
+        "T2Clone",
+        "T2UnClone",
+        "T2GoopRun"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "PrioritizePlayerCats": "1",
+      "AggroTargetIsCurrentTurn": "1",
+      "FormChanger": {
+        "Default": {
+          "ai": {
+            "brain": "PatternBrain",
+            "end_turn_on_formswitch": "true",
+            "pattern": {
+              "do_all": [
+                "*T2Clone",
+                "*attack",
+                "move"
+              ]
+            },
+            "decision_weights": "terminator",
+            "move_weights": "stay_close"
+          },
+          "passives": {
+            "DodgeChance_Status": "100",
+            "Terminator2Chase": "move",
+            "StatusOnEndMove": {
+              "RemoveStatusStacks": {
+                "status": "DodgeChance_Status",
+                "stacks": "10"
+              },
+              "SpeedUp_WithoutInitiative": "1"
+            },
+            "Terminator2Run": {
+              "move_ability": "T2GoopRun",
+              "move_weights": "stay_far_always_move"
+            }
+          }
+        },
+        "Transformed": {
+          "ai": {
+            "brain": "PatternBrain",
+            "end_turn_on_formswitch": "true",
+            "pattern": {
+              "do_best_multiple": [
+                "attack",
+                "spell0",
+                "spell1",
+                "spell2",
+                "spell3",
+                "spell4",
+                "weapon",
+                "trinket"
+              ]
+            },
+            "decision_weights": "terminator",
+            "move_weights": "keep_distance_always_move"
+          },
+          "passives": {
+            "StatusEachTurnEndIfEnabledAtStartOfTurn": {
+              "ForceUseAbility": "T2UnClone"
+            }
+          }
+        }
+      },
+      "FormChangeWhileHasStatus": {
+        "status": "T2CopyCatInternal",
+        "form_has": "Transformed",
+        "form_hasnot": "Default"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "TankCat_Terminator": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR3_TANK_NAME",
+      "name_resolved": "Robo-Maisie",
+      "custom_cat_data": "TankCat_Terminator",
+      "spawnin_animation": "beaminTank",
+      "tooltip": "ENEMY_TERMINATOR3_TANK_DESC",
+      "tooltip_resolved": "Protects her allies when they are attacked."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkA"
+        ]
+      ]
+    },
+    "equipment": {
+      "face": "MetalPlate_Terminator"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "5",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicTankMelee",
+      "spells": [
+        "SwapPositions_TankCat",
+        "T3LickyLicky"
+      ]
+    },
+    "passives": {
+      "ProtectTargetedAllies": {
+        "ability": "SwapPositions_TankCat",
+        "target_filter": "any"
+      },
+      "MamaCatAnimations": "1",
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "T3LickyLicky",
+          "attack"
+        ]
+      },
+      "decision_weights": "default_no_revive",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "MageCat_Terminator": {
+    "variant_of": "MageCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_MAGE_NAME",
+      "name_resolved": "Robo-Lucy",
+      "custom_cat_data": "MageCat_Terminator",
+      "spawnin_animation": "beaminMage"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkB"
+        ]
+      ]
+    },
+    "equipment": {
+      "neck": "MageCollar_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "HunterCat_Terminator": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR3_HUNTER_NAME",
+      "name_resolved": "Robo-Fenrir",
+      "custom_cat_data": "HunterCat_Terminator",
+      "spawnin_animation": "beaminHunter",
+      "tooltip": "ENEMY_TERMINATOR3_HUNTER_DESC",
+      "tooltip_resolved": "Tosses bear traps!\nHas an affinity for tall grass.\nSwats away melee attackes."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkC"
+        ]
+      ]
+    },
+    "equipment": {
+      "face": "HuntersPatch_Terminator"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "HunterMinibossMove",
+      "attack": "BasicRanged_Hunter",
+      "spells": [
+        "BearTrap_Enemy_Cantrip",
+        "Shove"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "Shove",
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "BearTrap_Enemy_Cantrip",
+        "do_all": [
+          "BearTrap_Enemy_Cantrip",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "prefer_tall_grass_always_move"
+    }
+  },
+  "ThiefCat_Terminator": {
+    "variant_of": "ThiefCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_THIEF_NAME",
+      "name_resolved": "Robo-Dack",
+      "custom_cat_data": "ThiefCat_Terminator",
+      "spawnin_animation": "beaminThief"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkD"
+        ]
+      ]
+    },
+    "equipment": {
+      "head": "CoinBag_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0",
+      "dispersed_bonus_turns": "1"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "MedicCat_Terminator": {
+    "variant_of": "MedicCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_CLERIC_NAME",
+      "name_resolved": "Robo-Marshmallow",
+      "custom_cat_data": "MedicCat_Terminator",
+      "spawnin_animation": "beaminMedic"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkE"
+        ]
+      ]
+    },
+    "equipment": {
+      "neck": "AngelicAura_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "divine_shield": "0",
+      "corpse_health": "0",
+      "dispersed_bonus_turns": "1"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "FighterCat_Terminator": {
+    "variant_of": "FighterCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_FIGHTER_NAME",
+      "name_resolved": "Robo-Magnus",
+      "custom_cat_data": "FighterCat_Terminator",
+      "spawnin_animation": "beaminFighter"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkF"
+        ]
+      ]
+    },
+    "equipment": {
+      "neck": "SamsonsChains_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "Pebbles_Terminator": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR3_PEBBLES_NAME",
+      "name_resolved": "Robo-Pebbles",
+      "custom_cat_data": "Pebbles_Terminator",
+      "spawnin_animation": "beamin"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkA"
+        ]
+      ]
+    },
+    "equipment": {
+      "head": "Pebble_Terminator"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "4",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ColorlessCat_Push",
+      "spells": [
+        "RockToss_ColorlessCat",
+        "RockToss_ColorlessCat_AsCloseAsPossible",
+        "T3Pebbles_BoulderDrop",
+        "T3Pebbles_PrimeBoulderDrop"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup",
+      "UseAbilityWhenShieldDepleted": "T3Pebbles_PrimeBoulderDrop"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "RockToss_ColorlessCat,",
+          "attack"
+        ]
+      },
+      "fallback": {
+        "do": "RockToss_ColorlessCat_AsCloseAsPossible"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "NecroCat_Terminator": {
+    "variant_of": "NecroCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_NECRO_NAME",
+      "name_resolved": "Robo-Morana",
+      "custom_cat_data": "NecroCat_Terminator",
+      "spawnin_animation": "beaminNecro"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkB"
+        ]
+      ]
+    },
+    "equipment": {
+      "face": "NecromancerMask_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0",
+      "dispersed_bonus_turns": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "TinkererCat_Terminator": {
+    "variant_of": "TinkererCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_TINKERER_NAME",
+      "name_resolved": "Robo-Franklin",
+      "custom_cat_data": "TinkererCat_Terminator",
+      "spawnin_animation": "beaminTinkerer"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkC"
+        ]
+      ]
+    },
+    "equipment": {
+      "head": "TinkererHat_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "ButcherCat_Terminator": {
+    "variant_of": "ButcherCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_BUTCHER_NAME",
+      "name_resolved": "Robo-Gein",
+      "custom_cat_data": "ButcherCat_Terminator",
+      "spawnin_animation": "beaminButcher"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkD"
+        ]
+      ]
+    },
+    "equipment": {
+      "face": "ButcherMask_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "PsychicCat_Terminator": {
+    "variant_of": "PsychicCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_PSYCHIC_NAME",
+      "name_resolved": "Robo-Alice",
+      "custom_cat_data": "PsychicCat_Terminator",
+      "spawnin_animation": "beaminPsychic"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkE"
+        ]
+      ]
+    },
+    "equipment": {
+      "face": "PsychicMask_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "DruidCat_Terminator": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TERMINATOR3_DRUID_NAME",
+      "name_resolved": "Robo-Draven",
+      "custom_cat_data": "DruidCat_Terminator",
+      "spawnin_animation": "beaminDruid"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkF"
+        ]
+      ]
+    },
+    "equipment": {
+      "neck": "DruidNeck_Terminator"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "DruidCatBasic",
+      "spells": [
+        "DCSquirrelForm",
+        "DCBirthSquirrel",
+        "DCT_SummonCrow"
+      ]
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": [
+        "terminator_mini",
+        "dc_cat"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "FormChanger": {
+        "Default": {},
+        "SquirrelForm": {
+          "attack": "BasicMelee",
+          "passives": {
+            "SpeedUp": "6",
+            "AddTemporaryEffectsToBasicAttack": {
+              "Fury": "75"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "*DCBirthSquirrel",
+                "attack",
+                "DCBirthSquirrel"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        }
+      },
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*DCT_SummonCrow",
+          "DCSquirrelForm",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "DruidCrow_Terminator": {
+    "variant_of": "DruidCrow",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_DRUIDCROW_NAME",
+      "name_resolved": "Robo-Draven's Crow"
+    }
+  },
+  "MonkCat_Terminator": {
+    "variant_of": "MonkCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_MONK_NAME",
+      "name_resolved": "Robo-Chan Hung",
+      "custom_cat_data": "MonkCat_Terminator",
+      "spawnin_animation": "beaminMonk"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkF"
+        ]
+      ]
+    },
+    "equipment": {
+      "head": "MonkMask_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "JesterCat_Terminator": {
+    "variant_of": "JesterCat",
+    "graphics": {
+      "name": "ENEMY_TERMINATOR3_JESTER_NAME",
+      "name_resolved": "Robo-Arthur",
+      "custom_cat_data": "JesterCat_Terminator",
+      "spawnin_animation": "beaminJester"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_TerminatorCatWalkA"
+        ]
+      ]
+    },
+    "equipment": {
+      "head": "JesterHat_Terminator"
+    },
+    "properties": {
+      "tags": [
+        "cat",
+        "robot"
+      ],
+      "hidden_tags": "terminator_mini",
+      "health": "25",
+      "shield": "25",
+      "corpse_health": "0",
+      "dispersed_bonus_turns": "1"
+    },
+    "passives": {
+      "Robot": "1",
+      "SpawnOnDeath": "RandomArmorPickup"
+    }
+  },
+  "T3Hitler": {
+    "graphics": {
+      "movieclip": "HitlerMech",
+      "name": "ENEMY_TERMINATOR3_HITLER_NAME",
+      "name_resolved": "Hitler",
+      "tooltip": "ENEMY_TERMINATOR3_HITLER_DESC",
+      "tooltip_resolved": "Ich bin hier, um diese Katzen zu töten und die Kontrolle über diese wertlose Dimension zu übernehmen! Unter Hitlers Herrschaft werden alle Katzen sterben!!",
+      "uifloaters_offset": "2.5"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "7",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": [
+        "humanoid",
+        "robot"
+      ],
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "4",
+      "corpse_health": "0",
+      "takes_turns": "false",
+      "flying": "true",
+      "health": "100",
+      "shield": "100",
+      "banned_elite_buffs": [
+        "Mad",
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DoNothing",
+      "attack": "DoNothing",
+      "spells": [
+        "T3RipAndTear",
+        "T3Counter",
+        "T3Spawn_Tank",
+        "T3Spawn_Mage",
+        "T3Spawn_Hunter",
+        "T3Spawn_Thief",
+        "T3Spawn_Medic",
+        "T3Spawn_Fighter",
+        "T3Spawn_Colorless",
+        "T3Spawn_Necromancer",
+        "T3Spawn_Tinkerer",
+        "T3Spawn_Butcher",
+        "T3Spawn_Psychic",
+        "T3Spawn_Druid",
+        "T3Spawn_Monk",
+        "T3Spawn_Jester",
+        "T3Intro",
+        "T3JoinFight",
+        "HitlerPulp1",
+        "HitlerPulp2",
+        "HitlerPulp3",
+        "HitlerPulp4",
+        "HitlerPulp5",
+        "HitlerPulp6"
+      ]
+    },
+    "passives": {
+      "Robot": "1",
+      "FormChanger": {
+        "InitialPhase": {
+          "move": "FloatMove",
+          "attack": "T3Shoot",
+          "turns": {
+            "takes_turns": "true",
+            "takes_main_turn": "false",
+            "round_start_bonus_turns": "1"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do": "*T3Intro"
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          },
+          "passives": {
+            "AddInitiative": "999999",
+            "DebuffImmunity": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp1",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "SpawningPhase": {
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "FullBlockEverything": "1",
+            "T3HitlerSpawningPhase": {
+              "spell_use_groups": [
+                [
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Monk",
+                  "T3Spawn_Tank",
+                  "T3Spawn_Mage",
+                  "T3Spawn_Hunter",
+                  "T3Spawn_Thief",
+                  "T3Spawn_Medic",
+                  "T3Spawn_Fighter",
+                  "T3Spawn_Necromancer",
+                  "T3Spawn_Tinkerer",
+                  "T3Spawn_Butcher",
+                  "T3Spawn_Psychic",
+                  "T3Spawn_Druid",
+                  "T3Spawn_Jester"
+                ],
+                [
+                  "T3Spawn_Colorless"
+                ],
+                [
+                  "T3JoinFight"
+                ]
+              ]
+            },
+            "FormChangeOffMap": {
+              "form_offmap": "SpawningPhase",
+              "form_onmap": "FightPhase"
+            }
+          }
+        },
+        "FightPhase": {
+          "move": "FloatMove",
+          "attack": "T3Shoot",
+          "turns": {
+            "takes_turns": "true",
+            "dispersed_bonus_turns": "1"
+          },
+          "passives": {
+            "PrioritizeFarAwayTargets": "10",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp1",
+              "even_if_stunned": "true"
+            },
+            "CounterAttack": "T3Counter"
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "*T3RipAndTear",
+                "*attack",
+                "attack",
+                "move"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance_always_move"
+          }
+        },
+        "Pulp2": {
+          "animation_suffix": "2",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "25",
+            "BackstabImmunity": "1",
+            "MinimumKnockbackFromAllDamage": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp2",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Pulp3": {
+          "animation_suffix": "3",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "25",
+            "BackstabImmunity": "1",
+            "MinimumKnockbackFromAllDamage": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp3",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Pulp4": {
+          "animation_suffix": "4",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "25",
+            "BackstabImmunity": "1",
+            "MinimumKnockbackFromAllDamage": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp4",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Pulp5": {
+          "animation_suffix": "5",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "25",
+            "BackstabImmunity": "1",
+            "MinimumKnockbackFromAllDamage": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp5",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Pulp6": {
+          "animation_suffix": "6",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "25",
+            "BackstabImmunity": "1",
+            "MinimumKnockbackFromAllDamage": "1",
+            "DeathRattleRevive": {
+              "ability": "HitlerPulp6",
+              "even_if_stunned": "true"
+            }
+          }
+        },
+        "Pulp7": {
+          "animation_suffix": "7",
+          "uifloaters_offset": "1",
+          "attack": "None",
+          "move": "None",
+          "tooltip": "ENEMY_TERMINATOR3_HITLERHEAD_DESC",
+          "tooltip_resolved": "SMASH THAT HEAD!!!",
+          "turns": {
+            "takes_turns": "false"
+          },
+          "passives": {
+            "OverrideMaxHealth": "1",
+            "BackstabImmunity": "1"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "none"
+      },
+      "decision_weights": "default_t3hitler",
+      "move_weights": "keep_distance"
+    }
+  }
+}

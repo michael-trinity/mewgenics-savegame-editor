@@ -1,0 +1,174 @@
+{
+  "SeducedBoulder": {
+    "graphics": {
+      "movieclip": "Rock",
+      "name": "ENEMY_SEDUCEDBOULDER_NAME",
+      "name_resolved": "Seduced Boulder"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "0",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "faction": "allies",
+      "takes_turns": "true",
+      "corpse_health": "0",
+      "can_be_backstabbed": "false",
+      "movement": "4",
+      "health": "15",
+      "elements": [
+        "Rock"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "None",
+      "can_get_bonus": "true",
+      "spells": [
+        "Taunt"
+      ]
+    },
+    "ai": {
+      "brain": "PlayerBrain"
+    }
+  },
+  "EventBountyHunter": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_EVENTBOUNTYHUNTER_NAME",
+      "name_resolved": "Bounty Hunter",
+      "tooltip": "ENEMY_BOUNTYHUNTER_DESC",
+      "tooltip_resolved": "Can shoot anywhere within its line of sight. Prefers long shots.",
+      "custom_cat_data": "GunCat"
+    },
+    "equipment": {
+      "weapon": "GunslingerPistol",
+      "face": "MuggerMask"
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "17",
+      "faction": "birds",
+      "base_mana_regen": "999",
+      "movement": "2",
+      "kill_required": "false",
+      "can_collect_coins": "true",
+      "held_coins": [
+        "5",
+        "10"
+      ],
+      "aggro_target_is_enemy": "true",
+      "can_run": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "GuncatShoot",
+      "spells": []
+    },
+    "passives": {
+      "WeaponsDontLoseDurability": "1",
+      "EventBounterHunterPassive": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move",
+      "consider_spells": "false"
+    }
+  },
+  "DeadPinky": {
+    "variant_of": "Pinky",
+    "graphics": {
+      "tooltip": "ENEMY_DEADPINKY_DESC",
+      "tooltip_resolved": "This poor little guy didn't stand a chance!"
+    },
+    "passives": {
+      "StartDead": "100%"
+    }
+  },
+  "FastFetus": {
+    "variant_of": "Fetus",
+    "passives": {
+      "AlphaTurns": "1"
+    }
+  },
+  "FastRat": {
+    "variant_of": "Rat",
+    "passives": {
+      "AlphaTurns": "1"
+    }
+  },
+  "AlienEgg": {
+    "graphics": {
+      "movieclip": "AlienEgg",
+      "name": "ENEMY_STRANGEEGG_NAME",
+      "name_resolved": "Strange Egg",
+      "tooltip": "ENEMY_STRANGEEGG_DESC",
+      "tooltip_resolved": "What could it hatch into?"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "alien",
+      "faction": "enemies",
+      "inherit_faction": "true",
+      "kill_required": "false",
+      "movement": "0",
+      "health": "1",
+      "corpse_health": "0",
+      "can_be_overkilled": "false"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None",
+      "spells": []
+    },
+    "passives": {
+      "TransformInXTurns": {
+        "turns": [
+          "1",
+          "4"
+        ],
+        "object": [
+          "YellowBlaster",
+          "GreyAlien",
+          "GreenProber",
+          "Amoeba",
+          "MoonWorm",
+          "Waggle",
+          "KirbyFetus",
+          "BrainDrain",
+          "Fetus",
+          "FetusGusher"
+        ],
+        "animation": "hatch"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  }
+}

@@ -1,0 +1,5904 @@
+{
+  "meta": {
+    "generated_at": "2026-02-27T11:48:35.456Z",
+    "source": "mutations.tar.gz",
+    "categories": [
+      "body",
+      "ears",
+      "eyebrows",
+      "eyes",
+      "head",
+      "legs",
+      "mouth",
+      "tail",
+      "texture"
+    ],
+    "includes_stats": true
+  },
+  "mutations": {
+    "eyes": {
+      "2": {
+        "name": "no eyes (frame 703, but completely missing parts are special and keyed in on -2)",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EYES_M2_DESC"
+      },
+      "300": {
+        "name": "Button Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_300_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Fear."
+      },
+      "301": {
+        "name": "Demon Eyes",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 1
+        }
+      },
+      "302": {
+        "name": "Pop Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_302_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "303": {
+        "name": "Gem Eyes",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1,
+          "cha": 1
+        }
+      },
+      "304": {
+        "name": "Holes",
+        "tag": null,
+        "desc": "MUTATION_EYES_304_DESC",
+        "desc_resolved": "Take your turn later."
+      },
+      "305": {
+        "name": "Zen Eyes",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": -1,
+          "int": 3
+        }
+      },
+      "306": {
+        "name": "Confusing Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_306_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Confusion 3."
+      },
+      "307": {
+        "name": "Half Moon Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_307_DESC",
+        "desc_resolved": "Gain 1 mana when anything dies."
+      },
+      "308": {
+        "name": "Spider Eyes",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_308_DESC",
+        "desc_resolved": "+5% dodge chance."
+      },
+      "309": {
+        "name": "Doll Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_309_DESC",
+        "desc_resolved": "+2 corpse health."
+      },
+      "310": {
+        "name": "Octo Eyes",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_310_DESC",
+        "desc_resolved": "+1 Health Regeneration"
+      },
+      "311": {
+        "name": "gecko eye",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_311_DESC",
+        "desc_resolved": "You do not take extra damage from backstabs."
+      },
+      "312": {
+        "name": "Metal Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_312_DESC",
+        "desc_resolved": "+1 Brace.",
+        "stats": {
+          "shield": 1
+        }
+      },
+      "313": {
+        "name": "Issac's Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_313_DESC",
+        "desc_resolved": "Your basic attack creates water tiles.",
+        "stats": {
+          "divine_shield": 1
+        }
+      },
+      "314": {
+        "name": "Dead Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_314_DESC",
+        "desc_resolved": "When you are downed, spawn 3 Flies. +2 corpse health."
+      },
+      "315": {
+        "name": "Kinetic eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_315_DESC",
+        "desc_resolved": "+1 Kinetic Spikes."
+      },
+      "316": {
+        "name": "Lightning eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_316_DESC",
+        "desc_resolved": "15% chance to counter attack with Chain Lightning when you get hit."
+      },
+      "317": {
+        "name": "Dice Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_317_DESC",
+        "desc_resolved": "Gain a random stat up at the end of each turn."
+      },
+      "318": {
+        "name": "Goat Eyes",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_318_DESC",
+        "desc_resolved": "You can see hidden things. +1 Knockback damage."
+      },
+      "319": {
+        "name": "Horn Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_319_DESC",
+        "desc_resolved": "Blind. +1 Damage. +1 Thorns."
+      },
+      "324": {
+        "name": "Treasure Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_324_DESC",
+        "desc_resolved": "Spawn 2 extra coins each battle."
+      },
+      "325": {
+        "name": "Nail Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_325_DESC",
+        "desc_resolved": "Thorns 1."
+      },
+      "326": {
+        "name": "4 Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_326_DESC",
+        "desc_resolved": "Gain 2 Charge each time you cast 4 spells."
+      },
+      "327": {
+        "name": "Baby Blue Eyes",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2
+        }
+      },
+      "328": {
+        "name": "Bull's Eye'",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_328_DESC",
+        "desc_resolved": "+10% crit chance."
+      },
+      "329": {
+        "name": "Spinning Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_329_DESC",
+        "desc_resolved": "Your basic attack has a 15% chance to inflict Confusion."
+      },
+      "331": {
+        "name": "Glassy Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_331_DESC",
+        "desc_resolved": "At the start of each battle, gain a random temporary pill if your trinket slot is empty."
+      },
+      "332": {
+        "name": "Bleeding Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_332_DESC",
+        "desc_resolved": "Start each battle Bleeding. Gain 1 Charge each time you take damage."
+      },
+      "333": {
+        "name": "Huge Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_333_DESC",
+        "desc_resolved": "Your basic attack can't miss."
+      },
+      "334": {
+        "name": "Infested Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_334_DESC",
+        "desc_resolved": "Blind. Spawn a Flea when you take damage."
+      },
+      "335": {
+        "name": "Fake Eyelashes",
+        "tag": null,
+        "desc": "MUTATION_EYES_335_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to Charm."
+      },
+      "336": {
+        "name": "Bolt Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_336_DESC",
+        "desc_resolved": "Your basic attack is electric element and has a 5% chance to stun."
+      },
+      "337": {
+        "name": "Ice Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_337_DESC",
+        "desc_resolved": "Your basic attack is ice element and inflicts Slow."
+      },
+      "338": {
+        "name": "Fire Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_338_DESC",
+        "desc_resolved": "Your basic attack inflicts Burn."
+      },
+      "339": {
+        "name": "Water Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_339_DESC",
+        "desc_resolved": "+1 Health Regeneration while wet. Your basic attack is water element."
+      },
+      "340": {
+        "name": "Leech Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_340_DESC",
+        "desc_resolved": "Your basic attack inflicts Leech."
+      },
+      "341": {
+        "name": "Flower Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_341_DESC",
+        "desc_resolved": "Gain Charge 1 the first time you move each turn."
+      },
+      "342": {
+        "name": "Poison Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_342_DESC",
+        "desc_resolved": "Your basic attack inflicts Poison 1. Start each battle Poisoned."
+      },
+      "343": {
+        "name": "Clown Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_343_DESC",
+        "desc_resolved": "You have a 5% chance to inflict Fear on units who contact or attack you."
+      },
+      "344": {
+        "name": "Sun Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_344_DESC",
+        "desc_resolved": "You have a 10% chance to Blind units who contact or attack you."
+      },
+      "345": {
+        "name": "Evil Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_345_DESC",
+        "desc_resolved": "Inflict a random debuff on units who contact you."
+      },
+      "346": {
+        "name": "Rock Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_346_DESC",
+        "desc_resolved": "Spawn a rock when damaged.",
+        "stats": {
+          "shield": 1
+        }
+      },
+      "347": {
+        "name": "Hypno Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_347_DESC",
+        "desc_resolved": "Your basic attack has a 15% chance to inflict Confusion 2."
+      },
+      "348": {
+        "name": "Pop Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_348_DESC",
+        "desc_resolved": "+1 range, +1 reach."
+      },
+      "349": {
+        "name": "8 Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_349_DESC",
+        "desc_resolved": "Emit 4 Sparkles each time you cast 8 spells."
+      },
+      "351": {
+        "name": "Chaos Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_351_DESC",
+        "desc_resolved": "Your bonus ability is a different random spell each battle."
+      },
+      "352": {
+        "name": "Runny Mascara",
+        "tag": null,
+        "desc": "MUTATION_EYES_352_DESC",
+        "desc_resolved": "You have All Stats Up while Bleeding."
+      },
+      "353": {
+        "name": "Chameleon Eyes",
+        "tag": "animal",
+        "desc": "MUTATION_EYES_353_DESC",
+        "desc_resolved": "You take no extra damage from backstabs."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "442": {
+        "name": null,
+        "tag": null,
+        "desc": "MUTATION_EYES_442_DESC",
+        "desc_resolved": "10% chance to reflect projectiles."
+      },
+      "700": {
+        "name": "graves disease",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -2
+        }
+      },
+      "701": {
+        "name": "anophthalmia",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "lck": -2
+        }
+      },
+      "702": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -2,
+          "int": 1,
+          "cha": 1
+        }
+      },
+      "704": {
+        "name": "lazy eye",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EYES_704_DESC",
+        "desc_resolved": "10% miss chance."
+      },
+      "705": {
+        "name": "cataracts",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EYES_705_DESC",
+        "desc_resolved": "Gain 5% miss chance every turn."
+      },
+      "706": {
+        "name": "crossed eyes",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EYES_706_DESC",
+        "desc_resolved": "Start each battle with Confusion 2."
+      },
+      "750": {
+        "name": "glasses",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "754": {
+        "name": "alien eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_754_DESC",
+        "desc_resolved": "+1 range. Your basic attack is gravity element."
+      },
+      "755": {
+        "name": "mothman eyes",
+        "tag": null,
+        "desc": "MUTATION_EYES_755_DESC",
+        "desc_resolved": "Your basic attack has a 15% chance to inflict Fear."
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_EYES_900_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Slow."
+      },
+      "1029": {
+        "name": "spider eye",
+        "tag": null,
+        "desc": "MUTATION_EYES_1029_DESC",
+        "desc_resolved": "+5% crit chance."
+      },
+      "-2": {
+        "name": null,
+        "tag": "birth_defect",
+        "desc": "MUTATION_EYES_M2_DESC",
+        "desc_resolved": "Blind."
+      }
+    },
+    "texture": {
+      "300": {
+        "name": "Stitches",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_300_DESC",
+        "desc_resolved": "+1 Health Regeneration",
+        "stats": {
+          "cha": -1
+        }
+      },
+      "301": {
+        "name": "Fish Scales",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_301_DESC",
+        "desc_resolved": "+1 Health and Mana Regeneration while wet."
+      },
+      "302": {
+        "name": "Conjoined",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "lck": 1
+        }
+      },
+      "303": {
+        "name": "Patches",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_303_DESC",
+        "desc_resolved": "Start each battle with a random stat up."
+      },
+      "304": {
+        "name": "Confusing Hide",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_304_DESC",
+        "desc_resolved": "Units that contact or attack you have a 10% chance to become Confused."
+      },
+      "305": {
+        "name": "Robot Hide",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "306": {
+        "name": "Veiny",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1
+        }
+      },
+      "307": {
+        "name": "Eyeballs",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_307_DESC",
+        "desc_resolved": "+5% dodge chance."
+      },
+      "308": {
+        "name": "Heart Tattoo",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "309": {
+        "name": "Tatted Up",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_309_DESC",
+        "desc_resolved": "Your basic attack has a 5% chance to inflict Fear. You have a 5% chance to inflict Fear on units who contact or attack you."
+      },
+      "310": {
+        "name": "Cash Hide",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_310_DESC",
+        "desc_resolved": "Gain double the effects of pickups you collect."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "neurofibromatosis",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -2
+        }
+      },
+      "701": {
+        "name": "melanocytic nevus",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -2,
+          "shield": 1
+        }
+      },
+      "702": {
+        "name": "bleeding",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TEXTURE_702_DESC",
+        "desc_resolved": "Start each battle with Bleed 1."
+      },
+      "703": {
+        "name": "blue spots",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TEXTURE_703_DESC",
+        "desc_resolved": "Mage abilities are also offered when you level up.",
+        "stats": {
+          "cha": -2
+        }
+      },
+      "704": {
+        "name": "red dots",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TEXTURE_704_DESC",
+        "desc_resolved": "Fighter abilities are also offered when you level up.",
+        "stats": {
+          "cha": -2
+        }
+      },
+      "705": {
+        "name": "jaundice",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TEXTURE_705_DESC",
+        "desc_resolved": "Thief abilities are also offered when you level up.",
+        "stats": {
+          "cha": -2
+        }
+      },
+      "706": {
+        "name": "vitiligo",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TEXTURE_706_DESC",
+        "desc_resolved": "10% dodge chance.",
+        "stats": {
+          "cha": -1
+        }
+      },
+      "750": {
+        "name": "skunk Hide",
+        "tag": null,
+        "desc": "MUTATION_TEXTURE_750_DESC",
+        "desc_resolved": "Units who contact you get Poison 2."
+      }
+    },
+    "body": {
+      "300": {
+        "name": "Rock Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "301": {
+        "name": "Cactus Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_301_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "302": {
+        "name": "Turtle Bod",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "shield": 5
+        }
+      },
+      "303": {
+        "name": "Snail Bod",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "spd": -2,
+          "shield": 10
+        }
+      },
+      "304": {
+        "name": "Robot Body",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1,
+          "spd": 1
+        }
+      },
+      "305": {
+        "name": "Conjoined Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "lck": 1
+        }
+      },
+      "306": {
+        "name": "Skin & Bones",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -3,
+          "shield": 12
+        }
+      },
+      "307": {
+        "name": "Udders",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "308": {
+        "name": "Beach Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1,
+          "con": 1,
+          "int": -1
+        }
+      },
+      "309": {
+        "name": "Maggot Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_309_DESC",
+        "desc_resolved": "Units that contact you get knocked back 2 tiles."
+      },
+      "310": {
+        "name": "Puffball Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "311": {
+        "name": "Square Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "312": {
+        "name": "Money Bag Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_312_DESC",
+        "desc_resolved": "Spawn a coin when you take damage."
+      },
+      "313": {
+        "name": "Spike Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_313_DESC",
+        "desc_resolved": "+1 Kinetic Spikes."
+      },
+      "314": {
+        "name": "Porcupine",
+        "tag": null,
+        "desc": "MUTATION_BODY_314_DESC",
+        "desc_resolved": "+2 Thorns.",
+        "stats": {
+          "cha": -1
+        }
+      },
+      "315": {
+        "name": "Carapace",
+        "tag": null,
+        "desc": "MUTATION_BODY_315_DESC",
+        "desc_resolved": "+1 Brace."
+      },
+      "316": {
+        "name": "Pangolin",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 2
+        }
+      },
+      "317": {
+        "name": "Camel Hump",
+        "tag": null,
+        "desc": "MUTATION_BODY_317_DESC",
+        "desc_resolved": "Immune to Heat Wave weather.",
+        "stats": {
+          "con": 1
+        }
+      },
+      "318": {
+        "name": "Egg Sack Back",
+        "tag": null,
+        "desc": "MUTATION_BODY_318_DESC",
+        "desc_resolved": "25% chance to spawn a Charmed Fly each turn."
+      },
+      "319": {
+        "name": "Fractured Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_319_DESC",
+        "desc_resolved": "When you take damage from an attack, gain a random buff."
+      },
+      "320": {
+        "name": "Brick Bod",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 1
+        }
+      },
+      "321": {
+        "name": "Kitten Bod",
+        "tag": null,
+        "desc": "MUTATION_BODY_321_DESC",
+        "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed."
+      },
+      "322": {
+        "name": "Backpack",
+        "tag": null,
+        "desc": "MUTATION_BODY_322_DESC",
+        "desc_resolved": "Gain an extra consumable item at the end of each battle."
+      },
+      "323": {
+        "name": "Fatty",
+        "tag": null,
+        "desc": "MUTATION_BODY_323_DESC",
+        "desc_resolved": "Trample. When damaged, move 1 tile in a random direction.",
+        "stats": {
+          "spd": -3
+        }
+      },
+      "324": {
+        "name": "Eyeball",
+        "tag": null,
+        "desc": "MUTATION_BODY_324_DESC",
+        "desc_resolved": "Gain +1 range when you get a kill."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "442": {
+        "name": null,
+        "tag": "melted",
+        "desc": null,
+        "stats": {
+          "cha": -1
+        }
+      },
+      "700": {
+        "name": "Gastroschisis",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "con": -2
+        }
+      },
+      "701": {
+        "name": "Deformed Ribcage",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "spd": -2
+        }
+      },
+      "702": {
+        "name": "Malnurished",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "con": -1
+        }
+      },
+      "703": {
+        "name": "Body Welts",
+        "tag": "birth_defect",
+        "desc": "MUTATION_BODY_703_DESC",
+        "desc_resolved": "Start each battle with Bruise 1."
+      },
+      "704": {
+        "name": "Conjoined Body",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -3
+        }
+      },
+      "750": {
+        "name": "spike body",
+        "tag": null,
+        "desc": "MUTATION_BODY_750_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "753": {
+        "name": "mermaid body",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 5
+        }
+      },
+      "758": {
+        "name": "human head body",
+        "tag": null,
+        "desc": "MUTATION_BODY_758_DESC",
+        "desc_resolved": "Start with +1 Bonus Attack.",
+        "stats": {
+          "con": 1
+        }
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -2,
+          "spd": 1
+        }
+      }
+    },
+    "ears": {
+      "2": {
+        "name": "no ears (completely missing part) //TODO: deaf (unaffected by musical abilities)",
+        "tag": "birth_defect",
+        "desc": null
+      },
+      "300": {
+        "name": "horn",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "str": 1
+        }
+      },
+      "301": {
+        "name": "antenna",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "302": {
+        "name": "fishy",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_302_DESC",
+        "desc_resolved": "+1 Health and Mana Regeneration while wet."
+      },
+      "303": {
+        "name": "bullhorn",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_303_DESC",
+        "desc_resolved": "Adds +1 Knockback to your basic attack if it's melee.",
+        "stats": {
+          "str": 1
+        }
+      },
+      "304": {
+        "name": "pigtails",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "305": {
+        "name": "boil",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 1
+        }
+      },
+      "306": {
+        "name": "bunny ear",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "spd": 1
+        }
+      },
+      "307": {
+        "name": "brains",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "308": {
+        "name": "shrek",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1,
+          "cha": -1
+        }
+      },
+      "309": {
+        "name": "antlers",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_309_DESC",
+        "desc_resolved": "Adds +1 Bleed to your basic attack."
+      },
+      "310": {
+        "name": "human",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "313": {
+        "name": "Ram horns",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_313_DESC",
+        "desc_resolved": "Adds +1 Knockback to your basic attack if it's melee.",
+        "stats": {
+          "shield": 1
+        }
+      },
+      "314": {
+        "name": "Deer horns",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_314_DESC",
+        "desc_resolved": "Thorns 1. Your basic attack inflicts Bleed if it's melee."
+      },
+      "315": {
+        "name": "Fly Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_315_DESC",
+        "desc_resolved": "50% chance to spawn a Charmed Fly each turn. Start with Poison 1."
+      },
+      "316": {
+        "name": "Bat Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_316_DESC",
+        "desc_resolved": "You can see hidden things. 5% dodge chance."
+      },
+      "317": {
+        "name": "Bone Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_317_DESC",
+        "desc_resolved": "Whenever you down a unit, you have a 10% chance to reanimate that unit with 50% HP."
+      },
+      "318": {
+        "name": "Frog Eyes",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_318_DESC",
+        "desc_resolved": "You have Brace 1 while wet."
+      },
+      "319": {
+        "name": "Pierced Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_319_DESC",
+        "desc_resolved": "Gain +1 Charge when you take damage."
+      },
+      "320": {
+        "name": "Alien Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_320_DESC",
+        "desc_resolved": "+1 Kinetic Spikes."
+      },
+      "321": {
+        "name": "Spring Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_321_DESC",
+        "desc_resolved": "Units that contact you get knocked back 1 tile."
+      },
+      "322": {
+        "name": "Lamb Ears",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "323": {
+        "name": "Vamp Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_323_DESC",
+        "desc_resolved": "Gain 1 HP when your basic attack deals damage."
+      },
+      "325": {
+        "name": "Tree Branch",
+        "tag": null,
+        "desc": "MUTATION_EARS_325_DESC",
+        "desc_resolved": "If you're wet, gain +1 Charge and +1 [img:shield] at the end of your turn."
+      },
+      "326": {
+        "name": "Worm Ear",
+        "tag": null,
+        "desc": "MUTATION_EARS_326_DESC",
+        "desc_resolved": "5% chance to spawn a Maggot familiar each turn."
+      },
+      "327": {
+        "name": "Ant Antenna",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_327_DESC",
+        "desc_resolved": "An extra food pickup will spawn in each battle."
+      },
+      "328": {
+        "name": "Snake Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_328_DESC",
+        "desc_resolved": "5% chance to Petrify on damage and when hit."
+      },
+      "329": {
+        "name": "External Gills",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_329_DESC",
+        "desc_resolved": "Your basic attack leaves water tiles."
+      },
+      "330": {
+        "name": "Hook Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_330_DESC",
+        "desc_resolved": "Thorns 1. 10% chance to inflict Immobile on units that contact you."
+      },
+      "331": {
+        "name": "Mace Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_331_DESC",
+        "desc_resolved": "Your basic attack has +1 Knockback."
+      },
+      "332": {
+        "name": "Blubber Lobes",
+        "tag": null,
+        "desc": "MUTATION_EARS_332_DESC",
+        "desc_resolved": "Brace 1."
+      },
+      "333": {
+        "name": "Metal Plate",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 3
+        }
+      },
+      "334": {
+        "name": "Metal Detector",
+        "tag": null,
+        "desc": "MUTATION_EARS_334_DESC",
+        "desc_resolved": "Spawn 1-3 more coins/scrap around the map on random tiles at the start of each battle."
+      },
+      "335": {
+        "name": "Docked Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_335_DESC",
+        "desc_resolved": "Start with Bleed 1 and a bonus attack."
+      },
+      "336": {
+        "name": "Large Leaves",
+        "tag": null,
+        "desc": "MUTATION_EARS_336_DESC",
+        "desc_resolved": "You gain 3 mana at the end of your turn if you didn't use your movement action."
+      },
+      "337": {
+        "name": "Burning ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_337_DESC",
+        "desc_resolved": "Your basic attack inflicts Burn 1."
+      },
+      "338": {
+        "name": "Frozen ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_338_DESC",
+        "desc_resolved": "Your basic attack has a 15% chance to inflict Freeze."
+      },
+      "339": {
+        "name": "Lightning Rods",
+        "tag": null,
+        "desc": "MUTATION_EARS_339_DESC",
+        "desc_resolved": "You have electric immunity."
+      },
+      "340": {
+        "name": "Aura Ears",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "divine_shield": 1
+        }
+      },
+      "341": {
+        "name": "Large Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_341_DESC",
+        "desc_resolved": "10% chance to backflip when targeted."
+      },
+      "342": {
+        "name": "Infested Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_342_DESC",
+        "desc_resolved": "20% chance to spawn a Charmed Flea when damaged.",
+        "stats": {
+          "con": -1
+        }
+      },
+      "343": {
+        "name": "Long Antlers",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_343_DESC",
+        "desc_resolved": "Thorns 1."
+      },
+      "344": {
+        "name": "Kitten",
+        "tag": null,
+        "desc": "MUTATION_EARS_344_DESC",
+        "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed."
+      },
+      "345": {
+        "name": "Mouse Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_345_DESC",
+        "desc_resolved": "Units that contact or attack you have a 15% chance to get Charmed."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "anotia",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "lck": -2
+        }
+      },
+      "701": {
+        "name": "turner syndrome",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": -2
+        }
+      },
+      "702": {
+        "name": "underdeveloped ears",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -1
+        }
+      },
+      "703": {
+        "name": "low ears",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EARS_703_DESC",
+        "desc_resolved": "Start each battle with Confusion 2."
+      },
+      "704": {
+        "name": "wilted ears",
+        "tag": "birth_defect",
+        "desc": "MUTATION_EARS_704_DESC",
+        "desc_resolved": "Start each battle with Immobile 1."
+      },
+      "750": {
+        "name": "Jackrabbit Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_750_DESC",
+        "desc_resolved": "Your movement action is a jump."
+      },
+      "751": {
+        "name": "Folded Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_751_DESC",
+        "desc_resolved": "+10% dodge chance."
+      },
+      "752": {
+        "name": "Fin Ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_752_DESC",
+        "desc_resolved": "You have +2 Damage while wet."
+      },
+      "753": {
+        "name": "Goat Horns",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_753_DESC",
+        "desc_resolved": "+1 Knockback damage. Your basic attack has +1 Knockback."
+      },
+      "754": {
+        "name": "Electric Ears",
+        "tag": null,
+        "desc": "MUTATION_EARS_754_DESC",
+        "desc_resolved": "Electric damage you deal is increased by 1.",
+        "stats": {
+          "spd": 1
+        }
+      },
+      "755": {
+        "name": "Head Ferns",
+        "tag": null,
+        "desc": "MUTATION_EARS_755_DESC",
+        "desc_resolved": "Gain +1 Charge every time you cast a spell."
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_EARS_900_DESC",
+        "desc_resolved": "+10% dodge chance."
+      },
+      "1500": {
+        "name": "rat ears",
+        "tag": "animal",
+        "desc": "MUTATION_EARS_1500_DESC",
+        "desc_resolved": "+2% dodge chance"
+      },
+      "-2": {
+        "name": null,
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "dex": -2
+        }
+      }
+    },
+    "legs": {
+      "300": {
+        "name": "Frog legs",
+        "tag": "animal",
+        "desc": "MUTATION_LEGS_300_DESC",
+        "desc_resolved": "+1 movement range while wet. Water does not slow movement."
+      },
+      "301": {
+        "name": "Hooves",
+        "tag": "animal",
+        "desc": "MUTATION_LEGS_301_DESC",
+        "desc_resolved": "Your basic attack has a 5% chance to Stun.",
+        "stats": {
+          "spd": 1
+        }
+      },
+      "302": {
+        "name": "Tentacles",
+        "tag": "animal",
+        "desc": "MUTATION_LEGS_302_DESC",
+        "desc_resolved": "Knockback immunity."
+      },
+      "303": {
+        "name": "Lobster Claws",
+        "tag": "animal",
+        "desc": "MUTATION_LEGS_303_DESC",
+        "desc_resolved": "Your basic attack has a 5% chance to Immobilize."
+      },
+      "304": {
+        "name": "Muscular Legs",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1
+        }
+      },
+      "305": {
+        "name": "Tar Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_305_DESC",
+        "desc_resolved": "+5% dodge chance."
+      },
+      "306": {
+        "name": "Bug Legs",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "dex": 1
+        }
+      },
+      "307": {
+        "name": "Tires",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 1
+        }
+      },
+      "308": {
+        "name": "Human Legs",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "lck": 1
+        }
+      },
+      "309": {
+        "name": "Knife Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_309_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Bleed 3."
+      },
+      "310": {
+        "name": "Spring Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_310_DESC",
+        "desc_resolved": "Your movement action is a jump."
+      },
+      "311": {
+        "name": "Square Legs",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "312": {
+        "name": "Balloon Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_312_DESC",
+        "desc_resolved": "Your basic attack has +1 Knockback."
+      },
+      "313": {
+        "name": "Snake Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_313_DESC",
+        "desc_resolved": "+1 reach."
+      },
+      "314": {
+        "name": "Weapon Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_314_DESC",
+        "desc_resolved": "Your weapons have +1 Damage."
+      },
+      "315": {
+        "name": "Socks",
+        "tag": null,
+        "desc": "MUTATION_LEGS_315_DESC",
+        "desc_resolved": "Ice immunity."
+      },
+      "317": {
+        "name": "Raptor Claws",
+        "tag": null,
+        "desc": "MUTATION_LEGS_317_DESC",
+        "desc_resolved": "Your basic attack inflicts Bleed 1 if it's melee."
+      },
+      "318": {
+        "name": "Stigmata",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "divine_shield": 1
+        }
+      },
+      "319": {
+        "name": "High Tops",
+        "tag": null,
+        "desc": "MUTATION_LEGS_319_DESC",
+        "desc_resolved": "10% chance to gain a bonus move each turn."
+      },
+      "320": {
+        "name": "Talons",
+        "tag": null,
+        "desc": "MUTATION_LEGS_320_DESC",
+        "desc_resolved": "10% chance to gain a bonus attack each turn."
+      },
+      "321": {
+        "name": "Flippers",
+        "tag": null,
+        "desc": "MUTATION_LEGS_321_DESC",
+        "desc_resolved": "Moving through water tiles costs 0 movement."
+      },
+      "322": {
+        "name": "Bear Claws",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1,
+          "con": 1
+        }
+      },
+      "323": {
+        "name": "Beetle Feet",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2
+        }
+      },
+      "324": {
+        "name": "Branches",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "325": {
+        "name": "Extra Head",
+        "tag": "extra",
+        "desc": "MUTATION_LEGS_325_DESC",
+        "desc_resolved": "Collarless spells cost -1 mana.",
+        "stats": {
+          "spd": -2
+        }
+      },
+      "326": {
+        "name": "Needle Feet",
+        "tag": null,
+        "desc": "MUTATION_LEGS_326_DESC",
+        "desc_resolved": "Your basic attack inflicts a random debuff."
+      },
+      "327": {
+        "name": "Mushroom Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_327_DESC",
+        "desc_resolved": "Gain 2 random stat ups and 1 random stat down at the end of each turn."
+      },
+      "328": {
+        "name": "Glass Bottle",
+        "tag": null,
+        "desc": "MUTATION_LEGS_328_DESC",
+        "desc_resolved": "Equip a temporary Bottles weapon at the start of the battle."
+      },
+      "329": {
+        "name": "Water Bottle",
+        "tag": null,
+        "desc": "MUTATION_LEGS_329_DESC",
+        "desc_resolved": "Equip a temporary Water Bottle trinket at the start of the battle."
+      },
+      "330": {
+        "name": "Sausage Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_330_DESC",
+        "desc_resolved": "+1 Health Regeneration"
+      },
+      "331": {
+        "name": "Jet Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_331_DESC",
+        "desc_resolved": "+1 movement range. Your movement action is a jump."
+      },
+      "332": {
+        "name": "Peg Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_332_DESC",
+        "desc_resolved": "50% chance to spawn a pickup on an adjacent tile when you end your turn.",
+        "stats": {
+          "spd": -1
+        }
+      },
+      "333": {
+        "name": "Wing Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_333_DESC",
+        "desc_resolved": "Your basic attack has wind element and +1 Knockback."
+      },
+      "334": {
+        "name": "Ape Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_334_DESC",
+        "desc_resolved": "Your basic attack tosses units into the air if it's melee.",
+        "stats": {
+          "str": 1
+        }
+      },
+      "335": {
+        "name": "Glass Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_335_DESC",
+        "desc_resolved": "+1 Bleed Thorns. Spawn glass when you take damage."
+      },
+      "336": {
+        "name": "Crow Legs",
+        "tag": "bird",
+        "desc": "MUTATION_LEGS_336_DESC",
+        "desc_resolved": "Your basic attack inflicts Soul Link."
+      },
+      "337": {
+        "name": "Floating Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_337_DESC",
+        "desc_resolved": "You are immune to tile effects."
+      },
+      "339": {
+        "name": "Wing Legs 2",
+        "tag": "bird",
+        "desc": "MUTATION_LEGS_339_DESC",
+        "desc_resolved": "Fly away when hit.",
+        "stats": {
+          "spd": 2
+        }
+      },
+      "340": {
+        "name": "Lucky Toe",
+        "tag": null,
+        "desc": "MUTATION_LEGS_340_DESC",
+        "desc_resolved": "When you take damage, gain +1 [img:lck]."
+      },
+      "341": {
+        "name": "Whip Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_341_DESC",
+        "desc_resolved": "Your basic attack makes units face away from you."
+      },
+      "343": {
+        "name": "Kitten Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_343_DESC",
+        "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": "melted",
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "lobster claw",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "str": -2
+        }
+      },
+      "701": {
+        "name": "extra finger",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "dex": -2
+        }
+      },
+      "702": {
+        "name": "club foot",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "spd": -2
+        }
+      },
+      "703": {
+        "name": "syndactyly",
+        "tag": "birth_defect",
+        "desc": "MUTATION_LEGS_703_DESC",
+        "desc_resolved": "Water does not slow movement.",
+        "stats": {
+          "spd": -2
+        }
+      },
+      "704": {
+        "name": "curled paw",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "str": -1
+        }
+      },
+      "705": {
+        "name": "club foot2",
+        "tag": "birth_defect",
+        "desc": "MUTATION_LEGS_705_DESC",
+        "desc_resolved": "Trample."
+      },
+      "706": {
+        "name": "backwards knees",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "spd": -1
+        }
+      },
+      "707": {
+        "name": "blob legs",
+        "tag": "birth_defect",
+        "desc": "MUTATION_LEGS_707_DESC",
+        "desc_resolved": "Permanently Slow.",
+        "stats": {
+          "str": 1
+        }
+      },
+      "754": {
+        "name": "Wing Hoof Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_754_DESC",
+        "desc_resolved": "Your movement action is a jump. Your basic attack inflicts Bruise."
+      },
+      "756": {
+        "name": "Sonichu Legs",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2
+        }
+      },
+      "757": {
+        "name": "bigfoot Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_757_DESC",
+        "desc_resolved": "Trample."
+      },
+      "758": {
+        "name": "nessie Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_758_DESC",
+        "desc_resolved": "You have All Stats Up while wet."
+      },
+      "759": {
+        "name": "nessie Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_759_DESC",
+        "desc_resolved": "You have All Stats Up while wet."
+      },
+      "761": {
+        "name": "mothman Legs",
+        "tag": null,
+        "desc": "MUTATION_LEGS_761_DESC",
+        "desc_resolved": "Your movement action is a jump. Your basic attack inflicts Bleed."
+      },
+      "762": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_LEGS_762_DESC",
+        "desc_resolved": "Ignore the effects of tiles and traps."
+      },
+      "763": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_LEGS_763_DESC",
+        "desc_resolved": "Ignore the effects of tiles and traps."
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_LEGS_900_DESC",
+        "desc_resolved": "Ignore the effects of tiles and traps."
+      }
+    },
+    "mouth": {
+      "2": {
+        "name": "no mouth (frame 702)",
+        "tag": "birth_defect",
+        "desc": "MUTATION_MOUTH_M2_DESC"
+      },
+      "300": {
+        "name": "Sabertoothed",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "str": 1
+        }
+      },
+      "301": {
+        "name": "Hippo Teeth",
+        "tag": "animal",
+        "desc": "MUTATION_MOUTH_301_DESC",
+        "desc_resolved": "Gain 1 health when you deal damage."
+      },
+      "302": {
+        "name": "Flesh Kid",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_302_DESC",
+        "desc_resolved": "+1 Health Regeneration"
+      },
+      "303": {
+        "name": "Delerious",
+        "tag": "melted",
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "304": {
+        "name": "Spider",
+        "tag": "animal",
+        "desc": "MUTATION_MOUTH_304_DESC",
+        "desc_resolved": "Your basic attack inflicts Poison."
+      },
+      "305": {
+        "name": "Ash",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_305_DESC",
+        "desc_resolved": "+100 corpse health."
+      },
+      "306": {
+        "name": "Famine",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_306_DESC",
+        "desc_resolved": "10% chance to spawn a Fly when you take damage."
+      },
+      "307": {
+        "name": "Alien Chomp",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_307_DESC",
+        "desc_resolved": "Your basic attack has a 1% chance to instakill."
+      },
+      "308": {
+        "name": "Licky",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_308_DESC",
+        "desc_resolved": "+1 Health Regeneration"
+      },
+      "309": {
+        "name": "Jacko",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_309_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Fear."
+      },
+      "310": {
+        "name": "Lip Fillers",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "311": {
+        "name": "Leech Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_311_DESC",
+        "desc_resolved": "Your basic attack inflicts Leech 1."
+      },
+      "312": {
+        "name": "Bear Trap Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_312_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Immobile if it's melee.",
+        "stats": {
+          "str": 1
+        }
+      },
+      "313": {
+        "name": "Full Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_313_DESC",
+        "desc_resolved": "At the end of each round, spit at an enemy ."
+      },
+      "314": {
+        "name": "Gold Tooth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_314_DESC",
+        "desc_resolved": "Spawn 5-10 coins when downed."
+      },
+      "315": {
+        "name": "Double Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_315_DESC",
+        "desc_resolved": "10% chance to gain a bonus attack each turn."
+      },
+      "316": {
+        "name": "Horse Face",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_316_DESC",
+        "desc_resolved": "Your basic attack inflicts Bruise.",
+        "stats": {
+          "cha": -1
+        }
+      },
+      "317": {
+        "name": "Glass Teeth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_317_DESC",
+        "desc_resolved": "Spawn glass when you take damage. +1 Bleed Thorns."
+      },
+      "318": {
+        "name": "mole mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_318_DESC",
+        "desc_resolved": "Your movement action is Dig."
+      },
+      "319": {
+        "name": "Catfish Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_319_DESC",
+        "desc_resolved": "Water does not slow movement. +1 Health Regeneration while wet."
+      },
+      "321": {
+        "name": "Zipper Mouth",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 3
+        }
+      },
+      "322": {
+        "name": "Shark Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_322_DESC",
+        "desc_resolved": "Your basic attack inflicts Bleed."
+      },
+      "323": {
+        "name": "Gills",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_323_DESC",
+        "desc_resolved": "+2 Health Regeneration while wet."
+      },
+      "324": {
+        "name": "Eyeball",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_324_DESC",
+        "desc_resolved": "+1 range."
+      },
+      "326": {
+        "name": "Double Mouth 2",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_326_DESC",
+        "desc_resolved": "Gain +1 Health Regeneration whenever you eat food."
+      },
+      "327": {
+        "name": "Clown Lips",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_327_DESC",
+        "desc_resolved": "You can reroll your options when you level up."
+      },
+      "328": {
+        "name": "Bandage Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_328_DESC",
+        "desc_resolved": "Can't eat food, use consumables, or use musical abilities. +2 Health Regeneration"
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "cleft pallet",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -2
+        }
+      },
+      "701": {
+        "name": "anodontia",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": -1
+        }
+      },
+      "703": {
+        "name": "underbite",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "con": 1,
+          "int": -2
+        }
+      },
+      "704": {
+        "name": "overbite",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "str": 1,
+          "cha": -2
+        }
+      },
+      "705": {
+        "name": "Fetus Mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_705_DESC",
+        "desc_resolved": "Your basic attack can be used two extra times each turn but is replaced with a 1-damage spit attack."
+      },
+      "750": {
+        "name": "beaver teeth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_750_DESC",
+        "desc_resolved": "Your basic attack destroys inanimate objects and turns tiles into dirt."
+      },
+      "751": {
+        "name": "pig snout",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2
+        }
+      },
+      "752": {
+        "name": "Dog tongue",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_752_DESC",
+        "desc_resolved": "Your basic attack creates water tiles."
+      },
+      "754": {
+        "name": "Isaacs mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_754_DESC",
+        "desc_resolved": "Adjacent units get All Stats Down."
+      },
+      "755": {
+        "name": "Edmund beard",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_755_DESC",
+        "desc_resolved": "Ice Immunity."
+      },
+      "756": {
+        "name": "Tylers beard",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "757": {
+        "name": "Mermaid mouth",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_757_DESC",
+        "desc_resolved": "Your basic attack inflicts Bleed."
+      },
+      "760": {
+        "name": "bigfoot mouth",
+        "tag": "food",
+        "desc": "MUTATION_MOUTH_760_DESC",
+        "desc_resolved": "When a food pickup spawns within 2 tiles of you, move to it."
+      },
+      "900": {
+        "name": "Slender",
+        "tag": null,
+        "desc": "MUTATION_MOUTH_900_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Fear."
+      },
+      "1026": {
+        "name": "spider mouth",
+        "tag": "animal",
+        "desc": "MUTATION_MOUTH_1026_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to inflict Webbed."
+      },
+      "1500": {
+        "name": "rat mouth",
+        "tag": "animal",
+        "desc": "MUTATION_MOUTH_1500_DESC",
+        "desc_resolved": "Your basic attack inflicts Poison."
+      },
+      "-2": {
+        "name": null,
+        "tag": "birth_defect",
+        "desc": "MUTATION_MOUTH_M2_DESC",
+        "desc_resolved": "Can't eat food, use consumables, or use musical abilities."
+      }
+    },
+    "head": {
+      "300": {
+        "name": "Square head",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "301": {
+        "name": "Sloth head",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 1,
+          "con": 1,
+          "int": -1
+        }
+      },
+      "302": {
+        "name": "Big brain",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "303": {
+        "name": "Spioke head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_303_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "304": {
+        "name": "Sludge head",
+        "tag": "melted",
+        "desc": "MUTATION_HEAD_304_DESC",
+        "desc_resolved": "+2 Health Regeneration +5% dodge chance.",
+        "stats": {
+          "cha": -2
+        }
+      },
+      "305": {
+        "name": "Strong Chin",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "306": {
+        "name": "Alien head",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "307": {
+        "name": "Bump-on-the-head Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_307_DESC",
+        "desc_resolved": "Units that contact you get knocked back 1 tile.",
+        "stats": {
+          "shield": 1
+        }
+      },
+      "308": {
+        "name": "Frog Head",
+        "tag": "animal",
+        "desc": "MUTATION_HEAD_308_DESC",
+        "desc_resolved": "+1 movement range while wet. Water does not slow movement."
+      },
+      "309": {
+        "name": "half moon",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "lck": 2
+        }
+      },
+      "310": {
+        "name": "rock head",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 2
+        }
+      },
+      "311": {
+        "name": "Money Bag head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_311_DESC",
+        "desc_resolved": "Spawn a coin when you take damage."
+      },
+      "312": {
+        "name": "Magnet Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_312_DESC",
+        "desc_resolved": "Your basic attack pulls units towards you."
+      },
+      "313": {
+        "name": "Poop Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_313_DESC",
+        "desc_resolved": "Poop when you take damage."
+      },
+      "314": {
+        "name": "Pyramid Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_314_DESC",
+        "desc_resolved": "Gain +1 [img:int] at the end of each turn."
+      },
+      "315": {
+        "name": "Upside Down Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_315_DESC",
+        "desc_resolved": "At the start of each battle, swap your highest and lowest stats."
+      },
+      "316": {
+        "name": "Fractured Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_316_DESC",
+        "desc_resolved": "When you take damage from an attack, gain a random buff."
+      },
+      "317": {
+        "name": "Sideways Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_317_DESC",
+        "desc_resolved": "+5% dodge chance."
+      },
+      "318": {
+        "name": "Long Neck",
+        "tag": null,
+        "desc": "MUTATION_HEAD_318_DESC",
+        "desc_resolved": "+1 range."
+      },
+      "319": {
+        "name": "Exposed Brain",
+        "tag": null,
+        "desc": "MUTATION_HEAD_319_DESC",
+        "desc_resolved": "Gain +1 [img:int] permanently at the end of each battle. Start each battle with Bruise 2."
+      },
+      "320": {
+        "name": "Bubble Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_320_DESC",
+        "desc_resolved": "Your basic attack has +2 Knockback."
+      },
+      "321": {
+        "name": "Button Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_321_DESC",
+        "desc_resolved": "You have a 5% chance to inflict Fear on units who contact or attack you."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": "melted",
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "microcephaly",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": -2
+        }
+      },
+      "701": {
+        "name": "macrocephaly",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": -2
+        }
+      },
+      "702": {
+        "name": "concave head",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": -1
+        }
+      },
+      "703": {
+        "name": "soft spot",
+        "tag": "birth_defect",
+        "desc": "MUTATION_HEAD_703_DESC",
+        "desc_resolved": "Attacks against your face count as backstabs."
+      },
+      "704": {
+        "name": "cyclops",
+        "tag": "birth_defect",
+        "desc": "MUTATION_HEAD_704_DESC",
+        "desc_resolved": "20% miss chance.\nYour spells cost 1 less mana."
+      },
+      "705": {
+        "name": "conjoined head",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -3
+        }
+      },
+      "706": {
+        "name": "sloth",
+        "tag": "birth_defect",
+        "desc": "MUTATION_HEAD_706_DESC",
+        "desc_resolved": "Brace 1.",
+        "stats": {
+          "cha": -3
+        }
+      },
+      "750": {
+        "name": "spiked head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_750_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "753": {
+        "name": "tyler head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_753_DESC",
+        "desc_resolved": "You are immune to ice."
+      },
+      "757": {
+        "name": "grey head",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2
+        }
+      },
+      "759": {
+        "name": "Human Head",
+        "tag": null,
+        "desc": "MUTATION_HEAD_759_DESC",
+        "desc_resolved": "Take an extra turn at the start of the battle."
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_HEAD_900_DESC",
+        "desc_resolved": "+1 range. +1 reach.",
+        "stats": {
+          "cha": -1
+        }
+      }
+    },
+    "eyebrows": {
+      "2": {
+        "name": "no eyebrows (completely missing part)",
+        "tag": "birth_defect",
+        "desc": null
+      },
+      "300": {
+        "name": "Bolt Brows",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 1
+        }
+      },
+      "301": {
+        "name": "Confusing Brows",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_301_DESC",
+        "desc_resolved": "You have a 10% chance to inflict Confusion on units who contact or attack you."
+      },
+      "302": {
+        "name": "Metal Brows",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "shield": 2
+        }
+      },
+      "303": {
+        "name": "Fancy Makeup",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "304": {
+        "name": "Wolfy Brows",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "dex": 1
+        }
+      },
+      "305": {
+        "name": "Dotty Brows",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "lck": 1
+        }
+      },
+      "306": {
+        "name": "Clown Makeup",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_306_DESC",
+        "desc_resolved": "You have a 5% chance to inflict Fear on units who contact or attack you."
+      },
+      "307": {
+        "name": "Antennae",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_307_DESC",
+        "desc_resolved": "+1 Mana Regeneration. +1 Health Regeneration."
+      },
+      "308": {
+        "name": "Long Lashes",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "309": {
+        "name": "Spiny Brows",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_309_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "310": {
+        "name": "Extra Eye",
+        "tag": "extra",
+        "desc": "MUTATION_EYEBROWS_310_DESC",
+        "desc_resolved": "+1 Range."
+      },
+      "311": {
+        "name": "Stacked Brows",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_311_DESC",
+        "desc_resolved": "When you cast your third spell each turn, heal 2."
+      },
+      "313": {
+        "name": "Square Glasses",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_313_DESC",
+        "desc_resolved": "Spawn 1-2 extra pickups in each battle."
+      },
+      "314": {
+        "name": "Holy Brows",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_314_DESC",
+        "desc_resolved": "When an allied cat dies, gain +2 Damage."
+      },
+      "315": {
+        "name": "Triangle Eyes",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_315_DESC",
+        "desc_resolved": "You can reroll your options when you level up."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "con": -1
+        }
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "dex": -1
+        }
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "cha": -1
+        }
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "int": -1
+        }
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "spd": -1
+        }
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": 2,
+          "lck": -1
+        }
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "con": 2
+        }
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "con": 2
+        }
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "cha": -1
+        }
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "int": -1
+        }
+      },
+      "410": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "spd": -1
+        }
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 2,
+          "lck": -1
+        }
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "con": -1
+        }
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "dex": 2
+        }
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "cha": -1
+        }
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "int": -1
+        }
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "spd": -1
+        }
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": 2,
+          "lck": -1
+        }
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "int": 2
+        }
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "int": 2
+        }
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "cha": -1
+        }
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "int": 2
+        }
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "spd": -1
+        }
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": 2,
+          "lck": -1
+        }
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "cha": 2
+        }
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "cha": 2
+        }
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "cha": 2
+        }
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "cha": 2
+        }
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "cha": 2
+        }
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 2,
+          "lck": -1
+        }
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "lck": 2
+        }
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "lck": 2
+        }
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": -1,
+          "lck": 2
+        }
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "lck": 2
+        }
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": -1,
+          "lck": 2
+        }
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "lck": 2
+        }
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": -1,
+          "spd": 2
+        }
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "str": -1,
+          "spd": 2
+        }
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "cha": -1
+        }
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "int": -1,
+          "spd": 2
+        }
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "dex": -1,
+          "spd": 2
+        }
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2,
+          "lck": -1
+        }
+      },
+      "700": {
+        "name": "bushy",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "lck": -1
+        }
+      },
+      "701": {
+        "name": "no eyebrows",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -1
+        }
+      },
+      "702": {
+        "name": "unibrow",
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "int": -1
+        }
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": "MUTATION_EYEBROWS_900_DESC",
+        "desc_resolved": "+5% dodge chance. Your basic attack has a 1% chance to inflict Freeze."
+      },
+      "-2": {
+        "name": null,
+        "tag": "birth_defect",
+        "desc": null,
+        "stats": {
+          "cha": -2
+        }
+      }
+    },
+    "tail": {
+      "2": {
+        "name": "no tail (702)",
+        "tag": "birth_defect",
+        "desc": null
+      },
+      "300": {
+        "name": "Extra Paw",
+        "tag": "extra",
+        "desc": null,
+        "stats": {
+          "str": 1
+        }
+      },
+      "301": {
+        "name": "Turtle Head",
+        "tag": "animal",
+        "desc": "MUTATION_TAIL_301_DESC",
+        "desc_resolved": "Poop when you take damage."
+      },
+      "302": {
+        "name": "Scorpion Tail",
+        "tag": "animal",
+        "desc": "MUTATION_TAIL_302_DESC",
+        "desc_resolved": "Your basic attack inflicts Poison."
+      },
+      "303": {
+        "name": "Rock Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_303_DESC",
+        "desc_resolved": "Your basic attack has a 5% chance to Stun."
+      },
+      "304": {
+        "name": "Monkey Tail",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "dex": 1
+        }
+      },
+      "305": {
+        "name": "Cacuts Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_305_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "306": {
+        "name": "Big Lump Tail",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "307": {
+        "name": "Antenna Tail",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 1
+        }
+      },
+      "308": {
+        "name": "Baby Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_308_DESC",
+        "desc_resolved": "+5% dodge chance.",
+        "stats": {
+          "lck": 1
+        }
+      },
+      "309": {
+        "name": "Baboon's' Ass",
+        "tag": "animal",
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "310": {
+        "name": "Hand Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_310_DESC",
+        "desc_resolved": "Your basic attack has a 10% chance to repeat once."
+      },
+      "311": {
+        "name": "Thorn Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_311_DESC",
+        "desc_resolved": "Thorns 1."
+      },
+      "312": {
+        "name": "Holy Tail",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "divine_shield": 1
+        }
+      },
+      "313": {
+        "name": "Hose Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_313_DESC",
+        "desc_resolved": "Your basic attack creates water tiles."
+      },
+      "314": {
+        "name": "Bone Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_314_DESC",
+        "desc_resolved": "Whenever you down a unit, you have a 10% chance to reanimate that unit with 50% HP."
+      },
+      "315": {
+        "name": "Maggot Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_315_DESC",
+        "desc_resolved": "20% chance to spawn a Maggot when hit."
+      },
+      "316": {
+        "name": "Grass Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_316_DESC",
+        "desc_resolved": "25% chance to spawn tall grass wherever you end your movement."
+      },
+      "317": {
+        "name": "Skunk Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_317_DESC",
+        "desc_resolved": "When hit, fart a Poison 4 attack with Knockback behind you."
+      },
+      "318": {
+        "name": "Rattle",
+        "tag": null,
+        "desc": "MUTATION_TAIL_318_DESC",
+        "desc_resolved": "Your basic attack inflicts Poison."
+      },
+      "319": {
+        "name": "Snake Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_319_DESC",
+        "desc_resolved": "Units who contact you get Poisoned."
+      },
+      "320": {
+        "name": "Glass Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_320_DESC",
+        "desc_resolved": "Bleed 1. Bleed Thorns 2."
+      },
+      "321": {
+        "name": "Extra Head",
+        "tag": "extra",
+        "desc": null,
+        "stats": {
+          "int": 1
+        }
+      },
+      "322": {
+        "name": "Exhaust Pipe",
+        "tag": null,
+        "desc": "MUTATION_TAIL_322_DESC",
+        "desc_resolved": "Gain +1 [img:spd] each turn."
+      },
+      "323": {
+        "name": "Jetpack Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_323_DESC",
+        "desc_resolved": "Your movement action is a jump."
+      },
+      "324": {
+        "name": "Wing Tail",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "spd": 2
+        }
+      },
+      "325": {
+        "name": "Spring Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_325_DESC",
+        "desc_resolved": "Units that contact you get knocked back 2 tiles."
+      },
+      "326": {
+        "name": "Eyeball Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_326_DESC",
+        "desc_resolved": "10% dodge chance. Bruise 1."
+      },
+      "327": {
+        "name": "Tree Branch Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_327_DESC",
+        "desc_resolved": "If you don't move, gain 3 Charge at the end of the turn."
+      },
+      "329": {
+        "name": "Mr. Worm",
+        "tag": null,
+        "desc": "MUTATION_TAIL_329_DESC",
+        "desc_resolved": "You can unequip cursed items and parasites."
+      },
+      "331": {
+        "name": "Dice Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_331_DESC",
+        "desc_resolved": "You can reroll your options when you level up."
+      },
+      "332": {
+        "name": "Tennis Racket",
+        "tag": null,
+        "desc": "MUTATION_TAIL_332_DESC",
+        "desc_resolved": "+25% chance to reflect projectiles."
+      },
+      "334": {
+        "name": "Fire Flower Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_334_DESC",
+        "desc_resolved": "Your basic attack inflicts Burn 1."
+      },
+      "336": {
+        "name": "Horn Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_336_DESC",
+        "desc_resolved": "+1 Thorns."
+      },
+      "337": {
+        "name": "Tail Feather",
+        "tag": "bird",
+        "desc": "MUTATION_TAIL_337_DESC",
+        "desc_resolved": "Your basic attack is wind element."
+      },
+      "338": {
+        "name": "Flame Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_338_DESC",
+        "desc_resolved": "Your basic attack inflicts Burn 1."
+      },
+      "339": {
+        "name": "Light Bulb",
+        "tag": null,
+        "desc": "MUTATION_TAIL_339_DESC",
+        "desc_resolved": "While at full mana, you have +2 Damage."
+      },
+      "341": {
+        "name": "Tongue Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_341_DESC",
+        "desc_resolved": "Gain +1 Charge when you take damage."
+      },
+      "342": {
+        "name": "Kitten Tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_342_DESC",
+        "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed."
+      },
+      "400": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "401": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "402": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "403": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "404": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "405": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "406": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "407": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "408": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "409": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "410": {
+        "name": null,
+        "tag": "melted",
+        "desc": null
+      },
+      "411": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "412": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "413": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "414": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "415": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "416": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "417": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "418": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "419": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "420": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "421": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "422": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "423": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "424": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "425": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "426": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "427": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "428": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "429": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "430": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "431": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "432": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "433": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "434": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "435": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "436": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "437": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "438": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "439": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "440": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "441": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "700": {
+        "name": "kinked tail",
+        "tag": "birth_defect",
+        "desc": null
+      },
+      "701": {
+        "name": "lipoma",
+        "tag": "birth_defect",
+        "desc": null
+      },
+      "703": {
+        "name": "heavy tail",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TAIL_703_DESC"
+      },
+      "704": {
+        "name": "forked tail",
+        "tag": "birth_defect",
+        "desc": "MUTATION_TAIL_704_DESC"
+      },
+      "750": {
+        "name": "Bunny Tail*",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "cha": 1
+        }
+      },
+      "751": {
+        "name": "Beaver Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_751_DESC",
+        "desc_resolved": "+1 Brace."
+      },
+      "752": {
+        "name": "Pig Tail*",
+        "tag": null,
+        "desc": null,
+        "stats": {
+          "con": 1
+        }
+      },
+      "754": {
+        "name": "Spiked Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_754_DESC"
+      },
+      "755": {
+        "name": "mermaid Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_755_DESC"
+      },
+      "756": {
+        "name": "Devil Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_756_DESC"
+      },
+      "757": {
+        "name": "sonichu Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_757_DESC"
+      },
+      "759": {
+        "name": "slender Tail*",
+        "tag": null,
+        "desc": "MUTATION_TAIL_759_DESC"
+      },
+      "760": {
+        "name": "human head tail",
+        "tag": null,
+        "desc": "MUTATION_TAIL_760_DESC"
+      },
+      "900": {
+        "name": "slender",
+        "tag": null,
+        "desc": null
+      },
+      "1500": {
+        "name": "rat tail",
+        "tag": "animal",
+        "desc": null
+      },
+      "/*753": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      },
+      "passives": {
+        "name": null,
+        "tag": null,
+        "desc": null
+      }
+    }
+  }
+}

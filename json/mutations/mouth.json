@@ -1,0 +1,544 @@
+{
+  "mouth": {
+    "300": {
+      "tag": "animal",
+      "str": "1"
+    },
+    "301": {
+      "tag": "animal",
+      "desc": "MUTATION_MOUTH_301_DESC",
+      "desc_resolved": "Gain 1 health when you deal damage.",
+      "passives": {
+        "FlatHealWhenDealDamage": "1"
+      }
+    },
+    "302": {
+      "desc": "MUTATION_MOUTH_302_DESC",
+      "desc_resolved": "+1 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "1"
+      }
+    },
+    "303": {
+      "tag": "melted",
+      "int": "1"
+    },
+    "304": {
+      "tag": "animal",
+      "desc": "MUTATION_MOUTH_304_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        }
+      }
+    },
+    "305": {
+      "desc": "MUTATION_MOUTH_305_DESC",
+      "desc_resolved": "+100 corpse health.",
+      "passives": {
+        "AddCorpseHealth": "100"
+      }
+    },
+    "306": {
+      "desc": "MUTATION_MOUTH_306_DESC",
+      "desc_resolved": "10% chance to spawn a Fly when you take damage.",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "Fly",
+          "good": "false",
+          "chance": "10%"
+        }
+      }
+    },
+    "307": {
+      "desc": "MUTATION_MOUTH_307_DESC",
+      "desc_resolved": "Your basic attack has a 1% chance to instakill.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Instakill": [
+            "25,",
+            ".01"
+          ]
+        }
+      }
+    },
+    "308": {
+      "desc": "MUTATION_MOUTH_308_DESC",
+      "desc_resolved": "+1 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "1"
+      }
+    },
+    "309": {
+      "desc": "MUTATION_MOUTH_309_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Fear.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Fear": [
+            "1",
+            ".1"
+          ]
+        }
+      }
+    },
+    "310": {
+      "cha": "1"
+    },
+    "311": {
+      "desc": "MUTATION_MOUTH_311_DESC",
+      "desc_resolved": "Your basic attack inflicts Leech 1.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Leeches": "1"
+        }
+      }
+    },
+    "312": {
+      "desc": "MUTATION_MOUTH_312_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Immobile if it's melee.",
+      "str": "1",
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "Immobile": [
+            "1,",
+            ".1"
+          ]
+        }
+      }
+    },
+    "313": {
+      "desc": "MUTATION_MOUTH_313_DESC",
+      "desc_resolved": "At the end of each round, spit at an enemy .",
+      "passives": {
+        "StatusEachRoundEnd": {
+          "UseAbility": "Spit"
+        }
+      }
+    },
+    "314": {
+      "desc": "MUTATION_MOUTH_314_DESC",
+      "desc_resolved": "Spawn 5-10 coins when downed.",
+      "passives": {
+        "StatusOnDie": {
+          "ScatterCoins": [
+            "1",
+            ".5"
+          ]
+        }
+      }
+    },
+    "315": {
+      "desc": "MUTATION_MOUTH_315_DESC",
+      "desc_resolved": "10% chance to gain a bonus attack each turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "Quivered": [
+            "1,",
+            "0.1"
+          ]
+        }
+      }
+    },
+    "316": {
+      "desc": "MUTATION_MOUTH_316_DESC",
+      "desc_resolved": "Your basic attack inflicts Bruise.",
+      "cha": "-1",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bruise": "1"
+        }
+      }
+    },
+    "317": {
+      "desc": "MUTATION_MOUTH_317_DESC",
+      "desc_resolved": "Spawn glass when you take damage. +1 Bleed Thorns.",
+      "passives": {
+        "BleedThorns": "1",
+        "StatusOnTookDamage": {
+          "ChangeTilesUnder": "GlassTile"
+        }
+      }
+    },
+    "318": {
+      "desc": "MUTATION_MOUTH_318_DESC",
+      "desc_resolved": "Your movement action is Dig.",
+      "passives": {
+        "ReplaceBasicMove_Mutation": "BasicDig"
+      }
+    },
+    "319": {
+      "desc": "MUTATION_MOUTH_319_DESC",
+      "desc_resolved": "Water does not slow movement. +1 Health Regeneration while wet.",
+      "passives": {
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "HealthRegenUp": "1"
+          }
+        },
+        "WaterWalk": "1"
+      }
+    },
+    "321": {
+      "shield": "3"
+    },
+    "322": {
+      "desc": "MUTATION_MOUTH_322_DESC",
+      "desc_resolved": "Your basic attack inflicts Bleed.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "323": {
+      "desc": "MUTATION_MOUTH_323_DESC",
+      "desc_resolved": "+2 Health Regeneration while wet.",
+      "passives": {
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "HealthRegenUp": "2"
+          }
+        }
+      }
+    },
+    "324": {
+      "desc": "MUTATION_MOUTH_324_DESC",
+      "desc_resolved": "+1 range.",
+      "passives": {
+        "AddBonusRange": "1"
+      }
+    },
+    "326": {
+      "desc": "MUTATION_MOUTH_326_DESC",
+      "desc_resolved": "Gain +1 Health Regeneration whenever you eat food.",
+      "passives": {
+        "StatusOnEatFood": {
+          "HealthRegenUp": "1"
+        }
+      }
+    },
+    "327": {
+      "desc": "MUTATION_MOUTH_327_DESC",
+      "desc_resolved": "You can reroll your options when you level up.",
+      "passives": {
+        "AddLevelUpRerolls": "1"
+      }
+    },
+    "328": {
+      "desc": "MUTATION_MOUTH_328_DESC",
+      "desc_resolved": "Can't eat food, use consumables, or use musical abilities. +2 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "2",
+        "Vegan": "1",
+        "HouseFoodRequirementMultiplier": "0",
+        "DisableAbilitiesWithTag": "musical",
+        "BlacklistPickupType": "catnip"
+      }
+    },
+    "750": {
+      "desc": "MUTATION_MOUTH_750_DESC",
+      "desc_resolved": "Your basic attack destroys inanimate objects and turns tiles into dirt.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": "DirtTile",
+          "VaporizeInanimate": "1"
+        }
+      }
+    },
+    "751": {
+      "con": "2"
+    },
+    "752": {
+      "desc": "MUTATION_MOUTH_752_DESC",
+      "desc_resolved": "Your basic attack creates water tiles.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": "WaterTile"
+        },
+        "AddElementsToBasicAttack": "Water"
+      }
+    },
+    "754": {
+      "desc": "MUTATION_MOUTH_754_DESC",
+      "desc_resolved": "Adjacent units get All Stats Down.",
+      "passives": {
+        "DepressionAura": "1"
+      }
+    },
+    "755": {
+      "desc": "MUTATION_MOUTH_755_DESC",
+      "desc_resolved": "Ice Immunity.",
+      "passives": {
+        "ElementImmune": "Ice"
+      }
+    },
+    "756": {
+      "int": "1"
+    },
+    "757": {
+      "desc": "MUTATION_MOUTH_757_DESC",
+      "desc_resolved": "Your basic attack inflicts Bleed.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "760": {
+      "desc": "MUTATION_MOUTH_760_DESC",
+      "desc_resolved": "When a food pickup spawns within 2 tiles of you, move to it.",
+      "passives": {
+        "AbilityWhenTaggedCharacterMovesNear": {
+          "ability": "move",
+          "tag": "food",
+          "range": "2"
+        }
+      }
+    },
+    "900": {
+      "desc": "MUTATION_MOUTH_900_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Fear.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Fear": [
+            "1",
+            ".1"
+          ]
+        }
+      }
+    },
+    "1500": {
+      "tag": "animal",
+      "desc": "MUTATION_MOUTH_1500_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        }
+      }
+    },
+    "1026": {
+      "tag": "animal",
+      "desc": "MUTATION_MOUTH_1026_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Webbed.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Webbed": [
+            "1",
+            ".1"
+          ]
+        }
+      }
+    },
+    "400": {
+      "str": "2",
+      "con": "-1"
+    },
+    "401": {
+      "str": "2",
+      "dex": "-1"
+    },
+    "402": {
+      "str": "2",
+      "cha": "-1"
+    },
+    "403": {
+      "str": "2",
+      "int": "-1"
+    },
+    "404": {
+      "str": "2",
+      "spd": "-1"
+    },
+    "405": {
+      "str": "2",
+      "lck": "-1"
+    },
+    "406": {
+      "con": "2",
+      "str": "-1"
+    },
+    "407": {
+      "con": "2",
+      "dex": "-1"
+    },
+    "408": {
+      "con": "2",
+      "cha": "-1"
+    },
+    "409": {
+      "con": "2",
+      "int": "-1"
+    },
+    "410": {
+      "con": "2",
+      "spd": "-1"
+    },
+    "411": {
+      "con": "2",
+      "lck": "-1"
+    },
+    "412": {
+      "dex": "2",
+      "con": "-1"
+    },
+    "413": {
+      "dex": "2",
+      "str": "-1"
+    },
+    "414": {
+      "dex": "2",
+      "cha": "-1"
+    },
+    "415": {
+      "dex": "2",
+      "int": "-1"
+    },
+    "416": {
+      "dex": "2",
+      "spd": "-1"
+    },
+    "417": {
+      "dex": "2",
+      "lck": "-1"
+    },
+    "418": {
+      "int": "2",
+      "con": "-1"
+    },
+    "419": {
+      "int": "2",
+      "dex": "-1"
+    },
+    "420": {
+      "int": "2",
+      "cha": "-1"
+    },
+    "421": {
+      "int": "2",
+      "str": "-1"
+    },
+    "422": {
+      "int": "2",
+      "spd": "-1"
+    },
+    "423": {
+      "int": "2",
+      "lck": "-1"
+    },
+    "424": {
+      "cha": "2",
+      "con": "-1"
+    },
+    "425": {
+      "cha": "2",
+      "dex": "-1"
+    },
+    "426": {
+      "cha": "2",
+      "str": "-1"
+    },
+    "427": {
+      "cha": "2",
+      "int": "-1"
+    },
+    "428": {
+      "cha": "2",
+      "spd": "-1"
+    },
+    "429": {
+      "cha": "2",
+      "lck": "-1"
+    },
+    "430": {
+      "lck": "2",
+      "con": "-1"
+    },
+    "431": {
+      "lck": "2",
+      "dex": "-1"
+    },
+    "432": {
+      "lck": "2",
+      "cha": "-1"
+    },
+    "433": {
+      "lck": "2",
+      "int": "-1"
+    },
+    "434": {
+      "lck": "2",
+      "spd": "-1"
+    },
+    "435": {
+      "lck": "2",
+      "str": "-1"
+    },
+    "436": {
+      "spd": "2",
+      "con": "-1"
+    },
+    "437": {
+      "spd": "2",
+      "str": "-1"
+    },
+    "438": {
+      "spd": "2",
+      "cha": "-1"
+    },
+    "439": {
+      "spd": "2",
+      "int": "-1"
+    },
+    "440": {
+      "spd": "2",
+      "dex": "-1"
+    },
+    "441": {
+      "spd": "2",
+      "lck": "-1"
+    },
+    "700": {
+      "tag": "birth_defect",
+      "cha": "-2"
+    },
+    "701": {
+      "tag": "birth_defect",
+      "str": "-1",
+      "dex": "-1"
+    },
+    "-2": {
+      "desc": "MUTATION_MOUTH_M2_DESC",
+      "desc_resolved": "Can't eat food, use consumables, or use musical abilities.",
+      "tag": "birth_defect",
+      "passives": {
+        "Vegan": "1",
+        "HouseFoodRequirementMultiplier": "0",
+        "DisableAbilitiesWithTag": "musical",
+        "BlacklistPickupType": "catnip"
+      }
+    },
+    "703": {
+      "tag": "birth_defect",
+      "int": "-2",
+      "con": "1"
+    },
+    "704": {
+      "tag": "birth_defect",
+      "cha": "-2",
+      "str": "1"
+    },
+    "705": {
+      "desc": "MUTATION_MOUTH_705_DESC",
+      "desc_resolved": "Your basic attack can be used two extra times each turn but is replaced with a 1-damage spit attack.",
+      "attack": "FetusSpit",
+      "passives": {
+        "ExtraBasicAttacks": "2",
+        "ReplaceBasicAttack_Mutation": "FetusSpit"
+      }
+    }
+  }
+}

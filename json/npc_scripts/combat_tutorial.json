@@ -1,0 +1,758 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "offscreen": [
+        "offscreen"
+      ],
+      "butch_right": [
+        "butch_right",
+        ",",
+        "butch_point_spells",
+        ",",
+        "butch_point_turnorder",
+        ",",
+        "butch_point_team",
+        ",",
+        "butch_point_team_nocircle",
+        ",",
+        "butch_point_enemies",
+        ",",
+        "butch_point_cost",
+        ",",
+        "butch_point_cost2",
+        ",",
+        "butch_point_mana",
+        ",",
+        "butch_point_mapnode",
+        ",",
+        "butch_point_food",
+        ",",
+        "butch_point_save",
+        ",",
+        "butch_point_inventory",
+        ",",
+        "butch_point_weapon",
+        ",",
+        "butch_levelup",
+        ",",
+        "butch_point_hotblooded",
+        ",",
+        "butch_point_sunburn"
+      ],
+      "butch_left": [
+        "butch_left",
+        ",",
+        "butch_point_move",
+        ",",
+        "butch_point_attack",
+        ",",
+        "butch_point_passives",
+        ",",
+        "butch_point_endturn"
+      ],
+      "tink_right": [
+        "tink_right",
+        ",",
+        "tink_point_strays"
+      ],
+      "tink_left": [
+        "tink_left",
+        ",",
+        "tink_point_cats",
+        ",",
+        "tink_point_food",
+        ",",
+        "tink_point_box"
+      ],
+      "frank_right": [
+        "frank_right",
+        ",",
+        "frank_point_pipe"
+      ],
+      "steven_center": [
+        "steven_center",
+        ",",
+        "steven_cat"
+      ],
+      "jack_right": [
+        "jack_right",
+        ",",
+        "jack_point_furniture"
+      ],
+      "beanies_right": [
+        "beanies_right"
+      ],
+      "beanies_intensestatic": [
+        "beanies_intensestatic"
+      ]
+    },
+    "transitions": {
+      "butch_offscreen_to_right": [
+        "offscreen",
+        "butch_right"
+      ],
+      "butch_offscreen_to_left": [
+        "offscreen",
+        "butch_left"
+      ],
+      "butch_right_to_offscreen": [
+        "butch_right",
+        "offscreen"
+      ],
+      "butch_left_to_offscreen": [
+        "butch_left",
+        "offscreen"
+      ],
+      "butch_right_to_left": [
+        "butch_right",
+        "butch_left"
+      ],
+      "butch_left_to_right": [
+        "butch_left",
+        "butch_right"
+      ],
+      "tink_offscreen_to_right": [
+        "offscreen",
+        "tink_right"
+      ],
+      "tink_offscreen_to_left": [
+        "offscreen",
+        "tink_left"
+      ],
+      "tink_right_to_offscreen": [
+        "tink_right",
+        "offscreen"
+      ],
+      "tink_left_to_offscreen": [
+        "tink_left",
+        "offscreen"
+      ],
+      "tink_right_to_left": [
+        "tink_right",
+        "tink_left"
+      ],
+      "tink_left_to_right": [
+        "tink_left",
+        "tink_right"
+      ],
+      "frank_offscreen_to_right": [
+        "offscreen",
+        "frank_right"
+      ],
+      "frank_right_to_offscreen": [
+        "frank_right",
+        "offscreen"
+      ],
+      "jack_offscreen_to_right": [
+        "offscreen",
+        "jack_right"
+      ],
+      "jack_right_to_offscreen": [
+        "jack_right",
+        "offscreen"
+      ],
+      "steven_offscreen_to_center": [
+        "offscreen",
+        "steven_center"
+      ],
+      "steven_center_to_offscreen": [
+        "steven_center",
+        "offscreen"
+      ],
+      "beanies_offscreen_to_right": [
+        "offscreen",
+        "beanies_right"
+      ],
+      "beanies_right_to_offscreen": [
+        "beanies_right",
+        "offscreen"
+      ],
+      "beanies_offscreen_to_intensestatic": [
+        "offscreen",
+        "beanies_intensestatic"
+      ],
+      "beanies_intensestatic_to_offscreen": [
+        "beanies_intensestatic",
+        "offscreen"
+      ]
+    }
+  },
+  "sequences": {
+    "first_fight_intro": {
+      "delay": ".5",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_FIRST_FIGHT_INTRO_13",
+      "set_mood": "default",
+      "wait_for": "action_selected",
+      "dialog_and_autopass": "NPC_POPUP_FIRST_FIGHT_INTRO_14",
+      "unlock_controls": "1"
+    },
+    "try_again_melee_move": {
+      "sfx": "UISFX_ButchMove",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_TRY_AGAIN_MELEE_MOVE_2",
+      "reset_turn": "both",
+      "clear_token": "try_again_melee_move"
+    },
+    "melee_move2": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_MOVE2_1",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_MOVE2_2",
+      "unlock_controls": "1",
+      "wait_for": "action_selected",
+      "clear_token": "melee_move2"
+    },
+    "melee_attack_rat": {
+      "get_token": "ranged_cat_attack",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_ATTACK_RAT_2",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_ATTACK_RAT_3",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "try_again_attack_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_TRY_AGAIN_ATTACK_RAT_3",
+      "reset_turn": "act",
+      "dialog_and_autopass": "NPC_POPUP_TRY_AGAIN_ATTACK_RAT_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected",
+      "clear_token": "try_again_attack_rat"
+    },
+    "melee_killed_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_KILLED_RAT_4",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_KILLED_RAT_3",
+      "unlock_mouse": "1",
+      "wait_for": "click"
+    },
+    "melee_out_of_actions": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_OUT_OF_ACTIONS_3",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_OUT_OF_ACTIONS_4",
+      "unlock_controls": "1",
+      "wait_for": "end_turn"
+    },
+    "ranged_cat_intro": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_INTRO_3",
+      "dialog_and_autopass": "NPC_POPUP_RANGED_CAT_INTRO_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "ranged_cat_rolled_first": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_ROLLED_FIRST_3",
+      "dialog_and_autopass": "NPC_POPUP_RANGED_CAT_ROLLED_FIRST_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected",
+      "sfx": "UISFX_ButchMoveAway"
+    },
+    "ranged_cat_roll": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_ROLL_5",
+      "dialog_and_autopass": "NPC_POPUP_RANGED_CAT_ROLL_6",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "ranged_cat_failmove": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_FAILMOVE_4"
+    },
+    "ranged_cat_early_attack_miss": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK_MISS_3"
+    },
+    "ranged_cat_early_attack_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK_RAT_3"
+    },
+    "ranged_cat_early_attack_ally": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK_ALLY_3"
+    },
+    "ranged_cat_early_attack2_miss": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK2_MISS_3"
+    },
+    "ranged_cat_early_attack2_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK2_RAT_3"
+    },
+    "ranged_cat_early_attack2_ally": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_CAT_EARLY_ATTACK2_ALLY_3"
+    },
+    "ranged_cat_attack": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog_and_autopass": "NPC_POPUP_RANGED_CAT_ATTACK_1",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "ranged_attack_tomtom": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_ATTACK_TOMTOM_2"
+    },
+    "ranged_attack_tomtom_fail_miss": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_ATTACK_TOMTOM_FAIL_MISS_3"
+    },
+    "ranged_attack_tomtom_fail_ally": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_ATTACK_TOMTOM_FAIL_ALLY_2"
+    },
+    "ranged_attack_tomtom_fail_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_RANGED_ATTACK_TOMTOM_FAIL_RAT_2"
+    },
+    "melee_cat_spit": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_2",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_3",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "melee_cat_spit_success": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_SUCCESS_3",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_SUCCESS_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "melee_cat_spit_fail_miss": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_MISS_3",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_MISS_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "melee_cat_spit_fail_rat": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_RAT_3",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_RAT_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "melee_cat_spit_fail_ally": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_ALLY_3",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_FAIL_ALLY_4",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "melee_cat_spit_ignore": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MELEE_CAT_SPIT_IGNORE_1",
+      "dialog_and_autopass": "NPC_POPUP_MELEE_CAT_SPIT_IGNORE_2",
+      "unlock_controls": "1",
+      "wait_for": "action_selected",
+      "clear_token": "melee_cat_spit_ignore"
+    },
+    "done_spitting_success": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_DONE_SPITTING_SUCCESS_3"
+    },
+    "done_spitting_fail_miss": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_DONE_SPITTING_FAIL_MISS_2"
+    },
+    "done_spitting_fail_rat": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_DONE_SPITTING_FAIL_RAT_2",
+      "sfx": "UISFX_ButchMoveAway"
+    },
+    "done_spitting_fail_ally": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_DONE_SPITTING_FAIL_ALLY_3"
+    },
+    "do_not_end_turn": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog_and_autopass": "NPC_POPUP_DO_NOT_END_TURN_1",
+      "clear_token": "do_not_end_turn"
+    },
+    "tutorial_cat_dies": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_TUTORIAL_CAT_DIES_5"
+    },
+    "can_still_use_attack": {
+      "get_token": "can_still_use_attack_didntspell",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_CAN_STILL_USE_ATTACK_2",
+      "dialog_and_autopass": "NPC_POPUP_CAN_STILL_USE_ATTACK_3",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "can_still_use_attack_didntspell": {
+      "get_token": "can_still_use_attack",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_CAN_STILL_USE_ATTACK_DIDNTSPELL_1",
+      "dialog_and_autopass": "NPC_POPUP_CAN_STILL_USE_ATTACK_DIDNTSPELL_2",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "level_up_intro": {
+      "delay": ".5",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_LEVEL_UP_INTRO_9",
+      "dialog_and_autopass": "NPC_POPUP_LEVEL_UP_INTRO_6",
+      "unlock_mouse": "1",
+      "wait_for": "click",
+      "lock_mouse": "1"
+    },
+    "level_up_selected_sunburn": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_LEVEL_UP_SELECTED_SUNBURN_4"
+    },
+    "level_up_didnt_select_sunburn": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_LEVEL_UP_DIDNT_SELECT_SUNBURN_7"
+    },
+    "boss_fight_intro": {
+      "delay": ".25",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BOSS_FIGHT_INTRO_5"
+    },
+    "use_weapon": {
+      "get_token": "use_attack_after_used_weapon",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_USE_WEAPON_2",
+      "dialog_and_autopass": "NPC_POPUP_USE_WEAPON_3",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "use_attack_after_used_weapon": {
+      "get_token": "use_weapon",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_USE_ATTACK_AFTER_USED_WEAPON_2",
+      "dialog_and_autopass": "NPC_POPUP_USE_ATTACK_AFTER_USED_WEAPON_3",
+      "unlock_controls": "1",
+      "wait_for": "action_selected"
+    },
+    "boss_fight_round2": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BOSS_FIGHT_ROUND2_3"
+    },
+    "map_click_node": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog_and_autopass": "NPC_POPUP_MAP_CLICK_NODE_1",
+      "unlock_controls": "1",
+      "wait_for": "mapnode_selected"
+    },
+    "map_equip_items": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_MAP_EQUIP_ITEMS_1",
+      "dialog_and_autopass": "NPC_POPUP_MAP_EQUIP_ITEMS_2",
+      "unlock_controls": "1",
+      "wait_for": "inventory_selected"
+    },
+    "map_equip_items2": {
+      "clear_token": "map_equip_items2",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog_and_autopass": "NPC_POPUP_MAP_EQUIP_ITEMS2_1",
+      "unlock_controls": "1",
+      "wait_for": "inventory_selected"
+    },
+    "finish_adventure": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_FINISH_ADVENTURE_6"
+    },
+    "house_intro": {
+      "delay": ".5",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_INTRO_10",
+      "dialog_and_autopass": "NPC_POPUP_HOUSE_INTRO_11",
+      "unlock_controls": "1",
+      "wait_for": "click"
+    },
+    "house_pass_day": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_PASS_DAY_3"
+    },
+    "take_cats_inside": {
+      "clear_token": "take_cats_inside",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_TAKE_CATS_INSIDE_1"
+    },
+    "house_strays": {
+      "delay": ".5",
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_STRAYS_4",
+      "request_cat_info": "stray",
+      "dialog_and_autopass": "NPC_POPUP_HOUSE_STRAYS_5",
+      "unlock_controls": "1",
+      "wait_for": "click"
+    },
+    "house_pass_day2": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_PASS_DAY2_4"
+    },
+    "new_adventure": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_NEW_ADVENTURE_2"
+    },
+    "low_on_food": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_LOW_ON_FOOD_3"
+    },
+    "house_retired_cat_box": {
+      "sfx": "UISFX_ButchMove",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_RETIRED_CAT_BOX_1"
+    },
+    "house_kitten_box": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_KITTEN_BOX_2"
+    },
+    "house_starred_box": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_STARRED_BOX_2"
+    },
+    "house_pipe": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_HOUSE_PIPE_20"
+    },
+    "introduce_hard_path": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_INTRODUCE_HARD_PATH_6"
+    },
+    "first_house_boss_tomorrow": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_FIRST_HOUSE_BOSS_TOMORROW_10"
+    },
+    "first_house_hint_retired": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_FIRST_HOUSE_HINT_RETIRED_4"
+    },
+    "jack_introduction": {
+      "sfx": "UISFX_ButchMoveAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_JACK_INTRODUCTION_8",
+      "get_random_furniture_piece": [
+        "small_trash_cans",
+        "small_trash_can2"
+      ],
+      "dialog_and_autopass": "NPC_POPUP_JACK_INTRODUCTION_7",
+      "unlock_controls": "1",
+      "wait_for": "open_furniture",
+      "lock_controls": "1"
+    },
+    "steven_savescum_intro": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_INTRO_24",
+      "autosave": "adventure"
+    },
+    "steven_savescum_1": {
+      "do_random_sequence": [
+        "steven_savescum_1alt1",
+        "steven_savescum_1alt2",
+        "steven_savescum_1alt3"
+      ]
+    },
+    "steven_savescum_2": {
+      "do_random_sequence": [
+        "steven_savescum_2alt1",
+        "steven_savescum_2alt2",
+        "steven_savescum_2alt3"
+      ]
+    },
+    "steven_savescum_3": {
+      "do_random_sequence": [
+        "steven_savescum_3alt1",
+        "steven_savescum_3alt2",
+        "steven_savescum_3alt3"
+      ]
+    },
+    "steven_savescum_4": {
+      "do_random_sequence": [
+        "steven_savescum_4alt1",
+        "steven_savescum_4alt2",
+        "steven_savescum_4alt3"
+      ]
+    },
+    "steven_savescum_100": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_100_3",
+      "autosave": "adventure"
+    },
+    "steven_savescum_intro_houseboss": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_INTRO_HOUSEBOSS_20",
+      "autosave": "housebossprep"
+    },
+    "steven_savescum_houseboss_1": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_1_10",
+      "autosave": "housebossprep"
+    },
+    "steven_savescum_houseboss_2": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_2_10",
+      "autosave": "housebossprep"
+    },
+    "steven_savescum_houseboss_3": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_3_19",
+      "autosave": "housebossprep"
+    },
+    "steven_savescum_houseboss_100": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_HOUSEBOSS_100_3",
+      "autosave": "housebossprep"
+    },
+    "steven_savescum_1alt1": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_1ALT1_9",
+      "autosave": "adventure"
+    },
+    "steven_savescum_1alt2": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_1ALT2_9",
+      "autosave": "adventure"
+    },
+    "steven_savescum_1alt3": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_1ALT3_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_2alt1": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_2ALT1_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_2alt2": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_2ALT2_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_2alt3": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_2ALT3_10",
+      "autosave": "adventure"
+    },
+    "steven_savescum_3alt1": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_3ALT1_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_3alt2": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_3ALT2_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_3alt3": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_3ALT3_8",
+      "autosave": "adventure"
+    },
+    "steven_savescum_4alt1": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_4ALT1_4",
+      "autosave": "adventure"
+    },
+    "steven_savescum_4alt2": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_4ALT2_5",
+      "autosave": "adventure"
+    },
+    "steven_savescum_4alt3": {
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_STEVEN_SAVESCUM_4ALT3_4",
+      "autosave": "adventure"
+    },
+    "beanies_rift_intro": {
+      "delay": ".25",
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_RIFT_INTRO_11"
+    },
+    "beanies_infinite_intro": {
+      "delay": ".25",
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_INFINITE_INTRO_11"
+    },
+    "beanies_vscreatorintro": {
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_VSCREATORINTRO_8"
+    },
+    "beanies_vscreator1": {
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_VSCREATOR1_14"
+    },
+    "beanies_vscreator2": {
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_VSCREATOR2_8"
+    },
+    "beanies_vscreator3": {
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_VSCREATOR3_11"
+    },
+    "beanies_vscreator4": {
+      "sfx": "UISFX_BeaniesAway",
+      "set_state": "offscreen",
+      "dialog": "NPC_POPUP_BEANIES_VSCREATOR4_8",
+      "force_current_cat_use_ability": "neck_NukeBonus_remote"
+    }
+  }
+}

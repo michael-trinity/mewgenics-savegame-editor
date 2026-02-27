@@ -1,0 +1,230 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unprompted": {
+      "do_random_sequence": [
+        "unprompted_a,",
+        "unprompted_b,",
+        "unprompted_c,",
+        "unprompted_d,",
+        "unprompted_e,",
+        "unprompted_f,",
+        "unprompted_g,",
+        "unprompted_h,",
+        "unprompted_i"
+      ]
+    },
+    "unknown": {
+      "dialog": "NPC_TINK_UNKNOWN_1",
+      "get": "npc_reward"
+    },
+    "also": {
+      "dialog": "NPC_TINK_ALSO_1"
+    },
+    "tink_begin_accepting_cats": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_BEGIN_ACCEPTING_CATS_21",
+      "begin_accepting_cats": "tink"
+    },
+    "tink_prettybow": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_PRETTYBOW_10",
+      "get": "npc_reward"
+    },
+    "tink_tags": {
+      "dialog": "NPC_TINK_TINK_TAGS_9",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "tink_basestats": {
+      "set_state": "verycloseup",
+      "dialog": "NPC_TINK_TINK_BASESTATS_11",
+      "get": "npc_reward"
+    },
+    "tink_inbreeding": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_INBREEDING_13",
+      "get": "npc_reward"
+    },
+    "tink_aggression": {
+      "set_state": "closeup",
+      "dialog": "NPC_TINK_TINK_AGGRESSION_12",
+      "get": "npc_reward"
+    },
+    "tink_sexuality": {
+      "dialog": "NPC_TINK_TINK_SEXUALITY_12",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "tink_relationships": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_RELATIONSHIPS_20",
+      "get": "npc_reward"
+    },
+    "tink_max_intro": {
+      "dialog": "NPC_TINK_TINK_MAX_INTRO_12",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "tink_max_repeating": {
+      "do_random_sequence": [
+        "tink_max1,",
+        "tink_max2,",
+        "tink_max3,",
+        "tink_max4,",
+        "tink_max5,",
+        "tink_max6,",
+        "tink_max7,",
+        "tink_max8,",
+        "tink_max9,",
+        "tink_max10"
+      ]
+    },
+    "tink_max1": {
+      "set_state": "verycloseup",
+      "dialog": "NPC_TINK_TINK_MAX1_4",
+      "get": "npc_reward"
+    },
+    "tink_max2": {
+      "dialog": "NPC_TINK_TINK_MAX2_7",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "tink_max3": {
+      "dialog": "NPC_TINK_TINK_MAX3_6",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "tink_max4": {
+      "dialog": "NPC_TINK_TINK_MAX4_10",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "tink_max5": {
+      "dialog": "NPC_TINK_TINK_MAX5_4",
+      "set_state": "idle",
+      "get": "npc_reward"
+    },
+    "tink_max6": {
+      "dialog": "NPC_TINK_TINK_MAX6_5",
+      "get": "npc_reward"
+    },
+    "tink_max7": {
+      "dialog": "NPC_TINK_TINK_MAX7_6",
+      "set_state": "closeup",
+      "get": "npc_reward"
+    },
+    "tink_max8": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_MAX8_4",
+      "get": "npc_reward"
+    },
+    "tink_max9": {
+      "set_state": "idle",
+      "dialog": "NPC_TINK_TINK_MAX9_5",
+      "get": "npc_reward"
+    },
+    "tink_max10": {
+      "set_state": "verycloseup",
+      "dialog": "NPC_TINK_TINK_MAX10_9",
+      "get": "npc_reward"
+    },
+    "unprompted_a": {
+      "dialog": "NPC_TINK_UNPROMPTED_A_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_b": {
+      "dialog": "NPC_TINK_UNPROMPTED_B_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_c": {
+      "dialog": "NPC_TINK_UNPROMPTED_C_1",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_d": {
+      "dialog": "NPC_TINK_UNPROMPTED_D_1",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_e": {
+      "dialog": "NPC_TINK_UNPROMPTED_E_1",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_f": {
+      "dialog": "NPC_TINK_UNPROMPTED_F_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_g": {
+      "dialog": "NPC_TINK_UNPROMPTED_G_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_h": {
+      "dialog": "NPC_TINK_UNPROMPTED_H_2",
+      "do_sequence": "forward_to_tips"
+    },
+    "unprompted_i": {
+      "dialog": "NPC_TINK_UNPROMPTED_I_1",
+      "do_sequence": "forward_to_tips"
+    },
+    "forward_to_tips": {
+      "do_random_sequence": [
+        "tink_tips_comfort,",
+        "tink_tips_stimulation,",
+        "tink_tips_stimulation,",
+        "tink_tips_appeal",
+        ",",
+        "tink_tips_health,",
+        "tink_tips_mutation,",
+        "tink_tips_cleaning,",
+        "tink_tips_basestats,",
+        "tink_tips_multiclassing,",
+        "tink_tips_inbreeding"
+      ]
+    },
+    "tink_tips_intro": {
+      "dialog": "NPC_TINK_TINK_TIPS_INTRO_4",
+      "do_sequence": "tink_tips_comfort"
+    },
+    "tink_tips_comfort": {
+      "dialog": "NPC_TINK_TINK_TIPS_COMFORT_4"
+    },
+    "tink_tips_stimulation": {
+      "dialog": "NPC_TINK_TINK_TIPS_STIMULATION_7"
+    },
+    "tink_tips_appeal": {
+      "dialog": "NPC_TINK_TINK_TIPS_APPEAL_4"
+    },
+    "tink_tips_health": {
+      "dialog": "NPC_TINK_TINK_TIPS_HEALTH_5"
+    },
+    "tink_tips_mutation": {
+      "dialog": "NPC_TINK_TINK_TIPS_MUTATION_4"
+    },
+    "tink_tips_cleaning": {
+      "dialog": "NPC_TINK_TINK_TIPS_CLEANING_4"
+    },
+    "tink_tips_basestats": {
+      "dialog": "NPC_TINK_TINK_TIPS_BASESTATS_3"
+    },
+    "tink_tips_multiclassing": {
+      "dialog": "NPC_TINK_TINK_TIPS_MULTICLASSING_5"
+    },
+    "tink_tips_inbreeding": {
+      "dialog": "NPC_TINK_TINK_TIPS_INBREEDING_5"
+    },
+    "tink_tina2": {
+      "dialog": "NPC_TINK_TINK_TINA2_10",
+      "set_state": "idle"
+    },
+    "tink_terminator": {
+      "set_state": "zoomedout",
+      "dialog": "NPC_TINK_TINK_TERMINATOR_15"
+    }
+  }
+}

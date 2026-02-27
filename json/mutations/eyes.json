@@ -1,0 +1,715 @@
+{
+  "eyes": {
+    "300": {
+      "desc": "MUTATION_EYES_300_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Fear.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Fear": [
+            "1",
+            ".1"
+          ]
+        }
+      }
+    },
+    "301": {
+      "dex": "1"
+    },
+    "302": {
+      "desc": "MUTATION_EYES_302_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "303": {
+      "int": "1",
+      "cha": "1"
+    },
+    "304": {
+      "desc": "MUTATION_EYES_304_DESC",
+      "desc_resolved": "Take your turn later.",
+      "passives": {
+        "AddInitiative": "-20"
+      }
+    },
+    "305": {
+      "str": "-1",
+      "dex": "-1",
+      "int": "3"
+    },
+    "306": {
+      "desc": "MUTATION_EYES_306_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Confusion 3.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Confusion": [
+            "3,",
+            ".1"
+          ]
+        }
+      }
+    },
+    "307": {
+      "desc": "MUTATION_EYES_307_DESC",
+      "desc_resolved": "Gain 1 mana when anything dies.",
+      "passives": {
+        "GainManaWhenAnythingDies": "1"
+      }
+    },
+    "308": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_308_DESC",
+      "desc_resolved": "+5% dodge chance.",
+      "passives": {
+        "DodgeChance": "5%"
+      }
+    },
+    "309": {
+      "desc": "MUTATION_EYES_309_DESC",
+      "desc_resolved": "+2 corpse health.",
+      "passives": {
+        "AddCorpseHealth": "2"
+      }
+    },
+    "310": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_310_DESC",
+      "desc_resolved": "+1 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "1"
+      }
+    },
+    "311": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_311_DESC",
+      "desc_resolved": "You do not take extra damage from backstabs.",
+      "passives": {
+        "BackstabImmunity": "1"
+      }
+    },
+    "312": {
+      "desc": "MUTATION_EYES_312_DESC",
+      "desc_resolved": "+1 Brace.",
+      "shield": "1",
+      "passives": {
+        "Brace": "1"
+      }
+    },
+    "313": {
+      "desc": "MUTATION_EYES_313_DESC",
+      "desc_resolved": "Your basic attack creates water tiles.",
+      "divine_shield": "1",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": "WaterTile"
+        },
+        "AddElementsToBasicAttack": "Water"
+      }
+    },
+    "314": {
+      "desc": "MUTATION_EYES_314_DESC",
+      "desc_resolved": "When you are downed, spawn 3 Flies. +2 corpse health.",
+      "passives": {
+        "SpawnOnDowned": "CharmedFly",
+        "AddCorpseHealth": "2"
+      }
+    },
+    "315": {
+      "desc": "MUTATION_EYES_315_DESC",
+      "desc_resolved": "+1 Kinetic Spikes.",
+      "passives": {
+        "KineticSpikes": "1"
+      }
+    },
+    "316": {
+      "desc": "MUTATION_EYES_316_DESC",
+      "desc_resolved": "15% chance to counter attack with Chain Lightning when you get hit.",
+      "passives": {
+        "CounterAttack": {
+          "chance": "15%",
+          "ability": "ChainLightning"
+        }
+      }
+    },
+    "317": {
+      "desc": "MUTATION_EYES_317_DESC",
+      "desc_resolved": "Gain a random stat up at the end of each turn.",
+      "passives": {
+        "StatusEachTurnEnd": {
+          "RandomStatUp": "1"
+        }
+      }
+    },
+    "318": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_318_DESC",
+      "desc_resolved": "You can see hidden things. +1 Knockback damage.",
+      "passives": {
+        "ShowHiddenThings": "1",
+        "AddKnockbackDamage": "1"
+      }
+    },
+    "319": {
+      "desc": "MUTATION_EYES_319_DESC",
+      "desc_resolved": "Blind. +1 Damage. +1 Thorns.",
+      "passives": {
+        "Blind": "-1",
+        "Thorns": "1",
+        "DamageUp": "1"
+      }
+    },
+    "324": {
+      "desc": "MUTATION_EYES_324_DESC",
+      "desc_resolved": "Spawn 2 extra coins each battle.",
+      "passives": {
+        "SpawnOnBattleStartRandomEmptyTile": {
+          "object": "Coin",
+          "number": "2"
+        }
+      }
+    },
+    "325": {
+      "desc": "MUTATION_EYES_325_DESC",
+      "desc_resolved": "Thorns 1.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "326": {
+      "desc": "MUTATION_EYES_326_DESC",
+      "desc_resolved": "Gain 2 Charge each time you cast 4 spells.",
+      "passives": {
+        "StatusEveryXSpellCasts": {
+          "stacks": "4",
+          "Charge": "2"
+        }
+      }
+    },
+    "327": {
+      "cha": "2"
+    },
+    "328": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_328_DESC",
+      "desc_resolved": "+10% crit chance.",
+      "passives": {
+        "CritChanceUp": "10"
+      }
+    },
+    "329": {
+      "desc": "MUTATION_EYES_329_DESC",
+      "desc_resolved": "Your basic attack has a 15% chance to inflict Confusion.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Confusion": [
+            "1,",
+            ".15"
+          ]
+        }
+      }
+    },
+    "331": {
+      "desc": "MUTATION_EYES_331_DESC",
+      "desc_resolved": "At the start of each battle, gain a random temporary pill if your trinket slot is empty.",
+      "passives": {
+        "EquipRandomTemporaryItemFromPool": "pills"
+      }
+    },
+    "332": {
+      "desc": "MUTATION_EYES_332_DESC",
+      "desc_resolved": "Start each battle Bleeding. Gain 1 Charge each time you take damage.",
+      "passives": {
+        "Bleed": "1",
+        "StatusOnTookDamage": {
+          "Charge": "1"
+        }
+      }
+    },
+    "333": {
+      "desc": "MUTATION_EYES_333_DESC",
+      "desc_resolved": "Your basic attack can't miss.",
+      "passives": {
+        "BasicAttackCantMiss": "1"
+      }
+    },
+    "334": {
+      "desc": "MUTATION_EYES_334_DESC",
+      "desc_resolved": "Blind. Spawn a Flea when you take damage.",
+      "passives": {
+        "Blind": "-1",
+        "SpawnThingOnDamage": {
+          "object": "CharmedFlea",
+          "good": "false",
+          "chance": "100%"
+        }
+      }
+    },
+    "335": {
+      "desc": "MUTATION_EYES_335_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to Charm.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Charmed": [
+            "1,",
+            ".10"
+          ]
+        }
+      }
+    },
+    "336": {
+      "desc": "MUTATION_EYES_336_DESC",
+      "desc_resolved": "Your basic attack is electric element and has a 5% chance to stun.",
+      "passives": {
+        "AddElementsToBasicAttack": "Electric",
+        "AddStatusToBasicAttack": {
+          "Stun": [
+            "1",
+            ".05"
+          ]
+        }
+      }
+    },
+    "337": {
+      "desc": "MUTATION_EYES_337_DESC",
+      "desc_resolved": "Your basic attack is ice element and inflicts Slow.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Slow": "1"
+        },
+        "AddElementsToBasicAttack": "Ice"
+      }
+    },
+    "338": {
+      "desc": "MUTATION_EYES_338_DESC",
+      "desc_resolved": "Your basic attack inflicts Burn.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Burn": "1"
+        },
+        "AddElementsToBasicAttack": "Fire"
+      }
+    },
+    "339": {
+      "desc": "MUTATION_EYES_339_DESC",
+      "desc_resolved": "+1 Health Regeneration while wet. Your basic attack is water element.",
+      "passives": {
+        "AddElementsToBasicAttack": "Water",
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "HealthRegenUp": "1"
+          }
+        }
+      }
+    },
+    "340": {
+      "desc": "MUTATION_EYES_340_DESC",
+      "desc_resolved": "Your basic attack inflicts Leech.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Leeches": "1"
+        }
+      }
+    },
+    "341": {
+      "desc": "MUTATION_EYES_341_DESC",
+      "desc_resolved": "Gain Charge 1 the first time you move each turn.",
+      "passives": {
+        "StatusOnEndMove": {
+          "Conditional_FirstApplicationThisTurn": {
+            "Charge": "1"
+          }
+        }
+      }
+    },
+    "342": {
+      "desc": "MUTATION_EYES_342_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison 1. Start each battle Poisoned.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        },
+        "Poison": "1"
+      }
+    },
+    "343": {
+      "desc": "MUTATION_EYES_343_DESC",
+      "desc_resolved": "You have a 5% chance to inflict Fear on units who contact or attack you.",
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Fear": [
+              "1,",
+              ".05"
+            ]
+          }
+        }
+      }
+    },
+    "344": {
+      "desc": "MUTATION_EYES_344_DESC",
+      "desc_resolved": "You have a 10% chance to Blind units who contact or attack you.",
+      "passives": {
+        "RevengeDamage": {
+          "effects": {
+            "Blind": [
+              "1,",
+              ".10"
+            ]
+          }
+        }
+      }
+    },
+    "345": {
+      "desc": "MUTATION_EYES_345_DESC",
+      "desc_resolved": "Inflict a random debuff on units who contact you.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "effects": {
+            "RandomStatusFromPool": {
+              "Poison": "1",
+              "Burn": "1",
+              "Bleed": "1",
+              "Blind": "1",
+              "Weakness": "1"
+            }
+          }
+        }
+      }
+    },
+    "346": {
+      "desc": "MUTATION_EYES_346_DESC",
+      "desc_resolved": "Spawn a rock when damaged.",
+      "shield": "1",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "SmallRock",
+          "good": "false",
+          "chance": "100%"
+        }
+      }
+    },
+    "347": {
+      "desc": "MUTATION_EYES_347_DESC",
+      "desc_resolved": "Your basic attack has a 15% chance to inflict Confusion 2.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Confusion": [
+            "2,",
+            ".15"
+          ]
+        }
+      }
+    },
+    "348": {
+      "desc": "MUTATION_EYES_348_DESC",
+      "desc_resolved": "+1 range, +1 reach.",
+      "passives": {
+        "AddBonusRange": "1",
+        "AddBonusMeleeRange": "1"
+      }
+    },
+    "349": {
+      "desc": "MUTATION_EYES_349_DESC",
+      "desc_resolved": "Emit 4 Sparkles each time you cast 8 spells.",
+      "passives": {
+        "StatusEveryXSpellCasts": {
+          "stacks": "8",
+          "RandomMagicMissile": "4"
+        }
+      }
+    },
+    "351": {
+      "desc": "MUTATION_EYES_351_DESC",
+      "desc_resolved": "Your bonus ability is a different random spell each battle.",
+      "passives": {
+        "ConjureBonusAbility": "random"
+      }
+    },
+    "352": {
+      "desc": "MUTATION_EYES_352_DESC",
+      "desc_resolved": "You have All Stats Up while Bleeding.",
+      "passives": {
+        "PassiveWhileHasStatus": {
+          "status": "Bleed",
+          "passives": {
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    },
+    "353": {
+      "tag": "animal",
+      "desc": "MUTATION_EYES_353_DESC",
+      "desc_resolved": "You take no extra damage from backstabs.",
+      "passives": {
+        "BackstabImmunity": "1"
+      }
+    },
+    "442": {
+      "desc": "MUTATION_EYES_442_DESC",
+      "desc_resolved": "10% chance to reflect projectiles.",
+      "passives": {
+        "ReflectProjectiles": "10%"
+      }
+    },
+    "750": {
+      "int": "1"
+    },
+    "754": {
+      "desc": "MUTATION_EYES_754_DESC",
+      "desc_resolved": "+1 range. Your basic attack is gravity element.",
+      "passives": {
+        "AddBonusRange": "1",
+        "AddElementsToBasicAttack": "Gravity"
+      }
+    },
+    "755": {
+      "desc": "MUTATION_EYES_755_DESC",
+      "desc_resolved": "Your basic attack has a 15% chance to inflict Fear.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Fear": [
+            "1",
+            ".15"
+          ]
+        }
+      }
+    },
+    "900": {
+      "desc": "MUTATION_EYES_900_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Slow.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Slow": [
+            "1",
+            ".1"
+          ]
+        }
+      }
+    },
+    "400": {
+      "str": "2",
+      "con": "-1"
+    },
+    "401": {
+      "str": "2",
+      "dex": "-1"
+    },
+    "402": {
+      "str": "2",
+      "cha": "-1"
+    },
+    "403": {
+      "str": "2",
+      "int": "-1"
+    },
+    "404": {
+      "str": "2",
+      "spd": "-1"
+    },
+    "405": {
+      "str": "2",
+      "lck": "-1"
+    },
+    "406": {
+      "con": "2",
+      "str": "-1"
+    },
+    "407": {
+      "con": "2",
+      "dex": "-1"
+    },
+    "408": {
+      "con": "2",
+      "cha": "-1"
+    },
+    "409": {
+      "con": "2",
+      "int": "-1"
+    },
+    "410": {
+      "con": "2",
+      "spd": "-1"
+    },
+    "411": {
+      "con": "2",
+      "lck": "-1"
+    },
+    "412": {
+      "dex": "2",
+      "con": "-1"
+    },
+    "413": {
+      "dex": "2",
+      "str": "-1"
+    },
+    "414": {
+      "dex": "2",
+      "cha": "-1"
+    },
+    "415": {
+      "dex": "2",
+      "int": "-1"
+    },
+    "416": {
+      "dex": "2",
+      "spd": "-1"
+    },
+    "417": {
+      "dex": "2",
+      "lck": "-1"
+    },
+    "418": {
+      "int": "2",
+      "con": "-1"
+    },
+    "419": {
+      "int": "2",
+      "dex": "-1"
+    },
+    "420": {
+      "int": "2",
+      "cha": "-1"
+    },
+    "421": {
+      "int": "2",
+      "str": "-1"
+    },
+    "422": {
+      "int": "2",
+      "spd": "-1"
+    },
+    "423": {
+      "int": "2",
+      "lck": "-1"
+    },
+    "424": {
+      "cha": "2",
+      "con": "-1"
+    },
+    "425": {
+      "cha": "2",
+      "dex": "-1"
+    },
+    "426": {
+      "cha": "2",
+      "str": "-1"
+    },
+    "427": {
+      "cha": "2",
+      "int": "-1"
+    },
+    "428": {
+      "cha": "2",
+      "spd": "-1"
+    },
+    "429": {
+      "cha": "2",
+      "lck": "-1"
+    },
+    "430": {
+      "lck": "2",
+      "con": "-1"
+    },
+    "431": {
+      "lck": "2",
+      "dex": "-1"
+    },
+    "432": {
+      "lck": "2",
+      "cha": "-1"
+    },
+    "433": {
+      "lck": "2",
+      "int": "-1"
+    },
+    "434": {
+      "lck": "2",
+      "spd": "-1"
+    },
+    "435": {
+      "lck": "2",
+      "str": "-1"
+    },
+    "436": {
+      "spd": "2",
+      "con": "-1"
+    },
+    "437": {
+      "spd": "2",
+      "str": "-1"
+    },
+    "438": {
+      "spd": "2",
+      "cha": "-1"
+    },
+    "439": {
+      "spd": "2",
+      "int": "-1"
+    },
+    "440": {
+      "spd": "2",
+      "dex": "-1"
+    },
+    "441": {
+      "spd": "2",
+      "lck": "-1"
+    },
+    "700": {
+      "tag": "birth_defect",
+      "cha": "-2"
+    },
+    "701": {
+      "tag": "birth_defect",
+      "lck": "-2"
+    },
+    "702": {
+      "cha": "1",
+      "int": "1",
+      "con": "-2"
+    },
+    "-2": {
+      "desc": "MUTATION_EYES_M2_DESC",
+      "desc_resolved": "Blind.",
+      "tag": "birth_defect",
+      "passives": {
+        "Blind": "-1"
+      }
+    },
+    "704": {
+      "desc": "MUTATION_EYES_704_DESC",
+      "desc_resolved": "10% miss chance.",
+      "tag": "birth_defect",
+      "passives": {
+        "MissChance": "10"
+      }
+    },
+    "705": {
+      "tag": "birth_defect",
+      "desc": "MUTATION_EYES_705_DESC",
+      "desc_resolved": "Gain 5% miss chance every turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "MissChance": "5"
+        }
+      }
+    },
+    "706": {
+      "desc": "MUTATION_EYES_706_DESC",
+      "desc_resolved": "Start each battle with Confusion 2.",
+      "tag": "birth_defect",
+      "passives": {
+        "Confusion": "2"
+      }
+    },
+    "1029": {
+      "desc": "MUTATION_EYES_1029_DESC",
+      "desc_resolved": "+5% crit chance.",
+      "passives": {
+        "CritChanceUp": "5"
+      }
+    }
+  }
+}

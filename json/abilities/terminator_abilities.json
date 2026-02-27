@@ -1,0 +1,617 @@
+{
+  "T1ChokeReaction": {
+    "variant_of": "BasicMelee",
+    "class": "PlaceholderMeleeAttackAbility",
+    "graphics": {
+      "animation": "bearHug"
+    },
+    "target": {
+      "knockback_mode": "tile_to_character",
+      "aoe_considers_character_size": "false",
+      "target_mode": "tile",
+      "restrictions": "must_have_character",
+      "range_mode": "standard",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "T1SwapWeapon": {
+    "template": "self_buff",
+    "graphics": {
+      "animation": "equipWeapon"
+    },
+    "cost": {
+      "cantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "SwapWeapon": {
+          "pool": [
+            "TerminatorShotgun",
+            "TerminatorSniper",
+            "TerminatorUzi"
+          ]
+        }
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "T1ThrowGrenadeA": {
+    "template": "spawn",
+    "meta": {
+      "name": "EABILITY_THROWGRENADE_NAME",
+      "name_resolved": "Throw Grenade"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "cantrip": "true"
+    },
+    "target": {
+      "range_mode": "standard",
+      "min_range": "3",
+      "max_range": "6"
+    },
+    "spawn": {
+      "object": "Grenade",
+      "first_turn": "end_of_round"
+    },
+    "damage_instance": {
+      "custom_additional_ai_weight": "spread_grenades"
+    }
+  },
+  "T1ThrowGrenadeB": {
+    "variant_of": "T1ThrowGrenadeA"
+  },
+  "T1Pummel": {
+    "variant_of": "BasicMelee",
+    "class": "PlaceholderMeleeAttackAbility",
+    "graphics": {
+      "animation": "terminatorPunch",
+      "othercat_placeholder_available": "true"
+    },
+    "target": {
+      "aoe_considers_character_size": "false",
+      "target_mode": "tile",
+      "restrictions": "must_have_character",
+      "range_mode": "standard",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "multihit": "6"
+    },
+    "damage_instance": {
+      "damage": "-3+bonus_melee_damage",
+      "effects": {
+        "IntelligenceUp": "-1",
+        "FaceAway": "1"
+      }
+    }
+  },
+  "wp_TerminatorSniper": {
+    "variant_of": "wp_22Rifle",
+    "meta": {
+      "name": "EABILITY_SNIPER_NAME",
+      "name_resolved": "Sniper"
+    },
+    "target": {
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "8"
+    }
+  },
+  "wp_TerminatorShotgun": {
+    "variant_of": "wp_Shotgun"
+  },
+  "wp_TerminatorUzi": {
+    "variant_of": "wp_Uzi"
+  },
+  "T2Clone": {
+    "variant_of": "BasicMelee",
+    "graphics": {
+      "animation": "liquidclone"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_PlayerCat": {
+          "ApplyToSource": {
+            "Cleanse": "0",
+            "RemoveStatus": "SpeedUp_WithoutInitiative"
+          },
+          "T2CopyCat": "1",
+          "GenericDebuff": "999999"
+        }
+      }
+    }
+  },
+  "T2UnClone": {
+    "template": "self_buff",
+    "graphics": {
+      "animation": "liquidunclone"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "RemoveStatus": "T2CopyCatInternal",
+        "Cleanse": "0"
+      },
+      "ai_base_score": "999999"
+    }
+  },
+  "T2SpearMelee": {
+    "template": "melee_attack",
+    "graphics": {
+      "animation": "liquidmetalspear",
+      "detatched_animation": "LiquidMetalSpear",
+      "detatched_animation_reach": "3"
+    },
+    "target": {
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "damage": "10+bonus_melee_damage",
+      "piercing": "true"
+    }
+  },
+  "T2GoopRun": {
+    "template": "teleport",
+    "graphics": {
+      "animation_out": "liquidteleportOut",
+      "animation_in": "liquidteleportIn"
+    }
+  },
+  "SpawnTerminatorMini_Base": {
+    "template": "spawn",
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true",
+      "cantrip": "true",
+      "once_per_fight": "true",
+      "cant_cast": "X-1"
+    },
+    "graphics": {
+      "animation": "beamin",
+      "lob": "false"
+    },
+    "target": {
+      "max_range": "20",
+      "min_range": "0",
+      "knockback_mode": "orientation",
+      "X_is": "custom",
+      "allow_any_orientation": "true"
+    },
+    "bonus_passives": {
+      "XIsLivingAlliesWithTag": "terminator_mini"
+    },
+    "spawn": {
+      "object": "TankCat_Terminator",
+      "first_turn": "initiative",
+      "inherit_elite_buffs": "false"
+    },
+    "damage_instance": {
+      "custom_additional_ai_weight": "avoid_target_map_top"
+    }
+  },
+  "T3Spawn_Tank": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "TankCat_Terminator"
+    }
+  },
+  "T3Spawn_Mage": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "MageCat_Terminator"
+    }
+  },
+  "T3Spawn_Hunter": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "HunterCat_Terminator"
+    }
+  },
+  "T3Spawn_Thief": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "ThiefCat_Terminator"
+    }
+  },
+  "T3Spawn_Medic": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "MedicCat_Terminator"
+    }
+  },
+  "T3Spawn_Fighter": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "FighterCat_Terminator"
+    }
+  },
+  "T3Spawn_Colorless": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "Pebbles_Terminator"
+    }
+  },
+  "T3Spawn_Necromancer": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "NecroCat_Terminator"
+    }
+  },
+  "T3Spawn_Tinkerer": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "TinkererCat_Terminator"
+    }
+  },
+  "T3Spawn_Butcher": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "ButcherCat_Terminator"
+    }
+  },
+  "T3Spawn_Psychic": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "PsychicCat_Terminator"
+    }
+  },
+  "T3Spawn_Druid": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "DruidCat_Terminator"
+    }
+  },
+  "T3Spawn_Monk": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "MonkCat_Terminator"
+    }
+  },
+  "T3Spawn_Jester": {
+    "variant_of": "SpawnTerminatorMini_Base",
+    "spawn": {
+      "object": "JesterCat_Terminator"
+    }
+  },
+  "DCT_SummonCrow": {
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "cantrip": "true",
+      "cant_cast": "X",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "max_targets": "1",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": [
+        "exclude_blocking"
+      ]
+    },
+    "bonus_passives": {
+      "XIsLivingAlliesWithTag": "dc_crow"
+    },
+    "spawn": {
+      "object": "DruidCrow_Terminator",
+      "custom_additional_ai_weight": "tile_exists",
+      "faction": "self"
+    }
+  },
+  "T3Pebbles_PrimeBoulderDrop": {
+    "template": "self_buff",
+    "graphics": {
+      "animation": "none"
+    },
+    "meta": {
+      "name": "EABILITY_BOULDERDROP_NAME",
+      "name_resolved": "Boulder Drop!"
+    },
+    "damage_instance": {
+      "effects": {
+        "UseAbility": {
+          "ability": "T3Pebbles_BoulderDrop",
+          "respect_prime": "true"
+        }
+      }
+    }
+  },
+  "T3Pebbles_BoulderDrop": {
+    "template": "spawn",
+    "meta": {
+      "name": "EABILITY_BOULDERDROP_NAME",
+      "name_resolved": "Boulder Drop!"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "prime_animation": "prouder",
+      "fall_from_sky": "true",
+      "bounce_on_hit": "false",
+      "animation": "floatingmagic",
+      "dont_orient": "true",
+      "fall_randomize_timing": ".3"
+    },
+    "sounds": {
+      "oncast": "AbilitySnd_BoulderDrop"
+    },
+    "cost": {
+      "prime": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "6",
+      "max_aoe": "2",
+      "range_excludes_blocking": "false",
+      "aoe_restrictions": "none",
+      "knockback_mode": "zero"
+    },
+    "spawn": {
+      "object": "Boulder"
+    },
+    "damage_instance": {
+      "damage": "999",
+      "cant_miss": "true",
+      "type": "ranged"
+    }
+  },
+  "T3LickyLicky": {
+    "template": "melee_attack",
+    "graphics": {
+      "animation": "lickAttack"
+    },
+    "cost": {
+      "mana": "0"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "DamageUp": "2",
+        "Cleanse": "0"
+      }
+    }
+  },
+  "HitlerPulpBase": {
+    "template": "self_buff",
+    "graphics": {
+      "animation": "pulp"
+    },
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp2",
+        "Cleanse": "0",
+        "Purge": "0",
+        "SetHealth": "100%",
+        "SetShield": "0"
+      }
+    }
+  },
+  "HitlerPulp1": {
+    "template": "spell",
+    "graphics": {
+      "animation": "pulp",
+      "particle": "none",
+      "dont_visualize_ai": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "self_damage": {
+      "effects": {
+        "FormChange": "Pulp2",
+        "PurgeAll": "1",
+        "SetHealth": "100%",
+        "SetShield": "0",
+        "FaceCamera": "1",
+        "SwitchMusic": {
+          "new_layer": "battle",
+          "crossfade_speed": "1"
+        }
+      }
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "ai_base_score": "9999",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_PlayerCat": {
+          "Cleanse": "0",
+          "Adrenaline": "10"
+        }
+      }
+    }
+  },
+  "HitlerPulp2": {
+    "variant_of": "HitlerPulpBase",
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp3"
+      }
+    }
+  },
+  "HitlerPulp3": {
+    "variant_of": "HitlerPulpBase",
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp4"
+      }
+    }
+  },
+  "HitlerPulp4": {
+    "variant_of": "HitlerPulpBase",
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp5"
+      }
+    }
+  },
+  "HitlerPulp5": {
+    "variant_of": "HitlerPulp1",
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp6"
+      }
+    }
+  },
+  "HitlerPulp6": {
+    "variant_of": "HitlerPulpBase",
+    "damage_instance": {
+      "effects": {
+        "FormChange": "Pulp7"
+      }
+    }
+  },
+  "T3RipAndTear": {
+    "template": "melee_attack",
+    "class": "MeleeEatAbility",
+    "ai_ability": "BasicBigMelee",
+    "meta": {
+      "name": "EABILITY_T3RIPANDTEAR_NAME",
+      "name_resolved": "Auseinanderreißen"
+    },
+    "graphics": {
+      "animation": "ripandtear"
+    },
+    "target": {
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "0",
+      "piercing": "true",
+      "cant_miss": "true",
+      "effects": {
+        "Vaporize": "20"
+      }
+    }
+  },
+  "T3Shoot": {
+    "template": "ranged_attack",
+    "target": {
+      "max_range": "20",
+      "min_range": "1"
+    },
+    "graphics": {
+      "projectile": "Bullet",
+      "animation": "shoot",
+      "lob_height": "0",
+      "speed": "25"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage"
+    }
+  },
+  "T3Counter": {
+    "variant_of": "BasicMelee",
+    "damage_instance": {
+      "knockback": "3"
+    }
+  },
+  "T3Intro": {
+    "template": "self_buff",
+    "chain_ability": "T3Leave",
+    "graphics": {
+      "dont_visualize_ai": "true",
+      "animation": "yella"
+    },
+    "target": {
+      "prioritize_face_camera": "true"
+    },
+    "damage_instance": {
+      "ai_base_score": "99999"
+    }
+  },
+  "T3Leave": {
+    "template": "leave",
+    "graphics": {
+      "dont_visualize_ai": "true",
+      "animation": "portout"
+    },
+    "damage_instance": {
+      "ai_base_score": "99999"
+    },
+    "self_damage": {
+      "effects": {
+        "PurgeAll": "1",
+        "TurnControlDelay": ".25",
+        "T3HitlerTriggerInitialSpawns": "1",
+        "FormChange": "SpawningPhase"
+      }
+    }
+  },
+  "T3JoinFight": {
+    "ai_ability": "SpawnTerminatorMini_Base",
+    "template": "return",
+    "chain_ability": "T3YellB",
+    "meta": {
+      "is_move": "true",
+      "animation": "portin"
+    },
+    "graphics": {
+      "dont_visualize_ai": "true"
+    },
+    "cost": {
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true",
+      "cantrip": "true",
+      "once_per_fight": "true",
+      "cant_cast": "X"
+    },
+    "target": {
+      "max_range": "20",
+      "min_range": "0",
+      "X_is": "custom",
+      "force_ai_target_as_spell": "true",
+      "prioritize_face_camera": "true",
+      "allow_any_orientation": "true"
+    },
+    "bonus_passives": {
+      "XIsLivingAlliesWithTag": "terminator_mini"
+    },
+    "damage_instance": {
+      "ai_base_score": "100"
+    }
+  },
+  "T3YellB": {
+    "template": "self_buff",
+    "graphics": {
+      "dont_visualize_ai": "true",
+      "animation": "yellb"
+    },
+    "damage_instance": {
+      "ai_base_score": "99999"
+    }
+  }
+}

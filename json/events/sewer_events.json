@@ -1,0 +1,550 @@
+{
+  "CloggedPipes": {
+    "intro": {
+      "title": "EVENT_CLOGGEDPIPES_NAME",
+      "title_resolved": "Clogged Pipes",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "clogged_pipes",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_CLOGGEDPIPES_QUES",
+      "prompt_resolved": "{catname} finds a large pipe that is clogged with debris and waste.",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CLOGGEDPIPES_REW1",
+                "prompt_resolved": "Seeing a way to unclog the pipe, {catname} pulls out a branch that was impeding flow...\n\nA huge wave of water explodes from the pipe, drenching everything!",
+                "self_status_next_fight": {
+                  "AbilityOnBattleStart": "Flush"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CLOGGEDPIPES_REW2",
+                "prompt_resolved": "{catname} sees something stuck in the sludge at the end of the pipe and digs it out...",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CLOGGEDPIPES_REW3",
+                "prompt_resolved": "{catname} digs through the thick waste with {his} paws, completely ruining {his} clean fur.",
+                "get_parasite_from_pool": "sludge_armor"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_CLOGGEDPIPES_REW4",
+                "prompt_resolved": "Squishing {his} nose, {catname} leaps into the pipe and pulls out as much sludge as {he} can, trying to unclog the pipe to no avail!",
+                "gain_disorder_from_pool": "diseases"
+              }
+            }
+          }
+        },
+        "bash": {
+          "label": "EVENT_BASH_ANSW",
+          "label_resolved": "Bash",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_CLOGGEDPIPES_REW5",
+                "prompt_resolved": "With surprising fury, {catname} busts the clog open with {his} paws!\n\nA massive torrent of water blasts from the pipe, throwing {catname} back!",
+                "self_status_next_fight": {
+                  "AbilityOnBattleStart_Immediate": "Flush"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_CLOGGEDPIPES_REW6",
+                "prompt_resolved": "{catname} digs through the slush and finds an item!",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_CLOGGEDPIPES_REW7",
+                "prompt_resolved": "{catname} throws {himself} into the pipe pulling as much gunk and waste out as {he} can, emerging moments later covered in sludge!",
+                "get_parasite_from_pool": "sludge_armor"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_CLOGGEDPIPES_REW8",
+                "prompt_resolved": "{catname} smashes {his} way through the thick sludge trying to clear the clogged pipe, but only ends up covered in disgusting refuse.",
+                "gain_disorder_from_pool": "diseases"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ShinyThingInAPool": {
+    "intro": {
+      "title": "EVENT_SHINYTHINGINAPOOL_NAME",
+      "title_resolved": "Shiny thing in a pool",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "shiny_thing_in_pool",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_SHINYTHINGINAPOOL_QUES",
+      "prompt_resolved": "Beneath the surface of a murky pool of water {catname} spies something shiny!",
+      "options": {
+        "dive": {
+          "label": "EVENT_DIVE_ANSW",
+          "label_resolved": "Dive into pool",
+          "stat": "dex",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW1",
+                "prompt_resolved": "{catname} wades into the water and finds some coins at the bottom!",
+                "gain_coins": [
+                  "10",
+                  "20"
+                ]
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW2",
+                "prompt_resolved": "With a splash, {catname} dives into the pool...\n\nMoments later {catname} breaches the surface of the water with an item clutched in {his} paws!",
+                "get_item_from_pool": "rare"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW3",
+                "prompt_resolved": "{catname} leaps recklessly into the pool and only gets a mouthful of toxic water in return!",
+                "self_status_next_fight": {
+                  "Poison": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW4",
+                "prompt_resolved": "{catname} dives into the water trying to reach the bottom of the pool but almost drowns in the foul muck!\n\nThe other cats manage to pull {catname} out.",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              }
+            }
+          }
+        },
+        "use_item": {
+          "label": "EVENT_USE_ITEM_ANSW",
+          "label_resolved": "Use an item from backpack",
+          "stat": "lck",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW5",
+                "prompt_resolved": "{catname} pulls an item out from {his} backpack and fishes out the item from the bottom of the pool!",
+                "get_item_from_pool": {
+                  "pool": "current_chapter_rare"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW6",
+                "prompt_resolved": "{catname} reaches into the murky water and pulls up the item at the bottom!",
+                "get_item_from_pool": {
+                  "pool": "current_chapter_rare"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "1",
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW7",
+                "prompt_resolved": "{catname} reaches into the pool with an item from {his} backpack but fumbles and drops it!",
+                "lose_item": "inventory"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_SHINYTHINGINAPOOL_REW8",
+                "prompt_resolved": "{catname} trips into the pool and almost drowns in the foul water!",
+                "damage": [
+                  "2",
+                  "5"
+                ],
+                "lose_item": "equipped"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "UseTheToilet": {
+    "intro": {
+      "title": "EVENT_USETHETOILET_NAME",
+      "title_resolved": "Use the toilet",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "use_the_toilet",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_USETHETOILET_QUES",
+      "prompt_resolved": "{catname} finds a well used toilet. Who knows what might lurk within it?",
+      "options": {
+        "use_toilet_con": {
+          "label": "EVENT_USETOILET_ANSW",
+          "label_resolved": "Use toilet",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_USETHETOILET_REW1",
+                "prompt_resolved": "{catname} carefully uses the toilet...\n\n{His} contribution is appreciated! The toilet man is happy.",
+                "gain_coins": [
+                  "5",
+                  "15"
+                ],
+                "increment_legacy_counter": "WorldEventLegacyCounter_ToiletFlushes"
+              },
+              "rare": {
+                "prompt": "EVENT_USETHETOILET_REW2",
+                "prompt_resolved": "The toilet man is very pleased with {catname}'s performance!",
+                "gain_coins": [
+                  "15",
+                  "66"
+                ],
+                "increment_legacy_counter": "WorldEventLegacyCounter_ToiletFlushes"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_USETHETOILET_REW3",
+                "prompt_resolved": "{catname} tries to go but is nervous and only releases a tiny turd... it is not worthy!",
+                "set_frame": "4"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_USETHETOILET_REW4",
+                "prompt_resolved": "The toilet man is angry!\n\n{catname} howls in pain as it grabs at {him} from inside the bowl!",
+                "injury": "spd"
+              }
+            }
+          }
+        },
+        "use_toilet_str": {
+          "label": "EVENT_USETOILET_ANSW",
+          "label_resolved": "Use toilet",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_USETHETOILET_REW5",
+                "prompt_resolved": "{catname} sits on the toilet and moments later the party hears a satisfying 'sploosh' sound.\n\n{He} feels a lot better!",
+                "increment_legacy_counter": "WorldEventLegacyCounter_ToiletFlushes",
+                "full_heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_USETHETOILET_REW6",
+                "prompt_resolved": "{catname} releases an incredibly massive turd into the toilet with a massive 'sploosh'!\n\nDoes {catname} have what it takes to go again?",
+                "permanent_stats": {
+                  "con": "1"
+                },
+                "increment_legacy_counter": "WorldEventLegacyCounter_ToiletFlushes",
+                "override_end_option_prompt": "EVENT_USETHETOILET_AGAIN",
+                "event_now_same_cat": "UseTheToilet"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_USETHETOILET_REW7",
+                "prompt_resolved": "{catname} tries as hard as {he} can but just ends up hurting {himself}.",
+                "damage": "3"
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_USETHETOILET_REW8",
+                "prompt_resolved": "{catname} pushes way too hard and something ruptures inside {him}!",
+                "gain_disorder": "IntestinalProlapse"
+              }
+            }
+          }
+        },
+        "flush_yourself": {
+          "label": "EVENT_FLUSHYOURSELF_ANSW",
+          "label_resolved": "Flush yourself",
+          "requirements": {
+            "counter_minimum": [
+              "WorldEventLegacyCounter_ToiletFlushes",
+              "6"
+            ]
+          },
+          "good": {
+            "set_frame": "1",
+            "prompt": "EVENT_USETHETOILET_REW9",
+            "prompt_resolved": "{catname} flushes {himself} down the toilet!?!",
+            "shop_now": "Event_SmallShop"
+          }
+        }
+      }
+    }
+  },
+  "BrokenCanister": {
+    "intro": {
+      "title": "EVENT_BROKENCANISTER_NAME",
+      "title_resolved": "Broken Canister",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "broken_canister",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BROKENCANISTER_QUES",
+      "prompt_resolved": "{catname} finds a broken cylinder. Strange green goo is pooled beneath the broken container.",
+      "options": {
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_BROKENCANISTER_REW1",
+                "prompt_resolved": "{catname} rubs the strange liquid on {his} face, mutating it!",
+                "random_mutation_from_set": {
+                  "eyes": "-1"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_BROKENCANISTER_REW2",
+                "prompt_resolved": "Unable to resist the strange temptation, {catname} rubs the sweet smelling liquid in {his} eyes!",
+                "mutation": {
+                  "eye1": "-1",
+                  "eye2": "-1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_BROKENCANISTER_REW3",
+                "prompt_resolved": "{catname} moves in close to sniff the strange liquid...\n\nA bubble from beneath the liquid's surface pops, spraying {catname} in the face and blinding {him}!",
+                "self_status_next_fight": {
+                  "Blind": "6"
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_BROKENCANISTER_REW4",
+                "prompt_resolved": "The liquid looks soothing, and {catname} rubs some on {his} face...\n\n{catname} howls in pain as the acidic liquid burns {his} skin!",
+                "gain_disorder": "PuncturedEye"
+              }
+            }
+          }
+        },
+        "lick": {
+          "label": "EVENT_LICK_ANSW",
+          "label_resolved": "Lick",
+          "stat": "con",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_BROKENCANISTER_REW5",
+                "prompt_resolved": "{catname} laps up some of the thick liquid. It tastes strange, but good.\n\n{catname} feels {his} body mutate!",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_BROKENCANISTER_REW6",
+                "prompt_resolved": "{catname} tastes the liquid... it is delicious!\n\n{He} gobbles it up as {his} body mutates!",
+                "random_mutation": "2"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_BROKENCANISTER_REW7",
+                "prompt_resolved": "{catname} licks the green goo. It tastes absolutely vile!\n\n{He} tries to spit it out, but the sticky substance sticks to everything, poisoning {catname}!",
+                "self_status_next_fight": {
+                  "Poison": "6"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_BROKENCANISTER_REW8",
+                "prompt_resolved": "The strange goo tastes gross going down but {catname} keeps going. {He} begins to feel strange...",
+                "gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "GiantSleepingShark": {
+    "intro": {
+      "title": "EVENT_GIANTSLEEPINGSHARK_NAME",
+      "title_resolved": "Giant Sleeping Shark",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "giant_sleeping_shark",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_GIANTSLEEPINGSHARK_QUES",
+      "prompt_resolved": "A giant sleeping shark blocks the way forward in front of {catname}!",
+      "options": {
+        "sneak_by": {
+          "label": "EVENT_SNEAKBY_ANSW",
+          "label_resolved": "Sneak by",
+          "stat": "dex",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW1",
+                "prompt_resolved": "{catname} quietly sneaks by, careful not to disturb the snoozing shark..."
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW2",
+                "prompt_resolved": "As {catname} sneaks by, {he} is able to steal the shark's treasure!",
+                "get_item": "SharkTooth"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW3",
+                "prompt_resolved": "The shark wakes up and bites at {catname}!\n\nBlood flies everywhere as the giant teeth sink deep into {catname}.",
+                "damage": "6",
+                "self_status_next_fight": {
+                  "Bleed": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW4",
+                "prompt_resolved": "The shark is enraged by {catname}, and bites {him} with its giant rows of sharp teeth!",
+                "injury": "bleeding",
+                "self_status_next_fight": {
+                  "Bleed": "4"
+                }
+              }
+            }
+          }
+        },
+        "run_away": {
+          "label": "EVENT_RUNAWAY_ANSW",
+          "label_resolved": "Run away",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW5",
+                "prompt_resolved": "{catname} successfully runs away from the giant shark!"
+              },
+              "rare": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW6",
+                "prompt_resolved": "{catname} runs past the shark and finds {himself} overlooking the next battle, giving the party the opportunity to ambush!",
+                "ally_ambush_next_fights": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW7",
+                "prompt_resolved": "The shark wakes and chases {catname}!\n\n{He} barely manages to escape but is exhausted from all the running.",
+                "self_status_next_fight": {
+                  "SpeedUp": "-4"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW8",
+                "prompt_resolved": "The shark wakes up and chases the party all the way into the next battle!",
+                "spawn_unit_next_fight": {
+                  "object": "DaddyShark",
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "kiss": {
+          "label": "EVENT_KISS_ANSW",
+          "label_resolved": "Kiss",
+          "stat": "cha",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW9",
+                "prompt_resolved": "The shark gives {catname} a large, teethy grin then falls back to sleep."
+              },
+              "rare": {
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW10",
+                "prompt_resolved": "The shark is impressed by the small cat before him and smiles fondly.\n\nIt follows {catname} into the next room!",
+                "gain_familiar": "CharmedDaddyShark"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW11",
+                "prompt_resolved": "The shark kisses {catname} back, then winks...\n\nThe large rows of teeth staring {catname} down open and {catname} runs in terror!",
+                "self_status_next_fight": {
+                  "Fear": "3"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_GIANTSLEEPINGSHARK_REW12",
+                "prompt_resolved": "As {catname} kisses the huge shark, it's jaw opens and it bites {catname} on the face, tearing off {his} face!",
+                "injury": "cha"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

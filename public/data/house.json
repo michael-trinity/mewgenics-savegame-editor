@@ -1,0 +1,1028 @@
+{
+  "rooms": {
+    "Floor1_Large": {
+      "width": "16",
+      "height": "7",
+      "movieclip": "RoomBackgroundLargeF1",
+      "interstitial_bg_frame": "room1",
+      "reverb_empty": {
+        "preset": "STONEROOM",
+        "amount": ".65",
+        "volume_adjustment": "2"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Floor1_Small": {
+      "width": "16",
+      "height": "7",
+      "movieclip": "RoomBackgroundSmallF1",
+      "interstitial_bg_frame": "room2",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "SmallAttic": {
+      "id": "Attic",
+      "width": "18",
+      "height": "5",
+      "movieclip": "RoomBackgroundSmallAttic",
+      "interstitial_bg_frame": "attic",
+      "extra_bound_planes": [
+        {
+          "p": [
+            "0",
+            "0"
+          ],
+          "n": [
+            "1",
+            "-2"
+          ]
+        },
+        {
+          "p": [
+            "18",
+            "0"
+          ],
+          "n": [
+            "-1",
+            "-2"
+          ]
+        }
+      ],
+      "built_in_collision": [
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6"
+        ],
+        [
+          "6",
+          "8",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "8",
+          "6"
+        ]
+      ],
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "LargeAttic": {
+      "id": "Attic",
+      "width": "35",
+      "height": "9",
+      "movieclip": "RoomBackgroundAttic",
+      "interstitial_bg_frame": "attic",
+      "extra_bound_planes": [
+        {
+          "p": [
+            "0",
+            "0"
+          ],
+          "n": [
+            "1",
+            "-2"
+          ]
+        },
+        {
+          "p": [
+            "35",
+            "0"
+          ],
+          "n": [
+            "-1",
+            "-2"
+          ]
+        }
+      ],
+      "built_in_collision": [
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "6",
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6",
+          "6",
+          "6"
+        ],
+        [
+          "6",
+          "8",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "7",
+          "8",
+          "6"
+        ],
+        [
+          "6",
+          "8",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "2",
+          "8",
+          "6"
+        ]
+      ],
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Floor2_Large": {
+      "width": "16",
+      "height": "7",
+      "movieclip": "RoomBackgroundLargeF2",
+      "interstitial_bg_frame": "room3",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Floor2_Small": {
+      "width": "16",
+      "height": "7",
+      "movieclip": "RoomBackgroundSmallF2",
+      "interstitial_bg_frame": "room4",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Basement0": {
+      "width": "33",
+      "height": "5",
+      "movieclip": "RoomBackgroundBasement0",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Basement1": {
+      "width": "33",
+      "height": "5",
+      "movieclip": "RoomBackgroundBasement1",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Basement2": {
+      "width": "33",
+      "height": "5",
+      "movieclip": "RoomBackgroundBasement2",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Basement3": {
+      "width": "33",
+      "height": "5",
+      "movieclip": "RoomBackgroundBasement3",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    },
+    "Basement4": {
+      "width": "33",
+      "height": "5",
+      "movieclip": "RoomBackgroundBasement4",
+      "reverb_empty": {
+        "preset": "AUDITORIUM",
+        "amount": ".65",
+        "volume_adjustment": "1.50"
+      },
+      "reverb_full": {
+        "preset": "LIVINGROOM",
+        "amount": ".25"
+      }
+    }
+  },
+  "houses": {
+    "House1": {
+      "movieclip_bg": "HouseBackground1",
+      "movieclip_fg": "HouseForeground1",
+      "bg_placements_frame": "small",
+      "room_positions": {
+        "Floor1_Large": [
+          "1,",
+          "1"
+        ],
+        "SmallAttic": [
+          "0,",
+          "9"
+        ]
+      },
+      "aux_positions": {
+        "ButchBox": [
+          "21,",
+          "0"
+        ],
+        "StraySpawn": [
+          "-3",
+          "0"
+        ],
+        "HousePipe": [
+          "-2",
+          "0"
+        ],
+        "Roof_LeftEdge": [
+          "-3.388",
+          "8.138"
+        ],
+        "Roof_Top": [
+          "8.983",
+          "14.4"
+        ],
+        "Roof_RightEdge": [
+          "21.548",
+          "8.175"
+        ]
+      }
+    },
+    "House2": {
+      "movieclip_bg": "HouseBackground2",
+      "movieclip_fg": "HouseForeground2",
+      "bg_placements_frame": "large",
+      "room_positions": {
+        "Floor1_Large": [
+          "1,",
+          "1"
+        ],
+        "Floor1_Small": [
+          "18,",
+          "1"
+        ],
+        "LargeAttic": [
+          "0,",
+          "9"
+        ],
+        "Basement0": [
+          "1",
+          "-6"
+        ],
+        "Basement1": [
+          "1",
+          "-12"
+        ],
+        "Basement2": [
+          "1",
+          "-18"
+        ],
+        "Basement3": [
+          "1",
+          "-24"
+        ],
+        "Basement4": [
+          "1",
+          "-30"
+        ]
+      },
+      "aux_positions": {
+        "ButchBox": [
+          "38,",
+          "0"
+        ],
+        "StraySpawn": [
+          "-3",
+          "0"
+        ],
+        "HousePipe": [
+          "-2",
+          "0"
+        ],
+        "Roof_LeftEdge": [
+          "-3.617",
+          "8.112"
+        ],
+        "Roof_Top": [
+          "17.563",
+          "18.677"
+        ],
+        "Roof_RightEdge": [
+          "38.518",
+          "8.207"
+        ]
+      }
+    },
+    "House3": {
+      "movieclip_bg": "HouseBackground3",
+      "movieclip_fg": "HouseForeground3",
+      "bg_placements_frame": "large",
+      "room_positions": {
+        "Floor1_Large": [
+          "1,",
+          "1"
+        ],
+        "Floor1_Small": [
+          "18,",
+          "1"
+        ],
+        "Floor2_Small": [
+          "1,",
+          "9"
+        ],
+        "Floor2_Large": [
+          "18,",
+          "9"
+        ],
+        "LargeAttic": [
+          "0,",
+          "17"
+        ],
+        "Basement0": [
+          "1",
+          "-6"
+        ],
+        "Basement1": [
+          "1",
+          "-12"
+        ],
+        "Basement2": [
+          "1",
+          "-18"
+        ],
+        "Basement3": [
+          "1",
+          "-24"
+        ],
+        "Basement4": [
+          "1",
+          "-30"
+        ]
+      },
+      "aux_positions": {
+        "ButchBox": [
+          "38,",
+          "0"
+        ],
+        "StraySpawn": [
+          "-3",
+          "0"
+        ],
+        "HousePipe": [
+          "-2",
+          "0"
+        ],
+        "Roof_LeftEdge": [
+          "-3.482",
+          "16.11"
+        ],
+        "Roof_Top": [
+          "17.562",
+          "26.715"
+        ],
+        "Roof_RightEdge": [
+          "38.408",
+          "16.185"
+        ]
+      }
+    }
+  },
+  "upgrades": {
+    "Default": {
+      "unlock_room": "Floor1_Large",
+      "set_house": "House1"
+    },
+    "SmallHouse_Attic": {
+      "prereq": "Default",
+      "unlock_room": "Attic"
+    },
+    "MediumHouse": {
+      "prereq": "Default",
+      "set_house": "House2"
+    },
+    "MediumHouse_SmallRoom": {
+      "prereq": "MediumHouse",
+      "unlock_room": "Floor1_Small"
+    },
+    "LargeHouse": {
+      "prereq": "MediumHouse",
+      "set_house": "House3"
+    },
+    "LargeHouse_Floor2Large": {
+      "prereq": "LargeHouse",
+      "unlock_room": "Floor2_Large"
+    },
+    "LargeHouse_Floor2Small": {
+      "prereq": "LargeHouse",
+      "unlock_room": "Floor2_Small"
+    },
+    "BasementUpgrade": {
+      "prereq": "MediumHouse",
+      "unlock_room": "Basement0"
+    },
+    "BasementUpgrade2": {
+      "prereq": "BasementUpgrade",
+      "unlock_room": "Basement1"
+    },
+    "BasementUpgrade3": {
+      "prereq": "BasementUpgrade2",
+      "unlock_room": "Basement2"
+    },
+    "BasementUpgrade4": {
+      "prereq": "BasementUpgrade3",
+      "unlock_room": "Basement3"
+    },
+    "BasementUpgrade5": {
+      "prereq": "BasementUpgrade4",
+      "unlock_room": "Basement4"
+    }
+  }
+}

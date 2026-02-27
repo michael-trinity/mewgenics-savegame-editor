@@ -1,0 +1,91 @@
+{
+  "levels": {
+    "folder": "core",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "core_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [],
+    "medium": [
+      "CoreFreak",
+      "PokerDemon",
+      "Whisperer",
+      "CloakedDemon",
+      "BigDemon",
+      "HeadTumor",
+      "TallTumor",
+      "DemonHooker",
+      "Belcher",
+      "TumorCat"
+    ],
+    "large": [
+      "MegaTumor"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "coreitems"
+  },
+  "minibosses": {
+    "cerberubs": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "dimensionx.gon",
+      "hidden": "true",
+      "override_art": "MapNodeExit_DimensionX"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "coven"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_CoreObelisk",
+      "override_art": "MapNode_ObeliskHalf"
+    }
+  },
+  "flags": {
+    "CoreObeliskUnlocked": {
+      "quest_event": {
+        "level": "Quest_CoreObeliskRaised",
+        "override_art": "MapNode_ObeliskFull"
+      }
+    },
+    "BothObelisksUnlocked": {
+      "quest_event": {
+        "level": "Quest_CoreObeliskGlowing",
+        "override_art": "MapNode_ObeliskGlowing"
+      }
+    },
+    "DimensionXUnlocked": {
+      "quest_event": {
+        "level": "Quest_DimensionXPortal",
+        "override_art": "MapNode_RiftPortal"
+      }
+    }
+  }
+}

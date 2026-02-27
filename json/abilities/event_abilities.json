@@ -1,0 +1,78 @@
+{
+  "FlowerEventSleep": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "ChangeTile": "TallFlowerTile",
+        "Sleep": "1"
+      }
+    }
+  },
+  "GrassEvent": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "TallGrassTile"
+      }
+    }
+  },
+  "BrambleRandomTileEvent": {
+    "template": "spell",
+    "target": {
+      "max_aoe": "0",
+      "min_range": "0",
+      "max_range": "20",
+      "target_mode": "random_tile"
+    },
+    "graphics": {
+      "center_particle": "none",
+      "area_particle": "none",
+      "animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "BramblesOnHit": "1"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "RocksFallEvent": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "BounceObject": "SmallRock"
+      }
+    }
+  }
+}

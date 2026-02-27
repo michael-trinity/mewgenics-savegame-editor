@@ -1,0 +1,924 @@
+{
+  "None": {
+    "name": "WEATHER_NONE_NAME",
+    "name_resolved": "Clear Skies",
+    "desc": "WEATHER_NONE_DESC",
+    "desc_resolved": "There are no weather effects."
+  },
+  "Fog": {
+    "name": "WEATHER_FOG_NAME",
+    "name_resolved": "Fog",
+    "desc": "WEATHER_FOG_DESC",
+    "desc_resolved": "All attacks and abilities have a +10% chance to miss.",
+    "effects": {
+      "Fog": "1"
+    }
+  },
+  "Rain": {
+    "name": "WEATHER_RAIN_NAME",
+    "name_resolved": "Rain",
+    "desc": "WEATHER_RAIN_DESC",
+    "desc_resolved": "Persistent Water Element.",
+    "ambient_sound": "amb_rain.ogg",
+    "hint_persistent_elements": [
+      "Water"
+    ],
+    "effects": {
+      "Rain": "1"
+    }
+  },
+  "HeavyRain": {
+    "name": "WEATHER_HEAVYRAIN_NAME",
+    "name_resolved": "Heavy Rain",
+    "desc": "WEATHER_HEAVYRAIN_DESC",
+    "desc_resolved": "Persistent Water Element. There are extra water tiles in every battle.",
+    "ambient_sound": "amb_heavyrain.ogg",
+    "hint_persistent_elements": [
+      "Water"
+    ],
+    "effects": {
+      "Rain": "2",
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "WaterTile",
+        "number": [
+          "12",
+          "20"
+        ]
+      }
+    }
+  },
+  "Windy": {
+    "name": "WEATHER_WINDY_NAME",
+    "name_resolved": "Windy",
+    "desc": "WEATHER_WINDY_DESC",
+    "desc_resolved": "At the end of each round, wind blows everything 1 space in a random direction.",
+    "ambient_sound": "amb_windy.ogg",
+    "hint_persistent_elements": [
+      "Wind"
+    ],
+    "effects": {
+      "Windy": "1"
+    }
+  },
+  "Sandstorm": {
+    "name": "WEATHER_SANDSTORM_NAME",
+    "name_resolved": "Sandstorm",
+    "desc": "WEATHER_SANDSTORM_DESC",
+    "desc_resolved": "At the end of each round, damages everything by 1.",
+    "ambient_sound": "amb_sandstorm.ogg",
+    "effects": {
+      "Sandstorm": "1"
+    }
+  },
+  "Overgrowth": {
+    "name": "WEATHER_OVERGROWTH_NAME",
+    "name_resolved": "Overgrowth",
+    "desc": "WEATHER_OVERGROWTH_DESC",
+    "desc_resolved": "There are extra tall grass and bramble tiles in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "TallGrassTile",
+        "number": [
+          "2",
+          "5"
+        ]
+      }
+    }
+  },
+  "Earthquake": {
+    "name": "WEATHER_EARTHQUAKE_NAME",
+    "name_resolved": "Earthquake",
+    "desc": "WEATHER_EARTHQUAKE_DESC",
+    "desc_resolved": "There was an earthquake! Objects in each battle have been destroyed and there are rocks everywhere!",
+    "effects": {
+      "DeleteInanimateObjectsChance": "25%",
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "Boulder",
+        "number": [
+          "0",
+          "2"
+        ]
+      }
+    }
+  },
+  "Wildfire": {
+    "name": "WEATHER_WILDFIRE_NAME",
+    "name_resolved": "Wildfire",
+    "desc": "WEATHER_WILDFIRE_DESC",
+    "desc_resolved": "There is fire everywhere!",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "FireTile",
+        "number": [
+          "3",
+          "8"
+        ]
+      }
+    }
+  },
+  "HeatWave": {
+    "name": "WEATHER_HEATWAVE_NAME",
+    "name_resolved": "Heat Wave",
+    "desc": "WEATHER_HEATWAVE_DESC",
+    "desc_resolved": "Cats do not heal after battle. All heals are reduced by 1. Can be mitigated with water.",
+    "hint_persistent_elements": [
+      "Heat"
+    ],
+    "effects": {
+      "HeatWave": "1"
+    }
+  },
+  "Snow": {
+    "name": "WEATHER_SNOW_NAME",
+    "name_resolved": "Snow",
+    "desc": "WEATHER_SNOW_DESC",
+    "desc_resolved": "Persistent Ice Element.",
+    "ambient_sound": "amb_snow.ogg",
+    "hint_persistent_elements": [
+      "Ice"
+    ],
+    "effects": {
+      "Snow": "1"
+    }
+  },
+  "AcidRain": {
+    "name": "WEATHER_ACIDRAIN_NAME",
+    "name_resolved": "Acid Rain",
+    "desc": "WEATHER_ACIDRAIN_DESC",
+    "desc_resolved": "At the end of each round, damages everything by 2 with a chance to lower a random stat as well.",
+    "ambient_sound": "amb_acidrain.ogg",
+    "effects": {
+      "AcidRain": "2"
+    }
+  },
+  "MeteorShower": {
+    "name": "WEATHER_METEORS_NAME",
+    "name_resolved": "Meteor Shower",
+    "desc": "WEATHER_METEORS_DESC",
+    "desc_resolved": "After each turn there's a chance for a flaming meteor to fall onto a random tile.",
+    "effects": {
+      "MeteorShower": "25%"
+    }
+  },
+  "Thunderstorm": {
+    "name": "WEATHER_THUNDERSTORM_NAME",
+    "name_resolved": "Thunderstorm",
+    "desc": "WEATHER_THUNDERSTORM_DESC",
+    "desc_resolved": "Persistent Water Element. At the end of each round, wind blows everything 1 space in a random direction. After each turn, there's a chance for a random lightning strike.",
+    "ambient_sound": "amb_thunderstorm.ogg",
+    "hint_persistent_elements": [
+      "Water",
+      "Wind"
+    ],
+    "effects": {
+      "Rain": "1",
+      "RandomLightning": "50%",
+      "Windy": "1"
+    }
+  },
+  "FlashFlood": {
+    "name": "WEATHER_FLASHFLOOD_NAME",
+    "name_resolved": "Flash Flood",
+    "desc": "WEATHER_FLASHFLOOD_DESC",
+    "desc_resolved": "Persistent Water Element. There are a ton of extra water tiles in every battle.",
+    "ambient_sound": "amb_rain.ogg",
+    "hint_persistent_elements": [
+      "Water"
+    ],
+    "effects": {
+      "Rain": "4",
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "WaterTile",
+        "number": [
+          "40",
+          "60"
+        ]
+      }
+    }
+  },
+  "TrashDay": {
+    "name": "WEATHER_TRASHDAY_NAME",
+    "name_resolved": "Trash Day",
+    "desc": "WEATHER_TRASHDAY_DESC",
+    "desc_resolved": "There is extra junk in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "Junk",
+          "Junk",
+          "TrashBag"
+        ],
+        "number": [
+          "3",
+          "6"
+        ]
+      }
+    }
+  },
+  "RainingFrogs": {
+    "name": "WEATHER_FROGS_NAME",
+    "name_resolved": "Raining Frogs",
+    "desc": "WEATHER_FROGS_DESC",
+    "desc_resolved": "There are extra neutral frogs in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "NeutralToad",
+        "number": [
+          "2",
+          "4"
+        ]
+      }
+    }
+  },
+  "PipeBlockage": {
+    "name": "WEATHER_BLOCKAGE_NAME",
+    "name_resolved": "Pipe Blockage",
+    "desc": "WEATHER_BLOCKAGE_DESC",
+    "desc_resolved": "There is extra poop and sewage in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "CreepTile",
+        "number": [
+          "3",
+          "5"
+        ]
+      }
+    }
+  },
+  "PayDay": {
+    "name": "WEATHER_PAYDAY_NAME",
+    "name_resolved": "Pay Day",
+    "desc": "WEATHER_PAYDAY_DESC",
+    "desc_resolved": "There are extra coins in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "Coin",
+        "number": [
+          "5",
+          "10"
+        ]
+      }
+    }
+  },
+  "HuntingSeason": {
+    "name": "WEATHER_HUNTING_NAME",
+    "name_resolved": "Hunting Season",
+    "desc": "WEATHER_HUNTING_DESC",
+    "desc_resolved": "There are extra bear traps in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "trap": "BearTrap",
+        "number": [
+          "2",
+          "4"
+        ]
+      }
+    }
+  },
+  "RestlessDead": {
+    "name": "WEATHER_RESTLESS_NAME",
+    "name_resolved": "Restless Dead",
+    "desc": "WEATHER_RESTLESS_DESC",
+    "desc_resolved": "Zombies spawn at the end of each round.",
+    "effects": {
+      "GlobalSpawnOnRoundEnd": {
+        "object": "NeutralZombieKitten"
+      }
+    }
+  },
+  "FireflySwarm": {
+    "name": "WEATHER_FIREFLY_NAME",
+    "name_resolved": "Firefly Swarm",
+    "desc": "WEATHER_FIREFLY_DESC",
+    "desc_resolved": "All allies have +2 luck.",
+    "effects": {
+      "FireflySwarm": "2"
+    }
+  },
+  "ButterflySwarm": {
+    "name": "WEATHER_BUTTERFLY_NAME",
+    "name_resolved": "Butterfly Swarm",
+    "desc": "WEATHER_BUTTERFLY_DESC",
+    "desc_resolved": "All allies have +2 luck.",
+    "ambient_sound": "amb_butterflyswarm.ogg",
+    "effects": {
+      "ButterflySwarm": "2"
+    }
+  },
+  "FlySwarm": {
+    "name": "WEATHER_FLYSWARM_NAME",
+    "name_resolved": "Fly Swarm",
+    "desc": "WEATHER_FLYSWARM_DESC",
+    "desc_resolved": "At the end of each turn, there's a chance to get bitten for 1 damage and 1 Bleed.",
+    "ambient_sound": "amb_flyswarm.ogg",
+    "effects": {
+      "FlySwarm": "50%"
+    }
+  },
+  "VisualFlySwarm": {
+    "name": "WEATHER_TORFLIES_NAME",
+    "name_resolved": "Fly Swarm",
+    "desc": "WEATHER_TORFLIES_DESC",
+    "desc_resolved": "There's lots of flies!",
+    "ambient_sound": "amb_flyswarm.ogg",
+    "effects": {
+      "VisualFlySwarm": "1"
+    }
+  },
+  "LowGravity": {
+    "name": "WEATHER_LOWGRAV_NAME",
+    "name_resolved": "Low Gravity",
+    "desc": "WEATHER_LOWGRAV_DESC",
+    "desc_resolved": "Jumps, throws, and projectile abilities have +2 range. All physical abilities have +1 Knockback. Other abilities that cause Knockback have +1 Knockback as well.",
+    "effects": {
+      "LowGravityRangeBoost": "2",
+      "LowGravityKnockbackBoost": "1",
+      "ClearDefaultDebris": "1",
+      "AddTilesetObjects": {
+        "FloatingDebris": {
+          "count": "20"
+        }
+      }
+    }
+  },
+  "Firestorm": {
+    "name": "WEATHER_FIRESTORM_NAME",
+    "name_resolved": "Firestorm",
+    "desc": "WEATHER_FIRESTORM_DESC",
+    "desc_resolved": "Persistent Fire Element. Fires no longer burn out. Parts of the map are on fire.",
+    "hint_persistent_elements": [
+      "Fire"
+    ],
+    "effects": {
+      "FireStorm": "0%",
+      "SpawnExtraThingsOnBattleStart": {
+        "tile": "FireTile",
+        "number": [
+          "2",
+          "5"
+        ]
+      }
+    }
+  },
+  "KaijuFirestorm": {
+    "name": "WEATHER_KAIJUFIRE_NAME",
+    "name_resolved": "Firestorm",
+    "desc": "WEATHER_KAIJUFIRE_DESC",
+    "desc_resolved": "Persistent Fire Element. Fireballs occasionally rain down from the sky. Fires no longer burn out.",
+    "hint_persistent_elements": [
+      "Fire"
+    ],
+    "effects": {
+      "FireStorm": "33%",
+      "LowerAmbientLight": "50%"
+    }
+  },
+  "Meteornado": {
+    "name": "WEATHER_METEORNADO_NAME",
+    "name_resolved": "Meteornado",
+    "desc": "WEATHER_METEORNADO_DESC",
+    "desc_resolved": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
+    "effects": {
+      "Meteornado": "1"
+    }
+  },
+  "KaijuMeteornado": {
+    "name": "WEATHER_KAIJUMETEORNADO_NAME",
+    "name_resolved": "Meteornado",
+    "desc": "WEATHER_KAIJUMETEORNADO_DESC",
+    "desc_resolved": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
+    "effects": {
+      "Meteornado": "1",
+      "LowerAmbientLight": "33%",
+      "SpecialGodRays": {
+        "Big": {
+          "position": [
+            "4.5",
+            "4.5"
+          ],
+          "follow_character_tag": "zaratana"
+        }
+      }
+    }
+  },
+  "KaijuMeteornadoSolo": {
+    "name": "WEATHER_KAIJUMETEORSOLO_NAME",
+    "name_resolved": "Meteornado",
+    "desc": "WEATHER_KAIJUMETEORSOLO_DESC",
+    "desc_resolved": "At the end of each round, damages everything by 1 with a 33% chance to Bruise.",
+    "effects": {
+      "Meteornado": "1",
+      "LowerAmbientLight": "50%",
+      "SpecialGodRays": {
+        "Big": {
+          "position": [
+            "4.5",
+            "4.5"
+          ],
+          "follow_character_tag": "zaratana"
+        }
+      }
+    }
+  },
+  "RobotUprising": {
+    "name": "WEATHER_ROBOTS_NAME",
+    "name_resolved": "Robot Uprising",
+    "desc": "WEATHER_ROBOTS_DESC",
+    "desc_resolved": "2-4 robots spawn in each battle. All robots have gone rogue!",
+    "effects": {
+      "FactionUprising": "robot",
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "Bombchu",
+          "Deathbot",
+          "RoboVacuum",
+          "TinkererTurret"
+        ],
+        "number": [
+          "1",
+          "3"
+        ]
+      }
+    }
+  },
+  "HauntedNight": {
+    "name": "WEATHER_HAUNTED_NAME",
+    "name_resolved": "Haunted Night",
+    "desc": "WEATHER_HAUNTED_DESC",
+    "desc_resolved": "2-4 ghosts spawn in each battle. All ghosts have gone rogue!",
+    "effects": {
+      "FactionUprising": "ghost",
+      "LowerAmbientLight": "33%",
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "Spookie",
+          "Scary",
+          "Tatters",
+          "Wisp",
+          "Wisp",
+          "Wisp"
+        ],
+        "number": [
+          "2",
+          "4"
+        ]
+      }
+    }
+  },
+  "BirdMigration": {
+    "name": "WEATHER_MIGRATION_NAME",
+    "name_resolved": "Bird Migration",
+    "desc": "WEATHER_MIGRATION_DESC",
+    "desc_resolved": "1-2 extra birds spawn in each battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "Bird"
+        ],
+        "number": [
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "CockroachSwarm": {
+    "name": "WEATHER_COCKROACHES_NAME",
+    "name_resolved": "Cockroach Infestation",
+    "desc": "WEATHER_COCKROACHES_DESC",
+    "desc_resolved": "All units have a 25% chance to start each battle with Fear or Poison.",
+    "effects": {
+      "CockroachSwarm": "1",
+      "CharacterTypeGainsStatusAtBattleStart": {
+        "tag": "any",
+        "Conditional_Flying": {},
+        "Else": {
+          "Fear": [
+            "1",
+            ".25"
+          ],
+          "Poison": [
+            "1",
+            ".25"
+          ]
+        }
+      }
+    }
+  },
+  "JudgementDay": {
+    "name": "WEATHER_JUDGEMENT_NAME",
+    "name_resolved": "Judgement Day",
+    "desc": "WEATHER_JUDGEMENT_DESC",
+    "desc_resolved": "Some tiles will get Raptured at the end of each round during the battle. More tiles are affected every round.",
+    "effects": {
+      "JudgementDay": "25"
+    }
+  },
+  "Pandemonium": {
+    "name": "WEATHER_PANDEMONIUM_NAME",
+    "name_resolved": "Pandemonium",
+    "desc": "WEATHER_PANDEMONIUM_DESC",
+    "desc_resolved": "All units have a 25% chance to have Madness each round.",
+    "effects": {
+      "StatusCharactersOnRoundStart": {
+        "Madness": [
+          "1",
+          ".25"
+        ]
+      }
+    }
+  },
+  "TheHollowing": {
+    "name": "WEATHER_HOLLOWING_NAME",
+    "name_resolved": "The Hollowing",
+    "desc": "WEATHER_HOLLOWING_DESC",
+    "desc_resolved": "At the end of the round, each corpse has a 25% chance to revive at half health with Madness 5.",
+    "effects": {
+      "StatusCharactersOnRoundEnd": {
+        "Conditional_GoodRoll": {
+          "odds": "25%",
+          "Conditional_Corpse": {
+            "Revive": "50%",
+            "Madness": "5"
+          }
+        }
+      }
+    }
+  },
+  "OilSpill": {
+    "name": "WEATHER_OILSPILL_NAME",
+    "name_resolved": "Oil Spill",
+    "desc": "WEATHER_OILSPILL_DESC",
+    "desc_resolved": "A puddle of tar appears in each battle.",
+    "effects": {
+      "SpawnTilePuddleOnBattleStart": {
+        "tile": "OilTile",
+        "min_radius": "1.5",
+        "max_radius": "3.5"
+      }
+    }
+  },
+  "Blizzard": {
+    "name": "WEATHER_BLIZZARD_NAME",
+    "name_resolved": "Blizzard!",
+    "desc": "WEATHER_BLIZZARD_DESC",
+    "desc_resolved": "Persistent Ice Element. At the end of each round, wind blows everything 1 space in a random direction. After each turn, there's a chance for a random lightning strike.",
+    "ambient_sound": "amb_blizzard.ogg",
+    "hint_persistent_elements": [
+      "Ice",
+      "Wind"
+    ],
+    "effects": {
+      "Snow": "1",
+      "RandomLightning": "50%",
+      "Windy": "1"
+    }
+  },
+  "Hurricane": {
+    "name": "WEATHER_HURRICANE_NAME",
+    "name_resolved": "Hurricane!",
+    "desc": "WEATHER_HURRICANE_DESC",
+    "desc_resolved": "At the end of each round, wind blows everything 10 spaces in a random direction.",
+    "ambient_sound": "amb_windy.ogg",
+    "hint_persistent_elements": [
+      "Wind"
+    ],
+    "effects": {
+      "Windy": "10"
+    }
+  },
+  "StrangeSpikes": {
+    "name": "WEATHER_STRANGESPIKES_NAME",
+    "name_resolved": "Strange Spikes!",
+    "desc": "WEATHER_STRANGESPIKES_DESC",
+    "desc_resolved": "At the end of the round, all units gain +1 Thorns.",
+    "effects": {
+      "StatusCharactersOnRoundEnd": {
+        "Thorns": "1"
+      }
+    }
+  },
+  "BlessedDay": {
+    "name": "WEATHER_BLESSED_NAME",
+    "name_resolved": "Blessed Day!",
+    "desc": "WEATHER_BLESSED_DESC",
+    "desc_resolved": "All units have +3 Health Regen. Persistent Holy Element.",
+    "hint_persistent_elements": [
+      "Holy"
+    ],
+    "effects": {
+      "PersistentElement": "Holy",
+      "GlobalHealthRegenAura": "3"
+    }
+  },
+  "StealthMission": {
+    "name": "WEATHER_STEALTH_NAME",
+    "name_resolved": "Stealth Mission",
+    "desc": "WEATHER_STEALTH_DESC",
+    "desc_resolved": "All units gain Stealth at the start of the battle.",
+    "effects": {
+      "CharacterTypeGainsStatusAtBattleStart": {
+        "tag": "any",
+        "Stealth": "1"
+      }
+    }
+  },
+  "Infestation": {
+    "name": "WEATHER_INFESTATION_NAME",
+    "name_resolved": "Infestation",
+    "desc": "WEATHER_INFESTATION_DESC",
+    "desc_resolved": "All non-tiny units explode into maggots or flies when they die.",
+    "effects": {
+      "StatusAllCharactersOnSpawn": {
+        "Conditional_Tiny": {},
+        "Else": {
+          "AllyInfested": {
+            "object": [
+              "Maggot",
+              ",",
+              "Fly"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Eruption": {
+    "name": "WEATHER_ERUPTION_NAME",
+    "name_resolved": "Eruption",
+    "desc": "WEATHER_ERUPTION_DESC",
+    "desc_resolved": "A mini volcano spawns in each battle.",
+    "effects": {
+      "SpawnVolcanoOnBattleStart": {
+        "object": "MiniVolcano",
+        "puddle_tile": "LavaTile",
+        "min_radius": ".2",
+        "max_radius": "2.2"
+      }
+    }
+  },
+  "Drugs": {
+    "name": "WEATHER_DRUGS_NAME",
+    "name_resolved": "Drug Awareness Day",
+    "desc": "WEATHER_DRUGS_DESC",
+    "desc_resolved": "There is extra catnip in every battle. Find a random pill after every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "RandomCatnipPickup",
+        "number": [
+          "4",
+          "6"
+        ]
+      },
+      "FindExtraItemFromPoolOnBattleEnd": "pills"
+    }
+  },
+  "TrainingDay": {
+    "name": "WEATHER_TRAININGDAY_NAME",
+    "name_resolved": "Training Day",
+    "desc": "WEATHER_TRAININGDAY_DESC",
+    "desc_resolved": "A punching bag with Kinetic Spikes 5 spawns in each battle.",
+    "effects": {
+      "SpawnVolcanoOnBattleStart": {
+        "object": "PunchingBag"
+      }
+    }
+  },
+  "Tornado": {
+    "name": "WEATHER_TORNADOES_NAME",
+    "name_resolved": "Tornadoes",
+    "desc": "WEATHER_TORNADOES_DESC",
+    "desc_resolved": "Twisters spawn each round.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "NeutralTwister",
+        "number": [
+          "1",
+          "2"
+        ]
+      },
+      "GlobalSpawnOnRoundEnd": {
+        "object": "NeutralTwister",
+        "number": [
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "CrazyWeather": {
+    "name": "WEATHER_CRAZY_NAME",
+    "name_resolved": "Crazy Weather",
+    "desc": "WEATHER_CRAZY_DESC",
+    "desc_resolved": "The weather around here is crazy! It's different every battle!",
+    "effects": {
+      "RandomWeatherEachFight": [
+        "Fog",
+        "Rain",
+        "Windy",
+        "Sandstorm",
+        "HeatWave",
+        "Snow",
+        "Thunderstorm",
+        "Blizzard",
+        "Tornado"
+      ]
+    }
+  },
+  "BountyHunting": {
+    "name": "WEATHER_BOUNTY_NAME",
+    "name_resolved": "Bounty Hunting",
+    "desc": "WEATHER_BOUNTY_DESC",
+    "desc_resolved": "A random unit in each battle has a bounty. A Bounty Hunter is here to collect.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "EventBountyHunter"
+      }
+    }
+  },
+  "Minesweeper": {
+    "name": "WEATHER_MINESWEEPER_NAME",
+    "name_resolved": "Minesweeper",
+    "desc": "WEATHER_MINESWEEPER_DESC",
+    "desc_resolved": "There are extra land mines in every battle.",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "trap": "LandMine",
+        "number": [
+          "2",
+          "4"
+        ]
+      }
+    }
+  },
+  "AlienInvasion": {
+    "name": "WEATHER_ALIENS_NAME",
+    "name_resolved": "Alien Invasion",
+    "desc": "WEATHER_ALIENS_DESC",
+    "desc_resolved": "2-4 aliens spawn in each battle. Aliens are invading!",
+    "effects": {
+      "FactionUprising": "alien",
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "BigUFO"
+        ],
+        "number": [
+          "-2",
+          "1"
+        ]
+      }
+    }
+  },
+  "Birdemic": {
+    "name": "WEATHER_BIRDEMIC_NAME",
+    "name_resolved": "Birdemic",
+    "desc": "WEATHER_BIRDEMIC_DESC",
+    "desc_resolved": "2-4 birds spawn in each battle. All birds are stronger, and angry!",
+    "effects": {
+      "FactionUprising": {
+        "tag": "bird",
+        "extra_statuses": {
+          "Conditional_HasTag": {
+            "tag": "bonusbird",
+            "ApplyPassives": {
+              "AddInitiative": "999"
+            },
+            "AddExtraTurnsBeforeRun": "2"
+          },
+          "AllStatsUp": "2",
+          "HealthGain": "8"
+        }
+      },
+      "SpawnExtraThingsOnBattleStart": {
+        "object": [
+          "Bird"
+        ],
+        "number": [
+          "2",
+          "4"
+        ]
+      }
+    }
+  },
+  "SolarFlare": {
+    "name": "WEATHER_SOLARFLARE_NAME",
+    "name_resolved": "Solar Flare",
+    "desc": "WEATHER_SOLARFLARE_DESC",
+    "desc_resolved": "A solar flare strikes a large area at the end of each round, Burning and inflicting Blind.",
+    "effects": {
+      "SolarFlare": {
+        "damage": "5",
+        "effects": {
+          "Burn": "3",
+          "Blind": "3"
+        },
+        "elements": [
+          "Fire"
+        ]
+      }
+    }
+  },
+  "GeomagneticStorm": {
+    "name": "WEATHER_GEOMAGSTORM_NAME",
+    "name_resolved": "Geomagnetic Storm",
+    "desc": "WEATHER_GEOMAGSTORM_DESC",
+    "desc_resolved": "All rocks levitate at the end of the round. Extra rocks spawn in each battle.",
+    "effects": {
+      "StatusCharactersOnRoundEnd": {
+        "tag_filter": "rock",
+        "FloatingRockTrap": "1"
+      },
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "Boulder",
+        "number": [
+          "0",
+          "2"
+        ]
+      }
+    }
+  },
+  "TheShimmer": {
+    "name": "WEATHER_SHIMMER_NAME",
+    "name_resolved": "The Shimmer",
+    "desc": "WEATHER_SHIMMER_DESC",
+    "desc_resolved": "All units gain a random status effect at the start of each round. Cats gain a random mutation at the end of each battle.",
+    "effects": {
+      "AddPostProcessEffect": {
+        "shader": "shimmervignette",
+        "requires_framebuffer": "false"
+      },
+      "StatusCharactersOnRoundStart": {
+        "Conditional_GoodRoll": {
+          "odds": ".5",
+          "RandomStatusFromPool": {
+            "RandomStatUp": "1",
+            "Brace": "1",
+            "Shield": "1",
+            "DivineShield": "1",
+            "SpellDamageUp": "1",
+            "DamageUp": "1",
+            "Thorns": "1",
+            "KineticSpikes": "1"
+          }
+        },
+        "Else": {
+          "RandomStatusFromPool": {
+            "RandomStatDown": "1",
+            "Poison": "1",
+            "Bruise": "1",
+            "Bleed": "1",
+            "Weakness": "1",
+            "Blind": "1",
+            "Drowsy": "1",
+            "Slow": "1"
+          }
+        }
+      },
+      "StatusAllCharactersOnSpawn": {
+        "Conditional_PartyMember": {
+          "ApplyPassives": {
+            "StatusOnBattleEnd": {
+              "RandomMutation": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "StrangeEggs": {
+    "name": "WEATHER_STRANGEEGGS_NAME",
+    "name_resolved": "Strange Eggs",
+    "desc": "WEATHER_STRANGEEGGS_DESC",
+    "desc_resolved": "3-6 strange eggs spawn in each battle. Kill them before they hatch!",
+    "effects": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "AlienEgg",
+        "number": [
+          "3",
+          "6"
+        ]
+      }
+    }
+  },
+  "AlienOvergrowth": {
+    "name": "WEATHER_ALIENOVERGROWTH_NAME",
+    "name_resolved": "Alien Overgrowth",
+    "desc": "WEATHER_ALIENOVERGROWTH_DESC",
+    "desc_resolved": "A few bramble patches spawn in each battle, but something is strange about them...",
+    "effects": {
+      "SpawnVolcanoOnBattleStart": {
+        "object": "Sprout",
+        "puddle_tile": [
+          "BrambleTile",
+          "TallBrambleTile"
+        ],
+        "min_radius": "1",
+        "max_radius": "2.2",
+        "number": [
+          "3",
+          "5"
+        ]
+      }
+    }
+  }
+}

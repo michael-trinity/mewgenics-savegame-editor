@@ -1,0 +1,44 @@
+{
+  "main": {
+    "20": {
+      "save_file_flag": "AntennaQuest_Rift",
+      "adventure_unlock": "nuke_quest_complete"
+    }
+  },
+  "bonus": {
+    "1": {
+      "complete_checkmarks": {
+        "classes": [
+          "Fighter",
+          "Hunter",
+          "Mage",
+          "Medic",
+          "Tank",
+          "Thief",
+          "Colorless",
+          "Monk",
+          "Butcher",
+          "Druid",
+          "Tinkerer",
+          "Necromancer",
+          "Psychic",
+          "Jester"
+        ],
+        "areas": [
+          "caves",
+          "boneyard",
+          "moon",
+          "core",
+          "jurassic",
+          "theend",
+          "meatworld",
+          "dimensionx",
+          "endoftime"
+        ],
+        "min_difficulty": "0",
+        "mono_cat_run": "false",
+        "solo_cat_run": "true"
+      }
+    }
+  }
+}

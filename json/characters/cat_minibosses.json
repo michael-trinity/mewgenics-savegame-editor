@@ -1,0 +1,1911 @@
+{
+  "TankCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MAISIE_NAME",
+      "name_resolved": "Maisie",
+      "custom_cat_data": "TankCat",
+      "tooltip": "ENEMY_MAISIE_DESC",
+      "tooltip_resolved": "Protects her kittens when they are attacked."
+    },
+    "equipment": {
+      "face": "MetalPlate"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "movement": "5",
+      "corpse_health": "3",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "health": "90"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicTankMelee",
+      "spells": [
+        "SwapPositions_TankCat",
+        "LickyLicky"
+      ]
+    },
+    "passives": {
+      "ProtectTargetedAllies": {
+        "ability": "SwapPositions_TankCat",
+        "target_filter": "Kitten"
+      },
+      "MamaCatAnimations": "1",
+      "RunWhenKittensDead": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "LickyLicky",
+          "attack"
+        ]
+      },
+      "decision_weights": "default_no_revive",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "MageCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_LUCY_NAME",
+      "name_resolved": "Lucy",
+      "custom_cat_data": "MageCat",
+      "tooltip": "ENEMY_LUCY_DESC",
+      "tooltip_resolved": "Her powerful spells take time to charge up."
+    },
+    "equipment": {
+      "neck": "MageCollar"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "initiative": "-999",
+      "evenly_dispersed_bonus_turns": "1",
+      "/*mana_regen": "-2",
+      "mana": "100",
+      "initial_mana": "100",
+      "mana_matters": "true*/",
+      "health": "75"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMagicShortRanged",
+      "spells": [
+        "MCBlizzard",
+        "MCFlamethrower",
+        "MCStorm"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_strict": [
+          "MCStorm"
+        ]
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "HunterCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_FENRIR_NAME",
+      "name_resolved": "Fenrir",
+      "custom_cat_data": "HunterCat",
+      "tooltip": "ENEMY_FENRIR_DESC",
+      "tooltip_resolved": "Tosses bear traps!\nHas an affinity for tall grass.\nSwats away melee attackers."
+    },
+    "equipment": {
+      "face": "HuntersPatch"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "4",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "60"
+    },
+    "abilities": {
+      "move": "HunterMinibossMove",
+      "attack": "BasicRanged_Hunter",
+      "spells": [
+        "BearTrap_Enemy",
+        "Shove"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "Shove"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "attack"
+      },
+      "bonusturn_pattern": {
+        "do": "BearTrap_Enemy"
+      },
+      "decision_weights": "default",
+      "move_weights": "prefer_tall_grass_always_move"
+    }
+  },
+  "ThiefCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_DACK_NAME",
+      "name_resolved": "Dack",
+      "custom_cat_data": "ThiefCat",
+      "tooltip": "ENEMY_DACK_DESC",
+      "tooltip_resolved": "His ranged attacks scatter held coins.\nHas a melee attack that inflicts Poison.\nSeeks coin pickups.\nGains a Backflip every time he collects a coin."
+    },
+    "equipment": {
+      "head": "CoinBag"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "3",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "60",
+      "can_collect_coins": "true",
+      "held_coins": "5",
+      "movement": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "THC_KnockCoinsRanged",
+      "spells": [
+        "THC_PoisonSwat",
+        "THC_Roll",
+        "THC_CoinRoll"
+      ]
+    },
+    "passives": {
+      "EraseSpawnCoins": "1",
+      "StatusOnGainCoins": {
+        "BackflipWhenTargeted": {
+          "stacks": "1",
+          "ability": "BackflipDodge"
+        }
+      },
+      "/*": "AddStatusToReceivedAbilityDamage",
+      "ScatterHeldCoin": "1"
+    },
+    "*/": "AwardCoinsOnDeath",
+    "10": true
+  },
+  "ai": {
+    "pattern": {
+      "do_all": [
+        "*THC_PoisonSwat",
+        "attack",
+        "*THC_CoinRoll",
+        "THC_CoinRoll",
+        "*THC_Roll"
+      ]
+    },
+    "brain": "PatternBrain",
+    "decision_weights": "default",
+    "move_weights": "keep_distance"
+  },
+  "/*MedicCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Marshmallow",
+      "custom_cat_data": "MedicCat",
+      "tooltip": "Bad miniboss. this needs to be redesigned."
+    },
+    "equipment": {
+      "neck": "AngelicAura"
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "4",
+      "constitution": "3",
+      "intelligence": "3",
+      "speed": "3",
+      "charisma": "4",
+      "luck": "4"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "20",
+      "can_collect_coins": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicShortRanged",
+      "spells": [
+        "HealBomb",
+        "MassHeal"
+      ]
+    },
+    "passives": {
+      "Phylactery": {
+        "obj": "Phylactery",
+        "statuses": {
+          "AllStatsUp": "1",
+          "TakeExtraTurn": "1"
+        }
+      },
+      "RunWhenMaxPhylacteryHeal": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "attack"
+      },
+      "bonusturn_pattern": {
+        "do": "MassHeal"
+      },
+      "fallback": {
+        "do": "attack"
+      },
+      "decision_weights": "prioritize_healing",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "MedicCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MARSHMALLOW_NAME",
+      "name_resolved": "Marshmallow",
+      "custom_cat_data": "MedicCat",
+      "tooltip": "ENEMY_MARSHMALLOW_DESC",
+      "tooltip_resolved": "Her lick attack Charms units."
+    },
+    "equipment": {
+      "neck": "AngelicAura"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "1",
+      "constitution": "3",
+      "intelligence": "4",
+      "speed": "4",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "60",
+      "divine_shield": "2",
+      "movement": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMedicMelee",
+      "spells": [
+        "MarshmallowConvert",
+        "MarshmallowZealot"
+      ]
+    },
+    "passives": {
+      "AvoidDamagingCharmedEnemies": "1",
+      "RunWhenLastPlayerCatIsCharmed": {
+        "allow_decision_mid_turn": "true",
+        "legacy_savekey": "Legacy_Marshmallow_StolenCatID"
+      },
+      "LegacySpawnSavedCatIfExists": "Legacy_Marshmallow_StolenCatID"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "CloseConvert": {
+          "ability": "MarshmallowConvert",
+          "move_weights": "stay_close"
+        }
+      },
+      "mainturn_pattern": {
+        "do_all": [
+          "*MarshmallowZealot,",
+          "CloseConvert,",
+          "attack"
+        ]
+      },
+      "bonusturn_pattern": {
+        "do_all": [
+          "CloseConvert,",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_close_distance_always_move"
+    }
+  },
+  "FighterCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MAGNUS_NAME",
+      "name_resolved": "Magnus",
+      "custom_cat_data": "FighterCat",
+      "tooltip": "ENEMY_MAGNUS_DESC",
+      "tooltip_resolved": "Has a chaining dash attack and a spin attack."
+    },
+    "equipment": {
+      "neck": "SamsonsChains"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "70"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee_Fighter",
+      "spells": [
+        "ChainDash",
+        "Spin_Enemy"
+      ]
+    },
+    "passives": {
+      "/*RunWhenWonFight": {
+        "allow_decision_mid_turn": "true"
+      },
+      "*/": true
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "ChainDash"
+      },
+      "bonusturn_pattern": {
+        "do": "Spin_Enemy"
+      },
+      "decision_weights": "semi_simple",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "StacyMutant": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_STACYMUTANT_NAME",
+      "name_resolved": "Stacy Mutant",
+      "custom_cat_data": "Stacy2p0",
+      "scale": "1.3",
+      "tooltip": "ENEMY_STACYMUTANT_DESC",
+      "tooltip_resolved": "???"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "boss",
+      "health": "100",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "evenly_dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "SM_MagicMissile",
+        "SM_Flamethrower",
+        "SM_IceShards",
+        "SM_LightningStorm",
+        "SM_BleedCounter"
+      ]
+    },
+    "passives": {
+      "BossRewards": {
+        "common": "Stacy100",
+        "rare": "UnstableDNA"
+      },
+      "AdventureTokenPassivePool": {
+        "StacyMutant_Fire": {
+          "ElementImmune": "Fire",
+          "ReplaceBasicAttack": "SM_Lavashot",
+          "CatPartsTransform": {
+            "head": "1019",
+            "texture": "19",
+            "palette": "78"
+          },
+          "ReplaceBrain": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "attack",
+                "SM_Flamethrower"
+              ],
+              "do": "move"
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        },
+        "StacyMutant_Ice": {
+          "ElementImmune": "Ice",
+          "ReplaceBasicAttack": "SM_IceBreath",
+          "AddMovement": "-1",
+          "CatPartsTransform": {
+            "head": "1020",
+            "texture": "29",
+            "palette": "77"
+          },
+          "ReplaceBrain": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "*attack",
+                "SM_IceShards"
+              ],
+              "do": "move"
+            },
+            "decision_weights": "default",
+            "move_weights": "stay_close"
+          }
+        },
+        "StacyMutant_Lightning": {
+          "ElementImmune": "Electric",
+          "ReplaceBasicAttack": "SM_LightningDash",
+          "CatPartsTransform": {
+            "head": "1027",
+            "texture": "60",
+            "palette": "76"
+          },
+          "ReplaceBrain": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "attack",
+                "SM_LightningStorm"
+              ],
+              "do": "move"
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        },
+        "StacyMutant_Thorns": {
+          "Thorns": "3",
+          "CatPartsTransform": {
+            "body": "1012"
+          }
+        },
+        "StacyMutant_Brace": {
+          "Brace": "3",
+          "CatPartsTransform": {
+            "body": "1013"
+          }
+        },
+        "StacyMutant_Holy": {
+          "DivineShield": "7",
+          "CatPartsTransform": {
+            "body": "1024"
+          }
+        },
+        "StacyMutant_Health": {
+          "AddMaxHealth": "25",
+          "AddSpeed": "-3",
+          "SizeScale": "1.2",
+          "CatPartsTransform": {
+            "leg1": "1043",
+            "leg2": "1043",
+            "arm1": "1043",
+            "arm2": "1043",
+            "tail": "1034"
+          }
+        },
+        "StacyMutant_Damage": {
+          "AddDamage": "2",
+          "AddMaxHealth": "-25",
+          "CatPartsTransform": {
+            "leg1": "1044",
+            "leg2": "1044",
+            "arm1": "1044",
+            "arm2": "1044",
+            "tail": "1035"
+          }
+        },
+        "StacyMutant_Speed": {
+          "AddDamage": "-1",
+          "AddSpeed": "6",
+          "SizeScale": ".8",
+          "CatPartsTransform": {
+            "leg1": "1045",
+            "leg2": "1045",
+            "arm1": "1045",
+            "arm2": "1045",
+            "tail": "1036"
+          }
+        },
+        "StacyMutant_DoubleHead": {
+          "ExtraDispersedTurns": "1",
+          "CatPartsTransform": {
+            "ear1": "1028"
+          }
+        },
+        "StacyMutant_Counter": {
+          "CounterAttack": "SM_BleedCounter",
+          "AddStatusToBasicAttack": {
+            "Bleed": "1"
+          },
+          "CatPartsTransform": {
+            "ear1": "1029"
+          }
+        },
+        "StacyMutant_Mirror": {
+          "ReflectProjectiles": "100%",
+          "StatusEachTurnEndForEachTurn": {
+            "RandomMagicMissile": "1"
+          },
+          "CatPartsTransform": {
+            "eye1": "1057",
+            "eye2": "1057"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "SM_MagicMissile"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "ColorlessCat_Tutorial": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_PEBBLES_NAME",
+      "name_resolved": "Pebbles",
+      "custom_cat_data": "Pebbles",
+      "tooltip": "ENEMY_PEBBLES_DESC",
+      "tooltip_resolved": "Its melee attack knocks units back.\nCan throw rocks."
+    },
+    "equipment": {
+      "head": "Pebble"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "3",
+      "constitution": "3",
+      "intelligence": "3",
+      "speed": "3",
+      "charisma": "3",
+      "luck": "3"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "4",
+      "health": "50"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ColorlessCat_Push",
+      "spells": [
+        "RockToss_ColorlessCat",
+        "RockToss_ColorlessCat_AsCloseAsPossible",
+        "ColorlessCat_BoulderDrop"
+      ]
+    },
+    "passives": {
+      "TutorialBossRiggedFight": "16"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "ColorlessCat_BoulderDrop,",
+          "RockToss_ColorlessCat,",
+          "attack"
+        ]
+      },
+      "fallback": {
+        "do": "RockToss_ColorlessCat_AsCloseAsPossible"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "NecroCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MORANA_NAME",
+      "name_resolved": "Morana",
+      "custom_cat_data": "NecroCat",
+      "tooltip": "ENEMY_MORANA_DESC",
+      "tooltip_resolved": "Its ranged attack inflicts Leech.\nReanimates dead bodies.\nRevives through dead bodies."
+    },
+    "equipment": {
+      "face": "NecromancerMask"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "75",
+      "corpse_health": "5",
+      "dispersed_bonus_turns": "1",
+      "round_end_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicNecroRanged",
+      "spells": [
+        "NCReanimate",
+        "NCGravecrawl"
+      ]
+    },
+    "passives": {
+      "InfiniteRebirth": {
+        "health": "25%",
+        "playercat_health": "25%",
+        "immediate": "true"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "NCGravecrawlFAR": {
+          "ability": "NCGravecrawl",
+          "move_weights": "stay_far"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "attack"
+        ]
+      },
+      "round_end_bonusturn_pattern": {
+        "do_priority": [
+          "NCReanimate",
+          "NCGravecrawlFAR"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TinkererCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_FRANKLIN_NAME",
+      "name_resolved": "Franklin",
+      "custom_cat_data": "TinkererCat",
+      "tooltip": "ENEMY_FRANKLIN_DESC",
+      "tooltip_resolved": "Spawns Robots and crafts weapons.\nEnters a Mech when at low HP."
+    },
+    "equipment": {
+      "head": "TinkererHat"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "45",
+      "shield": "20",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "TCMechSuit",
+        "TCCatBot"
+      ]
+    },
+    "passives": {
+      "FormChanger": {
+        "Default": {},
+        "DesireMech": {
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_priority": [
+                "*TCMechSuit",
+                "TCMechSuit"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        }
+      },
+      "FormChangeHealthThreshold": {
+        "threshold": "25",
+        "count_shield": "true",
+        "form_below": "DesireMech",
+        "form_above": "Default"
+      },
+      "TinkererBasicAttackSwitching": {
+        "craft_ability": "TinkererCraft",
+        "throw_ability": "TinkererThrow"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*TCCatBot",
+          "weapon",
+          "*attack",
+          "weapon",
+          "attack",
+          "move"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TCMechSuit": {
+    "variant_of": "MechSuit",
+    "stats": {
+      "strength": "4",
+      "dexterity": "3",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "passives": {
+      "AllSpellsCostActPoints": "1",
+      "SetSpellCosts": "0"
+    }
+  },
+  "ButcherCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_GEIN_NAME",
+      "name_resolved": "Gein",
+      "custom_cat_data": "ButcherCat",
+      "tooltip": "ENEMY_GEIN_DESC",
+      "tooltip_resolved": "Hooks and pulls units that end their movement in range, inflicting Bleed.\nDoes a melee spin attack that spawns meat.\nSeeks meat pickups.\nTrample."
+    },
+    "equipment": {
+      "face": "ButcherMask",
+      "weapon": "ButcherHook"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "73",
+      "movement": "1",
+      "can_eat_food": "true",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicButcherMeleeWideSpin",
+      "spells": [
+        "MoveTwo"
+      ]
+    },
+    "passives": {
+      "Trample": "3",
+      "MovementReaction": {
+        "ability": "weapon",
+        "enemies_only": "true"
+      },
+      "AbilityWhenTaggedCharacterMovesNear": {
+        "ability": "MoveTwo",
+        "tag": "food",
+        "range": "4"
+      },
+      "AddStatusToWeapons": {
+        "Bleed": "1"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*attack",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "PsychicCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ALICE_NAME",
+      "name_resolved": "Alice",
+      "custom_cat_data": "PsychicCat",
+      "tooltip": "ENEMY_ALICE_DESC",
+      "tooltip_resolved": "Has a psychic choke attack that inflicts Bruise on a unit in her line of sight.\nKnocks back any enemy that casts a spell."
+    },
+    "equipment": {
+      "face": "PsychicMask"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "66",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicPsychicPull",
+      "spells": [
+        "PsychicChoke_Enemy",
+        "PsychicCatBackflip"
+      ]
+    },
+    "passives": {
+      "CounterAttackAfterEnemyCastSpell": "Telekinesis"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "attack",
+          "PsychicChoke_Enemy",
+          "PsychicCatBackflip"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "DruidCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_DRAVEN_NAME",
+      "name_resolved": "Draven",
+      "custom_cat_data": "DruidCat",
+      "tooltip": "ENEMY_DRAVEN_DESC",
+      "tooltip_resolved": "Heals and buffs his crows.\nEnters Squirrel Form once his crows die."
+    },
+    "equipment": {
+      "neck": "DruidNeck"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "hidden_tag": "dc_cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "70",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "DruidCatBasic",
+      "spells": [
+        "DCSquirrelForm",
+        "DCBirthSquirrel"
+      ]
+    },
+    "passives": {
+      "FormChanger": {
+        "Default": {},
+        "SquirrelForm": {
+          "attack": "BasicMelee",
+          "tooltip": "ENEMY_DRAVENSQUIRRELFORM_DESC",
+          "tooltip_resolved": "Has a multi-hit melee attack.\nSpawns squirrels.",
+          "passives": {
+            "SpeedUp": "6",
+            "AddTemporaryEffectsToBasicAttack": {
+              "Fury": "75"
+            }
+          },
+          "ai": {
+            "brain": "PatternBrain",
+            "pattern": {
+              "do_all": [
+                "*DCBirthSquirrel",
+                "attack",
+                "DCBirthSquirrel"
+              ]
+            },
+            "decision_weights": "default",
+            "move_weights": "keep_distance"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "DCSquirrelForm",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "/*DruidCrow": {
+    "variant_of": "Crow",
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "graphics": {
+      "name": "Draven's Crow",
+      "tooltip": ""
+    },
+    "properties": {
+      "faction": "enemies",
+      "hidden_tag": "dc_crow",
+      "base_crit_chance": "-999"
+    },
+    "passives": {}
+  },
+  "DruidCrow": {
+    "graphics": {
+      "movieclip": "Crow",
+      "name": "ENEMY_DRAVENCROW_NAME",
+      "name_resolved": "Draven's Crow",
+      "uifloaters_offset": "1",
+      "shadow_size": ".75",
+      "scale": ".8",
+      "tooltip": "ENEMY_DRAVENCROW_DESC",
+      "tooltip_resolved": "Melee attacker than can also use a wind attack with Knockback.\nWill move and attack enemies that attack Draven."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "animal",
+        "crow"
+      ],
+      "hidden_tag": "dc_crow",
+      "faction": "enemies",
+      "base_movement": "4",
+      "mana_matters": "false",
+      "corpse_health": "1",
+      "flying": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "DCAeroblast"
+      ]
+    },
+    "passives": {
+      "Bird": "CookedChickenLeg",
+      "SecurityBotProtect": {
+        "enemies_only": "true",
+        "tag_restriction": "dc_cat"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "attack",
+          "DCAeroblast"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "/*MonkCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "Chan Hung",
+      "custom_cat_data": "MonkCat"
+    },
+    "equipment": {
+      "face": "MonkMask"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "65",
+      "dispersed_bonus_turns": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMonkMelee",
+      "spells": [
+        "MCMonkStyleChange"
+      ]
+    },
+    "passives": {
+      "PrioritizeHitDifferentTargets": "1",
+      "ExtraBasicAttacks": "1",
+      "MonkStances": [
+        "BasicMonkMelee",
+        "BasicMonkRanged"
+      ],
+      "FormChanger": {
+        "Melee": {
+          "passives": {
+            "ChanceToBlockAndCounter": {
+              "chance": "100%",
+              "melee_only": "true"
+            }
+          }
+        },
+        "Ranged": {
+          "passives": {
+            "ChanceToBlockAndCounter": {
+              "chance": "100%",
+              "ranged_only": "true"
+            }
+          }
+        }
+      },
+      "FormChangerMatchMonkStances": {
+        "melee": "Melee",
+        "ranged": "Ranged"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*MCMonkStyleChange",
+          "attack",
+          "attack"
+        ]
+      },
+      "stun_advances_pattern": "false",
+      "fallback_advances_pattern": "false",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "MonkCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CHANHUNG_NAME",
+      "name_resolved": "Chan Hung",
+      "custom_cat_data": "MonkCat",
+      "tooltip": "ENEMY_CHANHUNG_DESC",
+      "tooltip_resolved": "Uses his own actions every time one of his enemies uses an action.\nHas a different response for move, attack/weapon, and spell/trinket."
+    },
+    "equipment": {
+      "face": "MonkMask"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "65",
+      "movement": "3",
+      "initiative": "-20"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "MCMelee",
+      "spells": [
+        "MCHadouken",
+        "MCKineticCharge"
+      ]
+    },
+    "passives": {
+      "MonkCatReactionAbilities": {
+        "move": "move",
+        "attack": "attack",
+        "weapon": "attack",
+        "spell": "MCHadouken",
+        "trinket": "MCHadouken"
+      },
+      "AggroTargetIsCurrentTurn": "1",
+      "PrioritizeAggroTarget": "1",
+      "Brace": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "MCKineticCharge"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "JesterCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ARTHUR_NAME",
+      "name_resolved": "Arthur",
+      "custom_cat_data": "JesterCat",
+      "tooltip": "ENEMY_ARTHUR_DESC",
+      "tooltip_resolved": "Who knows what he will do!?"
+    },
+    "equipment": {
+      "head": "JesterHat"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "10"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "75",
+      "dispersed_bonus_turns": "2",
+      "base_crit_chance": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "Metronome_Enemy"
+      ]
+    },
+    "passives": {
+      "RandomizeAIWeightsEachTurn": [
+        {
+          "decision_weights": "default",
+          "move_weights": "keep_distance"
+        },
+        {
+          "decision_weights": "default",
+          "move_weights": "stay_close_ish"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "Metronome_Enemy",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Chupacabra": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CHUPACABRA_NAME",
+      "name_resolved": "Chupacabra",
+      "custom_cat_data": "Chupacabra",
+      "scale": ".8",
+      "tooltip": "ENEMY_CHUPACAPBRA_DESC",
+      "tooltip_resolved": "More like chupa gato! Am I right?"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "2",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "4",
+      "scale": "1.3",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "77"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "WolfLeap",
+        "SharkDash"
+      ]
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_far_always_move"
+      },
+      "AddStatusToBasicAttack": {
+        "Leech": "2"
+      },
+      "AddStatusToSpells": {
+        "Leech": "2"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "WolfLeap"
+      },
+      "bonusturn_pattern": {
+        "do": "SharkDash"
+      },
+      "decision_weights": "semi_simple",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "Hellspawn": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_HELLSPAWN_NAME",
+      "name_resolved": "Hellspawn",
+      "custom_cat_data": "Hellspawn1",
+      "tooltip": "ENEMY_HELLSPAWN_DESC",
+      "tooltip_resolved": "It has such sights to show you!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "health": "69",
+      "movement": "1",
+      "can_eat_food": "true",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicButcherMelee",
+      "spells": [
+        "MoveTwo"
+      ]
+    },
+    "passives": {
+      "StatusOnTookDamageFromAbility": {
+        "TakeExtraTurn": "1"
+      },
+      "AbilityWhenTaggedCharacterMovesNear": {
+        "ability": "MoveTwo",
+        "tag": "food",
+        "range": "2"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*attack",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "InfestedDuo": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_PARAISARIA_NAME",
+      "name_resolved": "Paraisaria",
+      "custom_cat_data": "InfestedDuo",
+      "scale": "1.2",
+      "shadow_size": "1.2",
+      "tooltip": "ENEMY_PARAISARIA_DESC",
+      "tooltip_resolved": "Takes an extra turn for each Sprout."
+    },
+    "equipment": {
+      "head": "BulbHead"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "plant"
+      ],
+      "type": "boss",
+      "health": "65",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "1",
+      "disperse_main_turns": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "IDSprout",
+        "IDBrambleBurst",
+        "IDBrambleShot"
+      ]
+    },
+    "passives": {
+      "Plant": "1",
+      "ElementImmune": "Creep",
+      "Thorns": "2",
+      "AddStatusToBasicAttack": {
+        "Poison": "1"
+      },
+      "AbilityReaction": "IDSprout",
+      "ExtraTurnsPerTaggedUnit": "sprout",
+      "DeathRattle": "IDBrambleBurst"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "attack",
+          "IDBrambleShot"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CaveCatDad": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_FRODROCKSNOW_NAME",
+      "name_resolved": "Frod Rocksnow",
+      "custom_cat_data": "DaddyCat",
+      "scale": "1.4",
+      "shadow_size": "1.4",
+      "tooltip": "ENEMY_FRODROCKSNOW_DESC",
+      "tooltip_resolved": "Has a wide melee attack with Knockback and a chance to stun.\nCan throw rocks."
+    },
+    "equipment": {
+      "weapon": "CaveCatClub"
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "hidden_tag": "cavefamily",
+      "type": "boss",
+      "health": "70",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "2",
+      "disperse_main_turns": "true",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CaveDad_ClubBasic",
+      "spells": [
+        "RockToss_CaveDad",
+        "CaveCatEnrageOne",
+        "CaveCatEnrageTwo"
+      ]
+    },
+    "passives": {
+      "FormChanger": {
+        "AllAlive": {
+          "passives": {
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageOne",
+              "tag": "cavefamily",
+              "count": "1"
+            }
+          }
+        },
+        "TwoAlive": {
+          "passives": {
+            "Brace": "2",
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageTwo",
+              "tag": "cavefamily",
+              "count": "0"
+            }
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "1"
+          }
+        },
+        "OneAlive": {
+          "passives": {
+            "Brace": "4"
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "2"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "attack",
+          "RockToss_CaveDad"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CaveCatMom": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_WOLMAROCKSNOW_NAME",
+      "name_resolved": "Wolma Rocksnow",
+      "custom_cat_data": "MommyCat",
+      "scale": "1.2",
+      "shadow_size": "1.2",
+      "tooltip": "ENEMY_WOLMAROCKSNOW_DESC",
+      "tooltip_resolved": "Has a ranged ice attack that inflicts Slow. Can heal its allies. Can throw enemies to her allies."
+    },
+    "equipment": {
+      "head": "Dreadlocks"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "hidden_tag": "cavefamily",
+      "type": "boss",
+      "health": "60",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "3",
+      "disperse_main_turns": "true",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CaveMom_Basic",
+      "spells": [
+        "CaveMom_TossDad",
+        "CaveMom_TossElsewhere",
+        "CaveMom_Heal",
+        "CaveCatEnrageOne",
+        "CaveCatEnrageTwo"
+      ]
+    },
+    "passives": {
+      "Buddy": "CaveCatDad",
+      "FormChanger": {
+        "AllAlive": {
+          "passives": {
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageOne",
+              "tag": "cavefamily",
+              "count": "1"
+            }
+          }
+        },
+        "TwoAlive": {
+          "passives": {
+            "Brace": "2",
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageTwo",
+              "tag": "cavefamily",
+              "count": "0"
+            }
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "1"
+          }
+        },
+        "OneAlive": {
+          "passives": {
+            "Brace": "4"
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "2"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*CaveMom_TossDad",
+          "*CaveMom_TossElsewhere",
+          "attack",
+          "CaveMom_Heal"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "CaveCatBaby": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_POOBLESROCKSNOW_NAME",
+      "name_resolved": "Poobles Rocksnow",
+      "custom_cat_data": "BabyCat",
+      "scale": ".9",
+      "shadow_size": ".9",
+      "tooltip": "ENEMY_POOBLESROCKSNOW_DESC",
+      "tooltip_resolved": "Places bear traps. Has a jumping melee attack."
+    },
+    "equipment": {
+      "head": "BabyHair"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "9",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "hidden_tag": "cavefamily",
+      "type": "boss",
+      "health": "50",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "disperse_main_turns": "true",
+      "banned_elite_buffs": [
+        "Twin"
+      ]
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CaveCatPounce",
+      "spells": [
+        "BearTrap_CaveBaby",
+        "CaveCatEnrageOne",
+        "CaveCatEnrageTwo"
+      ]
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_near_allies_always_move"
+      },
+      "FormChanger": {
+        "AllAlive": {
+          "passives": {
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageOne",
+              "tag": "cavefamily",
+              "count": "1"
+            }
+          }
+        },
+        "TwoAlive": {
+          "passives": {
+            "Brace": "2",
+            "CaveFamilyEnrage": {
+              "ability": "CaveCatEnrageTwo",
+              "tag": "cavefamily",
+              "count": "0"
+            }
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "1"
+          }
+        },
+        "OneAlive": {
+          "passives": {
+            "Brace": "4"
+          },
+          "turns": {
+            "evenly_dispersed_bonus_turns": "2"
+          }
+        }
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "MoveForPounce",
+          "move",
+          "BearTrap_CaveBaby",
+          "attack"
+        ]
+      },
+      "virtual_abilities": {
+        "MoveForPounce": {
+          "ability": "move",
+          "move_for_ability": "attack",
+          "move_weights": "keep_distance"
+        }
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Dclaude": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_DCLAUDE_NAME",
+      "name_resolved": "D'Claude",
+      "custom_cat_data": "Dclaude",
+      "scale": "1.2",
+      "tooltip": "ENEMY_DCLAUDE_DESC"
+    },
+    "equipment": {},
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "1",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "5",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "75"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee_Fighter",
+      "spells": [
+        "Dclaude_Declaw",
+        "QueenHippoAttack"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "attack",
+      "ReflectProjectiles": {
+        "self_damage": "2"
+      },
+      "AbilityReaction": {
+        "ability": "attack",
+        "backstabs_only": "true"
+      },
+      "RandomizeAIWeightsEachTurn": [
+        {
+          "decision_weights": "default",
+          "move_weights": "stay_close"
+        },
+        {
+          "decision_weights": "no_act",
+          "move_weights": "stay_close"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "Dclaude_Declaw"
+      },
+      "bonusturn_pattern": {
+        "do": "QueenHippoAttack"
+      },
+      "decision_weights": "semi_simple",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  },
+  "WhiteRabbit": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_WHITERABBIT_NAME",
+      "name_resolved": "White Rabbit",
+      "custom_cat_data": "WhiteRabbit",
+      "tooltip": "ENEMY_WHITERABBIT_DESC",
+      "tooltip_resolved": "What's he do, nibble your bum?"
+    },
+    "equipment": {
+      "face": "Rabiesface"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "faction": "enemies",
+      "type": "boss",
+      "dispersed_bonus_turns": "4",
+      "dispersed_bonus_turns_consider_initiative": "false",
+      "movement": "2",
+      "mana_regen": "999",
+      "mana": "100",
+      "health": "50"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee_Fighter",
+      "spells": [
+        "ChainDash"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "mainturn_pattern": {
+        "do": "ChainDash"
+      },
+      "decision_weights": "semi_simple",
+      "move_weights": "keep_distance_always_move",
+      "fallback_advances_pattern": "true",
+      "stun_advances_pattern": "false"
+    }
+  }
+}

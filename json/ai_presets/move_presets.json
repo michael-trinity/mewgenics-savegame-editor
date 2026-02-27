@@ -1,0 +1,475 @@
+{
+  "keep_distance": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "stay_close": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "keep_distance_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "minimum_move": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-1",
+    "face_closest_enemy": "1"
+  },
+  "stay_close_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "stay_far": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "stay_far_always_move": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "stay_far_move_far": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "10",
+    "face_closest_enemy": "1"
+  },
+  "stay_close_move_far": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "10",
+    "face_closest_enemy": "1"
+  },
+  "random": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0",
+    "face_closest_enemy": "0"
+  },
+  "chaotic_runaway": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "1",
+    "preferred_distance": "0",
+    "total_distance_moved": ".5",
+    "face_closest_enemy": "1"
+  },
+  "chaotic": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "1"
+  },
+  "blind_move_far": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "0"
+  },
+  "keep_far_distance": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov+5",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "keep_ranged_distance": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "reach",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "keep_max_ranged_distance": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov+reach",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "rabies_any": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "-1",
+    "preferred_distance": "0",
+    "total_distance_moved": "0",
+    "face_closest_enemy": "0"
+  },
+  "rabies_enemy": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0",
+    "face_closest_enemy": "0"
+  },
+  "prefer_tall_grass_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1",
+    "tall_grass": "5"
+  },
+  "stay_near_allies": {
+    "distance_to_enemy": ".01",
+    "distance_to_ally": "-1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.001",
+    "face_closest_enemy": "1"
+  },
+  "stay_near_allies_always_move": {
+    "distance_to_enemy": ".01",
+    "distance_to_ally": "-1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.001",
+    "face_closest_enemy": "1"
+  },
+  "keep_distance_popeye": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "3",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "chubs_and_nubs_blind": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "0"
+  },
+  "chubs_and_nubs_rage": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "10",
+    "face_closest_enemy": "0",
+    "randomness": "4"
+  },
+  "gunslinger_reposition": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "cap_distance_to_character": "2",
+    "distance_to_character": "1",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "0"
+  },
+  "stay_near_allies_siren": {
+    "distance_to_enemy": ".01",
+    "distance_to_ally": "-1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.001",
+    "face_closest_enemy": "1",
+    "exclude_characters_tagged": "siren"
+  },
+  "stay_near_map_center": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "0",
+    "distance_to_center": "-1"
+  },
+  "bat_chaos_runaway": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "1",
+    "randomness": "6"
+  },
+  "keep_distance_always_move_towards_water": {
+    "distance_to_water": "-1",
+    "distance_to_enemy": "-.01",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.0001",
+    "face_closest_enemy": "1"
+  },
+  "keep_distance_always_move_prefer_water": {
+    "distance_to_water": "-.0001",
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "zombie": {
+    "distance_to_enemy": "-1",
+    "distance_to_corpse": "-100",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "stay_close_avoid_allies": {
+    "distance_to_enemy": "-1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "distance_to_ally": "1",
+    "cap_distance_to_ally": "2"
+  },
+  "keep_distance_always_move_spider": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov+1",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "keep_close_distance_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov-2",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1"
+  },
+  "rattle_distance": {
+    "distance_to_enemy": "-1",
+    "cap_distance_to_enemy": "2",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "2",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "dustdevil": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "1",
+    "cap_distance_to_ally": "4",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "bird": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "cap_total_distance_moved": "1",
+    "face_closest_enemy": "1"
+  },
+  "stay_close_lenny": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "-.1",
+    "distance_to_corpse": "-.1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "security_bot": {
+    "distance_to_enemy": "-.5",
+    "distance_to_ally": "-1",
+    "cap_distance_to_ally": "2",
+    "distance_to_character": "0",
+    "preferred_distance": "3",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "wash_johnny": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "-1",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.001",
+    "face_closest_enemy": "0",
+    "face_aggro_target": "1"
+  },
+  "prefer_lava_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1",
+    "lava": "5"
+  },
+  "semi_blind": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "0",
+    "randomness": "50"
+  },
+  "towards_aggro": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "0",
+    "distance_to_aggro_target": "-1"
+  },
+  "util_minmove": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-1",
+    "face_closest_enemy": "0"
+  },
+  "stay_close_move_if_possible": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "count_nomove_in_eval": "false"
+  },
+  "towards_aggro_stay_close": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "face_aggro_target": "10",
+    "distance_to_aggro_target": "-10",
+    "consider_aggro_target_enemy": "true"
+  },
+  "keep_distance_face_camera": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "face_camera": "1000"
+  },
+  "trampy_chaos": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "randomness": "6"
+  },
+  "stay_close_ish": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.1",
+    "face_closest_enemy": "1",
+    "randomness": "6"
+  },
+  "terminator_stay_close": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1",
+    "danger_avoidance": ".1"
+  },
+  "terminator_keep_distance_always_move": {
+    "distance_to_enemy": "-1",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "mov",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1",
+    "danger_avoidance": "20"
+  },
+  "run_far": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "1",
+    "face_closest_enemy": "1"
+  },
+  "stay_close_g3": {
+    "distance_to_aggro_target": "-1",
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_corpse": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "1",
+    "total_distance_moved": "-0.01",
+    "face_closest_enemy": "1"
+  },
+  "drmangler": {
+    "distance_to_enemy": "1",
+    "distance_to_ally": "2",
+    "cap_distance_to_ally": "7",
+    "cap_distance_to_enemy": "5",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "0.01",
+    "face_closest_enemy": "1",
+    "danger_avoidance": "1000"
+  },
+  "chaos_always_move": {
+    "distance_to_enemy": "0",
+    "distance_to_ally": "0",
+    "distance_to_character": "0",
+    "preferred_distance": "0",
+    "total_distance_moved": "100",
+    "face_closest_enemy": "1"
+  }
+}

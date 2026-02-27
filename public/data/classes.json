@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "generated_at": "2026-02-27T12:15:18.580Z"
+  },
+  "classes": {
+    "Fighter": {
+      "name": "Fighter",
+      "description": "Punch your way to victory! Fighters are great at doing big strong melee attacks and smashing things to pieces!",
+      "statMods": {
+        "str": 2,
+        "int": -1,
+        "spd": 1
+      }
+    },
+    "Hunter": {
+      "name": "Hunter",
+      "description": "Shoot things from afar! Hunters are great at hitting things from a distance while staying out of danger themselves!",
+      "statMods": {
+        "dex": 3,
+        "con": -1,
+        "spd": -2,
+        "lck": 2
+      }
+    },
+    "Mage": {
+      "name": "Mage",
+      "description": "Blast your foes! Mages are great at casting all sorts of crazy spells and dealing elemental damage!",
+      "statMods": {
+        "str": -1,
+        "con": -1,
+        "int": 2,
+        "cha": 2
+      }
+    },
+    "Medic": {
+      "name": "Cleric",
+      "description": "Be the best friend! Clerics are great at keeping your team alive and helping them recover from taking hits!",
+      "statMods": {
+        "dex": -1,
+        "con": 2,
+        "spd": -1,
+        "cha": 2
+      }
+    },
+    "Tank": {
+      "name": "Tank",
+      "description": "Get in the way! Tanks are great at absorbing damage and pushing enemies around!",
+      "statMods": {
+        "dex": -1,
+        "con": 4,
+        "int": -1
+      }
+    },
+    "Thief": {
+      "name": "Thief",
+      "description": "Attack from the shadows! Thiefs are great at evading hits, collecting coins, and striking from behind!",
+      "statMods": {
+        "str": -1,
+        "con": -1,
+        "spd": 4,
+        "lck": 1
+      }
+    },
+    "Colorless": {
+      "name": "Collarless",
+      "description": "It's a cat!",
+      "statMods": {}
+    },
+    "Monk": {
+      "name": "Monk",
+      "description": "A versatile combat master! Monks can switch between ranged and melee stances and attack twice per turn!",
+      "statMods": {
+        "str": -1,
+        "dex": -1,
+        "int": 2,
+        "cha": 2
+      },
+      "innatePassives": {
+        "MonkStances": [
+          "BasicMonkMelee",
+          "BasicMonkRanged"
+        ]
+      }
+    },
+    "Butcher": {
+      "name": "Butcher",
+      "description": "Meat Meat Meat Meat Meat! Butchers are great at cleaving chunks of meat off of things and have a hook to pull stuff towards them!",
+      "statMods": {
+        "str": 2,
+        "con": 3,
+        "spd": -2
+      }
+    },
+    "Druid": {
+      "name": "Druid",
+      "description": "One with nature! Druids are great at summoning animal friends and come with a special Crow counterpart!",
+      "statMods": {
+        "con": -2,
+        "cha": 3,
+        "lck": 1
+      },
+      "innatePassives": {
+        "SpawnOnBattleStart": "Crow"
+      }
+    },
+    "Tinkerer": {
+      "name": "Tinkerer",
+      "description": "A crafty inventor! Tinkerers are great at crafting temporary weapons and using all sorts of crazy gadgets!",
+      "statMods": {
+        "int": 4,
+        "cha": -1,
+        "lck": -1
+      },
+      "innatePassives": {
+        "TinkererBasicAttackSwitching": {
+          "craft_ability": "TinkererCraft",
+          "throw_ability": "TinkererThrow"
+        }
+      }
+    },
+    "Necromancer": {
+      "name": "Necromancer",
+      "description": "Rise from the dead! Necromancers are great at playing with corpses and leeching life from enemies!",
+      "statMods": {
+        "str": -2,
+        "con": 2,
+        "cha": 1
+      }
+    },
+    "Psychic": {
+      "name": "Psychic",
+      "description": "Clear your mind! Psychics are great at manipulating things from afar and moving objects with their minds! Psychics also have +5 starting mana.",
+      "statMods": {
+        "con": -1,
+        "int": 1,
+        "spd": 1,
+        "cha": 1
+      },
+      "innatePassives": {
+        "AddStartingMana": "5"
+      }
+    },
+    "Jester": {
+      "name": "Jester",
+      "description": "You can be anything! Jesters have no limits!",
+      "statMods": {}
+    }
+  }
+}

@@ -1,0 +1,1335 @@
+{
+  "cm_Heal": {
+    "id": "cm_Heal",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "heal": "item_aux",
+      "effects": {
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_Catnip": {
+    "id": "cm_Catnip",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "catnip"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "item_aux"
+      }
+    }
+  },
+  "cm_Shield": {
+    "id": "cm_Shield",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "item_aux"
+      }
+    }
+  },
+  "cm_StrBuff": {
+    "id": "cm_StrBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "item_aux"
+      }
+    }
+  },
+  "cm_DexBuff": {
+    "id": "cm_DexBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "DexterityUp": "item_aux"
+      }
+    }
+  },
+  "cm_ConBuff": {
+    "id": "cm_ConBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": "item_aux"
+      }
+    }
+  },
+  "cm_IntBuff": {
+    "id": "cm_IntBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "item_aux"
+      }
+    }
+  },
+  "cm_SpdBuff": {
+    "id": "cm_SpdBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpeedUp": "item_aux"
+      }
+    }
+  },
+  "cm_ChaBuff": {
+    "id": "cm_ChaBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "CharismaUp": "item_aux",
+        "ManaGain": "6"
+      }
+    }
+  },
+  "cm_LckBuff": {
+    "id": "cm_LckBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "pill"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "LuckUp": "item_aux"
+      }
+    }
+  },
+  "cm_Antidote": {
+    "id": "cm_Antidote",
+    "template": "targeted_status",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1"
+    },
+    "graphics": {
+      "affected_particle": "Cleanse",
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0"
+      }
+    }
+  },
+  "cm_Nipple": {
+    "id": "cm_Nipple",
+    "template": "melee_spell",
+    "tags": "consumable",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket",
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "HealthRegenUp": "1"
+      }
+    }
+  },
+  "cm_ExperimentX": {
+    "id": "cm_ExperimentX",
+    "template": "self_buff",
+    "tags": "consumable",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "keyword_tooltips": {},
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "drinkTrinket",
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyMultipleTimes": {
+          "stacks": "4",
+          "RandomStatusFromPool": {
+            "Slow": "2",
+            "Weakness": "2",
+            "MagicWeakness": "2",
+            "Bruise": "2",
+            "Marked": "1",
+            "Ostracized": "1",
+            "Hex": "1",
+            "Tarred": "1",
+            "Scrambled": "2",
+            "DelayedPain": "1",
+            "Rot": "1",
+            "Infested": "1",
+            "Poison": "1"
+          }
+        }
+      }
+    }
+  },
+  "cm_Steven1": {
+    "id": "cm_Steven1",
+    "template": "self_buff",
+    "tags": "consumable",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket",
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "PermanentUpgradeRandomActiveOrPassive": "1"
+      }
+    }
+  },
+  "cm_Steven2": {
+    "id": "cm_Steven2",
+    "template": "spawn",
+    "tags": [
+      "summon",
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "must_not_be_a_summon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "spawn": {
+      "object": "PlayerCat_StevenShade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true"
+    }
+  },
+  "cm_Gizzard": {
+    "id": "cm_Gizzard",
+    "variant_of": "MockingbirdForm",
+    "tags": [
+      "consumable",
+      "shapeshift"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "infcantrip": "false"
+    },
+    "damage_instance": {
+      "effects": {
+        "ApplyPassives": {
+          "StatusOnBattleEnd": {
+            "even_if_dead": "true",
+            "RandomTaggedMutation": "bird"
+          }
+        }
+      }
+    }
+  },
+  "cm_JokerCard": {
+    "id": "cm_JokerCard",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "DuplicateRandomEquippedItem": "1"
+      }
+    }
+  },
+  "tk_WaterBottle_Full": {
+    "id": "tk_WaterBottle_Full",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "drinkTrinket"
+    },
+    "damage_instance": {
+      "heal": "5",
+      "effects": {
+        "DrinkWater": "1"
+      },
+      "elements": [
+        "Lesser_Water"
+      ]
+    }
+  },
+  "tk_WaterBottle_Half": {
+    "id": "tk_WaterBottle_Half",
+    "variant_of": "tk_WaterBottle_Full"
+  },
+  "tk_WaterBottle_Empty": {
+    "id": "tk_WaterBottle_Empty",
+    "template": "ranged_attack",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "durability": "0"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Confusion": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "DestroyTrinket": "1"
+      }
+    }
+  },
+  "cm_Kidney": {
+    "id": "cm_Kidney",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "heal": "10",
+      "HealthRegenUp": "2",
+      "effects": {
+        "Cleanse": "0",
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_Enema": {
+    "id": "cm_Enema",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "PurgeAll": "1"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "cm_HealPercent": {
+    "id": "cm_HealPercent",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "X_cant_be_zero": "true"
+    },
+    "target": {
+      "X_is": "max_health"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "heal": "ceil(X*item_aux/100)"
+    }
+  },
+  "cm_HealPercent_Auto": {
+    "id": "cm_HealPercent_Auto",
+    "variant_of": "cm_HealPercent",
+    "self_damage": {
+      "effects": {
+        "DamageTrinket": "1"
+      }
+    }
+  },
+  "cm_Lard": {
+    "id": "cm_Lard",
+    "template": "spell",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1",
+      "knockback_mode": "tile_to_character"
+    },
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "effects": {
+        "FaceAway": "1",
+        "ImmediateUseAbility": "cm_Lard_Impl"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "DamageTrinket": "1"
+      }
+    }
+  },
+  "cm_Lard_Impl": {
+    "id": "cm_Lard_Impl",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "graphics": {
+      "animation": "gulp"
+    },
+    "damage_instance": {
+      "effects": {
+        "FullHeal": "1",
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_KiloOfCatnip": {
+    "id": "cm_KiloOfCatnip",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "catnip"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "FillMana": "1"
+      }
+    }
+  },
+  "cm_SmellingSalts": {
+    "id": "cm_SmellingSalts",
+    "template": "targeted_status",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "aoe_restrictions": "must_have_corpse",
+      "restrictions": "aoe_must_exist",
+      "min_range": "0",
+      "max_range": "1"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Revive": "1"
+      }
+    }
+  },
+  "cm_ViperBottle": {
+    "id": "cm_ViperBottle",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "drinkTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomPermanentStat": "1",
+        "Conditional_RandomChance": {
+          "odds": "10%",
+          "ApplyPassives": {
+            "StatusOnBattleEnd": {
+              "even_if_dead": "true",
+              "RandomTaggedMutation": "melted"
+            }
+          }
+        }
+      }
+    },
+    "self_damage": {
+      "damage": "5"
+    }
+  },
+  "cm_SuperBandage": {
+    "id": "cm_SuperBandage",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "HealRandomInjury": "1"
+      }
+    }
+  },
+  "cm_RottenMeat": {
+    "id": "cm_RottenMeat",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Poison": "1",
+        "ApplyPassives": {
+          "ReplaceBasicAttack": "BasicPuke"
+        },
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_AllStatsBuff": {
+    "id": "cm_AllStatsBuff",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "item_aux"
+      }
+    }
+  },
+  "cm_Star": {
+    "id": "cm_Star",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "Thorns",
+          "stacks": "10",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        },
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "cm_Bullseye": {
+    "id": "cm_Bullseye",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "AllDamageCrits",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_end_turn": "true"
+        }
+      }
+    }
+  },
+  "cm_StemCells": {
+    "id": "cm_StemCells",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "HealthRegenUp": "3",
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_WitchsEye": {
+    "id": "cm_WitchsEye",
+    "template": "self_buff",
+    "tags": [
+      "consumable,",
+      "meat"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "BackflipWhenTargeted": "2",
+        "ClearStarving": "1"
+      }
+    }
+  },
+  "cm_ForbiddenFruit": {
+    "id": "cm_ForbiddenFruit",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "FullHeal": "1",
+        "FillMana": "1",
+        "AllStatsUp": "2",
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    }
+  },
+  "cm_PCP": {
+    "id": "cm_PCP",
+    "template": "targeted_status",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "1"
+    },
+    "graphics": {
+      "animation": "drinkTrinket",
+      "affected_particle": "PoisonPoof"
+    },
+    "damage_instance": {
+      "effects": {
+        "Madness": "3",
+        "Temporary": {
+          "status": "DamageUp",
+          "stacks": "5",
+          "turns": "3",
+          "expires_on_end_turn": "true"
+        }
+      }
+    }
+  },
+  "cm_WishBone": {
+    "id": "cm_WishBone",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempLuckUp": "99"
+      }
+    }
+  },
+  "cm_MetalCoat": {
+    "id": "cm_MetalCoat",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true",
+      "requires_destructible_weapon": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "MakeWeaponUnbreakable": "1"
+      }
+    }
+  },
+  "cm_ShoePolish": {
+    "id": "cm_ShoePolish",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "RepairWeapon": "99",
+        "RefreshWeaponAbility": "1",
+        "RepairWeaponCondition": "1"
+      }
+    }
+  },
+  "cm_Pearl": {
+    "id": "cm_Pearl",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "GainCoinsRange": {
+          "min": "10",
+          "max": "30"
+        }
+      }
+    }
+  },
+  "cm_TheD6": {
+    "id": "cm_TheD6",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "PermanentUpgradeRandomActive": "1"
+      }
+    }
+  },
+  "cm_BigToe": {
+    "id": "cm_BigToe",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "affected_particle": "Cleanse",
+      "animation": "showTrinket"
+    },
+    "damage_instance": {
+      "heal": "6",
+      "effects": {
+        "Cleanse": "0",
+        "HealthRegenUp": "1"
+      }
+    }
+  },
+  "cm_RaptorEgg": {
+    "id": "cm_RaptorEgg",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "FullHeal": "1"
+      }
+    }
+  },
+  "cm_RaptorEggSpawn": {
+    "id": "cm_RaptorEggSpawn",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "target": {
+      "target_mode": "random_closest_tile",
+      "min_range": "1",
+      "max_range": "1"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "none",
+      "dont_orient": "true"
+    },
+    "spawn": {
+      "object": [
+        "CharmedRaptorBaby"
+      ]
+    }
+  },
+  "cm_JarOfChaos": {
+    "id": "cm_JarOfChaos",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "drinkTrinket",
+      "particle": "fx_statup"
+    },
+    "damage_instance": {
+      "effects": {
+        "PermanentStrength": "2",
+        "PermanentDexterity": "2",
+        "PermanentConstitution": "2",
+        "PermanentIntelligence": "2",
+        "PermanentCharisma": "2",
+        "PermanentSpeed": "2",
+        "PermanentLuck": "2",
+        "PermanentUpgradeRandomActive": "4"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "TransformEquipment": {
+          "from": "JarOfChaos",
+          "to": "JarOfNothing"
+        }
+      }
+    }
+  },
+  "cm_ClassSeal": {
+    "id": "cm_ClassSeal",
+    "template": "self_buff",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "druidTransform"
+    }
+  },
+  "cm_FighterSeal": {
+    "id": "cm_FighterSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Fighter"
+      }
+    }
+  },
+  "cm_HunterSeal": {
+    "id": "cm_HunterSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Hunter"
+      }
+    }
+  },
+  "cm_MageSeal": {
+    "id": "cm_MageSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Mage"
+      }
+    }
+  },
+  "cm_TankSeal": {
+    "id": "cm_TankSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Tank"
+      }
+    }
+  },
+  "cm_ClericSeal": {
+    "id": "cm_ClericSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Medic"
+      }
+    }
+  },
+  "cm_ThiefSeal": {
+    "id": "cm_ThiefSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Thief"
+      }
+    }
+  },
+  "cm_ButcherSeal": {
+    "id": "cm_ButcherSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Butcher"
+      }
+    }
+  },
+  "cm_PsychicSeal": {
+    "id": "cm_PsychicSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Psychic"
+      }
+    }
+  },
+  "cm_DruidSeal": {
+    "id": "cm_DruidSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Druid"
+      }
+    }
+  },
+  "cm_NecromancerSeal": {
+    "id": "cm_NecromancerSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Necromancer"
+      }
+    }
+  },
+  "cm_MonkSeal": {
+    "id": "cm_MonkSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Monk"
+      }
+    }
+  },
+  "cm_TinkererSeal": {
+    "id": "cm_TinkererSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Tinkerer"
+      }
+    }
+  },
+  "cm_JesterSeal": {
+    "id": "cm_JesterSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Jester"
+      }
+    }
+  },
+  "cm_ColorlessSeal": {
+    "id": "cm_ColorlessSeal",
+    "variant_of": "cm_ClassSeal",
+    "damage_instance": {
+      "effects": {
+        "ChangeCatClass": "Colorless"
+      }
+    }
+  },
+  "cm_EatHummingbird": {
+    "id": "cm_EatHummingbird",
+    "template": "self_buff",
+    "tags": "consumable",
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "SpeedUp": "item_aux",
+        "DodgeChance_Status": "50",
+        "SizeScale": ".6"
+      }
+    }
+  },
+  "cm_ForbiddenPill": {
+    "id": "cm_ForbiddenPill",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "effects": {
+        "UpgradeRandomAbility": "1",
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    }
+  },
+  "cm_RedPill": {
+    "id": "cm_RedPill",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Conditional_GoodRoll": {
+          "odds": "50%",
+          "GainDisorder": "Chungus"
+        },
+        "Else": {
+          "DoDamage": {
+            "damage": "8",
+            "type": "spell"
+          }
+        }
+      }
+    }
+  },
+  "cm_UnstableDNA": {
+    "id": "cm_UnstableDNA",
+    "template": "self_buff",
+    "tags": [
+      "consumable"
+    ],
+    "name_key": "{itemname}",
+    "name": "{itemname}",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "eatTrinket"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "RandomStatUp": "6",
+        "ApplyPassives": {
+          "StatusOnBattleEnd": {
+            "even_if_dead": "true",
+            "RandomMutation": "3"
+          }
+        }
+      }
+    }
+  }
+}

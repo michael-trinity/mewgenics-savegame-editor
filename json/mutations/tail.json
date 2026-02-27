@@ -1,0 +1,563 @@
+{
+  "tail": {
+    "300": {
+      "tag": "extra",
+      "str": "1"
+    },
+    "301": {
+      "tag": "animal",
+      "desc": "MUTATION_TAIL_301_DESC",
+      "desc_resolved": "Poop when you take damage.",
+      "passives": {
+        "PoopWhenHit": "Poop"
+      }
+    },
+    "302": {
+      "tag": "animal",
+      "desc": "MUTATION_TAIL_302_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        }
+      }
+    },
+    "303": {
+      "desc": "MUTATION_TAIL_303_DESC",
+      "desc_resolved": "Your basic attack has a 5% chance to Stun.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Stun": [
+            "1,",
+            ".05"
+          ]
+        }
+      }
+    },
+    "304": {
+      "tag": "animal",
+      "dex": "1"
+    },
+    "305": {
+      "desc": "MUTATION_TAIL_305_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "306": {
+      "con": "1"
+    },
+    "307": {
+      "spd": "1"
+    },
+    "308": {
+      "desc": "MUTATION_TAIL_308_DESC",
+      "desc_resolved": "+5% dodge chance.",
+      "lck": "1",
+      "passives": {
+        "DodgeChance": "5%"
+      }
+    },
+    "309": {
+      "tag": "animal",
+      "cha": "1"
+    },
+    "310": {
+      "desc": "MUTATION_TAIL_310_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to repeat once.",
+      "passives": {
+        "AddTemporaryEffectsToBasicAttack": {
+          "Fury": "10"
+        }
+      }
+    },
+    "311": {
+      "desc": "MUTATION_TAIL_311_DESC",
+      "desc_resolved": "Thorns 1.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "312": {
+      "divine_shield": "1"
+    },
+    "313": {
+      "desc": "MUTATION_TAIL_313_DESC",
+      "desc_resolved": "Your basic attack creates water tiles.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "ChangeTile": "WaterTile"
+        },
+        "AddElementsToBasicAttack": "Water"
+      }
+    },
+    "314": {
+      "desc": "MUTATION_TAIL_314_DESC",
+      "desc_resolved": "Whenever you down a unit, you have a 10% chance to reanimate that unit with 50% HP.",
+      "passives": {
+        "StatusKilledCharacters": {
+          "Conditional_RandomChance": {
+            "odds": "10%",
+            "AutoReanimate": "50%"
+          }
+        }
+      }
+    },
+    "315": {
+      "desc": "MUTATION_TAIL_315_DESC",
+      "desc_resolved": "20% chance to spawn a Maggot when hit.",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "Maggot",
+          "good": "false",
+          "chance": "20%"
+        }
+      }
+    },
+    "316": {
+      "desc": "MUTATION_TAIL_316_DESC",
+      "desc_resolved": "25% chance to spawn tall grass wherever you end your movement.",
+      "passives": {
+        "StatusOnEndMove": {
+          "Conditional_GoodRoll": {
+            "odds": "25%",
+            "ChangeTilesUnder": "TallGrassTile"
+          }
+        }
+      }
+    },
+    "317": {
+      "desc": "MUTATION_TAIL_317_DESC",
+      "desc_resolved": "When hit, fart a Poison 4 attack with Knockback behind you.",
+      "passives": {
+        "AbilityReaction": "SkunkTail"
+      }
+    },
+    "318": {
+      "desc": "MUTATION_TAIL_318_DESC",
+      "desc_resolved": "Your basic attack inflicts Poison.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Poison": "1"
+        }
+      }
+    },
+    "319": {
+      "desc": "MUTATION_TAIL_319_DESC",
+      "desc_resolved": "Units who contact you get Poisoned.",
+      "passives": {
+        "PoisonThorns": "1"
+      }
+    },
+    "320": {
+      "desc": "MUTATION_TAIL_320_DESC",
+      "desc_resolved": "Bleed 1. Bleed Thorns 2.",
+      "passives": {
+        "Bleed": "1",
+        "BleedThorns": "2"
+      }
+    },
+    "321": {
+      "tag": "extra",
+      "int": "1"
+    },
+    "322": {
+      "desc": "MUTATION_TAIL_322_DESC",
+      "desc_resolved": "Gain +1 [img:spd] each turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "SpeedUp": "1"
+        }
+      }
+    },
+    "323": {
+      "desc": "MUTATION_TAIL_323_DESC",
+      "desc_resolved": "Your movement action is a jump.",
+      "passives": {
+        "ReplaceBasicMove_Mutation": "BasicJump"
+      }
+    },
+    "324": {
+      "spd": "2"
+    },
+    "325": {
+      "desc": "MUTATION_TAIL_325_DESC",
+      "desc_resolved": "Units that contact you get knocked back 2 tiles.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "knockback": "2"
+        }
+      }
+    },
+    "326": {
+      "desc": "MUTATION_TAIL_326_DESC",
+      "desc_resolved": "10% dodge chance. Bruise 1.",
+      "passives": {
+        "Bruise": "1",
+        "DodgeChance": "10%"
+      }
+    },
+    "327": {
+      "desc": "MUTATION_TAIL_327_DESC",
+      "desc_resolved": "If you don't move, gain 3 Charge at the end of the turn.",
+      "passives": {
+        "StatusIfDidntMove": {
+          "Charge": "3"
+        }
+      }
+    },
+    "329": {
+      "desc": "MUTATION_TAIL_329_DESC",
+      "desc_resolved": "You can unequip cursed items and parasites.",
+      "passives": {
+        "CanRemoveCursedItems": "1"
+      }
+    },
+    "331": {
+      "desc": "MUTATION_TAIL_331_DESC",
+      "desc_resolved": "You can reroll your options when you level up.",
+      "passives": {
+        "AddLevelUpRerolls": "1"
+      }
+    },
+    "332": {
+      "desc": "MUTATION_TAIL_332_DESC",
+      "desc_resolved": "+25% chance to reflect projectiles.",
+      "passives": {
+        "ReflectProjectiles": "25%"
+      }
+    },
+    "334": {
+      "desc": "MUTATION_TAIL_334_DESC",
+      "desc_resolved": "Your basic attack inflicts Burn 1.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Burn": "1"
+        },
+        "AddElementsToBasicAttack": "Fire"
+      }
+    },
+    "336": {
+      "desc": "MUTATION_TAIL_336_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "337": {
+      "desc": "MUTATION_TAIL_337_DESC",
+      "desc_resolved": "Your basic attack is wind element.",
+      "tag": "bird",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Knockback": "1",
+          "VisualFXTile": "fx_windSpell"
+        },
+        "AddElementsToBasicAttack": "Wind"
+      }
+    },
+    "338": {
+      "desc": "MUTATION_TAIL_338_DESC",
+      "desc_resolved": "Your basic attack inflicts Burn 1.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Burn": "1"
+        },
+        "AddElementsToBasicAttack": "Fire"
+      }
+    },
+    "339": {
+      "desc": "MUTATION_TAIL_339_DESC",
+      "desc_resolved": "While at full mana, you have +2 Damage.",
+      "passives": {
+        "PassiveWhenAtFullMana": {
+          "DamageUp": "2"
+        }
+      }
+    },
+    "341": {
+      "desc": "MUTATION_TAIL_341_DESC",
+      "desc_resolved": "Gain +1 Charge when you take damage.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "Charge": "1"
+        }
+      }
+    },
+    "342": {
+      "desc": "MUTATION_TAIL_342_DESC",
+      "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed.",
+      "passives": {
+        "SpawnOnDowned": "CharmedKitten"
+      }
+    },
+    "750": {
+      "cha": "1"
+    },
+    "751": {
+      "desc": "MUTATION_TAIL_751_DESC",
+      "desc_resolved": "+1 Brace.",
+      "passives": {
+        "Brace": "1"
+      }
+    },
+    "752": {
+      "con": "1"
+    },
+    "/*753": {
+      "passives": {}
+    },
+    "*/": "754",
+    "desc": "MUTATION_TAIL_754_DESC",
+    "desc_resolved": "+1 Thorns.",
+    "passives": {
+      "Thorns": "1"
+    }
+  },
+  "755": {
+    "desc": "MUTATION_TAIL_755_DESC",
+    "desc_resolved": "Water does not slow movement.",
+    "passives": {
+      "WaterWalk": "1"
+    }
+  },
+  "756": {
+    "desc": "MUTATION_TAIL_756_DESC",
+    "desc_resolved": "+1 Bleed Thorns.",
+    "passives": {
+      "BleedThorns": "1"
+    }
+  },
+  "757": {
+    "desc": "MUTATION_TAIL_757_DESC",
+    "desc_resolved": "Your movement action is shadowstep.",
+    "passives": {
+      "ReplaceBasicMove": "Shadowstep"
+    }
+  },
+  "759": {
+    "desc": "MUTATION_TAIL_759_DESC",
+    "desc_resolved": "Start with +1 Bonus Attack.",
+    "passives": {
+      "Quivered": "1"
+    }
+  },
+  "760": {
+    "desc": "MUTATION_TAIL_760_DESC",
+    "desc_resolved": "Start with 2 backflips.",
+    "passives": {
+      "BackflipWhenTargeted": {
+        "stacks": "2",
+        "ability": "BackflipDodge"
+      }
+    }
+  },
+  "900": {
+    "spd": "1"
+  },
+  "1500": {
+    "tag": "animal",
+    "dex": "1"
+  },
+  "400": {
+    "str": "2",
+    "con": "-1"
+  },
+  "401": {
+    "str": "2",
+    "dex": "-1"
+  },
+  "402": {
+    "str": "2",
+    "cha": "-1"
+  },
+  "403": {
+    "str": "2",
+    "int": "-1"
+  },
+  "404": {
+    "str": "2",
+    "spd": "-1"
+  },
+  "405": {
+    "str": "2",
+    "lck": "-1"
+  },
+  "406": {
+    "con": "2",
+    "str": "-1"
+  },
+  "407": {
+    "con": "2",
+    "dex": "-1"
+  },
+  "408": {
+    "con": "2",
+    "cha": "-1"
+  },
+  "409": {
+    "con": "2",
+    "int": "-1"
+  },
+  "410": {
+    "tag": "melted",
+    "con": "2",
+    "spd": "-1"
+  },
+  "411": {
+    "con": "2",
+    "lck": "-1"
+  },
+  "412": {
+    "dex": "2",
+    "con": "-1"
+  },
+  "413": {
+    "dex": "2",
+    "str": "-1"
+  },
+  "414": {
+    "dex": "2",
+    "cha": "-1"
+  },
+  "415": {
+    "dex": "2",
+    "int": "-1"
+  },
+  "416": {
+    "dex": "2",
+    "spd": "-1"
+  },
+  "417": {
+    "dex": "2",
+    "lck": "-1"
+  },
+  "418": {
+    "int": "2",
+    "con": "-1"
+  },
+  "419": {
+    "int": "2",
+    "dex": "-1"
+  },
+  "420": {
+    "int": "2",
+    "cha": "-1"
+  },
+  "421": {
+    "int": "2",
+    "str": "-1"
+  },
+  "422": {
+    "int": "2",
+    "spd": "-1"
+  },
+  "423": {
+    "int": "2",
+    "lck": "-1"
+  },
+  "424": {
+    "cha": "2",
+    "con": "-1"
+  },
+  "425": {
+    "cha": "2",
+    "dex": "-1"
+  },
+  "426": {
+    "cha": "2",
+    "str": "-1"
+  },
+  "427": {
+    "cha": "2",
+    "int": "-1"
+  },
+  "428": {
+    "cha": "2",
+    "spd": "-1"
+  },
+  "429": {
+    "cha": "2",
+    "lck": "-1"
+  },
+  "430": {
+    "lck": "2",
+    "con": "-1"
+  },
+  "431": {
+    "lck": "2",
+    "dex": "-1"
+  },
+  "432": {
+    "lck": "2",
+    "cha": "-1"
+  },
+  "433": {
+    "lck": "2",
+    "int": "-1"
+  },
+  "434": {
+    "lck": "2",
+    "spd": "-1"
+  },
+  "435": {
+    "lck": "2",
+    "str": "-1"
+  },
+  "436": {
+    "spd": "2",
+    "con": "-1"
+  },
+  "437": {
+    "spd": "2",
+    "str": "-1"
+  },
+  "438": {
+    "spd": "2",
+    "cha": "-1"
+  },
+  "439": {
+    "spd": "2",
+    "int": "-1"
+  },
+  "440": {
+    "spd": "2",
+    "dex": "-1"
+  },
+  "441": {
+    "spd": "2",
+    "lck": "-1"
+  },
+  "700": {
+    "tag": "birth_defect",
+    "lck": "-2"
+  },
+  "701": {
+    "tag": "birth_defect",
+    "spd": "-1",
+    "cha": "-1"
+  },
+  "-2": {
+    "tag": "birth_defect",
+    "dex": "-1"
+  },
+  "703": {
+    "desc": "MUTATION_TAIL_703_DESC",
+    "desc_resolved": "Start each battle with Immobile 1.",
+    "tag": "birth_defect",
+    "con": "1",
+    "passives": {
+      "Immobile": "1"
+    }
+  },
+  "704": {
+    "desc": "MUTATION_TAIL_704_DESC",
+    "desc_resolved": "Hunter abilities are also offered when you level up.",
+    "tag": "birth_defect",
+    "lck": "-2",
+    "passives": {
+      "MulticlassLevelUp": "Hunter"
+    }
+  }
+}

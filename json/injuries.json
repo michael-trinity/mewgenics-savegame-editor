@@ -1,0 +1,332 @@
+{
+  "str": {
+    "text": "INJURY_NAME_BROKENPAW",
+    "text_resolved": "Broken Paw",
+    "id": "0",
+    "stats": {
+      "str": "-1"
+    },
+    "scars": {
+      "arms": [
+        "10",
+        "20"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "brokenPaw"
+      ],
+      [
+        "dead,",
+        "brokenPawLoop"
+      ],
+      [
+        "deadhit,",
+        "brokenPawHit"
+      ],
+      [
+        "weak,",
+        "brokenPawIdle"
+      ],
+      [
+        "walk,",
+        "brokenPawWalk"
+      ]
+    ],
+    "deathsound": "Injury_BrokenPaw"
+  },
+  "dex": {
+    "text": "INJURY_NAME_TORNTENDON",
+    "text_resolved": "Torn Tendon",
+    "id": "1",
+    "stats": {
+      "dex": "-1"
+    },
+    "scars": {
+      "limbs": [
+        "21",
+        "31"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "dislocatedShoulder"
+      ],
+      [
+        "dead,",
+        "dislocatedShoulderLoop"
+      ],
+      [
+        "deadhit,",
+        "dislocatedShoulderHit"
+      ],
+      [
+        "weak,",
+        "dislocatedShoulderIdle"
+      ],
+      [
+        "walk,",
+        "dislocatedShoulderWalk"
+      ]
+    ],
+    "deathsound": "Injury_TornTendon"
+  },
+  "con": {
+    "text": "INJURY_NAME_BROKENRIB",
+    "text_resolved": "Broken Rib",
+    "id": "2",
+    "stats": {
+      "con": "-1"
+    },
+    "scars": {
+      "body": [
+        "2",
+        "9"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "intestinalProlapse"
+      ],
+      [
+        "dead,",
+        "intestinalProlapseLoop"
+      ],
+      [
+        "deadhit,",
+        "intestinalProlapseHit"
+      ]
+    ],
+    "deathsound": "Injury_BrokenRib"
+  },
+  "int": {
+    "text": "INJURY_NAME_CONCUSSION",
+    "text_resolved": "Concussion",
+    "id": "3",
+    "stats": {
+      "int": "-1"
+    },
+    "scars": {
+      "head": [
+        "23",
+        "33"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "concussion"
+      ],
+      [
+        "dead,",
+        "concussionLoop"
+      ],
+      [
+        "deadhit,",
+        "concussionHit"
+      ]
+    ],
+    "deathsound": "Injury_Concussion"
+  },
+  "cha": {
+    "text": "INJURY_NAME_DISFIGURED",
+    "text_resolved": "Disfigured",
+    "id": "4",
+    "stats": {
+      "cha": "-1"
+    },
+    "scars": {
+      "head": [
+        "23",
+        "33"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "disfigured"
+      ],
+      [
+        "dead,",
+        "disfiguredLoop"
+      ],
+      [
+        "deadhit,",
+        "disfiguredHit"
+      ]
+    ],
+    "deathsound": "Injury_Disfigured"
+  },
+  "spd": {
+    "text": "INJURY_NAME_BROKENLEG",
+    "text_resolved": "Broken Leg",
+    "id": "5",
+    "stats": {
+      "spd": "-1"
+    },
+    "scars": {
+      "legs": [
+        "2",
+        "9"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "brokenLeg"
+      ],
+      [
+        "dead,",
+        "brokenLegLoop"
+      ],
+      [
+        "deadhit,",
+        "brokenLegHit"
+      ],
+      [
+        "weak,",
+        "brokenLegIdle"
+      ],
+      [
+        "walk,",
+        "brokenLegWalk"
+      ]
+    ],
+    "deathsound": "Injury_BrokenLeg"
+  },
+  "lck": {
+    "text": "INJURY_NAME_JINXED",
+    "text_resolved": "Jinxed",
+    "id": "6",
+    "stats": {
+      "lck": "-1"
+    },
+    "scars": {
+      "head": [
+        "15",
+        "22"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "cursed"
+      ],
+      [
+        "dead,",
+        "cursedLoop"
+      ],
+      [
+        "deadhit,",
+        "cursedHit"
+      ]
+    ],
+    "deathsound": "Injury_Cursed"
+  },
+  "burned": {
+    "text": "INJURY_NAME_IMMOLATED",
+    "text_resolved": "Immolated",
+    "id": "7",
+    "stats": {
+      "cha": "-1",
+      "lck": "-1"
+    },
+    "scars": {
+      "body": [
+        "16",
+        "25"
+      ],
+      "head": [
+        "34",
+        "41"
+      ]
+    },
+    "deathsound": "Injury_Burn"
+  },
+  "bleeding": {
+    "text": "INJURY_NAME_EXSANGUINATED",
+    "text_resolved": "Exsanguinated",
+    "id": "8",
+    "stats": {
+      "str": "-1",
+      "dex": "-1"
+    },
+    "deathsound": "Injury_Bleed"
+  },
+  "poisoned": {
+    "text": "INJURY_NAME_POISONED",
+    "text_resolved": "Poisoned",
+    "id": "9",
+    "stats": {
+      "con": "-1",
+      "int": "-1"
+    },
+    "deathsound": "Injury_Poison"
+  },
+  "cursed": {
+    "text": "INJURY_NAME_CURSED",
+    "text_resolved": "Cursed",
+    "id": "10",
+    "stats": {
+      "lck": "-2"
+    },
+    "scars": {
+      "head": [
+        "15",
+        "22"
+      ]
+    },
+    "alt_animations": [
+      [
+        "dying,",
+        "cursed"
+      ],
+      [
+        "dead,",
+        "cursedLoop"
+      ],
+      [
+        "deadhit,",
+        "cursedHit"
+      ]
+    ],
+    "deathsound": "Injury_Cursed"
+  },
+  "radiated": {
+    "text": "INJURY_NAME_RADIATED",
+    "text_resolved": "Radiated",
+    "id": "11",
+    "scars": {
+      "body": [
+        "26",
+        "30"
+      ],
+      "head": [
+        "42",
+        "46"
+      ]
+    },
+    "stats": {
+      "con": "-1"
+    },
+    "deathsound": "Injury_Burn"
+  },
+  "fade": {
+    "text": "",
+    "id": "-1",
+    "alt_animations": [
+      [
+        "dying,",
+        "poofOutOfExistance"
+      ],
+      [
+        "dead,",
+        "blank"
+      ]
+    ],
+    "deathsound": "Shade_Fade"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "levels": {
+    "folder": "moon",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "moon_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "MoonWorm"
+    ],
+    "medium": [
+      "BigAsteroid",
+      "SmallAsteroid",
+      "SmallUFO",
+      "YellowBlaster",
+      "GreyAlien",
+      "GreenProber",
+      "Waggle",
+      "MoonWorm",
+      "Rover",
+      "Astro"
+    ],
+    "large": [
+      "BigUFO"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "moonitems"
+  },
+  "minibosses": {
+    "abandonedones": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "dimensionx.gon",
+      "hidden": "true",
+      "override_art": "MapNodeExit_DimensionX"
+    },
+    "boss": {
+      "type": "boss",
+      "boss_cutscene": "moonhead"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_MoonObelisk",
+      "override_art": "MapNode_ObeliskHalf"
+    }
+  },
+  "flags": {
+    "MoonObeliskUnlocked": {
+      "quest_event": {
+        "level": "Quest_MoonObeliskRaised",
+        "override_art": "MapNode_ObeliskFull"
+      }
+    },
+    "BothObelisksUnlocked": {
+      "quest_event": {
+        "level": "Quest_MoonObeliskGlowing",
+        "override_art": "MapNode_ObeliskGlowing"
+      }
+    },
+    "DimensionXUnlocked": {
+      "quest_event": {
+        "level": "Quest_DimensionXPortal",
+        "override_art": "MapNode_RiftPortal"
+      }
+    }
+  }
+}

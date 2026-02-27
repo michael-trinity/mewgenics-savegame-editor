@@ -1,0 +1,38 @@
+{
+  "SuperLuck": {
+    "name": "PASSIVE_SUPERLUCK_NAME",
+    "name_resolved": "Super Luck",
+    "desc": "PASSIVE_SUPERLUCK_DESC",
+    "class": "Jester",
+    "1": {
+      "stats": {
+        "lck": "21"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SUPERLUCK2_DESC",
+      "stats": {
+        "lck": "77"
+      }
+    }
+  },
+  "Goofball": {
+    "name": "PASSIVE_GOOFBALL_NAME",
+    "name_resolved": "Goofball",
+    "desc": "PASSIVE_GOOFBALL_DESC",
+    "desc_resolved": "Take an extra turn at the start of each round.",
+    "class": "Jester",
+    "1": {
+      "passives": {
+        "AlphaTurns": "-1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GOOFBALL2_DESC",
+      "desc_resolved": "Take 2 extra turns at the start of each round.",
+      "passives": {
+        "AlphaTurns": "-1"
+      }
+    }
+  }
+}

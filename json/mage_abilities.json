@@ -1,0 +1,2715 @@
+{
+  "Surf": {
+    "id": "Surf",
+    "template": "spell",
+    "name_key": "ABILITY_SURF_NAME",
+    "name": "Surf",
+    "desc_key": "ABILITY_SURF_DESC",
+    "description": "A water spell that deals damage and knockback in a large area.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "4"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "visual_delay_but_simultaneous_damage": "20",
+      "delay": "10",
+      "animation": "majormagic"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "knockback": "2",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "Surf2": {
+    "id": "Surf2",
+    "variant_of": "Surf",
+    "desc_key": "ABILITY_SURF2_DESC",
+    "description": "A water spell that deals more damage and knockback in a larger area.",
+    "target": {
+      "max_aoe": "3",
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "Bolt": {
+    "id": "Bolt",
+    "template": "spell",
+    "name_key": "ABILITY_BOLT_NAME",
+    "name": "Bolt",
+    "desc_key": "ABILITY_BOLT_DESC",
+    "description": "A lightning bolt that has a 25% chance to Stun.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".25"
+        ]
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Bolt2": {
+    "id": "Bolt2",
+    "variant_of": "Bolt",
+    "desc_key": "ABILITY_BOLT2_DESC",
+    "description": "A stronger lightning bolt that has a 50% chance to Stun.",
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".5"
+        ]
+      }
+    }
+  },
+  "Fireball": {
+    "id": "Fireball",
+    "template": "spell",
+    "name_key": "ABILITY_FIREBLAST_NAME",
+    "name": "Fire Blast",
+    "desc_key": "ABILITY_FIREBLAST_DESC",
+    "description": "A fireblast that inflicts Burn 2 in an area.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "3"
+    },
+    "graphics": {
+      "center_particle": "FireBlastMushroom",
+      "area_particle": "FireBlastSmall",
+      "delay": "5",
+      "palette": "6",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "2"
+      },
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    }
+  },
+  "Fireball2": {
+    "id": "Fireball2",
+    "variant_of": "Fireball",
+    "desc_key": "ABILITY_FIREBLAST2_DESC",
+    "description": "A more damaging fireblast that inflicts Burn 3 in an area.",
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Burn": "3"
+      }
+    }
+  },
+  "FreezeRay": {
+    "id": "FreezeRay",
+    "template": "spell",
+    "name_key": "ABILITY_FROSTBLAST_NAME",
+    "name": "Frost Blast",
+    "desc_key": "ABILITY_FROSTBLAST_DESC",
+    "description": "Shoot a blast of ice in a line that freezes the first unit it hits.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "max_aoe": "5",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "graphics": {
+      "animation": "mouthbeam",
+      "particle": "IceBlast",
+      "delay": "10"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Freeze": "1"
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "FreezeRay2": {
+    "id": "FreezeRay2",
+    "variant_of": "FreezeRay",
+    "desc_key": "ABILITY_FROSTBLAST2_DESC",
+    "description": "Shoot a blast of ice in a line that freezes every unit it hits.",
+    "target": {
+      "aoe_restrictions": "none"
+    }
+  },
+  "Blast": {
+    "id": "Blast",
+    "template": "spell",
+    "name_key": "ABILITY_ENERGYBLAST_NAME",
+    "name": "Energy Blast",
+    "desc_key": "ABILITY_ENERGYBLAST_DESC",
+    "description": "A high damage spell that hits a single target.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "animation": "createmagic"
+    },
+    "damage_instance": {
+      "damage": "10"
+    }
+  },
+  "Blast2": {
+    "id": "Blast2",
+    "variant_of": "Blast",
+    "desc_key": "ABILITY_ENERGYBLAST2_DESC",
+    "description": "A high damage spell that hits a single target and deals extra damage equal to your [img:int].",
+    "damage_instance": {
+      "damage": "10+int"
+    }
+  },
+  "MagicMissile": {
+    "id": "MagicMissile",
+    "template": "spell",
+    "name_key": "ABILITY_MAGICMISSILE_NAME",
+    "name": "Magic Missile",
+    "desc_key": "ABILITY_MAGICMISSILE_DESC",
+    "description": "Shoot an infinite-range projectile that can't miss.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "1",
+      "speed": "20",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "cant_miss": "true"
+    }
+  },
+  "MagicMissile2": {
+    "id": "MagicMissile2",
+    "variant_of": "MagicMissile",
+    "desc_key": "ABILITY_MAGICMISSILE2_DESC",
+    "description": "Shoot an infinite-range projectile that can't miss. Emit 3 Sparkles.",
+    "self_damage": {
+      "effects": {
+        "RandomMagicMissile": "1"
+      }
+    }
+  },
+  "WallOfFire": {
+    "id": "WallOfFire",
+    "template": "spell",
+    "name_key": "ABILITY_WALLOFFIRE_NAME",
+    "name": "Wall of Fire",
+    "desc_key": "ABILITY_WALLOFFIRE_DESC",
+    "description": "A fire spell that inflicts Burn 1 and spawns fires in a perpendicular line.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "10",
+      "aoe_mode": "perpline",
+      "min_aoe": "-10",
+      "max_aoe": "10"
+    },
+    "graphics": {
+      "particle": "FireSpin",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Burn": "1"
+      },
+      "elements": [
+        "Fire",
+        "Napalm"
+      ]
+    }
+  },
+  "WallOfFire2": {
+    "id": "WallOfFire2",
+    "variant_of": "WallOfFire",
+    "desc_key": "ABILITY_WALLOFFIRE2_DESC",
+    "description": "A fire spell that damages, inflicts Burn 3 and spawns fires in a perpendicular line.",
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "Burn": "3"
+      }
+    }
+  },
+  "HyperBeam": {
+    "id": "HyperBeam",
+    "template": "spell",
+    "name_key": "ABILITY_HYPERBEAM_NAME",
+    "name": "Hyper Beam",
+    "desc_key": "ABILITY_HYPERBEAM_DESC",
+    "description": "Target a tile. At the start of your next turn, unleash an extremely high damage mega beam on that tile.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "cantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "delayed_trigger": "true",
+      "max_aoe": "0",
+      "max_range": "6"
+    },
+    "graphics": {
+      "particle": "HyperBeam",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true",
+      "particle_mat": "shadow_occluded_spelldissolve",
+      "animation": "majormagic",
+      "prime_animation": "pointout"
+    },
+    "damage_instance": {
+      "damage": "25"
+    }
+  },
+  "HyperBeam2": {
+    "id": "HyperBeam2",
+    "variant_of": "HyperBeam",
+    "desc_key": "ABILITY_HYPERBEAM2_DESC",
+    "description": "Target a tile. At the start of your next turn, unleash an extremely high damage mega beam on that tile.",
+    "cost": {
+      "infcantrip": "true"
+    }
+  },
+  "MeteorStorm": {
+    "id": "MeteorStorm",
+    "template": "spell",
+    "name_key": "ABILITY_METEORSTORM_NAME",
+    "name": "Meteor Storm",
+    "desc_key": "ABILITY_METEORSTORM_DESC",
+    "description": "Summon meteors that hit random tiles in a large area. These meteors have a chance to stun, spawn fires, or leave rocks behind.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "max_aoe": "3",
+      "max_range": "5+level",
+      "aoe_chance": ".4+.2*level",
+      "knockback_mode": "zero",
+      "can_multihit": "true"
+    },
+    "graphics": {
+      "particle": "MeteorFall",
+      "animation": "floatingmagic",
+      "random_delay": [
+        "0,",
+        "120"
+      ]
+    },
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".10+.1*level"
+        ],
+        "SpawnFlames": [
+          "1,",
+          ".20+.1*level"
+        ],
+        "BounceRock": [
+          "1",
+          ".2"
+        ]
+      },
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "MeteorStorm2": {
+    "id": "MeteorStorm2",
+    "variant_of": "MeteorStorm",
+    "desc_key": "ABILITY_METEORSTORM2_DESC",
+    "description": "Summon meteors that hit random tiles in a larger area. These meteors have a chance to stun, spawn fires, or leave rocks behind.",
+    "target": {
+      "max_aoe": "4"
+    }
+  },
+  "MegaBlast": {
+    "id": "MegaBlast",
+    "template": "spell",
+    "name_key": "ABILITY_MEGABLAST_NAME",
+    "name": "Mega Blast",
+    "desc_key": "ABILITY_MEGABLAST_DESC",
+    "description": "Deal high damage in a cone.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "13"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "BigMagicMissileBlast",
+      "delay": "10"
+    },
+    "damage_instance": {
+      "damage": "15"
+    }
+  },
+  "MegaBlast2": {
+    "id": "MegaBlast2",
+    "variant_of": "MegaBlast",
+    "desc_key": "ABILITY_MEGABLAST2_DESC",
+    "description": "Deal high damage in a larger cone.",
+    "target": {
+      "max_aoe": "6"
+    }
+  },
+  "Slow": {
+    "id": "Slow",
+    "template": "spell",
+    "name_key": "ABILITY_CHILL_NAME",
+    "name": "Chill",
+    "desc_key": "ABILITY_CHILL_DESC",
+    "description": "Inflict Slow on a unit.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+2*level",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "IcePoof",
+      "animation": "blowFire"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Slow": "1"
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "Slow2": {
+    "id": "Slow2",
+    "variant_of": "Slow",
+    "desc_key": "ABILITY_CHILL2_DESC",
+    "description": "Inflict Slow on units in an area.",
+    "target": {
+      "max_aoe": "1"
+    }
+  },
+  "Enlarge": {
+    "id": "Enlarge",
+    "template": "spell",
+    "name_key": "ABILITY_ENLARGE_NAME",
+    "name": "Enlarge",
+    "desc_key": "ABILITY_ENLARGE_DESC",
+    "description": "Get big.",
+    "class": "Mage",
+    "cost": {
+      "mana": "10",
+      "infcantrip": "true",
+      "require_default_size": "true"
+    },
+    "target": {
+      "range_mode": "custom",
+      "custom_range": [
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "-1"
+        ],
+        [
+          "-1,",
+          "1"
+        ],
+        [
+          "-1,",
+          "-1"
+        ]
+      ],
+      "aoe_mode": "corner_square",
+      "restrictions": "aoe_must_be_displaceable",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "cant_miss": "true",
+      "effects": {
+        "Displace": "1",
+        "IgnoreSelf": "1"
+      }
+    },
+    "self_damage": {
+      "type": "none",
+      "damage": "0",
+      "effects": {
+        "Enlarge": "3"
+      }
+    }
+  },
+  "Enlarge2": {
+    "id": "Enlarge2",
+    "variant_of": "Enlarge",
+    "desc_key": "ABILITY_ENLARGE2_DESC",
+    "description": "Get big.",
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "WindSlash": {
+    "id": "WindSlash",
+    "template": "spell",
+    "name_key": "ABILITY_WINDSLASH_NAME",
+    "name": "Wind Slash",
+    "desc_key": "ABILITY_WINDSLASH_DESC",
+    "description": "A wind spell that hits an entire line with Knockback 1.",
+    "class": "Mage",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "orientation"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "blowFire"
+    },
+    "damage_instance": {
+      "damage": "level",
+      "knockback": "level",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "WindSlash2": {
+    "id": "WindSlash2",
+    "variant_of": "WindSlash",
+    "desc_key": "ABILITY_WINDSLASH2_DESC",
+    "description": "A wind spell that hits a wide line with Knockback 2.",
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "2,",
+          "1"
+        ],
+        ",",
+        [
+          "3,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "5,",
+          "1"
+        ],
+        ",",
+        [
+          "6,",
+          "1"
+        ],
+        ",",
+        [
+          "7,",
+          "1"
+        ],
+        ",",
+        [
+          "8,",
+          "1"
+        ],
+        ",",
+        [
+          "9,",
+          "1"
+        ],
+        ",",
+        [
+          "10,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "3,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "5,",
+          "0"
+        ],
+        ",",
+        [
+          "6,",
+          "0"
+        ],
+        ",",
+        [
+          "7,",
+          "0"
+        ],
+        ",",
+        [
+          "8,",
+          "0"
+        ],
+        ",",
+        [
+          "9,",
+          "0"
+        ],
+        ",",
+        [
+          "10,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ],
+        ",",
+        [
+          "2,-1"
+        ],
+        ",",
+        [
+          "3,-1"
+        ],
+        ",",
+        [
+          "4,-1"
+        ],
+        ",",
+        [
+          "5,-1"
+        ],
+        ",",
+        [
+          "6,-1"
+        ],
+        ",",
+        [
+          "7,-1"
+        ],
+        ",",
+        [
+          "8,-1"
+        ],
+        ",",
+        [
+          "9,-1"
+        ],
+        ",",
+        [
+          "10,-1"
+        ]
+      ]
+    }
+  },
+  "Warp": {
+    "id": "Warp",
+    "template": "teleport",
+    "name_key": "ABILITY_WARP_NAME",
+    "name": "Warp",
+    "desc_key": "ABILITY_WARP_DESC",
+    "description": "Teleport diagonally any distance.",
+    "class": "Mage",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20",
+      "range_mode": "diagcross",
+      "range_considers_character_size": "false"
+    }
+  },
+  "Warp2": {
+    "id": "Warp2",
+    "variant_of": "Warp",
+    "desc_key": "ABILITY_WARP2_DESC",
+    "description": "Teleport diagonally any distance.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    }
+  },
+  "MageTeleport": {
+    "id": "MageTeleport",
+    "template": "teleport",
+    "name_key": "ABILITY_TELEPORTMAGE_NAME",
+    "name": "Teleport",
+    "desc_key": "ABILITY_TELEPORTMAGE_DESC",
+    "description": "Teleport to any tile.",
+    "class": "Mage",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "MageTeleport2": {
+    "id": "MageTeleport2",
+    "variant_of": "MageTeleport",
+    "desc_key": "ABILITY_TELEPORTMAGE2_DESC",
+    "description": "Teleport to any tile.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    }
+  },
+  "MageSwap": {
+    "id": "MageSwap",
+    "template": "swap",
+    "name_key": "ABILITY_SWITCH_NAME",
+    "name": "Switch",
+    "desc_key": "ABILITY_SWITCH_DESC",
+    "description": "Switch positions with any unit.",
+    "class": "Mage",
+    "animate_name": "true",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "MageSwap2": {
+    "id": "MageSwap2",
+    "variant_of": "MageSwap",
+    "desc_key": "ABILITY_SWITCH2_DESC",
+    "description": "Switch positions with any unit.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Absorb": {
+    "id": "Absorb",
+    "template": "self_buff",
+    "name_key": "ABILITY_ABSORB_NAME",
+    "name": "Absorb",
+    "desc_key": "ABILITY_ABSORB_DESC",
+    "description": "Spend all of your mana and heal that much HP.",
+    "class": "Mage",
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "X_is": "current_mana"
+    },
+    "graphics": {
+      "animation": "bodypulse",
+      "particle": "HealMed"
+    },
+    "damage_instance": {
+      "heal": "X",
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "Absorb2": {
+    "id": "Absorb2",
+    "variant_of": "Absorb",
+    "desc_key": "ABILITY_ABSORB2_DESC",
+    "description": "Spend all of your mana and heal that much HP. Excess healing is converted into [img:shield].",
+    "damage_instance": {
+      "effects": {
+        "OverHealToShield": "1"
+      }
+    }
+  },
+  "IceArmor": {
+    "id": "IceArmor",
+    "template": "self_buff",
+    "name_key": "ABILITY_ICEARMOR_NAME",
+    "name": "Ice Armor",
+    "desc_key": "ABILITY_ICEARMOR_DESC",
+    "description": "-",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "IceArmor": "1"
+      }
+    }
+  },
+  "IceArmor2": {
+    "id": "IceArmor2",
+    "variant_of": "IceArmor",
+    "desc_key": "ABILITY_ICEARMOR2_DESC",
+    "description": "-",
+    "damage_instance": {
+      "effects": {
+        "NonStackingDivineShield": "1"
+      }
+    }
+  },
+  "FireArmor": {
+    "id": "FireArmor",
+    "template": "self_buff",
+    "name_key": "ABILITY_FIREARMOR_NAME",
+    "name": "Fire Armor",
+    "desc_key": "ABILITY_FIREARMOR_DESC",
+    "description": "-",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "FireArmor": "1"
+      }
+    }
+  },
+  "FireArmor2": {
+    "id": "FireArmor2",
+    "template": "self_buff",
+    "name_key": "ABILITY_FIREARMOR_NAME",
+    "name": "Fire Armor",
+    "desc_key": "ABILITY_FIREARMOR2_DESC",
+    "description": "-",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "FireArmor2": "1",
+        "Shield": "3"
+      }
+    }
+  },
+  "ManaMeld": {
+    "id": "ManaMeld",
+    "template": "spell",
+    "name_key": "ABILITY_MANAMELD_NAME",
+    "name": "Mana Meld",
+    "desc_key": "ABILITY_MANAMELD_DESC",
+    "description": "Give all of your mana to a unit in range 3.",
+    "class": "Mage",
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "X_is": "current_mana",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "createmagic"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ManaGain": "X"
+      }
+    }
+  },
+  "ManaMeld2": {
+    "id": "ManaMeld2",
+    "variant_of": "ManaMeld",
+    "desc_key": "ABILITY_MANAMELD2_DESC",
+    "description": "Give all of your mana plus 2 to a unit.",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "X+2"
+      }
+    }
+  },
+  "Inspire": {
+    "id": "Inspire",
+    "template": "spell",
+    "name_key": "ABILITY_INSPIRE_NAME",
+    "name": "Inspire",
+    "desc_key": "ABILITY_INSPIRE_DESC",
+    "description": "Give 2 mana to a unit.",
+    "class": "Mage",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "6",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ManaGain": "2"
+      }
+    }
+  },
+  "Inspire2": {
+    "id": "Inspire2",
+    "variant_of": "Inspire",
+    "desc_key": "ABILITY_INSPIRE2_DESC",
+    "description": "Give 4 mana to a unit.",
+    "damage_instance": {
+      "effects": {
+        "ManaGain": "4"
+      }
+    }
+  },
+  "Telefrag": {
+    "id": "Telefrag",
+    "template": "teleport",
+    "name_key": "ABILITY_TELEFRAG_NAME",
+    "name": "Telefrag",
+    "desc_key": "ABILITY_TELEFRAG_DESC",
+    "description": "Teleport onto a unit, dealing damage to yourself and that unit.",
+    "class": "Mage",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_have_animate_character"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell",
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "5"
+    }
+  },
+  "Telefrag2": {
+    "id": "Telefrag2",
+    "variant_of": "Telefrag",
+    "desc_key": "ABILITY_TELEFRAG2_DESC",
+    "description": "Teleport onto a unit, dealing damage to that unit.",
+    "damage_instance": {
+      "damage": "5"
+    },
+    "self_damage": {
+      "damage": "0"
+    }
+  },
+  "ChaosTeleport": {
+    "id": "ChaosTeleport",
+    "template": "teleport",
+    "name_key": "ABILITY_CHAOSTELEPORT_NAME",
+    "name": "Chaos Teleport",
+    "desc_key": "ABILITY_CHAOSTELEPORT_DESC",
+    "description": "Teleport to a random tile.",
+    "class": "Mage",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_range": "20"
+    }
+  },
+  "ChaosTeleport2": {
+    "id": "ChaosTeleport2",
+    "variant_of": "ChaosTeleport",
+    "desc_key": "ABILITY_CHAOSTELEPORT2_DESC",
+    "description": "Teleport to a random tile. Deal damage to units adjacent to the tile you teleport to.",
+    "self_damage": {
+      "effects": {
+        "SplashDamage": "1"
+      }
+    }
+  },
+  "CryoHeal": {
+    "id": "CryoHeal",
+    "template": "spell",
+    "name_key": "ABILITY_CRYOHEAL_NAME",
+    "name": "Cryo-Heal",
+    "desc_key": "ABILITY_CRYOHEAL_DESC",
+    "description": "Heal and inflict Freeze 1 on a unit in range 3.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "0",
+      "max_range": "3"
+    },
+    "graphics": {
+      "affected_particle": "HealMed",
+      "particle": "IcePoof",
+      "animation": "slowPawMagic"
+    },
+    "damage_instance": {
+      "heal": "10",
+      "type": "spell",
+      "effects": {
+        "Freeze": "1"
+      },
+      "elements": [
+        "Ice",
+        "Holy"
+      ]
+    }
+  },
+  "CryoHeal2": {
+    "id": "CryoHeal2",
+    "variant_of": "CryoHeal",
+    "desc_key": "ABILITY_CRYOHEAL2_DESC",
+    "description": "Heal and inflict Freeze 1 on any unit.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "0",
+      "max_range": "20"
+    }
+  },
+  "Gust": {
+    "id": "Gust",
+    "template": "spell",
+    "name_key": "ABILITY_GUST_NAME",
+    "name": "Gust",
+    "desc_key": "ABILITY_GUST_DESC",
+    "description": "Knock back each unit adjacent to a chosen tile 1 space.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "max_range": "5"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "blowFire"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Gust2": {
+    "id": "Gust2",
+    "variant_of": "Gust",
+    "desc_key": "ABILITY_GUST2_DESC",
+    "description": "Knock back each unit adjacent to a chosen tile 3 spaces, at infinite range.",
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "Blizzard": {
+    "id": "Blizzard",
+    "template": "spell",
+    "name_key": "ABILITY_BLIZZARD_NAME",
+    "name": "Blizzard",
+    "desc_key": "ABILITY_BLIZZARD_DESC",
+    "description": "Deal ice damage in a wide line with Knockback 1 that inflicts Slow and has a 15% chance to freeze.",
+    "class": "Mage",
+    "cost": {
+      "mana": "12",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "2,",
+          "1"
+        ],
+        ",",
+        [
+          "3,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "5,",
+          "1"
+        ],
+        ",",
+        [
+          "6,",
+          "1"
+        ],
+        ",",
+        [
+          "7,",
+          "1"
+        ],
+        ",",
+        [
+          "8,",
+          "1"
+        ],
+        ",",
+        [
+          "9,",
+          "1"
+        ],
+        ",",
+        [
+          "10,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "3,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "5,",
+          "0"
+        ],
+        ",",
+        [
+          "6,",
+          "0"
+        ],
+        ",",
+        [
+          "7,",
+          "0"
+        ],
+        ",",
+        [
+          "8,",
+          "0"
+        ],
+        ",",
+        [
+          "9,",
+          "0"
+        ],
+        ",",
+        [
+          "10,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ],
+        ",",
+        [
+          "2,-1"
+        ],
+        ",",
+        [
+          "3,-1"
+        ],
+        ",",
+        [
+          "4,-1"
+        ],
+        ",",
+        [
+          "5,-1"
+        ],
+        ",",
+        [
+          "6,-1"
+        ],
+        ",",
+        [
+          "7,-1"
+        ],
+        ",",
+        [
+          "8,-1"
+        ],
+        ",",
+        [
+          "9,-1"
+        ],
+        ",",
+        [
+          "10,-1"
+        ]
+      ],
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "orientation"
+    },
+    "graphics": {
+      "particle": "IcePoof",
+      "animation": "slowPawMagic"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "knockback": "1",
+      "effects": {
+        "Slow": "1",
+        "Freeze": [
+          "1,",
+          ".15"
+        ]
+      },
+      "elements": [
+        "Wind",
+        "Ice"
+      ]
+    }
+  },
+  "Blizzard2": {
+    "id": "Blizzard2",
+    "variant_of": "Blizzard",
+    "desc_key": "ABILITY_BLIZZARD2_DESC",
+    "description": "Deal more ice damage in a wide line with Knockback 10 that inflicts Slow and has a 25% chance to freeze.",
+    "damage_instance": {
+      "damage": "8",
+      "knockback": "10",
+      "effects": {
+        "Freeze": [
+          "1,",
+          ".25"
+        ]
+      }
+    }
+  },
+  "Inferno": {
+    "id": "Inferno",
+    "template": "spell",
+    "name_key": "ABILITY_INFERNO_NAME",
+    "name": "Inferno",
+    "desc_key": "ABILITY_INFERNO_DESC",
+    "description": "Deal fire damage and inflict Burn 3 to all units in a large circle around you.",
+    "class": "Mage",
+    "cost": {
+      "mana": "12",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "circle",
+      "max_aoe": "2",
+      "min_aoe": "1"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "FireBlastMedium",
+      "palette": "6",
+      "delay": "3"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "Burn": "3"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Inferno2": {
+    "id": "Inferno2",
+    "variant_of": "Inferno",
+    "desc_key": "ABILITY_INFERNO2_DESC",
+    "description": "Deal more fire damage and inflict Burn 5 to all units in a large circle around you.",
+    "damage_instance": {
+      "damage": "8",
+      "effects": {
+        "Burn": "5"
+      }
+    }
+  },
+  "Thunderburst": {
+    "id": "Thunderburst",
+    "template": "spell",
+    "name_key": "ABILITY_THUNDERBURST_NAME",
+    "name": "Thunderburst",
+    "desc_key": "ABILITY_THUNDERBURST_DESC",
+    "description": "Shoot lightning bolts in eight directions with a 15% chance to Stun.",
+    "class": "Mage",
+    "cost": {
+      "mana": "12",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "8cross",
+      "max_aoe": "10",
+      "min_aoe": "1"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "delay": "5"
+    },
+    "damage_instance": {
+      "damage": "7",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".15"
+        ]
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Thunderburst2": {
+    "id": "Thunderburst2",
+    "variant_of": "Thunderburst",
+    "desc_key": "ABILITY_THUNDERBURST2_DESC",
+    "description": "Shoot stronger lightning bolts in eight directions with a 25% chance to Stun.",
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".25"
+        ]
+      }
+    }
+  },
+  "DealWithTheDevil": {
+    "id": "DealWithTheDevil",
+    "template": "self_buff",
+    "name_key": "ABILITY_DEALWITHTHEDEVIL_NAME",
+    "name": "Deal with the Devil",
+    "desc_key": "ABILITY_DEALWITHTHEDEVIL_DESC",
+    "description": "Injure yourself, then restore 15 mana.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "RandomInjury": "1",
+        "ManaGain": "15"
+      }
+    }
+  },
+  "DealWithTheDevil2": {
+    "id": "DealWithTheDevil2",
+    "template": "self_buff",
+    "name_key": "ABILITY_DEALWITHTHEDEVIL_NAME",
+    "name": "Deal with the Devil",
+    "desc_key": "ABILITY_DEALWITHTHEDEVIL2_DESC",
+    "description": "Injure yourself, then restore all your mana.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "RandomInjury": "1",
+        "FillMana": "1"
+      }
+    }
+  },
+  "ForbiddenFlame": {
+    "id": "ForbiddenFlame",
+    "template": "spell",
+    "name_key": "ABILITY_FORBIDDENFLAME_NAME",
+    "name": "Forbidden Flame",
+    "desc_key": "ABILITY_FORBIDDENFLAME_DESC",
+    "description": "Damage all enemies and burn the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "exclude_allies"
+    },
+    "graphics": {
+      "particle": "FireBlastMedium",
+      "palette": "6",
+      "delay": "3",
+      "animation": "floatingmagic"
+    },
+    "damage_instance": {
+      "damage": "7",
+      "effects": {
+        "Burn": "4"
+      },
+      "elements": [
+        "Fire",
+        "Napalm"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences",
+        "Burn": "4"
+      }
+    }
+  },
+  "ForbiddenFlame2": {
+    "id": "ForbiddenFlame2",
+    "variant_of": "ForbiddenFlame",
+    "desc_key": "ABILITY_FORBIDDENFLAME2_DESC",
+    "description": "Heavily damage all enemies and burn the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "damage": "15",
+      "effects": {
+        "Burn": "8"
+      }
+    }
+  },
+  "ForbiddenFlood": {
+    "id": "ForbiddenFlood",
+    "template": "spell",
+    "name_key": "ABILITY_FORBIDDENFLOOD_NAME",
+    "name": "Forbidden Flood",
+    "desc_key": "ABILITY_FORBIDDENFLOOD_DESC",
+    "description": "Knock back and damage all enemies, then flood the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "false",
+      "knockback_mode": "orientation",
+      "prioritize_dont_change_direction": "true"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "animation": "attack",
+      "visual_delay_but_simultaneous_damage": "50",
+      "delay_from_map_edge": "true",
+      "delay": "5"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "knockback": "10",
+      "effects": {
+        "ChangeTile": "WaterTile",
+        "Conditional_Ally": {
+          "KnockbackDamageImmuneUntilSettled": "1",
+          "OverrideDamage": "0"
+        }
+      },
+      "elements": [
+        "Water"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    }
+  },
+  "ForbiddenFlood2": {
+    "id": "ForbiddenFlood2",
+    "variant_of": "ForbiddenFlood",
+    "desc_key": "ABILITY_FORBIDDENFLOOD2_DESC",
+    "description": "Knock back and damage all enemies, heal all allies, then flood the entire map. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "damage": "10",
+      "knockback": "10",
+      "effects": {
+        "Conditional_Ally": {
+          "OverrideDamage": "-10"
+        }
+      }
+    }
+  },
+  "/*WaterSphere": {
+    "id": "/*WaterSphere",
+    "template": "spell",
+    "name_key": "ABILITY_WATERSPHERE_NAME",
+    "name": "Whirlpool",
+    "desc_key": "ABILITY_WATERSPHERE_DESC",
+    "description": "Create a whirlpool that spins units and inflicts Confusion on them.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "5"
+    },
+    "graphics": {
+      "particle": "none",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Confusion": "1",
+        "ChangeTile": "WaterTile"
+      },
+      "elements": [
+        "Water"
+      ]
+    },
+    "splash_damage": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "WaterTile"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "WaterSphere2": {
+    "id": "WaterSphere2",
+    "variant_of": "WaterSphere",
+    "desc_key": "ABILITY_WATERSPHERE2_DESC",
+    "description": "Create a larger whirlpool that spins units and inflicts Confusion on them.",
+    "target": {
+      "max_aoe": "3",
+      "max_range": "6"
+    }
+  },
+  "WaterSphere": {
+    "id": "WaterSphere",
+    "template": "spell",
+    "name_key": "ABILITY_WATERSPHERE_NAME",
+    "name": "Whirlpool",
+    "desc_key": "ABILITY_WATERSPHERE_DESC",
+    "description": "Create a whirlpool that spins units and inflicts Confusion on them.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "4",
+      "knockback_mode": "target_to_tile",
+      "knockback_modifier": "rotate_cw"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "animation": "majormagic"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "effects": {
+        "Confusion": "1",
+        "ChangeTile": "WaterTile_Current",
+        "TurnRight": "1"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "ChainLightning": {
+    "id": "ChainLightning",
+    "template": "spell",
+    "name_key": "ABILITY_CHAINLIGHTNING_NAME",
+    "name": "Chain Lightning",
+    "desc_key": "ABILITY_CHAINLIGHTNING_DESC",
+    "description": "Shoot lightning that chains randomly to other nearby units up to 2 tiles away.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "4"
+    },
+    "graphics": {
+      "particle": "none",
+      "use_projectile": "true",
+      "projectile": "LightningBallProjectile",
+      "lob_height": "1",
+      "speed": "20"
+    },
+    "damage_instance": {
+      "damage": "4",
+      "effects": {
+        "ArcLightning": {
+          "stacks": "100",
+          "enemies_only": "false",
+          "max_distance": "2"
+        },
+        "VisualFX": "WaterConduct"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "ChainLightning2": {
+    "id": "ChainLightning2",
+    "variant_of": "ChainLightning",
+    "desc_key": "ABILITY_CHAINLIGHTNING2_DESC",
+    "description": "Shoot lightning that chains randomly to other nearby enemies up to 3 tiles away.",
+    "damage_instance": {
+      "damage": "4",
+      "effects": {
+        "ArcLightning": {
+          "stacks": "100",
+          "enemies_only": "true",
+          "max_distance": "3"
+        },
+        "VisualFX": "WaterConduct"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Shatter": {
+    "id": "Shatter",
+    "template": "melee_attack",
+    "name_key": "ABILITY_SHATTER_NAME",
+    "name": "Shatter",
+    "desc_key": "ABILITY_SHATTER_DESC",
+    "description": "A melee attack that instantly kills frozen units. If used on a boss, it instead removes Frozen to deal 15 damage and inflict Slow 2.",
+    "class": "Mage",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "Conditional_Boss": {
+          "Conditional_HasStatus": {
+            "status": "Freeze",
+            "Slow": "2"
+          }
+        },
+        "Shatter": "15"
+      }
+    }
+  },
+  "Shatter2": {
+    "id": "Shatter2",
+    "template": "spell",
+    "name_key": "ABILITY_SHATTER_NAME",
+    "name": "Shatter",
+    "desc_key": "ABILITY_SHATTER2_DESC",
+    "description": "A spell that instantly kills frozen units in an area. If used on a boss, it instead removes Frozen to deal 15 damage and inflict Slow 2.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "3"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "Conditional_Boss": {
+          "Conditional_HasStatus": {
+            "status": "Freeze",
+            "Slow": "2"
+          }
+        },
+        "Shatter": "15"
+      }
+    }
+  },
+  "ForbiddenFulmination": {
+    "id": "ForbiddenFulmination",
+    "template": "spell",
+    "name_key": "ABILITY_FORBIDDENFULMINATION_NAME",
+    "name": "Forbidden Fulmination",
+    "desc_key": "ABILITY_FORBIDDENFULMINATION_DESC",
+    "description": "Strike all enemies with lightning, inflicting Stun. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "enemies_only"
+    },
+    "graphics": {
+      "particle": "Bolt"
+    },
+    "damage_instance": {
+      "damage": "6",
+      "effects": {
+        "Stun": "1"
+      },
+      "elements": [
+        "Electric"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    }
+  },
+  "ForbiddenFulmination2": {
+    "id": "ForbiddenFulmination2",
+    "variant_of": "ForbiddenFulmination",
+    "desc_key": "ABILITY_FORBIDDENFULMINATION2_DESC",
+    "description": "Strike all enemies with lightning, inflicting Stun 2. There will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "Stun": "2"
+      }
+    }
+  },
+  "FireBolt": {
+    "id": "FireBolt",
+    "template": "spell",
+    "name_key": "ABILITY_FIREBOLT_NAME",
+    "name": "Firebolt",
+    "desc_key": "ABILITY_FIREBOLT_DESC",
+    "description": "Cast a fire/electric spell that inflicts Burn 1 and has a 15% chance to inflict Stun in an X shaped area.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_aoe": "1",
+      "max_range": "3",
+      "aoe_mode": "diagcross"
+    },
+    "graphics": {
+      "particle": "Bolt"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "1",
+        "Stun": [
+          "1",
+          ".15"
+        ]
+      },
+      "elements": [
+        "Fire",
+        "Electric"
+      ]
+    }
+  },
+  "FireBolt2": {
+    "id": "FireBolt2",
+    "variant_of": "FireBolt",
+    "desc_key": "ABILITY_FIREBOLT2_DESC",
+    "description": "Cast a fire/electric spell that inflicts Burn 2 and has a 30% chance to inflict Stun in an X shaped area.",
+    "target": {
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Burn": "2",
+        "Stun": [
+          "1",
+          ".30"
+        ]
+      }
+    }
+  },
+  "IcicleTaser": {
+    "id": "IcicleTaser",
+    "template": "straightshot_attack",
+    "name_key": "ABILITY_ICICLETASER_NAME",
+    "name": "Icicle Zapper",
+    "desc_key": "ABILITY_ICICLETASER_DESC",
+    "description": "Shoot an ice/electric bolt in a straight line. It inflicts Slow 2, has a 25% chance to Stun and a 25% chance to Freeze.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "MagicSpikeProjectile"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage",
+      "type": "spell",
+      "effects": {
+        "Slow": "2",
+        "Stun": [
+          "1",
+          ".25"
+        ],
+        "Freeze": [
+          "1",
+          ".25"
+        ]
+      },
+      "elements": [
+        "Ice",
+        "Electric"
+      ]
+    }
+  },
+  "IcicleTaser2": {
+    "id": "IcicleTaser2",
+    "variant_of": "IcicleTaser",
+    "desc_key": "ABILITY_ICICLETASER2_DESC",
+    "description": "Shoot 2 ice/electric bolts in a straight line. They inflict Slow 2, have a 25% chance to Stun and a 25% chance to Freeze."
+  },
+  "FreezerBurn": {
+    "id": "FreezerBurn",
+    "template": "spell",
+    "name_key": "ABILITY_FREEZERBURN_NAME",
+    "name": "Freezer Burn",
+    "desc_key": "ABILITY_FREEZERBURN_DESC",
+    "description": "Cast a fire/ice spell that inflicts Burn 2, Slow 2 and Knockback 2 on all units around you.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "2",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "IcePoof"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "knockback": "2",
+      "effects": {
+        "Burn": "2",
+        "Slow": "2"
+      },
+      "elements": [
+        "Fire",
+        "Ice"
+      ]
+    }
+  },
+  "FreezerBurn2": {
+    "id": "FreezerBurn2",
+    "variant_of": "FreezerBurn",
+    "desc_key": "ABILITY_FREEZERBURN2_DESC",
+    "description": "Cast a fire/ice spell that inflicts Burn 3, Slow 3 and Knockback 3 on all units around you in a larger area.",
+    "target": {
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "3",
+        "Slow": "3"
+      }
+    }
+  },
+  "Corrupt": {
+    "id": "Corrupt",
+    "template": "self_buff",
+    "name_key": "ABILITY_CORRUPT_NAME",
+    "name": "Corrupt",
+    "desc_key": "ABILITY_CORRUPT_DESC",
+    "description": "Injure yourself, then gain +3 Magic Damage.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "selfHarm"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell_cost",
+      "cant_miss": "true",
+      "effects": {
+        "RandomInjury": "1",
+        "SpellDamageUp": "3"
+      }
+    }
+  },
+  "Corrupt2": {
+    "id": "Corrupt2",
+    "variant_of": "Corrupt",
+    "desc_key": "ABILITY_CORRUPT2_DESC",
+    "description": "Injure yourself, then gain +3 Magic Damage and emit a Sparkle.",
+    "damage_instance": {
+      "effects": {
+        "RandomMagicMissile": "1"
+      }
+    }
+  },
+  "Jolt": {
+    "id": "Jolt",
+    "template": "spell",
+    "name_key": "ABILITY_JOLT_NAME",
+    "name": "Jolt",
+    "desc_key": "ABILITY_JOLT_DESC",
+    "description": "Shoot a lightning bolt that deals 1 damage and knocks the unit it hits 3 tiles in the direction it's facing.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "3"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "3",
+      "effects": {
+        "KnockbackDirectionIsFacingDirection": "1"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Jolt2": {
+    "id": "Jolt2",
+    "variant_of": "Jolt",
+    "desc_key": "ABILITY_JOLT2_DESC",
+    "description": "Shoot a lightning bolt that deals 2 damage and knocks the unit it hits 6 tiles in the direction it's facing.",
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "knockback": "6"
+    }
+  },
+  "Smolder": {
+    "id": "Smolder",
+    "template": "spell",
+    "name_key": "ABILITY_SMOLDER_NAME",
+    "name": "Smolder",
+    "desc_key": "ABILITY_SMOLDER_DESC",
+    "description": "Inflict Burn 1 and +1 [img:spd] to a unit in range.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "5"
+    },
+    "graphics": {
+      "particle": "BurnTrigger",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Burn": "1",
+        "SpeedUp": "1"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "Smolder2": {
+    "id": "Smolder2",
+    "variant_of": "Smolder",
+    "desc_key": "ABILITY_SMOLDER2_DESC",
+    "description": "Inflict Burn 1 and +1 [img:spd] to any unit.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "FireSurge": {
+    "id": "FireSurge",
+    "template": "spell",
+    "name_key": "ABILITY_FIRESURGE_NAME",
+    "name": "Fire Surge",
+    "desc_key": "ABILITY_FIRESURGE_DESC",
+    "description": "A fire spell that increases its range, area, damage, and Burn by 1 every turn.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "X/2",
+      "max_range": "X",
+      "X_is": "turn_count"
+    },
+    "graphics": {
+      "particle": "FireBlastSmall"
+    },
+    "damage_instance": {
+      "raw_damage": "X",
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "X",
+          "Burn": "X"
+        }
+      },
+      "elements": [
+        "Fire"
+      ]
+    },
+    "bonus_passives": {
+      "XIsRampAndReset": "0"
+    }
+  },
+  "FireSurge2": {
+    "id": "FireSurge2",
+    "variant_of": "FireSurge",
+    "desc_key": "ABILITY_FIRESURGE2_DESC",
+    "description": "A fire spell that increases its range, area, damage, and Burn by 1 every turn. Starts stronger.",
+    "target": {
+      "max_aoe": "(X+1)/2",
+      "max_range": "X+1",
+      "X_is": "turn_count"
+    },
+    "damage_instance": {
+      "raw_damage": "X+1",
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "X+1",
+          "Burn": "X+1"
+        }
+      }
+    }
+  },
+  "IceSurge": {
+    "id": "IceSurge",
+    "template": "spell",
+    "name_key": "ABILITY_ICESURGE_NAME",
+    "name": "Ice Surge",
+    "desc_key": "ABILITY_ICESURGE_DESC",
+    "description": "An ice spell that increases its range and Slow every turn. At 2 turns, it gains Immobilize 1. At 3 turns, it gains Freeze 1.\n[s:.7](Current turns: {v0})[/s]",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "X",
+      "X_is": "turn_count"
+    },
+    "graphics": {
+      "particle": "IcePoof"
+    },
+    "damage_instance": {
+      "raw_damage": "0",
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "X-2",
+          "Freeze": "1"
+        }
+      },
+      "elements": [
+        "Ice"
+      ]
+    }
+  },
+  "IceSurge2": {
+    "id": "IceSurge2",
+    "variant_of": "IceSurge",
+    "desc_key": "ABILITY_ICESURGE2_DESC",
+    "description": "An ice spell that increases its range, damage, and Slow every turn. At 2 turns, it gains Immobilize 1. At 3 turns, it gains Freeze 1.\n[s:.7](Current turns: {v0})[/s]",
+    "damage_instance": {
+      "raw_damage": "X"
+    }
+  },
+  "LightningSurge": {
+    "id": "LightningSurge",
+    "template": "spell",
+    "name_key": "ABILITY_LIGHTNINGSURGE_NAME",
+    "name": "Lightning Surge",
+    "desc_key": "ABILITY_LIGHTNINGSURGE_DESC",
+    "description": "An electric spell that increases its range and damage by 2 every turn, and its stun chance by 10%.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "X*2",
+      "X_is": "turn_count"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "raw_damage": "X*2",
+      "effects": {
+        "Stun": [
+          "1",
+          "X*.1"
+        ]
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "LightningSurge2": {
+    "id": "LightningSurge2",
+    "variant_of": "LightningSurge",
+    "desc_key": "ABILITY_LIGHTNINGSURGE2_DESC",
+    "description": "An electric spell that increases its range and damage by 3 every turn, and its stun chance by 10%.",
+    "target": {
+      "max_range": "X*3"
+    },
+    "damage_instance": {
+      "raw_damage": "X*3"
+    }
+  },
+  "Creshendo": {
+    "id": "Creshendo",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_CRESHENDO_NAME",
+    "name": "Crescendo",
+    "desc_key": "ABILITY_CRESHENDO_DESC",
+    "description": "This spell gains +1 damage, range and area, and -1 mana cost each time you cast a spell.\nThis spell resets after you cast it.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6-X",
+      "X_cant_be_zero": "true"
+    },
+    "target": {
+      "max_aoe": "X*.5",
+      "max_range": "X",
+      "min_range": "0",
+      "X_is": "custom"
+    },
+    "graphics": {
+      "projectile": "MagicMissileProjectileSmall",
+      "lob_height": "1",
+      "speed": "20"
+    },
+    "damage_instance": {
+      "raw_damage": "X",
+      "type": "spell",
+      "effects": {
+        "VisualFXTile": "MagicMissleBlast"
+      }
+    },
+    "bonus_passives": {
+      "XIsSpellStormRampAndReset": "0"
+    }
+  },
+  "Creshendo2": {
+    "id": "Creshendo2",
+    "variant_of": "Creshendo",
+    "desc_key": "ABILITY_CRESHENDO2_DESC",
+    "description": "This spell gains +1 damage, range and area, and -1 mana cost each time you cast a spell.\nThis spell loses half its boosts after you cast it.",
+    "bonus_passives": {
+      "XIsSpellStormRampAndReset": {
+        "stacks": "0",
+        "reset_percent": "50%"
+      }
+    }
+  },
+  "Divide": {
+    "id": "Divide",
+    "template": "self_buff",
+    "name_key": "ABILITY_DIVIDE_NAME",
+    "name": "Divide",
+    "desc_key": "ABILITY_DIVIDE_DESC",
+    "description": "Lose Damage equal to half of your basic attack's damage, rounded up. For the rest of the battle, you can attack an extra time each turn.\n[s:.7](This can't be cast if your basic attack's damage is 1 or less.)[/s]",
+    "class": "Mage",
+    "keyword_tooltips": {
+      "DamageUp": "-1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3",
+      "requires_attack_damage_threshold": "2"
+    },
+    "target": {
+      "X_is": "basic_attack_damage"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "damage_instance": {
+      "effects": {
+        "ExtraBasicAttacks_Status": "1",
+        "DamageUp": "(-ceil(abs(X/2)))"
+      }
+    }
+  },
+  "Divide2": {
+    "id": "Divide2",
+    "variant_of": "Divide",
+    "desc_key": "ABILITY_DIVIDE2_DESC",
+    "description": "Lose Damage equal to 1/3rd of your basic attack's damage, rounded up. For the rest of the battle, you can attack an extra time each turn.\n[s:.7](This can't be cast if your basic attack's damage is 1 or less.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "DamageUp": "(-ceil(abs(X/3)))"
+      }
+    }
+  },
+  "ForbiddenFrost": {
+    "id": "ForbiddenFrost",
+    "template": "spell",
+    "name_key": "ABILITY_FORBIDDENFROST_NAME",
+    "name": "Forbidden Frost",
+    "desc_key": "ABILITY_FORBIDDENFROST_DESC",
+    "description": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 5 Damage to enemies and heal each ally 5 HP.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "max_range": "20",
+      "min_range": "1",
+      "max_aoe": "20",
+      "min_aoe": "1",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "exclude_direct_target"
+    },
+    "graphics": {
+      "particle": "IcePoof",
+      "animation": "floatingmagic"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Conditional_Ally": {},
+        "StatusGroup": {
+          "Freeze": "2",
+          "DamageOrHealConditionally": "1"
+        }
+      },
+      "elements": [
+        "Ice"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "GainDisorderFromPool_PostCast": "forbidden_spell_consequences"
+      }
+    }
+  },
+  "ForbiddenFrost2": {
+    "id": "ForbiddenFrost2",
+    "variant_of": "ForbiddenFrost",
+    "desc_key": "ABILITY_FORBIDDENFROST2_DESC",
+    "description": "Apply Freeze 2 to each unit except for yourself and 1 other chosen unit.\nDeal 10 Damage to enemies and fully heal each ally.\nThere will be permanent consequences for casting this spell…\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "Conditional_Ally": {
+          "OverrideDamage": "0",
+          "FullHeal": "1"
+        }
+      }
+    }
+  },
+  "BlackMagic": {
+    "id": "BlackMagic",
+    "template": "self_buff",
+    "name_key": "ABILITY_BLACKMAGIC_NAME",
+    "name": "Black Magic",
+    "desc_key": "ABILITY_BLACKMAGIC_DESC",
+    "description": "Drop to 1 HP. Gain mana equal to the HP lost.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "X_is": "current_health"
+    },
+    "graphics": {
+      "animation": "selfHarm",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "raw_damage": "X-1",
+      "piercing": "true",
+      "effects": {
+        "ManaGain": "X-1"
+      }
+    }
+  },
+  "BlackMagic2": {
+    "id": "BlackMagic2",
+    "template": "self_buff",
+    "name_key": "ABILITY_BLACKMAGIC_NAME",
+    "name": "Black Magic",
+    "desc_key": "ABILITY_BLACKMAGIC2_DESC",
+    "description": "Drop to 1 HP. Gain mana equal to the HP lost and gain All Stats Up 2.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Mage",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "X_is": "current_health"
+    },
+    "damage_instance": {
+      "raw_damage": "X-1",
+      "piercing": "true",
+      "effects": {
+        "AllStatsUp": "2",
+        "ManaGain": "X-1"
+      }
+    }
+  },
+  "Teach": {
+    "id": "Teach",
+    "template": "targeted_status",
+    "name_key": "ABILITY_TEACH_NAME",
+    "name": "Teach",
+    "desc_key": "ABILITY_TEACH_DESC",
+    "description": "Reduce the cost of another unit's spells by 1 until the end of their turn.",
+    "class": "Mage",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "graphics": {
+      "animation": "thumbsup"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempManaCostReduction": "1"
+      }
+    }
+  },
+  "Teach2": {
+    "id": "Teach2",
+    "variant_of": "Teach",
+    "desc_key": "ABILITY_TEACH2_DESC",
+    "description": "Reduce the cost of a unit's spells by 1 until the end of their turn. This can target yourself.",
+    "target": {
+      "min_range": "0"
+    }
+  },
+  "HomingBlasts": {
+    "id": "HomingBlasts",
+    "template": "self_buff",
+    "name_key": "ABILITY_HOMINGBLASTS_NAME",
+    "name": "Homing Blasts",
+    "desc_key": "ABILITY_HOMINGBLASTS_DESC",
+    "description": "Shoot 3 Magic Missiles at random enemies.",
+    "class": "Mage",
+    "keyword_tooltips": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "graphics": {
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomMagicMissile": {
+          "stacks": "3",
+          "full_size": "true"
+        }
+      }
+    }
+  },
+  "HomingBlasts2": {
+    "id": "HomingBlasts2",
+    "variant_of": "HomingBlasts",
+    "desc_key": "ABILITY_HOMINGBLASTS2_DESC",
+    "description": "Shoot 4 Magic Missiles at random enemies.",
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomMagicMissile": {
+          "stacks": "4",
+          "full_size": "true"
+        }
+      }
+    }
+  },
+  "HomingBlasts_sub": {
+    "id": "HomingBlasts_sub",
+    "template": "spell",
+    "target": {
+      "multihit": "3"
+    },
+    "damage_instance": {
+      "damage": "3"
+    }
+  },
+  "HomingBlasts2_sub": {
+    "id": "HomingBlasts2_sub",
+    "template": "spell",
+    "target": {
+      "multihit": "4"
+    },
+    "damage_instance": {
+      "damage": "3"
+    }
+  },
+  "Replicate": {
+    "id": "Replicate",
+    "template": "self_buff",
+    "name_key": "ABILITY_REPLICATE_NAME",
+    "name": "Replicate",
+    "desc_key": "ABILITY_REPLICATE_DESC",
+    "description": "The next spell you cast is cast twice.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "thumbsup"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleCastSpell": "1"
+      }
+    }
+  },
+  "Replicate2": {
+    "id": "Replicate2",
+    "template": "targeted_status",
+    "name_key": "ABILITY_REPLICATE_NAME",
+    "name": "Replicate",
+    "desc_key": "ABILITY_REPLICATE2_DESC",
+    "description": "The next spell you or another unit casts is cast twice.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "5"
+    },
+    "graphics": {
+      "animation": "jitter"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleCastSpell": "1"
+      }
+    }
+  },
+  "Magnify": {
+    "id": "Magnify",
+    "template": "self_buff",
+    "name_key": "ABILITY_MAGNIFY_NAME",
+    "name": "Magnify",
+    "desc_key": "ABILITY_MAGNIFY_DESC",
+    "description": "Your basic attack gains +1 range and area until the end of the turn.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "thinking"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempRangeUp": "1",
+        "TempBasicAttackBonusAOE": "1"
+      }
+    }
+  },
+  "Magnify2": {
+    "id": "Magnify2",
+    "variant_of": "Magnify",
+    "desc_key": "ABILITY_MAGNIFY2_DESC",
+    "description": "Your basic attack gains +2 range and +1 area until the end of the turn.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempRangeUp": "2"
+      }
+    }
+  },
+  "TriAttack": {
+    "id": "TriAttack",
+    "template": "spell",
+    "name_key": "ABILITY_TRIATTACK_NAME",
+    "name": "Tri-Attack",
+    "desc_key": "ABILITY_TRIATTACK_DESC",
+    "description": "A Fire / Ice / Electric spell that inflicts Burn 1, Slow 1, and has a 5% chance to inflict Stun.",
+    "class": "Mage",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3"
+    },
+    "graphics": {
+      "particle": "WaterConduct",
+      "animation": "castspell"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Burn": "1",
+        "Slow": "1",
+        "Stun": [
+          "1",
+          ".05"
+        ]
+      },
+      "elements": [
+        "Electric",
+        "Fire",
+        "Ice"
+      ]
+    }
+  },
+  "TriAttack2": {
+    "id": "TriAttack2",
+    "variant_of": "TriAttack",
+    "desc_key": "ABILITY_TRIATTACK2_DESC",
+    "description": "A Fire / Ice / Electric spell that inflicts Burn 1, Slow 1, and has a 5% chance to inflict Stun in an area.",
+    "target": {
+      "max_aoe": "1",
+      "max_range": "5"
+    }
+  }
+}

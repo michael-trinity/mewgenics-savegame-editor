@@ -1,0 +1,95 @@
+{
+  "levels": {
+    "folder": "boneyard",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "boneyard_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "Flea",
+      "Wisp",
+      "Fly",
+      "Maggot"
+    ],
+    "medium": [
+      "ZombieCat",
+      "SkeletonCat",
+      "TallSkeletonCat",
+      "WolfCat",
+      "Tatters",
+      "Spookie",
+      "Scary",
+      "Reaper",
+      "TallRobes",
+      "GraveWorm",
+      "ButtZombie"
+    ],
+    "large": [
+      "Shambler"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "boneyarditems"
+  },
+  "minibosses": {
+    "mamamaggot": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "meatworld.gon",
+      "hidden": "true",
+      "override_art": "MapNodeExit_MeatWorld"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_ThrobbingArtery",
+      "override_art": "MapNode_Veins"
+    },
+    "boss": {
+      "type": "boss",
+      "is_final_boss": "true",
+      "boss_cutscene": "dybbuk"
+    }
+  },
+  "flags": {
+    "ThrobbingArteryDone": {
+      "quest_event": {
+        "level": "Quest_ThrobbingArtery2",
+        "override_art": "MapNode_VeinsDrained"
+      }
+    },
+    "MeatWorldUnlocked": {
+      "quest_event": {
+        "type": "empty",
+        "override_art": "MapNode_Empty"
+      },
+      "exit0": {
+        "hidden": "false"
+      }
+    }
+  }
+}

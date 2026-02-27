@@ -1,0 +1,304 @@
+{
+  "MysteriousCave": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCAVE_NAME",
+      "title_resolved": "Mysterious Cave",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_cave",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCAVE_QUES",
+      "prompt_resolved": "{catname} finds a mysterious cave. {He} can hear scary voices echoing from within the cave...\n\nThe darkness entrance beckons {catname} to explore it.",
+      "options": {
+        "enter": {
+          "label": "EVENT_ENTER_ANSW",
+          "label_resolved": "Enter",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE_REW1",
+                "prompt_resolved": "{catname} enters the cave.\n\n{He} follows the cave downwards, squeezing through crevices and traveling deeper within...",
+                "event_now_same_cat": "MysteriousCave1"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE_REW2",
+                "prompt_resolved": "{catname} hears a familiar voice echoing through the cave as {he} enters, a calming influence as {he} navigates deeper into the cave...",
+                "set_adventure_token": "AdventureToken_MysteriousCave_FamiliarVoice",
+                "event_now_same_cat": "MysteriousCave1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCAVE_REW3",
+                "prompt_resolved": "{catname} hears someone calling {his} name from within the cave!\n\nSpooked by the strange voice, {catname} runs away in fear!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCAVE_REW4",
+                "prompt_resolved": "Strange voices echo through the cave, clouding {catname}'s mind and filling his thoughts with chaos!\n\n{catname} turns and flees in terror!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                },
+                "gain_disorder_from_pool": "mental_disorders"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSCAVE_REW5",
+            "prompt_resolved": "{catname} senses something strange about this cave, as if some being is guarding it.\n\n{He} opts to leave it alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "TarPits": {
+    "intro": {
+      "title": "EVENT_TARPITS_NAME",
+      "title_resolved": "Tar Pits",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tar_pits",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TARPITS_QUES",
+      "prompt_resolved": "{catname} finds a large pit full of tar.\n\nIt has a terribly pungent smell like rotting eggs.",
+      "options": {
+        "cross": {
+          "label": "EVENT_CROSS_ANSW",
+          "label_resolved": "Cross",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_TARPITS_REW1",
+                "prompt_resolved": "{catname} gracefully sprints over the tar pits without getting stuck.\n\nIt gives the party an opportunity to ambush the next battle!",
+                "ally_ambush_next_fights": "1"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_TARPITS_REW2",
+                "prompt_resolved": "{catname} wades into the tar and befriends some tar creatures on the way over!",
+                "gain_familiar": "CharmedTarBaby"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TARPITS_REW3",
+                "prompt_resolved": "It wasn't easy, but {catname} manages to make it to the other side only partially coated in sticky tar.",
+                "self_status_next_fight": {
+                  "Tarred": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_TARPITS_REW4",
+                "prompt_resolved": "The cats get stuck in the deep tar pit...\n\nWhile still trying to pull themselves free, the party is ambushed!",
+                "ambush_next_basic_fights": "1",
+                "party_status_next_fight": {
+                  "Tarred": "1"
+                }
+              }
+            }
+          }
+        },
+        "go_around": {
+          "label": "EVENT_GOAROUND_ANSW",
+          "label_resolved": "Go around",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TARPITS_REW5",
+                "prompt_resolved": "{catname} navigates around the tar pit to the other side."
+              },
+              "rare": {
+                "prompt": "EVENT_TARPITS_REW6",
+                "prompt_resolved": "{catname} finds an alternate path away from the tar pit...\n\nIt leads to a strange cave!",
+                "next_event_bonus": "1",
+                "event_now_same_cat": "MysteriousCave"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TARPITS_REW7",
+                "prompt_resolved": "{catname} tries to find a way around but gets lost in the dense flora...",
+                "event_now_same_cat": "random"
+              },
+              "rare": {
+                "prompt": "EVENT_TARPITS_REW8",
+                "prompt_resolved": "{catname} gets hopelessly lost!\n\nThere is so much undergrowth here it is impossible for {him} to navigate.",
+                "next_event_bonus": "-2",
+                "event_now_same_cat": "random"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "NestOfEggs": {
+    "intro": {
+      "title": "EVENT_NESTOFEGGS_NAME",
+      "title_resolved": "Nest of Eggs",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "nest_of_eggs",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_NESTOFEGGS_QUES",
+      "prompt_resolved": "{catname} finds a huge nest full of enormous eggs!",
+      "options": {
+        "eat": {
+          "label": "EVENT_EAT_ANSW",
+          "label_resolved": "Eat",
+          "stat": "con",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW1",
+                "prompt_resolved": "{catname}'s teeth crunch through the brittle shell of the eggs, releasing a delicious nectar within!",
+                "full_heal": "1",
+                "self_status_next_fight": {
+                  "HealthRegenUp": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW2",
+                "prompt_resolved": "The cats devour the large and delicious eggs!",
+                "party_heal": "100%",
+                "party_status_next_fight": {
+                  "HealthRegenUp": "2"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW3",
+                "prompt_resolved": "The cats break open the eggs to eat them but are overwhelmed by a sudden stench of farts!",
+                "party_status_next_fight": {
+                  "Poison": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW4",
+                "prompt_resolved": "{catname} devours one of the eggs. It tastes absolutely wretched!",
+                "self_status_next_fight": {
+                  "Poison": "2"
+                },
+                "learn_ability": "BarfBall"
+              }
+            }
+          }
+        },
+        "take": {
+          "label": "EVENT_TAKE_ANSW",
+          "label_resolved": "Take",
+          "stat": "spd",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW5",
+                "prompt_resolved": "{catname} grabs one of the eggs and pockets it.",
+                "get_item": "RaptorEgg"
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW6",
+                "prompt_resolved": "{catname} snatches up all of the eggs!",
+                "get_item": "RaptorEgg",
+                "get_item_from_pool": "raptor_nest_eggs"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW7",
+                "prompt_resolved": "As {catname} goes to pick up one of the eggs, a large shadow falls over {him} and the nest...\n\nThe mother is here! Before {he} can react, the enraged Raptor tears into {catname}!",
+                "damage": "5",
+                "self_status_next_fight": {
+                  "Bleed": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW8",
+                "prompt_resolved": "When they enter the nest, the cats are suddenly ambushed by Raptors!\n\nBeaten and bloodied, the cats manage to barely escape their wrath.",
+                "party_damage": "5",
+                "party_status_next_fight": {
+                  "Bleed": "3"
+                }
+              }
+            }
+          }
+        },
+        "kiss": {
+          "label": "EVENT_KISS_ANSW",
+          "label_resolved": "Kiss",
+          "stat": "cha",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW9",
+                "prompt_resolved": "{catname} kisses an egg and it begins to hatch! \n\nThe baby raptor mistakes {catname} for its mother and follows {him}!",
+                "gain_familiar": "CharmedRaptorBaby"
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW10",
+                "prompt_resolved": "{catname} looks on in wonder as the eggs all begin to hatch!\n\nThe cats help them out of the sticky mess of shells and the raptor kittens join the party.",
+                "gain_familiar": "CharmedRaptorBaby"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "7",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NESTOFEGGS_REW11",
+                "prompt_resolved": "After disturbing the eggs, {catname} looks on in surprise as the eggs hatch!\n\nAngry raptors stumble out of the shells and attack {catname}!",
+                "injury": "cha"
+              },
+              "rare": {
+                "prompt": "EVENT_NESTOFEGGS_REW12",
+                "prompt_resolved": "The moment {catname} leans in to kiss an egg, it bursts open and the raptor within bites {him} in the eye!",
+                "damage": "10",
+                "gain_disorder": "PuncturedEye"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

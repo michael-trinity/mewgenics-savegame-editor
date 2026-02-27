@@ -1,0 +1,394 @@
+{
+  "set_GrubFamiliarReturn": {
+    "template": "targeted_status",
+    "graphics": {
+      "animation": "attack"
+    },
+    "cost": {
+      "mana": "0",
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "range_mode": "cross",
+      "restrictions": [
+        "must_have_buddy",
+        "must_have_living_character"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "GenericBuff": "100",
+        "GiveBoundItemToTarget": "1"
+      }
+    },
+    "self_damage": {
+      "damage": "0",
+      "type": "none",
+      "effects": {
+        "DeleteObject": "1"
+      }
+    }
+  },
+  "set_MummySetCurse": {
+    "template": "spell",
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": "enemies_only",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Rot": "1",
+        "Weakness": "1"
+      }
+    }
+  },
+  "set_HumanFleshSetCurse": {
+    "template": "spell",
+    "graphics": {
+      "particle": "PoisonPoof"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": "enemies_only",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Fear": "2"
+      }
+    }
+  },
+  "neck_TentacleArmorCounter": {
+    "template": "spell",
+    "graphics": {
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "4",
+      "type": "physical_spell"
+    }
+  },
+  "set_SpaceArmorJump": {
+    "variant_of": "BasicJump",
+    "target": {
+      "restrictions": "none",
+      "always_bounce": "true"
+    },
+    "damage_instance": {
+      "type": "melee",
+      "damage": "4",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Displace": "1"
+      }
+    }
+  },
+  "set_PlanetSetGravity": {
+    "template": "spell",
+    "graphics": {
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "2",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "tile_to_target"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Gravity"
+      ]
+    }
+  },
+  "head_MiniMoonArmorAsteroid": {
+    "variant_of": "Asteroid",
+    "graphics": {
+      "animation": "none"
+    }
+  },
+  "head_MagnetoAttract": {
+    "template": "spell",
+    "graphics": {
+      "particle": "none",
+      "animation": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "tile_to_character",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "head_CrownOfHorns": {
+    "template": "straightshot_attack",
+    "graphics": {
+      "projectile": "NeedleProjectile",
+      "animation": "none"
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "aoe_symmetry": "four_way",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ]
+      ]
+    },
+    "damage_instance": {
+      "damage": "2"
+    }
+  },
+  "neck_DarkFriend": {
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "none"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "PlayerCat_ThiefShade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true",
+      "additional_passives": {
+        "HideEquipment": "neck",
+        "ApplyPassivesToSpawnerWhileAlive": {
+          "HideEquipment": "neck"
+        }
+      }
+    },
+    "damage_instance": {
+      "ai_base_score": "1000",
+      "custom_additional_ai_weight": "tile_close_to_enemy"
+    }
+  },
+  "head_EmoSong": {
+    "template": "spell",
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "None"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "heal": "1",
+      "cant_miss": "true",
+      "effects": {
+        "TempDamageUp": "1"
+      },
+      "elements": [
+        "Holy"
+      ]
+    }
+  },
+  "set_WitchJump": {
+    "variant_of": "BasicJump",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "face_LeechBrood": {
+    "template": "lobbed_attack",
+    "graphics": {
+      "projectile": "LeechProjectile"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": "enemies_only",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Leeches": "1"
+      }
+    }
+  },
+  "head_Pestilence": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CROWNOFPESTILENCE_NAME",
+      "name_resolved": "Pestilence",
+      "desc": "ABILITY_CROWNOFPESTILENCE_DESC",
+      "desc_resolved": "Deal 1 damage to all units.",
+      "ability_icon": "Pestilence",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "particle": "PoisonPoof",
+      "animation": "evilMagic"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "neck_ChefsApron": {
+    "template": "spawn",
+    "meta": {},
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "none",
+      "dont_orient": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "2"
+    },
+    "spawn": {
+      "object": "Food"
+    }
+  },
+  "head_HeadBrandJump": {
+    "variant_of": "BasicJump",
+    "target": {
+      "restrictions": "none",
+      "always_bounce": "true"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "head_ThrobbingCrown": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "affected_particle": "fx_tentaclestrangle",
+      "miss_particle": "fx_tentaclestrangleMiss",
+      "fx_is_placeholder_animation": "true",
+      "fx_random_flip": "true",
+      "miss_random_delay": [
+        "0,",
+        "20"
+      ],
+      "random_delay": [
+        "30",
+        "50"
+      ]
+    },
+    "target": {
+      "target_mode": "none",
+      "min_aoe": "1",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "8"
+    }
+  },
+  "head_IronJaw": {
+    "template": "melee_attack",
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Leech": "1"
+      }
+    }
+  },
+  "face_StevenMask2": {
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "none"
+    },
+    "cost": {
+      "can_cast_while_dead": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0",
+      "aoe_restrictions": [
+        "exclude_blocking"
+      ]
+    },
+    "spawn": {
+      "object": "RANDOM_1X1_ENEMY",
+      "faction": "self"
+    }
+  }
+}

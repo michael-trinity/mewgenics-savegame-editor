@@ -1,0 +1,401 @@
+{
+  "PitOfSnakes": {
+    "intro": {
+      "title": "EVENT_PITOFSNAKES_NAME",
+      "title_resolved": "Pit of Snakes",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "pit_of_snakes",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_PITOFSNAKES_QUES",
+      "prompt_resolved": "A pit of snakes block the way before {catname}!",
+      "options": {
+        "fight": {
+          "label": "EVENT_FIGHT_ANSW",
+          "label_resolved": "Fight",
+          "stat": "str",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PITOFSNAKES_REW1",
+                "prompt_resolved": "{catname} dives into the pit, dispatching snakes left and right!",
+                "gain_food": [
+                  "4",
+                  "8"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_PITOFSNAKES_REW2",
+                "prompt_resolved": "{catname} leaps into the pit, unleashing an awe-inspiring flurry of defensive blows, surrounded on all sides by snakes!",
+                "learn_passive": "CobraStyle"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PITOFSNAKES_REW3",
+                "prompt_resolved": "{catname} tries to fight the snakes but is overwhelmed, bitten all over and poisoned!",
+                "damage": "3",
+                "self_status_next_fight": {
+                  "Poison": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_PITOFSNAKES_REW4",
+                "prompt_resolved": "The sheer number of bites covering {catname} when {he} stumbles out of the pit is alarming, but {he} manages to survive...\n\n{catname}'s body begins to mutate from all the venom flowing through {his} veins.",
+                "damage": "6",
+                "self_status_next_fight": {
+                  "Poison": "6"
+                },
+                "mutation": {
+                  "ears": "328"
+                }
+              }
+            }
+          }
+        },
+        "jump_over": {
+          "label": "EVENT_JUMPOVER_ANSW",
+          "label_resolved": "Jump over",
+          "stat": "dex",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "1",
+                "prompt": "EVENT_PITOFSNAKES_REW5",
+                "prompt_resolved": "{catname} manages to leap over the snakes and makes it away unscathed."
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_PITOFSNAKES_REW6",
+                "prompt_resolved": "{catname} darts past the snakes!\n\nOn the way by {he} spies an item that they are guarding and snatches it!",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PITOFSNAKES_REW7",
+                "prompt_resolved": "{catname} falls short and lands in the pit! The snakes bite {him} several times before {he} is able to scramble out!",
+                "damage": "3",
+                "self_status_next_fight": {
+                  "Poison": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_PITOFSNAKES_REW8",
+                "prompt_resolved": "{catname} barely clears the pit, landing awkwardly on the edge and breaks {his} leg!",
+                "injury": "spd"
+              }
+            }
+          }
+        },
+        "charm": {
+          "label": "EVENT_CHARM_ANSW",
+          "label_resolved": "Charm",
+          "stat": "cha",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PITOFSNAKES_REW9",
+                "prompt_resolved": "{catname} charms one of the snakes and lures it to leave the pit and join the cats!",
+                "gain_familiar": "Snake"
+              },
+              "rare": {
+                "prompt": "EVENT_PITOFSNAKES_REW10",
+                "prompt_resolved": "{catname} lures several of the snakes away from the pit with {his} charm and befriends them!",
+                "gain_familiar": "Snake"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PITOFSNAKES_REW11",
+                "prompt_resolved": "The snakes leave the pit and chase after the cats, biting and poisoning them!",
+                "party_damage": "3",
+                "party_status_next_fight": {
+                  "Poison": "3"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_PITOFSNAKES_REW12",
+                "prompt_resolved": "{catname} tries to sweet talk the snakes, but gets bitten in the face instead!",
+                "permanent_stats": {
+                  "cha": "-1"
+                },
+                "self_status_next_fight": {
+                  "Poison": "3"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Meteor": {
+    "intro": {
+      "title": "EVENT_METEOR_NAME",
+      "title_resolved": "Meteor",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "meteor",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_METEOR_QUES",
+      "prompt_resolved": "At the heart of a small crater, {catname} finds a strange vibrating meteor!",
+      "options": {
+        "take": {
+          "label": "EVENT_TAKE_ANSW",
+          "label_resolved": "Take",
+          "stat": "lck",
+          "good": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_METEOR_REW1",
+                "prompt_resolved": "{catname} pockets the small meteor for later.",
+                "get_item_from_pool": "chapter_common"
+              },
+              "rare": {
+                "prompt": "EVENT_METEOR_REW2",
+                "prompt_resolved": "{catname} picks up the meteor. The vibrations feel strange in {his} paws, pulsing through {catname}'s whole body.\n\n{catname} has gained a mutation!",
+                "random_mutation": "1",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_METEOR_REW3",
+                "prompt_resolved": "An amoeba hiding on the meteor latches onto {catname}! {He} tries to shake it off but it is stuck fast!",
+                "random_mutation": "1",
+                "get_parasite_from_pool": [
+                  "AmoebaHat",
+                  "AmoebaNeck",
+                  "AmoebaFace"
+                ]
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_METEOR_REW4",
+                "prompt_resolved": "{catname} moves to pick up the meteor, but giant space amoebas leap out from it and latch onto {him}, covering {his} body!\n\n{catname} tries in vain to scrape them off but it's impossible.",
+                "random_mutation": "2",
+                "random_pool": [
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaNeck"
+                  }
+                ],
+                "spawn_unit_next_fight": {
+                  "object": "Amoeba",
+                  "count": "1",
+                  "side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "crack_open": {
+          "label": "EVENT_CRACKOPEN_ANSW",
+          "label_resolved": "Crack open",
+          "stat": "str",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_METEOR_REW5",
+                "prompt_resolved": "As {catname} pulls the fragile meteor apart, a strange liquid sprays out of it and mutates {catname}!",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_METEOR_REW6",
+                "prompt_resolved": "{catname} cracks open the meteor and a warm green liquid gushes out of it!\n\n{catname}'s body mutates!",
+                "random_mutation": "1",
+                "gain_coins": "15"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_METEOR_REW7",
+                "prompt_resolved": "{catname} breaks the meteor open, and is sprayed with a foul liquid that was trapped inside!",
+                "gain_disorder_from_pool": "all_disorders",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_METEOR_REW8",
+                "prompt_resolved": "A dense liquid seeps out of the meteor as {catname} tries to break it open, covering {him} in Amoebas!",
+                "random_mutation": "3",
+                "random_pool": [
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaNeck"
+                  }
+                ],
+                "spawn_unit_next_fight": {
+                  "object": "Amoeba",
+                  "count": "1",
+                  "side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_METEOR_REW9",
+            "prompt_resolved": "{catname} isn't interested in strange, one-of-a-kind, vibrating meteors and walks off to the next area.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousCrater": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCRATER_NAME",
+      "title_resolved": "Mysterious Crater",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_crater",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCRATER_QUES",
+      "prompt_resolved": "{catname} finds a mysterious crater in the ground.\n\n{He} can't see what lies in shadow at the bottom, but {catname} thinks {he} could find a way down.",
+      "options": {
+        "enter_crater": {
+          "label": "EVENT_MYSTERIOUSCRATER_ENTER_ANSW",
+          "label_resolved": "Enter crater",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCRATER_REW1",
+                "prompt_resolved": "The cats descend carefully into the crater...",
+                "next_event_bonus": "2",
+                "random_pool": [
+                  {
+                    "event_now": "Meteor"
+                  },
+                  {
+                    "event_now": "SeveredHead"
+                  },
+                  {
+                    "event_now": "WatchingHead"
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSCRATER_REW2",
+                "prompt_resolved": "In the crater {catname} finds fragments of a destroyed meteor!",
+                "get_item_from_pool": "chapter_common",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": "chapter_common"
+                  },
+                  {
+                    "get_item_from_pool": "chapter_common"
+                  },
+                  {
+                    "get_item_from_pool": "chapter_common"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCRATER_REW3",
+                "prompt_resolved": "{catname} scrambles down the crater wall into the darkness below...",
+                "next_event_bonus": "-1",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "Meteor"
+                  },
+                  {
+                    "event_now_same_cat": "SeveredHead"
+                  },
+                  {
+                    "event_now_same_cat": "WatchingHead"
+                  }
+                ]
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_MYSTERIOUSCRATER_REW4",
+                "prompt_resolved": "As {catname} descends into the crater, {he} is attacked by a giant Amoeba and a swarm of its babies!",
+                "random_pool": [
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaFace"
+                  },
+                  {
+                    "get_parasite": "AmoebaNeck"
+                  }
+                ],
+                "spawn_unit_next_fight": {
+                  "object": "Amoeba",
+                  "count": "1",
+                  "side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSCRATER_REW5",
+            "prompt_resolved": "{catname} leads the party safely around the crater and on to the next area.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

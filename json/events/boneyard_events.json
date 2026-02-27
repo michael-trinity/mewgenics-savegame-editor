@@ -1,0 +1,671 @@
+{
+  "SealedCrypt": {
+    "requirements": {
+      "not_has_token": "WorldEventLegacyToken_CryptOpened"
+    },
+    "intro": {
+      "title": "EVENT_SEALEDCRYPT_NAME",
+      "title_resolved": "Sealed Crypt",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "sealed_crypt",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "counter_range": [
+              "WorldEventLegacyCounter_SealedCrypt",
+              "4",
+              "99"
+            ]
+          },
+          "reward": {
+            "prompt": "EVENT_SEALEDCRYPT_QUES5",
+            "prompt_resolved": "{catname} finds a stone crypt, its door is heavily damaged. {catname} thinks {he} might be able to break it. What could it be protecting? Or imprisoning...",
+            "set_frame": "5"
+          }
+        }
+      },
+      "options": {
+        "bash": {
+          "label": "EVENT_BASHOPEN_ANSW",
+          "label_resolved": "Bash open",
+          "stat": "str",
+          "good": {
+            "increment_legacy_counter": "WorldEventLegacyCounter_SealedCrypt",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEALEDCRYPT_REW1",
+                "prompt_resolved": "{catname} swings at the stone door, damaging it, but is unable to break in."
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "counter_maximum": [
+                      "WorldEventLegacyCounter_SealedCrypt",
+                      "4"
+                    ]
+                  },
+                  "reward": {
+                    "prompt": "EVENT_SEALEDCRYPT_REW2",
+                    "prompt_resolved": "{catname} bashes the door, breaking some of the stone loose. {He} thinks he can see something glinting within and reaches to pull it out...",
+                    "get_item_from_pool": {
+                      "pool": "chapter_rare"
+                    }
+                  }
+                }
+              }
+            },
+            "conditional_reward": {
+              "requirements": {
+                "counter_range": [
+                  "WorldEventLegacyCounter_SealedCrypt",
+                  "4",
+                  "4"
+                ]
+              },
+              "reward": {
+                "set_frame": "5"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_SEALEDCRYPT_REW3",
+                "prompt_resolved": "{catname} swings {his} arm at the stone door. {He} lets out a howl in pain!",
+                "injury": "str"
+              },
+              "rare": {
+                "prompt": "EVENT_SEALEDCRYPT_REW4",
+                "prompt_resolved": "{catname} attempts to smash the door, but only ends up making a ton of noise. {He} looks around nervously as the sounds echo throughout the boneyard... {He} starts to hear movement all around {him}!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                },
+                "ambush_next_basic_fights": "1"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_SEALEDCRYPT_LEAVE",
+            "prompt_resolved": "{catname} feels it would probably be best if {he} didn't disturb whatever is resting there and walks away.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "UnmarkedGrave": {
+    "intro": {
+      "title": "EVENT_UNMARKEDGRAVE_NAME",
+      "title_resolved": "Unmarked Grave",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "unmarked_grave",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_UNMARKEDGRAVE_QUES",
+      "prompt_resolved": "An unmarked grave lies in the ground before {catname}.",
+      "options": {
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_UNMARKEDGRAVE_REW1",
+                "prompt_resolved": "{catname} examines the tombstone and finds the name of an enemy on it!\n\nThat should make the next battle easier...",
+                "global_effect_next_fight": {
+                  "KillEnemyOfTypeAtBattleStart": {
+                    "enemy_type": "any"
+                  }
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_UNMARKEDGRAVE_REW2",
+                "prompt_resolved": "{catname}'s name is on the tomb!\n\n{catname} looks closer, but there is no date on the tombstone.",
+                "learn_passive": "DeathProof"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_UNMARKEDGRAVE_REW3",
+                "prompt_resolved": "{catname}'s mother's name is on the tomb!\n\nA deep fear grips {catname} and {he} runs away.",
+                "set_frame": "3",
+                "self_status_next_fight": {
+                  "Fear": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_UNMARKEDGRAVE_REW4",
+                "prompt_resolved": "{catname} reads {his} own name on the tombstone!\n\nDread overwhelms {catname} as {he} realizes {his} death is imminent.",
+                "set_frame": "4",
+                "gain_disorder": "BorrowedTime"
+              }
+            }
+          }
+        },
+        "run": {
+          "label": "EVENT_RUN_ANSW",
+          "label_resolved": "Run!",
+          "stat": "spd",
+          "requirements": {
+            "not_has_token": "AdventureToken_UnmarkedGraveForced"
+          },
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_UNMARKEDGRAVE_REW5",
+                "prompt_resolved": "{catname} turns and runs away from the grave!"
+              },
+              "rare": {
+                "prompt": "EVENT_UNMARKEDGRAVE_REW6",
+                "prompt_resolved": "{catname} runs as fast as {he}'s ever run in {his} life away from the tomb!",
+                "permanent_stats": {
+                  "spd": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_UNMARKEDGRAVE_REW7",
+                "prompt_resolved": "{catname} wants to flee, but {he} feels compelled to read the name on the head stone...",
+                "set_adventure_token": "AdventureToken_UnmarkedGraveForced",
+                "event_now_same_cat": "UnmarkedGrave"
+              },
+              "rare": {
+                "set_frame": "6",
+                "prompt": "EVENT_UNMARKEDGRAVE_REW8",
+                "prompt_resolved": "{catname} turns to run but trips over a giant big toe protruding from the ground!",
+                "next_event_bonus": "-1",
+                "set_adventure_token": "AdventureToken_TrippedOnBigToe",
+                "event_now_same_cat": "BigToe"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "PileOfSkulls": {
+    "intro": {
+      "title": "EVENT_PILEOFSKULLS_NAME",
+      "title_resolved": "Pile of Skulls",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "pile_of_skulls",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_PILEOFSKULLS_QUES",
+      "prompt_resolved": "{catname} finds a pile of skulls.\n\nIt seems odd that there are no bodies?",
+      "options": {
+        "communicate": {
+          "label": "EVENT_COMMUNICATE_ANSW",
+          "label_resolved": "Communicate",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFSKULLS_REW1",
+                "prompt_resolved": "{catname} tries to talk to the skulls, but don't respond as they are just bones."
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_PILEOFSKULLS_REW2",
+                "prompt_resolved": "The skulls tell {catname} of a place where there is buried treasure!\n\n{catname} finds the spot and digs up something there...",
+                "next_event_bonus": "1",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "Crate"
+                  },
+                  {
+                    "event_now_same_cat": "Safe"
+                  },
+                  {
+                    "event_now_same_cat": "GenieLamp"
+                  },
+                  {
+                    "event_now_same_cat": "Bottle"
+                  },
+                  {
+                    "event_now_same_cat": "OldCan"
+                  },
+                  {
+                    "event_now_same_cat": "ARock"
+                  },
+                  {
+                    "event_now_same_cat": "TunaCan"
+                  },
+                  {
+                    "event_now_same_cat": "Locket"
+                  },
+                  {
+                    "event_now_same_cat": "HollowSkull"
+                  },
+                  {
+                    "event_now_same_cat": "APuzzleBox"
+                  },
+                  {
+                    "event_now_same_cat": "TimeCapsule"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFSKULLS_REW3",
+                "prompt_resolved": "{catname} tries both verbal and non-verbal communication but they seem to just be inert skulls."
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_PILEOFSKULLS_REW4",
+                "prompt_resolved": "The skulls whisper to {catname}, telling {him} about the horrifying reality of being dead.\n\n{catname}'s legs quiver with fear and {his} eyes dart around anxiously...",
+                "self_status_next_fight": {
+                  "Fear": "5"
+                }
+              }
+            }
+          }
+        },
+        "pilfer": {
+          "label": "EVENT_PILFER_ANSW",
+          "label_resolved": "Pilfer",
+          "stat": "lck",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_PILEOFSKULLS_REW5",
+                "prompt_resolved": "One of the skulls had a gold tooth! Score!\n\n{catname} deftly pulls it out.",
+                "gain_coins": "5"
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_PILEOFSKULLS_REW6",
+                "prompt_resolved": "{catname} pulls the bones apart and fashions them into gear!",
+                "get_item_from_pool": "bone_equipment"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_PILEOFSKULLS_REW7",
+                "prompt_resolved": "One of the skulls clamps down on {catname}'s paw with its jaw!",
+                "damage": [
+                  "5",
+                  "10"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_PILEOFSKULLS_REW8",
+                "prompt_resolved": "As {catname} moves up to the skulls, they begin violently biting {him} in every place imaginable!\n\n{catname} howls in pain under the barrage of clanking teeth!",
+                "damage": "99%"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "BigToe": {
+    "intro": {
+      "title": "EVENT_BIGTOE_NAME",
+      "title_resolved": "Big Toe",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "big_toe",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BIGTOE_QUES",
+      "prompt_resolved": "A giant big toe protrudes from the ground!\n\n{catname} stares in puzzlement at the strange sight.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AdventureToken_TrippedOnBigToe"
+          },
+          "reward": {
+            "prompt": "EVENT_BIGTOE_QUES2",
+            "prompt_resolved": "{catname} whirls around to face the big toe!"
+          }
+        }
+      },
+      "options": {
+        "yank_it_out": {
+          "label": "EVENT_BIGTOE_YANK_ANSW",
+          "label_resolved": "Yank it out",
+          "stat": "str",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BIGTOE_REW1",
+                "prompt_resolved": "{catname} pulls the toe out...\n\nIt will make a good meal!",
+                "gain_food": [
+                  "3",
+                  "6"
+                ],
+                "full_heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW2",
+                "prompt_resolved": "{catname} yanks the large toe out of the ground and saves it as a juicy snack for later!",
+                "get_item": "BigToe"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BIGTOE_REW3",
+                "prompt_resolved": "{catname} tries to pull out the toe, but it fights back!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW4",
+                "prompt_resolved": "{catname} moves to grab the giant toe, but before {he} can react, it latches onto {him}!",
+                "get_parasite": "BigToeCursed"
+              }
+            }
+          }
+        },
+        "bite_it_off": {
+          "label": "EVENT_BIGTOE_BITE_ANSW",
+          "label_resolved": "Bite it off",
+          "stat": "con",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BIGTOE_REW5",
+                "prompt_resolved": "{catname} bites into the toe... it is yummy!",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW6",
+                "prompt_resolved": "The large toe is soft and thick.\n\nJuices from the delicious toe run down {catname}'s chin as {he} devours it!",
+                "permanent_stats": {
+                  "con": "1",
+                  "lck": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "5",
+                "prompt": "EVENT_BIGTOE_REW7",
+                "prompt_resolved": "{catname} tries to bite the toe but it clamps down on {him}!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW8",
+                "prompt_resolved": "{catname} is about to bite into the toe when suddenly {he} feels that {he} is being watched.\n\n{catname} hears a strange voice in the wind...\n\n[i]Where is my toe??[/i]",
+                "next_event_bonus": "-2",
+                "event_now_same_cat": "SpookieApparation"
+              }
+            }
+          }
+        },
+        "remove_the_nail": {
+          "label": "EVENT_BIGTOE_NAIL_ANSW",
+          "label_resolved": "Remove the nail",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BIGTOE_REW9",
+                "prompt_resolved": "{catname} rips the nail off the toe!",
+                "get_item_from_pool": [
+                  "CarvingKnife",
+                  "RazorBlade",
+                  "ButterflyKnife"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW10",
+                "prompt_resolved": "{catname} effortlessly tears the toe nail off the large toe...",
+                "get_item": "MomsToeNail"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BIGTOE_REW11",
+                "prompt_resolved": "With surprising dexterity, the large toe slams down on {catname}'s leg!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_BIGTOE_REW12",
+                "prompt_resolved": "{catname} tugs on the toe nail, and the toe starts moving. It was a giant sleeping monster!\n\n{catname} jumps in fright and runs for {his} life!",
+                "self_status_next_fight": {
+                  "Fear": "1"
+                },
+                "battle": "events/bigtoe.lvl"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "TraverseTheNecropolis": {
+    "intro": {
+      "title": "EVENT_TRAVERSETHENECROPOLIS_NAME",
+      "title_resolved": "Traverse The Necropolis",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "traverse_necropolis",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TRAVERSETHENECROPOLIS_QUES",
+      "prompt_resolved": "The cats discover the entrance to an ancient necropolis!\n\nWho knows how deep the path will lead? Only one way to find out.",
+      "options": {
+        "traverse": {
+          "label": "EVENT_TRAVERSETHENECROPOLIS_ANSW",
+          "label_resolved": "Traverse the Necropolis",
+          "good": {
+            "set_frame": "2",
+            "random_pool": [
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW1",
+                "prompt_resolved": "The cats wander lost through a winding crypt. They begin to choke on the stale, toxic air.\n\nEventually the party emerges, exhausted. Toxins from the air have sunk in, poisoning the whole party.",
+                "play_animation": "resultBad",
+                "party_status_next_fight": {
+                  "Poison": "2"
+                }
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW2",
+                "prompt_resolved": "{catname} leads the way down into the necropolis.\n\nThe other cats hear a loud scraping sound and suddenly {catname} goes flying past them, bleeding profusely.\n\n[i]We're leaving![/i] {catname} shouts as {he} runs past the party back up the stairs!",
+                "play_animation": "veryBad",
+                "self_status_next_fight": {
+                  "Bleed": "4"
+                }
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW3",
+                "prompt_resolved": "The cats descend into the dark crypt...\n\nWhat seems like hours later they return, quivering in fear!",
+                "play_animation": "resultBad",
+                "party_status_next_fight": {
+                  "Fear": "1"
+                }
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW4",
+                "prompt_resolved": "The party descends down the stairs into the necropolis...\n\nMoments later they come running back up, battered and bruised!\n\n{catname} refuses to talk about what just happened.",
+                "play_animation": "resultBad",
+                "party_damage": [
+                  "5",
+                  "10"
+                ]
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW5",
+                "prompt_resolved": "The cats explore the necropolis for a time until...\n\n{catname} finds a treasure room!",
+                "play_animation": "resultGood",
+                "shop_now": "TreasureHard"
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW6",
+                "prompt_resolved": "While travelling through endless rooms, the cats manage to salvage some old skeletons into makeshift gear.",
+                "play_animation": "resultGood",
+                "get_item_from_pool": "flesh_items"
+              },
+              {
+                "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW7",
+                "prompt_resolved": "The steps lead down, and down...\n\nInto a black market shop!",
+                "play_animation": "resultVeryGood",
+                "shop_now": "Event_RareShop"
+              }
+            ]
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_TRAVERSETHENECROPOLIS_REW8",
+            "prompt_resolved": "{catname} decides it is probably best not to risk getting lost in there and the party moves on.",
+            "event_now_same_cat": "random",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousCreature": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCREATURE_NAME",
+      "title_resolved": "Mysterious Creature",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_creature",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCREATURE_QUES",
+      "prompt_resolved": "{catname} finds a strange creature, its body deformed and distorted into a hideous mass of flesh.\n\n{catname} can't determine what type of animal it was before it... mutated?",
+      "options": {
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW1",
+                "prompt_resolved": "{catname} reaches out and touches the strange deformed animal...\n\n{His} body convulses as it mutates!",
+                "random_mutation": {
+                  "count": "1",
+                  "tag": "animal"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW2",
+                "prompt_resolved": "The creature howls at {catname} in silent agony.\n\n{catname} looks down as {his} body rapidly mutates... \n\nWas this some kind of blessing?",
+                "random_mutation": {
+                  "count": "2",
+                  "asymmetric": "false",
+                  "tag": "animal"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW3",
+                "prompt_resolved": "{catname} moves close and inspects the creature...\n\nIt reaches out and grabs hold of {catname}!",
+                "gain_disorder_from_pool": "physical_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW4",
+                "prompt_resolved": "The creature rolls over and spits something gross all over {catname}!",
+                "gain_disorder_from_pool": "physical_disorders",
+                "random_mutation": "2"
+              }
+            }
+          }
+        },
+        "run": {
+          "label": "EVENT_RUN_ANSW",
+          "label_resolved": "Run!",
+          "stat": "spd",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "1",
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW5",
+                "prompt_resolved": "{catname} runs away from the abhorrent creature!"
+              },
+              "rare": {
+                "set_frame": "2",
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW6",
+                "prompt_resolved": "{catname} and the party run past the strange creature.\n\nThey find an alternate route, allowing them to ambush the next battle!",
+                "ally_ambush_next_fights": "1"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW7",
+                "prompt_resolved": "{catname} tries to get past the creature but it reaches out and grabs {his} leg!",
+                "injury": "spd"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCREATURE_REW8",
+                "prompt_resolved": "{catname} is mesmerized by the bizarre creature and turns away too late!\n\nThe creature touches {catname}, spreading a terrible blight to {him}!",
+                "gain_disorder_from_pool": "physical_disorders",
+                "random_mutation": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

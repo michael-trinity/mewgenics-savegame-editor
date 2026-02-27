@@ -1,0 +1,333 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle"
+      ],
+      "verycloseup": [
+        "verycloseup"
+      ],
+      "closeup": [
+        "closeup"
+      ],
+      "zoomedout": [
+        "zoomedout"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "/*unprompted": {
+      "dialog": "NPC_BUTCH_UNPROMPTED_1"
+    },
+    "*/": "unknown",
+    "dialog": "NPC_BUTCH_UNKNOWN_1",
+    "get": "npc_reward"
+  },
+  "also": {
+    "dialog": "NPC_BUTCH_ALSO_1"
+  },
+  "butch_begin_accepting_cats": {
+    "dialog": "NPC_BUTCH_BUTCH_BEGIN_ACCEPTING_CATS_9",
+    "set_state": "idle",
+    "begin_accepting_cats": "butch"
+  },
+  "upgrade_storage_1": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_1_7",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_2": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_2_6",
+    "set_state": "idle",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_3": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_3_9",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_4": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_4_17",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_5": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_5_16",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_6": {
+    "set_state": "zoomedout",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_6_15",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_7": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_7_13",
+    "set_state": "idle",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_repeating_intro": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_REPEATING_INTRO_7",
+    "set_state": "idle",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_repeating_normal": {
+    "do_random_sequence": [
+      "upgrade_storage_max1,",
+      "upgrade_storage_max2,",
+      "upgrade_storage_max3,",
+      "upgrade_storage_max4,",
+      "upgrade_storage_max5"
+    ]
+  },
+  "upgrade_storage_repeating_hard": {
+    "do_random_sequence": [
+      "upgrade_storage_max1,",
+      "upgrade_storage_max2,",
+      "upgrade_storage_max3,",
+      "upgrade_storage_max4,",
+      "upgrade_storage_max5"
+    ]
+  },
+  "upgrade_storage_repeating_crazy": {
+    "do_random_sequence": [
+      "upgrade_storage_max1,",
+      "upgrade_storage_max2,",
+      "upgrade_storage_max3,",
+      "upgrade_storage_max4,",
+      "upgrade_storage_max5"
+    ]
+  },
+  "upgrade_storage_repeating_impossible": {
+    "do_random_sequence": [
+      "upgrade_storage_max1,",
+      "upgrade_storage_max2,",
+      "upgrade_storage_max3,",
+      "upgrade_storage_max4,",
+      "upgrade_storage_max5"
+    ]
+  },
+  "upgrade_storage_max1": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_MAX1_6",
+    "set_state": "closeup",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_max2": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_MAX2_4",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_max3": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_MAX3_5",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_max4": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_MAX4_5",
+    "set_state": "closeup",
+    "get": "npc_reward"
+  },
+  "upgrade_storage_max5": {
+    "dialog": "NPC_BUTCH_UPGRADE_STORAGE_MAX5_7",
+    "set_state": "idle",
+    "get": "npc_reward"
+  },
+  "class_unlock_medic": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_MEDIC_5",
+    "unlock_class": "Medic"
+  },
+  "class_unlock_thief": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_THIEF_7",
+    "unlock_class": "Thief"
+  },
+  "class_unlock_necromancer": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_NECROMANCER_6",
+    "unlock_class": "Necromancer"
+  },
+  "class_unlock_psychic": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_PSYCHIC_6",
+    "unlock_class": "Psychic"
+  },
+  "class_unlock_tinkerer": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_TINKERER_7",
+    "unlock_class": "Tinkerer"
+  },
+  "class_unlock_druid": {
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_DRUID_4",
+    "unlock_class": "Druid"
+  },
+  "class_unlock_butcher": {
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_BUTCHER_7",
+    "set_state": "idle",
+    "unlock_class": "Butcher"
+  },
+  "class_unlock_monk": {
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_MONK_8",
+    "set_state": "closeup",
+    "unlock_class": "Monk"
+  },
+  "class_unlock_jester": {
+    "set_state": "closeup",
+    "dialog": "NPC_BUTCH_CLASS_UNLOCK_JESTER_4",
+    "unlock_class": "Jester"
+  },
+  "unprompted": {
+    "do_random_sequence": [
+      "unprompted_a,",
+      "unprompted_b,",
+      "unprompted_c,",
+      "unprompted_d,",
+      "unprompted_e,",
+      "unprompted_f,",
+      "unprompted_g,",
+      "unprompted_h,",
+      "unprompted_i"
+    ]
+  },
+  "unprompted_a": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_A_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_b": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_B_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_c": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_C_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_d": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_D_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_e": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_E_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_f": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_F_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_g": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_G_2",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_h": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_H_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "unprompted_i": {
+    "dialog": "NPC_BUTCH_UNPROMPTED_I_1",
+    "do_sequence": "forward_to_tips"
+  },
+  "forward_to_tips": {
+    "do_random_sequence": [
+      "butch_tips_intelligence,",
+      "butch_tips_charisma,",
+      "butch_tips_tacticalview,",
+      "butch_tips_info,butch_tips_combat",
+      ",butch_tips_turnorder,",
+      "butch_tips_backstab,",
+      "butch_tips_magicdamage,",
+      "butch_tips_drafting,",
+      "butch_tips_rewards,",
+      "butch_tips_disorders,",
+      "butch_tips_items,",
+      "butch_tips_hard,",
+      "butch_tips_lesscats,",
+      "butch_tips_houseboss,",
+      "butch_tips_passives,",
+      "butch_tips_wellrounded,",
+      "butch_tips_headhome,",
+      "butch_tips_elements"
+    ]
+  },
+  "butch_tips_intro": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_INTRO_4",
+    "do_sequence": "butch_tips_intelligence"
+  },
+  "butch_tips_intelligence": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_INTELLIGENCE_4"
+  },
+  "butch_tips_charisma": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_CHARISMA_3"
+  },
+  "butch_tips_tacticalview": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_TACTICALVIEW_3"
+  },
+  "butch_tips_info": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_INFO_2"
+  },
+  "butch_tips_combat": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_COMBAT_4"
+  },
+  "butch_tips_turnorder": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_TURNORDER_3"
+  },
+  "butch_tips_backstab": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_BACKSTAB_3"
+  },
+  "butch_tips_drafting": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_DRAFTING_3"
+  },
+  "butch_tips_rewards": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_REWARDS_4"
+  },
+  "butch_tips_disorders": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_DISORDERS_3"
+  },
+  "butch_tips_items": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_ITEMS_2"
+  },
+  "butch_tips_hard": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_HARD_5"
+  },
+  "butch_tips_lesscats": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_LESSCATS_3"
+  },
+  "butch_tips_houseboss": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_HOUSEBOSS_3"
+  },
+  "butch_tips_passives": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_PASSIVES_3"
+  },
+  "butch_tips_wellrounded": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_WELLROUNDED_5"
+  },
+  "butch_tips_headhome": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_HEADHOME_4"
+  },
+  "butch_tips_elements": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_ELEMENTS_5"
+  },
+  "butch_tips_reorient": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_REORIENT_5"
+  },
+  "butch_tips_magicdamage": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_MAGICDAMAGE_4"
+  },
+  "butch_tina1": {
+    "dialog": "NPC_BUTCH_BUTCH_TINA1_14",
+    "set_state": "closeup"
+  },
+  "butch_pyro": {
+    "set_state": "idle",
+    "dialog": "NPC_BUTCH_BUTCH_PYRO_8"
+  },
+  "butch_boneyard_intro": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BUTCH_BUTCH_BONEYARD_INTRO_8"
+  },
+  "butch_first_house_boss_beat": {
+    "set_state": "verycloseup",
+    "dialog": "NPC_BUTCH_BUTCH_FIRST_HOUSE_BOSS_BEAT_9"
+  },
+  "test_gamepad_prompts": {
+    "dialog": "NPC_BUTCH_BUTCH_TIPS_INFO_1"
+  }
+}

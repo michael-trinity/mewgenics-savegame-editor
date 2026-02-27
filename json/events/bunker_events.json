@@ -1,0 +1,234 @@
+{
+  "LockedCrate": {
+    "intro": {
+      "title": "EVENT_LOCKEDCRATE_NAME",
+      "title_resolved": "Locked Crate",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "locked_crate",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_LOCKEDCRATE_QUES",
+      "prompt_resolved": "{catname} finds a locked crate.",
+      "options": {
+        "break_lock": {
+          "label": "EVENT_LOCKEDCRATE_BREAK_ANSW",
+          "label_resolved": "Break Lock",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDCRATE_REW1",
+                "prompt_resolved": "Worn with age, the fitting holding the lock snaps off easily under {catname}'s paw.",
+                "get_item_from_pool": "chapter_common"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDCRATE_REW2",
+                "prompt_resolved": "{catname} smashes the lock open and looks inside!",
+                "get_item_from_pool": "chapter_specific_item",
+                "gain_food": [
+                  "8",
+                  "10"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDCRATE_REW3",
+                "prompt_resolved": "Whatever was put inside the crate, the original owner did not want to be stolen...\n\nTry as {he} might, {catname} can't get the lock to budge!"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_LOCKEDCRATE_REW4",
+                "prompt_resolved": "{catname} busts open the lock and looks inside...\n\nA glowing skeletal corpse lies within! {catname} foolishly pokes around looking for something valuable and the radiated bones mutate {his} body!",
+                "gain_disorder_from_pool": "all_disorders",
+                "random_mutation": "1"
+              }
+            }
+          }
+        },
+        "pick_lock": {
+          "label": "EVENT_LOCKEDCRATE_PICK_ANSW",
+          "label_resolved": "Pick Lock",
+          "stat": "dex",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDCRATE_REW5",
+                "prompt_resolved": "{catname} carefully picks the lock.\n\nIn the crate {he} finds a bunch of junk, likely sentimental to whoever put it there.",
+                "get_item_from_pool": "chapter_common"
+              },
+              "rare": {
+                "prompt": "EVENT_LOCKEDCRATE_REW6",
+                "prompt_resolved": "{catname} deftly picks the lock!\n\nThis must have been someone's emergency stache of gear!",
+                "get_item_from_pool": "chapter_specific_item",
+                "gain_food": [
+                  "8",
+                  "10"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_LOCKEDCRATE_REW7",
+                "prompt_resolved": "{catname} fumbles with the lock for a while but eventually gives up."
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_LOCKEDCRATE_REW8",
+                "prompt_resolved": "{catname} sneakily picks the lock, only to look down in horror at the glowing radioactive corpse the crate was protecting {him} from!",
+                "gain_disorder_from_pool": "all_disorders",
+                "random_mutation": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousManual": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSMANUAL_NAME",
+      "title_resolved": "Mysterious Manual",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_manual",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSMANUAL_QUES",
+      "prompt_resolved": "{catname} finds a mysterious manual with strange writing on the cover.",
+      "options": {
+        "read": {
+          "label": "EVENT_READ_ANSW",
+          "label_resolved": "Read",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSMANUAL_REW1",
+                "prompt_resolved": "{catname} flips open the cover of the small book...\n\nIt's a map! Looking closely, {catname} discovers several hidden passageways that will allow the party to ambush the next two battles!",
+                "set_frame": "2",
+                "ally_ambush_next_fights": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSMANUAL_REW2",
+                "prompt_resolved": "{catname} attempts to read the strange writing in the manual...\n\nIt provides insights into {his} surroundings. {catname} feels confident that for the next event {he} will know exactly what to do!",
+                "set_frame": "3",
+                "next_event_bonus": "2"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSMANUAL_REW3",
+                "prompt_resolved": "{catname} tries to decipher the cryptic text, but has no idea what it means!\n\n{He} insists on trying to figure it out and wastes so much time the party gets ambushed!",
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSMANUAL_REW4",
+                "prompt_resolved": "As {he} stares down at the strange letters, the letters begin swimming in front of {catname}'s eyes like reflections on a murky pool.\n\n{catname} realizes for the first time {he} can't read!",
+                "gain_disorder": "Dyslexia"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSMANUAL_REW5",
+            "prompt_resolved": "{catname} turns away from the strange booklet. Reading was never {his} strong suit anyhow.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ElephantsFoot": {
+    "intro": {
+      "title": "EVENT_ELEPHANTSFOOT_NAME",
+      "title_resolved": "Elephant's Foot",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "eliphants_foot",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ELEPHANTSFOOT_QUES",
+      "prompt_resolved": "Molten, glowing, radioactive waste slowly oozes from a fissure in the wall.\n\nEven from this distance {catname} can feel a strange heat radiating from the elephant's foot on {his} soft skin.",
+      "options": {
+        "move_closer": {
+          "label": "EVENT_ELEPHANTSFOOT_ANSW",
+          "label_resolved": "Move Closer",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOT_REW1",
+                "prompt_resolved": "{catname} lets out a yelp as the radiation pierces {his} body and mutates {him}.\n\nAnd yet... something alluring about the hot feeling throughout {catname}'s body makes {him} want to stay longer...",
+                "random_mutation": "1",
+                "event_now_same_cat": "ElephantsFootCloser"
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOT_REW2",
+                "prompt_resolved": "The heat emanating from the molten waste feels soothing to {catname}, even as it mutates {his} body!",
+                "random_mutation": "1",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ELEPHANTSFOOT_REW3",
+                "prompt_resolved": "The heat from the radiation is so hot {catname}'s skin begins to burn from the inside out!",
+                "injury": "radiated"
+              },
+              "rare": {
+                "prompt": "EVENT_ELEPHANTSFOOT_REW4",
+                "prompt_resolved": "The radiation blankets {catname}'s body and {he} can feel {himself} begin to boil from the inside out!\n\n{catname} flees from the room, vomiting from a sickness deep in {his} belly.",
+                "injury": "radiated",
+                "self_status_next_fight": {
+                  "Poison": "10"
+                }
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_ELEPHANTSFOOT_REW5",
+            "prompt_resolved": "The hot tingly feeling persists for a short while after leaving, but otherwise {catname} feels unaffected.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "MageCollar": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "6",
+    "int": "2"
+  },
+  "MetalPlate": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "18",
+    "con": "2",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "HuntersPatch": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "19",
+    "dex": "2"
+  },
+  "AngelicAura": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "7",
+    "int": "1",
+    "con": "1"
+  },
+  "CoinBag": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "13",
+    "speed": "1"
+  },
+  "SamsonsChains": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "8",
+    "str": "2",
+    "passive": {
+      "Metal": "1"
+    }
+  },
+  "Banana": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "14",
+    "cha": "-1"
+  },
+  "Slime": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "14",
+    "cha": "-1"
+  },
+  "GunslingerPistol": {
+    "name": "ITEM_GUNSLINGERPISTOL_NAME",
+    "name_resolved": "Gunslinger Pistol",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "51",
+    "durability": "6",
+    "ability": "wp_GunslingerPistol"
+  },
+  "WesternHat": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "52"
+  },
+  "Poncho": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "43"
+  },
+  "AtomicMark": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "64",
+    "int": "2"
+  },
+  "AstroTaser": {
+    "name": "ITEM_ASTROTASER_NAME",
+    "name_resolved": "Astro Zapper",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "84",
+    "ability": "wp_AstroTaser"
+  },
+  "OddRemote_Enemy": {
+    "name": "ITEM_ODDREMOTE_NAME",
+    "name_resolved": "Odd Remote",
+    "desc": "ITEM_ODDREMOTE_DESC",
+    "desc_resolved": "Use: Cast a random spell.",
+    "kind": "weapon",
+    "frame": "95",
+    "ability": "wp_OddRemoteEnemy"
+  },
+  "Pebble": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "92",
+    "shield": "2"
+  },
+  "Dreadlocks": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "93"
+  },
+  "BabyHair": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "94"
+  },
+  "BulbHead": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "95"
+  },
+  "MuggerMask": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "113"
+  },
+  "NecromancerMask": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "120"
+  },
+  "TinkererHat": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "120"
+  },
+  "ButcherMask": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "122"
+  },
+  "PsychicMask": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "121"
+  },
+  "JesterHat": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "121"
+  },
+  "MonkMask": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "123"
+  },
+  "DruidNeck": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "120"
+  },
+  "TerminatorShotgun": {
+    "name": "ITEM_SHOTGUN_NAME",
+    "name_resolved": "Shotgun",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "50",
+    "ability": "wp_TerminatorShotgun"
+  },
+  "TerminatorSniper": {
+    "name": "ITEM_SNIPERRIFLE_NAME",
+    "name_resolved": "Sniper Rifle",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "52",
+    "ability": "wp_TerminatorSniper"
+  },
+  "TerminatorUzi": {
+    "name": "ITEM_UZI_NAME",
+    "name_resolved": "Submachine Gun",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "137",
+    "ability": "wp_TerminatorUzi"
+  },
+  "TerminatorCoolGlasses": {
+    "name": "ARMOR_COOLMASK_NAME",
+    "name_resolved": "Cool Glasses",
+    "desc": "",
+    "kind": "face",
+    "frame": "10"
+  },
+  "TerminatorCoolGlasses2": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "94"
+  },
+  "CaveCatClub": {
+    "name": "ITEM_CAVECATCLUB_NAME",
+    "name_resolved": "Club",
+    "desc": "",
+    "kind": "weapon",
+    "frame": "1",
+    "ability": "wp_CaveCatClub"
+  },
+  "SuperDunceCap": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "91",
+    "int": "-10"
+  },
+  "MageCollar_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "137",
+    "int": "2"
+  },
+  "MetalPlate_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "153",
+    "con": "2",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "HuntersPatch_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "149",
+    "dex": "2"
+  },
+  "AngelicAura_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "139",
+    "int": "1",
+    "con": "1"
+  },
+  "CoinBag_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "164",
+    "speed": "1"
+  },
+  "SamsonsChains_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "138",
+    "str": "2",
+    "passive": {
+      "Metal": "1"
+    }
+  },
+  "NecromancerMask_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "150"
+  },
+  "TinkererHat_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "166"
+  },
+  "ButcherMask_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "152"
+  },
+  "PsychicMask_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "151"
+  },
+  "JesterHat_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "167"
+  },
+  "MonkMask_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "165"
+  },
+  "DruidNeck_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "neck",
+    "frame": "140"
+  },
+  "Pebble_Terminator": {
+    "name": "",
+    "desc": "",
+    "kind": "head",
+    "frame": "169",
+    "shield": "2"
+  },
+  "LoansharksFedora": {
+    "name": "",
+    "desc": "",
+    "rarity": "very_rare",
+    "kind": "head",
+    "frame": "192",
+    "passives": {
+      "CritChanceUp": "100"
+    }
+  },
+  "Rabiesface": {
+    "name": "",
+    "desc": "",
+    "kind": "face",
+    "frame": "11",
+    "passives": {}
+  }
+}

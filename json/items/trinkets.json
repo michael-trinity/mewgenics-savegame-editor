@@ -1,0 +1,2743 @@
+{
+  "RatTail": {
+    "name": "ITEM_RATTAIL_NAME",
+    "name_resolved": "Rat Tail",
+    "desc": "ITEM_RATTAIL_DESC",
+    "kind": "trinket",
+    "frame": "4",
+    "rarity": "common",
+    "set": "Rat",
+    "lck": "1"
+  },
+  "RatHeart": {
+    "name": "ITEM_RATHEART_NAME",
+    "name_resolved": "Rat Heart",
+    "desc": "ITEM_RATHEART_DESC",
+    "kind": "trinket",
+    "frame": "5",
+    "rarity": "common",
+    "set": [
+      "Rat,",
+      "Guts"
+    ],
+    "con": "1"
+  },
+  "RatBeezer": {
+    "name": "ITEM_RATBEZOAR_NAME",
+    "name_resolved": "Rat Bezoar",
+    "desc": "ITEM_RATBEZOAR_DESC",
+    "desc_resolved": "Poisonous 1.",
+    "kind": "trinket",
+    "rarity": "common",
+    "set": "Rat",
+    "frame": "6",
+    "passives": {
+      "PoisonThorns": "1"
+    }
+  },
+  "Book": {
+    "name": "ITEM_BOOK_NAME",
+    "name_resolved": "Book",
+    "desc": "ITEM_BOOK_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "90",
+    "set": "Paper",
+    "int": "1"
+  },
+  "Dumbell": {
+    "name": "ITEM_DUMBELL_NAME",
+    "name_resolved": "Dumbbell",
+    "desc": "ITEM_DUMBELL_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "91",
+    "set": "Lead",
+    "str": "1"
+  },
+  "Jazzercise": {
+    "name": "ITEM_JAZZERCISEVHSTAPE_NAME",
+    "name_resolved": "Jazzercise VHS Tape",
+    "desc": "ITEM_JAZZERCISEVHSTAPE_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "92",
+    "dex": "1"
+  },
+  "OldShoe": {
+    "name": "ITEM_OLDSHOE_NAME",
+    "name_resolved": "Old Shoe",
+    "desc": "ITEM_OLDSHOE_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "93",
+    "set": [
+      "Used,",
+      "Leather"
+    ],
+    "spd": "1"
+  },
+  "BodySpray": {
+    "name": "ITEM_BODYSPRAY_NAME",
+    "name_resolved": "Body Spray",
+    "desc": "ITEM_BODYSPRAY_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "94",
+    "cha": "1"
+  },
+  "LuckyPenny": {
+    "name": "ITEM_LUCKYPENNY_NAME",
+    "name_resolved": "Lucky Penny",
+    "desc": "ITEM_LUCKYPENNY_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "95",
+    "set": "Lucky",
+    "lck": "1"
+  },
+  "WizCheese": {
+    "name": "ITEM_WIZCHEESE_NAME",
+    "name_resolved": "Wiz Cheese",
+    "desc": "ITEM_WIZCHEESE_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "96",
+    "con": "1"
+  },
+  "SnaggleTooth": {
+    "name": "ITEM_SNAGGLETOOTH_NAME",
+    "name_resolved": "Snaggle Tooth",
+    "desc": "ITEM_SNAGGLETOOTH_DESC",
+    "desc_resolved": "Your basic attack inflicts Bleed 1.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "8",
+    "set": "Bone",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "JarOfLeeches": {
+    "name": "ITEM_JAROFLEECHES_NAME",
+    "name_resolved": "Jar of Leeches",
+    "desc": "ITEM_JAROFLEECHES_DESC",
+    "desc_resolved": "Your basic attack inflicts Leech 1.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "81",
+    "set": "Leech",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Leeches": "1"
+      }
+    }
+  },
+  "BrassKnuckles": {
+    "name": "ITEM_BRASSKNUCKLES_NAME",
+    "name_resolved": "Brass Knuckles",
+    "desc": "ITEM_BRASSKNUCKLES_DESC",
+    "desc_resolved": "Your basic attack inflicts Bruise 1.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "82",
+    "set": "Fighter",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "FlyLarva": {
+    "name": "ITEM_FLYLARVA_NAME",
+    "name_resolved": "Fly Larva",
+    "desc": "ITEM_FLYLARVA_DESC",
+    "desc_resolved": "Your basic attack inflicts Rot 1.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "83",
+    "set": "Fly",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Rot": "1"
+      }
+    }
+  },
+  "StrangeMarble": {
+    "name": "ITEM_STRANGEMARBLE_NAME",
+    "name_resolved": "Strange Marble",
+    "desc": "ITEM_STRANGEMARBLE_DESC",
+    "desc_resolved": "Your basic attack inflicts Mana Leech 1.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "84",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "ManaLeeches": "1"
+      }
+    }
+  },
+  "VibratingSkull": {
+    "name": "ITEM_VIBRATINGSKULL_NAME",
+    "name_resolved": "Vibrating Skull",
+    "desc": "ITEM_VIBRATINGSKULL_DESC",
+    "desc_resolved": "Your basic attack inflicts Magic Weakness 1.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "85",
+    "set": [
+      "Bone,",
+      "Space"
+    ],
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "MagicWeakness": "1"
+      }
+    }
+  },
+  "BoneMarrow": {
+    "name": "ITEM_BONEMARROW_NAME",
+    "name_resolved": "Bone Marrow",
+    "desc": "ITEM_BONEMARROW_DESC",
+    "desc_resolved": "Heal to full at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "9",
+    "set": [
+      "Meat,",
+      "Bone"
+    ],
+    "passives": {
+      "AddEndOfCombatRegen": "999999"
+    }
+  },
+  "Feather": {
+    "name": "ITEM_FEATHER_NAME",
+    "name_resolved": "Feather",
+    "desc": "ITEM_FEATHER_DESC",
+    "desc_resolved": "Take your turn earlier.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "31",
+    "set": "Feathered",
+    "spd": "1",
+    "passives": {
+      "AddInitiative": "100"
+    }
+  },
+  "Weight": {
+    "name": "ITEM_WEIGHT_NAME",
+    "name_resolved": "Weight",
+    "desc": "ITEM_WEIGHT_DESC",
+    "desc_resolved": "Trample. Take your turn later.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "30",
+    "set": "Lead",
+    "passives": {
+      "AddInitiative": "-20",
+      "Trample": "3"
+    }
+  },
+  "MatchStick": {
+    "name": "ITEM_MATCHSTICK_NAME",
+    "name_resolved": "Match Stick",
+    "desc": "ITEM_MATCHSTICK_DESC",
+    "desc_resolved": "Your basic attack inflicts Burn 1.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "32",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Burn": "1"
+      }
+    }
+  },
+  "BeeStinger": {
+    "name": "ITEM_BEESTINGER_NAME",
+    "name_resolved": "Bee Stinger",
+    "desc": "ITEM_BEESTINGER_DESC",
+    "desc_resolved": "Your basic attack inflicts Poison 1.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "33",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Poison": "1"
+      }
+    }
+  },
+  "PullTab": {
+    "name": "ITEM_PULLTAB_NAME",
+    "name_resolved": "Pull Tab",
+    "desc": "ITEM_PULLTAB_DESC",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "15",
+    "set": "Scrap",
+    "shield": "4"
+  },
+  "SelfDestructButton": {
+    "name": "ITEM_SELFDESTRUCTBUTTON_NAME",
+    "name_resolved": "Self-Destruct Button",
+    "desc": "ITEM_SELFDESTRUCTBUTTON_DESC",
+    "desc_resolved": "Use: Vaporize yourself and deal 50 damage to adjacent units.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "42",
+    "ability": "tr_SelfDestruct"
+  },
+  "EmptySyringe": {
+    "name": "ITEM_EMPTYSYRINGE_NAME",
+    "name_resolved": "Empty Syringe",
+    "desc": "ITEM_EMPTYSYRINGE_DESC",
+    "desc_resolved": "When you inflict Bleed or Poison, inflict +1 Bleed or Poison.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "66",
+    "set": "Medical",
+    "passives": {
+      "AmplifyStatus": "Poison"
+    }
+  },
+  "LiquidNitrogen": {
+    "name": "ITEM_LIQUIDNITROGEN_NAME",
+    "name_resolved": "Liquid Nitrogen",
+    "desc": "ITEM_LIQUIDNITROGEN_DESC",
+    "desc_resolved": "Your Ice Element damage is increased by 2.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "60",
+    "set": "Frozen",
+    "passives": {
+      "AddDamageToElementDamage": {
+        "element": "Ice",
+        "damage": "2"
+      }
+    }
+  },
+  "Ember": {
+    "name": "ITEM_EMBER_NAME",
+    "name_resolved": "Ember",
+    "desc": "ITEM_EMBER_DESC",
+    "desc_resolved": "Your Fire Element damage is increased by 1 and inflicts +1 Burn.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "61",
+    "set": "Molten",
+    "passives": {
+      "AddStatusToElementDamage": {
+        "element": "Fire",
+        "Burn": "1"
+      },
+      "AddDamageToElementDamage": {
+        "element": "Fire",
+        "damage": "1"
+      }
+    }
+  },
+  "Conductor": {
+    "name": "ITEM_CONDUCTOR_NAME",
+    "name_resolved": "Conductor",
+    "desc": "ITEM_CONDUCTOR_DESC",
+    "desc_resolved": "Your Electric Element damage is increased by 1 and has +10% chance to Stun.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "62",
+    "passives": {
+      "AddStatusToElementDamage": {
+        "element": "Electric",
+        "Stun": [
+          "1",
+          ".1"
+        ]
+      },
+      "AddDamageToElementDamage": {
+        "element": "Electric",
+        "damage": "1"
+      }
+    }
+  },
+  "FeedBag": {
+    "name": "ITEM_FEEDBAG_NAME",
+    "name_resolved": "Feed Bag",
+    "desc": "ITEM_FEEDBAG_DESC",
+    "desc_resolved": "Familiars you spawn gain +2 max HP.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "64",
+    "set": [
+      "Druid,",
+      "Hunter"
+    ],
+    "passives": {
+      "AddPassivesToMinions": {
+        "AddMaxHealth": "2",
+        "HealthGain": "2"
+      }
+    }
+  },
+  "Nightshade": {
+    "name": "ITEM_NIGHTSHADE_NAME",
+    "name_resolved": "Nightshade",
+    "desc": "ITEM_NIGHTSHADE_DESC",
+    "desc_resolved": "When you inflict Poison, inflict +2 Poison.\nStart with Poison 2.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "63",
+    "set": "Flower",
+    "passives": {
+      "Poison": "2",
+      "AmplifyStatus": "Poison"
+    }
+  },
+  "Neverstone": {
+    "name": "ITEM_NEVERSTONE_NAME",
+    "name_resolved": "Neverstone",
+    "desc": "ITEM_NEVERSTONE_DESC",
+    "desc_resolved": "Never level up.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "97",
+    "set": [
+      "Rock,",
+      "Gemstone"
+    ],
+    "prevent_level_up": "true"
+  },
+  "Pawn": {
+    "name": "ITEM_PAWN_NAME",
+    "name_resolved": "Pawn",
+    "desc": "ITEM_PAWN_DESC",
+    "desc_resolved": "Use: Move 1 tile toward the closest enemy.",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "35",
+    "durability": "10",
+    "ability": "tk_Pawn"
+  },
+  "Knight": {
+    "name": "ITEM_KNIGHT_NAME",
+    "name_resolved": "Knight",
+    "desc": "ITEM_KNIGHT_DESC",
+    "desc_resolved": "Use: Jump in an L shape.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "114",
+    "durability": "6",
+    "ability": "tk_Knight"
+  },
+  "Rook": {
+    "name": "ITEM_ROOK_NAME",
+    "name_resolved": "Rook",
+    "desc": "ITEM_ROOK_DESC",
+    "desc_resolved": "Use: Move any number of tiles in a straight line.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "36",
+    "durability": "6",
+    "ability": "tk_Rook"
+  },
+  "Queen": {
+    "name": "ITEM_QUEEN_NAME",
+    "name_resolved": "Queen",
+    "desc": "ITEM_QUEEN_DESC",
+    "desc_resolved": "Use: Move any number of tiles in a straight or diagonal line.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "37",
+    "durability": "8",
+    "ability": "tk_Queen"
+  },
+  "PetrifiedPoop": {
+    "name": "ITEM_PETRIFIEDPOOP_NAME",
+    "name_resolved": "Petrified Poop",
+    "desc": "ITEM_PETRIFIEDPOOP_DESC",
+    "desc_resolved": "Familiars you spawn gain +2 [img:shield].",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "45",
+    "set": [
+      "Rock,",
+      "Fecal"
+    ],
+    "shield": "2",
+    "passives": {
+      "AddPassivesToMinions": {
+        "Shield": "2"
+      }
+    }
+  },
+  "FishHook": {
+    "name": "ITEM_FISHHOOK_NAME",
+    "name_resolved": "Fish Hook",
+    "desc": "ITEM_FISHHOOK_DESC",
+    "desc_resolved": "If you would knockback a unit, instead deal extra damage to it equal to the knockback.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "55",
+    "set": "Barbed",
+    "passives": {
+      "StripKnockback": "1"
+    }
+  },
+  "HumanHand": {
+    "name": "ITEM_HUMANHAND_NAME",
+    "name_resolved": "Human Hand",
+    "desc": "ITEM_HUMANHAND_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "105",
+    "set": "HumanFlesh",
+    "str": "2"
+  },
+  "HumanBrain": {
+    "name": "ITEM_HUMANBRAIN_NAME",
+    "name_resolved": "Human Brain",
+    "desc": "ITEM_HUMANBRAIN_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "106",
+    "set": [
+      "HumanFlesh,",
+      "Guts"
+    ],
+    "int": "2"
+  },
+  "HumanLeg": {
+    "name": "ITEM_HUMANLEGBONE_NAME",
+    "name_resolved": "Human Leg Bone",
+    "desc": "ITEM_HUMANLEGBONE_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "107",
+    "set": "Bone",
+    "dex": "2"
+  },
+  "HumanToe": {
+    "name": "ITEM_HUMANTOE_NAME",
+    "name_resolved": "Human Toe",
+    "desc": "ITEM_HUMANTOE_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "108",
+    "set": "HumanFlesh",
+    "lck": "2"
+  },
+  "HumanHeart": {
+    "name": "ITEM_HUMANHEART_NAME",
+    "name_resolved": "Human Heart",
+    "desc": "ITEM_HUMANHEART_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "109",
+    "set": [
+      "HumanFlesh,",
+      "Guts"
+    ],
+    "con": "2"
+  },
+  "HumanFoot": {
+    "name": "ITEM_HUMANFOOT_NAME",
+    "name_resolved": "Human Foot",
+    "desc": "ITEM_HUMANFOOT_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "110",
+    "set": "HumanFlesh",
+    "spd": "2"
+  },
+  "MysteriousEye": {
+    "name": "ITEM_HUMANEYE_NAME",
+    "name_resolved": "Human Eye",
+    "desc": "ITEM_HUMANEYE_DESC",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "20",
+    "set": [
+      "HumanFlesh,",
+      "Guts"
+    ],
+    "cha": "2"
+  },
+  "D6": {
+    "name": "ITEM_D6_NAME",
+    "name_resolved": "D6",
+    "desc": "ITEM_D6_DESC",
+    "desc_resolved": "You can reroll your options when you level up.",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "89",
+    "passives": {
+      "AddLevelUpRerolls": "1"
+    }
+  },
+  "MetalSquare": {
+    "name": "ITEM_METALPLATE_NAME",
+    "name_resolved": "Metal Plate",
+    "desc": "ITEM_METALPLATE_DESC",
+    "desc_resolved": "Gain +1 Brace when you kill an enemy.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "86",
+    "set": "Scrap",
+    "passives": {
+      "StatusOnKillEnemy": {
+        "Brace": "1"
+      }
+    }
+  },
+  "BlinkingEyeball": {
+    "name": "ITEM_BLINKINGEYEBALL_NAME",
+    "name_resolved": "Blinking Eyeball",
+    "desc": "ITEM_BLINKINGEYEBALL_DESC",
+    "desc_resolved": "Your line of sight restrictions are ignored.",
+    "kind": "trinket",
+    "frame": "10",
+    "set": "Guts",
+    "passives": {
+      "RemoveLineOfSightRestrictions": "1"
+    }
+  },
+  "GoldenTooth": {
+    "name": "ITEM_GOLDENTOOTH_NAME",
+    "name_resolved": "Golden Tooth",
+    "desc": "ITEM_GOLDENTOOTH_DESC",
+    "desc_resolved": "Becomes {aux} coins when you return home.",
+    "kind": "trinket",
+    "frame": "11",
+    "lck": "4",
+    "on_store": "become_aux_coins",
+    "aux": "125"
+  },
+  "WaterBottle_Full": {
+    "name": "ITEM_WATERBOTTLEFULL_NAME",
+    "name_resolved": "Water Bottle",
+    "desc": "ITEM_WATERBOTTLEFULL_DESC",
+    "desc_resolved": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
+    "kind": "trinket",
+    "frame": "128",
+    "durability": "2",
+    "max_durability": "2",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_WaterBottle_Full",
+    "passives": {
+      "DurabilityTransform": {
+        "eq": [
+          "0",
+          "WaterBottle_Empty"
+        ]
+      }
+    }
+  },
+  "WaterBottle_Half": {
+    "name": "ITEM_WATERBOTTLEHALF_NAME",
+    "name_resolved": "Water Bottle",
+    "desc": "ITEM_WATERBOTTLEHALF_DESC",
+    "desc_resolved": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
+    "kind": "trinket",
+    "frame": "129",
+    "durability": "1",
+    "max_durability": "2",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_WaterBottle_Half",
+    "passives": {
+      "TransformItemOnElementInfluence": {
+        "element": "Greater_Water",
+        "item": "WaterBottle_Full",
+        "full_repair": "true"
+      },
+      "DurabilityTransform": {
+        "ge": [
+          "2",
+          "WaterBottle_Full"
+        ],
+        "eq": [
+          "0",
+          "WaterBottle_Empty"
+        ]
+      }
+    }
+  },
+  "WaterBottle_Empty": {
+    "name": "ITEM_WATERBOTTLEEMPTY_NAME",
+    "name_resolved": "Empty Water Bottle",
+    "desc": "ITEM_WATERBOTTLEMPTY_DESC",
+    "desc_resolved": "Use: Throw it at something.\nRefills when affected by Water Element effects.",
+    "kind": "trinket",
+    "frame": "130",
+    "durability": "0",
+    "max_durability": "2",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_WaterBottle_Empty",
+    "passives": {
+      "TransformItemOnElementInfluence": {
+        "element": "Greater_Water",
+        "item": "WaterBottle_Full",
+        "full_repair": "true"
+      },
+      "DurabilityTransform": {
+        "ge": [
+          "2",
+          "WaterBottle_Full"
+        ],
+        "eq": [
+          "1",
+          "WaterBottle_Half"
+        ]
+      }
+    }
+  },
+  "BloodyCoin": {
+    "name": "ITEM_BLOODYCOIN_NAME",
+    "name_resolved": "Bloody Coin",
+    "desc": "ITEM_BLOODYCOIN_DESC",
+    "desc_resolved": "Use: Flip a coin.\nHeads: Refresh your basic attack.\nTails: Lose 50% of your HP.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "38",
+    "ability": "tk_BloodyCoin"
+  },
+  "GlowingCoin": {
+    "name": "ITEM_GLOWINGCOIN_NAME",
+    "name_resolved": "Glowing Coin",
+    "desc": "ITEM_GLOWINGCOIN_DESC",
+    "desc_resolved": "Use: Flip a coin.\nHeads: Double your mana.\nTails: Lose 50% of your mana.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "39",
+    "ability": "tk_GlowingCoin"
+  },
+  "ElectricCoin": {
+    "name": "ITEM_ELECTRICCOIN_NAME",
+    "name_resolved": "Electric Coin",
+    "desc": "ITEM_ELECTRICCOIN_DESC",
+    "desc_resolved": "Use: Flip a coin.\nHeads: Refresh your movement action.\nTails: Gain Slow 2.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "40",
+    "ability": "tk_ElectricCoin"
+  },
+  "CounterfeitCoin": {
+    "name": "ITEM_COUNTERFEITCOIN_NAME",
+    "name_resolved": "Counterfeit Coin",
+    "desc": "ITEM_COUNTERFEITCOIN_DESC",
+    "desc_resolved": "Use: Flip a coin.\nHeads: Gain 5 coins.\nTails: Lose 5 coins.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "41",
+    "ability": "tk_CounterfeitCoin"
+  },
+  "Whistle": {
+    "name": "ITEM_WHISTLE_NAME",
+    "name_resolved": "Whistle",
+    "desc": "ITEM_WHISTLE_DESC",
+    "desc_resolved": "Use: Summon a Fly, Maggot or Flea familiar.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "common",
+    "frame": "16",
+    "set": [
+      "Druid,",
+      "Hunter"
+    ],
+    "ability": "tk_Whistle"
+  },
+  "Metronome": {
+    "name": "ITEM_METRONOME_NAME",
+    "name_resolved": "Metronome",
+    "desc": "ITEM_METRONOME_DESC",
+    "desc_resolved": "Use: Cast a random upgraded spell.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "17",
+    "set": "Jester",
+    "ability": "tk_Metronome"
+  },
+  "TinkerTools": {
+    "name": "ITEM_TINKERTOOLS_NAME",
+    "name_resolved": "Tinker Tools",
+    "desc": "ITEM_TINKERTOOLS_DESC",
+    "desc_resolved": "Repair 1 use to your items at the end of each battle.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "18",
+    "set": "Tinkerer",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "RepairAll": "1"
+      }
+    }
+  },
+  "RingOfFrost": {
+    "name": "ITEM_RINGOFFROST_NAME",
+    "name_resolved": "Ring of Frost",
+    "desc": "ITEM_RINGOFFROST_DESC",
+    "desc_resolved": "Freezes tiles you walk over. +25% chance to inflict Freeze on units that contact or attack you.\nYour Ice Element damage is increased by 1.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "177",
+    "set": [
+      "Mage,",
+      "Frozen"
+    ],
+    "passives": {
+      "AddDamageToElementDamage": {
+        "element": "Ice",
+        "damage": "1"
+      },
+      "RevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Freeze": [
+            "1,",
+            ".25"
+          ]
+        }
+      },
+      "InnateElement": "Ice"
+    }
+  },
+  "LuckyCoinPurse": {
+    "name": "ITEM_LUCKYCOINPURSE_NAME",
+    "name_resolved": "Lucky Coin Purse",
+    "desc": "ITEM_LUCKYCOINPURSE_DESC",
+    "desc_resolved": "Gain +2 [img:lck] each time you gain a coin.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "178",
+    "set": [
+      "Thief,",
+      "Lucky"
+    ],
+    "passives": {
+      "StatusOnGainCoins": {
+        "LuckUp": "2"
+      }
+    }
+  },
+  "RageJuice": {
+    "name": "ITEM_RAGEJUICE_NAME",
+    "name_resolved": "Rage Juice",
+    "desc": "ITEM_RAGEJUICE_DESC",
+    "desc_resolved": "Use: Gain +4 [img:str], +4 [img:spd], Brace 2 and Madness for the rest of the battle.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "179",
+    "set": "Fighter",
+    "ability": "tk_RageJuice"
+  },
+  "PrayerCard": {
+    "name": "ITEM_PRAYERCARD_NAME",
+    "name_resolved": "Prayer Card",
+    "desc": "ITEM_PRAYERCARD_DESC",
+    "desc_resolved": "33% chance to gain +1 [img:divineshield] each time you take damage.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "180",
+    "set": [
+      "Cleric,",
+      "Cardboard,",
+      "Paper"
+    ],
+    "passives": {
+      "StatusOnTookDamage": {
+        "DivineShield": [
+          "1,",
+          ".33"
+        ]
+      }
+    }
+  },
+  "TankToy": {
+    "name": "ITEM_TANKTOY_NAME",
+    "name_resolved": "Tank Toy",
+    "desc": "ITEM_TANKTOY_DESC",
+    "desc_resolved": "Trample.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "181",
+    "set": "Tank",
+    "shield": "5",
+    "passives": {
+      "Trample": "3"
+    }
+  },
+  "BagOfSeeds": {
+    "name": "ITEM_BAGOFSEEDS_NAME",
+    "name_resolved": "Bag of Seeds",
+    "desc": "ITEM_BAGOFSEEDS_DESC",
+    "desc_resolved": "Use: Spawn grass, flowers, or brambles on an adjacent tile.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "182",
+    "set": "Druid",
+    "ability": "tk_BagOfSeeds"
+  },
+  "Libra": {
+    "name": "ITEM_LIBRA_NAME",
+    "name_resolved": "Libra",
+    "desc": "ITEM_LIBRA_DESC",
+    "desc_resolved": "Balances all stats. This applies after all stat modifiers.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "174",
+    "set": "Space",
+    "passives": {
+      "BalanceStats": "1"
+    }
+  },
+  "BallOfBandages": {
+    "name": "ITEM_BALLOFBANDAGES_NAME",
+    "name_resolved": "Ball of Bandages",
+    "desc": "ITEM_BALLOFBANDAGES_DESC",
+    "desc_resolved": "Cleanse one stack of a random debuff at the end of each turn.\n+1 Health Regen.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "99",
+    "set": "Nurse",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "PartialCleanse": "1"
+      },
+      "HealthRegenUp": "1"
+    }
+  },
+  "Rosary": {
+    "name": "ITEM_ROSARY_NAME",
+    "desc": "ITEM_ROSARY_DESC",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "77",
+    "passives": {}
+  },
+  "WeatherVane": {
+    "name": "ITEM_WEATHERVANE_NAME",
+    "desc": "ITEM_WEATHERVANE_DESC",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "78",
+    "passives": {}
+  },
+  "Natural20": {
+    "name": "ITEM_NATURAL20_NAME",
+    "name_resolved": "Natural 20",
+    "desc": "ITEM_NATURAL20_DESC",
+    "desc_resolved": "Your weapons have +50% Crit Chance.\nYour basic attack has +10% Crit Chance.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "34",
+    "passives": {
+      "BoostWeaponDamage": {
+        "damage": "0",
+        "crit_chance": ".5"
+      },
+      "BasicAttackCritChance": ".1"
+    }
+  },
+  "Technology": {
+    "name": "ITEM_TECHNOLOGY_NAME",
+    "name_resolved": "Technology",
+    "desc": "ITEM_TECHNOLOGY_DESC",
+    "desc_resolved": "Use: Shoot a laser beam.\n[s:.7](Usable once per battle.)[/s]\nRefreshes when affected by Electricity.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "46",
+    "set": [
+      "Cyborg,",
+      "Bionic"
+    ],
+    "ability": "tk_Technology",
+    "passives": {
+      "RefreshEquipmentAbilityOnElement": {
+        "element": "Electric",
+        "text": "COMBAT_POPUP_RECHARGED",
+        "text_resolved": "Recharged!"
+      }
+    }
+  },
+  "Spring": {
+    "name": "ITEM_SPRING_NAME",
+    "name_resolved": "Spring",
+    "desc": "ITEM_SPRING_DESC",
+    "desc_resolved": "Your movement action is Jump.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "47",
+    "set": "Scrap",
+    "spd": "2",
+    "passives": {
+      "ReplaceBasicMove": "BasicJump"
+    }
+  },
+  "RedDrink": {
+    "name": "ITEM_REDDRINK_NAME",
+    "name_resolved": "Red Drink",
+    "desc": "ITEM_REDDRINK_DESC",
+    "desc_resolved": "Use: Heal 5 HP.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "48",
+    "ability": "tk_RedDrink"
+  },
+  "GreenDrink": {
+    "name": "ITEM_GREENDRINK_NAME",
+    "name_resolved": "Green Drink",
+    "desc": "ITEM_GREENDRINK_DESC",
+    "desc_resolved": "Use: Gain 5 mana.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "49",
+    "ability": "tk_GreenDrink"
+  },
+  "PurpleDrink": {
+    "name": "ITEM_PURPLEDRINK_NAME",
+    "name_resolved": "Purple Drink",
+    "desc": "ITEM_PURPLEDRINK_DESC",
+    "desc_resolved": "Use: Heal 2 HP, gain 2 mana and +1 [img:shield].\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "50",
+    "ability": "tk_PurpleDrink"
+  },
+  "LilBattery": {
+    "name": "ITEM_LILBATTERY_NAME",
+    "name_resolved": "Lil' Battery",
+    "desc": "ITEM_LILBATTERY_DESC",
+    "desc_resolved": "Use: Refresh all items and spells with a once per battle restriction.\nCan be used on allies.\n[s:.7](Usable once per battle. Can't be refreshed.)[/s]",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "51",
+    "ability": "tk_LilBattery"
+  },
+  "CarvingKnife": {
+    "name": "ITEM_CARVINGKNIFE_NAME",
+    "name_resolved": "Carving Knife",
+    "desc": "ITEM_CARVINGKNIFE_DESC",
+    "desc_resolved": "Use: Take 2 damage and spawn a Meat pickup.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "52",
+    "ability": "tk_CarvingKnife"
+  },
+  "RazorBlade": {
+    "name": "ITEM_RAZORBLADE_NAME",
+    "name_resolved": "Razor Blade",
+    "desc": "ITEM_RAZORBLADE_DESC",
+    "desc_resolved": "Use: Take 5 damage and gain +2 [img:str] and +2 [img:dex].",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "53",
+    "ability": "tk_RazorBlade"
+  },
+  "Teleport": {
+    "name": "ITEM_TELEPORT_NAME",
+    "name_resolved": "Teleport!",
+    "desc": "ITEM_TELEPORT_DESC",
+    "desc_resolved": "Use: Teleport to any open tile.\n[s:.7](Usable once per battle.)[/s]",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "54",
+    "set": "Experimental",
+    "ability": "tk_Teleport"
+  },
+  "SmallEye": {
+    "name": "ITEM_SMALLEYE_NAME",
+    "name_resolved": "Small Eye",
+    "desc": "ITEM_SMALLEYE_DESC",
+    "desc_resolved": "+15% Dodge Chance.\nYour basic attack has a +10% chance to inflict Fear.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "58",
+    "set": "Guts",
+    "passives": {
+      "DodgeChance": "15%",
+      "AddStatusToBasicAttack": {
+        "Fear": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "Stickman": {
+    "name": "ITEM_STICKMAN_NAME",
+    "name_resolved": "Stickman",
+    "desc": "ITEM_STICKMAN_DESC",
+    "desc_resolved": "Gain All Stats Up when you deal damage to a party member.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "67",
+    "set": [
+      "Wood,",
+      "Demonic"
+    ],
+    "passives": {
+      "ExtraStatusWhenDealingDamage": {
+        "Conditional_PartyMember": {
+          "Conditional_IsSelf": {},
+          "Else": {
+            "ApplyToSource": {
+              "AllStatsUp": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "CursedStickman": {
+    "name": "ITEM_CURSEDSTICKMAN_NAME",
+    "name_resolved": "Cursed Stickman",
+    "desc": "ITEM_CURSEDSTICKMAN_DESC",
+    "desc_resolved": "Gain All Stats Up when you deal damage to a party member.\n10% chance to gain Madness at the start of your turn.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "cursed": "true",
+    "frame": "68",
+    "set": [
+      "Wood,",
+      "Demonic"
+    ],
+    "passives": {
+      "StatusEachTurnBegin": {
+        "Conditional_BadRoll": {
+          "odds": ".1",
+          "Temporary": {
+            "status": "Madness",
+            "stacks": "1",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        }
+      },
+      "ExtraStatusWhenDealingDamage": {
+        "Conditional_PartyMember": {
+          "Conditional_IsSelf": {},
+          "Else": {
+            "ApplyToSource": {
+              "AllStatsUp": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "GlowingSeed": {
+    "name": "ITEM_GLOWINGSEED_NAME",
+    "name_resolved": "Glowing Seed",
+    "desc": "ITEM_GLOWINGSEED_DESC",
+    "desc_resolved": "Your basic attack spawns tall grass.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "71",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "ChangeTile": "TallGrassTile"
+      }
+    }
+  },
+  "MagicSeed": {
+    "name": "ITEM_MAGICSEED_NAME",
+    "name_resolved": "Magic Seed",
+    "desc": "ITEM_MAGICSEED_DESC",
+    "desc_resolved": "Your basic attack spawns brambles.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "113",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "ChangeTile": "BrambleTile"
+      }
+    }
+  },
+  "WeirdEgg": {
+    "name": "ITEM_WEIRDEGG_NAME",
+    "name_resolved": "Weird Egg",
+    "desc": "ITEM_WEIRDEGG_DESC",
+    "desc_resolved": "10% chance to spawn a controllable Fetus familiar at the end of each turn. It joins your party.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "73",
+    "set": "Baby",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Conditional_GoodRoll": {
+          "odds": "10%",
+          "ForceUseAbility": "tk_WeirdEgg_Spawn"
+        }
+      }
+    }
+  },
+  "SpottedMushroom": {
+    "name": "ITEM_SPOTTEDMUSHROOM_NAME",
+    "name_resolved": "Spotted Mushroom",
+    "desc": "ITEM_SPOTTEDMUSHROOM_DESC",
+    "kind": "trinket",
+    "rarity": "common",
+    "frame": "74",
+    "set": "Druid",
+    "str_aux_initialize": "random_seed",
+    "passives": {
+      "RandomSeededStatModifier": [
+        "2",
+        "-1"
+      ]
+    }
+  },
+  "MundaneStone": {
+    "name": "ITEM_MUNDANESTONE_NAME",
+    "name_resolved": "Mundane Stone",
+    "desc": "ITEM_MUNDANESTONE_DESC",
+    "desc_resolved": "Your basic attack's damage is increased by your lowest stat minus 2.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "88",
+    "set": "Rock",
+    "passives": {
+      "StatDependentPassive": {
+        "AddDamageToBasicAttack": "min(min(min(min(min(min(str,dex),int),con),lck),spd),cha)-2"
+      }
+    }
+  },
+  "EmptySack": {
+    "name": "ITEM_EMPTYSACK_NAME",
+    "name_resolved": "Empty Sack",
+    "desc": "ITEM_EMPTYSACK_DESC",
+    "desc_resolved": "Spawn 3 pickups at the start of each battle.\nFind an extra common item at the end of each battle.",
+    "kind": "trinket",
+    "rarity": "uncommmon",
+    "frame": "115",
+    "set": [
+      "Leather,",
+      "HumanFlesh"
+    ],
+    "passives": {
+      "StatusOnBattleStart": {
+        "FindItemFromPool": "common"
+      },
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "RandomPickup",
+        "number": "3"
+      }
+    }
+  },
+  "AAABattery": {
+    "name": "ITEM_AAABATTERY_NAME",
+    "name_resolved": "AAA Battery",
+    "desc": "ITEM_AAABATTERY_DESC",
+    "desc_resolved": "Every time you cast 3 spells, gain +3 Charge.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "117",
+    "passives": {
+      "StatusEveryXSpellCasts": {
+        "stacks": "3",
+        "Charge": "3"
+      }
+    }
+  },
+  "ToolBox": {
+    "name": "ITEM_TOOLBOX_NAME",
+    "name_resolved": "Tool Box",
+    "desc": "ITEM_TOOLBOX_DESC",
+    "desc_resolved": "Your items lose Brittle and Fragile.\nYour weapons have a 25% chance to repair 1 use when used.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "118",
+    "set": "Tinkerer",
+    "passives": {
+      "SetBrittleImmune": "",
+      "SetFragileImmune": "",
+      "AddSelfStatusToWeapons": {
+        "RepairWeapon": [
+          "1",
+          ".25"
+        ]
+      }
+    }
+  },
+  "RubberCement": {
+    "name": "ITEM_RUBBERCEMENT_NAME",
+    "name_resolved": "Rubber Cement",
+    "desc": "ITEM_RUBBERCEMENT_DESC",
+    "desc_resolved": "Your projectiles bounce to another enemy within 2 tiles.",
+    "kind": "trinket",
+    "rarity": "rare",
+    "frame": "124",
+    "set": [
+      "Rubber,",
+      "Slimy"
+    ],
+    "passives": {
+      "BouncyProjectiles": {
+        "max_bounces": "1",
+        "max_range": "2"
+      }
+    }
+  },
+  "CoinPurse": {
+    "name": "ITEM_COINPURSE_NAME",
+    "name_resolved": "Coin Purse",
+    "desc": "ITEM_COINPURSE_DESC",
+    "desc_resolved": "When you collect a coin pickup, gain +1 coin.\nFind an extra coin at the end of each battle.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "125",
+    "set": "Mother",
+    "passives": {
+      "StatusOnPickupCoins": {
+        "GainCoins": "1"
+      },
+      "StatusOnBattleEnd": {
+        "GainCoins": "1"
+      }
+    }
+  },
+  "Fork": {
+    "name": "ITEM_FORK_NAME",
+    "name_resolved": "Fork",
+    "desc": "ITEM_FORK_DESC",
+    "desc_resolved": "Heal 5 HP when you kill a unit or destroy a corpse.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "126",
+    "passives": {
+      "StatusOnKill": {
+        "HealthGain": "5"
+      },
+      "StatusOnPopCorpse": {
+        "HealthGain": "5"
+      }
+    }
+  },
+  "CatONineTails": {
+    "name": "ITEM_CATONINETAILS_NAME",
+    "name_resolved": "Cat o' Nine Tails",
+    "desc": "ITEM_CATONINETAILS_DESC",
+    "desc_resolved": "Use: Take 1 damage and cleanse one random debuff.",
+    "kind": "trinket",
+    "rarity": "uncommon",
+    "frame": "127",
+    "set": "Gimp",
+    "ability": "tk_CatONineTails"
+  },
+  "Glue": {
+    "name": "ITEM_GLUE_NAME",
+    "name_resolved": "Glue",
+    "desc": "ITEM_GLUE_DESC",
+    "desc_resolved": "Use: Gain +20% Dodge Chance, -1 [img:int] and Confusion 2.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "137",
+    "durability": [
+      "5",
+      "8"
+    ],
+    "set": "Slimy",
+    "ability": "tk_Glue"
+  },
+  "MyShadow": {
+    "name": "ITEM_MYSHADOW_NAME",
+    "name_resolved": "My Shadow",
+    "desc": "ITEM_MYSHADOW_DESC",
+    "desc_resolved": "Use: Move 3 tiles, leaving a shadow copy behind that mimics your basic attack.\nThe shadow fades at the end of the turn.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "133",
+    "set": "Demonic",
+    "durability": "6",
+    "ability": "tk_MyShadow"
+  },
+  "EggSack": {
+    "name": "ITEM_EGGSACK_NAME",
+    "name_resolved": "Egg Sack",
+    "desc": "ITEM_EGGSACK_DESC",
+    "desc_resolved": "Use: Spawns Spiderlings in an area.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "134",
+    "durability": [
+      "4",
+      "6"
+    ],
+    "ability": "tk_EggSack"
+  },
+  "GorgonsEye": {
+    "name": "ITEM_GORGONSEYE_NAME",
+    "name_resolved": "Gorgon's Eye",
+    "desc": "ITEM_GORGONSEYE_DESC",
+    "desc_resolved": "Use: Petrify all nearby units in your line of sight.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "135",
+    "durability": [
+      "5",
+      "7"
+    ],
+    "set": [
+      "Guts,",
+      "Rock"
+    ],
+    "ability": "tk_GorgonsEye"
+  },
+  "HotLunch": {
+    "name": "ITEM_HOTLUNCH_NAME",
+    "name_resolved": "Hot Lunch",
+    "desc": "ITEM_HOTLUNCH_DESC",
+    "desc_resolved": "Spawn a Flaming Meat pickup.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "139",
+    "durability": [
+      "5",
+      "8"
+    ],
+    "set": "Paper",
+    "ability": "tk_HotLunch"
+  },
+  "ButterBean": {
+    "name": "ITEM_BUTTERBEAN_NAME",
+    "name_resolved": "Butter Bean",
+    "desc": "ITEM_BUTTERBEAN_DESC",
+    "desc_resolved": "Use: Fart at an adjacent unit, knocking it back 1 tile.",
+    "rarity": "common",
+    "kind": "trinket",
+    "frame": "140",
+    "ability": "tk_ButterBean"
+  },
+  "MomsRing": {
+    "name": "ITEM_MOMSRING_NAME",
+    "name_resolved": "Mom's Ring",
+    "desc": "ITEM_MOMSRING_DESC",
+    "desc_resolved": "+1 Damage. Find a pill at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "142",
+    "set": "Mother",
+    "passives": {
+      "DamageUp": "1",
+      "StatusOnBattleEnd": {
+        "FindItemFromPool": "pills"
+      }
+    }
+  },
+  "MindStone": {
+    "name": "ITEM_MINDSTONE_NAME",
+    "name_resolved": "Mind Stone",
+    "desc": "ITEM_MINDSTONE_DESC",
+    "desc_resolved": "Your collarless spells cost -2 mana.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "146",
+    "set": "Rock",
+    "passives": {
+      "ClassManaCostReduction": {
+        "class": "Colorless",
+        "reduction": "2"
+      }
+    }
+  },
+  "SkillStone": {
+    "name": "ITEM_SKILLSTONE_NAME",
+    "name_resolved": "Skill Stone",
+    "desc": "ITEM_SKILLSTONE_DESC",
+    "desc_resolved": "Spells that match your class cost -1 mana.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "147",
+    "set": "Rock",
+    "passives": {
+      "ClassManaCostReduction": {
+        "reduction": "1"
+      }
+    }
+  },
+  "Multiplier": {
+    "name": "ITEM_MULTIPLIER_NAME",
+    "name_resolved": "Multiplier",
+    "desc": "ITEM_MULTIPLIER_DESC",
+    "desc_resolved": "You can use your weapon an extra time each turn.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "148",
+    "passives": {
+      "ExtraWeaponAttacks": "1"
+    }
+  },
+  "SacredHeart": {
+    "name": "ITEM_SACREDHEART_NAME",
+    "name_resolved": "Sacred Heart",
+    "desc": "ITEM_SACREDHEART_DESC",
+    "desc_resolved": "+1 Damage. Emit 2 Sparkles when you use your basic attack.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "153",
+    "set": "Cleric",
+    "passives": {
+      "DamageUp": "1",
+      "AddSelfStatusToBasicAttack": {
+        "RandomMagicMissile": "2"
+      }
+    }
+  },
+  "FetusInAJar": {
+    "name": "ITEM_FETUSINAJAR_NAME",
+    "name_resolved": "Fetus in a Jar",
+    "desc": "ITEM_FETUSINAJAR_DESC",
+    "desc_resolved": "At the the start of each battle, equip a temporary Bomb if your weapon slot is open.\nAt the end of each turn, if you didn't use your basic attack, equip another Bomb.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "155",
+    "set": "Baby",
+    "passives": {
+      "StatusOnBattleStart": {
+        "Craft": {
+          "pool": "bombs",
+          "slot": "weapon",
+          "works_with_tech": "true"
+        }
+      },
+      "StatusIfUnusedActPoints": {
+        "Craft": {
+          "pool": "bombs",
+          "slot": "weapon",
+          "works_with_tech": "true"
+        }
+      }
+    }
+  },
+  "Breakfast": {
+    "name": "ITEM_BREAKFAST_NAME",
+    "name_resolved": "Breakfast",
+    "desc": "ITEM_BREAKFAST_DESC",
+    "desc_resolved": "+2 Health Regen.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "157",
+    "set": "Cardboard",
+    "passives": {
+      "HealthRegenUp": "2"
+    }
+  },
+  "DreamCatcher": {
+    "name": "ITEM_DREAMCATCHER_NAME",
+    "name_resolved": "Dream Catcher",
+    "desc": "ITEM_DREAMCATCHER_DESC",
+    "desc_resolved": "Whenever you fall asleep, gain All Stats Up, restore all your mana, and heal a random injury.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "158",
+    "set": "Twine",
+    "passives": {
+      "StatusOnFallAsleep": {
+        "AllStatsUp": "1",
+        "FillMana": "1",
+        "HealRandomInjury": "1"
+      }
+    }
+  },
+  "EnchantingPoop": {
+    "name": "ITEM_ENCHANTINGPOOP_NAME",
+    "name_resolved": "Enchanting Poop",
+    "desc": "ITEM_ENCHANTINGPOOP_DESC",
+    "desc_resolved": "Spawn a poop at the start of each battle.",
+    "kind": "trinket",
+    "frame": "159",
+    "set": "Fecal",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "Poop"
+      }
+    }
+  },
+  "EnchantingPoop_Cursed": {
+    "variant_of": "EnchantingPoop",
+    "cursed": "true"
+  },
+  "LunchBox": {
+    "name": "ITEM_LUNCHBOX_NAME",
+    "name_resolved": "Lunch Box",
+    "desc": "ITEM_LUNCHBOX_DESC",
+    "desc_resolved": "Use: Heal 5 HP.\nWhenever you collect a food pickup, instead of its normal effects, add +1 use to this item.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "176",
+    "durability": "0",
+    "max_durability": "9",
+    "dont_destroy_on_0": "true",
+    "passives": {
+      "StatusOnEatFood": {
+        "TempPassiveUntilSettled": {
+          "LimitHeal": "0"
+        },
+        "RepairTrinket": "1"
+      }
+    },
+    "ability": "tk_LunchBox"
+  },
+  "SatanicBible": {
+    "name": "ITEM_SATANICBIBLE_NAME",
+    "name_resolved": "Satanic Bible",
+    "desc": "ITEM_SATANICBIBLE_DESC",
+    "desc_resolved": "Heal 3 HP and gain +3 Charge each time you damage a party member.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "184",
+    "set": [
+      "Demonic,",
+      "Paper"
+    ],
+    "passives": {
+      "ExtraStatusWhenDealingDamage": {
+        "Conditional_PartyMember": {
+          "Conditional_IsSelf": {},
+          "Else": {
+            "ApplyToSource": {
+              "HealthGain": "3",
+              "Charge": "3"
+            }
+          }
+        }
+      }
+    }
+  },
+  "TinyPebble": {
+    "name": "ITEM_TINYPEBBLE_NAME",
+    "name_resolved": "Tiny Pebble",
+    "desc": "ITEM_TINYPEBBLE_DESC",
+    "desc_resolved": "+10% Dodge Chance.\nGain +2% Dodge Chance when you dodge an attack.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "185",
+    "set": "Rock",
+    "passives": {
+      "DodgeChance_Status": "10",
+      "StatusOnDodge": {
+        "DodgeChance_Status": "2"
+      }
+    }
+  },
+  "ScrapBag": {
+    "name": "ITEM_SCRAPBAG_NAME",
+    "name_resolved": "Scrap Bag",
+    "desc": "ITEM_SCRAPBAG_DESC",
+    "desc_resolved": "Craft a temporary weapon at the start of the battle if you don't have a weapon.",
+    "rarity": "uncommmon",
+    "kind": "trinket",
+    "frame": "186",
+    "set": [
+      "Scrap,",
+      "Tinkerer"
+    ],
+    "passives": {
+      "StatusOnBattleStart": {
+        "Craft": {
+          "pool": "tinkerer_default",
+          "slot": "weapon"
+        }
+      }
+    }
+  },
+  "Cookbook": {
+    "name": "ITEM_COOKBOOK_NAME",
+    "name_resolved": "Cookbook",
+    "desc": "ITEM_COOKBOOK_DESC",
+    "desc_resolved": "When you kill a unit or destroy a corpse, it becomes meat.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "187",
+    "set": [
+      "Butcher,",
+      "Paper"
+    ],
+    "passives": {
+      "KillsToMeat": "Food"
+    }
+  },
+  "TarotDeck": {
+    "name": "ITEM_TAROTDECK_NAME",
+    "name_resolved": "Tarot Deck",
+    "desc": "ITEM_TAROTDECK_DESC",
+    "desc_resolved": "Use: Conjure a random, single-use spell as a bonus ability.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "183",
+    "set": [
+      "Psychic,",
+      "Cardboard,",
+      "Paper"
+    ],
+    "ability": "tk_TarotDeck",
+    "passives": {}
+  },
+  "TinyCage": {
+    "name": "ITEM_TINYCAGE_NAME",
+    "name_resolved": "Tiny Cage",
+    "desc": "ITEM_TINYCAGE_DESC",
+    "desc_resolved": "Spawn a random animal familiar at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "188",
+    "set": "Druid",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "RandomDruidFamiliar",
+        "number": "1"
+      }
+    }
+  },
+  "SpellBook": {
+    "name": "ITEM_SPELLBOOK_NAME",
+    "name_resolved": "Spell Book",
+    "desc": "ITEM_SPELLBOOK_DESC",
+    "desc_resolved": "Use: Gain 10 mana and conjure a random Mage spell as a bonus ability.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "207",
+    "set": [
+      "Mage,",
+      "Paper"
+    ],
+    "durability": "2",
+    "ability": "tk_SpellBook",
+    "passives": {}
+  },
+  "BagOfBags": {
+    "name": "ITEM_BAGOFBAGS_NAME",
+    "name_resolved": "Bag o' Bags",
+    "desc": "ITEM_BAGOFBAGS_DESC",
+    "desc_resolved": "Use: Throw a trash bag on an adjacent tile.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "208",
+    "durability": "13",
+    "ability": "tk_BagOfBags",
+    "passives": {}
+  },
+  "Steroids": {
+    "name": "ITEM_STEROIDS_NAME",
+    "name_resolved": "Steroids",
+    "desc": "ITEM_STEROIDS_DESC",
+    "desc_resolved": "Use: Gain +1 [img:str], permanently. For the rest of the adventure, you have a +2% chance to gain Madness at the start of each turn.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "209",
+    "set": "Fighter",
+    "durability": "9",
+    "ability": "tk_Steroids",
+    "passives": {}
+  },
+  "HolyWater": {
+    "name": "ITEM_HOLYWATER_NAME",
+    "name_resolved": "Holy Water",
+    "desc": "ITEM_HOLYWATER_DESC",
+    "desc_resolved": "Heal 2 HP in an area.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "210",
+    "set": "Cleric",
+    "ability": "tk_HolyWater",
+    "passives": {}
+  },
+  "TankJuice": {
+    "name": "ITEM_TANKJUICE_NAME",
+    "name_resolved": "Tank Juice",
+    "desc": "ITEM_TANKJUICE_DESC",
+    "desc_resolved": "Use: Gain -1 [img:spd], then, for the rest of the turn, all damage you deal has Knockback 2 and Chain Knockback.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "211",
+    "set": "Tank",
+    "ability": "tk_TankJuice",
+    "passives": {}
+  },
+  "HuntersFlute": {
+    "name": "ITEM_HUNTERSFLUTE_NAME",
+    "name_resolved": "Hunter's Flute",
+    "desc": "ITEM_HUNTERSFLUTE_DESC",
+    "desc_resolved": "Spawn 2-3 random familiars on adjacent tiles.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "212",
+    "set": "Hunter",
+    "ability": "tk_HuntersFlute",
+    "passives": {}
+  },
+  "FriendshipBracelet": {
+    "name": "ITEM_FRIENDSHIPBRACELET_NAME",
+    "name_resolved": "Friendship Bracelet",
+    "desc": "ITEM_FRIENDSHIPBRACELET_DESC",
+    "desc_resolved": "Use: Permanently charm a non-boss enemy. It joins your party.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "213",
+    "set": "Druid",
+    "durability": "3",
+    "ability": "tk_FriendshipBracelet",
+    "passives": {}
+  },
+  "CambionConception": {
+    "name": "ITEM_CAMBIONCONCEPTION_NAME",
+    "name_resolved": "Cambion Conception",
+    "desc": "ITEM_CAMBIONCONCEPTION_DESC",
+    "desc_resolved": "Use: Summon a half-sized copy of yourself that has 66% of your stats and is AI controlled.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "214",
+    "set": [
+      "Necromancer,",
+      "Demonic,",
+      "Baby"
+    ],
+    "durability": "2",
+    "ability": "tk_CambionConception",
+    "passives": {}
+  },
+  "EmptyHand": {
+    "name": "ITEM_EMPTYHAND_NAME",
+    "name_resolved": "Empty Hand",
+    "desc": "ITEM_EMPTYHAND_DESC",
+    "desc_resolved": "Use: Gain +3 [img:shield] for each empty armor slot you have.\nWhen this breaks, gain +1 [img:con] permanently.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "215",
+    "set": "Monk",
+    "durability": "4",
+    "ability": "tk_EmptyHand",
+    "passives": {
+      "StatusOnBreak": {
+        "ConstitutionUp": "1"
+      }
+    }
+  },
+  "Fireworks": {
+    "name": "ITEM_FIREWORKS_NAME",
+    "name_resolved": "Fireworks",
+    "desc": "ITEM_FIREWORKS_DESC",
+    "desc_resolved": "Use: Emit 5 Sparkles.\nIf you end your turn with 0 mana, this gains +1 use.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "216",
+    "set": "Tinkerer",
+    "durability": "3",
+    "ability": "tk_Fireworks",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Conditional_ManaThreshold": {
+          "threshold_flat": "0",
+          "RepairTrinket": "1"
+        }
+      }
+    }
+  },
+  "SackOfMeat": {
+    "name": "ITEM_SACKOFMEAT_NAME",
+    "name_resolved": "Sack o' Meat",
+    "desc": "ITEM_SACKOFMEAT_DESC",
+    "desc_resolved": "Use: Heal 4 HP.\nThis gains +1 use each time you destroy a corpse.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "217",
+    "set": "Butcher",
+    "durability": "2",
+    "ability": "tk_SackOfMeat",
+    "passives": {
+      "ExtraTrinketUses": "10",
+      "StatusOnPopCorpse": {
+        "RepairTrinket": "1"
+      }
+    }
+  },
+  "DruidsWhistle": {
+    "name": "ITEM_DRUIDSWHISTLE_NAME",
+    "name_resolved": "Druid's Whistle",
+    "desc": "ITEM_DRUIDSWHISTLE_DESC",
+    "desc_resolved": "Use: Spawn a random animal familiar on an adjacent tile.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "218",
+    "set": "Druid",
+    "ability": "tk_DruidsWhistle",
+    "passives": {}
+  },
+  "BallOfYarn": {
+    "name": "ITEM_BALLOFYARN_NAME",
+    "name_resolved": "Ball of Yarn",
+    "desc": "ITEM_BALLOFYARN_DESC",
+    "desc_resolved": "Spawn a Charmed Kitten with All Stats Up 2 at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "226",
+    "set": "Twine",
+    "passives": {
+      "SpawnOnBattleStart": "BuffCharmedKitten"
+    }
+  },
+  "BirdHead": {
+    "name": "ITEM_BIRDHEAD_NAME",
+    "name_resolved": "Bird Head",
+    "desc": "ITEM_BIRDHEAD_DESC",
+    "desc_resolved": "Your basic attack inflicts Soul Link.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "192",
+    "set": "Feathered",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "SoulLink": "1"
+      }
+    }
+  },
+  "BrokenMirror": {
+    "name": "ITEM_BROKENMIRROR_NAME",
+    "name_resolved": "Broken Mirror",
+    "desc": "ITEM_BROKENMIRROR_DESC",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "196",
+    "set": "Used",
+    "lck": "-99",
+    "passives": {}
+  },
+  "Binoculars": {
+    "name": "ITEM_BINOCULARS_NAME",
+    "name_resolved": "Binoculars",
+    "desc": "ITEM_BINOCULARS_DESC",
+    "desc_resolved": "+2 range.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "198",
+    "passives": {
+      "AddBonusRange": "2"
+    }
+  },
+  "Bishop": {
+    "name": "ITEM_BISHOP_NAME",
+    "name_resolved": "Bishop",
+    "desc": "ITEM_BISHOP_DESC",
+    "desc_resolved": "Use: Move any number of tiles in a diagonal line.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "201",
+    "durability": "6",
+    "ability": "tk_Bishop"
+  },
+  "GoldenEgg": {
+    "name": "ITEM_GOLDENEGG_NAME",
+    "name_resolved": "Golden Egg",
+    "desc": "ITEM_GOLDENEGG_DESC",
+    "desc_resolved": "Find 3-5 extra coins at the end of each battle.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "190",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "GainCoins": [
+          "3",
+          "5"
+        ]
+      }
+    }
+  },
+  "BirdFeed": {
+    "name": "ITEM_BIRDFEED_NAME",
+    "name_resolved": "Bird Feed",
+    "desc": "ITEM_BIRDFEED_DESC",
+    "desc_resolved": "+50% chance for an extra bird to spawn at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "191",
+    "passives": {
+      "SpawnOnBattleStartRandomEmptyTile": {
+        "object": "Bird",
+        "number": [
+          "0",
+          "1"
+        ]
+      }
+    }
+  },
+  "AngelWing": {
+    "name": "ITEM_ANGELWING_NAME",
+    "name_resolved": "Angel Wing",
+    "desc": "ITEM_ANGELWING_DESC",
+    "desc_resolved": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "195",
+    "set": "Feathered",
+    "passives": {
+      "PassiveAtHealthThreshold": {
+        "threshold": "1",
+        "mode": "greater",
+        "passives": {
+          "DeathRattleRevive": "DoNothing"
+        }
+      }
+    }
+  },
+  "SoulJar": {
+    "name": "ITEM_SOULJAR_NAME",
+    "name_resolved": "Soul Jar",
+    "desc": "ITEM_SOULJAR_DESC",
+    "desc_resolved": "When your body is destroyed, this item is recovered and permanently gains the ability to summon a ghost copy of you.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "175",
+    "passives": {
+      "DropSoulJarOnDeath": "SoulJar_Full"
+    }
+  },
+  "SoulJar_Full": {
+    "name": "ITEM_SOULJAR_FULL_NAME",
+    "name_resolved": "Soul Jar",
+    "desc": "ITEM_SOULJAR_FULL_DESC",
+    "desc_resolved": "Use: Summon a ghost copy of {aux_cat_name}.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "206",
+    "aux": "-1",
+    "aux_is_catid": "true",
+    "ability": "tk_SoulJar"
+  },
+  "PetrifiedPinky": {
+    "name": "ITEM_PETRIFIEDPINKY_NAME",
+    "name_resolved": "Petrified Pinky",
+    "desc": "ITEM_PETRIFIEDPINKY_DESC",
+    "desc_resolved": "If an attack would down you, instead this breaks and you regain 50% of your max HP.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "7",
+    "set": [
+      "Rat,",
+      "Rock"
+    ],
+    "passives": {
+      "DeathRattleRevive": "tk_PetrifiedPinky"
+    }
+  },
+  "CatRib": {
+    "name": "ITEM_CATRIB_NAME",
+    "name_resolved": "Cat Rib",
+    "desc": "ITEM_CATRIB_DESC",
+    "desc_resolved": "When your body is destroyed, you are reborn as a kitten!",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "19",
+    "set": "Bone",
+    "passives": {
+      "SpawnCatCloneOnCorpsePopped": "1"
+    }
+  },
+  "EstusFlask_Full": {
+    "name": "ITEM_ESTUSFLASK_NAME",
+    "name_resolved": "Glowing Flask",
+    "desc": "ITEM_ESTUSFLASK_DESC",
+    "desc_resolved": "Use: Heal 5 HP. This refills at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "87",
+    "durability": "3",
+    "max_durability": "3",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_EstusFlask",
+    "passives": {
+      "DurabilityTransform": {
+        "eq": [
+          "0",
+          "EstusFlask_Empty"
+        ]
+      }
+    }
+  },
+  "EstusFlask_Half": {
+    "name": "ITEM_ESTUSFLASK_NAME",
+    "name_resolved": "Glowing Flask",
+    "desc": "ITEM_ESTUSFLASK_DESC",
+    "desc_resolved": "Use: Heal 5 HP. This refills at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "203",
+    "durability": "2",
+    "max_durability": "3",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_EstusFlask",
+    "passives": {
+      "DurabilityTransform": {
+        "ge": [
+          "3",
+          "EstusFlask_Full"
+        ],
+        "eq": [
+          "0",
+          "EstusFlask_Empty"
+        ]
+      },
+      "StatusOnBattleEnd": {
+        "RepairTrinket": "99"
+      },
+      "TransformItemOnElementInfluence": {
+        "element": "Fire",
+        "item": "EstusFlask_Full",
+        "full_repair": "true"
+      }
+    }
+  },
+  "EstusFlask_Empty": {
+    "name": "ITEM_ESTUSFLASK_NAME",
+    "name_resolved": "Glowing Flask",
+    "desc": "ITEM_ESTUSFLASK_DESC",
+    "desc_resolved": "Use: Heal 5 HP. This refills at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "204",
+    "durability": "0",
+    "max_durability": "3",
+    "dont_destroy_on_0": "true",
+    "passives": {
+      "DurabilityTransform": {
+        "ge": [
+          "3",
+          "EstusFlask_Full"
+        ],
+        "eq": [
+          "1",
+          "EstusFlask_Half"
+        ]
+      },
+      "StatusOnBattleEnd": {
+        "RepairTrinket": "99"
+      },
+      "TransformItemOnElementInfluence": {
+        "element": "Fire",
+        "item": "EstusFlask_Full",
+        "full_repair": "true"
+      }
+    }
+  },
+  "LuckyCoin": {
+    "name": "ITEM_LUCKYCOIN_NAME",
+    "name_resolved": "Lucky Coin",
+    "desc": "ITEM_LUCKYCOIN_DESC",
+    "desc_resolved": "Coins that spawn at the start of each battle are doubled.",
+    "rarity": "uncommmon",
+    "kind": "trinket",
+    "frame": "145",
+    "set": "Lucky",
+    "lck": "2",
+    "passives": {
+      "MultiplyCoinsOnBattleStart": "2"
+    }
+  },
+  "HeavyRock": {
+    "name": "ITEM_HEAVYROCK_NAME",
+    "name_resolved": "Heavy Rock",
+    "desc": "ITEM_HEAVYROCK_DESC",
+    "desc_resolved": "Rocks you knock back deal +5 damage and have Chain Knockback.",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "65",
+    "set": "Rock",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "BonusKnockbackDamage": "5",
+          "OverrideChainKnockback": "0"
+        }
+      }
+    }
+  },
+  "Ipecac": {
+    "name": "ITEM_IPECAC_NAME",
+    "name_resolved": "Ipecac",
+    "desc": "ITEM_IPECAC_DESC",
+    "desc_resolved": "Your basic attack is Explosive Shot.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "149",
+    "set": "Medical",
+    "attack": "BasicExplosiveShot",
+    "passives": {
+      "OverrideBasicAttack": "BasicExplosiveShot"
+    }
+  },
+  "MeatCube": {
+    "name": "ITEM_MEATCUBE_NAME",
+    "name_resolved": "Meat Cube",
+    "desc": "ITEM_MEATCUBE_DESC",
+    "desc_resolved": "Start with a Flesh Lad familiar.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "143",
+    "set": "Meat",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "FamiliarFleshLad"
+      }
+    }
+  },
+  "SoyMilk": {
+    "name": "ITEM_SOYMILK_NAME",
+    "name_resolved": "Soy Milk",
+    "desc": "ITEM_SOYMILK_DESC",
+    "desc_resolved": "Your basic attack cannot deal more than 1 damage.\nYou can attack 2 extra times each turn.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "150",
+    "passives": {
+      "CapBasicAttackDamage": "1",
+      "ExtraBasicAttacks": "2"
+    }
+  },
+  "SpoonBender": {
+    "name": "ITEM_SPOONBENDER_NAME",
+    "name_resolved": "Spoon Bender",
+    "desc": "ITEM_SPOONBENDER_DESC",
+    "desc_resolved": "Your basic attack can't miss and emits a Sparkle when used.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "151",
+    "set": "Psychic",
+    "passives": {
+      "BasicAttackCantMiss": "1",
+      "AddSelfStatusToBasicAttack": {
+        "RandomMagicMissile": "1"
+      }
+    }
+  },
+  "Cancer": {
+    "name": "ITEM_CANCER_NAME",
+    "name_resolved": "Cancer",
+    "desc": "ITEM_CANCER_DESC",
+    "desc_resolved": "At the end of each battle, gain -1 to three random stats, then gain a mutation.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "152",
+    "set": "Mother",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "RandomPermanentStat": "-3",
+        "RandomMutation": "1"
+      }
+    }
+  },
+  "Wafer": {
+    "name": "ITEM_WAFER_NAME",
+    "name_resolved": "Wafer",
+    "desc": "ITEM_WAFER_DESC",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "156",
+    "set": "Cleric",
+    "divine_shield": "2",
+    "passives": {}
+  },
+  "LargeMeteor": {
+    "name": "ITEM_LARGEMETEOR_NAME",
+    "name_resolved": "Large Meteor",
+    "desc": "ITEM_LARGEMETEOR_DESC",
+    "desc_resolved": "- {str_aux_passive_name} -\n{str_aux_passive_desc}",
+    "rarity": "uncommon",
+    "kind": "trinket",
+    "frame": "243",
+    "randomize_piece_frames": "true",
+    "set": "Planet",
+    "str_aux_initialize": "random_copyable_colorless_passive",
+    "str_aux_is_copy_passive": "true"
+  },
+  "BloodyRazor": {
+    "name": "ITEM_BLOODYRAZOR_NAME",
+    "name_resolved": "Bloody Razor",
+    "desc": "ITEM_BLOODYRAZOR_DESC",
+    "desc_resolved": "Use: Deal 5 damage to yourself to gain +3 Damage and +1 Magic Damage.",
+    "kind": "trinket",
+    "rarity": "very_rare",
+    "frame": "270",
+    "ability": "tk_BloodyRazor"
+  },
+  "ImmaculateHeart": {
+    "name": "ITEM_IMMACULATEHEART_NAME",
+    "name_resolved": "Immaculate Heart",
+    "desc": "ITEM_IMMACULATEHEART_DESC",
+    "desc_resolved": "+2 Damage, +1 Magic Damage. Emit 3 Sparkles when you use your basic attack.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "246",
+    "passives": {
+      "DamageUp": "2",
+      "SpellDamageUp": "1",
+      "AddSelfStatusToBasicAttack": {
+        "RandomMagicMissile": "3"
+      }
+    }
+  },
+  "DybbuksRib": {
+    "name": "ITEM_DYBBUKSRIB_NAME",
+    "name_resolved": "Dybbuk's Rib",
+    "desc": "ITEM_DYBBUKSRIB_DESC",
+    "desc_resolved": "Charm a random enemy at the start of each battle.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "273",
+    "set": "Bone",
+    "passives": {
+      "StatusOnBattleStart": {
+        "ForceUseAbility": "tk_DybbuksRib"
+      }
+    }
+  },
+  "SnakeEyes": {
+    "name": "ITEM_SNAKEEYES_NAME",
+    "name_resolved": "Snake Eyes",
+    "desc": "ITEM_SNAKEEYES_DESC",
+    "desc_resolved": "While you are at exactly 2 HP, you have +222 [img:lck]",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "274",
+    "passives": {
+      "PassiveAtHealthThreshold": {
+        "threshold": "2",
+        "mode": "equal",
+        "passives": {
+          "LuckUp": "222"
+        }
+      }
+    }
+  },
+  "GreenWhistle": {
+    "name": "ITEM_GREENWHISTLE_NAME",
+    "name_resolved": "Green Whistle",
+    "desc": "ITEM_GREENWHISTLE_DESC",
+    "desc_resolved": "Use: Summon a really big Leg.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "280",
+    "ability": "tk_LegWhistle"
+  },
+  "MothersLove": {
+    "name": "ITEM_MOTHERSLOVE_NAME",
+    "name_resolved": "Mother's Love",
+    "desc": "ITEM_MOTHERSLOVE_DESC",
+    "desc_resolved": "+6 Health Regen.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "281",
+    "set": "Mother",
+    "shield": "6",
+    "lck": "6",
+    "passives": {
+      "HealthRegenUp": "6"
+    }
+  },
+  "PentagramSigil": {
+    "name": "ITEM_PENTAGRAMSIGIL_NAME",
+    "name_resolved": "Pentagram Sigil",
+    "desc": "ITEM_PENTAGRAMSIGIL_DESC",
+    "desc_resolved": "Use: Take 5 damage and refresh your basic attack and movement actions.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "276",
+    "cursed": "true",
+    "set": "Demonic",
+    "durability": "5",
+    "ability": "tk_Pentagram"
+  },
+  "LuciferSigil": {
+    "name": "ITEM_LUCIFERSIGIL_NAME",
+    "name_resolved": "Lucifer Sigil",
+    "desc": "ITEM_LUCIFERSIGIL_DESC",
+    "desc_resolved": "Summon a Charmed Brute at the start of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "275",
+    "cursed": "true",
+    "set": "Demonic",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedBigDemon",
+        "number": "1"
+      }
+    }
+  },
+  "HexagramSigil": {
+    "name": "ITEM_HEXAGRAMSIGIL_NAME",
+    "name_resolved": "Hexagram Sigil",
+    "desc": "ITEM_HEXAGRAMSIGIL_DESC",
+    "desc_resolved": "+3 Magic Damage.\nYou are immune to buffs and debuffs.\nWhen you die, you don't leave a corpse.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "284",
+    "cursed": "true",
+    "set": "Demonic",
+    "str": "3",
+    "dex": "3",
+    "passives": {
+      "SpellDamageUp": "3",
+      "DebuffImmunity": "1",
+      "BuffImmunity": "1",
+      "AddCorpseHealth": "-999999"
+    }
+  },
+  "ChupacabraTongue": {
+    "name": "ITEM_CHUPACABRATONGUE_NAME",
+    "name_resolved": "Chupacabra Tongue",
+    "desc": "ITEM_CHUPACABRATONGUE_DESC",
+    "desc_resolved": "Your basic attack has Lifesteal.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "286",
+    "set": "Guts",
+    "passives": {
+      "Lifesteal": "1"
+    }
+  },
+  "CharonsObal": {
+    "name": "ITEM_CHARONSOBAL_NAME",
+    "name_resolved": "Charon's Obol",
+    "desc": "ITEM_CHARONSOBAL_DESC",
+    "desc_resolved": "+6 corpse health. Spawn a Charmed Reaper when you are downed.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "287",
+    "set": "Necromancer",
+    "passives": {
+      "SpawnThingOnDeath": "CharmedReaper",
+      "AddCorpseHealth": "6"
+    }
+  },
+  "HumanHead": {
+    "name": "ITEM_HUMANHEAD_NAME",
+    "name_resolved": "Human Head",
+    "desc": "ITEM_HUMANHEAD_DESC",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "288",
+    "set": "HumanFlesh",
+    "str": "1",
+    "dex": "1",
+    "con": "1",
+    "int": "1",
+    "spd": "1",
+    "cha": "1",
+    "lck": "1"
+  },
+  "Glitch": {
+    "name": "ITEM_GLITCH_NAME",
+    "name_resolved": "Glitch",
+    "desc": "ITEM_GLITCH_DESC",
+    "desc_resolved": "Use: Scramble the last spell you used. Permanently.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "289",
+    "ability": "tk_Glitch"
+  },
+  "VideoGameCart": {
+    "name": "ITEM_VIDEOGAMECART_NAME",
+    "name_resolved": "Video Game Cart",
+    "desc": "ITEM_VIDEOGAMECART_DESC",
+    "desc_resolved": "It's broken.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "290",
+    "set": "Used",
+    "passives": {}
+  },
+  "TV": {
+    "name": "ITEM_TV_NAME",
+    "name_resolved": "TV",
+    "desc": "ITEM_TV_DESC",
+    "desc_resolved": "Your bonus ability is Waste Time.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "291",
+    "passives": {
+      "BonusAbility": "WasteTime"
+    }
+  },
+  "Triachnid": {
+    "name": "ITEM_TRIACHNID_NAME",
+    "name_resolved": "Triachnid",
+    "desc": "ITEM_TRIACHNID_DESC",
+    "desc_resolved": "Spawn Triachnid at the start of each battle.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "292",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "Triachnid",
+        "number": "1"
+      }
+    }
+  },
+  "GallonOfWater": {
+    "name": "ITEM_GALLONOFWATER_NAME",
+    "name_resolved": "Gallon of Water",
+    "desc": "ITEM_GALLONOFWATER_DESC",
+    "desc_resolved": "Use: Heal +5 HP and gain Heatwave immunity.\nRefills when affected by Water Element effects.",
+    "kind": "trinket",
+    "frame": "293",
+    "rarity": "rare",
+    "durability": "8",
+    "max_durability": "8",
+    "dont_destroy_on_0": "true",
+    "ability": "tk_WaterBottle_Half",
+    "passives": {
+      "TransformItemOnElementInfluence": {
+        "element": "Greater_Water",
+        "item": "GallonOfWater",
+        "full_repair": "true"
+      }
+    }
+  },
+  "ScorchedEarth": {
+    "name": "ITEM_SCORCHEDEARTH_NAME",
+    "name_resolved": "Scorched Earth",
+    "desc": "ITEM_SCORCHEDEARTH_DESC",
+    "desc_resolved": "Your Earth and Fire Element spells cost -1 mana.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "238",
+    "set": "DirtClod",
+    "passives": {
+      "ElementalManaCostReduction": {
+        "element": [
+          "Fire",
+          "Earth"
+        ],
+        "reduction": "1"
+      }
+    }
+  },
+  "LiquidMetal": {
+    "name": "ITEM_LIQUIDMETAL_NAME",
+    "name_resolved": "Liquid Metal",
+    "desc": "ITEM_LIQUIDMETAL_DESC",
+    "desc_resolved": "+25% Dodge Chance.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "231",
+    "passives": {
+      "DodgeChance": "25%"
+    }
+  },
+  "StevenStone": {
+    "name": "ITEM_STEVENSTONE_NAME",
+    "name_resolved": "Steven Stone",
+    "desc": "ITEM_STEVENSTONE_DESC",
+    "desc_resolved": "Your collarless spells cost -2 mana.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "232",
+    "set": "Steven",
+    "cha": "2",
+    "passives": {
+      "ClassManaCostReduction": {
+        "class": "Colorless",
+        "reduction": "2"
+      }
+    }
+  },
+  "StevenMarrow": {
+    "name": "ITEM_STEVENMARROW_NAME",
+    "name_resolved": "Steven Marrow",
+    "desc": "ITEM_STEVENMARROW_DESC",
+    "desc_resolved": "Any [img:shield] you gain is increased by 4.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "233",
+    "set": "Steven",
+    "shield": "4",
+    "con": "-3",
+    "passives": {
+      "GainExtraShield": "4"
+    }
+  },
+  "StevenTrinket1": {
+    "name": "ITEM_STEVENTRINKET1_NAME",
+    "name_resolved": "Steven",
+    "desc": "ITEM_STEVENTRINKET1_DESC",
+    "desc_resolved": "Your basic attack inflicts Slow and has a +10% chance to Freeze.\nYou can damage frozen units.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "234",
+    "set": "Steven",
+    "passives": {
+      "FreezePiercing": "1",
+      "AddStatusToBasicAttack": {
+        "Slow": "1",
+        "Freeze": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "StevenTrinket2": {
+    "name": "ITEM_STEVENTRINKET2_NAME",
+    "name_resolved": "Steven",
+    "desc": "ITEM_STEVENTRINKET2_DESC",
+    "desc_resolved": "Your basic attack inflicts Confusion.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "236",
+    "set": "Steven",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Confusion": "1"
+      }
+    }
+  },
+  "NinnyStick": {
+    "name": "ITEM_NINNYSTICK_NAME",
+    "name_resolved": "Ninny Stick",
+    "desc": "ITEM_NINNYSTICK_DESC",
+    "desc_resolved": "Reroll your other equipped items at the end of each battle.\nYou can reroll your options when you level up.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "267",
+    "set": "Jester",
+    "passives": {
+      "RerollItemsOnBattleEnd": "1",
+      "AddLevelUpRerolls": "1"
+    }
+  },
+  "SkillSplit": {
+    "name": "ITEM_SKILLSPLIT_NAME",
+    "name_resolved": "Skill Split",
+    "desc": "ITEM_SKILLSPLIT_DESC",
+    "desc_resolved": "Gain a temporary copy of your first passive ability at the start of each battle.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "269",
+    "passives": {
+      "CopyPassiveSlot": "0"
+    }
+  },
+  "FurnitureBox": {
+    "name": "ITEM_FURNITUREBOX_NAME",
+    "name_resolved": "Furniture Box",
+    "desc": "ITEM_FURNITUREBOX_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nBecomes a random piece of furniture when you return home.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "294",
+    "on_store": "become_furniture",
+    "spd": "-5",
+    "shield": "8",
+    "passives": {
+      "BreakWhenNoShield": "1"
+    }
+  },
+  "FurnitureBox_Rare": {
+    "name": "ITEM_FURNITUREBOX_RARE_NAME",
+    "name_resolved": "Rare Furniture Box",
+    "desc": "ITEM_FURNITUREBOX_RARE_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nBecomes a random piece of rare furniture when you return home.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "295",
+    "on_store": "become_rare_furniture",
+    "spd": "-5",
+    "lck": "5",
+    "shield": "4",
+    "passives": {
+      "BreakWhenNoShield": "1"
+    }
+  },
+  "Ankh": {
+    "name": "ITEM_ANKH_NAME",
+    "name_resolved": "Ankh",
+    "desc": "ITEM_ANKH_DESC",
+    "desc_resolved": "While you're downed, you have a 50% chance to revive with 33% HP at the end of each round.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "199",
+    "passives": {
+      "ChanceToRevive": {
+        "stacks": "50",
+        "health": "34%"
+      }
+    }
+  },
+  "TheBoxCardboard": {
+    "name": "ITEM_THEBOXCARDBOARD_NAME",
+    "name_resolved": "The Box",
+    "desc": "ITEM_THEBOXCARDBOARD_DESC",
+    "desc_resolved": "Find an extra chapter item at the end of each battle.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "296",
+    "set": "Cardboard",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "FindItemFromPool": "chapter_specific_item"
+      }
+    }
+  },
+  "TheBoxChest": {
+    "name": "ITEM_THEBOXCHEST_NAME",
+    "name_resolved": "The bOx",
+    "desc": "ITEM_THEBOXCHEST_DESC",
+    "desc_resolved": "Use: Spawn A lost Spirit. This gains +1 use whenever an allied cat dies.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "297",
+    "set": "Wood",
+    "durability": "1",
+    "max_durability": "4",
+    "dont_destroy_on_0": "true",
+    "passives": {
+      "StatusOnAllyCatDeath": {
+        "RepairTrinket": "1"
+      }
+    },
+    "ability": "tk_SpawnTheLost"
+  },
+  "TheBox": {
+    "name": "ITEM_THEBOX_NAME",
+    "name_resolved": "The boX",
+    "desc": "ITEM_THEBOX_DESC",
+    "desc_resolved": "Use: Revive all bodies, fully heal all units, and clear all status effects.\n[s:.7](Usable once per battle.)[/s]",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "298",
+    "set": "Steven",
+    "durability": "4",
+    "ability": "tk_Reset"
+  },
+  "TheBlackBox": {
+    "name": "ITEM_THEBLACKBOX_NAME",
+    "name_resolved": "the box",
+    "desc": "ITEM_THEBLACKBOX_DESC",
+    "desc_resolved": "Use: Find and equip a random item into one of your empty item slots.",
+    "rarity": "very_rare",
+    "kind": "trinket",
+    "frame": "300",
+    "set": "Steven",
+    "ability": "tk_TheBlackBox"
+  },
+  "SkullOfGlorg": {
+    "name": "ITEM_SKULLOFGLORG_NAME",
+    "name_resolved": "Skull Of Glorg",
+    "desc": "ITEM_SKULLOFGLORG_DESC",
+    "desc_resolved": "Your spells cost -1 mana for each parasite you have equipped.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "299",
+    "parasite": "true",
+    "set": "Bone",
+    "passives": {
+      "ReduceSpellCostsPerParasite": "1"
+    }
+  },
+  "Checkers": {
+    "name": "Checkers",
+    "desc": "Use: Move 1 tile diagonally. If a unit is in the way, leap 2 tiles over it instead, dealing 4 damage to it and refresh this. You cannot use this to move to a tile you've previously occupied this turn.",
+    "rarity": "rare",
+    "kind": "trinket",
+    "frame": "200"
+  }
+}

@@ -1,0 +1,1295 @@
+{
+  "Scrap": {
+    "name": "SETBONUS_SCRAP_NAME",
+    "name_resolved": "Scrap Set Bonus!",
+    "desc": "SETBONUS_SCRAP_DESC",
+    "desc_resolved": "+1 Thorns.",
+    "pieces_required": "3",
+    "shield": "3",
+    "passives": {
+      "Thorns": "1"
+    }
+  },
+  "Leather": {
+    "name": "SETBONUS_LEATHER_NAME",
+    "name_resolved": "Leather Set Bonus!",
+    "desc": "SETBONUS_LEATHER_DESC",
+    "pieces_required": "3",
+    "shield": "3"
+  },
+  "Rag": {
+    "name": "SETBONUS_RAG_NAME",
+    "name_resolved": "Rags Set Bonus!",
+    "desc": "SETBONUS_RAG_DESC",
+    "pieces_required": "3",
+    "spd": "2"
+  },
+  "Rubber": {
+    "name": "SETBONUS_RUBBER_NAME",
+    "name_resolved": "Rubber Set Bonus!",
+    "desc": "SETBONUS_RUBBER_DESC",
+    "desc_resolved": "+3 Knockback damage.",
+    "pieces_required": "3",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "BonusKnockbackDamage": "3"
+      }
+    }
+  },
+  "CatHide": {
+    "name": "SETBONUS_CATHIDE_NAME",
+    "name_resolved": "Cathide Set Bonus!",
+    "desc": "SETBONUS_CATHIDE_DESC",
+    "desc_resolved": "5% chance to spawn a Flea each turn.\nFamiliars have +1 Damage and +1 movement range.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnEachTurn": {
+        "chance": "5%",
+        "object": "CharmedFlea",
+        "stack_key": "CATHIDE"
+      },
+      "GlobalFamiliarDamageBoost": "1",
+      "GlobalFamiliarMoveBoost": "1"
+    }
+  },
+  "Guts": {
+    "name": "SETBONUS_GUTS_NAME",
+    "name_resolved": "Guts Set Bonus!",
+    "desc": "SETBONUS_GUTS_DESC",
+    "desc_resolved": "+1 Health Regen.",
+    "pieces_required": "3",
+    "con": "3",
+    "passives": {
+      "HealthRegenUp": "1"
+    }
+  },
+  "Bone": {
+    "name": "SETBONUS_BONE_NAME",
+    "name_resolved": "Bone Set Bonus!",
+    "desc": "SETBONUS_BONE_DESC",
+    "desc_resolved": "Find a random common bone item at the end of each battle.",
+    "pieces_required": "3",
+    "shield": "4",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "FindItemFromPool": "common_bones"
+      }
+    }
+  },
+  "DirtClod": {
+    "name": "SETBONUS_DIRTCLOD_NAME",
+    "name_resolved": "Dirt Clod Set Bonus!",
+    "desc": "SETBONUS_DIRTCLOD_DESC",
+    "desc_resolved": "Grow flowers under yourself at the end of each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "FlowersOnEndTurn": "1"
+    }
+  },
+  "Barbed": {
+    "name": "SETBONUS_BARBED_NAME",
+    "name_resolved": "Barbed Set Bonus!",
+    "desc": "SETBONUS_BARBED_DESC",
+    "desc_resolved": "+3 Thorns.",
+    "pieces_required": "3",
+    "con": "2",
+    "passives": {
+      "Thorns": "3"
+    }
+  },
+  "Sludge": {
+    "name": "SETBONUS_SLUDGE_NAME",
+    "name_resolved": "Sludge Set Bonus!",
+    "desc": "SETBONUS_SLUDGE_DESC",
+    "desc_resolved": "Gain +2 [img:shield] at the end of each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Shield": "2"
+      }
+    }
+  },
+  "Cool": {
+    "name": "SETBONUS_COOL_NAME",
+    "name_resolved": "Cool Set Bonus!",
+    "desc": "SETBONUS_COOL_DESC",
+    "desc_resolved": "Cool Set Pieces are no longer Fragile.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_COOL",
+    "lck": "4",
+    "passives": {
+      "SetFragileImmune": "Cool"
+    }
+  },
+  "Paper": {
+    "name": "SETBONUS_PAPER_NAME",
+    "name_resolved": "Paper Set Bonus!",
+    "desc": "SETBONUS_PAPER_DESC",
+    "desc_resolved": "+1 Bleed Thorns. Paper Set Pieces are no longer Fragile nor Brittle.",
+    "pieces_required": "3",
+    "passives": {
+      "BleedThorns": "1",
+      "SetFragileImmune": "Paper",
+      "SetBrittleImmune": "Paper"
+    }
+  },
+  "Cardboard": {
+    "name": "SETBONUS_CARDBOARD_NAME",
+    "name_resolved": "Cardboard Set Bonus!",
+    "desc": "SETBONUS_CARDBOARD_DESC",
+    "desc_resolved": "Cardboard Set Pieces are no longer Fragile.",
+    "pieces_required": "3",
+    "shield": "2",
+    "passives": {
+      "SetFragileImmune": "Cardboard"
+    }
+  },
+  "Used": {
+    "name": "SETBONUS_USED_NAME",
+    "name_resolved": "Used Set Bonus!",
+    "desc": "SETBONUS_USED_DESC",
+    "pieces_required": "3",
+    "con": "1"
+  },
+  "Wood": {
+    "name": "SETBONUS_WOOD_NAME",
+    "name_resolved": "Wood Set Bonus!",
+    "desc": "SETBONUS_WOOD_DESC",
+    "desc_resolved": "+1 Brace. Wood Set Pieces are no longer Fragile.",
+    "pieces_required": "3",
+    "passives": {
+      "SetFragileImmune": "Wood",
+      "Brace": "1"
+    }
+  },
+  "Recycled": {
+    "name": "SETBONUS_RECYCLED_NAME",
+    "name_resolved": "Recycled Set Bonus!",
+    "desc": "SETBONUS_RECYCLED_DESC",
+    "desc_resolved": "Also find a rare item when a recycled set piece breaks.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnSetPieceBreak": {
+        "set": "Recycled",
+        "FindItemFromPool": "rare"
+      }
+    }
+  },
+  "Rotten": {
+    "name": "SETBONUS_ROTTEN_NAME",
+    "name_resolved": "Rotten Set Bonus!",
+    "desc": "SETBONUS_ROTTEN_DESC",
+    "desc_resolved": "All Bugs and Maggots you spawn are upgraded to champions.",
+    "pieces_required": "3",
+    "passives": {
+      "UpgradeTaggedSpawnsToChampions": "worm"
+    }
+  },
+  "JankAlloy": {
+    "name": "SETBONUS_JANKALLOY_NAME",
+    "name_resolved": "Jank Alloy Set Bonus!",
+    "desc": "SETBONUS_JANKALLOY_DESC",
+    "desc_resolved": "Jank Alloy Set Pieces are no longer Brittle.",
+    "pieces_required": "3",
+    "passives": {
+      "SetBrittleImmune": "JankAlloy"
+    }
+  },
+  "Alloy": {
+    "name": "SETBONUS_ALLOY_NAME",
+    "name_resolved": "Alloy Set Bonus!",
+    "desc": "SETBONUS_ALLOY_DESC",
+    "desc_resolved": "Alloy Set Pieces are no longer Brittle.",
+    "pieces_required": "3",
+    "passives": {
+      "SetBrittleImmune": "Alloy"
+    }
+  },
+  "AdvancedAlloy": {
+    "name": "SETBONUS_ADVALLOY_NAME",
+    "name_resolved": "Advanced Alloy Set Bonus!",
+    "desc": "SETBONUS_ADVALLOY_DESC",
+    "desc_resolved": "Advanced Alloy Set Pieces are no longer Brittle.",
+    "pieces_required": "3",
+    "passives": {
+      "SetBrittleImmune": "AdvancedAlloy"
+    }
+  },
+  "EliteAlloy": {
+    "name": "SETBONUS_ELITEALLOY_NAME",
+    "name_resolved": "Elite Alloy Set Bonus!",
+    "desc": "SETBONUS_ELITEALLOY_DESC",
+    "desc_resolved": "Elite Alloy Set Pieces are no longer Brittle.",
+    "pieces_required": "3",
+    "passives": {
+      "SetBrittleImmune": "EliteAlloy"
+    }
+  },
+  "Twine": {
+    "name": "SETBONUS_TWINE_NAME",
+    "name_resolved": "Twine Set Bonus!",
+    "desc": "SETBONUS_TWINE_DESC",
+    "desc_resolved": "+10% Dodge Chance.\nBruise units that contact you.",
+    "pieces_required": "3",
+    "passives": {
+      "ArmorDodgeChance": "10%",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "Rock": {
+    "name": "SETBONUS_ROCK_NAME",
+    "name_resolved": "Rock Set Bonus!",
+    "desc": "SETBONUS_ROCK_DESC",
+    "desc_resolved": "+1 Brace. Spawn a pet rock familiar whenever you lose [img:shield].",
+    "pieces_required": "3",
+    "passives": {
+      "Brace": "1",
+      "SpawnThingOnDamage": {
+        "object": "AnimatedSmallRock",
+        "shield_only": "true"
+      }
+    }
+  },
+  "Miner": {
+    "name": "SETBONUS_MINER_NAME",
+    "name_resolved": "Miner Set Bonus!",
+    "desc": "SETBONUS_MINER_DESC",
+    "desc_resolved": "2 more pickups spawn in each battle.",
+    "pieces_required": "3",
+    "lck": "3",
+    "passives": {
+      "SpawnOnBattleStartRandomEmptyTile": {
+        "object": "RandomPickup",
+        "number": "2"
+      }
+    }
+  },
+  "Gemstone": {
+    "name": "SETBONUS_GEMSTONE_NAME",
+    "name_resolved": "Gemstone Set Bonus!",
+    "desc": "SETBONUS_GEMSTONE_DESC",
+    "desc_resolved": "Gain +3 [img:shield] at the end of each turn.",
+    "pieces_required": "3",
+    "cha": "1",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Shield": "3"
+      }
+    }
+  },
+  "Veiny": {
+    "name": "SETBONUS_VEINY_NAME",
+    "name_resolved": "Veiny Set Bonus!",
+    "desc": "SETBONUS_VEINY_DESC",
+    "desc_resolved": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
+    "pieces_required": "3",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      },
+      "TriggerBleedOnBleed": "1"
+    }
+  },
+  "Gimp": {
+    "name": "SETBONUS_GIMP_NAME",
+    "name_resolved": "Gimp Set Bonus!",
+    "desc": "SETBONUS_GIMP_DESC",
+    "desc_resolved": "Gain +1 Random Stat Up whenever you take damage.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnTookDamage": {
+        "RandomStatUp": "1"
+      }
+    }
+  },
+  "Bionic": {
+    "name": "SETBONUS_BIONIC_NAME",
+    "name_resolved": "Bionic Set Bonus!",
+    "desc": "SETBONUS_BIONIC_DESC",
+    "desc_resolved": "Your movement action becomes an infinite range Teleport.\nBionic Set Pieces are no longer Fragile.",
+    "pieces_required": "3",
+    "passives": {
+      "SetFragileImmune": "Bionic",
+      "ReplaceBasicMove": "MaxTeleport"
+    }
+  },
+  "Cyborg": {
+    "name": "SETBONUS_CYBORG_NAME",
+    "name_resolved": "Cyborg Set Bonus!",
+    "desc": "SETBONUS_CYBORG_DESC",
+    "desc_resolved": "Take an AI controlled bonus turn at the end of the first round.",
+    "pieces_required": "3",
+    "passives": {
+      "CyborgTurns": {
+        "stacks": "1",
+        "TakeBonusTurnWithAIControl": {
+          "end_of_round": "true",
+          "include_spells": "true"
+        }
+      },
+      "Robot": "1"
+    }
+  },
+  "Lucky": {
+    "name": "SETBONUS_LUCKY_NAME",
+    "name_resolved": "Lucky Set Bonus!",
+    "desc": "SETBONUS_LUCKY_DESC",
+    "desc_resolved": "Spawn 5-10 extra coins on each map.\nLucky Set Pieces are no longer Fragile.",
+    "pieces_required": "3",
+    "lck": "1",
+    "passives": {
+      "SetFragileImmune": "Lucky",
+      "SpawnOnBattleStartRandomEmptyTile": {
+        "object": "Coin",
+        "number": [
+          "5",
+          "10"
+        ]
+      }
+    }
+  },
+  "Fly": {
+    "name": "SETBONUS_FLY_NAME",
+    "name_resolved": "Fly Set Bonus!",
+    "desc": "SETBONUS_FLY_DESC",
+    "desc_resolved": "Flying. You do not take extra damage from backstabs.\n50% Chance to spawn a Fly each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "BackstabImmunity": "1",
+      "Flying": "1",
+      "SpawnEachTurn": {
+        "chance": "50%",
+        "object": "CharmedFly"
+      }
+    }
+  },
+  "Amoeba": {
+    "name": "SETBONUS_AMOEBA_NAME",
+    "name_resolved": "Amoeba Set Bonus!",
+    "desc": "SETBONUS_AMOEBA_DESC",
+    "desc_resolved": "Permanent Madness.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_AMOEBA",
+    "passives": {
+      "PermanentMadness": "1"
+    }
+  },
+  "Mage": {
+    "name": "SETBONUS_MAGE_NAME",
+    "name_resolved": "Mage Set Bonus!",
+    "desc": "SETBONUS_MAGE_DESC",
+    "desc_resolved": "+5 starting mana.",
+    "pieces_required": "3",
+    "passives": {
+      "AddStartingMana": "5"
+    }
+  },
+  "Thief": {
+    "name": "SETBONUS_THIEF_NAME",
+    "name_resolved": "Thief Set Bonus!",
+    "desc": "SETBONUS_THIEF_DESC",
+    "desc_resolved": "+5% Dodge Chance and +5% Crit Chance.",
+    "pieces_required": "3",
+    "passives": {
+      "ArmorDodgeChance": "5%",
+      "CritChanceUp": "5"
+    }
+  },
+  "Fighter": {
+    "name": "SETBONUS_FIGHTER_NAME",
+    "name_resolved": "Fighter Set Bonus!",
+    "desc": "SETBONUS_FIGHTER_DESC",
+    "desc_resolved": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
+    "pieces_required": "3",
+    "shield": "4",
+    "passives": {
+      "StatusOnKill": {
+        "Conditional_GoodRoll": {
+          "odds": "15%",
+          "ForceUseAbility_NonStack": "Endeavor_Auto"
+        }
+      }
+    }
+  },
+  "Cleric": {
+    "name": "SETBONUS_CLERIC_NAME",
+    "name_resolved": "Cleric Set Bonus!",
+    "desc": "SETBONUS_CLERIC_DESC",
+    "desc_resolved": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
+    "pieces_required": "3",
+    "passives": {
+      "PassiveAtHealthThreshold": {
+        "threshold": "1",
+        "mode": "greater",
+        "passives": {
+          "DeathRattleRevive": "DoNothing"
+        }
+      }
+    }
+  },
+  "Tank": {
+    "name": "SETBONUS_TANK_NAME",
+    "name_resolved": "Tank Set Bonus!",
+    "desc": "SETBONUS_TANK_DESC",
+    "desc_resolved": "+1 Knockback damage.",
+    "pieces_required": "3",
+    "passives": {
+      "AddKnockbackDamage": "1"
+    }
+  },
+  "Hunter": {
+    "name": "SETBONUS_HUNTER_NAME",
+    "name_resolved": "Hunter Set Bonus!",
+    "desc": "SETBONUS_HUNTER_DESC",
+    "desc_resolved": "+50% Crit Chance while standing in tall grass.",
+    "pieces_required": "3",
+    "passives": {
+      "PassiveWhenOnTile": {
+        "tile": [
+          "TallGrassTile",
+          "TallFlowerTile"
+        ],
+        "passives": {
+          "CritChanceUp": "50"
+        }
+      }
+    }
+  },
+  "Psychic": {
+    "name": "SETBONUS_PSYCHIC_NAME",
+    "name_resolved": "Psychic Set Bonus!",
+    "desc": "SETBONUS_PSYCHIC_DESC",
+    "desc_resolved": "When you gain excess mana, reduce the cost of all your spells by that amount until you cast them.",
+    "pieces_required": "3",
+    "passives": {
+      "OverManaReducesManaCosts": "1"
+    }
+  },
+  "Necromancer": {
+    "name": "SETBONUS_NECROMANCER_NAME",
+    "name_resolved": "Necromancer Set Bonus!",
+    "desc": "SETBONUS_NECROMANCER_DESC",
+    "desc_resolved": "When downed, spawn a shadow copy of yourself that fades away after one turn.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnCatCopyWhenDowned": {
+        "object": "PlayerCat_NecroShade",
+        "prevent_chain_tag": "necroset_shade"
+      }
+    }
+  },
+  "Monk": {
+    "name": "SETBONUS_MONK_NAME",
+    "name_resolved": "Monk Set Bonus!",
+    "desc": "SETBONUS_MONK_DESC",
+    "desc_resolved": "Gain +2 [img:shield] at the end of each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Shield": "2"
+      }
+    }
+  },
+  "Tinkerer": {
+    "name": "SETBONUS_TINKERER_NAME",
+    "name_resolved": "Tinkerer Set Bonus!",
+    "desc": "SETBONUS_TINKERER_DESC",
+    "desc_resolved": "Spawn 4 Scrap pickups at the start of each battle.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "Scrap",
+        "number": "4"
+      }
+    }
+  },
+  "Butcher": {
+    "name": "SETBONUS_BUTCHER_NAME",
+    "name_resolved": "Butcher Set Bonus!",
+    "desc": "SETBONUS_BUTCHER_DESC",
+    "desc_resolved": "Food and scrap pickups you spawn are bigger.",
+    "pieces_required": "3",
+    "passives": {
+      "UpgradeSpawnedPickups": "1"
+    }
+  },
+  "Druid": {
+    "name": "SETBONUS_DRUID_NAME",
+    "name_resolved": "Druid Set Bonus!",
+    "desc": "SETBONUS_DRUID_DESC",
+    "desc_resolved": "Your Familiars gain +4 HP and +1 Damage.",
+    "pieces_required": "3",
+    "passives": {
+      "AddPassivesToMinions": {
+        "DamageUp": "1",
+        "AddMaxHealth": "4",
+        "HealthGain": "4"
+      }
+    }
+  },
+  "Collarless": {
+    "name": "SETBONUS_COLLARLESS_NAME",
+    "name_resolved": "Collarless Set Bonus!",
+    "desc": "SETBONUS_COLLARLESS_DESC",
+    "desc_resolved": "Collarless spells cost -1 mana to cast.",
+    "pieces_required": "3",
+    "passives": {
+      "ClassManaCostReduction": {
+        "class": "Colorless",
+        "reduction": "1"
+      }
+    }
+  },
+  "Grub": {
+    "name": "SETBONUS_GRUB_NAME",
+    "name_resolved": "Grub Set Bonus!",
+    "desc": "SETBONUS_GRUB_DESC",
+    "desc_resolved": "Grubs spawned by items gain +5 HP.",
+    "pieces_required": "3",
+    "passives": {
+      "AddPassivesToMinions": {
+        "tag_filter": "grub_familiar",
+        "Buddy": "spawner",
+        "ReturnBoundItemOnBattleEnd": "1",
+        "DamageUp": "1",
+        "AddMaxHealth": "5",
+        "HealthGain": "5"
+      }
+    }
+  },
+  "Fecal": {
+    "name": "SETBONUS_FECAL_NAME",
+    "name_resolved": "Fecal Set Bonus!",
+    "desc": "SETBONUS_FECAL_DESC",
+    "desc_resolved": "Poisonous 1.\nYour basic attack inflicts Poison.",
+    "pieces_required": "3",
+    "passives": {
+      "PoisonThorns": "1",
+      "AddStatusToBasicAttack": {
+        "Poison": "1"
+      }
+    }
+  },
+  "Meat": {
+    "name": "SETBONUS_MEAT_NAME",
+    "name_resolved": "Meat Set Bonus!",
+    "desc": "SETBONUS_MEAT_DESC",
+    "desc_resolved": "+1 Damage.\nGain +1 Damage when you get a kill.\nAfter three kills, gains +2 [img:con], +4 Health Regen and Madness for the rest of the battle.",
+    "pieces_required": "3",
+    "passives": {
+      "DamageUp": "1",
+      "StatusOnKillEnemy": {
+        "DamageUp": "1"
+      },
+      "PassiveAfterXKills": {
+        "stacks": "3",
+        "passives": {
+          "AddConstitution": "2",
+          "HealthRegenUp": "4",
+          "PermanentMadness": "1"
+        }
+      }
+    }
+  },
+  "Leafy": {
+    "name": "SETBONUS_LEAFY_NAME",
+    "name_resolved": "Leafy Set Bonus!",
+    "desc": "SETBONUS_LEAFY_DESC",
+    "desc_resolved": "If you end your turn with unused movement actions, heal 3 HP and gain +3 Charge.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusIfUnusedMovePoints": {
+        "HealthGain": "3",
+        "Charge": "3"
+      }
+    }
+  },
+  "Cactus": {
+    "name": "SETBONUS_CACTUS_NAME",
+    "name_resolved": "Cactus Set Bonus!",
+    "desc": "SETBONUS_CACTUS_DESC",
+    "desc_resolved": "+2 Thorns.\nWhenever any Cactus armor breaks, increase all your stats by 1, permanently.",
+    "pieces_required": "3",
+    "passives": {
+      "Thorns": "2",
+      "StatusOnSetPieceBreak": {
+        "PermanentCharisma": "1",
+        "PermanentDexterity": "1",
+        "PermanentIntelligence": "1",
+        "PermanentLuck": "1",
+        "PermanentSpeed": "1",
+        "PermanentStrength": "1",
+        "PermanentConstitution": "1"
+      }
+    }
+  },
+  "Mummy": {
+    "name": "SETBONUS_MUMMY_NAME",
+    "name_resolved": "Mummy Set Bonus!",
+    "desc": "SETBONUS_MUMMY_DESC",
+    "desc_resolved": "When downed, inflict Rot 1 and Weakness 1 on all enemies.\nWhen downed, revive with +30% HP at the end of the round.",
+    "pieces_required": "3",
+    "passives": {
+      "DeathRattle": {
+        "pop_corpse": "false",
+        "ability": "set_MummySetCurse"
+      },
+      "DelayedAutoRevive": {
+        "rounds": "1",
+        "health": "30%"
+      }
+    }
+  },
+  "Man": {
+    "name": "SETBONUS_MAN_NAME",
+    "name_resolved": "Man Set Bonus!",
+    "desc": "SETBONUS_MAN_DESC",
+    "desc_resolved": "Gain 1-9 coins at the end of each battle.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_MAN",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "GainCoinsRange": {
+          "min": "1",
+          "max": "9"
+        }
+      }
+    }
+  },
+  "Flower": {
+    "name": "SETBONUS_FLOWER_NAME",
+    "name_resolved": "Flower Set Bonus!",
+    "desc": "SETBONUS_FLOWER_DESC",
+    "desc_resolved": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
+    "pieces_required": "3",
+    "passives": {
+      "GlobalFlowerTrapperAura": {
+        "Tangled": [
+          "1,",
+          ".1"
+        ]
+      }
+    }
+  },
+  "HumanFlesh": {
+    "name": "SETBONUS_HUMANFLESH_NAME",
+    "name_resolved": "Human Flesh Set Bonus!",
+    "desc": "SETBONUS_HUMANFLESH_DESC",
+    "desc_resolved": "+50% Crit Chance on humanoid enemies.\nWhen downed, inflict Fear 2 on all enemies.",
+    "pieces_required": "3",
+    "passives": {
+      "DeathRattle": {
+        "pop_corpse": "false",
+        "ability": "set_HumanFleshSetCurse"
+      },
+      "AddStatusToAllDamage": {
+        "Conditional_HasTag": {
+          "tag": "humanoid",
+          "BonusCritChance": "50"
+        }
+      }
+    }
+  },
+  "Tentacle": {
+    "name": "SETBONUS_TENTACLE_NAME",
+    "name_resolved": "Tentacle Set Bonus!",
+    "desc": "SETBONUS_TENTACLE_DESC",
+    "desc_resolved": "Cleanse all your debuffs at the end of each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "Conditional_HasCleansableDebuffs": {
+          "VisualFX": "Cleanse"
+        },
+        "Cleanse": "0"
+      }
+    }
+  },
+  "Obelisk": {
+    "name": "SETBONUS_OBELISK_NAME",
+    "name_resolved": "Obelisk Set Bonus!",
+    "desc": "SETBONUS_OBELISK_DESC",
+    "desc_resolved": "If you end your turn with unused movement actions, gain +1 [img:divineshield].",
+    "pieces_required": "3",
+    "divine_shield": "1",
+    "passives": {
+      "StatusIfUnusedMovePoints": {
+        "DivineShield": "1"
+      }
+    }
+  },
+  "Experimental": {
+    "name": "SETBONUS_EXPERIMENTAL_NAME",
+    "name_resolved": "Experimental Set Bonus!",
+    "desc": "SETBONUS_EXPERIMENTAL_DESC",
+    "desc_resolved": "Find a pill at the end of each battle.\nWhenever you eat a pill, gain a random stat and lose another random stat, permanently.",
+    "pieces_required": "3",
+    "passives": {
+      "FindExtraItemFromPoolOnBattleEnd": "pills",
+      "StatusOnEatPill": {
+        "RandomPermanentStatsDistinct": {
+          "stats": [
+            "1",
+            "-1"
+          ]
+        }
+      }
+    }
+  },
+  "Rocky": {
+    "name": "SETBONUS_ROCKY_NAME",
+    "name_resolved": "Rocky Set Bonus!",
+    "desc": "SETBONUS_ROCKY_DESC",
+    "desc_resolved": "Spawn a pet rock familiar whenever you lose [img:shield].\nBroken Rocky equipment pieces have a 75% chance of being recovered at the end of the battle.",
+    "pieces_required": "3",
+    "passives": {
+      "RockyArmorSalvage": ".75",
+      "SpawnThingOnDamage": {
+        "object": "AnimatedSmallRock",
+        "shield_only": "true"
+      }
+    }
+  },
+  "Space": {
+    "name": "SETBONUS_SPACE_NAME",
+    "name_resolved": "Space Set Bonus!",
+    "desc": "SETBONUS_SPACE_DESC",
+    "desc_resolved": "Your movement action is Jump. Units you land on take damage.",
+    "pieces_required": "3",
+    "passives": {
+      "ReplaceBasicMove": "set_SpaceArmorJump"
+    }
+  },
+  "Planet": {
+    "name": "SETBONUS_PLANET_NAME",
+    "name_resolved": "Planet Set Bonus!",
+    "desc": "SETBONUS_PLANET_DESC",
+    "desc_resolved": "Flying. Inflict Bruise 1 on units you make contact with.\nPull every unit within 2 tiles toward you at the end of each round.",
+    "pieces_required": "3",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      },
+      "Flying": "1",
+      "AutocastEachRound": {
+        "ability": "set_PlanetSetGravity",
+        "even_if_stunned": "true"
+      }
+    }
+  },
+  "Debris": {
+    "name": "SETBONUS_DEBRIS_NAME",
+    "name_resolved": "Debris Set Bonus!",
+    "desc": "SETBONUS_DEBRIS_DESC",
+    "desc_resolved": "Your basic attack deals electric damage and has a +10% chance to Stun.",
+    "pieces_required": "3",
+    "passives": {
+      "AddElementsToBasicAttack": "Electric",
+      "AddStatusToBasicAttack": {
+        "Stun": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "DryBone": {
+    "name": "SETBONUS_DRYBONE_NAME",
+    "name_resolved": "Dry Bone Set Bonus!",
+    "desc": "SETBONUS_DRYBONE_DESC",
+    "desc_resolved": "Find a bone club at the end of each battle.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "FindItem": "BoneClub"
+      }
+    }
+  },
+  "Molten": {
+    "name": "SETBONUS_MOLTEN_NAME",
+    "name_resolved": "Molten Set Bonus!",
+    "desc": "SETBONUS_MOLTEN_DESC",
+    "desc_resolved": "Fire immunity.",
+    "pieces_required": "3",
+    "passives": {
+      "InnateElement": "Fire",
+      "ElementImmune": "Fire",
+      "StatusImmunity": [
+        "Burn"
+      ]
+    }
+  },
+  "Mother": {
+    "name": "SETBONUS_MOTHER_NAME",
+    "name_resolved": "Mother Set Bonus!",
+    "desc": "SETBONUS_MOTHER_DESC",
+    "desc_resolved": "Familiars you spawn gain +2 Damage and +2 HP.",
+    "pieces_required": "3",
+    "passives": {
+      "AddPassivesToMinions": {
+        "DamageUp": "2",
+        "AddMaxHealth": "2",
+        "HealthGain": "2"
+      }
+    }
+  },
+  "Feathered": {
+    "name": "SETBONUS_FEATHERED_NAME",
+    "name_resolved": "Feathered Set Bonus!",
+    "desc": "SETBONUS_FEATHERED_DESC",
+    "desc_resolved": "Flying.",
+    "pieces_required": "3",
+    "spd": "2",
+    "passives": {
+      "Flying": "1"
+    }
+  },
+  "Copycat": {
+    "name": "SETBONUS_COPYCAT_NAME",
+    "name_resolved": "Copycat Set Bonus!",
+    "desc": "SETBONUS_COPYCAT_DESC",
+    "desc_resolved": "Copies your trinket's passive effects.",
+    "pieces_required": "3",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "1"
+    }
+  },
+  "Transmitter": {
+    "name": "SETBONUS_TRANSMITTER_NAME",
+    "name_resolved": "Transmitter Set Bonus!",
+    "desc": "SETBONUS_TRANSMITTER_DESC",
+    "desc_resolved": "All allies gain +1 [img:int] and +1 [img:lck].",
+    "pieces_required": "3",
+    "int": "-2",
+    "passives": {
+      "StatusAlliesOnBattleStart": {
+        "IntelligenceUp": "1",
+        "LuckUp": "1"
+      }
+    }
+  },
+  "Thrumming": {
+    "name": "SETBONUS_THRUMMING_NAME",
+    "name_resolved": "Thrumming Set Bonus!",
+    "desc": "SETBONUS_THRUMMING_DESC",
+    "desc_resolved": "If you end your turn without using your basic attack, movement action, or casting a spell, gain All Stats Up.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnTurnEndIfDidntCastAbilityTypes": {
+        "type": [
+          "attack",
+          "move",
+          "spell"
+        ],
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "Witch": {
+    "name": "SETBONUS_WITCH_NAME",
+    "name_resolved": "Witch Set Bonus!",
+    "desc": "SETBONUS_WITCH_DESC",
+    "desc_resolved": "Your movement action becomes a Jump with infinite range.\nYour tile-targeted spells have infinite range.",
+    "pieces_required": "3",
+    "passives": {
+      "ReplaceBasicMove": "set_WitchJump",
+      "IncreaseSpellRange": "20"
+    }
+  },
+  "Stunning": {
+    "name": "SETBONUS_STUNNING_NAME",
+    "name_resolved": "Stunning Set Bonus!",
+    "desc": "SETBONUS_STUNNING_DESC",
+    "desc_resolved": "Your weapon and trinket's passive and active effects are tripled.",
+    "pieces_required": "3",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "2",
+      "TrinketActiveEffectsMultiplierBonus": "2",
+      "WeaponPassiveMultiplierBonus": "2",
+      "WeaponActiveEffectsMultiplierBonus": "2"
+    }
+  },
+  "Superhero": {
+    "name": "SETBONUS_SUPERHERO_NAME",
+    "name_resolved": "Superhero Set Bonus!",
+    "desc": "SETBONUS_SUPERHERO_DESC",
+    "desc_resolved": "The first spell you cast each turn inflicts Webbed.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_SUPER",
+    "passives": {
+      "AddStatusToFirstSpellEachTurn": {
+        "Conditional_IsSelf": {},
+        "Else": {
+          "Webbed": "1"
+        }
+      }
+    }
+  },
+  "Lead": {
+    "name": "SETBONUS_LEAD_NAME",
+    "name_resolved": "Lead Set Bonus!",
+    "desc": "SETBONUS_LEAD_DESC",
+    "desc_resolved": "Trample 9.",
+    "pieces_required": "3",
+    "shield": "4",
+    "spd": "-1",
+    "passives": {
+      "Trample": "9"
+    }
+  },
+  "Baby": {
+    "name": "SETBONUS_BABY_NAME",
+    "name_resolved": "Baby Set Bonus!",
+    "desc": "SETBONUS_BABY_DESC",
+    "desc_resolved": "Start battle with a baby version of yourself.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnCatCopyOnBattleStart": {
+        "object": "PlayerCat_MiniMiniMe",
+        "prevent_chain_tag": "minime_clone"
+      }
+    }
+  },
+  "Ninja": {
+    "name": "SETBONUS_NINJA_NAME",
+    "name_resolved": "Ninja Set Bonus!",
+    "desc": "SETBONUS_NINJA_DESC",
+    "desc_resolved": "Start battle with a bonus attack.",
+    "pieces_required": "3",
+    "passives": {
+      "Quivered": "1"
+    }
+  },
+  "Prowler": {
+    "name": "SETBONUS_PROWLER_NAME",
+    "name_resolved": "Prowler Set Bonus!",
+    "desc": "SETBONUS_PROWLER_DESC",
+    "desc_resolved": "Backstabs are always critical.",
+    "pieces_required": "3",
+    "passives": {
+      "BackstabCritChance": "1"
+    }
+  },
+  "Godhead": {
+    "name": "SETBONUS_GODHEAD_NAME",
+    "name_resolved": "Godhead Set Bonus!",
+    "desc": "SETBONUS_GODHEAD_DESC",
+    "desc_resolved": "Eternal Life",
+    "pieces_required": "3",
+    "passives": {
+      "ChanceToRevive": {
+        "stacks": "100",
+        "health": "50%"
+      }
+    }
+  },
+  "Hippie": {
+    "name": "SETBONUS_HIPPIE_NAME",
+    "name_resolved": "Hippie Set Bonus!",
+    "desc": "SETBONUS_HIPPIE_DESC",
+    "desc_resolved": "Spawn 5 Catnip pickups at the start of each battle.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_HIPPIE",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "Catnip",
+        "number": "5"
+      }
+    }
+  },
+  "Parasite": {
+    "name": "SETBONUS_PARASITE_NAME",
+    "name_resolved": "Parasite Set Bonus!",
+    "desc": "SETBONUS_PARASITE_DESC",
+    "desc_resolved": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "even_if_dead": "true",
+        "RandomPermanentStat": "-1",
+        "RandomMutation": "1"
+      }
+    }
+  },
+  "Brick": {
+    "name": "SETBONUS_BRICK_NAME",
+    "name_resolved": "Brick Set Bonus!",
+    "desc": "SETBONUS_BRICK_DESC",
+    "desc_resolved": "Knockback immunity.",
+    "pieces_required": "3",
+    "shield": "4",
+    "passives": {
+      "KnockbackImmunity": "1"
+    }
+  },
+  "Slimy": {
+    "name": "SETBONUS_SLIMY_NAME",
+    "name_resolved": "Slimy Set Bonus!",
+    "desc": "SETBONUS_SLIMY_DESC",
+    "desc_resolved": "Poisonous 2.",
+    "pieces_required": "3",
+    "passives": {
+      "PoisonThorns": "2"
+    }
+  },
+  "Rat": {
+    "name": "SETBONUS_RAT_NAME",
+    "name_resolved": "Rat Set Bonus!",
+    "desc": "SETBONUS_RAT_DESC",
+    "desc_resolved": "Start battle with 2 Charmed Rats.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedRat",
+        "number": "2"
+      }
+    }
+  },
+  "Carapace": {
+    "name": "SETBONUS_CARAPACE_NAME",
+    "name_resolved": "Carapace Set Bonus!",
+    "desc": "SETBONUS_CARAPACE_DESC",
+    "desc_resolved": "Gain 3 random stat ups at the end of your turn.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "RandomStatUp": "3"
+      }
+    }
+  },
+  "Radioactive": {
+    "name": "SETBONUS_RADIOACTIVE_NAME",
+    "name_resolved": "Radioactive Set Bonus!",
+    "desc": "SETBONUS_RADIOACTIVE_DESC",
+    "desc_resolved": "Gain a random mutation at the end of each battle.\nExplode when downed. This explosion doesn't damage you.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "RandomMutation": "1"
+      },
+      "DeathRattle": {
+        "pop_corpse": "false",
+        "ability": "MiniNukeExplodey"
+      }
+    }
+  },
+  "Nurse": {
+    "name": "SETBONUS_NURSE_NAME",
+    "name_resolved": "Nurse Set Bonus!",
+    "desc": "SETBONUS_NURSE_DESC",
+    "desc_resolved": "Your basic attack becomes holy and can heal allies.",
+    "pieces_required": "3",
+    "passives": {
+      "AddElementsToBasicAttack": "Holy",
+      "AddStatusToBasicAttack": {
+        "DamageOrHealConditionally": "1"
+      }
+    }
+  },
+  "Hybrid": {
+    "name": "SETBONUS_HYBRID_NAME",
+    "name_resolved": "Hybrid Set Bonus!",
+    "desc": "SETBONUS_HYBRID_DESC",
+    "desc_resolved": "Bruise 1. Poison 1. Bleed 1.\nThe first spell you cast each turn is cast twice.",
+    "pieces_required": "3",
+    "passives": {
+      "Poison": "1",
+      "Bleed": "1",
+      "Bruise": "1",
+      "DoubleCastSpellsEachTurn_Status": "1"
+    }
+  },
+  "Fatty": {
+    "name": "SETBONUS_FATTY_NAME",
+    "name_resolved": "Fatty Set Bonus!",
+    "desc": "SETBONUS_FATTY_DESC",
+    "pieces_required": "3",
+    "con": "3"
+  },
+  "Medical": {
+    "name": "SETBONUS_MEDICAL_NAME",
+    "name_resolved": "Medical Set Bonus!",
+    "desc": "SETBONUS_MEDICAL_DESC",
+    "desc_resolved": "You have +1 Health Regen for each disorder you have.",
+    "pieces_required": "3",
+    "passives": {
+      "BonusHealthRegenPerDisorder": "1"
+    }
+  },
+  "Chip": {
+    "name": "SETBONUS_CHIP_NAME",
+    "name_resolved": "Chip Set Bonus!",
+    "desc": "SETBONUS_CHIP_DESC",
+    "desc_resolved": "When you end your turn, if you cast exactly 5 spells, double cast your next spell.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnTurnEndIfCastNSpells": {
+        "spells": "5",
+        "DoubleCastSpell": "1"
+      }
+    }
+  },
+  "Demonic": {
+    "name": "SETBONUS_DEMONIC_NAME",
+    "name_resolved": "Demonic Set Bonus!",
+    "desc": "SETBONUS_DEMONIC_DESC",
+    "desc_resolved": "When you get a kill, gain +6 Shield.",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_DEMONIC",
+    "passives": {
+      "StatusOnKill": {
+        "Shield": "6"
+      }
+    }
+  },
+  "Frozen": {
+    "name": "SETBONUS_FROZEN_NAME",
+    "name_resolved": "Frozen Set Bonus!",
+    "desc": "SETBONUS_FROZEN_DESC",
+    "desc_resolved": "You can damage Frozen units.",
+    "pieces_required": "3",
+    "shield": "4",
+    "passives": {
+      "FreezePiercing": "1"
+    }
+  },
+  "Wooly": {
+    "name": "SETBONUS_WOOLLY_NAME",
+    "name_resolved": "Wooly Set Bonus!",
+    "desc": "SETBONUS_WOOLLY_DESC",
+    "desc_resolved": "Start with a Charmed Mammoth Baby.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedMammothBaby",
+        "number": "1"
+      }
+    }
+  },
+  "Rune": {
+    "name": "SETBONUS_RUNE_NAME",
+    "name_resolved": "Rune Set Bonus!",
+    "desc": "SETBONUS_RUNE_DESC",
+    "pieces_required": "3",
+    "divine_shield": "2"
+  },
+  "Caveman": {
+    "name": "SETBONUS_CAVEMAN_NAME",
+    "name_resolved": "Caveman Set Bonus!",
+    "desc": "SETBONUS_CAVEMAN_DESC",
+    "desc_resolved": "If your [img:int] is 1 or less, gain Brace 5.",
+    "pieces_required": "3",
+    "passives": {
+      "PassiveAtStatThreshold": {
+        "mode": "less_or_equal",
+        "threshold": {
+          "int": "1"
+        },
+        "passives": {
+          "Brace": "5"
+        }
+      }
+    }
+  },
+  "Dino": {
+    "name": "SETBONUS_DINO_NAME",
+    "name_resolved": "Dino Set Bonus!",
+    "desc": "SETBONUS_DINO_DESC",
+    "desc_resolved": "Allies gain +5 [img:shield] at the start of each battle.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusAlliesOnBattleStart": {
+        "Shield": "5"
+      }
+    }
+  },
+  "BigRock": {
+    "name": "SETBONUS_BIGROCK_NAME",
+    "name_resolved": "Big Rock Set Bonus!",
+    "desc": "SETBONUS_BIGROCK_DESC",
+    "desc_resolved": "Spawn 2 Charmed Geolads at the start of each battle.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "GeoLad",
+        "number": "2"
+      }
+    }
+  },
+  "Phoenix": {
+    "name": "SETBONUS_PHOENIX_NAME",
+    "name_resolved": "Phoenix Set Bonus!",
+    "desc": "SETBONUS_PHOENIX_DESC",
+    "desc_resolved": "Flying. You can move an extra time each turn.",
+    "pieces_required": "3",
+    "passives": {
+      "Flying": "1",
+      "ExtraBasicMoves_Status": "1"
+    }
+  },
+  "Jester": {
+    "name": "SETBONUS_JESTER_NAME",
+    "name_resolved": "Jester Set Bonus!",
+    "desc": "SETBONUS_JESTER_DESC",
+    "desc_resolved": "+3 Rerolls when leveling up.",
+    "pieces_required": "3",
+    "passives": {
+      "AddLevelUpRerolls": "3"
+    }
+  },
+  "Ancestor": {
+    "name": "SETBONUS_ANCESTOR_NAME",
+    "name_resolved": "Ancestor Set Bonus!",
+    "desc": "SETBONUS_ANCESTOR_DESC",
+    "desc_resolved": "Spawn a spectral copy of yourself when you die.\nThe copy dies at the end of its turn.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnCatCopyWhenDowned": {
+        "object": "PlayerCat_AncestralShade",
+        "prevent_chain_tag": "ancestorset_shade"
+      }
+    }
+  },
+  "Survivalist": {
+    "name": "SETBONUS_SURVIVALIST_NAME",
+    "name_resolved": "Survivalist Set Bonus!",
+    "desc": "SETBONUS_SURVIVALIST_DESC",
+    "desc_resolved": "Find a consumable item at the end of each battle.\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+    "pieces_required": "3",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "Conditional_GoodRoll": {
+          "odds": "100%",
+          "FindItemFromPool": "consumables"
+        }
+      },
+      "AutoEquipConsumables": "1"
+    }
+  },
+  "Leech": {
+    "name": "SETBONUS_LEECH_NAME",
+    "name_resolved": "Leech Set Bonus!",
+    "desc": "SETBONUS_LEECH_DESC",
+    "desc_resolved": "Start battle with 4 beefy Leech familiars.",
+    "pieces_required": "3",
+    "passives": {
+      "SpawnOnBattleStart": "BeefyCharmedLeech"
+    }
+  },
+  "Steven": {
+    "name": "SETBONUS_STEVEN_NAME",
+    "name_resolved": "Steven Set Bonus!",
+    "desc": "SETBONUS_STEVEN_DESC",
+    "desc_resolved": "Your name is now Steven! Hello Steven!",
+    "pieces_required": "3",
+    "name_mod": "CAT_NAME_MOD_STEVEN",
+    "passives": {}
+  }
+}

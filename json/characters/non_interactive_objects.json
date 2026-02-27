@@ -1,0 +1,130 @@
+{
+  "static_object_template": {
+    "graphics": {
+      "movieclip": "Rock",
+      "name": "STATIC OBJECT",
+      "shade_occluded_objects": "true",
+      "shadow": "None",
+      "water_mask": "square"
+    },
+    "properties": {
+      "faction": "none",
+      "type": "object",
+      "size": "1x1",
+      "takes_turns": "false",
+      "corpse_health": "0",
+      "inanimate": "true",
+      "static": "true",
+      "knockback_immune": "true",
+      "can_be_backstabbed": "false",
+      "layer": "all",
+      "ignore_mouseover": "true",
+      "kill_required": "false",
+      "aoe_pierce_mode": "block"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "Static1x1A": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_1x1_a"
+    }
+  },
+  "Static1x1B": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_1x1_b"
+    }
+  },
+  "Static1x1C": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_1x1_c"
+    }
+  },
+  "StaticTallA": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_tall_a",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "tall": "true"
+    }
+  },
+  "StaticTallB": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_tall_b",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "tall": "true"
+    }
+  },
+  "Static2x2A": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_2x2_a",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "size": "2x2",
+      "tall": "true"
+    }
+  },
+  "Static2x2B": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "static_2x2_b",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "size": "2x2",
+      "tall": "true"
+    }
+  },
+  "CandleSmall": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "BunkerCandlesSmall"
+    },
+    "passives": {
+      "CharacterLightSource": {
+        "color": [
+          ".7,",
+          ".7,",
+          ".5"
+        ],
+        "size": "1"
+      }
+    }
+  },
+  "CandleBig": {
+    "variant_of": "static_object_template",
+    "graphics": {
+      "movieclip": "BunkerCandles2x2",
+      "dont_sink": "true"
+    },
+    "properties": {
+      "size": "2x2",
+      "tall": "true"
+    },
+    "passives": {
+      "CharacterLightSource": {
+        "color": [
+          ".7,",
+          ".7,",
+          ".5"
+        ],
+        "size": "3"
+      }
+    }
+  }
+}

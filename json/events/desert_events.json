@@ -1,0 +1,319 @@
+{
+  "Mirage": {
+    "intro": {
+      "title": "EVENT_MIRAGE_NAME",
+      "title_resolved": "Mirage",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mirage",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MIRAGE_QUES",
+      "prompt_resolved": "{catname} squints {his} eyes, peering through the hot shimmering air. {He} thinks {he} sees something on the horizon!",
+      "options": {
+        "inspect": {
+          "label": "EVENT_INSPECT_ANSW",
+          "label_resolved": "Inspect",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MIRAGE_REW1",
+                "prompt_resolved": "After trudging through the hot sand for what could be hours, {catname} forgets {he} even saw anything."
+              },
+              "rare": {
+                "prompt": "EVENT_MIRAGE_REW2",
+                "prompt_resolved": "Amid the steaming dunes, {catname} comes upon a travelling merchant!",
+                "shop_now": "Event_SmallShop"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_Mirage2"
+                  },
+                  "reward": {
+                    "set_frame": "2",
+                    "prompt": "EVENT_MIRAGE_REW1",
+                    "prompt_resolved": "After trudging through the hot sand for what could be hours, {catname} forgets {he} even saw anything."
+                  },
+                  "else": {
+                    "set_frame": "3",
+                    "prompt": "EVENT_MIRAGE_REW3",
+                    "prompt_resolved": "After wandering for hours under the scorching sun, {catname} gives up on leading the party...",
+                    "party_damage": "1",
+                    "event_now": "Mirage",
+                    "conditional_reward": {
+                      "requirements": {
+                        "has_token": "AdventureToken_Mirage1"
+                      },
+                      "reward": {
+                        "set_adventure_token": "AdventureToken_Mirage2"
+                      },
+                      "else": {
+                        "set_adventure_token": "AdventureToken_Mirage1"
+                      }
+                    }
+                  }
+                }
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_Mirage2"
+                  },
+                  "reward": {
+                    "set_frame": "2",
+                    "prompt": "EVENT_MIRAGE_REW1",
+                    "prompt_resolved": "After trudging through the hot sand for what could be hours, {catname} forgets {he} even saw anything."
+                  },
+                  "else": {
+                    "set_adventure_token": "AdventureToken_Mirage1",
+                    "set_frame": "4",
+                    "prompt": "EVENT_MIRAGE_REW4",
+                    "prompt_resolved": "The scorching sun cooks the cats beneath their fur and they stumble on in pain, lost among the endless dunes...",
+                    "party_damage": "5",
+                    "event_now": "Mirage",
+                    "conditional_reward": {
+                      "requirements": {
+                        "has_token": "AdventureToken_Mirage1"
+                      },
+                      "reward": {
+                        "set_adventure_token": "AdventureToken_Mirage2"
+                      },
+                      "else": {
+                        "set_adventure_token": "AdventureToken_Mirage1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "go_around": {
+          "label": "EVENT_GOAROUND_ANSW",
+          "label_resolved": "Go around",
+          "stat": "spd",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MIRAGE_REW5",
+                "prompt_resolved": "The party trudges on through the blinding sun."
+              },
+              "rare": {
+                "prompt": "EVENT_MIRAGE_REW6",
+                "prompt_resolved": "The cats come upon an encampment, its occupants resting in the hot afternoon sun.\n\n{catname} leads the party in an ambush!",
+                "ally_ambush_next_fights": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_Mirage2"
+                  },
+                  "reward": {
+                    "set_frame": "2",
+                    "prompt": "EVENT_MIRAGE_REW1",
+                    "prompt_resolved": "After trudging through the hot sand for what could be hours, {catname} forgets {he} even saw anything."
+                  },
+                  "else": {
+                    "set_frame": "3",
+                    "prompt": "EVENT_MIRAGE_REW3",
+                    "prompt_resolved": "After wandering for hours under the scorching sun, {catname} gives up on leading the party...",
+                    "party_damage": "1",
+                    "event_now": "Mirage",
+                    "conditional_reward": {
+                      "requirements": {
+                        "has_token": "AdventureToken_Mirage1"
+                      },
+                      "reward": {
+                        "set_adventure_token": "AdventureToken_Mirage2"
+                      },
+                      "else": {
+                        "set_adventure_token": "AdventureToken_Mirage1"
+                      }
+                    }
+                  }
+                }
+              },
+              "rare": {
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_Mirage2"
+                  },
+                  "reward": {
+                    "set_frame": "2",
+                    "prompt": "EVENT_MIRAGE_REW1",
+                    "prompt_resolved": "After trudging through the hot sand for what could be hours, {catname} forgets {he} even saw anything."
+                  },
+                  "else": {
+                    "set_adventure_token": "AdventureToken_Mirage1",
+                    "set_frame": "4",
+                    "prompt": "EVENT_MIRAGE_REW4",
+                    "prompt_resolved": "The scorching sun cooks the cats beneath their fur and they stumble on in pain, lost among the endless dunes...",
+                    "party_damage": "5",
+                    "event_now": "Mirage",
+                    "conditional_reward": {
+                      "requirements": {
+                        "has_token": "AdventureToken_Mirage1"
+                      },
+                      "reward": {
+                        "set_adventure_token": "AdventureToken_Mirage2"
+                      },
+                      "else": {
+                        "set_adventure_token": "AdventureToken_Mirage1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Oasis": {
+    "intro": {
+      "title": "EVENT_OASIS_NAME",
+      "title_resolved": "Oasis",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "oasis",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_OASIS_QUES",
+      "prompt_resolved": "{catname} finds an oasis with a small shaded pool of water. \n\n{catname}'s dry throat longs for a wet reprieve from the endless dry heat of the desert...",
+      "options": {
+        "drink": {
+          "label": "EVENT_DRINK_ANSW",
+          "label_resolved": "Drink",
+          "stat": "lck",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_OASIS_REW1",
+                "prompt_resolved": "{catname} gulps down the fresh water. {He} had forgotten how wonderful the feeling of water is!",
+                "full_heal": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_OASIS_REW2",
+                "prompt_resolved": "The cats drag themselves into the oasis and lay in the small pool, drinking as much as they can stomach!",
+                "party_heal": "100%"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "3",
+                "prompt": "EVENT_OASIS_REW3",
+                "prompt_resolved": "The warm water tastes salty, but {catname} continues drinking from the briny pool in desperation, poisoning {himself}!",
+                "self_status_next_fight": {
+                  "Poison": "1"
+                }
+              },
+              "rare": {
+                "set_frame": "4",
+                "prompt": "EVENT_OASIS_REW4",
+                "prompt_resolved": "{catname} laps up the water from the strange pool. It has a strange sweet taste that reminds {him} of {his} mother's warm milk.\n\n{catname} has become a kitten!",
+                "set_age": "1"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_OASIS_REW5",
+            "prompt_resolved": "Despite the dry heat of the desert, {catname} decides it would be best to move on. Free water in this dreadful place is too good to be true!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousTomb": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSTOMB_NAME",
+      "title_resolved": "Mysterious Tomb",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_tomb_door",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSTOMB_QUES",
+      "prompt_resolved": "An ancient stone structure protrudes from the dry desert surface. Large doors protect whatever is entombed inside.\n\nWhat should {catname} do?",
+      "options": {
+        "smash": {
+          "label": "EVENT_MYSTERIOUSTOMB_ANSW",
+          "label_resolved": "Open door",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "override_end_option_prompt": "EVENT_MYSTERIOUSTOMB_END",
+            "event_now_same_cat": "MysteriousTomb1",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB_REW1",
+                "prompt_resolved": "{catname} lets out a stuttered growl as {he} barely manages to force the heavy door open...",
+                "damage": "2"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSTOMB_REW2",
+                "prompt_resolved": "With brute force, {catname}'s paws force the door open..."
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSTOMB_REW3",
+                "prompt_resolved": "{catname} tries to pull the heavy doors open but they are stuck fast."
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_MYSTERIOUSTOMB_REW4",
+                "prompt_resolved": "{catname} begins to pry the door open but it slams shut on {his} arm!",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSTOMB_REW5",
+            "prompt_resolved": "{catname} thinks better of it. {He} doesn't feel up for raiding a tomb today.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

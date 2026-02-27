@@ -1,0 +1,3478 @@
+{
+  "CrowFlutter": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_CROWFLUTTER_NAME",
+      "name_resolved": "Flutter",
+      "desc": "ABILITY_CROWFLUTTER_DESC",
+      "desc_resolved": "Fly over 3 tiles.",
+      "animate_name": "true",
+      "class": "Druid"
+    },
+    "graphics": {
+      "animation": "fast"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "3",
+      "straight_shot": "true",
+      "as_the_crow_flies": "true",
+      "range_mode": "normal"
+    }
+  },
+  "CrowFlutter2": {
+    "variant_of": "CrowFlutter",
+    "meta": {
+      "desc": "ABILITY_CROWFLUTTER2_DESC",
+      "desc_resolved": "Fly over 3-4 tiles."
+    },
+    "target": {
+      "max_range": "4"
+    }
+  },
+  "CrowFlutter3": {
+    "variant_of": "CrowFlutter",
+    "meta": {
+      "desc": "ABILITY_CROWFLUTTER3_DESC",
+      "desc_resolved": "Fly over 2-5 tiles."
+    },
+    "target": {
+      "min_range": "2",
+      "max_range": "5"
+    }
+  },
+  "CrowFlap": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_AEROBLAST_NAME",
+      "name_resolved": "Aeroblast",
+      "desc": "ABILITY_AEROBLAST_DESC",
+      "desc_resolved": "A wind gust that deals 1 damage and 1 Knockback in a line.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "wind"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "3+bonus_range",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "orientation"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "CrowFlap2": {
+    "variant_of": "CrowFlap",
+    "meta": {
+      "desc": "ABILITY_AEROBLAST2_DESC",
+      "desc_resolved": "A wind gust that deals 2 damage and 2 Knockback in a line."
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "knockback": "2"
+    }
+  },
+  "CrowFlap3": {
+    "variant_of": "CrowFlap",
+    "meta": {
+      "desc": "ABILITY_AEROBLAST3_DESC",
+      "desc_resolved": "A wind gust that deals 3 damage and 10 Knockback in a line."
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "knockback": "10"
+    }
+  },
+  "ManaBomb": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BLOOM_NAME",
+      "name_resolved": "Bloom",
+      "desc": "ABILITY_BLOOM_DESC",
+      "desc_resolved": "Give 5 mana to allies in an area.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "affected_particle": "fx_ManaHeal",
+      "animation": "sing2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "3",
+      "max_aoe": "1",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "ManaGain": "5"
+      }
+    }
+  },
+  "ManaBomb2": {
+    "variant_of": "ManaBomb",
+    "meta": {
+      "desc": "ABILITY_BLOOM2_DESC",
+      "desc_resolved": "Give 5 mana to allies in a large area."
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "6",
+      "max_aoe": "2"
+    }
+  },
+  "SongOfSpring": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SONGOFSPRING_NAME",
+      "name_resolved": "Song of Spring",
+      "desc": "ABILITY_SONGOFSPRING_DESC",
+      "desc_resolved": "Spawn flower tiles in an area.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing1",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "5",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "FlowersOnHit": "1"
+      },
+      "elements": [
+        "Grass",
+        "Bloom"
+      ]
+    }
+  },
+  "SongOfSpring2": {
+    "variant_of": "SongOfSpring",
+    "meta": {
+      "desc": "ABILITY_SONGOFSPRING2_DESC",
+      "desc_resolved": "Spawn flower tiles in a large area."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "GrantLife": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_GRANTLIFE_NAME",
+      "name_resolved": "Grant Life",
+      "desc": "ABILITY_GRANTLIFE_DESC",
+      "desc_resolved": "Give a unit All Stats Up. You get All Stats Down.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0"
+    },
+    "self_damage": {
+      "effects": {
+        "AllStatsUp": "-1"
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "effects": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "GrantLife2": {
+    "variant_of": "GrantLife",
+    "meta": {
+      "desc": "ABILITY_GRANTLIFE2_DESC",
+      "desc_resolved": "Give a unit All Stats Up, Charge 2, and heal them 2. You get All Stats Down."
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "AllStatsUp": "1",
+        "Charge": "2"
+      }
+    }
+  },
+  "SquirrelSquad": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SQUIRRELSQUAD_NAME",
+      "name_resolved": "Squirrel Squad",
+      "desc": "ABILITY_SQUIRRELSQUAD_DESC",
+      "desc_resolved": "Summon 5 baby squirrels.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "13"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "3",
+      "max_aoe": "1",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "BabySquirrel"
+    }
+  },
+  "SquirrelSquad2": {
+    "variant_of": "SquirrelSquad",
+    "meta": {
+      "desc": "ABILITY_SQUIRRELSQUAD2_DESC",
+      "desc_resolved": "Summon 5 adult squirrels."
+    },
+    "spawn": {
+      "object": "Squirrel"
+    }
+  },
+  "SquirrelFurySwipes": {
+    "class": "MultiHitMeleeAttackAbility",
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SQUIRRELSWIPES_NAME",
+      "name_resolved": "Squirrel Swipes",
+      "desc": "ABILITY_SQUIRRELSWIPES_DESC",
+      "desc_resolved": "A melee attack that hits 1-3 times.",
+      "class": "Druid",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "start": "attack",
+      "loop": "attack",
+      "end": "attack"
+    },
+    "target": {
+      "multihit_min": "1",
+      "multihit_max": "3"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee"
+    }
+  },
+  "BearFurySwipes": {
+    "variant_of": "SquirrelFurySwipes",
+    "meta": {
+      "name": "ABILITY_BEARSWIPES_NAME",
+      "name_resolved": "Bear Swipes"
+    }
+  },
+  "SummonSquirrel": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONSQUIRREL_NAME",
+      "name_resolved": "Summon Squirrel",
+      "desc": "ABILITY_SUMMONSQUIRREL_DESC",
+      "desc_resolved": "Summon a squirrel.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Squirrel"
+    }
+  },
+  "SummonSquirrel2": {
+    "variant_of": "SummonSquirrel",
+    "meta": {
+      "desc": "ABILITY_SUMMONSQUIRREL2_DESC",
+      "desc_resolved": "Summon a squirrel to any tile."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "SummonSnake": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONSNAKE_NAME",
+      "name_resolved": "Summon Snake",
+      "desc": "ABILITY_SUMMONSNAKE_DESC",
+      "desc_resolved": "Summon a snake.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Snake"
+    }
+  },
+  "SummonSnake2": {
+    "variant_of": "SummonSnake",
+    "meta": {
+      "desc": "ABILITY_SUMMONSNAKE2_DESC",
+      "desc_resolved": "Summon a slippery snake!\n(It has a 66% dodge chance.)"
+    },
+    "spawn": {
+      "object": "Snake2"
+    }
+  },
+  "SummonTurtle": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONTURTLE_NAME",
+      "name_resolved": "Summon Turtle",
+      "desc": "ABILITY_SUMMONTURTLE_DESC",
+      "desc_resolved": "Summon a turtle.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Turtle"
+    }
+  },
+  "SummonTurtle2": {
+    "variant_of": "SummonTurtle",
+    "meta": {
+      "desc": "ABILITY_SUMMONTURTLE2_DESC",
+      "desc_resolved": "Summon a turtle to any tile in range 6."
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "SummonToad": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONTOAD_NAME",
+      "name_resolved": "Summon Toad",
+      "desc": "ABILITY_SUMMONTOAD_DESC",
+      "desc_resolved": "Summon a toad.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Toad"
+    }
+  },
+  "SummonToad2": {
+    "variant_of": "SummonToad",
+    "meta": {
+      "desc": "ABILITY_SUMMONTOAD2_DESC",
+      "desc_resolved": "Summon a super toad!\n(It has more damage, health, and can move an extra time each turn)"
+    },
+    "spawn": {
+      "object": "Toad2"
+    }
+  },
+  "SummonBear": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONBEAR_NAME",
+      "name_resolved": "Summon Bear",
+      "desc": "ABILITY_SUMMONBEAR_DESC",
+      "desc_resolved": "Summon a bear.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "range_mode": "custom",
+      "custom_range": [
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "-2",
+          "-1"
+        ],
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "aoe_mode": "custom",
+      "dont_orient_aoe": "true",
+      "custom_aoe": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "range_excludes_blocking": "false",
+      "restrictions": "must_fit_2x2_character",
+      "aoe_restrictions": "none",
+      "range_display_include_aoe": "true",
+      "mouse_offset": [
+        ".5",
+        ".5"
+      ]
+    },
+    "spawn": {
+      "object": "Bear",
+      "size": "2"
+    }
+  },
+  "SummonBear2": {
+    "variant_of": "SummonBear",
+    "meta": {
+      "desc": "ABILITY_SUMMONBEAR2_DESC",
+      "desc_resolved": "Summon a furious bear!\n(It has Fury Swipes.)"
+    },
+    "spawn": {
+      "object": "Bear2"
+    }
+  },
+  "DruidSwap": {
+    "template": "swap",
+    "meta": {
+      "name": "ABILITY_STEPIN_NAME",
+      "name_resolved": "Step In",
+      "desc": "ABILITY_STEPIN_DESC",
+      "desc_resolved": "Swap positions with a familiar.",
+      "animate_name": "true",
+      "class": "Druid"
+    },
+    "graphics": {},
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "familiars_only"
+      ]
+    }
+  },
+  "DruidSwap2": {
+    "variant_of": "DruidSwap",
+    "meta": {
+      "desc": "ABILITY_STEPIN2_DESC",
+      "desc_resolved": "Swap positions with any unit."
+    },
+    "target": {
+      "aoe_restrictions": "none"
+    }
+  },
+  "BattleCry": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_BATTLECRY_NAME",
+      "name_resolved": "Battle Cry",
+      "desc": "ABILITY_BATTLECRY_DESC",
+      "desc_resolved": "Give all familiars in an area +2 Damage.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Familiar": {
+          "DamageUp": "2"
+        }
+      }
+    }
+  },
+  "BattleCry2": {
+    "variant_of": "BattleCry",
+    "meta": {
+      "desc": "ABILITY_BATTLECRY2_DESC",
+      "desc_resolved": "Give all familiars +3 Damage."
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Familiar": {
+          "DamageUp": "3"
+        }
+      }
+    }
+  },
+  "PullToSafety": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_STANDBYME_NAME",
+      "name_resolved": "Stand By Me",
+      "desc": "ABILITY_STANDBYME_DESC",
+      "desc_resolved": "Teleport an ally to you.",
+      "class": "Druid",
+      "type_icon": "defense"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "restrictions": "must_have_ally"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DisplaceTowardsSource": "1"
+      }
+    }
+  },
+  "PullToSafety2": {
+    "variant_of": "PullToSafety",
+    "meta": {
+      "desc": "ABILITY_STANDBYME2_DESC",
+      "desc_resolved": "Teleport any unit to you."
+    },
+    "target": {
+      "restrictions": [
+        "must_have_character",
+        "aoe_must_be_force_displaceable"
+      ]
+    }
+  },
+  "BrambleBurst": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_BRAMBLEBURST_NAME",
+      "name_resolved": "Bramble Burst",
+      "desc": "ABILITY_BRAMBLEBURST_DESC",
+      "desc_resolved": "Explode a familiar causing damage to all adjacent units and spawning brambles.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "projectile": "BrambleProjectile",
+      "particle": "Explosion"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "1",
+      "restrictions": "must_have_familiar"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "cant_miss": "true",
+      "effects": {
+        "VaporizeTarget": "1",
+        "ChangeTile": "BrambleTile"
+      },
+      "elements": [
+        "Explosion",
+        "Grass"
+      ]
+    }
+  },
+  "BrambleBurst2": {
+    "variant_of": "BrambleBurst",
+    "meta": {
+      "desc": "ABILITY_BRAMBLEBURST2_DESC",
+      "desc_resolved": "Explode a familiar causing damage to all units in range 2 and spawning brambles."
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "FlowerFeet": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_FLOWERFEET_NAME",
+      "name_resolved": "Flower Feet",
+      "desc": "ABILITY_FLOWERFEET_DESC",
+      "desc_resolved": "Move 3 tiles. Plant flowers as you move.",
+      "animate_name": "true",
+      "class": "Druid"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "3"
+    },
+    "temporary_effects": {
+      "TileTrail": "FlowerTile"
+    }
+  },
+  "FlowerFeet2": {
+    "variant_of": "FlowerFeet",
+    "meta": {
+      "desc": "ABILITY_FLOWERFEET2_DESC",
+      "desc_resolved": "Move 5 tiles. Plant flowers as you move and where you end up."
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "temporary_effects": {
+      "TileTrail_Ahead": "FlowerTile"
+    }
+  },
+  "ThornyFeet": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_THORNYFEET_NAME",
+      "name_resolved": "Thorny Feet",
+      "desc": "ABILITY_THORNYFEET_DESC",
+      "desc_resolved": "Move 3 tiles. Plant brambles as you move.",
+      "animate_name": "true",
+      "class": "Druid"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "3"
+    },
+    "temporary_effects": {
+      "TileTrail": "BrambleTile"
+    }
+  },
+  "ThornyFeet2": {
+    "variant_of": "ThornyFeet",
+    "meta": {
+      "desc": "ABILITY_THORNYFEET2_DESC",
+      "desc_resolved": "Move 3 tiles. Plant brambles as you move.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "Encourage": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_ENCOURAGE_NAME",
+      "name_resolved": "Encourage",
+      "desc": "ABILITY_ENCOURAGE_DESC",
+      "desc_resolved": "Give a familiar an extra turn after this one.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "3",
+      "restrictions": "must_have_familiar"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "Encourage2": {
+    "variant_of": "Encourage",
+    "meta": {
+      "desc": "ABILITY_ENCOURAGE2_DESC",
+      "desc_resolved": "Give a familiar an extra turn after this one.\n[s:.7](This spell costs less and has increased range.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "Protection": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PROTECTION_NAME",
+      "name_resolved": "Protection",
+      "desc": "ABILITY_PROTECTION_DESC",
+      "desc_resolved": "Give a familiar +1 [img:divineshield].",
+      "class": "Druid",
+      "type_icon": "defense"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "0",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "familiars_only"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "DivineShield": "1"
+      }
+    }
+  },
+  "Protection2": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_PROTECTION_NAME",
+      "name_resolved": "Protection",
+      "desc": "ABILITY_PROTECTION2_DESC",
+      "desc_resolved": "Give familiars in a large area +1 [img:divineshield].",
+      "class": "Druid",
+      "type_icon": "defense"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Familiar": {
+          "DivineShield": "1"
+        }
+      }
+    }
+  },
+  "Promote": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PROMOTE_NAME",
+      "name_resolved": "Promote",
+      "desc": "ABILITY_PROMOTE_DESC",
+      "desc_resolved": "The next familiar you spawn becomes a [img:champion] champion.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "ChampionUpgradeNextMinion": "1"
+      }
+    }
+  },
+  "Promote2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PROMOTE_NAME",
+      "name_resolved": "Promote",
+      "desc": "ABILITY_PROMOTE2_DESC",
+      "desc_resolved": "The next familiar you spawn becomes an [img:elite] elite.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "EliteUpgradeNextMinion": "1"
+      }
+    }
+  },
+  "SafetyDance": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SAFETYDANCE_NAME",
+      "name_resolved": "Safety Dance",
+      "desc": "ABILITY_SAFETYDANCE_DESC",
+      "desc_resolved": "Give all allies +1 [img:shield].",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "particle": "fx_shield",
+      "animation": "sing2"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Shield": "1"
+      }
+    }
+  },
+  "SafetyDance2": {
+    "variant_of": "SafetyDance",
+    "meta": {
+      "desc": "ABILITY_SAFETYDANCE2_DESC",
+      "desc_resolved": "Give all allies +2 [img:shield]."
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "2"
+      }
+    }
+  },
+  "WarCry": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_WARCRY_NAME",
+      "name_resolved": "War Cry",
+      "desc": "ABILITY_WARCRY_DESC",
+      "desc_resolved": "Each familiar attacks their closest enemy immediately if they can.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "howl",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "familiars_only"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceAttack": "1"
+      }
+    }
+  },
+  "WarCry2": {
+    "variant_of": "WarCry",
+    "meta": {
+      "desc": "ABILITY_WARCRY2_DESC",
+      "desc_resolved": "Your allies and familiars all attack their closest enemy immediately if they can."
+    },
+    "target": {
+      "aoe_restrictions": "allies_only"
+    }
+  },
+  "TigerForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHEWOLF_NAME",
+      "name_resolved": "Form of the Wolf",
+      "desc": "ABILITY_FORMOFTHEWOLF_DESC",
+      "desc_resolved": "Enter Wolf Form, gaining +2 [img:str], +2 [img:spd], -2 [img:lck], and -2 [img:int]. Your basic attack becomes Wolf Claws and this becomes Pounce.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "TigerSwipes",
+        "TransformAbility": "Pounce",
+        "SpeedUp": "2",
+        "StrengthUp": "2",
+        "LuckUp": "-2",
+        "IntelligenceUp": "-2",
+        "CatPartsTransform": {
+          "tail": "4",
+          "body": "31",
+          "head": "12",
+          "arm1": "1013",
+          "arm2": "1013",
+          "leg1": "41",
+          "leg2": "41",
+          "ear1": "23",
+          "ear2": "23"
+        }
+      }
+    }
+  },
+  "TigerForm2": {
+    "variant_of": "TigerForm",
+    "meta": {
+      "desc": "ABILITY_FORMOFTHEWOLF2_DESC",
+      "desc_resolved": "Enter Wolf Form, gaining +2 [img:str], +2 [img:spd], -2 [img:lck], and -2 [img:int]. Your basic attack becomes Wolf Claws+ and this becomes Pounce+."
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "TigerSwipes2",
+        "TransformAbility": "Pounce2"
+      }
+    }
+  },
+  "TigerSwipes": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_WOLFCLAWS_NAME",
+      "name_resolved": "Wolf Claws",
+      "desc": "ABILITY_WOLFCLAWS_DESC",
+      "desc_resolved": "A 2-hit melee attack.",
+      "class": "Druid",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "animation": "doubleswat"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable",
+      "multihit": "2"
+    },
+    "damage_instance": {
+      "damage": "(5+bonus_melee_damage+1)/2"
+    }
+  },
+  "TigerSwipes2": {
+    "variant_of": "TigerSwipes",
+    "meta": {
+      "desc": "ABILITY_WOLFCLAWS2_DESC",
+      "desc_resolved": "A 2-hit melee attack that inflicts bleed."
+    },
+    "damage_instance": {
+      "effects": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "Pounce": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_WOLFPOUNCE_NAME",
+      "name_resolved": "Pounce",
+      "desc": "ABILITY_WOLFPOUNCE_DESC",
+      "desc_resolved": "Jump on a unit, damaging and displacing it.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "4",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": [
+        "must_have_character"
+      ]
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "Pounce2": {
+    "variant_of": "Pounce",
+    "meta": {
+      "desc": "ABILITY_WOLFPOUNCE2_DESC",
+      "desc_resolved": "Jump on a unit, damaging, displacing and inflicting Bleed 1 to it."
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "effects": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "MonkeyForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHEMONKEY_NAME",
+      "name_resolved": "Form of the Monkey",
+      "desc": "ABILITY_FORMOFTHEMONKEY_DESC",
+      "desc_resolved": "Enter Monkey Form, gaining +2 [img:dex], +2 [img:lck], -2 [img:con], and -2 [img:cha]. Your basic attack becomes Throw Poop and this becomes Monkey Toss.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "ThrowPoop",
+        "TransformAbility": "MonkeyThrow",
+        "DexterityUp": "2",
+        "LuckUp": "2",
+        "ConstitutionUp": "-2",
+        "CharismaUp": "-2",
+        "CatPartsTransform": {
+          "tail": "1502",
+          "ear1": "1501",
+          "ear2": "1501",
+          "mouth": "1501",
+          "arm1": "1501",
+          "arm2": "1501",
+          "leg1": "1501",
+          "leg2": "1501"
+        }
+      }
+    }
+  },
+  "MonkeyForm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHEMONKEY_NAME",
+      "name_resolved": "Form of the Monkey",
+      "desc": "ABILITY_FORMOFTHEMONKEY2_DESC",
+      "desc_resolved": "Enter Monkey Form, gaining +2 [img:dex] and +2 [img:lck]. Your basic attack becomes Throw Poop and this becomes Monkey Toss+.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "ThrowPoop",
+        "TransformAbility": "MonkeyThrow2",
+        "DexterityUp": "2",
+        "LuckUp": "2",
+        "CatPartsTransform": {
+          "tail": "1502",
+          "ear1": "1501",
+          "ear2": "1501",
+          "mouth": "1501",
+          "arm1": "1501",
+          "arm2": "1501",
+          "leg1": "1501",
+          "leg2": "1501"
+        }
+      }
+    }
+  },
+  "ThrowPoop": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_THROWPOOP_NAME",
+      "name_resolved": "Throw Poop",
+      "desc": "ABILITY_THROWPOOP_DESC",
+      "desc_resolved": "Throw poop.",
+      "class": "Druid",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "projectile": "Dip",
+      "animation": "throwobject"
+    },
+    "target": {
+      "min_range": "3",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "effects": {
+        "BounceObject": "CharmedDip"
+      }
+    }
+  },
+  "MonkeyThrow": {
+    "template": "throw_attack",
+    "meta": {
+      "name": "ABILITY_MONKEYTOSS_NAME",
+      "name_resolved": "Monkey Toss",
+      "desc": "ABILITY_MONKEYTOSS_DESC",
+      "desc_resolved": "Throw an adjacent unit to another tile. It takes damage if it's thrown onto something.",
+      "class": "Druid",
+      "type_icon": "defense",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "5",
+      "restrictions": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "blocked_damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "MonkeyThrow2": {
+    "variant_of": "MonkeyThrow",
+    "meta": {
+      "desc": "ABILITY_MONKEYTOSS2_DESC",
+      "desc_resolved": "Throw an adjacent unit to another tile. It takes damage if it's thrown onto something.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "RhinoForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHETURTLE_NAME",
+      "name_resolved": "Form of the Turtle",
+      "desc": "ABILITY_FORMOFTHETURTLE_DESC",
+      "desc_resolved": "Enter Turtle Form, getting +2 [img:con], +10 [img:shield], -2 [img:int], and -2 [img:spd]. Your basic attack becomes Head Bash and this becomes Harden Shell.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "HornCharge",
+        "TransformAbility": "HardenSkin",
+        "ConstitutionUp": "2",
+        "Shield": "10",
+        "IntelligenceUp": "-2",
+        "SpeedUp": "-2",
+        "CatPartsTransform": {
+          "tail": "1503",
+          "body": "1029",
+          "mouth": "1005"
+        }
+      }
+    }
+  },
+  "RhinoForm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHETURTLE_NAME",
+      "name_resolved": "Form of the Turtle",
+      "desc": "ABILITY_FORMOFTHETURTLE2_DESC",
+      "desc_resolved": "Enter Turtle Form, getting +2 [img:con], +10 [img:shield], and -2 [img:int]. Your basic attack becomes Head Bash and this becomes Harden Shell+.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "HornCharge",
+        "TransformAbility": "HardenSkin2",
+        "ConstitutionUp": "2",
+        "Shield": "10",
+        "IntelligenceUp": "-2"
+      }
+    }
+  },
+  "HardenSkin": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_HARDENSHELL_NAME",
+      "name_resolved": "Harden Shell",
+      "desc": "ABILITY_HARDENSHELL_DESC",
+      "desc_resolved": "Gain +1 [img:shield], +1 Thorns, and +1 temporary Brace.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "1",
+        "Thorns": "1",
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "HardenSkin2": {
+    "variant_of": "HardenSkin",
+    "meta": {
+      "desc": "ABILITY_HARDENSHELL2_DESC",
+      "desc_resolved": "Gain +1 [img:shield], +1 Thorns, and +1 temporary Brace.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "HornCharge": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_HEADBASH_NAME",
+      "name_resolved": "Head Bash",
+      "desc": "ABILITY_HEADBASH_DESC",
+      "desc_resolved": "Dash forward one tile, then attack. This attack deals Knockback and has a chance to inflict Stun.",
+      "class": "Druid",
+      "animate_name": "false"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "target": {
+      "max_range": "1+bonus_melee_range"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "knockback": "1",
+      "effects": {
+        "Stun": [
+          "1",
+          ".2"
+        ]
+      }
+    }
+  },
+  "SummonCatepillar": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONCATERPILLAR_NAME",
+      "name_resolved": "Summon Caterpillar",
+      "desc": "ABILITY_SUMMONCATERPILLAR_DESC",
+      "desc_resolved": "Summon a caterpillar. It gains All Stats Up at the end of each turn. It becomes a moth at All Stats Up 5.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Catepillar"
+    }
+  },
+  "SummonCatepillar2": {
+    "variant_of": "SummonCatepillar",
+    "meta": {
+      "desc": "ABILITY_SUMMONCATERPILLAR2_DESC",
+      "desc_resolved": "Summon a caterpillar with All Stats Up 2. It gains All Stats Up at the end of each turn. It becomes a moth at All Stats Up 5."
+    },
+    "spawn": {
+      "additional_passives": {
+        "AllStatsUp": "2"
+      }
+    }
+  },
+  "SleepPowder": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_SLEEPPOWDER_NAME",
+      "name_resolved": "Sleep Powder",
+      "desc": "ABILITY_SLEEPPOWDER_DESC",
+      "desc_resolved": "Inflict Sleep on a unit.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "animation": "powder"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "CallTheWind": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CALLTHEWIND_NAME",
+      "name_resolved": "Call the Wind",
+      "desc": "ABILITY_CALLTHEWIND_DESC",
+      "desc_resolved": "Blow all units back one tile.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "fx_windSpell"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "orientation"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "CallTheWind2": {
+    "variant_of": "CallTheWind",
+    "meta": {
+      "desc": "ABILITY_CALLTHEWIND2_DESC",
+      "desc_resolved": "Blow all units back three tiles.\nAllies are immune to knockback damage during this."
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3",
+      "effects": {
+        "Conditional_Ally": {
+          "KnockbackDamageImmuneUntilSettled": "1"
+        }
+      }
+    }
+  },
+  "InspirationalSong": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_INSPIRATIONALSONG_NAME",
+      "name_resolved": "Inspirational Song",
+      "desc": "ABILITY_INSPIRATIONALSONG_DESC",
+      "desc_resolved": "Heal all allies and give them +1 Temporary Damage.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "fx_statup"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    },
+    "damage_instance": {
+      "heal": "1",
+      "effects": {
+        "TempDamageUp": "1"
+      }
+    }
+  },
+  "InspirationalSong2": {
+    "variant_of": "InspirationalSong",
+    "meta": {
+      "desc": "ABILITY_INSPIRATIONALSONG2_DESC",
+      "desc_resolved": "Heal all allies and give them +2 Temporary Damage."
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "TempDamageUp": "2"
+      }
+    }
+  },
+  "DeathMetal": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_DEATHMETAL_NAME",
+      "name_resolved": "Death Metal",
+      "desc": "ABILITY_DEATHMETAL_DESC",
+      "desc_resolved": "A song that explodes a random enemy. If this hits a boss, it instead inflicts Fear.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "None"
+    },
+    "cost": {
+      "mana": "13",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_aoe": "0",
+      "max_range": "20",
+      "restrictions": [
+        "must_have_living_character",
+        "must_have_enemy"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Boss": {
+          "Fear": "1",
+          "VisualFX": "Explosion",
+          "ExplodeCharacter_NoDie": "5"
+        },
+        "Else": {
+          "ExplodeCharacter": "5"
+        }
+      }
+    }
+  },
+  "DeathMetal2": {
+    "variant_of": "DeathMetal",
+    "meta": {
+      "desc": "ABILITY_DEATHMETAL2_DESC",
+      "desc_resolved": "A song that explodes a random enemy. If this hits a boss, it instead inflicts Fear. Inflict Madness on each other enemy."
+    },
+    "target": {
+      "max_aoe": "20"
+    },
+    "splash_damage": {
+      "damage": "0",
+      "effects": {
+        "Conditional_Enemy": {
+          "Madness": "1"
+        }
+      }
+    }
+  },
+  "ChaChaSlide": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CHACHASLIDE_NAME",
+      "name_resolved": "Cha Cha Slide",
+      "desc": "ABILITY_CHACHASLIDE_DESC",
+      "desc_resolved": "Deal 10 Knockback to all units in a random direction. Allies are immune to Thorns, tile and Knockback damage during this effect.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "none"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "effects": {
+        "RandomKnockbackDirection": "4",
+        "KnockbackDamageImmuneUntilSettled": "1",
+        "ThornsDamageImmuneUntilSettled": "1",
+        "TileDamageImmuneUntilSettled": "1"
+      }
+    }
+  },
+  "ChaChaSlide2": {
+    "variant_of": "ChaChaSlide",
+    "meta": {
+      "desc": "ABILITY_CHACHASLIDE2_DESC",
+      "desc_resolved": "Deal 10 Knockback to all units in a random direction. Allies gain +3 temporary Thorns and are immune to Thorns, tile and Knockback damage during this effect."
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Ally": {
+          "Temporary": {
+            "status": "Thorns",
+            "stacks": "3",
+            "turns": "1",
+            "expires_on_begin_turn": "true"
+          },
+          "KnockbackDamageImmuneUntilSettled": "1",
+          "ThornsDamageImmuneUntilSettled": "1",
+          "TileDamageImmuneUntilSettled": "1"
+        }
+      }
+    }
+  },
+  "BestowWisdom": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_BESTOWWISDOM_NAME",
+      "name_resolved": "Bestow Wisdom",
+      "desc": "ABILITY_BESTOWWISDOM_DESC",
+      "desc_resolved": "Give +1 [img:int] to a unit.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "BestowWisdom2": {
+    "variant_of": "BestowWisdom",
+    "meta": {
+      "desc": "ABILITY_BESTOWWISDOM2_DESC",
+      "desc_resolved": "Give +1 [img:int] and +2 mana to a unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "CharismaUp": "1",
+        "ManaGain": "2"
+      }
+    }
+  },
+  "RaccoonForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHERACCOON_NAME",
+      "name_resolved": "Form of the Raccoon",
+      "desc": "ABILITY_FORMOFTHERACCOON_DESC",
+      "desc_resolved": "Enter Raccoon Form, gaining +2 [img:int], and -2 [img:str]. Your basic attack becomes Pilfer and this becomes Scavenge.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "Pilfer",
+        "TransformAbility": "Scavenge",
+        "IntelligenceUp": "2",
+        "StrengthUp": "-2",
+        "CatPartsTransform": {
+          "tail": "1504",
+          "head": "1504",
+          "texture": "1008"
+        }
+      }
+    }
+  },
+  "RaccoonForm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHERACCOON_NAME",
+      "name_resolved": "Form of the Raccoon",
+      "desc": "ABILITY_FORMOFTHERACCOON2_DESC",
+      "desc_resolved": "Enter Raccoon Form, gaining +2 [img:int], and +2 [img:lck]. Your basic attack becomes Pilfer and this becomes Scavenge+.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "Pilfer",
+        "TransformAbility": "Scavenge2",
+        "IntelligenceUp": "2",
+        "LuckUp": "2",
+        "CatPartsTransform": {
+          "tail": "1504",
+          "head": "1504",
+          "texture": "1008"
+        }
+      }
+    }
+  },
+  "Pilfer": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PILFER_NAME",
+      "name_resolved": "Pilfer",
+      "desc": "ABILITY_PILFER_DESC",
+      "desc_resolved": "A melee attack that scatters two random pickups when it hits.",
+      "class": "Druid",
+      "animate_name": "false"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_damage",
+      "effects": {
+        "ScatterRandomPickups": "2"
+      }
+    }
+  },
+  "Scavenge": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_SCAVENGE_NAME",
+      "name_resolved": "Scavenge",
+      "desc": "ABILITY_SCAVENGE_DESC",
+      "desc_resolved": "Run to any pickup and collect it.",
+      "animate_name": "true",
+      "class": "Druid"
+    },
+    "graphics": {
+      "speed": "1.5",
+      "animation": "dash"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "100",
+      "restrictions": [
+        "must_be_moveable",
+        "must_have_tag",
+        "must_move"
+      ],
+      "target_requires_tag": "pickup"
+    }
+  },
+  "Scavenge2": {
+    "variant_of": "Scavenge",
+    "meta": {
+      "desc": "ABILITY_SCAVENGE2_DESC",
+      "desc_resolved": "Run to any pickup and collect it. The effects of that pickup are doubled."
+    },
+    "temporary_effects": {
+      "DoubleLoot": "1"
+    }
+  },
+  "SummonCrow": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONCROW_NAME",
+      "name_resolved": "Resummon Crow",
+      "desc": "ABILITY_SUMMONCROW_DESC",
+      "desc_resolved": "Summon a new crow. Castable only if your crow is dead.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "11"
+    },
+    "bonus_passives": {
+      "AbilityDisableIfLivingCrow": "1"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Crow"
+    }
+  },
+  "SummonCrow2": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONCROW_NAME",
+      "name_resolved": "Resummon Crow",
+      "desc": "ABILITY_SUMMONCROW2_DESC",
+      "desc_resolved": "Summon a crow.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "11"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Crow"
+    }
+  },
+  "WeWillRockYou": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_WEWILLROCKYOU_NAME",
+      "name_resolved": "We Will Rock You",
+      "desc": "ABILITY_WEWILLROCKYOU_DESC",
+      "desc_resolved": "Inflict Petrify on a familiar and give it +6 [img:shield].",
+      "class": "Druid",
+      "type_icon": "defense"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "7",
+      "max_aoe": "0",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "familiars_only"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Shield": "6",
+        "Petrify": "1"
+      }
+    }
+  },
+  "WeWillRockYou2": {
+    "variant_of": "WeWillRockYou",
+    "meta": {
+      "desc": "ABILITY_WEWILLROCKYOU2_DESC",
+      "desc_resolved": "Inflict Petrify on a familiar and give it +6 [img:shield] and +2 Thorns."
+    },
+    "damage_instance": {
+      "effects": {
+        "Thorns": "2"
+      }
+    }
+  },
+  "TreeForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_FORMOFTHETREE_NAME",
+      "name_resolved": "Form of the Tree",
+      "desc": "ABILITY_FORMOFTHETREE_DESC",
+      "desc_resolved": "Enter Tree Form, gaining -2 [img:int], +5 [img:shield], and Brace 2. You become immobile and immune to Knockback. Your basic attack becomes Timber and this becomes Synthesize.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "Timber",
+        "TransformAbility": "Synthesize",
+        "IntelligenceUp": "-2",
+        "PermanentImmobile": "1",
+        "Brace": "2",
+        "Shield": "5",
+        "ApplyPassives": {
+          "KnockbackImmunity": "1",
+          "AddTag": "plant",
+          "Plant": "1",
+          "ElementImmune": "Creep"
+        },
+        "CatPartsTransform": {
+          "texture": "322",
+          "ear1": "325",
+          "arm2": "324"
+        }
+      }
+    }
+  },
+  "TreeForm2": {
+    "variant_of": "TreeForm",
+    "meta": {
+      "desc": "ABILITY_FORMOFTHETREE2_DESC",
+      "desc_resolved": "Enter Tree Form, gaining -2 [img:int], +5 [img:shield], and Brace 4. You become immobile and immune to Knockback. Your basic attack becomes Timber and this becomes Synthesize+."
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformAbility": "Synthesize2",
+        "FullHeal": "1",
+        "Brace": "4"
+      }
+    }
+  },
+  "Timber": {
+    "template": "trample_dash",
+    "meta": {
+      "name": "ABILITY_TIMBER_NAME",
+      "name_resolved": "Timber",
+      "desc": "ABILITY_TIMBER_DESC",
+      "desc_resolved": "Fall into an adjacent tile, dealing massive damage to units you displace.",
+      "class": "Druid",
+      "type_icon": "melee"
+    },
+    "graphics": {
+      "dash_start_animation": "timberStart",
+      "dash_animation": "timberDash",
+      "dash_end_animation": "timberEnd"
+    },
+    "cost": {
+      "act_points": "1",
+      "move_points": "0"
+    },
+    "target": {
+      "max_range": "1+bonus_range"
+    },
+    "temporary_effects": {
+      "Trample": "3"
+    },
+    "damage_instance": {
+      "override_trample_damage": "true",
+      "damage": "10+bonus_melee_damage"
+    }
+  },
+  "Synthesize": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_SYNTHESIZE_NAME",
+      "name_resolved": "Synthesize",
+      "desc": "ABILITY_SYNTHESIZE_DESC",
+      "desc_resolved": "Heal 2 HP and gain Charge 2.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "particle": "HealSmall"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "effects": {
+        "Charge": "2"
+      }
+    }
+  },
+  "Synthesize2": {
+    "variant_of": "Synthesize",
+    "meta": {
+      "desc": "ABILITY_SYNTHESIZE2_DESC",
+      "desc_resolved": "You and allies within 3 tiles gain 2 HP and 2 Charge."
+    },
+    "target": {
+      "max_aoe": "3",
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    }
+  },
+  "HydroPump": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_HYDROPUMP_NAME",
+      "name_resolved": "Hydro Pump",
+      "desc": "ABILITY_HYDROPUMP_DESC",
+      "desc_resolved": "Shoot a blast of water that deals 3 Knockback. This spell has recoil.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "particle": "Wave",
+      "animation": "shoot"
+    },
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "orientation"
+    },
+    "self_damage": {
+      "knockback": "-3",
+      "effects": {
+        "KnockbackDamageImmuneUntilSettled": "1"
+      },
+      "elements": [
+        "Water"
+      ]
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "3",
+      "effects": {
+        "ChangeTile": "WaterTile"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "HydroPump2": {
+    "variant_of": "HydroPump",
+    "meta": {
+      "desc": "ABILITY_HYDROPUMP2_DESC",
+      "desc_resolved": "Shoot a long blast of water that deals 10 Knockback. This spell has recoil."
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "self_damage": {
+      "knockback": "-10"
+    },
+    "damage_instance": {
+      "knockback": "10"
+    }
+  },
+  "ControlPlants": {
+    "template": "spell",
+    "chain_ability": "ControlPlantsPartTwo",
+    "meta": {
+      "name": "ABILITY_CONTROLPLANTS_NAME",
+      "name_resolved": "Control Plants",
+      "desc": "ABILITY_CONTROLPLANTS_DESC",
+      "desc_resolved": "Create a tall grass tile, then all enemies on grass element tiles take 1 damage.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "particle": "VineWhip"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "spell",
+      "effects": {
+        "ChangeTile": "TallGrassTile",
+        "OverrideDamage": "0"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "ControlPlants2": {
+    "variant_of": "ControlPlants",
+    "chain_ability": "ControlPlantsPartTwo2",
+    "meta": {
+      "desc": "ABILITY_CONTROLPLANTS2_DESC",
+      "desc_resolved": "Create a tall grass tile, then all enemies on grass element tiles take 1 damage and gain Poison 1."
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "ControlPlantsPartTwo": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "particle": "VineWhip"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": [
+        "enemies_only",
+        "character_must_be_affected_by_tile_with_element"
+      ],
+      "aoe_tile_requires_element": "Grass"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "ControlPlantsPartTwo2": {
+    "variant_of": "ControlPlantsPartTwo",
+    "damage_instance": {
+      "effects": {
+        "Poison": "1"
+      }
+    }
+  },
+  "ControlWater": {
+    "template": "spell",
+    "chain_ability": "ControlWaterPartTwo",
+    "graphics": {
+      "particle": "Wave"
+    },
+    "meta": {
+      "name": "ABILITY_CONTROLWATER_NAME",
+      "name_resolved": "Control Water",
+      "desc": "ABILITY_CONTROLWATER_DESC",
+      "desc_resolved": "Create a water tile, then all allies on water element tiles heal 2 HP.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "heal": "2",
+      "type": "spell",
+      "effects": {
+        "ChangeTile": "WaterTile",
+        "OverrideDamage": "0"
+      },
+      "elements": [
+        "Water"
+      ]
+    }
+  },
+  "ControlWater2": {
+    "variant_of": "ControlWater",
+    "chain_ability": "ControlWaterPartTwo2",
+    "meta": {
+      "desc": "ABILITY_CONTROLWATER2_DESC",
+      "desc_resolved": "Create a water tile, then all allies on water element tiles heal 2 HP and have their debuffs cleansed."
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "ControlWaterPartTwo": {
+    "template": "spell",
+    "graphics": {
+      "animation": "none",
+      "particle": "none"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": [
+        "allies_only",
+        "character_must_be_affected_by_tile_with_element"
+      ],
+      "aoe_tile_requires_element": "Water"
+    },
+    "damage_instance": {
+      "heal": "2"
+    }
+  },
+  "ControlWaterPartTwo2": {
+    "variant_of": "ControlWaterPartTwo",
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0"
+      }
+    }
+  },
+  "ControlAir": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CONTROLAIR_NAME",
+      "name_resolved": "Control Air",
+      "desc": "ABILITY_CONTROLAIR_DESC",
+      "desc_resolved": "Blow a unit ten tiles away from you. This doesn't deal Knockback damage.",
+      "class": "Druid",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "particle": "fx_windSpell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "0",
+      "min_range": "1",
+      "max_range": "4",
+      "knockback_mode": "character_to_target"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10",
+      "effects": {
+        "OverrideKnockbackDamage": "0"
+      },
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "ControlAir2": {
+    "variant_of": "ControlAir",
+    "meta": {
+      "desc": "ABILITY_CONTROLAIR2_DESC",
+      "desc_resolved": "Blow a unit ten tiles away from you. This doesn't deal Knockback damage.\n[s:.7](This spell costs less and has infinite range.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "FamiliarSelfDestruct": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_SELFDESTRUCTFAMILIAR_NAME",
+      "name_resolved": "Self-destruct",
+      "desc": "ABILITY_SELFDESTRUCTFAMILIAR_DESC",
+      "desc_resolved": "Explode.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "particle": "Explosion",
+      "animation": "blowUp"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true"
+    },
+    "damage_instance": {
+      "ai_base_score": "-999999",
+      "damage": "7",
+      "knockback": "1",
+      "piercing": "true",
+      "cant_miss": "true",
+      "elements": [
+        "Fire",
+        "Napalm",
+        "Explosion"
+      ],
+      "effects": {
+        "Vaporize": "1"
+      }
+    },
+    "splash_damage": {
+      "damage": "8",
+      "knockback": "1",
+      "elements": [
+        "Fire",
+        "Napalm",
+        "Explosion"
+      ]
+    }
+  },
+  "FamiliarSelfDestruct2": {
+    "variant_of": "FamiliarSelfDestruct",
+    "damage_instance": {
+      "damage": "12"
+    },
+    "splash_damage": {
+      "damage": "12"
+    }
+  },
+  "FeralMelee": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_FERALMELEE_NAME",
+      "name_resolved": "Feral Attack",
+      "desc": "ABILITY_FERALMELEE_DESC",
+      "desc_resolved": "A melee attack.\n[s:.7](This spell costs 0 mana. Castable once per turn.)[/s]",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_aoe": "1+bonus_melee_range",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    }
+  },
+  "Entangle": {
+    "template": "lobbed_attack",
+    "graphics": {
+      "projectile": "SpiderBall"
+    },
+    "meta": {
+      "name": "ABILITY_ENTANGLE_NAME",
+      "name_resolved": "Entangle",
+      "desc": "ABILITY_ENTANGLE_DESC",
+      "desc_resolved": "Entangle units in an area.",
+      "class": "Druid"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Tangled": "1"
+      }
+    }
+  },
+  "Entangle2": {
+    "variant_of": "Entangle",
+    "meta": {
+      "desc": "ABILITY_ENTANGLE2_DESC",
+      "desc_resolved": "Entangle units in an area and spawn bramble tiles."
+    },
+    "damage_instance": {
+      "effects": {
+        "ChangeTile": "BrambleTile"
+      }
+    }
+  },
+  "Lullaby": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_LULLABY_NAME",
+      "name_resolved": "Lullaby",
+      "desc": "ABILITY_LULLABY_DESC",
+      "desc_resolved": "Inflicts Sleep on units in an area.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing2",
+      "particle": "none"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Sleep": "1"
+      }
+    }
+  },
+  "Lullaby2": {
+    "variant_of": "Lullaby",
+    "meta": {
+      "desc": "ABILITY_LULLABY2_DESC",
+      "desc_resolved": "Inflicts Sleep on units in an area.\n[s:.7](This spell costs less and has increased range.)[/s]"
+    },
+    "cost": {
+      "mana": "9"
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "WeAreTheChampions": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_WEARETHECHAMPIONS_NAME",
+      "name_resolved": "We Are the Champions",
+      "desc": "ABILITY_WEARETHECHAMPIONS_DESC",
+      "desc_resolved": "Each familiar gains All Stats Up 2 and heals to full.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": "familiars_only"
+    },
+    "damage_instance": {
+      "heal": "0",
+      "effects": {
+        "AllStatsUp": "2",
+        "FullHeal": "1"
+      }
+    }
+  },
+  "WeAreTheChampions2": {
+    "variant_of": "WeAreTheChampions",
+    "meta": {
+      "desc": "ABILITY_WEARETHECHAMPIONS2_DESC",
+      "desc_resolved": "Each familiar gains All Stats Up 2 and heals to full.\n[s:.7](This spell costs 0 mana. Castable once per battle.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Cheerlead": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_CHEERLEAD_NAME",
+      "name_resolved": "Cheerlead",
+      "desc": "ABILITY_CHEERLEAD_DESC",
+      "desc_resolved": "Make a target unit The Alpha.\nPASSIVE: The first spell the Alpha casts each turn is cast twice.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "bonus_passives": {
+      "AlphaStatusOnTurnBegin": {
+        "DoubleCastSpellThisTurn": "1"
+      }
+    },
+    "damage_instance": {
+      "effects": {
+        "AlphaCat": "1"
+      }
+    }
+  },
+  "Cheerlead2": {
+    "variant_of": "Cheerlead",
+    "meta": {
+      "desc": "ABILITY_CHEERLEAD2_DESC",
+      "desc_resolved": "Make a target unit The Alpha.\nPASSIVE: The first spell the Alpha casts each turn is cast twice.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "NaturesBlessing": {
+    "template": "spell",
+    "graphics": {
+      "particle": "none",
+      "animation": "createmagic"
+    },
+    "meta": {
+      "name": "ABILITY_NATURESBLESSING_NAME",
+      "name_resolved": "Nature's Blessing",
+      "desc": "ABILITY_NATURESBLESSING_DESC",
+      "desc_resolved": "Grow tall grass tiles in an area and give units in that area +3 Diminishing Health Regeneration",
+      "class": "Druid"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "2"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "TallGrassTile",
+        "DiminishingHealthRegen": "3"
+      },
+      "elements": [
+        "Grass"
+      ]
+    }
+  },
+  "NaturesBlessing2": {
+    "variant_of": "NaturesBlessing",
+    "meta": {
+      "desc": "ABILITY_NATURESBLESSING2_DESC",
+      "desc_resolved": "Grow tall grass tiles in an area and give units in that area +3 Diminishing Health Regeneration\n[s:.7](This spell costs less and has infinite range.)[/s]"
+    },
+    "cost": {
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "ThrowEgg": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_THROWEGGDRUID_NAME",
+      "name_resolved": "Throw Egg",
+      "desc": "ABILITY_THROWEGGDRUID_DESC",
+      "desc_resolved": "Throw an egg. If the egg lands in an empty tile, it hatches into a random animal friend at the start of its second turn.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "projectile": "AnimalEgg",
+      "animation": "throwobject"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "effects": {
+        "ObjectOnHitEmpty": "AnimalEgg"
+      }
+    }
+  },
+  "ThrowEgg2": {
+    "variant_of": "ThrowEgg",
+    "meta": {
+      "desc": "ABILITY_THROWEGGDRUID2_DESC",
+      "desc_resolved": "Throw an egg. If the egg lands in an empty tile, it hatches into a random animal friend at the start of its first turn."
+    },
+    "damage_instance": {
+      "effects": {
+        "ObjectOnHitEmpty": "AnimalEgg2"
+      }
+    }
+  },
+  "SquirrelForm": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SQUIRRELFORM_NAME",
+      "name_resolved": "Form of the Squirrel",
+      "desc": "ABILITY_SQUIRRELFORM_DESC",
+      "desc_resolved": "Spawn squirrels on each adjacent tile, then enter Squirrel Form.\nYour basic attack becomes Chitter and this becomes Birth Squirrel.",
+      "class": "Druid"
+    },
+    "tags": [
+      "shapeshift",
+      "summon"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "TransformBasicAttack": "Chitter",
+        "TransformAbility": "BirthSquirrel",
+        "ApplyPassives": {
+          "AddTag": "squirrel"
+        },
+        "CatPartsTransform": {
+          "mouth": "1071",
+          "tail": "1042",
+          "ear1": "1036",
+          "ear2": "1036"
+        }
+      }
+    },
+    "spawn": {
+      "object": "Squirrel"
+    }
+  },
+  "SquirrelForm2": {
+    "variant_of": "SquirrelForm",
+    "meta": {
+      "desc": "ABILITY_SQUIRRELFORM2_DESC",
+      "desc_resolved": "Spawn squirrels on each adjacent tile, then enter Squirrel Form.\nYour basic attack becomes Chitter and this becomes Birth Squirrel+.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "7"
+    },
+    "self_damage": {
+      "effects": {
+        "TransformAbility": "BirthSquirrel2"
+      }
+    }
+  },
+  "BirthSquirrel": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_BIRTHSQUIRREL_NAME",
+      "name_resolved": "Birth Squirrel",
+      "desc": "ABILITY_BIRTHSQUIRREL_DESC",
+      "desc_resolved": "Summon a squirrel.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true",
+      "animation": "poopfart"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "Squirrel"
+    }
+  },
+  "BirthSquirrel2": {
+    "variant_of": "BirthSquirrel",
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Chitter": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_CHITTER_NAME",
+      "name_resolved": "Chitter",
+      "desc": "ABILITY_CHITTER_DESC",
+      "desc_resolved": "Each squirrel gains +2 Damage and +2 [img:spd].",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "fx_statup"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "20",
+      "aoe_restrictions": "must_have_tag",
+      "target_requires_tag": "squirrel"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "DamageUp": "2",
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "GlowingMushroomGiveMana": {
+    "template": "spell",
+    "graphics": {
+      "animation": "puff",
+      "particle": "DustPoofMedium"
+    },
+    "target": {
+      "target_mode": "none",
+      "max_aoe": "3",
+      "aoe_excludes_self": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "ManaGain": "1"
+      }
+    }
+  },
+  "GlowingMushroomGiveMana2": {
+    "variant_of": "GlowingMushroomGiveMana",
+    "damage_instance": {
+      "heal": "1",
+      "cant_miss": "true",
+      "effects": {
+        "ManaGain": "1"
+      }
+    }
+  },
+  "PlantMushroom": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_PLANTMUSHROOM_NAME",
+      "name_resolved": "Plant Mushroom",
+      "desc": "ABILITY_PLANTMUSHROOM_DESC",
+      "desc_resolved": "Spawn a glowing mushroom that restores mana to nearby units on its turn.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "true"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "GlowingMushroom"
+    }
+  },
+  "PlantMushroom2": {
+    "variant_of": "PlantMushroom",
+    "meta": {
+      "desc": "ABILITY_PLANTMUSHROOM2_DESC",
+      "desc_resolved": "Spawn a glowing mushroom anywhere that restores mana and health to nearby units on its turn."
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "spawn": {
+      "object": "GlowingMushroom2"
+    }
+  },
+  "Serenade": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_SERENADE_NAME",
+      "name_resolved": "Serenade",
+      "desc": "ABILITY_SERENADE_DESC",
+      "desc_resolved": "Give Health Regeneration 1 to units in an area.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing2"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "4",
+      "max_aoe": "1"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "HealthRegenUp": "1"
+      }
+    }
+  },
+  "Serenade2": {
+    "variant_of": "Serenade",
+    "meta": {
+      "desc": "ABILITY_SERENADE2_DESC",
+      "desc_resolved": "Give Health Regeneration 1 to units in a larger area.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "WindyStep": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_WINDYSTEP_NAME",
+      "name_resolved": "Windy Step",
+      "desc": "ABILITY_WINDYSTEP_DESC",
+      "desc_resolved": "Give a unit +1 Bonus Move.",
+      "class": "Druid",
+      "type_icon": "misc"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "castspell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "MoveQuivered": "1"
+      },
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "WindyStep2": {
+    "variant_of": "WindyStep",
+    "meta": {
+      "desc": "ABILITY_WINDYSTEP2_DESC",
+      "desc_resolved": "Give a unit +1 Bonus Move and +1 [img:spd]. They take their next turn earlier."
+    },
+    "damage_instance": {
+      "effects": {
+        "MoveQuivered": "1",
+        "SpeedUp": "1",
+        "TempInitiativeChange": "100"
+      }
+    }
+  },
+  "ElkForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ELKFORM_NAME",
+      "name_resolved": "Form of the Elk",
+      "desc": "ABILITY_ELKFORM_DESC",
+      "desc_resolved": "Enter Elk Form, gaining +8 [img:spd], -2 [img:int], -2 [img:con], and Trample 3. You ignore tile effects while moving.\nYour basic attack becomes Antler Swipe and this becomes Prance.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "AntlerSwipe",
+        "TransformAbility": "Prance",
+        "SpeedUp": "8",
+        "IntelligenceUp": "-2",
+        "ConstitutionUp": "-2",
+        "Trample": "3",
+        "ApplyPassives": {
+          "IgnoreTiles": "1",
+          "YOffset": ".25"
+        },
+        "CatPartsTransform": {
+          "leg1": "338",
+          "leg2": "338",
+          "arm1": "338",
+          "arm2": "338",
+          "ear1": "343",
+          "ear2": "343"
+        }
+      }
+    }
+  },
+  "ElkForm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ELKFORM_NAME",
+      "name_resolved": "Form of the Elk",
+      "desc": "ABILITY_ELKFORM2_DESC",
+      "desc_resolved": "Enter Elk Form, gaining +8 [img:spd] and Trample 3. You ignore tile effects while moving.\nYour basic attack becomes Antler Swipe+ and this becomes Prance+.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "AntlerSwipe2",
+        "TransformAbility": "Prance2",
+        "SpeedUp": "8",
+        "Trample": "3",
+        "ApplyPassives": {
+          "IgnoreTiles": "1",
+          "YOffset": ".25"
+        },
+        "CatPartsTransform": {
+          "leg1": "338",
+          "leg2": "338",
+          "arm1": "338",
+          "arm2": "338",
+          "ear1": "343",
+          "ear2": "343"
+        }
+      }
+    }
+  },
+  "AntlerSwipe": {
+    "template": "throw_attack",
+    "meta": {
+      "name": "ABILITY_ANTLERSWIPE_NAME",
+      "name_resolved": "Antler Swipe",
+      "desc": "ABILITY_ANTLERSWIPE_DESC",
+      "desc_resolved": "Toss a unit up to four tiles away. Inflict Bruise on it and any unit it lands on.",
+      "class": "Druid"
+    },
+    "graphics": {
+      "animation": "headbuttUppercut"
+    },
+    "target": {
+      "max_range": "4",
+      "restrictions": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "force_play_hit_animation": "true",
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "AntlerSwipe2": {
+    "variant_of": "AntlerSwipe",
+    "meta": {
+      "desc": "ABILITY_ANTLERSWIPE2_DESC",
+      "desc_resolved": "Toss a unit up to four tiles away. Deal damage to and inflict Bruise on it and any unit it lands on."
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "blocked_damage": "5+bonus_melee_damage"
+    }
+  },
+  "Prance": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PRANCE_NAME",
+      "name_resolved": "Prance",
+      "desc": "ABILITY_PRANCE_DESC",
+      "desc_resolved": "Refresh your movement action.",
+      "class": "Druid",
+      "type_icon": "movement"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "Prance2": {
+    "variant_of": "Prance",
+    "meta": {
+      "desc": "ABILITY_PRANCE2_DESC",
+      "desc_resolved": "Refresh your movement action.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "MockingbirdForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MOCKINGBIRDFORM_NAME",
+      "name_resolved": "Form of the Mockingbird",
+      "desc": "ABILITY_MOCKINGBIRDFORM_DESC",
+      "desc_resolved": "Enter Mockingbird Form, gaining flying movement, +2 [img:lck], and -2 [img:str].\nYour basic attack becomes Mock Song and this becomes Tease.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "MockSong",
+        "TransformAbility": "Tease",
+        "LuckUp": "2",
+        "StrengthUp": "-2",
+        "ApplyPassives": {
+          "Flying": "1"
+        },
+        "CatPartsTransform": {
+          "tail": "337",
+          "mouth": "320",
+          "arm1": "339",
+          "arm2": "339",
+          "ear1": "1005",
+          "ear2": "1005"
+        }
+      }
+    }
+  },
+  "MockingbirdForm2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MOCKINGBIRDFORM_NAME",
+      "name_resolved": "Form of the Mockingbird",
+      "desc": "ABILITY_MOCKINGBIRDFORM2_DESC",
+      "desc_resolved": "Enter Mockingbird Form, gaining flying movement and +2 [img:lck].\nYour basic attack becomes Mock Song+ and this becomes Tease+.",
+      "class": "Druid",
+      "type_icon": "buff"
+    },
+    "tags": [
+      "shapeshift"
+    ],
+    "graphics": {
+      "animation": "druidTransform"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformBasicAttack": "MockSong2",
+        "TransformAbility": "Tease2",
+        "LuckUp": "2",
+        "ApplyPassives": {
+          "Flying": "1"
+        },
+        "CatPartsTransform": {
+          "tail": "337",
+          "mouth": "320",
+          "arm1": "339",
+          "arm2": "339",
+          "ear1": "1005",
+          "ear2": "1005"
+        }
+      }
+    }
+  },
+  "MockSong": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MOCKSONG_NAME",
+      "name_resolved": "Mock Song",
+      "desc": "ABILITY_MOCKSONG_DESC",
+      "desc_resolved": "Give each unit within an area All Stats Down 2 until the end of their next turn.",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "affected_particle": "fx_statdown"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "Temporary": {
+          "status": "AllStatsUp",
+          "stacks": "-2",
+          "turns": "1",
+          "expires_on_end_turn": "true"
+        }
+      }
+    }
+  },
+  "MockSong2": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_MOCKSONG_NAME",
+      "name_resolved": "Mock Song",
+      "desc": "ABILITY_MOCKSONG2_DESC",
+      "desc_resolved": "Give enemies within an area All Stats Down 2 (and allies All Stats Up 2) until the the end of their next turn.",
+      "animate_name": "false",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "sing3",
+      "particle": "none"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "5+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "Conditional_Ally": {
+          "Temporary": {
+            "status": "AllStatsUp",
+            "stacks": "2",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        },
+        "Else": {
+          "Temporary": {
+            "status": "AllStatsUp",
+            "stacks": "-2",
+            "turns": "1",
+            "expires_on_end_turn": "true"
+          }
+        }
+      }
+    }
+  },
+  "Tease": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_TEASE_NAME",
+      "name_resolved": "Tease",
+      "desc": "ABILITY_TEASE_DESC",
+      "desc_resolved": "Inflict Madness 1 on a unit.",
+      "class": "Druid"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "howl"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "5",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Madness": "1"
+      }
+    }
+  },
+  "Tease2": {
+    "variant_of": "Tease",
+    "meta": {
+      "desc": "ABILITY_TEASE2_DESC",
+      "desc_resolved": "Inflict Madness 1 on a unit. It immediately attacks a unit if it can."
+    },
+    "damage_instance": {
+      "effects": {
+        "ForceAttack": "1"
+      }
+    }
+  },
+  "FromTheTrees": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_FROMTHETREES_NAME",
+      "name_resolved": "From the Trees!",
+      "desc": "ABILITY_FROMTHETREES_DESC",
+      "desc_resolved": "Summon a random animal that falls from the sky onto a random enemy, dealing damage.",
+      "class": "Druid"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "fall_from_sky": "true",
+      "bounce_on_hit": "true",
+      "animation": "howl",
+      "dont_orient": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "20",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": [
+        "aoe_must_exist",
+        "must_have_enemy"
+      ],
+      "aoe_restrictions": "none",
+      "knockback_mode": "zero"
+    },
+    "spawn": {
+      "object": [
+        "Squirrel",
+        "Turtle",
+        "Snake",
+        "Toad",
+        "Catepillar",
+        "Crow"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5"
+    }
+  },
+  "FromTheTrees2": {
+    "variant_of": "FromTheTrees",
+    "meta": {
+      "desc": "ABILITY_FROMTHETREES2_DESC",
+      "desc_resolved": "Summon a random animal that falls from the sky onto a random enemy, dealing more damage.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "7"
+    }
+  }
+}

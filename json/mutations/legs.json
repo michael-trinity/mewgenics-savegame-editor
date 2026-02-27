@@ -1,0 +1,632 @@
+{
+  "legs": {
+    "300": {
+      "tag": "animal",
+      "desc": "MUTATION_LEGS_300_DESC",
+      "desc_resolved": "+1 movement range while wet. Water does not slow movement.",
+      "passives": {
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "AddMovement": "1"
+          }
+        },
+        "WaterWalk": "1"
+      }
+    },
+    "301": {
+      "tag": "animal",
+      "desc": "MUTATION_LEGS_301_DESC",
+      "desc_resolved": "Your basic attack has a 5% chance to Stun.",
+      "spd": "1",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Stun": [
+            "1,",
+            ".05"
+          ]
+        }
+      }
+    },
+    "302": {
+      "tag": "animal",
+      "desc": "MUTATION_LEGS_302_DESC",
+      "desc_resolved": "Knockback immunity.",
+      "passives": {
+        "KnockbackImmunity": "1"
+      }
+    },
+    "303": {
+      "tag": "animal",
+      "desc": "MUTATION_LEGS_303_DESC",
+      "desc_resolved": "Your basic attack has a 5% chance to Immobilize.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Immobile": [
+            "1,",
+            ".05"
+          ]
+        }
+      }
+    },
+    "304": {
+      "str": "1"
+    },
+    "305": {
+      "desc": "MUTATION_LEGS_305_DESC",
+      "desc_resolved": "+5% dodge chance.",
+      "passives": {
+        "DodgeChance": "5%"
+      }
+    },
+    "306": {
+      "tag": "animal",
+      "dex": "1"
+    },
+    "307": {
+      "spd": "1"
+    },
+    "308": {
+      "lck": "1"
+    },
+    "309": {
+      "desc": "MUTATION_LEGS_309_DESC",
+      "desc_resolved": "Your basic attack has a 10% chance to inflict Bleed 3.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Bleed": [
+            "3,",
+            ".1"
+          ]
+        }
+      }
+    },
+    "310": {
+      "desc": "MUTATION_LEGS_310_DESC",
+      "desc_resolved": "Your movement action is a jump.",
+      "override_move": "BasicJump"
+    },
+    "311": {
+      "con": "1"
+    },
+    "312": {
+      "desc": "MUTATION_LEGS_312_DESC",
+      "desc_resolved": "Your basic attack has +1 Knockback.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Knockback": "1"
+        }
+      }
+    },
+    "313": {
+      "desc": "MUTATION_LEGS_313_DESC",
+      "desc_resolved": "+1 reach.",
+      "passives": {
+        "AddBonusMeleeRange": "1"
+      }
+    },
+    "314": {
+      "desc": "MUTATION_LEGS_314_DESC",
+      "desc_resolved": "Your weapons have +1 Damage.",
+      "passives": {
+        "BoostWeaponDamage": "1"
+      }
+    },
+    "315": {
+      "desc": "MUTATION_LEGS_315_DESC",
+      "desc_resolved": "Ice immunity.",
+      "passives": {
+        "ElementImmune": "Ice"
+      }
+    },
+    "317": {
+      "desc": "MUTATION_LEGS_317_DESC",
+      "desc_resolved": "Your basic attack inflicts Bleed 1 if it's melee.",
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "318": {
+      "divine_shield": "1"
+    },
+    "319": {
+      "desc": "MUTATION_LEGS_319_DESC",
+      "desc_resolved": "10% chance to gain a bonus move each turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "MoveQuivered": [
+            "1,",
+            "0.1"
+          ]
+        }
+      }
+    },
+    "320": {
+      "desc": "MUTATION_LEGS_320_DESC",
+      "desc_resolved": "10% chance to gain a bonus attack each turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "Quivered": [
+            "1,",
+            "0.1"
+          ]
+        }
+      }
+    },
+    "321": {
+      "desc": "MUTATION_LEGS_321_DESC",
+      "desc_resolved": "Moving through water tiles costs 0 movement.",
+      "passives": {
+        "FreePathfindElement": "Water"
+      }
+    },
+    "322": {
+      "str": "1",
+      "con": "1"
+    },
+    "323": {
+      "spd": "2"
+    },
+    "324": {
+      "con": "1"
+    },
+    "325": {
+      "desc": "MUTATION_LEGS_325_DESC",
+      "desc_resolved": "Collarless spells cost -1 mana.",
+      "tag": "extra",
+      "spd": "-2",
+      "passives": {
+        "ClassManaCostReduction": {
+          "class": "Colorless",
+          "reduction": "1"
+        }
+      }
+    },
+    "326": {
+      "desc": "MUTATION_LEGS_326_DESC",
+      "desc_resolved": "Your basic attack inflicts a random debuff.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "RandomStatusFromPool": {
+            "Poison": "1",
+            "Burn": "1",
+            "Bleed": "1",
+            "Blind": "1",
+            "Weakness": "1"
+          }
+        }
+      }
+    },
+    "327": {
+      "desc": "MUTATION_LEGS_327_DESC",
+      "desc_resolved": "Gain 2 random stat ups and 1 random stat down at the end of each turn.",
+      "passives": {
+        "StatusEachTurnEnd": {
+          "RandomStatUp": "2",
+          "RandomStatDown": "1"
+        }
+      }
+    },
+    "328": {
+      "desc": "MUTATION_LEGS_328_DESC",
+      "desc_resolved": "Equip a temporary Bottles weapon at the start of the battle.",
+      "passives": {
+        "EquipTemporaryItem": "Bottles"
+      }
+    },
+    "329": {
+      "desc": "MUTATION_LEGS_329_DESC",
+      "desc_resolved": "Equip a temporary Water Bottle trinket at the start of the battle.",
+      "passives": {
+        "EquipTemporaryItem": "WaterBottle_Full"
+      }
+    },
+    "330": {
+      "desc": "MUTATION_LEGS_330_DESC",
+      "desc_resolved": "+1 Health Regeneration",
+      "passives": {
+        "HealthRegenUp": "1"
+      }
+    },
+    "331": {
+      "desc": "MUTATION_LEGS_331_DESC",
+      "desc_resolved": "+1 movement range. Your movement action is a jump.",
+      "override_move": "BasicJump",
+      "passives": {
+        "AddMovement": "1"
+      }
+    },
+    "332": {
+      "desc": "MUTATION_LEGS_332_DESC",
+      "desc_resolved": "50% chance to spawn a pickup on an adjacent tile when you end your turn.",
+      "spd": "-1",
+      "passives": {
+        "SpawnEachTurn": {
+          "object": "RandomPickup",
+          "chance": "50%"
+        }
+      }
+    },
+    "333": {
+      "desc": "MUTATION_LEGS_333_DESC",
+      "desc_resolved": "Your basic attack has wind element and +1 Knockback.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Knockback": "1",
+          "VisualFXTile": "fx_windSpell"
+        },
+        "AddElementsToBasicAttack": "Wind"
+      }
+    },
+    "334": {
+      "desc": "MUTATION_LEGS_334_DESC",
+      "desc_resolved": "Your basic attack tosses units into the air if it's melee.",
+      "str": "1",
+      "passives": {
+        "AddStatusToBasicMeleeAttack": {
+          "KnockUpAndAway": {
+            "stacks": "3",
+            "distance": "3"
+          }
+        }
+      }
+    },
+    "335": {
+      "desc": "MUTATION_LEGS_335_DESC",
+      "desc_resolved": "+1 Bleed Thorns. Spawn glass when you take damage.",
+      "passives": {
+        "BleedThorns": "1",
+        "StatusOnTookDamage": {
+          "ChangeTilesUnder": "GlassTile"
+        }
+      }
+    },
+    "336": {
+      "desc": "MUTATION_LEGS_336_DESC",
+      "desc_resolved": "Your basic attack inflicts Soul Link.",
+      "tag": "bird",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "SoulLink": "1"
+        }
+      }
+    },
+    "337": {
+      "desc": "MUTATION_LEGS_337_DESC",
+      "desc_resolved": "You are immune to tile effects.",
+      "passives": {
+        "IgnoreTiles": "1"
+      }
+    },
+    "339": {
+      "desc": "MUTATION_LEGS_339_DESC",
+      "desc_resolved": "Fly away when hit.",
+      "tag": "bird",
+      "spd": "2",
+      "passives": {
+        "MoveAwayFromDamageSource": "BasicJump"
+      }
+    },
+    "340": {
+      "desc": "MUTATION_LEGS_340_DESC",
+      "desc_resolved": "When you take damage, gain +1 [img:lck].",
+      "passives": {
+        "StatusOnTookDamage": {
+          "LuckUp": "1"
+        }
+      }
+    },
+    "341": {
+      "desc": "MUTATION_LEGS_341_DESC",
+      "desc_resolved": "Your basic attack makes units face away from you.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "FaceAway": "1"
+        }
+      }
+    },
+    "343": {
+      "desc": "MUTATION_LEGS_343_DESC",
+      "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed.",
+      "passives": {
+        "SpawnOnDowned": "CharmedKitten"
+      }
+    },
+    "754": {
+      "desc": "MUTATION_LEGS_754_DESC",
+      "desc_resolved": "Your movement action is a jump. Your basic attack inflicts Bruise.",
+      "passives": {
+        "ReplaceBasicMove": "ToadJump_BasicMove",
+        "AddStatusToBasicAttack": {
+          "Bruise": "1"
+        }
+      }
+    },
+    "756": {
+      "spd": "2"
+    },
+    "757": {
+      "desc": "MUTATION_LEGS_757_DESC",
+      "desc_resolved": "Trample.",
+      "passives": {
+        "Trample": "3"
+      }
+    },
+    "758": {
+      "desc": "MUTATION_LEGS_758_DESC",
+      "desc_resolved": "You have All Stats Up while wet.",
+      "passives": {
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    },
+    "759": {
+      "desc": "MUTATION_LEGS_759_DESC",
+      "desc_resolved": "You have All Stats Up while wet.",
+      "passives": {
+        "PassiveWhenAffectedByElement": {
+          "element": "water",
+          "passives": {
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    },
+    "761": {
+      "desc": "MUTATION_LEGS_761_DESC",
+      "desc_resolved": "Your movement action is a jump. Your basic attack inflicts Bleed.",
+      "passives": {
+        "ReplaceBasicMove": "ToadJump_BasicMove",
+        "AddStatusToBasicAttack": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "762": {
+      "desc": "MUTATION_LEGS_762_DESC",
+      "desc_resolved": "Ignore the effects of tiles and traps.",
+      "passives": {
+        "IgnoreTiles": "1",
+        "YOffset": ".25"
+      }
+    },
+    "763": {
+      "desc": "MUTATION_LEGS_763_DESC",
+      "desc_resolved": "Ignore the effects of tiles and traps.",
+      "passives": {
+        "IgnoreTiles": "1",
+        "YOffset": ".25"
+      }
+    },
+    "900": {
+      "desc": "MUTATION_LEGS_900_DESC",
+      "desc_resolved": "Ignore the effects of tiles and traps.",
+      "passives": {
+        "IgnoreTiles": "1",
+        "YOffset": ".25"
+      }
+    },
+    "400": {
+      "str": "2",
+      "con": "-1"
+    },
+    "401": {
+      "str": "2",
+      "dex": "-1"
+    },
+    "402": {
+      "str": "2",
+      "cha": "-1"
+    },
+    "403": {
+      "str": "2",
+      "int": "-1"
+    },
+    "404": {
+      "str": "2",
+      "spd": "-1"
+    },
+    "405": {
+      "str": "2",
+      "lck": "-1"
+    },
+    "406": {
+      "con": "2",
+      "str": "-1"
+    },
+    "407": {
+      "con": "2",
+      "dex": "-1"
+    },
+    "408": {
+      "tag": "melted",
+      "con": "2",
+      "cha": "-1"
+    },
+    "409": {
+      "con": "2",
+      "int": "-1"
+    },
+    "410": {
+      "con": "2",
+      "spd": "-1"
+    },
+    "411": {
+      "con": "2",
+      "lck": "-1"
+    },
+    "412": {
+      "dex": "2",
+      "con": "-1"
+    },
+    "413": {
+      "dex": "2",
+      "str": "-1"
+    },
+    "414": {
+      "dex": "2",
+      "cha": "-1"
+    },
+    "415": {
+      "dex": "2",
+      "int": "-1"
+    },
+    "416": {
+      "dex": "2",
+      "spd": "-1"
+    },
+    "417": {
+      "dex": "2",
+      "lck": "-1"
+    },
+    "418": {
+      "int": "2",
+      "con": "-1"
+    },
+    "419": {
+      "int": "2",
+      "dex": "-1"
+    },
+    "420": {
+      "int": "2",
+      "cha": "-1"
+    },
+    "421": {
+      "int": "2",
+      "str": "-1"
+    },
+    "422": {
+      "int": "2",
+      "spd": "-1"
+    },
+    "423": {
+      "int": "2",
+      "lck": "-1"
+    },
+    "424": {
+      "cha": "2",
+      "con": "-1"
+    },
+    "425": {
+      "cha": "2",
+      "dex": "-1"
+    },
+    "426": {
+      "cha": "2",
+      "str": "-1"
+    },
+    "427": {
+      "cha": "2",
+      "int": "-1"
+    },
+    "428": {
+      "cha": "2",
+      "spd": "-1"
+    },
+    "429": {
+      "cha": "2",
+      "lck": "-1"
+    },
+    "430": {
+      "lck": "2",
+      "con": "-1"
+    },
+    "431": {
+      "lck": "2",
+      "dex": "-1"
+    },
+    "432": {
+      "lck": "2",
+      "cha": "-1"
+    },
+    "433": {
+      "lck": "2",
+      "int": "-1"
+    },
+    "434": {
+      "lck": "2",
+      "spd": "-1"
+    },
+    "435": {
+      "lck": "2",
+      "str": "-1"
+    },
+    "436": {
+      "spd": "2",
+      "con": "-1"
+    },
+    "437": {
+      "spd": "2",
+      "str": "-1"
+    },
+    "438": {
+      "spd": "2",
+      "cha": "-1"
+    },
+    "439": {
+      "spd": "2",
+      "int": "-1"
+    },
+    "440": {
+      "spd": "2",
+      "dex": "-1"
+    },
+    "441": {
+      "spd": "2",
+      "lck": "-1"
+    },
+    "700": {
+      "tag": "birth_defect",
+      "str": "-2"
+    },
+    "701": {
+      "tag": "birth_defect",
+      "dex": "-2"
+    },
+    "702": {
+      "tag": "birth_defect",
+      "spd": "-2"
+    },
+    "703": {
+      "desc": "MUTATION_LEGS_703_DESC",
+      "desc_resolved": "Water does not slow movement.",
+      "tag": "birth_defect",
+      "spd": "-2",
+      "passives": {
+        "WaterWalk": "1"
+      }
+    },
+    "704": {
+      "tag": "birth_defect",
+      "str": "-1"
+    },
+    "705": {
+      "desc": "MUTATION_LEGS_705_DESC",
+      "desc_resolved": "Trample.",
+      "tag": "birth_defect",
+      "speed": "-4",
+      "passives": {
+        "Trample": "3"
+      }
+    },
+    "706": {
+      "tag": "birth_defect",
+      "spd": "-1"
+    },
+    "707": {
+      "desc": "MUTATION_LEGS_707_DESC",
+      "desc_resolved": "Permanently Slow.",
+      "tag": "birth_defect",
+      "str": "1",
+      "passives": {
+        "Slow": "-1"
+      }
+    }
+  }
+}

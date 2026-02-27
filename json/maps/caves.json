@@ -1,0 +1,90 @@
+{
+  "levels": {
+    "folder": "caves",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common",
+      "caves_events.gon"
+    ]
+  },
+  "enemy_pools": {
+    "small": [
+      "TinySpider"
+    ],
+    "medium": [
+      "SkullOoze",
+      "BrainDrain",
+      "Bat",
+      "TallSpiderCat",
+      "SpiderCat",
+      "Toadie",
+      "AlbinoTomTom",
+      "KirbyFetus",
+      "TenTickles"
+    ],
+    "large": [
+      "MegaFetus"
+    ]
+  },
+  "item_pools": {
+    "chapter_item_pool": "cavesitems"
+  },
+  "minibosses": {
+    "slime": "auto"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "exit0": {
+      "type": "exit",
+      "next_map": "meatworld.gon",
+      "hidden": "true",
+      "override_art": "MapNodeExit_MeatWorld"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_WallOfFlesh",
+      "override_art": "MapNode_FleshHole"
+    },
+    "boss": {
+      "type": "boss",
+      "is_final_boss": "true",
+      "boss_cutscene": "spiderkitten"
+    }
+  },
+  "flags": {
+    "WallOfFleshDone": {
+      "quest_event": {
+        "level": "Quest_WallOfFlesh2",
+        "override_art": "MapNode_FleshWall"
+      }
+    },
+    "MeatWorldUnlocked": {
+      "quest_event": {
+        "type": "empty",
+        "override_art": "MapNode_Empty"
+      },
+      "exit0": {
+        "hidden": "false"
+      }
+    }
+  }
+}

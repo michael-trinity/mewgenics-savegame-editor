@@ -1,0 +1,2712 @@
+{
+  "Taunt": {
+    "id": "Taunt",
+    "template": "self_buff",
+    "name_key": "Taunt",
+    "name": "Taunt",
+    "desc_key": "Enemies will attack you if possible",
+    "description": "Enemies will attack you if possible",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "graphics": {
+      "animation": "tauntwiggle"
+    },
+    "damage_instance": {
+      "effects": {
+        "Taunting": "1"
+      }
+    }
+  },
+  "Taunt2": {
+    "id": "Taunt2",
+    "variant_of": "Taunt",
+    "desc_key": "Enemies will attack you if possible (lower mana)",
+    "description": "Enemies will attack you if possible (lower mana)",
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "HeadButt": {
+    "id": "HeadButt",
+    "template": "melee_attack",
+    "name_key": "ABILITY_HEADBUTT_NAME",
+    "name": "Headbutt",
+    "desc_key": "ABILITY_HEADBUTT_DESC",
+    "description": "A melee attack that inflicts Stun.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "graphics": {
+      "animation": "headbutt"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "HeadButt2": {
+    "id": "HeadButt2",
+    "variant_of": "HeadButt",
+    "desc_key": "ABILITY_HEADBUTT2_DESC",
+    "description": "A melee attack that inflicts Stun.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "ThrowShield": {
+    "id": "ThrowShield",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_THROWSCRAP_NAME",
+    "name": "Throw Scrap",
+    "desc_key": "ABILITY_THROWSCRAP_DESC",
+    "description": "Give +3 [img:shield] to a unit or spawn a scrap pickup on an empty tile.",
+    "class": "Tank",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2+level"
+    },
+    "graphics": {
+      "projectile": "ArmorPickup",
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Shield": "3",
+        "ObjectOnHitFullyEmpty": "RandomArmorPickup"
+      }
+    }
+  },
+  "ThrowShield2": {
+    "id": "ThrowShield2",
+    "variant_of": "ThrowShield",
+    "desc_key": "ABILITY_THROWSCRAP2_DESC",
+    "description": "Give +3 [img:shield] to units in an area and spawn scrap pickups on the empty tiles in that area.",
+    "target": {
+      "min_range": "0",
+      "max_aoe": "1"
+    }
+  },
+  "ChewCud": {
+    "id": "ChewCud",
+    "template": "self_buff",
+    "name_key": "ABILITY_CHEWCUD_NAME",
+    "name": "Chew Cud",
+    "desc_key": "ABILITY_CHEWCUD_DESC",
+    "description": "Heal yourself.",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "gulp"
+    },
+    "damage_instance": {
+      "heal": "3"
+    }
+  },
+  "ChewCud2": {
+    "id": "ChewCud2",
+    "variant_of": "ChewCud",
+    "desc_key": "ABILITY_CHEWCUD2_DESC",
+    "description": "Heal yourself more.",
+    "damage_instance": {
+      "heal": "6"
+    }
+  },
+  "AssBlast": {
+    "id": "AssBlast",
+    "template": "melee_attack",
+    "name_key": "ABILITY_ASSBLAST_NAME",
+    "name": "Ass Blast",
+    "desc_key": "ABILITY_ASSBLAST_DESC",
+    "description": "Knock back units in an area near you 2 tiles.",
+    "class": "Tank",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "max_aoe": "2",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "poopfart"
+    },
+    "damage_instance": {
+      "type": "spell",
+      "damage": "0",
+      "knockback": "2",
+      "incidentally_collects_pickups": "false",
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "AssBlast2": {
+    "id": "AssBlast2",
+    "variant_of": "AssBlast",
+    "desc_key": "ABILITY_ASSBLAST2_DESC",
+    "description": "Knock back units in a larger area near you 10 tiles.",
+    "target": {
+      "max_aoe": "3"
+    },
+    "damage_instance": {
+      "knockback": "10"
+    }
+  },
+  "Chew": {
+    "id": "Chew",
+    "template": "melee_attack",
+    "name_key": "ABILITY_CHEW_NAME",
+    "name": "Chew",
+    "desc_key": "ABILITY_CHEW_DESC",
+    "description": "A melee attack with Lifesteal.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "dashbite"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Leech": "1"
+      }
+    }
+  },
+  "Chew2": {
+    "id": "Chew2",
+    "variant_of": "Chew",
+    "desc_key": "ABILITY_CHEW2_DESC",
+    "description": "A melee attack with Lifesteal that inflicts Bleed 2 and ignores shield.",
+    "damage_instance": {
+      "piercing": "true",
+      "effects": {
+        "Bleed": "2"
+      }
+    }
+  },
+  "BatterUp": {
+    "id": "BatterUp",
+    "template": "melee_attack",
+    "name_key": "ABILITY_BATTERUP_NAME",
+    "name": "Batter Up",
+    "desc_key": "ABILITY_BATTERUP_DESC",
+    "description": "Knock a unit back 10 tiles.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "knockswatatk"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "knockback": "10",
+      "effects": {
+        "OverrideKnockbackDamage": "3+bonus_melee_ability_damage",
+        "SoundEventOnHit": "Batterup_Connect"
+      }
+    }
+  },
+  "BatterUp2": {
+    "id": "BatterUp2",
+    "variant_of": "BatterUp",
+    "desc_key": "ABILITY_BATTERUP2_DESC",
+    "description": "Knock a unit back 10 tiles with Chain Knockback.",
+    "damage_instance": {
+      "effects": {
+        "OverrideChainKnockback": "10",
+        "OverrideChainKnockbackDamage": "3+bonus_melee_ability_damage"
+      }
+    }
+  },
+  "BackBreaker": {
+    "id": "BackBreaker",
+    "template": "melee_attack",
+    "name_key": "ABILITY_BACKBREAKER_NAME",
+    "name": "Backbreaker",
+    "desc_key": "ABILITY_BACKBREAKER_DESC",
+    "description": "A melee attack that Immobilizes.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "graphics": {
+      "animation": "throwbigelement"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "type": "melee",
+      "effects": {
+        "Immobile": "1"
+      }
+    }
+  },
+  "BackBreaker2": {
+    "id": "BackBreaker2",
+    "variant_of": "BackBreaker",
+    "desc_key": "ABILITY_BACKBREAKER2_DESC",
+    "description": "A melee attack that Immobilizes and gives -2 [img:spd].",
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "effects": {
+        "Immobile": "1",
+        "SpeedUp": "-2"
+      }
+    }
+  },
+  "Suplex": {
+    "id": "Suplex",
+    "template": "melee_attack",
+    "class": "Tank",
+    "name_key": "ABILITY_SUPLEX_NAME",
+    "name": "Suplex",
+    "desc_key": "ABILITY_SUPLEX_DESC",
+    "description": "Grab a unit in front of you and slam it into the tile behind you.",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "knockback_mode": "zero",
+      "aoe_considers_character_size": "false",
+      "target_mode": "tile",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_have_character"
+      ],
+      "range_mode": "standard",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "suplex"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "type": "melee",
+      "blocked_multiplier": "2",
+      "makes_contact": "false"
+    }
+  },
+  "Suplex2": {
+    "id": "Suplex2",
+    "variant_of": "Suplex",
+    "desc_key": "ABILITY_SUPLEX2_DESC",
+    "description": "Grab a unit in front of you and slam it into the tile behind you, inflicting Bruise 3 and Immobile.",
+    "damage_instance": {
+      "effects": {
+        "Bruise": "3",
+        "Immobile": "1"
+      }
+    }
+  },
+  "Intimidate": {
+    "id": "Intimidate",
+    "template": "melee_attack",
+    "name_key": "ABILITY_INTIMIDATE_NAME",
+    "name": "Intimidate",
+    "desc_key": "ABILITY_INTIMIDATE_DESC",
+    "description": "Inflict Fear on an adjacent unit.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "angry"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "makes_contact": "false",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "Fear": "1"
+      }
+    }
+  },
+  "Intimidate2": {
+    "id": "Intimidate2",
+    "variant_of": "Intimidate",
+    "desc_key": "ABILITY_INTIMIDATE2_DESC",
+    "description": "Inflict Fear on a unit up to five tiles away.",
+    "target": {
+      "target_mode": "tile",
+      "max_range": "5"
+    }
+  },
+  "Toss": {
+    "id": "Toss",
+    "template": "throw_attack",
+    "name_key": "ABILITY_TOSS_NAME",
+    "name": "Toss",
+    "desc_key": "ABILITY_TOSS_DESC",
+    "description": "Throw an adjacent unit to an open tile.",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "3+2*level"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "Toss2": {
+    "id": "Toss2",
+    "variant_of": "Toss",
+    "desc_key": "ABILITY_TOSS2_DESC",
+    "description": "Throw an adjacent unit to a tile, dealing bonus damage if it collides with something.",
+    "target": {
+      "restrictions": "none"
+    }
+  },
+  "BonusToss": {
+    "id": "BonusToss",
+    "template": "throw_attack",
+    "name_key": "ABILITY_TOSS_NAME",
+    "name": "Toss",
+    "desc_key": "ABILITY_WRESTLETOSS_DESC",
+    "description": "Throw an adjacent unit to an open tile.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Tank",
+    "ability_icon": "Toss",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "BonusToss2": {
+    "id": "BonusToss2",
+    "variant_of": "BonusToss",
+    "desc_key": "ABILITY_WRESTLETOSS2_DESC",
+    "description": "Throw an adjacent unit to a tile, dealing bonus damage if it collides with something.\n[s:.7](Castable once per turn.)[/s]",
+    "target": {
+      "restrictions": "none"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "blocked_damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "NubbyToss": {
+    "id": "NubbyToss",
+    "template": "throw_attack",
+    "name_key": "ABILITY_TOSS_NAME",
+    "name": "Toss",
+    "desc_key": "ABILITY_NUBBYTOSS_DESC",
+    "description": "Throw your crippled friend to any tile.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Tank",
+    "ability_icon": "Toss",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "none",
+      "force_no_contact": "true",
+      "prioritize_throw_target_with_passive": "NubbyTossPriority"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "damage_instance": {
+      "damage": "1"
+    }
+  },
+  "BellyFlop": {
+    "id": "BellyFlop",
+    "template": "jump_attack",
+    "name_key": "ABILITY_BELLYFLOP_NAME",
+    "name": "Belly Flop",
+    "desc_key": "ABILITY_BELLYFLOP_DESC",
+    "description": "Jump to a tile and Immobilize anything you land on.",
+    "class": "Tank",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "3",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_start_animation": "bellyflopStart",
+      "air_animation": "bellyflop_air",
+      "jump_attack_animation": "bellyflopEnd",
+      "land_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Immobile": "1"
+      }
+    }
+  },
+  "BellyFlop2": {
+    "id": "BellyFlop2",
+    "variant_of": "BellyFlop",
+    "desc_key": "ABILITY_BELLYFLOP2_DESC",
+    "description": "Jump to a tile and Immobilize units in an area.",
+    "target": {
+      "max_range": "5",
+      "max_aoe": "1"
+    },
+    "splash_damage": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Immobile": "1"
+      }
+    }
+  },
+  "ToadJump_BasicMove": {
+    "id": "ToadJump_BasicMove",
+    "template": "jump_attack",
+    "name_key": "ABILITY_JUMP_NAME",
+    "name": "Jump",
+    "desc_key": "ABILITY_TOADJUMP_DESC",
+    "description": "Jump to a tile and damage what you land on.",
+    "animate_name": "false",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "BellyFlop_BasicMove": {
+    "id": "BellyFlop_BasicMove",
+    "template": "jump_attack",
+    "name_key": "ABILITY_JUMP_NAME",
+    "name": "Jump",
+    "desc_key": "ABILITY_BELLYJUMP_DESC",
+    "description": "Jump to a tile and damage what you land on.",
+    "animate_name": "false",
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "TankTrample": {
+    "id": "TankTrample",
+    "template": "trample_dash",
+    "name_key": "ABILITY_TRAMPLEDASH_NAME",
+    "name": "Trample Dash",
+    "desc_key": "ABILITY_TRAMPLEDASH_DESC",
+    "description": "Dash forward with Trample, then spawn a rock.",
+    "class": "Tank",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_end_animation": "dashend"
+    },
+    "damage_instance": {
+      "damage": "3"
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "SpawnRock": "1"
+      }
+    }
+  },
+  "TankTrample2": {
+    "id": "TankTrample2",
+    "variant_of": "TankTrample",
+    "desc_key": "ABILITY_TRAMPLEDASH2_DESC",
+    "description": "Dash forward with Trample, then spawn a rock. Deals more damage and has a 20% chance to inflict Stun.",
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".2"
+        ]
+      }
+    }
+  },
+  "TankSwap": {
+    "id": "TankSwap",
+    "template": "swap",
+    "name_key": "ABILITY_TANKSWAP_NAME",
+    "name": "Swap",
+    "desc_key": "ABILITY_TANKSWAP_DESC",
+    "description": "Swap positions with any ally.",
+    "class": "Tank",
+    "animate_name": "true",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist"
+      ],
+      "aoe_restrictions": [
+        "allies_only"
+      ]
+    }
+  },
+  "TankSwap2": {
+    "id": "TankSwap2",
+    "variant_of": "TankSwap",
+    "desc_key": "ABILITY_TANKSWAP2_DESC",
+    "description": "Swap positions with any unit.",
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "aoe_restrictions": "none"
+    }
+  },
+  "ToTheRescue": {
+    "id": "ToTheRescue",
+    "template": "jump_attack",
+    "name_key": "ABILITY_TOTHERESCUE_NAME",
+    "name": "To the Rescue!",
+    "desc_key": "ABILITY_TOTHERESCUE_DESC",
+    "description": "Jump to a tile adjacent to an ally. Damage and displace any units you land on.",
+    "class": "Tank",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": [
+        "must_be_adjacent_to_ally"
+      ]
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "ToTheRescue2": {
+    "id": "ToTheRescue2",
+    "variant_of": "ToTheRescue",
+    "desc_key": "ABILITY_TOTHERESCUE2_DESC",
+    "description": "Jump to a tile adjacent to an ally. Damage and displace any units you land on, or are adjacent to.",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "1",
+      "aoe_restrictions": [
+        "exclude_allies"
+      ]
+    },
+    "splash_damage": {
+      "damage": "5+bonus_melee_ability_damage",
+      "knockback": "1"
+    }
+  },
+  "TankTantrum": {
+    "id": "TankTantrum",
+    "template": "melee_attack",
+    "name_key": "ABILITY_TANKTANTRUM_NAME",
+    "name": "Tantrum",
+    "desc_key": "ABILITY_TANKTANTRUM_DESC",
+    "description": "Hit all adjacent units, then spawn a rock.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "spinAttack"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage",
+      "elements": [
+        "Earth"
+      ]
+    },
+    "self_damage": {
+      "damage": "0",
+      "effects": {
+        "SpawnRock": "1"
+      }
+    }
+  },
+  "TankTantrum2": {
+    "id": "TankTantrum2",
+    "variant_of": "TankTantrum",
+    "desc_key": "ABILITY_TANKTANTRUM2_DESC",
+    "description": "Hit all adjacent and diagonally adjacent units, then spawn a rock.",
+    "target": {
+      "aoe_mode": "square"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "Earthquake": {
+    "id": "Earthquake",
+    "template": "spell",
+    "name_key": "ABILITY_EARTHQUAKE_NAME",
+    "name": "Earthquake",
+    "desc_key": "ABILITY_EARTHQUAKE_DESC",
+    "description": "Deal damage in a cone with a 10% chance to Petrify. Has a chance to spawn rocks.\n[s:.7](This spell spawns rocks.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "mana": "7",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "cone",
+      "min_aoe": "1",
+      "max_aoe": "4"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "delay": "3",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "SpawnRock": [
+          "1,",
+          ".20"
+        ],
+        "Petrify": [
+          "1,",
+          ".1"
+        ]
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "Earthquake2": {
+    "id": "Earthquake2",
+    "variant_of": "Earthquake",
+    "desc_key": "ABILITY_EARTHQUAKE2_DESC",
+    "description": "Deal more damage in a cone with a 20% chance to Petrify. Has a chance to spawn rocks.\n[s:.7](This spell spawns rocks.)[/s]",
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Petrify": [
+          "1,",
+          ".20"
+        ]
+      }
+    }
+  },
+  "RockToss": {
+    "id": "RockToss",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_ROCKTOSS_NAME",
+    "name": "Rock Toss",
+    "desc_key": "ABILITY_ROCKTOSS_DESC",
+    "description": "Throw a rock with a 10% chance to Stun.",
+    "class": "Tank",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3+bonus_range"
+    },
+    "graphics": {
+      "projectile": "SmallRock",
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_ranged_damage",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".10"
+        ],
+        "BounceObject": "SmallRock"
+      },
+      "elements": [
+        "Rock"
+      ]
+    }
+  },
+  "RockToss2": {
+    "id": "RockToss2",
+    "variant_of": "RockToss",
+    "desc_key": "ABILITY_ROCKTOSS2_DESC",
+    "description": "Throw a rock with a 33% chance to Stun.",
+    "target": {
+      "min_range": "1",
+      "max_range": "5+bonus_range",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "lob_height": "-1"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".33"
+        ]
+      }
+    }
+  },
+  "BarbedWire": {
+    "id": "BarbedWire",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_BARBEDWIRE_NAME",
+    "name": "Barbed Wire",
+    "desc_key": "ABILITY_BARBEDWIRE_DESC",
+    "description": "Give a unit +5 Thorns until your next turn.\n[s:.7](You can target yourself.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "5",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "projectile": "barbedwire",
+      "animation": "throwobject"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "Thorns",
+          "stacks": "5",
+          "turns": "1",
+          "expires_on_appliers_turn": "true"
+        }
+      }
+    }
+  },
+  "BarbedWire2": {
+    "id": "BarbedWire2",
+    "template": "spell",
+    "name_key": "ABILITY_BARBEDWIRE_NAME",
+    "name": "Barbed Wire",
+    "desc_key": "ABILITY_BARBEDWIRE2_DESC",
+    "description": "Give a unit or object +5 Thorns until your next turn.\n[s:.7](You can target yourself.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "20",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "CanApplyToInanimate": {
+          "Temporary": {
+            "status": "Thorns",
+            "stacks": "5",
+            "turns": "1",
+            "expires_on_appliers_turn": "true"
+          }
+        }
+      }
+    }
+  },
+  "DrawAttention": {
+    "id": "DrawAttention",
+    "template": "spell",
+    "name_key": "ABILITY_TANKMOCK_NAME",
+    "name": "Goad",
+    "desc_key": "ABILITY_TANKMOCK_DESC",
+    "description": "Force an enemy to move towards you.",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "6",
+      "max_aoe": "0",
+      "restrictions": "must_have_enemy"
+    },
+    "graphics": {
+      "animation": "howl",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ForceMoveTowards": "1"
+      }
+    }
+  },
+  "DrawAttention2": {
+    "id": "DrawAttention2",
+    "variant_of": "DrawAttention",
+    "desc_key": "ABILITY_TANKMOCK2_DESC",
+    "description": "Force an enemy anywhere to move towards you.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "2"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "BowlOver": {
+    "id": "BowlOver",
+    "template": "move",
+    "name_key": "ABILITY_BOWLOVER_NAME",
+    "name": "Bowl Over",
+    "desc_key": "ABILITY_BOWLOVER_DESC",
+    "description": "Trample over one tile diagonally.",
+    "class": "Tank",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "target": {
+      "range_mode": "diagcross",
+      "max_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    },
+    "graphics": {
+      "sync_speed": "22",
+      "max_tiles_single_loop": "5",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "startroll",
+      "animation": "roll",
+      "move_end_animation": "endroll"
+    }
+  },
+  "BowlOver2": {
+    "id": "BowlOver2",
+    "variant_of": "BowlOver",
+    "desc_key": "ABILITY_BOWLOVER2_DESC",
+    "description": "Trample over two tiles diagonally with a 10% chance to inflict Stun.",
+    "target": {
+      "max_range": "2"
+    },
+    "damage_instance": {
+      "override_trample_damage": "true",
+      "damage": "3",
+      "effects": {
+        "Stun": [
+          "1",
+          ".1"
+        ]
+      }
+    }
+  },
+  "Clap": {
+    "id": "Clap",
+    "template": "melee_attack",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_CLAP_NAME",
+    "name": "Clap",
+    "desc_key": "ABILITY_CLAP_DESC",
+    "description": "Knock 2 enemies in front of you together.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "-1"
+        ]
+      ],
+      "range_display_include_direction": "true",
+      "knockback_mode": "perp_towards_facing"
+    },
+    "graphics": {
+      "animation": "clapTogether"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    }
+  },
+  "Clap2": {
+    "id": "Clap2",
+    "variant_of": "Clap",
+    "desc_key": "ABILITY_CLAP2_DESC",
+    "description": "Knock 2 enemies in front of you together with +2 knockback damage.",
+    "damage_instance": {
+      "effects": {
+        "BonusKnockbackDamage": "2"
+      }
+    }
+  },
+  "TankRockSong": {
+    "id": "TankRockSong",
+    "template": "spell",
+    "tags": [
+      "musical"
+    ],
+    "name_key": "ABILITY_ROCKSONG_NAME",
+    "name": "Rock Song",
+    "desc_key": "ABILITY_ROCKSONG_DESC",
+    "description": "Levitate all rocks. They will automatically fling towards enemies that end movement in line with them.",
+    "class": "Tank",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "howl"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0",
+      "effects": {
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "FloatingRockTrap": "1"
+        }
+      }
+    }
+  },
+  "TankRockSong2": {
+    "id": "TankRockSong2",
+    "variant_of": "TankRockSong",
+    "desc_key": "ABILITY_ROCKSONG2_DESC",
+    "description": "Levitate all rocks. They will automatically fling towards enemies that end movement in line with them.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "RockCrusher": {
+    "id": "RockCrusher",
+    "template": "jump_attack",
+    "name_key": "ABILITY_ROCKCRUSHER_NAME",
+    "name": "Rock Crusher",
+    "desc_key": "ABILITY_ROCKCRUSHER_DESC",
+    "description": "Jump on top of a rock, exploding it. Deal damage and knock back all adjacent units.",
+    "class": "Tank",
+    "keyword_tooltips": {},
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "min_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "rock"
+    },
+    "graphics": {
+      "jump_start_animation": "bellyflopStart",
+      "air_animation": "bellyflop_air",
+      "jump_attack_animation": "bellyflopEnd",
+      "land_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "override_trample_damage": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "Conditional_NotBoss": {
+            "ExplodeCharacter_RockCrusher": "5"
+          },
+          "Conditional_Boss": {
+            "RemoveStatus": "Petrify",
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "BonusDamage": "20"
+            },
+            "Else": {
+              "BonusDamage": "5"
+            },
+            "ExplodeCharacter_RockCrusher_PetrifyBreak": "5"
+          }
+        }
+      },
+      "elements": [
+        "Earth,"
+      ]
+    }
+  },
+  "RockCrusher2": {
+    "id": "RockCrusher2",
+    "variant_of": "RockCrusher",
+    "desc_key": "ABILITY_ROCKCRUSHER2_DESC",
+    "description": "Jump on top of a rock, exploding it. Deal high damage and knock back all adjacent units.",
+    "damage_instance": {
+      "effects": {
+        "Conditional_HasTag": {
+          "Conditional_NotBoss": {
+            "ExplodeCharacter_RockCrusher": "9"
+          },
+          "Conditional_Boss": {
+            "RemoveStatus": "Petrify",
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "BonusDamage": "20"
+            },
+            "Else": {
+              "BonusDamage": "5"
+            },
+            "ExplodeCharacter_RockCrusher_PetrifyBreak": "9"
+          }
+        }
+      }
+    }
+  },
+  "BodyGuard": {
+    "id": "BodyGuard",
+    "template": "self_buff",
+    "name_key": "ABILITY_BODYGUARD_NAME",
+    "name": "Body Guard",
+    "desc_key": "ABILITY_BODYGUARD_DESC",
+    "description": "The next time an ally is targeted by an enemy, switch places with that ally.",
+    "class": "Tank",
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "BodyGuard": {
+          "stacks": "1",
+          "ability": "BodyGuardSwap"
+        }
+      }
+    }
+  },
+  "BodyGuard2": {
+    "id": "BodyGuard2",
+    "variant_of": "BodyGuard",
+    "desc_key": "ABILITY_BODYGUARD2_DESC",
+    "description": "The next time an ally is targeted by an enemy, switch places with that ally and gain +4 [img:shield].",
+    "damage_instance": {
+      "effects": {
+        "BodyGuard": {
+          "stacks": "1",
+          "ability": "BodyGuardSwap2"
+        }
+      }
+    }
+  },
+  "BodyGuardSwap": {
+    "id": "BodyGuardSwap",
+    "template": "swap",
+    "name_key": "ABILITY_SWAP_NAME",
+    "name": "Swap",
+    "desc_key": "ABILITY_SWAP_DESC",
+    "description": "{he} swap",
+    "animate_name": "true",
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn",
+      "mode": "yeet"
+    }
+  },
+  "BodyGuardSwap2": {
+    "id": "BodyGuardSwap2",
+    "template": "swap",
+    "name_key": "ABILITY_SWAP_NAME",
+    "name": "Swap",
+    "desc_key": "ABILITY_SWAP_DESC",
+    "description": "{he} swap",
+    "animate_name": "true",
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn",
+      "mode": "yeet"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "4"
+      }
+    }
+  },
+  "Gore": {
+    "id": "Gore",
+    "template": "dash_attack",
+    "name_key": "ABILITY_GORE_NAME",
+    "name": "Gore",
+    "desc_key": "ABILITY_GORE_DESC",
+    "description": "Dash 3 tiles, damage, inflict Bruise and throw what you hit towards your original tile.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "3"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttUppercut"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "makes_contact": "true",
+      "effects": {
+        "DisplaceToOriginalPosition": "1",
+        "Bruise": "1"
+      }
+    }
+  },
+  "Gore2": {
+    "id": "Gore2",
+    "variant_of": "Gore",
+    "desc_key": "ABILITY_GORE2_DESC",
+    "description": "Dash 10 tiles, damage, inflict Bruise and throw what you hit towards your original tile.",
+    "target": {
+      "max_range": "10"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_melee_ability_damage",
+      "makes_contact": "true",
+      "effects": {
+        "DisplaceToOriginalPosition": "1",
+        "Bruise": "1"
+      }
+    }
+  },
+  "RockBlast_AI": {
+    "id": "RockBlast_AI",
+    "template": "melee_attack",
+    "target": {
+      "max_aoe": "10",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "5"
+    }
+  },
+  "RockBlast": {
+    "id": "RockBlast",
+    "template": "melee_attack",
+    "name_key": "ABILITY_ROCKBLAST_NAME",
+    "name": "Rock Blast",
+    "desc_key": "ABILITY_ROCKBLAST_DESC",
+    "description": "Shoot a rock forward.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "aoe_restrictions": "must_be_empty",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "SendRock": "1"
+      },
+      "elements": []
+    }
+  },
+  "RockBlast2": {
+    "id": "RockBlast2",
+    "variant_of": "RockBlast",
+    "desc_key": "ABILITY_ROCKBLAST2_DESC",
+    "description": "Shoot a rock forward with Chain Knockback.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "OverrideChainKnockback": "1"
+      }
+    }
+  },
+  "RockTomb": {
+    "id": "RockTomb",
+    "template": "spell",
+    "name_key": "ABILITY_ROCKTOMB_NAME",
+    "name": "Rock Tomb",
+    "desc_key": "ABILITY_ROCKTOMB_DESC",
+    "description": "Damage and Petrify a unit within 3 tiles of you.",
+    "class": "Tank",
+    "cost": {
+      "mana": "8",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "3",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "floatingmagic",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "effects": {
+        "Petrify": "1"
+      }
+    }
+  },
+  "RockTomb2": {
+    "id": "RockTomb2",
+    "variant_of": "RockTomb",
+    "desc_key": "ABILITY_ROCKTOMB2_DESC",
+    "description": "Damage and Petrify a unit within 5 tiles of you.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "SwapPositions_WideLoad": {
+    "id": "SwapPositions_WideLoad",
+    "template": "swap",
+    "target": {
+      "max_range": "1",
+      "restrictions": [
+        "must_be_swappable",
+        "aoe_must_exist"
+      ]
+    }
+  },
+  "SwapPositions_WideLoad2": {
+    "id": "SwapPositions_WideLoad2",
+    "variant_of": "TankSwap",
+    "target": {
+      "max_range": "3"
+    },
+    "self_damage": {
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "BearHug": {
+    "id": "BearHug",
+    "template": "melee_attack",
+    "name_key": "ABILITY_GRAB_NAME",
+    "name": "Grab",
+    "desc_key": "ABILITY_GRAB_DESC",
+    "description": "Pull a unit within 2 tiles towards you, knocking it into you.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_aoe": "2",
+      "knockback_mode": "tile_to_character",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "10"
+    }
+  },
+  "BearHug2": {
+    "id": "BearHug2",
+    "variant_of": "BearHug",
+    "desc_key": "ABILITY_GRAB2_DESC",
+    "description": "Pull a unit within 4 tiles towards you, knocking it into you and inflicting Grappled.",
+    "target": {
+      "max_aoe": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Grappled": "1"
+      }
+    }
+  },
+  "Fissure": {
+    "id": "Fissure",
+    "template": "spell",
+    "name_key": "ABILITY_FISSURE_NAME",
+    "name": "Fissure",
+    "desc_key": "ABILITY_FISSURE_DESC",
+    "description": "Pull all units in a wide line towards the center of that line. This has a 10% chance to Petrify.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "2,",
+          "1"
+        ],
+        ",",
+        [
+          "3,",
+          "1"
+        ],
+        ",",
+        [
+          "4,",
+          "1"
+        ],
+        ",",
+        [
+          "5,",
+          "1"
+        ],
+        ",",
+        [
+          "6,",
+          "1"
+        ],
+        ",",
+        [
+          "7,",
+          "1"
+        ],
+        ",",
+        [
+          "8,",
+          "1"
+        ],
+        ",",
+        [
+          "9,",
+          "1"
+        ],
+        ",",
+        [
+          "10,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "2,",
+          "0"
+        ],
+        ",",
+        [
+          "3,",
+          "0"
+        ],
+        ",",
+        [
+          "4,",
+          "0"
+        ],
+        ",",
+        [
+          "5,",
+          "0"
+        ],
+        ",",
+        [
+          "6,",
+          "0"
+        ],
+        ",",
+        [
+          "7,",
+          "0"
+        ],
+        ",",
+        [
+          "8,",
+          "0"
+        ],
+        ",",
+        [
+          "9,",
+          "0"
+        ],
+        ",",
+        [
+          "10,",
+          "0"
+        ],
+        [
+          "1,-1"
+        ],
+        ",",
+        [
+          "2,-1"
+        ],
+        ",",
+        [
+          "3,-1"
+        ],
+        ",",
+        [
+          "4,-1"
+        ],
+        ",",
+        [
+          "5,-1"
+        ],
+        ",",
+        [
+          "6,-1"
+        ],
+        ",",
+        [
+          "7,-1"
+        ],
+        ",",
+        [
+          "8,-1"
+        ],
+        ",",
+        [
+          "9,-1"
+        ],
+        ",",
+        [
+          "10,-1"
+        ]
+      ],
+      "knockback_mode": "perp_towards_facing_middle_pull"
+    },
+    "graphics": {
+      "animation": "groundpound",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "custom_additional_ai_weight": "magnetize_favorlineup",
+      "effects": {
+        "Petrify": [
+          "1",
+          ".1"
+        ]
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "Fissure2": {
+    "id": "Fissure2",
+    "variant_of": "Fissure",
+    "desc_key": "ABILITY_FISSURE2_DESC",
+    "description": "Pull all units in a wide line towards the center of that line. This has a 15% chance to Petrify and spawns rocks.",
+    "damage_instance": {
+      "effects": {
+        "Petrify": [
+          "1",
+          ".15"
+        ],
+        "LeaveBehindRockOnKnockback": "1"
+      }
+    }
+  },
+  "BigRock": {
+    "id": "BigRock",
+    "template": "spawn",
+    "name_key": "ABILITY_BIGROCK_NAME",
+    "name": "Big Rock",
+    "desc_key": "ABILITY_BIGROCK_DESC",
+    "description": "Drop a boulder on an adjacent tile, damaging and displacing units it lands on.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_be_displaceable",
+      "aoe_restrictions": "none"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "shoot"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "melee",
+      "force_no_contact": "true"
+    },
+    "spawn": {
+      "object": "Boulder"
+    }
+  },
+  "BigRock2": {
+    "id": "BigRock2",
+    "variant_of": "BigRock",
+    "desc_key": "ABILITY_BIGROCK2_DESC",
+    "description": "Drop a boulder on an adjacent tile, damaging, Stunning and displacing units it lands on.",
+    "damage_instance": {
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "FlipFlop": {
+    "id": "FlipFlop",
+    "template": "jump_attack",
+    "name_key": "ABILITY_FLIPFLOP_NAME",
+    "name": "Flip Flop",
+    "desc_key": "ABILITY_FLIPFLOP_DESC",
+    "description": "Jump up to 3 tiles away, damage units you land on, then gain -1 [img:spd].\n[s:.7](This spell's mana cost is equal to your [img:spd].\nAt 0 [img:spd], this spell is Castable once per turn.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "mana": "spd",
+      "move_points": "0",
+      "act_points": "0",
+      "charge": "1-clamp(spd,0,1)",
+      "initial_charge": "1"
+    },
+    "target": {
+      "max_range": "3",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    },
+    "self_damage": {
+      "effects": {
+        "SpeedUp": "-1"
+      }
+    }
+  },
+  "FlipFlop2": {
+    "id": "FlipFlop2",
+    "variant_of": "FlipFlop",
+    "desc_key": "ABILITY_FLIPFLOP2_DESC",
+    "description": "Jump up to 4 tiles away, damage units you land on, then gain -1 [img:spd].\nIf your [img:spd] is 0, this has increased range and damage.\n[s:.7](This spell's mana cost is equal to your [img:spd].\nAt 0 [img:spd], this spell is Castable once per turn.)[/s]",
+    "target": {
+      "max_range": "4+(1-clamp(spd,0,1))*2"
+    },
+    "damage_instance": {
+      "damage": "4+(1-clamp(spd,0,1))*2+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "Lunge": {
+    "id": "Lunge",
+    "template": "dash_attack",
+    "name_key": "ABILITY_LUNGE_NAME",
+    "name": "Lunge",
+    "desc_key": "ABILITY_LUNGE_DESC",
+    "description": "Dash forward one tile and attack with Knockback.\nThis spell uses up your movement action.",
+    "class": "Tank",
+    "cost": {
+      "mana": "0",
+      "act_points": "0",
+      "move_points": "1",
+      "charge": "0"
+    },
+    "target": {
+      "max_range": "1+bonus_range",
+      "max_aoe": "1",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable"
+    },
+    "graphics": {
+      "dash_start_animation": "headbuttdashStart",
+      "dash_animation": "headbuttdash",
+      "dash_attack_animation": "headbuttdashEnd"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "knockback": "1"
+    }
+  },
+  "Lunge2": {
+    "id": "Lunge2",
+    "variant_of": "Lunge",
+    "desc_key": "ABILITY_LUNGE2_DESC",
+    "description": "Dash forward one tile, attack with Knockback and inflict Stun.\nThis spell uses up your movement action.",
+    "damage_instance": {
+      "effects": {
+        "Stun": "1"
+      }
+    }
+  },
+  "Nudge": {
+    "id": "Nudge",
+    "template": "melee_attack",
+    "name_key": "ABILITY_NUDGE_NAME",
+    "name": "Nudge",
+    "desc_key": "ABILITY_NUDGE_DESC",
+    "description": "Push a unit back 1 tile.\n[s:.7](This spell costs 0 mana the first time it's used each turn.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "graphics": {
+      "animation": "bigkick"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "melee",
+      "knockback": "1"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "1"
+    }
+  },
+  "Nudge2": {
+    "id": "Nudge2",
+    "variant_of": "Nudge",
+    "desc_key": "ABILITY_NUDGE2_DESC",
+    "description": "Push a unit back 10 tiles.\n[s:.7](This spell costs 0 mana the first time it's used each turn.)[/s]",
+    "damage_instance": {
+      "knockback": "10"
+    }
+  },
+  "StoneGaze": {
+    "id": "StoneGaze",
+    "template": "spell",
+    "name_key": "ABILITY_STONEBREATH_NAME",
+    "name": "Stone Breath",
+    "desc_key": "ABILITY_STONEBREATH_DESC",
+    "description": "Inflict Petrify on the first unit in a line.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "max_aoe": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "particle": "fx_windSpell"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Petrify": "1"
+      },
+      "elements": [
+        "Wind,"
+      ]
+    }
+  },
+  "StoneGaze2": {
+    "id": "StoneGaze2",
+    "variant_of": "StoneGaze",
+    "desc_key": "ABILITY_STONEBREATH2_DESC",
+    "description": "Inflict Petrify and Knockback on the first unit in a line.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    },
+    "damage_instance": {
+      "knockback": "10",
+      "effects": {
+        "OverrideKnockbackDamage": "5"
+      }
+    }
+  },
+  "Medusa": {
+    "id": "Medusa",
+    "template": "spell",
+    "name_key": "ABILITY_MEDUSA_NAME",
+    "name": "Gorgon Glare",
+    "desc_key": "ABILITY_MEDUSA_DESC",
+    "description": "Inflict Petrify on all units in your line of sight.",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "aoe_restrictions": "must_have_line_of_sight"
+    },
+    "graphics": {
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Petrify": "1"
+      }
+    }
+  },
+  "Medusa2": {
+    "id": "Medusa2",
+    "variant_of": "Medusa",
+    "desc_key": "ABILITY_MEDUSA2_DESC",
+    "description": "Inflict Petrify on all units in your line of sight.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "8"
+    }
+  },
+  "Anchor": {
+    "id": "Anchor",
+    "template": "self_buff",
+    "name_key": "ABILITY_ANCHOR_NAME",
+    "name": "Anchor",
+    "desc_key": "ABILITY_ANCHOR_DESC",
+    "description": "Gain +4 Brace until the next time you move.",
+    "class": "Tank",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "block"
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "4",
+          "turns": "1",
+          "expires_on_move": "true"
+        }
+      }
+    }
+  },
+  "Anchor2": {
+    "id": "Anchor2",
+    "variant_of": "Anchor",
+    "desc_key": "ABILITY_ANCHOR2_DESC",
+    "description": "Gain +4 Brace until the next time you move.\nBonus Passive: Knockback immunity.",
+    "bonus_passives": {
+      "KnockbackImmunity": "1"
+    }
+  },
+  "EatRock": {
+    "id": "EatRock",
+    "template": "tile_targeted_melee_attack",
+    "name_key": "ABILITY_EATROCK_NAME",
+    "name": "Eat Rock",
+    "desc_key": "ABILITY_EATROCK_DESC",
+    "description": "Eat a rock to gain +5 [img:shield] and +1 [img:str].",
+    "class": "Tank",
+    "keyword_tooltips": {
+      "Shield": "5"
+    },
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "target": {
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "rock"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "Conditional_NotBoss": {
+            "Vaporize": "1"
+          },
+          "Conditional_Boss": {
+            "RemoveStatus": "Petrify",
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "BonusDamage": "20"
+            },
+            "Else": {
+              "BonusDamage": "5"
+            }
+          },
+          "ApplyToSource": {
+            "Shield": "5",
+            "StrengthUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "EatRock2": {
+    "id": "EatRock2",
+    "template": "tile_targeted_melee_attack",
+    "name_key": "ABILITY_EATROCK_NAME",
+    "name": "Eat Rock",
+    "desc_key": "ABILITY_EATROCK2_DESC",
+    "description": "Eat a rock to gain +5 [img:shield] and All Stats Up.",
+    "class": "Tank",
+    "keyword_tooltips": {
+      "Shield": "5"
+    },
+    "cost": {
+      "mana": "1",
+      "infcantrip": "true"
+    },
+    "target": {
+      "restrictions": [
+        "must_have_tag"
+      ],
+      "target_requires_tag": "rock"
+    },
+    "graphics": {
+      "animation": "biteattack"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "IgnoreSelf": "1",
+        "Conditional_HasTag": {
+          "tag": "rock",
+          "Conditional_NotBoss": {
+            "Vaporize": "1"
+          },
+          "Conditional_Boss": {
+            "RemoveStatus": "Petrify",
+            "Conditional_HasStatus": {
+              "status": "Petrify",
+              "BonusDamage": "20"
+            },
+            "Else": {
+              "BonusDamage": "5"
+            }
+          },
+          "ApplyToSource": {
+            "Shield": "5",
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "PlantFeet": {
+    "id": "PlantFeet",
+    "template": "self_buff",
+    "name_key": "ABILITY_PLANTFEET_NAME",
+    "name": "Plant Your Feet",
+    "desc_key": "ABILITY_PLANTFEET_DESC",
+    "description": "Gain +5 [img:shield] and -1 [img:spd]. \nIf you are at 0 [img:spd], instead cleanse all of your debuffs.\n[s:.7](Castable once per turn.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "graphics": {
+      "animation": "bruise"
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "formula": "spd",
+          "SpeedUp": "-1",
+          "Shield": "5"
+        },
+        "Else": {
+          "Cleanse": "0"
+        }
+      }
+    }
+  },
+  "PlantFeet2": {
+    "id": "PlantFeet2",
+    "variant_of": "PlantFeet",
+    "desc_key": "ABILITY_PLANTFEET2_DESC",
+    "description": "Gain +6 [img:shield] and -1 [img:spd].\nIf you are at 0 [img:spd], instead cleanse all of your debuffs and gain All Stats Up.\n[s:.7](Castable once per turn.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "Conditional_FormulaIsPositive": {
+          "Shield": "6"
+        },
+        "Else": {
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "IronHead": {
+    "id": "IronHead",
+    "template": "dash_attack",
+    "name_key": "ABILITY_IRONHEAD_NAME",
+    "name": "Iron Head",
+    "desc_key": "ABILITY_IRONHEAD_DESC",
+    "description": "Dash forward up to 3 tiles, gain +4 [img:shield] then damage and knock back adjacent units.",
+    "class": "Tank",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "3",
+      "min_range": "1",
+      "target_mode": "tile",
+      "range_mode": "cross",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "knockback_mode": "character_to_tile",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "block"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "4"
+      }
+    }
+  },
+  "IronHead2": {
+    "id": "IronHead2",
+    "variant_of": "IronHead",
+    "desc_key": "ABILITY_IRONHEAD2_DESC",
+    "description": "Dash forward up to 10 tiles, gain +4 [img:shield] then damage and knock back adjacent units with +5 knockback damage.",
+    "target": {
+      "max_range": "10"
+    },
+    "damage_instance": {
+      "effects": {
+        "OverrideKnockbackDamage": "5"
+      }
+    }
+  },
+  "GangUp": {
+    "id": "GangUp",
+    "template": "throw_attack",
+    "name_key": "ABILITY_GANGUP_NAME",
+    "name": "Gang Up",
+    "desc_key": "ABILITY_GANGUP_DESC",
+    "description": "Toss a unit to an empty tile within 3 tiles of you, then your allies attack it if they can.",
+    "class": "Tank",
+    "cost": {
+      "mana": "9",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "3"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "MassAttackThis": "1"
+      }
+    }
+  },
+  "GangUp2": {
+    "id": "GangUp2",
+    "variant_of": "GangUp",
+    "desc_key": "ABILITY_GANGUP2_DESC",
+    "description": "Toss a unit to an empty tile within 6 tiles of you and inflict Bruise, then your allies attack it if they can.",
+    "target": {
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "Aftershock": {
+    "id": "Aftershock",
+    "template": "spell",
+    "name_key": "ABILITY_AFTERSHOCK_NAME",
+    "name": "Aftershock",
+    "desc_key": "ABILITY_AFTERSHOCK_DESC",
+    "description": "All units on dirt tiles get tossed to random nearby tiles and take damage when they land.",
+    "class": "Tank",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_restrictions": [
+        "tile_must_have_element"
+      ],
+      "aoe_tile_requires_element": "Earth"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "particle": "Earthquake",
+      "delay": "3"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "TwisterDisplaceWithDamage": {
+          "damage": "inherit",
+          "max_dist": "2"
+        }
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "Aftershock2": {
+    "id": "Aftershock2",
+    "variant_of": "Aftershock",
+    "desc_key": "ABILITY_AFTERSHOCK2_DESC",
+    "description": "All units on dirt tiles get tossed to random tiles and take damage when they land.\nBonus Passive: All of your spells have Earth element.",
+    "bonus_passives": {
+      "AddElementsToSpells": "Earth"
+    }
+  },
+  "SteelSkin": {
+    "id": "SteelSkin",
+    "template": "self_buff",
+    "name_key": "ABILITY_STEELSKIN_NAME",
+    "name": "Steelskin",
+    "desc_key": "ABILITY_STEELSKIN_DESC",
+    "description": "Gain +99 Brace until your next turn, then disable this spell until you take a total of 25 damage.",
+    "class": "Tank",
+    "keyword_tooltips": {
+      "Brace": "1"
+    },
+    "cost": {
+      "mana": "0",
+      "requires_reload": "true",
+      "start_reloaded": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "99",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    },
+    "bonus_passives": {
+      "ReloadOnTotalDamageReceived": "25"
+    }
+  },
+  "SteelSkin2": {
+    "id": "SteelSkin2",
+    "variant_of": "SteelSkin",
+    "desc_key": "ABILITY_STEELSKIN2_DESC",
+    "description": "Gain +99 Brace until your next turn, then disable this spell until you take a total of 15 damage.",
+    "cost": {
+      "mana": "0"
+    },
+    "bonus_passives": {
+      "ReloadOnTotalDamageReceived": "15"
+    }
+  },
+  "FaultLine": {
+    "id": "FaultLine",
+    "template": "spell",
+    "name_key": "ABILITY_FAULTLINE_NAME",
+    "name": "Fault Line",
+    "desc_key": "ABILITY_FAULTLINE_DESC",
+    "description": "Fling all units in a straight line onto nearby tiles.",
+    "class": "Tank",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "10"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "particle": "Earthquake",
+      "delay": "3"
+    },
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "TwisterDisplaceWithDamage": {
+          "damage": "inherit",
+          "max_dist": "2"
+        }
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "FaultLine2": {
+    "id": "FaultLine2",
+    "variant_of": "FaultLine",
+    "desc_key": "ABILITY_FAULTLINE2_DESC",
+    "description": "Fling all units in a straight line onto nearby tiles, dealing more damage.",
+    "damage_instance": {
+      "damage": "5"
+    }
+  },
+  "Demolish": {
+    "id": "Demolish",
+    "template": "melee_attack",
+    "name_key": "ABILITY_DEMOLISH_NAME",
+    "name": "Demolish",
+    "desc_key": "ABILITY_DEMOLISH_DESC",
+    "description": "Turn a tile into a dirt tile, smashing any inanimate objects into rocks.",
+    "class": "Tank",
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "knockback_mode": "zero"
+    },
+    "graphics": {
+      "animation": "earthquakeSlam",
+      "particle": "Earthquake"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "ChangeTile": "DirtTile",
+        "VaporizeInanimate": "1",
+        "Conditional_Object": {
+          "Conditional_HasTag": {
+            "tag": "rock"
+          },
+          "Else": {
+            "CanApplyToInanimate": {
+              "BreakIntoRocks": "SmallRock"
+            }
+          }
+        }
+      },
+      "elements": [
+        "Earth"
+      ]
+    }
+  },
+  "Demolish2": {
+    "id": "Demolish2",
+    "variant_of": "Demolish",
+    "desc_key": "ABILITY_DEMOLISH2_DESC",
+    "description": "Turn 3 tiles into dirt tiles, smashing any inanimate objects into rocks.",
+    "target": {
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1,",
+          "1"
+        ],
+        ",",
+        [
+          "1,",
+          "0"
+        ],
+        ",",
+        [
+          "1,",
+          "-1"
+        ]
+      ]
+    },
+    "damage_instance": {
+      "effects": {
+        "Conditional_Object": {
+          "Conditional_HasTag": {
+            "tag": "rock"
+          },
+          "Else": {
+            "CanApplyToInanimate": {
+              "BreakIntoRocks": "SmallRock"
+            }
+          }
+        },
+        "Else": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "FollowUpDash": {
+    "id": "FollowUpDash",
+    "template": "dash_attack",
+    "cost": {
+      "mana": "0",
+      "act_points": "0",
+      "move_points": "1"
+    },
+    "target": {
+      "max_range": "10",
+      "max_aoe": "0",
+      "aoe_restrictions": "must_have_line_of_sight_unpurgable",
+      "consider_trample": "true"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none"
+    }
+  },
+  "FollowUpDash2": {
+    "id": "FollowUpDash2",
+    "variant_of": "FollowUpDash",
+    "target": {
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "dash_attack_animation": "dashatk"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee"
+    }
+  },
+  "CatapultJump": {
+    "id": "CatapultJump",
+    "variant_of": "BasicJump",
+    "name_key": "ABILITY_CATAPULT_NAME",
+    "name": "Cat-A-Pult!",
+    "desc_key": "ABILITY_CATAPULT_DESC",
+    "description": "Get flung to a tile and deal damage to anything you land on.\nThis doesn't use up your movement action.",
+    "animate_name": "false",
+    "cost": {
+      "mana": "0",
+      "cantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "CatapultJump2": {
+    "id": "CatapultJump2",
+    "variant_of": "CatapultJump",
+    "desc_key": "ABILITY_CATAPULT2_DESC",
+    "description": "Get flung to a tile and deal damage to anything you land on.\nThis doesn't use up your movement action.",
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "PushThrough": {
+    "id": "PushThrough",
+    "template": "move",
+    "name_key": "ABILITY_PUSHTHROUGH_NAME",
+    "name": "Push Through",
+    "desc_key": "ABILITY_PUSHTHROUGH_DESC",
+    "description": "Trample over 2 tiles in a straight line destroying any inanimate objects.",
+    "class": "Tank",
+    "animate_name": "true",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "2",
+      "restrictions": [
+        "must_move",
+        "must_not_be_knockback_immune_animate_character"
+      ],
+      "straight_shot": "true"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "override_trample_damage": "true",
+      "effects": {
+        "VaporizeInanimate": "1"
+      }
+    }
+  },
+  "PushThrough2": {
+    "id": "PushThrough2",
+    "variant_of": "PushThrough",
+    "desc_key": "ABILITY_PUSHTHROUGH2_DESC",
+    "description": "Trample over 4 tiles in a straight line destroying any inanimate objects and inflicting Bruise 1 on units you trample.",
+    "target": {
+      "max_range": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "Spur": {
+    "id": "Spur",
+    "template": "self_buff",
+    "name_key": "ABILITY_PINCUSHION_NAME",
+    "name": "Pincushion",
+    "desc_key": "ABILITY_PINCUSHION_DESC",
+    "description": "Gain +3 Thorns. \nThis spell uses up your movement action.",
+    "class": "Tank",
+    "cost": {
+      "mana": "0",
+      "act_points": "0",
+      "move_points": "1",
+      "charge": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "Thorns": "3"
+      }
+    }
+  },
+  "Spur2": {
+    "id": "Spur2",
+    "variant_of": "Spur",
+    "desc_key": "ABILITY_PINCUSHION2_DESC",
+    "description": "Gain +3 Thorns and +1 Brace.\nThis spell uses up your movement action.",
+    "damage_instance": {
+      "effects": {
+        "Thorns": "3",
+        "Brace": "1"
+      }
+    }
+  },
+  "Supper": {
+    "id": "Supper",
+    "template": "self_buff",
+    "name_key": "ABILITY_SUPPER_NAME",
+    "name": "Supper",
+    "desc_key": "ABILITY_SUPPER_DESC",
+    "description": "Heal 15 HP and gain -2 [img:spd].\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Tank",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "gulp"
+    },
+    "damage_instance": {
+      "heal": "15",
+      "effects": {
+        "SpeedUp": "-2"
+      }
+    }
+  },
+  "Supper2": {
+    "id": "Supper2",
+    "variant_of": "Supper",
+    "desc_key": "ABILITY_SUPPER2_DESC",
+    "description": "Heal 15 HP, gain -2 [img:spd] and +5 Health Regeneration.\n[s:.7](Castable once per battle.)[/s]",
+    "damage_instance": {
+      "effects": {
+        "HealthRegenUp": "5"
+      }
+    }
+  },
+  "FullForce": {
+    "id": "FullForce",
+    "template": "jump_attack",
+    "name_key": "ABILITY_FULLFORCE_NAME",
+    "name": "Full Force",
+    "desc_key": "ABILITY_FULLFORCE_DESC",
+    "description": "Deal damage equal to your [img:con] and inflict Stun. Also stuns yourself.",
+    "class": "Tank",
+    "cost": {
+      "mana": "8",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "1",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none"
+    },
+    "graphics": {
+      "jump_start_animation": "bellyflopStart",
+      "air_animation": "bellyflop_air",
+      "jump_attack_animation": "bellyflopEnd",
+      "land_animation": "none",
+      "fixed_jump_height": "1",
+      "fixed_jump_speed": "2"
+    },
+    "damage_instance": {
+      "damage": "con",
+      "effects": {
+        "Stun": "1",
+        "Conditional_IsSelf": {
+          "OverrideDamage": "0"
+        },
+        "Else": {}
+      }
+    }
+  },
+  "FullForce2": {
+    "id": "FullForce2",
+    "variant_of": "FullForce",
+    "desc_key": "ABILITY_FULLFORCE2_DESC",
+    "description": "Deal damage equal to your [img:con] and inflict Stun and Bruise 4. Also stuns yourself.",
+    "damage_instance": {
+      "effects": {
+        "Conditional_IsSelf": {},
+        "Else": {
+          "Bruise": "4"
+        }
+      }
+    }
+  },
+  "Sandstorm": {
+    "id": "Sandstorm",
+    "template": "self_buff",
+    "name_key": "ABILITY_SANDSTORM_NAME",
+    "name": "Sandstorm",
+    "desc_key": "ABILITY_SANDSTORM_DESC",
+    "description": "Start a sandstorm.\n(Sandstorm deals 1 damage to all units at the end of round.)\nIf a sandstorm was already active, increase its damage by 1.",
+    "class": "Tank",
+    "cost": {
+      "mana": "4",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "StackingSandstorm": "1"
+      }
+    }
+  },
+  "Sandstorm2": {
+    "id": "Sandstorm2",
+    "variant_of": "Sandstorm",
+    "desc_key": "ABILITY_SANDSTORM2_DESC",
+    "description": "Start a sandstorm.\n(Sandstorm deals 1 damage to all units at the end of round.)\nIf a sandstorm was already active, increase its damage by 1.\n[s:.7](This spell costs 0 mana the first time you cast it each turn.)[/s]",
+    "cost": {
+      "mana": "4"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "4"
+    }
+  },
+  "Thicken": {
+    "id": "Thicken",
+    "template": "self_buff",
+    "name_key": "ABILITY_THICKEN_NAME",
+    "name": "Thicken",
+    "desc_key": "ABILITY_THICKEN_DESC",
+    "description": "Gain +1 knockback damage and +1 knockback range until the end of the turn.",
+    "class": "Tank",
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "animation": "gulp"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempBonusKnockback": "1",
+        "TempBonusKnockbackDamage": "1"
+      }
+    }
+  },
+  "Thicken2": {
+    "id": "Thicken2",
+    "variant_of": "Thicken",
+    "desc_key": "ABILITY_THICKEN2_DESC",
+    "description": "Gain +1 [img:con].\nGain +1 knockback damage and +1 knockback range until the end of the turn.",
+    "damage_instance": {
+      "effects": {
+        "ConstitutionUp": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "alley": {
+    "combat_background": "AlleyBGTest",
+    "combat_ui_background": "UI_Background",
+    "static_1x1_a": "Rubble",
+    "static_1x1_b": "Bricks",
+    "static_1x1_c": "Bricks",
+    "static_2x2_a": "Dumpster",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "PowerPole",
+    "static_tall_b": "PhoneBooth",
+    "debris": "Debris",
+    "event_piece_frame": "alley",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "Alley",
+        "amount": ".35",
+        "ReverbDelay": ".2",
+        "volume_adjustment": "1.3"
+      }
+    }
+  },
+  "junkyard": {
+    "combat_background": "JunkyardBG",
+    "combat_ui_background": "UI_Background_Junkyard",
+    "static_1x1_a": "StaticJunkSmall",
+    "static_1x1_b": "Stump",
+    "static_1x1_c": "SmallGravelPile",
+    "static_2x2_a": "StaticJunkCube",
+    "static_2x2_b": "BigGravelPile",
+    "static_tall_a": "Tree",
+    "static_tall_b": "StaticTires",
+    "debris": "Debris2",
+    "event_piece_frame": "junkyard",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "ParkingLot",
+        "amount": ".35",
+        "ReverbDelay": ".25",
+        "DecayTime": "1.68",
+        "volume_adjustment": "1.35"
+      }
+    }
+  },
+  "sewers": {
+    "combat_background": "SewerBG",
+    "combat_ui_background": "UI_Background_Sewers",
+    "background_extra_shader": "water",
+    "static_1x1_a": "SmallPipes",
+    "static_1x1_b": "Bricks3",
+    "static_1x1_c": "Sludge",
+    "static_2x2_a": "BigPipes",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "TallPipe",
+    "static_tall_b": "PhoneBooth",
+    "debris": "Debris3",
+    "event_piece_frame": "sewers",
+    "global_particles": [
+      "CaveDrip"
+    ],
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".7"
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "StoneRoom",
+        "amount": ".4",
+        "volume_adjustment": "1.5"
+      }
+    }
+  },
+  "caves": {
+    "combat_background": "CavesBG",
+    "combat_ui_background": "UI_Background_Caves",
+    "static_1x1_a": "CaveRock1",
+    "static_1x1_b": "CaveRock2",
+    "static_1x1_c": "CaveRock3",
+    "static_2x2_a": "BigCaveRock1",
+    "static_2x2_b": "BigCaveRock1",
+    "static_tall_a": "TallCaveRock1",
+    "static_tall_b": "TallCaveRock2",
+    "debris": "CaveDebris",
+    "event_piece_frame": "caves",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".5",
+        "bigrays": [
+          "1,",
+          "1"
+        ],
+        "smallrays": [
+          "1,",
+          "2"
+        ]
+      },
+      "Firefly": {
+        "count": [
+          "0",
+          "2"
+        ]
+      }
+    },
+    "global_particles": [
+      "CaveDrip"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "Cave",
+        "amount": ".65",
+        "volume_adjustment": "1.50",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "boneyard": {
+    "combat_background": "BoneYardBG",
+    "combat_ui_background": "UI_Background_Graves",
+    "static_1x1_a": "GraveRocks1",
+    "static_1x1_b": "GraveRocks2",
+    "static_1x1_c": "GraveRocks2",
+    "static_2x2_a": "BigGraveRocks1",
+    "static_2x2_b": "BigGraveRocks1",
+    "static_tall_a": "TallGraveRocks1",
+    "static_tall_b": "TallGraveRocks1",
+    "debris": "GravesDebris",
+    "event_piece_frame": "graves",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".7",
+        "bigrays": [
+          "0,",
+          "0"
+        ],
+        "smallrays": [
+          "0,",
+          "0"
+        ]
+      }
+    },
+    "global_particles": [
+      "Mist"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "ParkingLot",
+        "amount": ".35",
+        "ReverbDelay": ".25",
+        "DecayTime": "1.68",
+        "volume_adjustment": "1.35"
+      }
+    }
+  },
+  "desert": {
+    "combat_background": "DesertBG",
+    "combat_ui_background": "DesertUI",
+    "static_1x1_a": "DesertRocks",
+    "static_1x1_b": "DesertCactus",
+    "static_1x1_c": "DesertRocks",
+    "static_2x2_a": "Desert2x2",
+    "static_2x2_b": "Desert2x2",
+    "static_tall_a": "DesertTall",
+    "static_tall_b": "DesertTall2",
+    "debris": "DesertDebris",
+    "event_piece_frame": "desert",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "Forest",
+        "amount": ".35",
+        "ReverbDelay": ".45",
+        "DecayTime": "1.68",
+        "volume_adjustment": "1.5"
+      }
+    }
+  },
+  "bunker": {
+    "combat_background": "BunkerBG",
+    "combat_ui_background": "UI_Background_Bunker",
+    "static_1x1_a": "BunkerObjects1",
+    "static_1x1_b": "BunkerObjects2",
+    "static_1x1_c": "SmallGravelPile",
+    "static_2x2_a": "Bunker2x2",
+    "static_2x2_b": "BigGravelPile",
+    "static_tall_a": "BunkerTall1",
+    "static_tall_b": "BunkerTall2",
+    "debris": "Debris7",
+    "event_piece_frame": "bunker",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".4",
+        "smallrays": [
+          "2,",
+          "6"
+        ],
+        "bigrays": [
+          "0,",
+          "0"
+        ],
+        "smallray_clip": "Bunkerlight"
+      },
+      "Cockroach": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "Cave",
+        "amount": ".65",
+        "volume_adjustment": "1.50",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "crater": {
+    "combat_background": "CraterBG",
+    "combat_ui_background": "UI_Background_Crater",
+    "static_1x1_a": "CraterObjects1",
+    "static_1x1_b": "CraterObjects2",
+    "static_1x1_c": "CraterObjects1",
+    "static_2x2_a": "Crater2x2",
+    "static_2x2_b": "Desert2x2",
+    "static_tall_a": "CraterTall1",
+    "static_tall_b": "CraterTall2",
+    "debris": "Debris8",
+    "event_piece_frame": "crater",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "global_particles": [
+      "CraterLeaves"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "Forest",
+        "amount": ".35",
+        "ReverbDelay": ".45",
+        "DecayTime": "1.68",
+        "volume_adjustment": "1.5"
+      }
+    }
+  },
+  "core": {
+    "combat_background": "CoreBG",
+    "boss_background_alt": "CoreBossBG",
+    "combat_ui_background": "CoreUI",
+    "static_1x1_a": "CoreObjects1",
+    "static_1x1_b": "CoreObjects2",
+    "static_1x1_c": "CoreObjects3",
+    "static_2x2_a": "Core2x2",
+    "static_2x2_b": "Desert2x2",
+    "static_tall_a": "CoreTall1",
+    "static_tall_b": "CoreTall2",
+    "debris": "Debris9",
+    "event_piece_frame": "core",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".6"
+      }
+    },
+    "global_particles": [
+      "Embers",
+      "CoreHeatWave_Distortion"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "Cave",
+        "amount": ".65",
+        "volume_adjustment": "1.50",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "moon": {
+    "combat_background": "MoonBG",
+    "combat_ui_background": "MoonUI",
+    "static_1x1_a": "MoonObjects1",
+    "static_1x1_b": "MoonObjects2",
+    "static_1x1_c": "MoonObjects2",
+    "static_2x2_a": "Moon2x2",
+    "static_2x2_b": "Moon2x22",
+    "static_tall_a": "MoonTall1",
+    "static_tall_b": "MoonTall2",
+    "debris": "Debris10",
+    "event_piece_frame": "moon",
+    "global_objects": {},
+    "reverb": {
+      "battle": {
+        "preset": "Forest",
+        "amount": ".35",
+        "ReverbDelay": ".45",
+        "DecayTime": "1.68",
+        "volume_adjustment": "1.5"
+      }
+    }
+  },
+  "lab": {
+    "combat_background": "LabBG",
+    "combat_ui_background": "LabUI",
+    "static_1x1_a": "LabObjects1",
+    "static_1x1_b": "Labobjects2",
+    "static_1x1_c": "LabObjects1",
+    "static_2x2_a": "Lab2x2",
+    "static_2x2_b": "Moon2x22",
+    "static_tall_a": "Labtall1",
+    "static_tall_b": "Labtall2",
+    "debris": "Debris11",
+    "event_piece_frame": "lab",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".4",
+        "smallrays": [
+          "4,",
+          "8"
+        ],
+        "bigrays": [
+          "0,",
+          "0"
+        ],
+        "smallray_clip": "labligtht"
+      },
+      "Cockroach": {
+        "count": [
+          "10",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "Cave",
+        "amount": ".65",
+        "volume_adjustment": "1.50",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "house": {
+    "combat_background": "HouseBG",
+    "combat_ui_background": "UI_Background2",
+    "static_1x1_a": "Rubble",
+    "static_1x1_b": "Bricks",
+    "static_1x1_c": "Bricks",
+    "static_2x2_a": "Dumpster",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "PowerPole",
+    "static_tall_b": "PhoneBooth",
+    "debris": "Debris",
+    "event_piece_frame": "house",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    },
+    "reverb": {
+      "battle": {
+        "preset": "Alley",
+        "amount": ".35",
+        "ReverbDelay": ".2",
+        "volume_adjustment": "1.3"
+      }
+    }
+  },
+  "iceage": {
+    "combat_background": "IceageBG",
+    "combat_ui_background": "UI_Background_Iceage",
+    "static_1x1_a": "Iceageobjects1",
+    "static_1x1_b": "IceageObjects2",
+    "static_1x1_c": "Iceageobjects1",
+    "static_2x2_a": "Iceage2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "Iceagetall1",
+    "static_tall_b": "Iceagetall2",
+    "debris": "Debris12",
+    "event_piece_frame": "iceage",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".8",
+        "bigrays": [
+          "1,",
+          "1"
+        ],
+        "smallrays": [
+          "1,",
+          "2"
+        ]
+      }
+    },
+    "global_particles": [
+      "CaveDrip"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "Forest",
+        "amount": ".65",
+        "volume_adjustment": "1.5",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "tutorial": {
+    "combat_background": "thepathBG",
+    "combat_ui_background": "UI_tutoral",
+    "static_1x1_a": "Pathrubble",
+    "static_1x1_b": "Bricks",
+    "static_1x1_c": "Bricks",
+    "static_2x2_a": "thepath2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "PowerPole",
+    "static_tall_b": "PhoneBooth",
+    "debris": "Debris",
+    "event_piece_frame": "tutorial",
+    "global_objects": {
+      "Fly": {
+        "count": [
+          "0",
+          "20"
+        ]
+      }
+    }
+  },
+  "jurassic": {
+    "combat_background": "dinolandBG",
+    "combat_ui_background": "UI_Background_Dino",
+    "static_1x1_a": "Dinoobjects",
+    "static_1x1_b": "Dinoobjects",
+    "static_1x1_c": "Dinoobjects",
+    "static_2x2_a": "dino2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "dinolandtall1",
+    "static_tall_b": "dinolandtall0",
+    "debris": "dinodebris",
+    "event_piece_frame": "jurassic",
+    "global_objects": {}
+  },
+  "future": {
+    "combat_background": "futureBG",
+    "combat_ui_background": "UI_Future",
+    "static_1x1_a": "Futureobjects",
+    "static_1x1_b": "Futureobjects2",
+    "static_1x1_c": "Futureobjects",
+    "static_2x2_a": "future2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "futuretall1",
+    "static_tall_b": "futuretall",
+    "debris": "futuredebris",
+    "event_piece_frame": "future",
+    "global_objects": {}
+  },
+  "theend": {
+    "combat_background": "theendBG",
+    "combat_ui_background": "UI_End",
+    "static_1x1_a": "Endobjects",
+    "static_1x1_b": "Endobjects",
+    "static_1x1_c": "Endobjects",
+    "static_2x2_a": "End2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "endtall1",
+    "static_tall_b": "Endt",
+    "debris": "enddebris",
+    "water_alt_tile": "BloodTile",
+    "water_alt_shroud": "BloodShroud",
+    "water_alt_shader": "blood",
+    "event_piece_frame": "theend",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".7",
+        "bigrays": [
+          "1,",
+          "1"
+        ],
+        "smallrays": [
+          "1,",
+          "2"
+        ]
+      },
+      "Cockroach": {
+        "count": [
+          "10",
+          "20"
+        ]
+      },
+      "Fly": {
+        "count": [
+          "10",
+          "20"
+        ]
+      }
+    },
+    "global_particles": [
+      "CaveDrip"
+    ]
+  },
+  "meatworld": {
+    "combat_background": "meatBGpulsing",
+    "combat_ui_background": "UI_Meat",
+    "background_extra_shader": "meatpulse",
+    "background_shader": "meatpulse_ground",
+    "static_1x1_a": "Meatobjects",
+    "static_1x1_b": "Meatobjects2",
+    "static_1x1_c": "Meatobjects",
+    "static_2x2_a": "Meat2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "Meatt",
+    "static_tall_b": "meattall1",
+    "water_alt_tile": "BloodTile",
+    "water_alt_shroud": "BloodShroud",
+    "water_alt_shader": "blood",
+    "debris": "meatdebris",
+    "event_piece_frame": "meatworld",
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".6"
+      }
+    },
+    "global_particles": [
+      "MeatCaveDrip,",
+      "CoreHeatWave_Distortion,",
+      "Mist"
+    ],
+    "reverb": {
+      "battle": {
+        "preset": "Cave",
+        "amount": ".65",
+        "volume_adjustment": "1.50",
+        "DecayTime": "1.8"
+      }
+    }
+  },
+  "therift": {
+    "combat_background": "theriftBG",
+    "combat_ui_background": "UI_Rift",
+    "static_1x1_a": "Riftobjects",
+    "static_1x1_b": "Riftobjects",
+    "static_1x1_c": "Riftobjects",
+    "static_2x2_a": "Rift2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "rifttall1",
+    "static_tall_b": "Riftt",
+    "debris": "riftdebris",
+    "event_piece_frame": "therift",
+    "global_particles": [
+      "GlitchShards"
+    ],
+    "global_objects": {}
+  },
+  "theinfinite": {
+    "combat_background": "infiniteBG",
+    "combat_ui_background": "UI_Infinite",
+    "static_1x1_a": "Infiniteobjects",
+    "static_1x1_b": "Infiniteobjects2",
+    "static_1x1_c": "Infiniteobjects",
+    "static_2x2_a": "Infinite2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "infinitetall1",
+    "static_tall_b": "infinitetall1",
+    "debris": "infinitedebris",
+    "event_piece_frame": "theinfinite",
+    "global_particles": [
+      "AngelClouds"
+    ],
+    "global_objects": {}
+  },
+  "finalboss": {
+    "combat_background": "finalbossBG",
+    "combat_ui_background": "UI_FinalBoss",
+    "background_extra_shader": "crazyeye",
+    "static_1x1_a": "Infiniteobjects",
+    "static_1x1_b": "Infiniteobjects2",
+    "static_1x1_c": "Infiniteobjects",
+    "static_2x2_a": "Infinite2x2",
+    "static_2x2_b": "Dumpster",
+    "static_tall_a": "infinitetall1",
+    "static_tall_b": "infinitetall1",
+    "debris": "infinitedebris",
+    "event_piece_frame": "theinfinite",
+    "global_particles": [
+      "AngelClouds"
+    ],
+    "global_objects": {
+      "Lighting": {
+        "ambient": ".7"
+      }
+    }
+  }
+}

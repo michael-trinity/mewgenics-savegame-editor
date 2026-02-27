@@ -1,0 +1,3810 @@
+{
+  "TomTom": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TOMTOM_NAME",
+      "name_resolved": "Tom Tom",
+      "custom_cat_data": "TomTom",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "tooltip": "ENEMY_TOMTOM_DESC",
+      "tooltip_resolved": "It's slow, but has a wide melee attack."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_Cat_StompWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "15",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "WideSwipe",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Mangy": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MANGY_NAME",
+      "name_resolved": "Mangy",
+      "custom_cat_data": "Mangy",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_MANGY_DESC",
+      "tooltip_resolved": "Its ranged attack may inflict Poison.\nSpawns maggots when damaged."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "7",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PoisonShot",
+      "spells": []
+    },
+    "passives": {
+      "SpawnThingOnDamage": {
+        "object": "Maggot",
+        "good": "false",
+        "spawn_on_death_hit": "false"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Kitten": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_KITTEN_NAME",
+      "name_resolved": "Kitten",
+      "custom_cat_data": "Kitten",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "ENEMY_KITTEN_DESC",
+      "tooltip_resolved": "Runs away when damaged."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "5",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_far_always_move"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CatCaller": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CATCALLER_NAME",
+      "name_resolved": "Cat Caller",
+      "custom_cat_data": "CatCaller",
+      "alt_animations": [
+        [
+          "idle",
+          "girlyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_CATCALLER_DESC",
+      "tooltip_resolved": "Slows units.\nCounterattacks when hit."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "auto_run_priority": "support",
+      "health": "7",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "CatCall"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "attack"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_far_distance",
+      "pattern": {
+        "do_priority": [
+          "*CatCall,",
+          "CatCall"
+        ]
+      }
+    }
+  },
+  "Multicat": {
+    "graphics": {
+      "movieclip": "Multicat",
+      "name": "ENEMY_MULTICAT_NAME",
+      "name_resolved": "Multicat"
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "health": "30",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "MulticatHeads": "0"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "angry",
+      "move_weights": "stay_close"
+    }
+  },
+  "GlassSpitter": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_GLASSSPITTER_NAME",
+      "name_resolved": "Glass Spitter",
+      "custom_cat_data": "GlassSpitter",
+      "alt_animations": [
+        [
+          "idle",
+          "twitchyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_GLASSSPITTER_DESC",
+      "tooltip_resolved": "Its ranged attack spawns glass and inflicts Bleed."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "5",
+      "shield": "5",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SpitGlass",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_ranged_distance"
+    }
+  },
+  "Siren": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SIREN_NAME",
+      "name_resolved": "Siren",
+      "custom_cat_data": "Siren",
+      "tooltip": "ENEMY_SIREN_DESC",
+      "tooltip_resolved": "Calls its enemies towards it and heals its adjacent allies."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "siren"
+      ],
+      "type": "cat",
+      "auto_run_priority": "support",
+      "health": "7",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SirenCall",
+      "spells": []
+    },
+    "passives": {
+      "HealNeighborsEachTurn": {
+        "stacks": "3",
+        "allies_only": "true"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_near_allies_siren",
+      "pattern": {
+        "do": "SirenCall"
+      }
+    }
+  },
+  "Jekyll": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_JEKYLL_NAME",
+      "name_resolved": "Jekyll",
+      "custom_cat_data": "Jekyll",
+      "scale": ".75",
+      "alt_animations": [
+        [
+          "idle",
+          "cuteIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_JEKYLL_DESC",
+      "tooltip_resolved": "It will evolve in several turns."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "7",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "12"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "CanMutateTo": "Hyde",
+      "MutateAfterXTurns": "3"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_far",
+      "mainturn_pattern": {
+        "move_then_do": "attack"
+      }
+    }
+  },
+  "Hyde": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_HYDE_NAME",
+      "name_resolved": "Hyde",
+      "custom_cat_data": "Hyde",
+      "scale": ".85",
+      "spawnin_animation": "howl",
+      "tooltip": "ENEMY_HYDE_DESC",
+      "tooltip_resolved": "Its melee attack can hit multiple times!"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "20",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "FurySwipes_Enemy",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "SpikedCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SPIKEDCAT_NAME",
+      "name_resolved": "Spiked Cat",
+      "custom_cat_data": "SpikedCat",
+      "alt_animations": [
+        [
+          "idle",
+          "twitchyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SPIKEDCAT_DESC",
+      "tooltip_resolved": "Be careful of its Thorns!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "type": "cat",
+      "health": "5",
+      "shield": "8",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "Thorns": "3"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "PopeyeCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_POPEYE_NAME",
+      "name_resolved": "Popeye",
+      "custom_cat_data": "PopeyeCat",
+      "scale": "1.1",
+      "alt_animations": [
+        [
+          "idle",
+          "dopeyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_POPEYE_DESC",
+      "tooltip_resolved": "Has a dash attack with knockback."
+    },
+    "stats": {
+      "strength": "8",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "17",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PopeyeDash",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_popeye"
+    }
+  },
+  "GassyCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_GASSY_NAME",
+      "name_resolved": "Gassy",
+      "custom_cat_data": "GassyCat",
+      "alt_animations": [
+        [
+          "idle",
+          "dopeyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_GASSY_DESC",
+      "tooltip_resolved": "Its farts inflict Poison 3.\nFarts and projects itself forward when damaged."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "12",
+      "shield": "3",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "GasBlast",
+      "spells": []
+    },
+    "passives": {
+      "AbilityReaction": "attack"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "extra_careless",
+      "move_weights": "stay_close",
+      "random_orient": "true"
+    }
+  },
+  "SharkyCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SHARKY_NAME",
+      "name_resolved": "Sharky",
+      "custom_cat_data": "SharkyCat",
+      "alt_animations": [
+        [
+          "idle",
+          "albinoIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SHARKY_DESC",
+      "tooltip_resolved": "Its bite inflicts Bleed.\nTakes bonus turns for each bleeding unit.\nFocuses on bleeding units."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "fish"
+      ],
+      "type": "cat",
+      "health": "7",
+      "shield": "7",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "3",
+      "view_bleeding_characters_as_enemies": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SharkDash",
+      "spells": []
+    },
+    "passives": {
+      "SharkySmellsBlood": "1",
+      "WaterWalk": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close_always_move"
+    }
+  },
+  "BoomerCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_BOOMER_NAME",
+      "name_resolved": "Boomer",
+      "custom_cat_data": "BoomerCat",
+      "alt_animations": [
+        [
+          "idle",
+          "dopeyIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_BOOMER_DESC",
+      "tooltip_resolved": "Explodes when killed, damaging all nearby units."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "15",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "BoomerCatExplode"
+      ]
+    },
+    "passives": {
+      "DeathRattle": "BoomerCatExplode",
+      "AddMeleeKnockback": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "consider_spells": "false",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "WaterKitten": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_WATERKITTEN_NAME",
+      "name_resolved": "Water Kitten",
+      "custom_cat_data": "WaterKitten",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "spawnin_animation": "digUp",
+      "alt_animations": [
+        [
+          "idle",
+          "cuteIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_WATERKITTEN_DESC",
+      "tooltip_resolved": "Moves away when damaged.\nMay be hiding in water..."
+    },
+    "equipment": {
+      "neck": "Slime",
+      "head": "Banana"
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "5",
+      "shield": "1",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "WaterTrailMove"
+      ]
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_far_always_move",
+        "move_ability": "WaterTrailMove"
+      },
+      "WaterWalk": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "AlbinoTomTom": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ALBINOTOMTOM_NAME",
+      "name_resolved": "Albino Tom Tom",
+      "custom_cat_data": "AlbinoTomTom",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "alt_animations": [
+        [
+          "idle",
+          "albinoIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_ALBINOTOMTOM_DESC",
+      "tooltip_resolved": "Its wide melee attacks have Knockback 2."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "17",
+      "round_end_bonus_turns": "1",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "WideSwipe",
+      "spells": []
+    },
+    "passives": {
+      "AddMeleeKnockback": "2",
+      "/*AddStatusToBasicAttack": {
+        "Fear": "1"
+      },
+      "*/": true
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "SpiderCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SPIDERKITTEN_NAME",
+      "name_resolved": "Spider Kitten",
+      "custom_cat_data": "SpiderCat",
+      "scale": ".8",
+      "tooltip": "ENEMY_SPIDERKITTEN_DESC",
+      "tooltip_resolved": "Will Web units, then drain their HP.\nImmune to Webs."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "bug"
+      ],
+      "type": "cat",
+      "health": "20",
+      "initial_health": "10",
+      "dispersed_bonus_turns": "1",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "3",
+      "initiative": "16"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "WebShot",
+      "spells": [
+        "SmallSpiderMelee"
+      ]
+    },
+    "passives": {
+      "StatusImmunity": "Webbed"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance",
+      "fallback_advances_pattern": "false",
+      "stun_advances_pattern": "false",
+      "pattern": {
+        "do_priority": [
+          "SmallSpiderMelee,",
+          "WebShot"
+        ]
+      }
+    }
+  },
+  "TallSpiderCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SPIDERCAT_NAME",
+      "name_resolved": "Spider Cat",
+      "custom_cat_data": "TallSpiderCat",
+      "tooltip": "ENEMY_SPIDERCAT_DESC",
+      "tooltip_resolved": "Its melee attack has Lifesteal.\nWill move away after it attacks.\nImmune to tile effects.",
+      "uifloaters_offset": "1.5"
+    },
+    "stats": {
+      "strength": "7",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "bug"
+      ],
+      "type": "cat",
+      "health": "28",
+      "initial_health": "14",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "6"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TallSpiderMelee",
+      "spells": []
+    },
+    "passives": {
+      "YOffset": ".35",
+      "IgnoreTiles": "1",
+      "StatusImmunity": "Webbed"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Toadie": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TOADIE_NAME",
+      "name_resolved": "Toadie",
+      "custom_cat_data": "Toadie",
+      "tooltip": "ENEMY_TOADIE_DESC",
+      "tooltip_resolved": "Disguises itself as inanimate objects.\nWhile disguised, ambushes enemies that walk past it, causing Fear."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "14",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "4"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "Disguise",
+        "MoveTwoCantrip",
+        "FearMelee"
+      ]
+    },
+    "passives": {
+      "DisguisedTrapper": "FearMelee"
+    },
+    "ai": {
+      "virtual_abilities": {
+        "MoveAway": {
+          "ability": "MoveTwoCantrip",
+          "move_weights": "keep_distance_always_move"
+        }
+      },
+      "brain": "PatternBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance",
+      "pattern": {
+        "do_all": [
+          "BasicMelee",
+          "MoveAway",
+          "Disguise"
+        ]
+      }
+    }
+  },
+  "Toadie_Hidden": {
+    "variant_of": "Toadie",
+    "passives": {
+      "Disguised": "1",
+      "SkipFirstRounds": {
+        "stacks": "2",
+        "pop_chance": "50%"
+      }
+    }
+  },
+  "ZombieCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ZOMBIECAT_NAME",
+      "name_resolved": "Zombie Cat",
+      "custom_cat_data": "ZombieCat",
+      "spawnin_animation": "digUp",
+      "alt_animations": [
+        [
+          "idle",
+          "zombieIdle"
+        ],
+        [
+          "walk",
+          "zombieWalk"
+        ]
+      ],
+      "move_speed_sync_frames": "40",
+      "tooltip": "ENEMY_ZOMBIECAT_DESC",
+      "tooltip_resolved": "Eats corpses and becomes stronger!\nTaking damage weakens it and spawns poison food.\nUndead."
+    },
+    "stats": {
+      "strength": "7",
+      "dexterity": "5",
+      "constitution": "9",
+      "intelligence": "1",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "zombie"
+      ],
+      "type": "cat",
+      "health": "20",
+      "dispersed_bonus_turns": "1",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "ZombieFeast"
+      ]
+    },
+    "passives": {
+      "Undead": "1",
+      "SpawnThingOnDamage": {
+        "object": "PoisonFood",
+        "consider_all_layers": "true"
+      },
+      "StatusOnTookDamage": {
+        "StrengthUp": "-1",
+        "ConstitutionUp": "-1"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "ZombieFeast,",
+          "attack"
+        ]
+      },
+      "decision_weights": "zombie",
+      "move_weights": "zombie"
+    }
+  },
+  "SkeletonCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SKELETONCAT_NAME",
+      "name_resolved": "Skeleton Cat",
+      "custom_cat_data": "SkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "skeletonIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SKELETONCAT_DESC",
+      "tooltip_resolved": "Comes back from the dead if its body isn't destroyed!\nUndead."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_SkeletonCatWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "9",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "1",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "3",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "NoHealthOnlyShield": "1",
+      "Undead": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "TransformOnDeathImmediately": {
+        "obj": "SkeletonCatCorpse",
+        "first_turn": "keep_turns"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "SkeletonCatCorpse": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SKELETONCAT_NAME",
+      "name_resolved": "Skeleton Cat",
+      "custom_cat_data": "SkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "dead"
+        ],
+        [
+          "weak",
+          "dead"
+        ],
+        [
+          "hit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "deadhit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "stunned",
+          "dead"
+        ],
+        [
+          "dying",
+          "dead"
+        ],
+        [
+          "dead",
+          "skeletonDead"
+        ]
+      ],
+      "spawnin_animation": "skeletonDie",
+      "tooltip": "ENEMY_SKELETONCATBODY_DESC",
+      "tooltip_resolved": "Will come back from the dead next turn!\nUndead."
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "12",
+      "faction": "enemies",
+      "initiative": "10",
+      "corpse_health": "0",
+      "exclude_from_hallucinate": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "NoHealthOnlyShield": "1",
+      "Undead": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "CountAsCorpse": "1",
+      "TransformInXTurns": {
+        "stacks": "1",
+        "object": "SkeletonCatRevived",
+        "initiative": "keep_turns_end_turn"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "SkeletonCatRevived": {
+    "variant_of": "SkeletonCat",
+    "graphics": {
+      "spawnin_animation": "skeletonRevive"
+    },
+    "properties": {
+      "exclude_from_hallucinate": "true"
+    }
+  },
+  "TallSkeletonCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TALLSKELETONCAT_NAME",
+      "name_resolved": "Tall Skeleton Cat",
+      "custom_cat_data": "TallSkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "skeletonBigIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_TALLSKELETONCAT_DESC",
+      "tooltip_resolved": "Its ranged attack can also give [img:shield] to its allies.\nWill come back from the dead if its body isn't destroyed!\nUndead.",
+      "uifloaters_offset": "1.5"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "15",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "3",
+      "corpse_health": "0",
+      "act_points": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BadBone",
+      "spells": [
+        "BadBone_copy",
+        "GoodBone",
+        "GoodBone_copy"
+      ]
+    },
+    "passives": {
+      "YOffset": ".35",
+      "Undead": "1",
+      "PrioritizeHitDifferentTargets": "1",
+      "NoHealthOnlyShield": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "TransformOnDeathImmediately": {
+        "obj": "TallSkeletonCatCorpse",
+        "first_turn": "keep_turns"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority_alternating": [
+          "*BadBone,",
+          "*GoodBone,",
+          "BadBone_copy,",
+          "GoodBone_copy,",
+          "BadBone,",
+          "GoodBone"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TallSkeletonCatCorpse": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TALLSKELETONCAT_NAME",
+      "name_resolved": "Tall Skeleton Cat",
+      "custom_cat_data": "TallSkeletonCat",
+      "alt_animations": [
+        [
+          "idle",
+          "dead"
+        ],
+        [
+          "weak",
+          "dead"
+        ],
+        [
+          "hit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "deadhit",
+          "skeletonCorpseHit"
+        ],
+        [
+          "stunned",
+          "dead"
+        ],
+        [
+          "dying",
+          "dead"
+        ],
+        [
+          "dead",
+          "skeletonDead"
+        ]
+      ],
+      "spawnin_animation": "skeletonDie",
+      "tooltip": "ENEMY_TALLSKELETONCATBODY_DESC",
+      "tooltip_resolved": "Will come back from the dead next turn!\nUndead."
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton"
+      ],
+      "type": "cat",
+      "health": "0",
+      "shield": "1",
+      "faction": "enemies",
+      "initiative": "10",
+      "corpse_health": "0",
+      "exclude_from_hallucinate": "true"
+    },
+    "abilities": {
+      "move": "None",
+      "attack": "None"
+    },
+    "passives": {
+      "NoHealthOnlyShield": "1",
+      "Undead": "1",
+      "StatusImmunity": [
+        "Poison,",
+        "Bleed"
+      ],
+      "CountAsCorpse": "1",
+      "TransformInXTurns": {
+        "stacks": "1",
+        "object": "TallSkeletonCatRevived",
+        "initiative": "keep_turns_end_turn"
+      }
+    },
+    "ai": {
+      "brain": "NoBrain"
+    }
+  },
+  "TallSkeletonCatRevived": {
+    "variant_of": "TallSkeletonCat",
+    "graphics": {
+      "spawnin_animation": "revive"
+    },
+    "properties": {
+      "exclude_from_hallucinate": "true"
+    }
+  },
+  "WolfCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_WERECAT_NAME",
+      "name_resolved": "Werecat",
+      "custom_cat_data": "WolfCat",
+      "scale": "1",
+      "spawnin_animation": "howl",
+      "alt_animations": [
+        [
+          "idle",
+          "werecatIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_WERECAT_DESC",
+      "tooltip_resolved": "Can use both its dash attack and its leap attack in the same turn."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "6",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "dog"
+      ],
+      "type": "cat",
+      "health": "16",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "act_points": "2",
+      "move_points": "2",
+      "movement": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "WolfDash",
+      "spells": [
+        "WolfLeap"
+      ]
+    },
+    "passives": {
+      "PrioritizeHitDifferentTargets": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "WolfDash",
+          "WolfLeap"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "GolemCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_GOLEM_NAME",
+      "name_resolved": "Golem",
+      "custom_cat_data": "GolemCat",
+      "scale": "1.1",
+      "tooltip": "ENEMY_GOLEM_DESC",
+      "tooltip_resolved": "Invulnerable. Dies when all of its allies are dead."
+    },
+    "stats": {
+      "strength": "15",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "golem"
+      ],
+      "type": "cat",
+      "health": "15",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "2",
+      "kill_required": "false"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "BlockAllDamage": "1",
+      "DieWhenOnlyGolemsLeft": "1",
+      "AddMeleeKnockback": "2"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "ScorpionCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SCORPIONCAT_NAME",
+      "name_resolved": "Scorpion Cat",
+      "custom_cat_data": "ScorpionCat",
+      "tooltip": "ENEMY_SCORPIONCAT_DESC",
+      "tooltip_resolved": "Its melee attacks can Poison or Immobilize."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_ScorpionCatWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "3",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "bug"
+      ],
+      "type": "cat",
+      "health": "5",
+      "shield": "5",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "movement": "2",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ScorpionSting",
+      "spells": [
+        "ScorpionHold"
+      ]
+    },
+    "passives": {
+      "Brace": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "bonusturn_pattern": {
+        "do": "ScorpionHold"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Mangy2": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MUMMIFIEDMANGY_NAME",
+      "name_resolved": "Mummified Mangy",
+      "custom_cat_data": "Mangy2",
+      "tooltip": "ENEMY_MUMMIFIEDMANGY_DESC",
+      "tooltip_resolved": "Its ranged attack may inflict Poison.\nSpawns Maggots when damaged.\nBecomes a Carcass when killed."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "zombie"
+      ],
+      "type": "cat",
+      "health": "7",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PoisonShot",
+      "spells": []
+    },
+    "passives": {
+      "Undead": "1",
+      "SpawnThingOnDamage": {
+        "object": "Maggot",
+        "good": "false",
+        "spawn_on_death_hit": "false"
+      },
+      "TransformOnDeath": "Carcus"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "GunCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_BOUNTYHUNTER_NAME",
+      "name_resolved": "Bounty Hunter",
+      "custom_cat_data": "GunCat",
+      "tooltip": "ENEMY_BOUNTYHUNTER_DESC",
+      "tooltip_resolved": "Can shoot anywhere within its line of sight. Prefers long shots."
+    },
+    "equipment": {
+      "weapon": "GunslingerPistol",
+      "neck": "Poncho",
+      "face": "WesternHat"
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "2",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "9",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "movement": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "GuncatShoot",
+      "spells": []
+    },
+    "passives": {
+      "WeaponsDontLoseDurability": "1",
+      "PrioritizeFarAwayTargets": "10"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance_always_move",
+      "consider_spells": "false"
+    }
+  },
+  "HornyCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_HORNYCAT_NAME",
+      "name_resolved": "Horny Cat",
+      "custom_cat_data": "HornyCat",
+      "alt_animations": [
+        [
+          "idle",
+          "horntoadIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_HORNYCAT_DESC",
+      "tooltip_resolved": "Its ranged attack inflicts Blind."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "3",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "animal"
+      ],
+      "type": "cat",
+      "health": "7",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "HornyToadShot",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Infested": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_INFESTEDKITTEN_NAME",
+      "name_resolved": "Infested Kitten",
+      "custom_cat_data": "Infested",
+      "scale": ".8",
+      "shadow_size": ".8",
+      "tooltip": "ENEMY_INFESTEDKITTEN_DESC",
+      "tooltip_resolved": "Its melee attack inflicts Possessed.\nMoves away when damaged."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "7",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_far_always_move"
+      },
+      "AddStatusToBasicAttack": {
+        "Possessed": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "RockHead": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ROCKHEAD_NAME",
+      "name_resolved": "Rock Head",
+      "custom_cat_data": "RockHead",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "tooltip": "ENEMY_ROCKHEAD_DESC",
+      "tooltip_resolved": "Has a spin attack and a dash attack with Trample.\nBlind."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "rock"
+      ],
+      "type": "cat",
+      "health": "1",
+      "shield": "10",
+      "base_mana_regen": "999",
+      "dispersed_bonus_turns": "1",
+      "faction": "enemies",
+      "corpse_health": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CatSpin",
+      "spells": [
+        "SmallTrampleDash"
+      ]
+    },
+    "passives": {
+      "SpawnThingOnDeath": "Boulder",
+      "TransformOnDeathImmediately": "NoHead",
+      "FaceShield": "0",
+      "RandomizeAIWeightsEachTurn": [
+        {
+          "decision_weights": "blind",
+          "move_weights": "chubs_and_nubs_blind"
+        },
+        {
+          "decision_weights": "blind",
+          "move_weights": "stay_close_always_move"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "blind",
+      "move_weights": "chubs_and_nubs_blind",
+      "auto_orient": "false",
+      "pattern": {
+        "do": "SmallTrampleDash"
+      }
+    }
+  },
+  "NoHead": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_HEADLESS_NAME",
+      "name_resolved": "Headless",
+      "custom_cat_data": "NoHead",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "tooltip": "ENEMY_HEADLESS_DESC",
+      "tooltip_resolved": "Has a spin attack.\nShoots a Poison shot when damaged.\nBlind."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "7",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CatSpin",
+      "spells": [
+        "CatGoop"
+      ]
+    },
+    "passives": {
+      "ImmediateAbilityReaction": "CatGoop",
+      "RandomizeAIWeightsEachTurn": [
+        {
+          "decision_weights": "blind",
+          "move_weights": "chubs_and_nubs_blind"
+        },
+        {
+          "decision_weights": "blind",
+          "move_weights": "stay_close_always_move"
+        }
+      ]
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "decision_weights": "blind",
+      "move_weights": "chubs_and_nubs_blind",
+      "auto_orient": "false",
+      "pattern": {
+        "do": "attack"
+      }
+    }
+  },
+  "AtomicKitten": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ATOMICKITTEN_NAME",
+      "name_resolved": "Atomic Kitten",
+      "custom_cat_data": "AtomicKitten",
+      "alt_animations": [
+        [
+          "idle",
+          "atomicIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_ATOMICKITTEN_DESC",
+      "tooltip_resolved": "Emits a burst of radiation at the start of its turn.\nTeleports away when damaged.\nExplodes when killed."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "equipment": {
+      "face": "AtomicMark"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "1",
+      "divine_shield": "2",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "Teleport",
+      "attack": "AtomicBurst",
+      "spells": []
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "chaotic"
+      },
+      "DeathRattle": "BoomerCatExplode",
+      "CharacterLightSource": {
+        "color": [
+          ".3,",
+          ".7,",
+          "1"
+        ],
+        "size": "2"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "*AtomicBurst"
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "stay_close"
+    }
+  },
+  "RoboTom": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ROBOCAT_NAME",
+      "name_resolved": "Robo-Cat",
+      "custom_cat_data": "RoboTom",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "alt_animations": [
+        [
+          "walk",
+          "robotWalk"
+        ]
+      ],
+      "tooltip": "ENEMY_ROBOCAT_DESC",
+      "tooltip_resolved": "Its wide melee attacks have Knockback 10."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "robot"
+      ],
+      "type": "cat",
+      "health": "1",
+      "shield": "11",
+      "dispersed_bonus_turns": "1",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "WideSwipe",
+      "spells": []
+    },
+    "passives": {
+      "Brace": "3",
+      "AddMeleeKnockback": "10",
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CatCultist": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CATCULTIST_NAME",
+      "name_resolved": "Cat Cultist",
+      "custom_cat_data": "CatCultist",
+      "scale": "1",
+      "shadow_size": "1",
+      "alt_animations": [
+        [
+          "idle",
+          "cultistIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_CATCULTIST_DESC",
+      "tooltip_resolved": "Melee attacker. Increases the amount of times it can attack each turn whenever it takes damage."
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "11",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "act_points": "0"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "CultistCut"
+      ]
+    },
+    "passives": {
+      "StatusOnTookDamageFromAbility": {
+        "ExtraBasicAttacks_Status": "1"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*CultistCut,",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "DemonHooker": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_DEMONHOOKER_NAME",
+      "name_resolved": "Chain Demon",
+      "custom_cat_data": "DemonHooker",
+      "scale": "1.2",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_DEMONHOOKER_DESC",
+      "tooltip_resolved": "Will hook and pull units toward itself.\nImmune to fire."
+    },
+    "equipment": {
+      "weapon": "ButcherHook"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "demon"
+      ],
+      "type": "cat",
+      "health": "13",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "DH_Attack",
+      "spells": [
+        "DH_MeatHook"
+      ]
+    },
+    "passives": {
+      "ElementImmune": "Fire"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "DH_MeatHook",
+          "*attack",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "prefer_lava_always_move"
+    }
+  },
+  "Belcher": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_BELCHER_NAME",
+      "name_resolved": "Belcher",
+      "custom_cat_data": "Belcher",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_BELCHER_DESC",
+      "tooltip_resolved": "Its ranged attack inflicts Burn and creates a lava tile.\nImmune to fire."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "demon"
+      ],
+      "type": "cat",
+      "health": "12",
+      "movement": "2",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BelcherLavashot",
+      "spells": []
+    },
+    "passives": {
+      "ElementImmune": "Fire"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "TumorCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TUMORCAT_NAME",
+      "name_resolved": "Tumor Cat",
+      "custom_cat_data": "CoreFreak",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_TUMORCAT_DESC",
+      "tooltip_resolved": "Will dash forward 10 tiles with Trample when damaged.\nBlind."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "tumor"
+      ],
+      "type": "cat",
+      "health": "11",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "TC_Attack",
+      "spells": [
+        "TC_DashReaction"
+      ]
+    },
+    "passives": {
+      "AbilityReaction": "TC_DashReaction",
+      "Brace": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "*attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "semi_blind"
+    }
+  },
+  "Rover": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ROVER_NAME",
+      "name_resolved": "Rover",
+      "custom_cat_data": "Rover",
+      "scale": "1",
+      "shadow_size": "1",
+      "alt_animations": [
+        [
+          "walk",
+          "driveWalk"
+        ]
+      ],
+      "tooltip": "ENEMY_ROVER_DESC",
+      "tooltip_resolved": "Has a chaining dash attack."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "robot",
+        "cat"
+      ],
+      "type": "cat",
+      "health": "6",
+      "shield": "8",
+      "movement": "2",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "RoverDash",
+      "spells": []
+    },
+    "passives": {
+      "Brace": "2"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Astro": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ASTRONAUT_NAME",
+      "name_resolved": "Astronaut",
+      "custom_cat_data": "Astro",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_ASTRONAUT_DESC",
+      "tooltip_resolved": "Its melee attack has a high chance to inflict Stun."
+    },
+    "equipment": {
+      "weapon": "AstroTaser"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatSwishJump",
+          "SE_CE_Astro_Jump"
+        ]
+      ]
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "8",
+      "shield": "5",
+      "movement": "1",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "weapon"
+      },
+      "fallback": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Drcat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_DRCAT_NAME",
+      "name_resolved": "Dr. Cat",
+      "custom_cat_data": "Drcat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_DRCAT_DESC",
+      "tooltip_resolved": "Will randomly cast one of 6 spells."
+    },
+    "equipment": {
+      "weapon": "OddRemote_Enemy"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "10",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "weapon"
+      },
+      "fallback": {
+        "do": "attack"
+      },
+      "decision_weights": "always_cast",
+      "move_weights": "keep_distance_always_move"
+    }
+  },
+  "Mangy3": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_INFESTED_NAME",
+      "name_resolved": "Infested",
+      "custom_cat_data": "Mangy3",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_INFESTED_DESC",
+      "tooltip_resolved": "Its ranged attack has a chance to break equipment and attach a parasite.\nSpawns a Gamete when killed."
+    },
+    "stats": {
+      "strength": "4",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "10",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ParasiteShot",
+      "spells": []
+    },
+    "passives": {
+      "SpawnThingOnDeath": "Gamete"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Needlecat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SPUNCAT_NAME",
+      "name_resolved": "Spun Cat",
+      "custom_cat_data": "Needlecat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_SPUNCAT_DESC",
+      "tooltip_resolved": "Has a random class basic attack that inflicts a randomly assigned debuff."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "10",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "FormChanger": {
+        "Colorless": {},
+        "Fighter": {},
+        "Hunter": {},
+        "Mage": {},
+        "Medic": {},
+        "Tank": {},
+        "Thief": {},
+        "Butcher": {},
+        "Druid": {},
+        "Necromancer": {},
+        "Psychic": {},
+        "Monk": {},
+        "Tinkerer": {}
+      },
+      "RandomPassivePool": {
+        "AddStatusToBasicAttack": {
+          "Weakness": "1"
+        }
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Stacy2p0": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_STACYNO_NAME",
+      "name_resolved": "Stacy #{stacy_number}",
+      "custom_cat_data": "Stacy2p0",
+      "scale": ".85",
+      "shadow_size": ".85",
+      "tooltip": "ENEMY_STACYNO_DESC",
+      "tooltip_resolved": "Its melee attack inflicts Charm.\nCan heal and grant All Stats Up to its allies."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "11",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "StacyCharm",
+      "spells": [
+        "StacyHeal"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "StacyCharm",
+          "StacyHeal"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Raptor": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_RAPTOR_NAME",
+      "name_resolved": "Raptor",
+      "custom_cat_data": "Raptor",
+      "scale": "1",
+      "uifloaters_offset": "1.5",
+      "alt_animations": [
+        [
+          "idle",
+          "raptorIdle"
+        ],
+        [
+          "walk",
+          "raptorWalk"
+        ]
+      ],
+      "tooltip": "ENEMY_RAPTOR_DESC",
+      "tooltip_resolved": "Its melee attack hits a random amount of times.\nPack hunter."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "dinosaur"
+      ],
+      "type": "cat",
+      "health": "12",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "FurySwipes_Enemy",
+      "spells": []
+    },
+    "passives": {
+      "YOffset": ".35",
+      "PackHunting": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "move",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "towards_aggro_stay_close"
+    }
+  },
+  "RaptorBaby": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_RAPTORKITTEN_NAME",
+      "name_resolved": "Raptor Kitten",
+      "tooltip": "ENEMY_RAPTORKITTEN_DESC",
+      "tooltip_resolved": "Its melee attack inflicts bleed. Moves far away after attacking.",
+      "custom_cat_data": "RaptorBaby",
+      "scale": ".85",
+      "shadow_size": ".85"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "8",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "dinosaur"
+      ],
+      "type": "cat",
+      "health": "6",
+      "faction": "enemies",
+      "movement": "3",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "RaptorBabyBite",
+      "spells": [
+        "DoubleDistanceMove"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "virtual_abilities": {
+        "MoveAway": {
+          "ability": "DoubleDistanceMove",
+          "move_weights": "stay_far"
+        },
+        "MoveTowards": {
+          "ability": "move",
+          "move_for_ability": "attack",
+          "move_weights": "stay_close"
+        }
+      },
+      "pattern": {
+        "do_all": [
+          "MoveTowards",
+          "attack",
+          "MoveAway"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Ankylosaurus": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ANKYLOSAURUS_NAME",
+      "name_resolved": "Ankylosaurus",
+      "tooltip": "ENEMY_ANKYLOSAURUS_DESC",
+      "tooltip_resolved": "Has a wide melee attack with Knockback 10 and a chance to inflict Stun.\nDoes a spin attack when it takes damage.",
+      "custom_cat_data": "Ankylosaurus",
+      "scale": "1.1",
+      "shadow_size": "1.1"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "dinosaur"
+      ],
+      "type": "cat",
+      "health": "16",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "AnkyloSwipe",
+      "spells": [
+        "AnkyloSpin"
+      ]
+    },
+    "passives": {
+      "Brace": "2",
+      "Thorns": "2",
+      "AbilityReaction": "AnkyloSpin"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "attack",
+          "move"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Maelestes": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MAELESTES_NAME",
+      "name_resolved": "Maelestes",
+      "custom_cat_data": "Maelestes",
+      "scale": ".7",
+      "shadow_size": ".7",
+      "tooltip": "ENEMY_MAELESTES_DESC",
+      "tooltip_resolved": "Steals equipment from cats.\nCollects pickups."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "10",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "rat"
+      ],
+      "type": "cat",
+      "health": "6",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "can_collect_coins": "true",
+      "can_eat_food": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": [
+        "MaelestesPickup",
+        "MaelestesSteal"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "MaelestesPickup",
+          "MaelestesSteal",
+          "weapon",
+          "trinket",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "Parasaurolophus": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_PARASAUROLOPHUS_NAME",
+      "name_resolved": "Parasaurolophus",
+      "custom_cat_data": "Parasaurolophus",
+      "scale": "1.1",
+      "uifloaters_offset": "1.5",
+      "tooltip": "ENEMY_PARASAUROLOPHUS_DESC",
+      "tooltip_resolved": "Its attacks always crit against Wet units.\nTries to toss units into water."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "dinosaur"
+      ],
+      "type": "cat",
+      "health": "18",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "10",
+      "dispersed_bonus_turns": "1",
+      "movement": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "Parasaurolophus_Push",
+      "spells": [
+        "Parasaurolophus_Throw"
+      ]
+    },
+    "passives": {
+      "YOffset": ".35",
+      "WaterWalk": "1",
+      "FreePathfindElement": "Water"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "*Parasaurolophus_Push",
+          "Parasaurolophus_Push",
+          "Parasaurolophus_Throw"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "Yeticat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_YETICAT_NAME",
+      "name_resolved": "Yeti Cat",
+      "custom_cat_data": "Yeticat",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "tooltip": "ENEMY_YETICAT_DESC",
+      "tooltip_resolved": "Its ranged ice attack inflicts Slow and has a chance to inflict Freeze.\nCounter attacks melee attackers."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "humanoid"
+      ],
+      "type": "cat",
+      "health": "15",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "movement": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "YeticatSnowball",
+      "spells": []
+    },
+    "passives": {
+      "CounterAttack": "YeticatSnowball_Counter"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "SabertoothCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SABERTOOTHCAT_NAME",
+      "name_resolved": "Sabertooth Cat",
+      "custom_cat_data": "SabertoothCat",
+      "scale": "1",
+      "alt_animations": [
+        [
+          "idle",
+          "werecatIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SABERTOOTHCAT_DESC",
+      "tooltip_resolved": "Pounces on units.\nDoes a double-hit melee attack that inflicts bleed at the start of its turn if any enemies are adjacent.\nHates Cavemen!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "17",
+      "base_mana_regen": "999",
+      "faction": "sabertooths"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SabertoothCatPounce",
+      "spells": [
+        "SabertoothCatTransformSwipe",
+        "SabertoothCatDoubleSwipe"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*SabertoothCatDoubleSwipe",
+          "/*SabertoothCatTransformSwipe*/",
+          "attack",
+          "SabertoothCatTransformSwipe",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "SabertoothCub": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SABERTOOTHKITTEN_NAME",
+      "name_resolved": "Sabertooth Kitten",
+      "custom_cat_data": "SabertoothCub",
+      "scale": ".8",
+      "alt_animations": [
+        [
+          "idle",
+          "werecatIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SABERTOOTHKITTEN_DESC",
+      "tooltip_resolved": "Has a multi hit melee attack that inflicts Bleed.\nCan heal its allies.\nHates Cavemen!"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "10",
+      "dispersed_bonus_turns": "1",
+      "base_mana_regen": "999",
+      "faction": "sabertooths"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SabertoothCubDoubleSwipe",
+      "spells": [
+        "SabertoothCatTransformSwipe",
+        "SabertoothCubLick"
+      ]
+    },
+    "passives": {
+      "MoveWhenDamaged": {
+        "weights": "stay_far_always_move"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "/*SabertoothCatTransformSwipe*/",
+          "SabertoothCubLick",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_near_allies"
+    }
+  },
+  "MammothBaby": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_MAMMOTHKITTEN_NAME",
+      "name_resolved": "Mammoth Kitten",
+      "custom_cat_data": "MammothBaby",
+      "scale": "1.1",
+      "shadow_size": "1.1",
+      "tooltip": "ENEMY_MAMMOTHKITTEN_DESC",
+      "tooltip_resolved": "Its melee attack knocks units into the air.\nBruises and knocks back adjacent units at the start of its turn.\nTrample."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "animal"
+      ],
+      "type": "cat",
+      "health": "25",
+      "base_mana_regen": "999",
+      "faction": "mammoths",
+      "corpse_health": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "MammothBabyThrow",
+      "spells": [
+        "MammothBabyStomp"
+      ]
+    },
+    "passives": {
+      "SpawnOnDeath": "BiggestFood",
+      "Trample": "3"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "*MammothBabyStomp",
+          "MammothBabyThrow"
+        ]
+      },
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close"
+    }
+  },
+  "Skinned": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SKINNED_NAME",
+      "name_resolved": "Skinned",
+      "custom_cat_data": "Skinned",
+      "scale": "1",
+      "shadow_size": "1",
+      "alt_animations": [
+        [
+          "idle",
+          "skinnedIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_SKINNED_DESC",
+      "tooltip_resolved": "Does 3 dash attacks in a row with Knockback."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "30",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SkinnedTripleDash",
+      "spells": []
+    },
+    "passives": {
+      "StatusOnTookDamageFromAbility": {
+        "Bleed": "1"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "StemCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_STEMCAT_NAME",
+      "name_resolved": "Stem Cat",
+      "custom_cat_data": "StemCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_STEMCAT_DESC",
+      "tooltip_resolved": "Melee attacker.\nSpawns a Clot when it takes damage."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "13",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "movement": "3"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "BasicMelee",
+      "spells": []
+    },
+    "passives": {
+      "HealthRegenUp": "2",
+      "SpawnThingOnDamage": {
+        "object": "Clot",
+        "good": "false",
+        "spawn_on_death_hit": "false"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "StemCat_HalfHealth": {
+    "variant_of": "StemCat",
+    "properties": {
+      "initial_health": "4"
+    }
+  },
+  "FutureBot": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_KATZEBOT_NAME",
+      "name_resolved": "Katzebot",
+      "custom_cat_data": "FutureBot",
+      "scale": ".9",
+      "shadow_size": ".9",
+      "tooltip": "ENEMY_KATZEBOT_DESC",
+      "tooltip_resolved": "Melee attacker. Focuses its lowest health enemy. Will Suplex others out of the way."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_FuturebotWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "6",
+      "shield": "12",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "FutureBotPunch",
+      "spells": [
+        "FutureBotPunchAggro",
+        "FutureBotSuplex"
+      ]
+    },
+    "passives": {
+      "Brace": "2",
+      "AggroTargetIsLowestHealthEnemyTillItDies": "1",
+      "Robot": "1"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_all": [
+          "FutureBotPunchAggro",
+          "*FutureBotSuplex",
+          "move",
+          "FutureBotSuplex"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "towards_aggro_stay_close"
+    }
+  },
+  "FatCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_FATCAT_NAME",
+      "name_resolved": "Übercat",
+      "custom_cat_data": "FatCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_FATCAT_DESC",
+      "tooltip_resolved": "Has a leap attack that does knockback in an area.\nReflects Projectiles. Uncapped HP.",
+      "move_speed_multiplier": ".66"
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "blob"
+      ],
+      "type": "cat",
+      "health": "18",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "can_eat_food": "true",
+      "movement": "2"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "FatCatBellyFlop",
+      "spells": []
+    },
+    "passives": {
+      "YOffset": "-.18",
+      "Trample": "3",
+      "ReflectProjectiles": {
+        "self_damage": "2"
+      },
+      "UncappedHP": "1",
+      "TagGreed": "food",
+      "MeleeRevengeDamage": {
+        "type": "status",
+        "damage": "0",
+        "knockback": "2"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CancerCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CANCERCAT_NAME",
+      "name_resolved": "Cancer Cat",
+      "custom_cat_data": "CancerCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_CANCERCAT_DESC",
+      "tooltip_resolved": "Its melee attack causes cats it hits to lose 1 [img:con] permanently and has a chance to give them cancer.\nExplodes after 3 turns."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "skeleton",
+        "tumor"
+      ],
+      "type": "cat",
+      "health": "8",
+      "shield": "10",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CancerMelee",
+      "spells": [
+        "CancerExplode"
+      ]
+    },
+    "passives": {
+      "Brace": "2",
+      "StatusAfterXTurns": {
+        "stacks": "3",
+        "ForceUseAbility": "CancerExplode"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "CollectiveCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_COLLECTIVE_NAME",
+      "name_resolved": "The Collective",
+      "custom_cat_data": "CollectiveCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_COLLECTIVE_DESC",
+      "tooltip_resolved": "Has a spin attack.\nCounterattacks when hit.\nMimics the attacks and counters of all other cats in The Collective."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "hidden_tag": "collective",
+      "type": "cat",
+      "health": "19",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "CollectiveSpin",
+      "spells": [
+        "CollectiveCounter"
+      ]
+    },
+    "passives": {
+      "CounterAttack": "CollectiveCounter"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "ShadeCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_SHADECAT_NAME",
+      "name_resolved": "Shade Cat",
+      "custom_cat_data": "ShadeCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_SHADECAT_DESC",
+      "tooltip_resolved": "Melee attacker. Teleports behind a random one of its enemies when damaged.\nIts backstabs cause Fear and always crit."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "demon"
+      ],
+      "type": "cat",
+      "health": "20",
+      "faction": "enemies",
+      "base_mana_regen": "999"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SCAttack",
+      "spells": [
+        "SCSneakUp"
+      ]
+    },
+    "passives": {
+      "AbilityReaction": "SCSneakUp"
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do": "attack"
+      },
+      "decision_weights": "default",
+      "move_weights": "keep_distance"
+    }
+  },
+  "PoopCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_POOPCAT_NAME",
+      "name_resolved": "Poop Cat",
+      "custom_cat_data": "PoopCat",
+      "scale": "1.2",
+      "shadow_size": "1.2",
+      "tooltip": "ENEMY_POOPCAT_DESC",
+      "tooltip_resolved": "Nasty."
+    },
+    "sound": {
+      "alt_sounds": [
+        [
+          "SE_CatWalk",
+          "SE_PoopCatWalk"
+        ]
+      ]
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "1",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "poop"
+      ],
+      "type": "cat",
+      "health": "25",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "dispersed_bonus_turns": "1"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "PoopCatMelee",
+      "spells": []
+    },
+    "passives": {
+      "PoisonThorns": "3"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "JackCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_JACKCAT_NAME",
+      "name_resolved": "Jack",
+      "custom_cat_data": "JackCat",
+      "scale": "1",
+      "shadow_size": "1",
+      "tooltip": "ENEMY_JACKCAT_DESC",
+      "tooltip_resolved": "Protects his allies."
+    },
+    "stats": {
+      "strength": "3",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "humanoid"
+      ],
+      "type": "cat",
+      "health": "16",
+      "base_mana_regen": "999",
+      "faction": "enemies"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "JackAttack",
+      "spells": [
+        "JackShield"
+      ]
+    },
+    "passives": {},
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "JackShield",
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_near_allies"
+    }
+  },
+  "ChaosStacy": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_CHAOSSTACY_NAME",
+      "name_resolved": "Chaos Stacy",
+      "custom_cat_data": "StacyX",
+      "tooltip": "ENEMY_CHAOSSTACY_DESC",
+      "tooltip_resolved": "Its melee attack inflicts Scrambled.\nReflects projectiles and knocks back units that contact."
+    },
+    "stats": {
+      "strength": "5",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "3",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": "cat",
+      "type": "cat",
+      "health": "26",
+      "faction": "enemies",
+      "base_mana_regen": "999",
+      "dispersed_bonus_turns": "1",
+      "movement": "4"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "ChaosStacyAttack",
+      "spells": []
+    },
+    "passives": {
+      "ReflectProjectiles": "1",
+      "MeleeRevengeDamage": {
+        "type": "status",
+        "damage": "0",
+        "knockback": "2"
+      }
+    },
+    "ai": {
+      "brain": "PatternBrain",
+      "pattern": {
+        "do_priority": [
+          "attack"
+        ]
+      },
+      "decision_weights": "default",
+      "move_weights": "stay_close"
+    }
+  },
+  "AngelicCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_ANGELICCAT_NAME",
+      "name_resolved": "Angelic Cat",
+      "custom_cat_data": "AngelicCat",
+      "tooltip": "ENEMY_ANGELICCAT_DESC",
+      "tooltip_resolved": "Has a Holy Wind area attack.\nGains 1 [img:divineshield] at the end of its turn.\nImmune to Holy. Gains All Stats Up when struck with Holy Element."
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "/*TrailerCat": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TRAILERCAT1_NAME",
+      "custom_cat_data": "TrailerCat",
+      "tooltip": "ENEMY_TRAILERCAT1_DESC"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "TrailerCat2": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TRAILERCAT2_NAME",
+      "custom_cat_data": "TrailerCat2",
+      "tooltip": "ENEMY_TRAILERCAT2_DESC"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "TrailerCat3": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TRAILERCAT3_NAME",
+      "custom_cat_data": "TrailerCat3",
+      "tooltip": "ENEMY_TRAILERCAT3_DESC"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "TrailerCat4": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TRAILERCAT4_NAME",
+      "custom_cat_data": "TrailerCat4",
+      "tooltip": "ENEMY_TRAILERCAT4_DESC"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "TrailerCat5": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_TRAILERCAT5_NAME",
+      "custom_cat_data": "TrailerCat5",
+      "tooltip": "ENEMY_TRAILERCAT5_DESC"
+    },
+    "stats": {
+      "strength": "6",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "angel"
+      ],
+      "type": "cat",
+      "health": "30",
+      "divine_shield": "1",
+      "faction": "enemies",
+      "movement": "5"
+    },
+    "abilities": {
+      "move": "BasicJump",
+      "attack": "AngelcatWind",
+      "spells": []
+    },
+    "passives": {
+      "Angel": "1",
+      "PrioritizeFarAwayTargets": "1",
+      "StatusEachTurnEnd": {
+        "DivineShield": "1"
+      }
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "default",
+      "move_weights": "stay_close_move_far"
+    }
+  },
+  "LoanShark": {
+    "graphics": {
+      "movieclip": "_CAT",
+      "name": "ENEMY_LOANSHARK_NAME",
+      "name_resolved": "Loan Shark",
+      "custom_cat_data": "LoanShark",
+      "alt_animations": [
+        [
+          "idle",
+          "albinoIdle"
+        ]
+      ],
+      "tooltip": "ENEMY_LOANSHARK_DESC",
+      "tooltip_resolved": "Its bite inflicts Bleed.\nTakes bonus turns for each bleeding unit.\nFocuses on bleeding units."
+    },
+    "equipment": {
+      "head": "LoansharksFedora"
+    },
+    "stats": {
+      "strength": "2",
+      "dexterity": "5",
+      "constitution": "5",
+      "intelligence": "5",
+      "speed": "5",
+      "charisma": "5",
+      "luck": "5"
+    },
+    "properties": {
+      "tag": [
+        "cat",
+        "fish"
+      ],
+      "type": "cat",
+      "health": "37",
+      "shield": "37",
+      "base_mana_regen": "999",
+      "faction": "enemies",
+      "initiative": "100",
+      "movement": "4",
+      "view_bleeding_characters_as_enemies": "true"
+    },
+    "abilities": {
+      "move": "DefaultMove",
+      "attack": "SharkDash",
+      "spells": []
+    },
+    "passives": {
+      "SharkySmellsBlood": "1",
+      "WaterWalk": "1"
+    },
+    "ai": {
+      "brain": "GenericBrain",
+      "decision_weights": "semi_simple",
+      "move_weights": "stay_close_always_move"
+    }
+  }
+}

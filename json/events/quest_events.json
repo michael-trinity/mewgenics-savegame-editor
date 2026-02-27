@@ -1,0 +1,2175 @@
+{
+  "Quest_ThrobbingArtery": {
+    "intro": {
+      "title": "QEVENT_THROBBINGARTERY_NAME",
+      "title_resolved": "Throbbing Artery",
+      "cat_choice": "random",
+      "choose_cat_with_item": "PutridLeech",
+      "subject_clip": "EventSubject",
+      "subject_frame": "throbbing_artery",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_THROBBINGARTERY_QUES1",
+      "prompt_resolved": "A large mound of thick earthy flesh and throbbing arteries protrudes from the ground.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "MeatWorldQuest_Gristle"
+          },
+          "reward": {
+            "prompt": "QEVENT_THROBBINGARTERY_QUES2",
+            "prompt_resolved": "A large lattice of throbbing arteries protrudes from the ground. Where there was once thick flesh binding the veins together, now only shriveled husks remain.",
+            "set_subject": "throbbing_artery_noflesh"
+          }
+        }
+      },
+      "options": {
+        "bite": {
+          "label": "QEVENT_THROBBINGARTERY_BITE_ANSW",
+          "label_resolved": "Bite Artery",
+          "stat": "con",
+          "animation": "choice_con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW1",
+                "prompt_resolved": "{catname} bites into the artery and a dark red liquid gushes out. The cats excitedly lap up the warm blood and they feel the stresses of their long journey wash away...",
+                "set_frame": "2",
+                "party_heal_disorder": "2"
+              },
+              "rare": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW2",
+                "prompt_resolved": "{catname} bites into the throbbing artery and is bathed in a warm liquid. {His} body twists as a strange sensation washes over {catname}, healing {his} injuries but leaving {him} forever mutilated...",
+                "set_frame": "3",
+                "party_heal": "100%",
+                "party_random_mutation": "1",
+                "party_heal_injury": "99",
+                "party_heal_disorder": "2"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW3",
+                "prompt_resolved": "{catname} tears into the tough flesh of the artery, and an inky black fluid sprays out onto {him}! {He} tries to jump back but the thick fluid splashes onto {catname}, deforming {him}!",
+                "set_frame": "4",
+                "random_mutation": {
+                  "tag": "birth_defect"
+                }
+              },
+              "rare": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW3",
+                "prompt_resolved": "{catname} tears into the tough flesh of the artery, and an inky black fluid sprays out onto {him}! {He} tries to jump back but the thick fluid splashes onto {catname}, deforming {him}!",
+                "set_frame": "5",
+                "random_mutation": {
+                  "count": "2",
+                  "tag": "birth_defect"
+                }
+              }
+            }
+          }
+        },
+        "attach_leech": {
+          "label": "QEVENT_THROBBINGARTERY_ATTACH_ANSW",
+          "label_resolved": "Attach Leech",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PutridLeech"
+          },
+          "good": {
+            "set_legacy_token": "mapflag_ThrobbingArteryDone",
+            "complete_item_quest": "PutridLeech",
+            "lose_specific_item": "PutridLeech",
+            "set_frame": "6",
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "MeatWorldQuest_Gristle"
+              },
+              "reward": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW5",
+                "prompt_resolved": "{Catname} places {his} head near the throbbing artery. The putrid leech detaches from {his} head and latches onto the artery. The arteries and veins shrivel up, revealing a hole in the ground!",
+                "trigger_adventure_unlock": "meat_world_unlock"
+              },
+              "else": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW6",
+                "prompt_resolved": "{Catname} places {his} head near the throbbing artery. The putrid leech detaches from {his} head and latches onto the artery. The arteries and veins shrivel up, revealing the fleshy earth beneath. It seems impenetrable."
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_THROBBINGARTERY_REW_IGNORE",
+            "prompt_resolved": "{Catname} ignores the strange veiny mound.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_ThrobbingArtery2": {
+    "intro": {
+      "title": "QEVENT_THROBBINGARTERY_NAME2",
+      "title_resolved": "Throbbing Artery 2",
+      "cat_choice": "random",
+      "choose_cat_with_item": "PutridLeech",
+      "subject_clip": "EventSubject",
+      "subject_frame": "throbbing_artery2",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_THROBBINGARTERY2_QUES",
+      "prompt_resolved": "A large mound of earthy flesh covered in veins protrudes from the ground. A leech is sucking on the arteries, which are shriveled and weakly pulsating.",
+      "options": {
+        "bite": {
+          "label": "QEVENT_THROBBINGARTERY_BITE_ANSW",
+          "label_resolved": "Bite Artery",
+          "stat": "con",
+          "animation": "choice_con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW1",
+                "prompt_resolved": "{catname} bites into the artery and a dark red liquid gushes out. The cats excitedly lap up the warm blood and they feel the stresses of their long journey wash away...",
+                "set_frame": "2",
+                "party_heal_disorder": "2"
+              },
+              "rare": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW2",
+                "prompt_resolved": "{catname} bites into the throbbing artery and is bathed in a warm liquid. {His} body twists as a strange sensation washes over {catname}, healing {his} injuries but leaving {him} forever mutilated...",
+                "set_frame": "3",
+                "party_heal": "100%",
+                "party_random_mutation": "1",
+                "party_heal_injury": "99",
+                "party_heal_disorder": "2"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW3",
+                "prompt_resolved": "{catname} tears into the tough flesh of the artery, and an inky black fluid sprays out onto {him}! {He} tries to jump back but the thick fluid splashes onto {catname}, deforming {him}!",
+                "set_frame": "4",
+                "random_mutation": {
+                  "tag": "birth_defect"
+                }
+              },
+              "rare": {
+                "prompt": "QEVENT_THROBBINGARTERY_REW3",
+                "prompt_resolved": "{catname} tears into the tough flesh of the artery, and an inky black fluid sprays out onto {him}! {He} tries to jump back but the thick fluid splashes onto {catname}, deforming {him}!",
+                "set_frame": "5",
+                "random_mutation": {
+                  "count": "2",
+                  "tag": "birth_defect"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_THROBBINGARTERY2_REW_IGNORE",
+            "prompt_resolved": "{Catname} ignores the mound of earthy flesh.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_WallOfFlesh": {
+    "intro": {
+      "title": "QEVENT_WALLOFFLESH_NAME",
+      "title_resolved": "Wall Of Flesh",
+      "cat_choice": "random",
+      "choose_cat_with_item": "ThrobbingGristle",
+      "subject_clip": "EventSubject",
+      "subject_frame": "wall_of_flesh",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_WALLOFFLESH_QUES1",
+      "prompt_resolved": "A giant wall of flesh and pulsating veins blocks the way before {catname}.\n\n{He} notices there is a strange cube shaped indent in the wall.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "MeatWorldQuest_Leech"
+          },
+          "reward": {
+            "prompt": "QEVENT_WALLOFFLESH_QUES2",
+            "prompt_resolved": "A giant wall of flesh blocks the way before {catname}. Where once there might have been large throbbing veins, they now appear to be shriveled up.\n\n{He} notices there is a strange cube shaped indent in the wall.",
+            "set_subject": "wall_of_flesh_noartery"
+          }
+        }
+      },
+      "options": {
+        "bite": {
+          "label": "QEVENT_WALLOFFLESH_BITE_ANSW",
+          "label_resolved": "Bite Flesh",
+          "stat": "str",
+          "animation": "choice_con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_WALLOFFLESH_REW1",
+                "prompt_resolved": "{catname} tears off a hunk of soft flesh... \n\nIt tastes great!",
+                "set_frame": "2",
+                "gain_food": "20"
+              },
+              "rare": {
+                "prompt": "QEVENT_WALLOFFLESH_REW2",
+                "prompt_resolved": "{catname} tears into the soft flesh of the wall, devouring it. It tastes delicious but {catname} feels a strange twisting sensation as {his} body deforms...",
+                "set_frame": "3",
+                "gain_food": "30",
+                "random_mutation": {
+                  "count": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_WALLOFFLESH_REW3",
+                "prompt_resolved": "{catname} tries to bite into the fleshy wall, but it tastes gross!",
+                "set_frame": "4"
+              },
+              "rare": {
+                "prompt": "QEVENT_WALLOFFLESH_REW4",
+                "prompt_resolved": "{catname} tries to wrestle a hunk of flesh off the wall with {his} teeth, but instead one of {his} items gets pried off by the thick veins!",
+                "set_frame": "5",
+                "lose_item": "equipped"
+              }
+            }
+          }
+        },
+        "place_gristle": {
+          "label": "QEVENT_WALLOFFLESH_PLACE_ANSW",
+          "label_resolved": "Place Gristle",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ThrobbingGristle"
+          },
+          "good": {
+            "set_legacy_token": "mapflag_WallOfFleshDone",
+            "complete_item_quest": "ThrobbingGristle",
+            "lose_specific_item": "ThrobbingGristle",
+            "set_frame": "6",
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "MeatWorldQuest_Leech"
+              },
+              "reward": {
+                "prompt": "QEVENT_WALLOFFLESH_REW5",
+                "prompt_resolved": "{Catname} places the throbbing gristle into the cube shaped hole. The flesh shrivels and retracts, and the shriveled veins crumble away, revealing a path through the wall!",
+                "trigger_adventure_unlock": "meat_world_unlock"
+              },
+              "else": {
+                "prompt": "QEVENT_WALLOFFLESH_REW6",
+                "prompt_resolved": "{Catname} places the throbbing gristle into the cube shaped hole. The flesh shrivels and retracts, but the veins remain, seemingly impenetrable."
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_WALLOFFLESH_REW_IGNORE",
+            "prompt_resolved": "{Catname} ignores the wall of flesh.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_WallOfFlesh2": {
+    "intro": {
+      "title": "QEVENT_WALLOFFLESH_NAME",
+      "title_resolved": "Wall Of Flesh",
+      "cat_choice": "random",
+      "choose_cat_with_item": "ThrobbingGristle",
+      "subject_clip": "EventSubject",
+      "subject_frame": "wall_of_flesh2",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_WALLOFFLESH2_QUES",
+      "prompt_resolved": "There is a wall of veins with a lump of throbbing gristle embedded in it. The flesh that was once there has rotted away.",
+      "options": {
+        "bite": {
+          "label": "QEVENT_WALLOFFLESH_BITE2_ANSW",
+          "label_resolved": "Bite Veins",
+          "stat": "str",
+          "animation": "choice_con",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_WALLOFFLESH_REW7",
+                "prompt_resolved": "{catname} bites into the soft veins and a warm liquid gushes out. It tastes great!",
+                "set_frame": "2",
+                "gain_food": "20"
+              },
+              "rare": {
+                "prompt": "QEVENT_WALLOFFLESH_REW8",
+                "prompt_resolved": "{catname} tears into the wall of veins with {his} teeth and laps up the warm liquid that pours from the wound.\n\n{catname} feels a strange twisting sensation as {his} body deforms...",
+                "set_frame": "3",
+                "gain_food": "30",
+                "random_mutation": {
+                  "count": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_WALLOFFLESH_REW9",
+                "prompt_resolved": "{catname} tries to bite into the wall of veins, but they are too tough for {his} little teeth to chew through!",
+                "set_frame": "4"
+              },
+              "rare": {
+                "prompt": "QEVENT_WALLOFFLESH_REW10",
+                "prompt_resolved": "{catname} gets twisted in the veins while trying to bite into them and barely manages to wriggle free!\n\nA toxic black liquid from the veins pours over {him}!",
+                "set_frame": "5",
+                "lose_item": "equipped"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_WALLOFFLESH2_REW_IGNORE",
+            "prompt_resolved": "{Catname} ignores the wall of veins.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_MeatWorldAltar": {
+    "intro": {
+      "title": "QEVENT_MEATALTAR_NAME",
+      "title_resolved": "Meat Altar",
+      "cat_choice": "random",
+      "choose_cat_with_item": "GuillotinasHead",
+      "subject_clip": "EventSubject",
+      "subject_frame": "meatworld_altar",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_MEATALTAR_QUES1",
+      "prompt_resolved": "Before {catname} is a large altar made of veins and flesh. It demands sacrifice!",
+      "options": {
+        "sacrifice_quest": {
+          "requirements": {
+            "cat_has_item_equipped": "GuillotinasHead"
+          },
+          "label": "QEVENT_MEATALTAR_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice {Catname}",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "good": {
+            "prompt": "QEVENT_MEATALTAR_REW1",
+            "prompt_resolved": "{Catname} lies upon the sacrificial slab, and the room starts to rumble...\nSuddenly, the altar inverts, sucking {Catname} deep down into a pit of throbbing veins and sinew. \nThe walls around the remaining cats undulate and unfurl, beckoning them deeper into the [a:shake]THROBBING DOMAIN[/a]!",
+            "kill": "cat",
+            "play_animation": "resultHole",
+            "set_frame": "6",
+            "complete_item_quest": "GuillotinasHead",
+            "trigger_adventure_unlock": "meat_world_open",
+            "cutscene_on_exit": "king_intro"
+          }
+        },
+        "sacrifice_normal": {
+          "requirements": {
+            "not_cat_has_item_equipped": "GuillotinasHead"
+          },
+          "label": "QEVENT_MEATALTAR_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice {Catname}",
+          "stat": "lck",
+          "animation": "choice_misc",
+          "good": {
+            "kill": "cat",
+            "play_animation": "resultHole",
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "mapflag_MeatWorldUnlocked"
+                  },
+                  "reward": {
+                    "prompt": "QEVENT_MEATALTAR_REW2B",
+                    "prompt_resolved": "{Catname} lies sacrificed on top of the altar. The altar is pleased. \n\nThe remaining cats feel strengthened, and one of them begrudgingly pulls on {catname}'s corpse, salvaging it for useful parts."
+                  },
+                  "else": {
+                    "prompt": "QEVENT_MEATALTAR_REW2",
+                    "prompt_resolved": "{Catname} lies sacrificed on top of the altar. The altar is pleased, but not satisfied. It desires something specific... \n\nThe remaining cats feel strengthened, and one of them begrudgingly pulls on {catname}'s corpse, salvaging it for useful parts."
+                  }
+                },
+                "get_item_from_pool": "blood_altar_items",
+                "party_heal": "100%",
+                "party_permanent_stats_exclude_self": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                },
+                "clear_result_animation": "1"
+              },
+              "rare": {
+                "set_frame": "3",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "mapflag_MeatWorldUnlocked"
+                  },
+                  "reward": {
+                    "prompt": "QEVENT_MEATALTAR_REW3B",
+                    "prompt_resolved": "{Catname} lies sacrificed on top of the altar. The altar is pleased.\n\nThe remaining cats feel great though!"
+                  },
+                  "else": {
+                    "prompt": "QEVENT_MEATALTAR_REW3",
+                    "prompt_resolved": "{Catname} lies sacrificed on top of the altar. The altar is pleased, but not satisfied. It desires something specific... \n\nThe remaining cats feel great though!"
+                  }
+                },
+                "get_item_from_pool": "blood_altar_items",
+                "party_heal": "100%",
+                "party_permanent_stats_exclude_self": {
+                  "str": "2",
+                  "dex": "2",
+                  "con": "2",
+                  "int": "2",
+                  "spd": "2",
+                  "cha": "2",
+                  "lck": "2"
+                },
+                "clear_result_animation": "1"
+              }
+            }
+          },
+          "bad": {
+            "play_animation": "resultHole",
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_MEATALTAR_REW4",
+                "prompt_resolved": "{Catname} is dead.\n\nFor a long moment no one moves or speaks...\n\nThey made it all this way together, and now {catname} will not be returning home.",
+                "set_frame": "4"
+              },
+              "rare": {
+                "prompt": "QEVENT_MEATALTAR_REW5",
+                "prompt_resolved": "{catname}'s last breath barely escapes {his} mouth before {his} corpse leaps up at them with a guttural howl.\n\n[i]\"Why did you do this to me? We were friends!\"[/i]\n\nThe remaining cats flee in shame with their tails between their legs.",
+                "set_frame": "5",
+                "party_gain_disorder_from_pool_exclude_self": "all_disorders"
+              }
+            },
+            "kill": "cat"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_MEATALTAR_REW_IGNORE",
+            "prompt_resolved": "{Catname} ignores the altar.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_DeadKing": {
+    "intro": {
+      "title": "QEVENT_DEADKING_NAME",
+      "title_resolved": "Dead King",
+      "cat_choice": "random",
+      "choose_cat_with_item": [
+        "CryogenicTimeChamber_Empty",
+        "JarOfRadiation"
+      ],
+      "subject_clip": "EventSubject",
+      "subject_frame": "dead_king",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_DEADKING_QUES",
+      "prompt_resolved": "The corpse of the Throbbing King lies before {catname}, his blood and organs spilling out upon the ground.",
+      "options": {
+        "loot": {
+          "label": "QEVENT_DEADKING_LOOTCORPSE_ANSW",
+          "label_resolved": "Loot Corpse",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "prompt": "QEVENT_DEADKING_REW1",
+            "prompt_resolved": "{catname} tears open the chest of the Throbbing King and withdraws a legendary item!",
+            "get_item_from_pool": "bloody_items",
+            "cutscene": {
+              "cutscene": "king_ending_good",
+              "skip_result_screen": "true"
+            }
+          },
+          "bad": {
+            "prompt": "QEVENT_DEADKING_REW2",
+            "prompt_resolved": "{catname} reaches down and touches the corpse of the Throbbing King...\n\nThe chest of the body explodes, showering {catname} in bloody debris.\n\n{catname}'s blood boils and {his} body turns inside out as {he} collapses into a gruesome mound of flesh and dies.",
+            "kill": "cat",
+            "cutscene": {
+              "cutscene": "king_ending_bad",
+              "skip_result_screen": "true"
+            },
+            "play_animation": "resultHole"
+          }
+        },
+        "loot_heart": {
+          "label": "QEVENT_DEADKING_TAKEHEART_ANSW",
+          "label_resolved": "Take Heart",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "CryogenicTimeChamber_Empty"
+          },
+          "good": {
+            "prompt": "QEVENT_DEADKING_REW3",
+            "prompt_resolved": "{catname} rips out the King's throbbing heart and stores it safely inside the Cryogenic Time Chamber!",
+            "complete_item_quest": "CryogenicTimeChamber_Empty",
+            "unlock_item_quest": "CryogenicTimeChamber_Full",
+            "transform_item": [
+              "CryogenicTimeChamber_Empty",
+              "CryogenicTimeChamber_Full"
+            ],
+            "trigger_adventure_unlock": "time_machine_quest_finalstep",
+            "cutscene": {
+              "cutscene": "king_ending_good",
+              "skip_result_screen": "true"
+            }
+          }
+        },
+        "take_blood": {
+          "label": "QEVENT_DEADKING_DRAINBLOOD_ANSW",
+          "label_resolved": "Drain Blood",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "JarOfRadiation"
+          },
+          "good": {
+            "prompt": "QEVENT_DEADKING_REW4",
+            "prompt_resolved": "{catname} drains the King's blood into {his} jar.",
+            "complete_item_quest": "JarOfRadiation",
+            "unlock_item_quest": "JarOfRadiatedBlood",
+            "transform_item": [
+              "JarOfRadiation",
+              "JarOfRadiatedBlood"
+            ],
+            "cutscene": {
+              "cutscene": "king_ending_good",
+              "skip_result_screen": "true"
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_DEADKING_REW5",
+            "prompt_resolved": "{catname} ignores the corpse.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_MoonObelisk": {
+    "intro": {
+      "title": "QEVENT_OBELISK_MOON_NAME",
+      "title_resolved": "Moon Obelisk",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES1",
+      "prompt_resolved": "A small cubical obelisk protrudes from the ground.",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_MOON_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "lck",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_MOON_REW_PYRO1",
+            "prompt_resolved": "Pyrophina attempts to activate the obelisk, but it needs to be raised first."
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_ZARA_WRONG",
+            "prompt_resolved": "Zaratana comes from the moon and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_MoonObeliskRaised": {
+    "intro": {
+      "title": "QEVENT_OBELISK_MOON_NAME2",
+      "title_resolved": "Moon Obelisk (Raised)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk_raised",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES2",
+      "prompt_resolved": "A large obelisk extends from the ground. In the reflection of the obelisk, you can see a smaller one, still buried in the ground.",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_MOON_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "lck",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_MOON_REW_PYRO2",
+            "prompt_resolved": "Pyrophina attempts to activate the obelisk, but its counterpart needs to be raised first."
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_ZARA_WRONG",
+            "prompt_resolved": "Zaratana comes from the moon and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_MoonObeliskGlowing": {
+    "intro": {
+      "title": "QEVENT_OBELISK_MOON_NAME3",
+      "title_resolved": "Moon Obelisk (Glowing)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk_glowing",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES3",
+      "prompt_resolved": "A large obelisk extends from the ground. It emanates a powerful glowing energy, and on its polished surface {catname} can see another identical obelisk glowing!",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_MOON_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "cutscene": {
+              "cutscene": "pyro_ending",
+              "skip_result_screen": "true"
+            },
+            "prompt": "QEVENT_OBELISK_MOON_REW_PYRO3",
+            "prompt_resolved": "Pyrophina activates the obelisk.  It rises up out of the ground and shatters into small perfectly smooth fragments!\n\nThe fragments merge together into a broken mirror. {catname} looks on, seeing a strange new place opening up through the surface into a portal!",
+            "trigger_adventure_unlock": "map_unlock_dimensionx",
+            "complete_item_quest": "PyrophinasCollar",
+            "lose_specific_item": "PyrophinasCollar",
+            "clear_surviving_kaiju": "pyrophina",
+            "set_legacy_token": "TheRift_UsedPyrophina",
+            "event_now_same_cat": "Quest_DimensionXPortal"
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_MOON_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_ZARA_WRONG",
+            "prompt_resolved": "Zaratana comes from the moon and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_CoreObelisk": {
+    "intro": {
+      "title": "QEVENT_OBELISK_CORE_NAME",
+      "title_resolved": "Core Obelisk",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES1",
+      "prompt_resolved": "A small cubical obelisk protrudes from the ground.",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_CORE_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_PYRO_WRONG",
+            "prompt_resolved": "Pyrophina comes from the core and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_CORE_REW_ZARA1",
+            "prompt_resolved": "Zaratana attempts to activate the obelisk, but it needs to be raised first."
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_CoreObeliskRaised": {
+    "intro": {
+      "title": "QEVENT_OBELISK_CORE_NAME2",
+      "title_resolved": "Core Obelisk (Raised)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk_raised",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES2",
+      "prompt_resolved": "A large obelisk extends from the ground. In the reflection of the obelisk, you can see a smaller one, still buried in the ground.",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_CORE_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_PYRO_WRONG",
+            "prompt_resolved": "Pyrophina comes from the core and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_CORE_REW_ZARA2",
+            "prompt_resolved": "Zaratana attempts to activate the obelisk, but its counterpart needs to be raised first."
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_CoreObeliskGlowing": {
+    "intro": {
+      "title": "QEVENT_OBELISK_CORE_NAME3",
+      "title_resolved": "Core Obelisk (Glowing)",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "choose_cat_with_item": [
+        "PyrophinasCollar",
+        "ZaratanasCollar"
+      ],
+      "subject_frame": "obelisk_glowing",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_OBELISK_QUES2",
+      "prompt_resolved": "A large obelisk extends from the ground. In the reflection of the obelisk, you can see a smaller one, still buried in the ground.",
+      "options": {
+        "touch": {
+          "label": "QEVENT_OBELISK_CORE_TOUCH_ANSW",
+          "label_resolved": "Touch the Obelisk",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW1",
+                "prompt_resolved": "{catname} touches the obelisk. {He} feels {his} body mutate!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW2",
+                "prompt_resolved": "As {catname} touches the obelisk, {his} whole body convulses as a strange power from the obelisk mutates {him}!",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_OBELISK_REW3",
+                "prompt_resolved": "{catname} places {his} paw on the obelisk but nothing happens.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_OBELISK_REW4",
+                "prompt_resolved": "{catname} pushes {his} paw onto the obelisk. {He} lets out a cry as searing pain courses up {his} arm!",
+                "set_frame": "4",
+                "injury": "str"
+              }
+            }
+          }
+        },
+        "activate_p": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "PyrophinasCollar"
+          },
+          "good": {
+            "prompt": "QEVENT_OBELISK_REW_PYRO_WRONG",
+            "prompt_resolved": "Pyrophina comes from the core and cannot do anything with this obelisk. She requests you take her to the other one."
+          }
+        },
+        "activate_z": {
+          "label": "QEVENT_OBELISK_CORE_ACTIVATE_ANSW",
+          "label_resolved": "Activate",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ZaratanasCollar"
+          },
+          "good": {
+            "cutscene": {
+              "cutscene": "zara_ending",
+              "skip_result_screen": "true"
+            },
+            "prompt": "QEVENT_OBELISK_CORE_REW_ZARA3",
+            "prompt_resolved": "Zaratana activates the obelisk. It rises up out of the ground and shatters into perfectly smooth fragments!\n\nThe fragments merge together into a broken mirror-like surface. {catname} looks on, seeing a strange new place opening up through the surface into a portal!",
+            "trigger_adventure_unlock": "map_unlock_dimensionx",
+            "complete_item_quest": "ZaratanasCollar",
+            "lose_specific_item": "ZaratanasCollar",
+            "clear_surviving_kaiju": "zaratana",
+            "set_legacy_token": "TheRift_UsedZaratana",
+            "event_now_same_cat": "Quest_DimensionXPortal"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_OBELISK_IGNORE",
+            "prompt_resolved": "{Catname} ignores the obelisk.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_DimensionXPortal": {
+    "intro": {
+      "title": "QEVENT_DIMENSIONXPORTAL_NAME",
+      "title_resolved": "The Rift",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dimensionx_portal",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_DIMENSIONXPORTAL_QUES",
+      "prompt_resolved": "A tear in the fabric of spacetime lies beyond. {catname} sees strange and wild things moving about on the other side of the rift!",
+      "options": {
+        "enter": {
+          "label": "QEVENT_DIMENSIONXPORTAL_ENTER_ANSW",
+          "label_resolved": "Enter Rift",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "dimensionx",
+          "good": {
+            "prompt": "QEVENT_DIMENSIONXPORTAL_ENTER_REW",
+            "prompt_resolved": "The cats leap through the rift in space, traveling to a strange and distant land!",
+            "play_animation": "resultHole",
+            "begin_chapter": "dimensionx.gon",
+            "cutscene": {
+              "cutscene": "rift_portal",
+              "skip_result_screen": "true"
+            }
+          }
+        },
+        "/*reach": {
+          "label": "QEVENT_DIMENSIONXPORTAL_LICK_ANSW",
+          "label_resolved": "Lick",
+          "stat": "lck",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_DIMENSIONXPORTAL_REW1",
+                "prompt_resolved": "Curious as to what an interdimensional portal would taste like, {catname} gives it a good lick.\n\n{catname}'s hair stands on end as energy from the rift surges through {his} body, mutating it!",
+                "set_frame": "2",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "QEVENT_DIMENSIONXPORTAL_REW2",
+                "prompt_resolved": "Images from the mind of an unfathomable creature flash through {catname}'s mind as {his} tongue exists simultaneously across two dimensions.\n\nWhen {catname} returns to {his} senses, {he} finds {his} body has become twisted and deformed.",
+                "set_frame": "3",
+                "party_random_mutation": "1"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_DIMENSIONXPORTAL_REW3",
+                "prompt_resolved": "{catname} is not the smartest cat that ever lived. Far from it in fact.\n\nIt does not even cross {catname}'s mind that it could be dangerous to lick a strange interdimensional rift!",
+                "set_frame": "4",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "QEVENT_DIMENSIONXPORTAL_REW4",
+                "prompt_resolved": "Unspeakable horrors from between space and time flash in {catname}'s eyes as {his} tongue makes contact with the rift.",
+                "set_frame": "5",
+                "party_gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        },
+        "*/": "ignore",
+        "label": "EVENT_IGNORE_ANSW",
+        "label_resolved": "Ignore",
+        "stat": "none",
+        "animation": "choice_leave",
+        "hint_chapter_exit": "home",
+        "good": {
+          "prompt": "QEVENT_DIMENSIONXPORTAL_IGNORE_ANSW",
+          "prompt_resolved": "{Catname} ignores the rift. {He}'s had a long enough day as it is already.",
+          "play_animation": [
+            "resultLeave",
+            "0"
+          ]
+        }
+      }
+    }
+  },
+  "Quest_DimensionXRift": {
+    "intro": {
+      "title": "QEVENT_THEHEAD_NAME",
+      "title_resolved": "The Head",
+      "cat_choice": "random",
+      "choose_cat_with_item": [
+        "SignalAmplifier",
+        "JarOfRadiatedBlood"
+      ],
+      "subject_clip": "EventSubject",
+      "subject_frame": "dimensionx_head",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_THEHEAD_QUES",
+      "prompt_resolved": "The grotesque head of The Chaos God floats before {catname}.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AntennaQuest_Rift"
+          },
+          "reward": {
+            "set_subject": "dimensionx_head2"
+          }
+        }
+      },
+      "options": {
+        "loot": {
+          "label": "EVENT_LOOT_ANSW",
+          "label_resolved": "Loot",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "prompt": "QEVENT_THEHEAD_REW1",
+            "prompt_resolved": "{catname} rips the tongue of the head out and reaches down its throat, pulling out a legendary item!",
+            "get_item_from_pool": "glitched_items",
+            "cutscene": {
+              "cutscene": "chaos_ending_good",
+              "skip_result_screen": "true"
+            }
+          },
+          "bad": {
+            "prompt": "QEVENT_THEHEAD_REW2",
+            "prompt_resolved": "{catname} touches the floating head and is cursed by the Chaos God!\n\n{His} body contorts into terrifying shapes and {catname} screams in terror before collapsing into an inanimate, silent heap of flesh and fur.",
+            "kill": "cat",
+            "select_item_from_pool_for_cutscene_only": "glitched_items",
+            "cutscene": {
+              "cutscene": "chaos_ending_bad",
+              "skip_result_screen": "true"
+            }
+          }
+        },
+        "attach_amplifier": {
+          "label": "QEVENT_THEHEAD_AMPLIFIER_ANSW",
+          "label_resolved": "Insert Amplifier",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "SignalAmplifier"
+          },
+          "good": {
+            "set_legacy_token": "mapflag_ChaosAntennaAttached",
+            "complete_item_quest": "SignalAmplifier",
+            "lose_specific_item": "SignalAmplifier",
+            "set_frame": "3",
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "AntennaQuest_Rift"
+              },
+              "reward": {
+                "prompt": "QEVENT_THEHEAD_REW3",
+                "prompt_resolved": "{catname} installs the signal amplifier into the head's skull.\n\nThe time signal is complete! The future and the past now meet up!",
+                "trigger_adventure_unlock": "end_of_time_unlock",
+                "cutscene_on_exit": "infinite_intro"
+              },
+              "else": {
+                "prompt": "QEVENT_THEHEAD_REW4",
+                "prompt_resolved": "{catname} installs the signal amplifier into the head's skull.\n\nThe signal is not yet complete."
+              }
+            }
+          }
+        },
+        "fill_jar": {
+          "label": "QEVENT_THEHEAD_FILLJAR_ANSW",
+          "label_resolved": "Collect Flesh",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "JarOfRadiatedBlood"
+          },
+          "good": {
+            "prompt": "QEVENT_THEHEAD_REW5",
+            "prompt_resolved": "{catname} rips some flesh off of the Chaos God and places it into {his} jar.",
+            "complete_item_quest": "JarOfRadiatedBlood",
+            "unlock_item_quest": "JarOfChaos",
+            "transform_item": [
+              "JarOfRadiatedBlood",
+              "JarOfChaos"
+            ],
+            "cutscene": {
+              "cutscene": "chaos_ending_good",
+              "skip_result_screen": "true"
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_THEHEAD_REW6",
+            "prompt_resolved": "{catname} leaves the head alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_BrokenTimeMachine": {
+    "intro": {
+      "title": "QEVENT_BROKENTIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "choose_cat_with_item": "CryogenicTimeChamber_Full",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_broken",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_BROKENTIMEMACHINE_QUES",
+      "prompt_resolved": "A strange machine stands before {catname}. \n\n{catname} recalls Dr. Beanies mentioning something about this.",
+      "options": {
+        "fiddle": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "quest",
+          "requirements": {
+            "not_has_token": "TimeMachineQuest_Began"
+          },
+          "good": {
+            "/*prompt": "QEVENT_BROKENTIMEMACHINE_REW1",
+            "unlock_item_quest": "CryogenicTimeChamber_Empty",
+            "get_item": "CryogenicTimeChamber_Empty",
+            "set_legacy_token": "TimeMachineQuest_Began",
+            "play_animation": "resultConfused",
+            "prompt": "QEVENT_BROKENTIMEMACHINE_REW2",
+            "prompt_resolved": "{catname} examines the machine. It does not appear to be working. \n\n{catname} thinks Dr. Beanies may know how to fix it.",
+            "trigger_adventure_unlock": "time_machine_quest_trigger"
+          }
+        },
+        "repair": {
+          "label": "EVENT_REPAIR_ANSW",
+          "label_resolved": "Repair",
+          "stat": "none",
+          "requirements": {
+            "has_token": "TimeMachineQuest_Began",
+            "not_cat_has_item_equipped": "CryogenicTimeChamber_Full"
+          },
+          "good": {
+            "prompt": "QEVENT_BROKENTIMEMACHINE_REW3",
+            "prompt_resolved": "{catname} tries to repair the machine but it looks like {he}'ll need a device of some kind.\n\n{catname} should come back with the right item to fix the machine.",
+            "play_animation": "resultConfused"
+          }
+        },
+        "repair_quest": {
+          "label": "EVENT_REPAIR_ANSW",
+          "label_resolved": "Repair",
+          "stat": "quest",
+          "requirements": {
+            "has_token": "TimeMachineQuest_Began",
+            "cat_has_item_equipped": "CryogenicTimeChamber_Full"
+          },
+          "good": {
+            "prompt": "QEVENT_BROKENTIMEMACHINE_REW4",
+            "prompt_resolved": "{Catname} inserts the Cryogenic Time Chamber back into the sub-quantum vortex chronogate.\n\nThe time machine turns on!",
+            "trigger_adventure_unlock": "map_unlock_iceage",
+            "complete_item_quest": "CryogenicTimeChamber_Full",
+            "lose_specific_item": "CryogenicTimeChamber_Full",
+            "event_now_same_cat": "Quest_TimeMachine"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "requirements": {
+            "has_token": "TimeMachineQuest_Began"
+          },
+          "good": {
+            "prompt": "QEVENT_BROKENTIMEMACHINE_REW5",
+            "prompt_resolved": "{catname} ignores the strange machine.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_TimeMachine": {
+    "intro": {
+      "title": "QEVENT_TIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_fixed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_TIMEMACHINE_QUES",
+      "prompt_resolved": "{catname} approaches the time machine. It hums with energy!\n\nWhat should the party do?",
+      "options": {
+        "past": {
+          "label": "QEVENT_TIMEMACHINE_PAST_ANSW",
+          "label_resolved": "Go to The Past",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "iceage",
+          "requirements": {
+            "has_token": "mapflag_IceAgeUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_REW1",
+            "prompt_resolved": "{catname} and the cats enter the time machine and pull the \"BACKWARD\" lever...\n\nThe machine whirs to life and they are transported into the past!",
+            "cutscene": {
+              "cutscene": "time_machine-lab-iceage",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "iceage.gon",
+            "trigger_butterfly_effect": "1"
+          }
+        },
+        "future": {
+          "label": "QEVENT_TIMEMACHINE_FUTURE_ANSW",
+          "label_resolved": "Go to The Future",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "future",
+          "requirements": {
+            "has_token": "mapflag_FutureUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_REW2",
+            "prompt_resolved": "{catname} and the cats enter the time machine and pull the \"FORWARD\" lever...\n\nThe machine activates and they are transported into the future!",
+            "cutscene": {
+              "cutscene": "time_machine-lab-future",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "future.gon"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "hint_chapter_exit": "home",
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_REW3",
+            "prompt_resolved": "{catname} ignores the time machine.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_TimeMachineIceAge": {
+    "intro": {
+      "title": "QEVENT_TIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_fixed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_TIMEMACHINE_ICEAGE_QUES",
+      "prompt_resolved": "The cats approach the time machine, weary from their long and cold journey.",
+      "options": {
+        "past": {
+          "label": "QEVENT_TIMEMACHINE_ICEAGE_PAST_ANSW",
+          "label_resolved": "Go Further Into the Past",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "jurassic",
+          "requirements": {
+            "has_token": "mapflag_JurassicUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_ICEAGE_REW1",
+            "prompt_resolved": "The party bravely travels even further into the past!",
+            "cutscene": {
+              "cutscene": "time_machine-iceage-jurassic",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "jurassic.gon"
+          }
+        },
+        "home": {
+          "label": "QEVENT_TIMEMACHINE_HOME_ANSW",
+          "label_resolved": "Return Home",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "home",
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_ICEAGE_REW2",
+            "prompt_resolved": "As the party huddles in the time machine they dream of the warm comforts of home.",
+            "play_animation": "resultHole",
+            "begin_chapter": "home"
+          }
+        }
+      }
+    }
+  },
+  "Quest_TimeMachineJurassic": {
+    "intro": {
+      "title": "QEVENT_TIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_fixed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_TIMEMACHINE_JURASSIC_QUES",
+      "prompt_resolved": "After an arduous journey through the Jurassic, the time machine is a welcome sight to the cats.",
+      "options": {
+        "past": {
+          "label": "QEVENT_TIMEMACHINE_JURASSIC_INFINITE_ANSW",
+          "label_resolved": "Enter The Infinite",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "endoftime",
+          "requirements": {
+            "has_token": "mapflag_EndOfTimeUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_JURASSIC_REW1",
+            "prompt_resolved": "The cats pile into the time machine and activate it!\n\nWhat new wonders will await them in the Infinite?",
+            "cutscene": {
+              "cutscene": "time_machine-jurassic-infinite",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "endoftime.gon"
+          }
+        },
+        "home": {
+          "label": "QEVENT_TIMEMACHINE_HOME_ANSW",
+          "label_resolved": "Return Home",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "home",
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_JURASSIC_REW2",
+            "prompt_resolved": "The time machine spins to life and transports the party!\n\nInside, the cats dream of curling up at home and taking long naps.",
+            "play_animation": "resultHole",
+            "begin_chapter": "home"
+          }
+        }
+      }
+    }
+  },
+  "Quest_TimeMachineFuture": {
+    "intro": {
+      "title": "QEVENT_TIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_fixed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_TIMEMACHINE_FUTURE_QUES",
+      "prompt_resolved": "The time machine seems less out of place here in the future, but it is a welcome sight for the cats!",
+      "options": {
+        "past": {
+          "label": "QEVENT_TIMEMACHINE_FUTURE_FUTURE_ANSW",
+          "label_resolved": "Go Further Into the Future",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "theend",
+          "requirements": {
+            "has_token": "mapflag_TheEndUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_FUTURE_REW1",
+            "prompt_resolved": "The time machine activates and the cats travel even further into the future!",
+            "cutscene": {
+              "cutscene": "time_machine-future-theend",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "theend.gon"
+          }
+        },
+        "home": {
+          "label": "QEVENT_TIMEMACHINE_HOME_ANSW",
+          "label_resolved": "Return Home",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "home",
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_FUTURE_REW2",
+            "prompt_resolved": "The cats wonder if the kittens back home will even believe the stories they now have to tell.",
+            "play_animation": "resultHole",
+            "begin_chapter": "home"
+          }
+        }
+      }
+    }
+  },
+  "Quest_TimeMachineTheEnd": {
+    "intro": {
+      "title": "QEVENT_TIMEMACHINE_NAME",
+      "title_resolved": "Time Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "timemachine_fixed",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_TIMEMACHINE_THEEND_QUES",
+      "prompt_resolved": "The cats approach the time machine, still pondering the strange things they have seen.",
+      "options": {
+        "infinite": {
+          "label": "QEVENT_TIMEMACHINE_THEEND_INFINITE_ANSW",
+          "label_resolved": "Enter The Infinite",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "endoftime",
+          "requirements": {
+            "has_token": "mapflag_EndOfTimeUnlocked"
+          },
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_THEEND_REW1",
+            "prompt_resolved": "Ready for anything, the cats climb aboard the time machine and travel to the Infinite!",
+            "cutscene": {
+              "cutscene": "time_machine-theend-infinite",
+              "skip_result_screen": "true"
+            },
+            "random_mutation": "1",
+            "play_animation": "resultHole",
+            "begin_chapter": "endoftime.gon"
+          }
+        },
+        "home": {
+          "label": "QEVENT_TIMEMACHINE_HOME_ANSW",
+          "label_resolved": "Return Home",
+          "stat": "none",
+          "animation": "choice_misc",
+          "hint_chapter_exit": "home",
+          "good": {
+            "prompt": "QEVENT_TIMEMACHINE_THEEND_REW2",
+            "prompt_resolved": "The cats are grateful to return home after seeing the terrors the end of time has in store.",
+            "play_animation": "resultHole",
+            "begin_chapter": "home"
+          }
+        }
+      }
+    }
+  },
+  "Quest_Volcano": {
+    "intro": {
+      "title": "QEVENT_VOLCANO_NAME",
+      "title_resolved": "Volcano",
+      "cat_choice": "random",
+      "choose_cat_with_item": "ReceiverAntenna",
+      "subject_clip": "EventSubject",
+      "subject_frame": "volcano",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_VOLCANO_QUES",
+      "prompt_resolved": "{catname} climbs to the top of the active volcano.\n\n{He} looks down into the depths of the chasm where magma bubbles below...",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AntennaQuest_Volcano"
+          },
+          "reward": {
+            "prompt": "QEVENT_VOLCANO_QUES2",
+            "prompt_resolved": "{catname} climbs to the top of the active volcano.\n\nAt the summit {he} finds a receiver antenna.",
+            "set_subject": "volcano2"
+          }
+        }
+      },
+      "options": {
+        "sacrifice": {
+          "label": "QEVENT_VOLCANO_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice {Catname}",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "counter_range": [
+              "WorldEventLegacyCounter_VolcanoSacrifices",
+              "0",
+              "1"
+            ]
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "kill": "cat",
+                "play_animation": "resultHole",
+                "prompt": "QEVENT_VOLCANO_REW1",
+                "prompt_resolved": "{catname} leaps into the volcano and perishes in the hot depths below.\n\nThe ancient gods smile down favorably on the cats, pleased with {catname}'s brave sacrifice.",
+                "set_frame": "2",
+                "increment_legacy_counter": "WorldEventLegacyCounter_VolcanoSacrifices"
+              },
+              "rare": {
+                "prompt": "QEVENT_VOLCANO_REW2",
+                "prompt_resolved": "{catname} dives into the volcano!\n\nMoments later {he} is catapulted back up from the depths below, having received a blessing from the ancient gods!",
+                "set_frame": "3",
+                "gain_disorder_from_pool": [
+                  "BlackFetin",
+                  "OrangeFetin",
+                  "PurpleFetin"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_VOLCANO_REW3",
+                "prompt_resolved": "{catname} leaps into the volcano!\n\nThe party hears distant screams as {catname} perishes in the depths far below.",
+                "play_animation": "resultHole",
+                "set_frame": "4",
+                "kill": "cat"
+              },
+              "rare": {
+                "prompt": "QEVENT_VOLCANO_REW4",
+                "prompt_resolved": "{catname} and all the items {he} was carrying are lost!",
+                "play_animation": "resultHole",
+                "set_frame": "5",
+                "lose_all_equipped_items": "cat",
+                "lose_item_from_inventory": "cat",
+                "kill": "cat"
+              }
+            }
+          }
+        },
+        "sacrifice_partial_favor": {
+          "label": "QEVENT_VOLCANO_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice {Catname}",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "counter_range": [
+              "WorldEventLegacyCounter_VolcanoSacrifices",
+              "2",
+              "4"
+            ]
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "kill": "cat",
+                "play_animation": "resultHole",
+                "prompt": "QEVENT_VOLCANO_REW1",
+                "prompt_resolved": "{catname} leaps into the volcano and perishes in the hot depths below.\n\nThe ancient gods smile down favorably on the cats, pleased with {catname}'s brave sacrifice.",
+                "set_frame": "2",
+                "increment_legacy_counter": "WorldEventLegacyCounter_VolcanoSacrifices"
+              },
+              "rare": {
+                "prompt": "QEVENT_VOLCANO_REW2",
+                "prompt_resolved": "{catname} dives into the volcano!\n\nMoments later {he} is catapulted back up from the depths below, having received a blessing from the ancient gods!",
+                "set_frame": "3",
+                "gain_disorder_from_pool": [
+                  "BlackFetin",
+                  "OrangeFetin",
+                  "PurpleFetin"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "prompt": "QEVENT_VOLCANO_REW3",
+            "prompt_resolved": "{catname} leaps into the volcano!\n\nThe party hears distant screams as {catname} perishes in the depths far below.",
+            "play_animation": "resultHole",
+            "set_frame": "4",
+            "kill": "cat"
+          }
+        },
+        "sacrifice_full_favor": {
+          "label": "QEVENT_VOLCANO_SACRIFICE_ANSW",
+          "label_resolved": "Sacrifice {Catname}",
+          "stat": "none",
+          "animation": "choice_misc",
+          "requirements": {
+            "counter_minimum": [
+              "WorldEventLegacyCounter_VolcanoSacrifices",
+              "5"
+            ]
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "kill": "cat",
+                "play_animation": "resultHole",
+                "prompt": "QEVENT_VOLCANO_REW3",
+                "prompt_resolved": "{catname} leaps into the volcano!\n\nThe party hears distant screams as {catname} perishes in the depths far below.",
+                "set_frame": "4"
+              },
+              "rare": {
+                "prompt": "QEVENT_VOLCANO_REW2",
+                "prompt_resolved": "{catname} dives into the volcano!\n\nMoments later {he} is catapulted back up from the depths below, having received a blessing from the ancient gods!",
+                "set_frame": "3",
+                "gain_disorder_from_pool": [
+                  "BlackFetin",
+                  "OrangeFetin",
+                  "PurpleFetin"
+                ]
+              }
+            }
+          }
+        },
+        "attach_antenna": {
+          "label": "QEVENT_VOLCANO_ANTENNA_ANSW",
+          "label_resolved": "Place Antenna",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "ReceiverAntenna"
+          },
+          "good": {
+            "set_legacy_token": "mapflag_VolcanoAntennaAttached",
+            "complete_item_quest": "ReceiverAntenna",
+            "lose_specific_item": "ReceiverAntenna",
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "AntennaQuest_Rift"
+              },
+              "reward": {
+                "prompt": "QEVENT_VOLCANO_REW5",
+                "prompt_resolved": "{Catname} places the antenna atop the volcano.\n\nThe time signal is complete! The future and the past now meet up!",
+                "trigger_adventure_unlock": "end_of_time_unlock",
+                "cutscene_on_exit": "infinite_intro"
+              },
+              "else": {
+                "prompt": "QEVENT_VOLCANO_REW6",
+                "prompt_resolved": "{Catname} carefully sets up the antenna atop the volcano.\n\nThe signal is not yet complete."
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_VOLCANO_REW7",
+            "prompt_resolved": "{Catname} ignores the volcano and climbs back down.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_Orb": {
+    "intro": {
+      "title": "QEVENT_GLOWINGORB_NAME",
+      "title_resolved": "Glowing Orb",
+      "cat_choice": "random",
+      "choose_cat_with_item": "TransmitterAntenna",
+      "subject_clip": "EventSubject",
+      "subject_frame": "endorb",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_GLOWINGORB_QUES",
+      "prompt_resolved": "{catname} gazes up in awe at the brilliant light of the orb.\n\nIt radiates warm heat like the surface of a tiny sun and is slowly consuming everything around it.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AntennaQuest_Orb"
+          },
+          "reward": {
+            "prompt": "QEVENT_GLOWINGORB_QUES2",
+            "prompt_resolved": "{catname} gazes in awe at the large glowing orb at the end of time.\n\nNext to the orb a transmitter has been set up.",
+            "set_subject": "endorb2"
+          }
+        }
+      },
+      "options": {
+        "lick": {
+          "label": "QEVENT_GLOWINGORB_LICK_ANSW",
+          "label_resolved": "Lick Orb",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_GLOWINGORB_REW1",
+                "prompt_resolved": "{catname} approaches the orb and licks it...\n\nHot energy from the orb pulses through {his} body, mutating it.",
+                "set_frame": "2",
+                "random_pool": [
+                  {
+                    "random_mutation": {
+                      "count": "2"
+                    }
+                  },
+                  {
+                    "random_mutation": {
+                      "count": "3"
+                    }
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "QEVENT_GLOWINGORB_REW2",
+                "prompt_resolved": "As {catname} licks the orb, {his} mind is overwhelmed with knowledge about all things.\n\n{catname}'s body shifts as {he} grows a human head and enters an evolved state of being!",
+                "set_frame": "3",
+                "random_mutation_from_set": {
+                  "body": "758",
+                  "head": "759",
+                  "tail": "760"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "QEVENT_GLOWINGORB_REW3",
+                "prompt_resolved": "{catname} approaches the orb and licks it...\n\nHot radiation blasts {catname}, ravaging every cell in {his} body.",
+                "set_frame": "4",
+                "gain_disorder": "Cancer"
+              },
+              "rare": {
+                "prompt": "QEVENT_GLOWINGORB_REW4",
+                "prompt_resolved": "In a blinding flash of intense heat, the orb explodes, eradicating everything around it, instantly vaporizing {catname}!",
+                "set_frame": "5",
+                "play_animation": "resultHole",
+                "kill": "cat"
+              }
+            }
+          }
+        },
+        "attach_antenna": {
+          "label": "QEVENT_GLOWINGORB_ANTENNA_ANSW",
+          "label_resolved": "Place Antenna",
+          "stat": "quest",
+          "animation": "choice_misc",
+          "requirements": {
+            "cat_has_item_equipped": "TransmitterAntenna"
+          },
+          "good": {
+            "set_legacy_token": "mapflag_OrbAntennaAttached",
+            "complete_item_quest": "TransmitterAntenna",
+            "lose_specific_item": "TransmitterAntenna",
+            "conditional_reward": {
+              "requirements": {
+                "has_token": "AntennaQuest_Rift"
+              },
+              "reward": {
+                "prompt": "QEVENT_GLOWINGORB_REW5",
+                "prompt_resolved": "{Catname} sets up the antenna on the orb.\n\nThe time signal is complete! The future and the past now meet up!",
+                "trigger_adventure_unlock": "end_of_time_unlock",
+                "cutscene_on_exit": "infinite_intro"
+              },
+              "else": {
+                "prompt": "QEVENT_GLOWINGORB_REW6",
+                "prompt_resolved": "{Catname} attaches the antenna to the orb.\n\nThe signal is not yet complete."
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_GLOWINGORB_REW7",
+            "prompt_resolved": "{Catname} basks in the warm light of the orb for a few moments before leaving.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Quest_DeadGod": {
+    "intro": {
+      "title": "QEVENT_DEADGOD_NAME",
+      "title_resolved": "Dead God",
+      "cat_choice": "random",
+      "choose_cat_with_item": "TransmitterAntenna",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dead_god",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "QEVENT_DEADGOD_QUES",
+      "prompt_resolved": "Guts spilled out onto the ground, the corpse of The Fetal Creator lies in a pool of its own pale blood.\n\n{catname} stands apprehensively nearby, the stress of the battle still pumping adrenaline through {his} body...",
+      "options": {
+        "examine": {
+          "label": "EVENT_EXAMINE_ANSW",
+          "label_resolved": "Examine",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "prompt": "QEVENT_DEADGOD_REW1",
+            "prompt_resolved": "{catname} reaches down and rips apart the creator's body.\n\nInside {he} finds a legendary item!",
+            "get_item_from_pool": "godly_items",
+            "cutscene": {
+              "cutscene": "infinite_ending_good",
+              "skip_result_screen": "true"
+            }
+          },
+          "bad": {
+            "prompt": "QEVENT_DEADGOD_REW2",
+            "prompt_resolved": "{catname} reaches down to examine the Creator's body...\n\n{His} body shudders briefly, then {catname} collapses onto the ground, dead.",
+            "kill": "cat",
+            "cutscene": {
+              "cutscene": "infinite_ending_bad",
+              "skip_result_screen": "true"
+            },
+            "play_animation": "resultHole"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "QEVENT_DEADGOD_REW3",
+            "prompt_resolved": "Wary from the insanity of what {he} just experienced, {catname} opts to not tempt fate and leaves the divine corpse alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "set_frame": "2"
+          }
+        }
+      }
+    }
+  }
+}

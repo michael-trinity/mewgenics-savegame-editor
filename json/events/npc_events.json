@@ -1,0 +1,1527 @@
+{
+  "Butch1": {
+    "intro": {
+      "title": "EVENT_BUTCH_NAME",
+      "title_resolved": "Butch",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "butch",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BUTCH_QUES",
+      "prompt_resolved": "[i]\"Ok, kiddo. What's best? Damage or protection?\"[/i]",
+      "options": {
+        "damage": {
+          "label": "EVENT_DAMAGE_ANSW",
+          "label_resolved": "Damage",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH_REW1",
+                "prompt_resolved": "[i]\"Yeah, I feel ya. A shoot first, ask questions later kinda cat, huh?\n\nHere, take this…\"[/i]",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "weapon"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH_REW2",
+                "prompt_resolved": "[i]\"Hell yeah! Hit 'em where it hurts!\n\nHere. Don't say I never did nothin' for ya...\"[/i]",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "weapon"
+                }
+              }
+            }
+          }
+        },
+        "protection": {
+          "label": "EVENT_PROTECTION_ANSW",
+          "label_resolved": "Protection",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH_REW3",
+                "prompt_resolved": "[i]\"A cat who likes to take a punch, huh? Sicko…\n\nThis is a judgement-free zone, though... So here.\"[/i]",
+                "get_item_from_pool": {
+                  "pool": "chapter_common",
+                  "restrict": "armor"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH_REW4",
+                "prompt_resolved": "[i]\"So you like gettin' hit, huh? Well, whatever floats your boat, kiddo… Here.\"[/i]",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "armor"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Butch2": {
+    "intro": {
+      "title": "EVENT_BUTCH_NAME",
+      "title_resolved": "Butch",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "butch",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BUTCH2_QUES",
+      "prompt_resolved": "[i]\"What's best? The element of surprise or intimidation?\"[/i]",
+      "options": {
+        "surprise": {
+          "label": "EVENT_SURPRISE_ANSW",
+          "label_resolved": "Surprise",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH2_REW1",
+                "prompt_resolved": "[i]\"The old sucker punch! Yeah, I like ya, kid…\n\nHere, I know a shortcut.\"[/i]\n\n{catname} gets an extra turn at start of the next battle.",
+                "self_status_next_fight": {
+                  "AlphaTurns": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH2_REW2",
+                "prompt_resolved": "[i]\"Fly like a butthole fly, stink like a pee, I always say!\n\nQuick, while no one's lookin'. Take this!\"[/i]",
+                "permanent_stats": {
+                  "spd": "2"
+                }
+              }
+            }
+          }
+        },
+        "intimidation": {
+          "label": "EVENT_INTIMIDATION_ANSW",
+          "label_resolved": "Intimidation",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH2_REW3",
+                "prompt_resolved": "[i]\"You're quite the beefy kiddo, aren't ya? Yeah… I think you'll do just fine.\"[/i]",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH2_REW4",
+                "prompt_resolved": "[i]\"Yeah, I bet you've scared your fair share of kids in your day…\n\nLemme fix your face a bit for ya.\"[/i]",
+                "permanent_stats": {
+                  "cha": "2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Butch3": {
+    "intro": {
+      "title": "EVENT_BUTCH_NAME",
+      "title_resolved": "Butch",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "butch",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BUTCH3_QUES",
+      "prompt_resolved": "I got one for ya. What's best? Scabs or cuts?",
+      "options": {
+        "damage": {
+          "label": "EVENT_SCABS_ANSW",
+          "label_resolved": "Scabs",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH3_REW1",
+                "prompt_resolved": "Ya know what they say. What hurts ya makes you tougher, right? So take... This!",
+                "get_item": "Callus"
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH3_REW2",
+                "prompt_resolved": "Heck kid, you'll need tough skin out there, but that's a bit excessive tho. You do you, kiddo.",
+                "random_pool": [
+                  {
+                    "gain_disorder": "ScalyScabs"
+                  },
+                  {
+                    "learn_passive": "Scabs"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "protection": {
+          "label": "EVENT_CUTS_ANSW",
+          "label_resolved": "Cuts",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BUTCH3_REW3",
+                "prompt_resolved": "This kiddo's lookin' to start somethin'! Save it for the alley! Here. It's not much, but you can take my backup slice.",
+                "get_item_from_pool": [
+                  "GlassShard,",
+                  "RustyRazor,",
+                  "RazorBlade,",
+                  "BagOfGlass"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_BUTCH3_REW4",
+                "prompt_resolved": "Dang, that's a mean stabby you got. But we'z friends tho, right? Here, take this. Should help.",
+                "get_item_from_pool": {
+                  "pool": "chapter_rare",
+                  "restrict": "weapon"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Beanies1": {
+    "intro": {
+      "title": "EVENT_DRBEANIES_NAME",
+      "title_resolved": "Dr. Beanies",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "beanies",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DRBEANIES_QUES",
+      "prompt_resolved": "[i]\"Time to heal your cats!\n\nWait... What button do I press again?\"[/i]",
+      "options": {
+        "red": {
+          "label": "EVENT_RED_ANSW",
+          "label_resolved": "Red",
+          "stat": "none",
+          "fixed_chance": "50%",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DRBEANIES_REW1",
+                "prompt_resolved": "[i]\"Yes! I did something!\"[/i]",
+                "party_heal": "5"
+              },
+              "rare": {
+                "prompt": "EVENT_DRBEANIES_REW2",
+                "prompt_resolved": "[i]\"Oh, cool! It works!\n\nMan, I'm smart!\"[/i]",
+                "party_heal": "100%",
+                "permanent_stats": {
+                  "con": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DRBEANIES_REW3",
+                "prompt_resolved": "[i]\"Oh… Uh… You must have moved or something.\"[/i]",
+                "party_damage": "3"
+              },
+              "rare": {
+                "prompt": "EVENT_DRBEANIES_REW4",
+                "prompt_resolved": "[i]\"Umm. Uh… There might be some mild side effects…\"[/i]",
+                "party_damage": "10"
+              }
+            }
+          }
+        },
+        "blue": {
+          "label": "EVENT_BLUE_ANSW",
+          "label_resolved": "Blue",
+          "stat": "none",
+          "fixed_chance": "50%",
+          "animation": "choice_misc",
+          "copy_results": "red"
+        }
+      }
+    }
+  },
+  "Beanies2": {
+    "intro": {
+      "title": "EVENT_DRBEANIES_NAME",
+      "title_resolved": "Dr. Beanies",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "beanies",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DRBEANIES2_QUES",
+      "prompt_resolved": "[i]\"My tech can make you better in every way!\n\nWait... How do I work this?\"[/i]",
+      "options": {
+        "lever": {
+          "label": "EVENT_PULLLEVER_ANSW",
+          "label_resolved": "Pull lever",
+          "stat": "none",
+          "fixed_chance": "50%",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DRBEANIES2_REW1",
+                "prompt_resolved": "[i]\"It worked!\"[/i]",
+                "permanent_stats": {
+                  "random": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DRBEANIES2_REW2",
+                "prompt_resolved": "[i]\"Full power! The doctor is in!\"[/i]",
+                "permanent_stats": {
+                  "str": "1",
+                  "dex": "1",
+                  "con": "1",
+                  "int": "1",
+                  "spd": "1",
+                  "cha": "1",
+                  "lck": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_DRBEANIES2_REW3",
+                "prompt_resolved": "[i]\"No! Wait! Why did you tell me to do that?\"[/i]",
+                "permanent_stats": {
+                  "random": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_DRBEANIES2_REW4",
+                "prompt_resolved": "[i]\"Oops…\"[/i]",
+                "random_mutation": "1"
+              }
+            }
+          }
+        },
+        "button": {
+          "label": "EVENT_PUSHBUTTON_ANSW",
+          "label_resolved": "Push button",
+          "stat": "none",
+          "fixed_chance": "50%",
+          "animation": "choice_misc",
+          "copy_results": "lever"
+        }
+      }
+    }
+  },
+  "Frank1": {
+    "intro": {
+      "title": "EVENT_FRANK_NAME",
+      "title_resolved": "Frank",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "frank",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FRANK_QUES",
+      "prompt_resolved": "[i]\"OK! You! What better?\n\nBoogers? Or poop!\"[/i]",
+      "options": {
+        "boogers": {
+          "label": "EVENT_BOOGERS_ANSW",
+          "label_resolved": "Boogers",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRANK_REW1",
+                "prompt_resolved": "[i]\"That right! Them is tasty!\n\nYou win!\"[/i]",
+                "gain_coins": [
+                  "1",
+                  "25"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_FRANK_REW2",
+                "prompt_resolved": "[i]\"Mmhmm! Boogies are the best!\n\nA winner is you!\"[/i]",
+                "get_item_from_pool": {
+                  "pool": "chapter",
+                  "restrict": "trinket"
+                }
+              }
+            }
+          }
+        },
+        "poop": {
+          "label": "EVENT_POOP_ANSW",
+          "label_resolved": "Poop",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRANK_REW3",
+                "prompt_resolved": "[i]\"Holy molar! You like poop too!?\n\nYou win my prize!\"[/i]",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_FRANK_REW4",
+                "prompt_resolved": "[i]\"Doodie are the best cuz your butt is their mommy!\n\nYou beat Frank game!\"[/i]",
+                "get_item_from_pool": "poop_items"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Frank2": {
+    "intro": {
+      "title": "EVENT_FRANK_NAME",
+      "title_resolved": "Frank",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "frank",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_FRANK2_QUES",
+      "prompt_resolved": "[i]\"Bet you never guess what best…\n\nBeepis or feebis?\"[/i]",
+      "options": {
+        "boogers": {
+          "label": "EVENT_BEEPIS_ANSW",
+          "label_resolved": "Beepis",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRANK2_REW1",
+                "prompt_resolved": "[i]\"Wait! You know beepis?\n\nYou win!\"[/i]",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_FRANK2_REW2",
+                "prompt_resolved": "[i]\"Beepis, beepis, beepis!\n\nYou got it!\"[/i]",
+                "get_item_from_pool": "chapter_rare"
+              }
+            }
+          }
+        },
+        "poop": {
+          "label": "EVENT_FEEBIS_ANSW",
+          "label_resolved": "Feebis",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_FRANK2_REW3",
+                "prompt_resolved": "[i]\"Yep! Feebis is the right one!\n\nHere is Frank's money…\"[/i]",
+                "gain_coins": [
+                  "1",
+                  "25"
+                ]
+              },
+              "rare": {
+                "get_item_from_pool": {
+                  "prompt": "EVENT_FRANK2_REW4",
+                  "prompt_resolved": "[i]\"Frank think you reading our brain!\n\nYou win grand prize!\"[/i]",
+                  "pool": "chapter",
+                  "restrict": "trinket"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Tink1": {
+    "intro": {
+      "title": "EVENT_TINK_NAME",
+      "title_resolved": "Tink",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tink",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TINK_QUES",
+      "prompt_resolved": "[i]\"Ok, ugly. Answer me this… Which is better?\n\nTappy toes or pirouette?\"[/i]",
+      "options": {
+        "tappytoes": {
+          "label": "EVENT_TAPPYTOES_ANSW",
+          "label_resolved": "Tappy toes",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TINK_REW1",
+                "prompt_resolved": "[i]\"Oh, honey, you couldn't be more right!\n\nCan you do the running man?\"[/i]\n\n{catname} feels a burst of speed!",
+                "self_status_next_fight": {
+                  "SpeedUp": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_TINK_REW2",
+                "prompt_resolved": "[i]\"My god, yes! I'll tap these toes all over your face, honey!\n\nWatch and learn.\"[/i]",
+                "permanent_stats": {
+                  "spd": "2"
+                }
+              }
+            }
+          }
+        },
+        "pirouette": {
+          "label": "EVENT_PIROUETTE_ANSW",
+          "label_resolved": "Pirouette",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TINK_REW3",
+                "prompt_resolved": "[i]\"Spin, baby, spin! You got this, honey!\"[/i]\n\n{catname} spins and spins until {he}'s dizzy. {He} feels a lot more nimble!",
+                "self_status_next_fight": {
+                  "DexterityUp": "2"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_TINK_REW4",
+                "prompt_resolved": "[i]\"Listen, gurl. If you wanna spin like a queen…\n\nYou gotta become a queen! Lemme show you how it's done!\"[/i]",
+                "permanent_stats": {
+                  "dex": "2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Tink2": {
+    "intro": {
+      "title": "EVENT_TINK_NAME",
+      "title_resolved": "Tink",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tink",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TINK2_QUES",
+      "prompt_resolved": "[i]\"Which is better?\"[/i]",
+      "options": {
+        "makeup": {
+          "label": "EVENT_MAKEUP_ANSW",
+          "label_resolved": "Makeup",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TINK2_REW1",
+                "prompt_resolved": "[i]\"Well, yeah. No crap! Makeup IS better than an old book…\n\nHere's some lip gloss.\"[/i]",
+                "permanent_stats": {
+                  "cha": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_TINK2_REW2",
+                "prompt_resolved": "[i]\"And you know what's even better than makeup? Lip injections!\n\nHere, hold still…\"[/i]",
+                "permanent_stats": {
+                  "cha": "2"
+                }
+              }
+            }
+          }
+        },
+        "book": {
+          "label": "EVENT_SOMEOLDBOOK_ANSW",
+          "label_resolved": "Some Old Book",
+          "stat": "none",
+          "animation": "choice_misc",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_TINK2_REW3",
+                "prompt_resolved": "[i]\"Well, then go read you uggo library lady!\"[/i]",
+                "permanent_stats": {
+                  "int": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_TINK2_REW4",
+                "prompt_resolved": "[i]\"Well, I sure hope it's a book about how to fix that jacked up mug of yours, sister…\"[/i]",
+                "permanent_stats": {
+                  "int": "2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Tracy1": {
+    "intro": {
+      "title": "EVENT_TRACY_NAME",
+      "title_resolved": "Tracy",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "tracy",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_TRACY_QUES",
+      "prompt_resolved": "[i]\"Yeah, I got some stuff. How much are you willing to donate?\n\nIt's for a good cause…\"[/i]",
+      "options": {
+        "buy1": {
+          "label": "EVENT_BUY_ANSW",
+          "label_resolved": "Buy",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_one",
+          "stat_min": "1",
+          "stat_max": "1",
+          "good": {
+            "set_frame": "2",
+            "random_pool_consider_luck": [
+              {
+                "prompt": "EVENT_TRACY_REW1",
+                "prompt_resolved": "[i]\"Uh, here. Take this... You deserve it!\"[/i]",
+                "weight": "1",
+                "get_parasite_from_pool": "cursed_items",
+                "play_animation": "resultBad"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW2",
+                "prompt_resolved": "{catname} gets a random stat down… Temporarily.",
+                "weight": "1",
+                "self_status_next_fight": {
+                  "RandomStatUp": "-1"
+                },
+                "play_animation": "resultBad"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW3",
+                "prompt_resolved": "[i]\"Thank you for your donation.\"[/i]",
+                "weight": "1",
+                "play_animation": "resultConfused"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW3B",
+                "prompt_resolved": "[i]\"Here, have some food.\"[/i]",
+                "weight": "1",
+                "gain_food": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "prompt": "EVENT_TRACY_REW4",
+                "prompt_resolved": "{catname} gets a random stat up… Temporarily.",
+                "weight": "1",
+                "self_status_next_fight": {
+                  "RandomStatUp": "1"
+                }
+              },
+              {
+                "prompt": "EVENT_TRACY_REW5",
+                "prompt_resolved": "[i]\"Here. Have a pet squirrel.\"[/i]",
+                "weight": ".5",
+                "gain_familiar": "Squirrel"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW6",
+                "prompt_resolved": "[i]\"Here. Have a pet snake.\"[/i]",
+                "weight": ".5",
+                "gain_familiar": "Snake"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW7",
+                "prompt_resolved": "[i]\"Here. Have a pet frog.\"[/i]",
+                "weight": ".5",
+                "gain_familiar": "Toad"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW8",
+                "prompt_resolved": "[i]\"Here. Have a pet turtle.\"[/i]",
+                "weight": ".5",
+                "gain_familiar": "Turtle"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW9",
+                "prompt_resolved": "[i]\"Thank you for the donation… Here.\"[/i]",
+                "weight": "1",
+                "get_item_from_pool": "consumables"
+              }
+            ]
+          },
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_TRACY_REW10",
+            "prompt_resolved": "[i]\"You don't have enough money… Maybe try not being so greedy next time.\n\nYou know there are HUNDREDS of dying animals who need this cash a lot more than you, right?\n\nShame!\"[/i]"
+          }
+        },
+        "buy2": {
+          "label": "EVENT_BUY_ANSW",
+          "label_resolved": "Buy",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_ten",
+          "stat_min": "10",
+          "stat_max": "10",
+          "good": {
+            "set_frame": "2",
+            "random_pool_consider_luck": [
+              {
+                "prompt": "EVENT_TRACY_REW11",
+                "prompt_resolved": "[i]\"Thank you for your donation… Here.\"[/i]",
+                "weight": "1",
+                "get_item_from_pool": "consumables"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW12",
+                "prompt_resolved": "[i]\"I guess you can take this…\"[/i]",
+                "weight": "1",
+                "get_item_from_pool": "chapter"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW13",
+                "prompt_resolved": "[i]\"Uh, here…\"[/i]",
+                "weight": "1",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              }
+            ]
+          },
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_TRACY_REW14",
+            "prompt_resolved": "[i]\"You don't have enough money… Maybe try not being so greedy next time.\n\nYou know there are HUNDREDS of dying animals who need this cash a lot more than you, right?\n\nShame!\"[/i]"
+          }
+        },
+        "buy3": {
+          "label": "EVENT_BUY_ANSW",
+          "label_resolved": "Buy",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_twentyfive",
+          "stat_min": "25",
+          "stat_max": "25",
+          "good": {
+            "set_frame": "2",
+            "random_pool_consider_luck": [
+              {
+                "prompt": "EVENT_TRACY_REW15",
+                "prompt_resolved": "[i]\"Uh… Here. Have these!\"[/i]",
+                "weight": "1",
+                "get_item": "Percs"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW16",
+                "prompt_resolved": "[i]\"Uh… Here. Have these.\"[/i]",
+                "weight": "1",
+                "get_item_from_pool": "chapter"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW17",
+                "prompt_resolved": "[i]\"Uh, here…\"[/i]",
+                "weight": "1",
+                "get_item_from_pool": "chapter_rare"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW18",
+                "prompt_resolved": "[i]\"I guess you can have these…\"[/i]",
+                "weight": "1",
+                "get_full_item_set_from_pool": "common"
+              },
+              {
+                "prompt": "EVENT_TRACY_REW19",
+                "prompt_resolved": "[i]\"Thank you for the donation… Here.\"[/i]",
+                "weight": "1",
+                "level_up": "self"
+              }
+            ]
+          },
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_TRACY_REW20",
+            "prompt_resolved": "[i]\"You don't have enough money… Maybe try not being so greedy next time.\n\nYou know there are HUNDREDS of dying animals who need this cash a lot more than you, right?\n\nShame!\"[/i]"
+          }
+        },
+        "leave": {
+          "label": "EVENT_LEAVE_ANSW",
+          "label_resolved": "Leave",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_TRACY_REW21",
+            "prompt_resolved": "[i]\"Thanks for wasting my time…\"[/i]",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "OrganGrinder1": {
+    "intro": {
+      "title": "EVENT_ORGANGRINDER_NAME",
+      "title_resolved": "Organ Grinder",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "organgrinder",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ORGANGRINDER_QUES",
+      "prompt_resolved": "[i]\"I got itchies and wheezies here for you!\"[/i]",
+      "options": {
+        "itchies": {
+          "label": "EVENT_ITCHIES_ANSW",
+          "label_resolved": "Itchies",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_ORGANGRINDER_REW1",
+            "prompt_resolved": "[i]\"Itchies it is!\"[/i]",
+            "get_parasite_from_pool": "parasites"
+          }
+        },
+        "wheezies": {
+          "label": "EVENT_WHEEZIES_ANSW",
+          "label_resolved": "Wheezies",
+          "stat": "none",
+          "animation": "choice_misc",
+          "bad": {
+            "set_frame": "2",
+            "prompt": "EVENT_ORGANGRINDER_REW2",
+            "prompt_resolved": "[i]\"Wheezies it is!\"[/i]",
+            "gain_disorder_from_pool": "diseases"
+          }
+        },
+        "nothanks": {
+          "label": "EVENT_NOTHANKS_ANSW",
+          "label_resolved": "No thanks",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "set_frame": "3",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "prompt": "EVENT_ORGANGRINDER_REW3",
+            "prompt_resolved": "[i]\"YOU WILL REGRET THAT!!!!\"[/i]",
+            "next_event_from_set": {
+              "event": "Tragedy",
+              "count": "1",
+              "same_cat": "true"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Jack": {
+    "intro": {
+      "title": "EVENT_JACK_NAME",
+      "title_resolved": "Jack",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "jack",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_JACK_QUES",
+      "prompt_resolved": "[i]\"Spare some change to help my nona?\"[/i]",
+      "options": {
+        "donate_5": {
+          "label": "EVENT_DONATE_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_one",
+          "stat_min": "5",
+          "stat_max": "5",
+          "requirements": {
+            "counter_maximum": [
+              "WorldEventLegacyCounter_Jack",
+              "99"
+            ]
+          },
+          "good": {
+            "set_frame": "2",
+            "increment_legacy_counter": "WorldEventLegacyCounter_Jack",
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_Jack",
+                  "100"
+                ]
+              },
+              "reward": {
+                "prompt": "EVENT_JACK_REW4",
+                "prompt_resolved": "[i]\"What the heck! Nona says you are rich! Take this!\"[/i]",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": "rare"
+                  },
+                  {
+                    "get_item_from_pool": "very_rare"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_JACK_NOTENOUGHMONEY",
+            "prompt_resolved": "[i]\"You don't even have enough for that!\n\nNona says it's mean to get my hopes up.\"[/i]"
+          }
+        },
+        "donate_10": {
+          "label": "EVENT_DONATE_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_ten",
+          "stat_min": "10",
+          "stat_max": "10",
+          "requirements": {
+            "counter_maximum": [
+              "WorldEventLegacyCounter_Jack",
+              "99"
+            ]
+          },
+          "good": {
+            "set_frame": "3",
+            "increment_legacy_counter": "WorldEventLegacyCounter_Jack",
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_Jack",
+                  "100"
+                ]
+              },
+              "reward": {
+                "prompt": "EVENT_JACK_REW4",
+                "prompt_resolved": "[i]\"What the heck! Nona says you are rich! Take this!\"[/i]",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": "rare"
+                  },
+                  {
+                    "get_item_from_pool": "very_rare"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_JACK_NOTENOUGHMONEY",
+            "prompt_resolved": "[i]\"You don't even have enough for that!\n\nNona says it's mean to get my hopes up.\"[/i]"
+          }
+        },
+        "donate_20": {
+          "label": "EVENT_DONATE_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_twentyfive",
+          "stat_min": "20",
+          "stat_max": "20",
+          "requirements": {
+            "counter_maximum": [
+              "WorldEventLegacyCounter_Jack",
+              "99"
+            ]
+          },
+          "good": {
+            "set_frame": "2",
+            "increment_legacy_counter": "WorldEventLegacyCounter_Jack",
+            "conditional_reward": {
+              "requirements": {
+                "counter_minimum": [
+                  "WorldEventLegacyCounter_Jack",
+                  "100"
+                ]
+              },
+              "reward": {
+                "prompt": "EVENT_JACK_REW4",
+                "prompt_resolved": "[i]\"What the heck! Nona says you are rich! Take this!\"[/i]",
+                "play_animation": "resultVeryGood",
+                "random_pool": [
+                  {
+                    "get_item_from_pool": "rare"
+                  },
+                  {
+                    "get_item_from_pool": "very_rare"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "prompt": "EVENT_JACK_NOTENOUGHMONEY",
+            "prompt_resolved": "[i]\"You don't even have enough for that!\n\nNona says it's mean to get my hopes up.\"[/i]"
+          }
+        },
+        "donate_15": {
+          "label": "EVENT_DONATE_ANSW",
+          "label_resolved": "Donate",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_ten",
+          "stat_min": "15",
+          "stat_max": "15",
+          "requirements": {
+            "counter_minimum": [
+              "WorldEventLegacyCounter_Jack",
+              "100"
+            ]
+          },
+          "good": {
+            "set_frame": "2",
+            "increment_legacy_counter": "WorldEventLegacyCounter_Jack",
+            "prompt": "EVENT_JACK_REW4",
+            "prompt_resolved": "[i]\"What the heck! Nona says you are rich! Take this!\"[/i]",
+            "play_animation": "resultVeryGood",
+            "random_pool": [
+              {
+                "get_item_from_pool": "rare"
+              },
+              {
+                "get_item_from_pool": "very_rare"
+              }
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_JACK_NOTENOUGHMONEY",
+            "prompt_resolved": "[i]\"You don't even have enough for that!\n\nNona says it's mean to get my hopes up.\"[/i]"
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_JACK_LEAVE",
+            "prompt_resolved": "[i]\"See you next time I guess.\n\nI hope Nona will be okay.\"[/i]",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "StevenFetus": {
+    "intro": {
+      "title": "EVENT_STEVENFETUS_NAME",
+      "title_resolved": "Steven Fetus",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "steven_fetus",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_STEVENFETUS_QUES",
+      "prompt_resolved": "A small fetus floats before {catname} with an inquisitive look on its face.\n\nIts inky black figure feels familiar somehow, but {catname} can't remember why.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AdventureToken_StevenTryAgain3"
+          },
+          "reward": {
+            "prompt": "EVENT_STEVENFETUS_QUES4",
+            "prompt_resolved": "{catname} feels a relentless pull in the back of {his} mind like an itch that must be scratched.\n\n{He} must... not... flee..."
+          }
+        }
+      },
+      "options": {
+        "investigate": {
+          "label": "EVENT_INVESTIGATE_ANSW",
+          "label_resolved": "Investigate",
+          "stat": "int",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STEVENFETUS_REW1",
+                "prompt_resolved": "{catname} approaches the fetus inquisitively...\n\nIt pulls off a part of itself and attaches it onto {catname}'s skin!",
+                "random_mutation": {
+                  "count": "1",
+                  "asymmetric": "false",
+                  "tag": "extra"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_STEVENFETUS_REW2",
+                "prompt_resolved": "{catname} attempts to communicate with the strange hovering fetus.\n\nIt smirks and pulls out an even smaller fetus and throws it at {catname}!",
+                "learn_passive": "MiniMe"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_STEVENFETUS_REW3",
+                "prompt_resolved": "The fetus starts screaming at {catname}, going on incoherently about something that makes no sense to {him}.",
+                "increment_deja_vu": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_STEVENFETUS_REW4",
+                "prompt_resolved": "The strange fetus starts rambling on angrily about something incoherent to {catname}.\n\nThis whole experience feels oddly familiar like a bad dream {he} keeps having over and over...",
+                "increment_deja_vu": "2",
+                "random_mutation": {
+                  "count": "2",
+                  "tag": "extra"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "requirements": {
+            "not_has_token": "AdventureToken_StevenTryAgain3"
+          },
+          "good": {
+            "prompt": "EVENT_STEVENFETUS_REW5",
+            "prompt_resolved": "Something about the strange fetus feels offputting to {catname} so {he} leaves it alone.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          },
+          "bad": {
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ],
+            "conditional_reward": {
+              "requirements": {
+                "not_has_token": "AdventureToken_StevenTryAgain2"
+              },
+              "reward": {
+                "prompt": "EVENT_STEVENFETUS_REW5",
+                "prompt_resolved": "Something about the strange fetus feels offputting to {catname} so {he} leaves it alone.",
+                "set_adventure_token": "AdventureToken_StevenTryAgain",
+                "next_event_bonus": "-1"
+              }
+            },
+            "event_now_same_cat": "StevenFetus"
+          }
+        }
+      }
+    }
+  },
+  "DarkDen": {
+    "intro": {
+      "title": "EVENT_DARKDEN_NAME",
+      "title_resolved": "Dark Den",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "dark_den",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_DARKDEN_QUES",
+      "prompt_resolved": "{catname} finds a dark cave in the ground.\n\n{He} can smell the musky odor of a large animal, perhaps resting within the den.",
+      "options": {
+        "investigate": {
+          "label": "EVENT_INVESTIGATE_ANSW",
+          "label_resolved": "Investigate",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_DARKDEN_REW1",
+                "prompt_resolved": "{catname} enters the den and finds a sleepy bear and befriends it!",
+                "gain_familiar": "CharmedBear"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_DARKDEN_REW2",
+                "prompt_resolved": "{catname} finds a strange glowing bear within the den. It saunters out and greets {him} with a very warm and furry hug.\n\n{catname} feels {his} body shift as it takes on a bear-like appearance!",
+                "mutation": {
+                  "legs": "322"
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_DARKDEN_REW3",
+                "prompt_resolved": "A large angry bear comes charging out as {catname} approaches the den!",
+                "spawn_unit_next_fight": {
+                  "object": "MaddenedBear",
+                  "count": "1",
+                  "spawn_side": "anywhere"
+                }
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_DARKDEN_REW4",
+                "prompt_resolved": "{catname} enters the dimly lit den and pokes around...\n\nThe party hears a terrifying roar and {catname} sprints out of the cave, terrified, with a massive glowing bear in hot pursuit!",
+                "battle": "events/GlowingBear"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_DARKDEN_REW5",
+            "prompt_resolved": "{catname} stays clear of the ominous den.\n\nBest to not awaken whatever is sleeping inside!",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "WhiteRabbit": {
+    "intro": {
+      "title": "EVENT_WHITERABBIT_NAME",
+      "title_resolved": "White Rabbit",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "white_rabbit",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_WHITERABBIT_QUES",
+      "prompt_resolved": "{catname} finds a curious looking white rabbit.\n\nIt stares at {him} with bright red eyes...",
+      "options": {
+        "charm": {
+          "label": "EVENT_CHARM_ANSW",
+          "label_resolved": "Charm",
+          "stat": "cha",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_WHITERABBIT_REW1",
+                "prompt_resolved": "{catname} licks the rabbit on the ear and rubs its belly.\n\nThe rabbit, perhaps confused at the odd gesture, barfs up a pile of bones.\n\n{catname} didn't think rabbits were carnivores but apparently this one is?",
+                "get_item_from_pool": "bone_equipment"
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_WHITERABBIT_REW2",
+                "prompt_resolved": "The rabbit looks angrily at {catname} as {he} approaches, but warms up to {him} after a lot of kisses.\n\nThe rabbit seems a bit temperamental, but it tags along as a friend regardless!",
+                "gain_familiar": "CharmedWhiteRabbit"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_WHITERABBIT_REW3",
+                "prompt_resolved": "{catname} tries to tame the wild rabbit but it viciously bites {him}!",
+                "injury": "random",
+                "damage": [
+                  "5",
+                  "8"
+                ]
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_WHITERABBIT_REW4",
+                "prompt_resolved": "{catname} tries to befriend the rabbit, but it becomes enraged!\n\nThe white rabbit begins foaming at the mouth and charges the party at blinding speed!",
+                "battle": "events/WhiteRabbit.lvl"
+              }
+            }
+          }
+        },
+        "follow": {
+          "label": "EVENT_FOLLOW_ANSW",
+          "label_resolved": "Follow",
+          "stat": "spd",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_WHITERABBIT_REW5",
+                "prompt_resolved": "The rabbit leads {catname} to a secret stash of coins!",
+                "gain_coins": [
+                  "5",
+                  "10"
+                ]
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_WHITERABBIT_REW6",
+                "prompt_resolved": "{catname} follows the white rabbit down into a hole where it leads {him} to a secret treasure stash!",
+                "gain_coins": [
+                  "10",
+                  "20"
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "6",
+                "prompt": "EVENT_WHITERABBIT_REW7",
+                "prompt_resolved": "{catname} follows the rabbit down into a burrow where it suddenly tears into {him} with its teeth!",
+                "injury": "random",
+                "damage": [
+                  "5",
+                  "8"
+                ]
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_WHITERABBIT_REW8",
+                "prompt_resolved": "Following the white rabbit down into its den, {catname} suddenly finds {himself} surrounded by corpses of numerous cats...\n\nRealizing {his} mistake, {catname} turns to leave but it is too late!",
+                "battle": "events/WhiteRabbit.lvl"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_WHITERABBIT_REW9",
+            "prompt_resolved": "There's a suspicious look in the rabbit's eyes and {catname} isn't having any of it.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "MysteriousMachine": {
+    "requirements": {
+      "minimum_party_size": "2",
+      "not_on_quest": "1"
+    },
+    "intro": {
+      "title": "EVENT_MYSTERIOUSMACHINE_NAME",
+      "title_resolved": "Mysterious Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_machine",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSMACHINE_QUES",
+      "prompt_resolved": "{catname} finds a mysterious machine with paper sticking out of it.",
+      "options": {
+        "turnon": {
+          "label": "EVENT_MYSTERIOUSMACHINE_TURNITON_ANSW",
+          "label_resolved": "Turn it on",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSMACHINE_REW1",
+                "prompt_resolved": "{catname} tries to get the machine working by hitting it but nothing happens.\n\n{catname} tries again but with significantly more fervor and obliterates it.",
+                "set_frame": "2",
+                "get_item": "Technology"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSMACHINE_REW2",
+                "prompt_resolved": "{catname} finds a switch at the back and turns it on.\n\nIt makes a series of loud beeps and mechanical sounds...",
+                "set_frame": "4",
+                "event_now": "MysteriousMachine_Good"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSMACHINE_REW3",
+                "prompt_resolved": "{catname} tries pushing the buttons and sticks {his} claws into various holes...\n\n{catname} howls in fright as electricity arcs from the machine and stuns {him}!",
+                "set_frame": "3",
+                "damage": "1",
+                "self_status_next_fight": {
+                  "Stun": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSMACHINE_REW4",
+                "prompt_resolved": "{catname} pushes various buttons and gives the machine a good whack.\n\nIt purrs to life with loud angry sounding beeps!",
+                "set_frame": "4",
+                "event_now": "MysteriousMachine_Bad"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_MYSTERIOUSMACHINE_REW5",
+            "prompt_resolved": "{catname} opts to leave the weird machine alone.\n\n{He}'s not sure what the machine does, but paper doesn't sound very useful.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "BodyOfGlorg": {
+    "intro": {
+      "title": "EVENT_BODYOFGLORG_NAME",
+      "title_resolved": "Body of Glorg",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "body_of_glorg",
+      "choose_cat_with_parasite": "true",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_BODYOFGLORG_QUES",
+      "prompt_resolved": "{catname} sees before {him} a writhing mass of parasites in the form of a headless body...",
+      "options": {
+        "give_parasite": {
+          "label": "EVENT_BODYOFGLORG_PARASITE_ANSW",
+          "label_resolved": "Give parasite",
+          "requirements": {
+            "cat_has_parasite": "true"
+          },
+          "good": {
+            "set_frame": "2",
+            "prompt": "EVENT_BODYOFGLORG_REW1",
+            "prompt_resolved": "The writhing mass tears a parasite off {catname} and absorbs it into itself...\n\nGlorg is pleased!",
+            "lose_item": "parasite",
+            "event_now_same_cat": "BodyOfGlorg_Gift"
+          },
+          "bad": {
+            "set_frame": "3",
+            "prompt": "EVENT_BODYOFGLORG_REW2",
+            "prompt_resolved": "The writhing mass tears a parasite off {catname} and absorbs it into itself...\n\nNothing else seems to happen.",
+            "lose_item": "parasite"
+          }
+        },
+        "fight": {
+          "label": "EVENT_FIGHT_ANSW",
+          "label_resolved": "Fight",
+          "stat": "str",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BODYOFGLORG_REW3",
+                "prompt_resolved": "{catname} strikes the mass of parasites and saves two maggots that were trapped inside!",
+                "gain_familiar": "CharmedMaggot"
+              },
+              "rare": {
+                "prompt": "EVENT_BODYOFGLORG_REW4",
+                "prompt_resolved": "{catname} attacks the writhing mass, scattering parasites onto the floor around {him}...",
+                "learn_passive": "Host",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_BODYOFGLORG_REW5",
+                "prompt_resolved": "{catname} strikes the strange body.\n\nWhen {he} does so, a parasite from within the mass latches onto {him}!",
+                "get_parasite_from_pool": "parasites"
+              },
+              "rare": {
+                "prompt": "EVENT_BODYOFGLORG_REW6",
+                "prompt_resolved": "{catname} dives at the writhing mass, attacking with {his} paws and teeth...\n\n{He} sinks into the amorphous body, becoming covered in parasites!",
+                "get_parasite_from_pool": "parasites"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_BODYOFGLORG_REW7",
+            "prompt_resolved": "{catname} steers clear of the strange amorphous creature.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

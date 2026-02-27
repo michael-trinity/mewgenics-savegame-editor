@@ -1,0 +1,4837 @@
+{
+  "ScrapHat": {
+    "name": "ARMOR_SCRAPMETALHAT_NAME",
+    "name_resolved": "Scrap Metal Hat",
+    "desc": "ARMOR_SCRAPMETALHAT_DESC",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "12",
+    "set": "Scrap",
+    "shield": "4",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "ScrapMask": {
+    "name": "ARMOR_SCRAPMETALMASK_NAME",
+    "name_resolved": "Scrap Metal Mask",
+    "desc": "ARMOR_SCRAPMETALMASK_DESC",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "12",
+    "set": "Scrap",
+    "shield": "4",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "ScrapArmor": {
+    "name": "ARMOR_SCRAPMETALARMOR_NAME",
+    "name_resolved": "Scrap Metal Armor",
+    "desc": "ARMOR_SCRAPMETALARMOR_DESC",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "2",
+    "set": "Scrap",
+    "shield": "4",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "LeatherHat": {
+    "name": "ARMOR_LEATHERHAT_NAME",
+    "name_resolved": "Leather Cap",
+    "desc": "ARMOR_LEATHERHAT_DESC",
+    "desc_resolved": "+1 Brace.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "23",
+    "set": "Leather",
+    "shield": "1",
+    "passives": {
+      "Brace": "1"
+    }
+  },
+  "LeatherMask": {
+    "name": "ARMOR_LEATHERMASK_NAME",
+    "name_resolved": "Leather Mask",
+    "desc": "ARMOR_LEATHERMASK_DESC",
+    "desc_resolved": "+1 Brace.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "32",
+    "set": "Leather",
+    "shield": "1",
+    "passives": {
+      "Brace": "1"
+    }
+  },
+  "LeatherArmor": {
+    "name": "ARMOR_LEATHERARMOR_NAME",
+    "name_resolved": "Leather Choker",
+    "desc": "ARMOR_LEATHERARMOR_DESC",
+    "desc_resolved": "+1 Brace.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "26",
+    "set": "Leather",
+    "shield": "1",
+    "passives": {
+      "Brace": "1"
+    }
+  },
+  "RagHood": {
+    "name": "ARMOR_RAGHAT_NAME",
+    "name_resolved": "Rag Hood",
+    "desc": "ARMOR_RAGHAT_DESC",
+    "desc_resolved": "+15% Dodge Chance.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "6",
+    "set": "Rag",
+    "passives": {
+      "ArmorDodgeChance": "15%"
+    }
+  },
+  "RagMask": {
+    "name": "ARMOR_RAGMASK_NAME",
+    "name_resolved": "Rag Mask",
+    "desc": "ARMOR_RAGMASK_DESC",
+    "desc_resolved": "+15% Dodge Chance.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "13",
+    "set": "Rag",
+    "passives": {
+      "ArmorDodgeChance": "15%"
+    }
+  },
+  "RagArmor": {
+    "name": "ARMOR_RAGARMOR_NAME",
+    "name_resolved": "Rags",
+    "desc": "ARMOR_RAGARMOR_DESC",
+    "desc_resolved": "+15% Dodge Chance.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "3",
+    "set": "Rag",
+    "passives": {
+      "ArmorDodgeChance": "15%"
+    }
+  },
+  "RubberHat": {
+    "name": "ARMOR_RUBBERHAT_NAME",
+    "name_resolved": "Rubber Hat",
+    "desc": "ARMOR_RUBBERHAT_DESC",
+    "desc_resolved": "Units that contact you are knocked back 2 tiles.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "10",
+    "set": "Rubber",
+    "shield": "2",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "2"
+      }
+    }
+  },
+  "RubberMask": {
+    "name": "ARMOR_RUBBERMASK_NAME",
+    "name_resolved": "Rubber Mask",
+    "desc": "ARMOR_RUBBERMASK_DESC",
+    "desc_resolved": "Units that contact you are knocked back 2 tiles.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "14",
+    "set": "Rubber",
+    "shield": "2",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "2"
+      }
+    }
+  },
+  "RubberArmor": {
+    "name": "ARMOR_RUBBERARMOR_NAME",
+    "name_resolved": "Tire",
+    "desc": "ARMOR_RUBBERARMOR_DESC",
+    "desc_resolved": "Units that contact you are knocked back 2 tiles.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "4",
+    "set": "Rubber",
+    "shield": "2",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "2"
+      }
+    }
+  },
+  "CatHideHat": {
+    "name": "ARMOR_CATHIDEHAT_NAME",
+    "name_resolved": "Cathide Hat",
+    "desc": "ARMOR_CATHIDEHAT_DESC",
+    "desc_resolved": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "11",
+    "set": "CatHide",
+    "shield": "2",
+    "passives": {
+      "HealthRegenUp": "1",
+      "SpawnEachTurn": {
+        "chance": "5%",
+        "object": "CharmedFlea",
+        "stack_key": "CATHIDE"
+      }
+    }
+  },
+  "CatHideMask": {
+    "name": "ARMOR_CATHIDEMASK_NAME",
+    "name_resolved": "Cathide Mask",
+    "desc": "ARMOR_CATHIDEMASK_DESC",
+    "desc_resolved": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "15",
+    "set": "CatHide",
+    "shield": "2",
+    "passives": {
+      "HealthRegenUp": "1",
+      "SpawnEachTurn": {
+        "chance": "5%",
+        "object": "CharmedFlea",
+        "stack_key": "CATHIDE"
+      }
+    }
+  },
+  "CatHideArmor": {
+    "name": "ARMOR_CATHIDEARMOR_NAME",
+    "name_resolved": "Cathide Armor",
+    "desc": "ARMOR_CATHIDEARMOR_DESC",
+    "desc_resolved": "+1 Health Regen.\n5% chance to spawn a Flea Familiar at the end of your turn.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "5",
+    "set": "CatHide",
+    "shield": "2",
+    "passives": {
+      "HealthRegenUp": "1",
+      "SpawnEachTurn": {
+        "chance": "5%",
+        "object": "CharmedFlea",
+        "stack_key": "CATHIDE"
+      }
+    }
+  },
+  "ThickHide": {
+    "name": "ARMOR_THICKHIDE_NAME",
+    "name_resolved": "Thick Hide",
+    "desc": "ARMOR_THICKHIDE_DESC",
+    "desc_resolved": "+1 Brace. Immunity to Slow and Freeze.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "161",
+    "set": "CatHide",
+    "shield": "3",
+    "passives": {
+      "Brace": "1",
+      "StatusImmunity": [
+        "Freeze,",
+        "Slow"
+      ]
+    }
+  },
+  "GutsHeart": {
+    "name": "ARMOR_GUTSHEART_NAME",
+    "name_resolved": "Heart",
+    "desc": "ARMOR_GUTSHEART_DESC",
+    "desc_resolved": "+1 Health Regen.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "19",
+    "set": "Guts",
+    "con": "2",
+    "passives": {
+      "HealthRegenUp": "1"
+    }
+  },
+  "GutsLiver": {
+    "name": "ARMOR_GUTSLIVER_NAME",
+    "name_resolved": "Liver",
+    "desc": "ARMOR_GUTSLIVER_DESC",
+    "desc_resolved": "+1 Health Regen.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "20",
+    "set": "Guts",
+    "con": "2",
+    "passives": {
+      "HealthRegenUp": "1"
+    }
+  },
+  "GutsIntestines": {
+    "name": "ARMOR_GUTSINTESTINES_NAME",
+    "name_resolved": "Intestines",
+    "desc": "ARMOR_GUTSINTESTINES_DESC",
+    "desc_resolved": "+1 Health Regen.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "25",
+    "set": "Guts",
+    "con": "2",
+    "passives": {
+      "HealthRegenUp": "1"
+    }
+  },
+  "BonesHat": {
+    "name": "ARMOR_BONESHAT_NAME",
+    "name_resolved": "Skull Cap",
+    "desc": "ARMOR_BONESHAT_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen it breaks, gain +1 [img:int] and +3 Health Regen for the rest of the battle.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "5",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "BoneArmorPassive": "1",
+      "StatusOnBreak": {
+        "HealthRegenUp": "3",
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "BonesMask": {
+    "name": "ARMOR_BONESMASK_NAME",
+    "name_resolved": "Jawbone",
+    "desc": "ARMOR_BONESMASK_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen it breaks, gain +1 [img:str] and +3 Health Regen for the rest of the battle.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "24",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "BoneArmorPassive": "1",
+      "StatusOnBreak": {
+        "HealthRegenUp": "3",
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "BonesNeck": {
+    "name": "ARMOR_BONESARMOR_NAME",
+    "name_resolved": "Bone Necklace",
+    "desc": "ARMOR_BONESARMOR_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen it breaks, gain +1 [img:dex] and +3 Health Regen for the rest of the battle.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "18",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "BoneArmorPassive": "1",
+      "StatusOnBreak": {
+        "HealthRegenUp": "3",
+        "DexterityUp": "1"
+      }
+    }
+  },
+  "DirtClodHat": {
+    "name": "ARMOR_DIRTHAT_NAME",
+    "name_resolved": "Dirt Clod Hat",
+    "desc": "ARMOR_DIRTHAT_DESC",
+    "desc_resolved": "+2 Mana Regen, +2 Health Regen.\nFragile and Brittle while wet.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "22",
+    "set": "DirtClod",
+    "passives": {
+      "AddManaRegen": "2",
+      "HealthRegenUp": "2",
+      "FragileDuringElement": "water",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "DirtClodMask": {
+    "name": "ARMOR_DIRTMASK_NAME",
+    "name_resolved": "Dirt Clod Mask",
+    "desc": "ARMOR_DIRTMASK_DESC",
+    "desc_resolved": "+2 Mana Regen, +2 Health Regen.\nFragile and Brittle while wet.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "31",
+    "set": "DirtClod",
+    "passives": {
+      "AddManaRegen": "2",
+      "HealthRegenUp": "2",
+      "FragileDuringElement": "water",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "DirtClodNeck": {
+    "name": "ARMOR_DIRTARMOR_NAME",
+    "name_resolved": "Dirt Clod Necklace",
+    "desc": "ARMOR_DIRTARMOR_DESC",
+    "desc_resolved": "+2 Mana Regen, +2 Health Regen.\nFragile and Brittle while wet.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "25",
+    "set": "DirtClod",
+    "passives": {
+      "AddManaRegen": "2",
+      "HealthRegenUp": "2",
+      "FragileDuringElement": "water",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "BarbedHat": {
+    "name": "ARMOR_BARBEDHAT_NAME",
+    "name_resolved": "Barbed Hat",
+    "desc": "ARMOR_BARBEDHAT_DESC",
+    "desc_resolved": "+1 Damage, +1 Thorns, -1 max HP.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "21",
+    "set": "Barbed",
+    "max_health": "-1",
+    "passives": {
+      "Thorns": "1",
+      "DamageUp": "1",
+      "Metal": "1"
+    }
+  },
+  "BarbedMask": {
+    "name": "ARMOR_BARBEDMASK_NAME",
+    "name_resolved": "Barbed Mask",
+    "desc": "ARMOR_BARBEDMASK_DESC",
+    "desc_resolved": "+1 Damage, +1 Thorns, -1 max HP.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "26",
+    "set": "Barbed",
+    "max_health": "-1",
+    "passives": {
+      "Thorns": "1",
+      "DamageUp": "1",
+      "Metal": "1"
+    }
+  },
+  "BarbedNeck": {
+    "name": "ARMOR_BARBEDARMOR_NAME",
+    "name_resolved": "Barbed Necklace",
+    "desc": "ARMOR_BARBEDARMOR_DESC",
+    "desc_resolved": "+1 Damage, +1 Thorns, -1 max HP.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "20",
+    "set": "Barbed",
+    "max_health": "-1",
+    "passives": {
+      "Thorns": "1",
+      "DamageUp": "1",
+      "Metal": "1"
+    }
+  },
+  "SludgeHat": {
+    "name": "ARMOR_SLUDGEHAT_NAME",
+    "name_resolved": "Sludge Hat",
+    "desc": "ARMOR_SLUDGEHAT_DESC",
+    "kind": "head",
+    "frame": "14",
+    "set": "Sludge",
+    "cursed": "true",
+    "shield": "1",
+    "cha": "-1"
+  },
+  "SludgeMask": {
+    "name": "ARMOR_SLUDGEMASK_NAME",
+    "name_resolved": "Sludge Mask",
+    "desc": "ARMOR_SLUDGEMASK_DESC",
+    "kind": "face",
+    "frame": "23",
+    "set": "Sludge",
+    "cursed": "true",
+    "shield": "1",
+    "cha": "-1"
+  },
+  "SludgeNeck": {
+    "name": "ARMOR_SLUDGEARMOR_NAME",
+    "name_resolved": "Sludge Necklace",
+    "desc": "ARMOR_SLUDGEARMOR_DESC",
+    "kind": "neck",
+    "frame": "14",
+    "set": "Sludge",
+    "cursed": "true",
+    "shield": "1",
+    "cha": "-1"
+  },
+  "CoolGlasses": {
+    "name": "ARMOR_COOLMASK_NAME",
+    "name_resolved": "Cool Glasses",
+    "desc": "ARMOR_COOLMASK_DESC",
+    "desc_resolved": "Fragile",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "10",
+    "set": "Cool",
+    "cha": "2",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "CoolShirt": {
+    "name": "ARMOR_COOLARMOR_NAME",
+    "name_resolved": "Cool Shirt",
+    "desc": "ARMOR_COOLARMOR_DESC",
+    "desc_resolved": "Fragile",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "36",
+    "set": "Cool",
+    "cha": "2",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "CoolHat": {
+    "name": "ARMOR_COOLHAT_NAME",
+    "name_resolved": "Cool Hat",
+    "desc": "ARMOR_COOLHAT_DESC",
+    "desc_resolved": "Fragile",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "39",
+    "set": "Cool",
+    "cha": "2",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "PaperHat": {
+    "name": "ARMOR_PAPERHAT_NAME",
+    "name_resolved": "Paper Hat",
+    "desc": "ARMOR_PAPERHAT_DESC",
+    "desc_resolved": "+1 Bleed Thorns.\nYour basic attack inflicts Bleed.\nFragile, Brittle, Flammable, melts in water.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "40",
+    "set": "Paper",
+    "passives": {
+      "BleedThorns": "1",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      },
+      "Flammable": "1",
+      "BreakOnElement": "water",
+      "Fragile": "1",
+      "Brittle": "1"
+    }
+  },
+  "PaperMask": {
+    "name": "ARMOR_PAPERMASK_NAME",
+    "name_resolved": "Paper Mask",
+    "desc": "ARMOR_PAPERMASK_DESC",
+    "desc_resolved": "+1 Bleed Thorns.\nYour basic attack inflicts Bleed.\nFragile, Brittle, Flammable, melts in water.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "46",
+    "set": "Paper",
+    "passives": {
+      "BleedThorns": "1",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      },
+      "Flammable": "1",
+      "BreakOnElement": "water",
+      "Fragile": "1",
+      "Brittle": "1"
+    }
+  },
+  "PaperArmor": {
+    "name": "ARMOR_PAPERARMOR_NAME",
+    "name_resolved": "Paper Shoulder Pads",
+    "desc": "ARMOR_PAPERARMOR_DESC",
+    "desc_resolved": "+1 Bleed Thorns.\nYour basic attack inflicts Bleed.\nFragile, Brittle, Flammable, melts in water.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "37",
+    "set": "Paper",
+    "passives": {
+      "BleedThorns": "1",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      },
+      "Flammable": "1",
+      "BreakOnElement": "water",
+      "Fragile": "1",
+      "Brittle": "1"
+    }
+  },
+  "CardboardHat": {
+    "name": "ARMOR_CARDBOARDHAT_NAME",
+    "name_resolved": "Cardboard Hat",
+    "desc": "ARMOR_CARDBOARDHAT_DESC",
+    "desc_resolved": "Fragile, Flammable, Brittle when wet.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "41",
+    "set": "Cardboard",
+    "shield": "2",
+    "passives": {
+      "Flammable": "1",
+      "Fragile": "1",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "CardboardMask": {
+    "name": "ARMOR_CARDBOARDMASK_NAME",
+    "name_resolved": "Cardboard Mask",
+    "desc": "ARMOR_CARDBOARDMASK_DESC",
+    "desc_resolved": "Fragile, Flammable, Brittle when wet.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "47",
+    "set": "Cardboard",
+    "shield": "2",
+    "passives": {
+      "Flammable": "1",
+      "Fragile": "1",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "CardboardArmor": {
+    "name": "ARMOR_CARDBOARDARMOR_NAME",
+    "name_resolved": "Cardboard Necklace",
+    "desc": "ARMOR_CARDBOARDARMOR_DESC",
+    "desc_resolved": "Fragile, Flammable, Brittle when wet.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "38",
+    "set": "Cardboard",
+    "shield": "2",
+    "passives": {
+      "Flammable": "1",
+      "Fragile": "1",
+      "BrittleDuringElement": "water"
+    }
+  },
+  "UsedHat": {
+    "name": "ARMOR_USEDHAT_NAME",
+    "name_resolved": "Used Hat",
+    "desc": "ARMOR_USEDHAT_DESC",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "31",
+    "set": "Used",
+    "shield": "1"
+  },
+  "UsedMask": {
+    "name": "ARMOR_USEDMASK_NAME",
+    "name_resolved": "Used Glasses",
+    "desc": "ARMOR_USEDMASK_DESC",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "38",
+    "set": "Used",
+    "shield": "1"
+  },
+  "UsedArmor": {
+    "name": "ARMOR_USEDARMOR_NAME",
+    "name_resolved": "Used Shirt",
+    "desc": "ARMOR_USEDARMOR_DESC",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "27",
+    "set": "Used",
+    "shield": "1"
+  },
+  "WoodHat": {
+    "name": "ARMOR_WOODHAT_NAME",
+    "name_resolved": "Wood Hat",
+    "desc": "ARMOR_WOODHAT_DESC",
+    "desc_resolved": "+1 Thorns.\nFragile, Flammable.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "33",
+    "set": "Wood",
+    "shield": "2",
+    "passives": {
+      "Thorns": "1",
+      "Fragile": "1",
+      "Flammable": "2"
+    }
+  },
+  "WoodMask": {
+    "name": "ARMOR_WOODMASK_NAME",
+    "name_resolved": "Wood Mask",
+    "desc": "ARMOR_WOODMASK_DESC",
+    "desc_resolved": "+1 Thorns.\nFragile, Flammable.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "40",
+    "set": "Wood",
+    "shield": "2",
+    "passives": {
+      "Thorns": "1",
+      "Fragile": "1",
+      "Flammable": "2"
+    }
+  },
+  "WoodArmor": {
+    "name": "ARMOR_WOODARMOR_NAME",
+    "name_resolved": "Wood Shoulder Pads",
+    "desc": "ARMOR_WOODARMOR_DESC",
+    "desc_resolved": "+1 Thorns.\nFragile, Flammable.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "29",
+    "set": "Wood",
+    "shield": "2",
+    "passives": {
+      "Thorns": "1",
+      "Fragile": "1",
+      "Flammable": "2"
+    }
+  },
+  "RecycledHat": {
+    "name": "ARMOR_RECYCLEDHAT_NAME",
+    "name_resolved": "Recycled Hat",
+    "desc": "ARMOR_RECYCLEDHAT_DESC",
+    "desc_resolved": "Brittle. Find a common item when this breaks.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "34",
+    "set": "Recycled",
+    "shield": "2",
+    "passives": {
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "FindItemFromPool": "common"
+      }
+    }
+  },
+  "RecycledMask": {
+    "name": "ARMOR_RECYCLEDMASK_NAME",
+    "name_resolved": "Recycled Mask",
+    "desc": "ARMOR_RECYCLEDMASK_DESC",
+    "desc_resolved": "Brittle. Find a common item when this breaks.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "41",
+    "set": "Recycled",
+    "shield": "2",
+    "passives": {
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "FindItemFromPool": "common"
+      }
+    }
+  },
+  "RecycledArmor": {
+    "name": "ARMOR_RECYCLEDARMOR_NAME",
+    "name_resolved": "Recycled Necklace",
+    "desc": "ARMOR_RECYCLEDARMOR_DESC",
+    "desc_resolved": "Brittle. Find a common item when this breaks.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "30",
+    "set": "Recycled",
+    "shield": "2",
+    "passives": {
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "FindItemFromPool": "common"
+      },
+      "Metal": "1"
+    }
+  },
+  "RottenHat": {
+    "name": "ARMOR_ROTTENHAT_NAME",
+    "name_resolved": "Rotten Meat Hat",
+    "desc": "ARMOR_ROTTENHAT_DESC",
+    "desc_resolved": "Spawn a Charmed Maggot or Fly when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "35",
+    "set": "Rotten",
+    "cha": "-1",
+    "passives": {
+      "SpawnEachTurn": {
+        "chance": "100%",
+        "object": [
+          "CharmedFly",
+          "CharmedMaggot"
+        ]
+      }
+    }
+  },
+  "RottenMask": {
+    "name": "ARMOR_ROTTENMASK_NAME",
+    "name_resolved": "Rotten Meat Mask",
+    "desc": "ARMOR_ROTTENMASK_DESC",
+    "desc_resolved": "Spawn a Charmed Maggot or Fly when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "42",
+    "set": "Rotten",
+    "cha": "-1",
+    "passives": {
+      "SpawnEachTurn": {
+        "chance": "100%",
+        "object": [
+          "CharmedFly",
+          "CharmedMaggot"
+        ]
+      }
+    }
+  },
+  "RottenArmor": {
+    "name": "ARMOR_ROTTENARMOR_NAME",
+    "name_resolved": "Rotten Meat Armor",
+    "desc": "ARMOR_ROTTENARMOR_DESC",
+    "desc_resolved": "Spawn a Charmed Maggot or Fly when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "31",
+    "set": "Rotten",
+    "cha": "-1",
+    "passives": {
+      "SpawnEachTurn": {
+        "chance": "100%",
+        "object": [
+          "CharmedFly",
+          "CharmedMaggot"
+        ]
+      }
+    }
+  },
+  "JankAlloyHat": {
+    "name": "ARMOR_JANKARMOR_NAME",
+    "name_resolved": "Jank Alloy Armor",
+    "desc": "ARMOR_JANKARMOR_DESC",
+    "desc_resolved": "+1 Brace.\nBrittle.",
+    "kind": "head",
+    "frame": "42",
+    "set": "JankAlloy",
+    "shield": "2",
+    "passives": {
+      "Brace": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "JankAlloyMask": {
+    "name": "ARMOR_JANKMASK_NAME",
+    "name_resolved": "Jank Alloy Mask",
+    "desc": "ARMOR_JANKMASK_DESC",
+    "desc_resolved": "+1 Brace.\nBrittle.",
+    "kind": "face",
+    "frame": "48",
+    "set": "JankAlloy",
+    "shield": "2",
+    "passives": {
+      "Brace": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "JankAlloyArmor": {
+    "name": "ARMOR_JANKHAT_NAME",
+    "name_resolved": "Jank Alloy Hat",
+    "desc": "ARMOR_JANKHAT_DESC",
+    "desc_resolved": "+1 Brace.\nBrittle.",
+    "kind": "neck",
+    "frame": "39",
+    "set": "JankAlloy",
+    "shield": "2",
+    "passives": {
+      "Brace": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AlloyHat": {
+    "name": "ARMOR_ALLOYMASK_NAME",
+    "name_resolved": "Alloy Mask",
+    "desc": "ARMOR_ALLOYMASK_DESC",
+    "desc_resolved": "+1 Brace, +2 Thorns.\nBrittle.",
+    "kind": "head",
+    "frame": "43",
+    "set": "Alloy",
+    "shield": "3",
+    "passives": {
+      "Brace": "1",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AlloyMask": {
+    "name": "ARMOR_ALLOYMASK_NAME",
+    "name_resolved": "Alloy Mask",
+    "desc": "ARMOR_ALLOYMASK_DESC",
+    "desc_resolved": "+1 Brace, +2 Thorns.\nBrittle.",
+    "kind": "face",
+    "frame": "49",
+    "set": "Alloy",
+    "shield": "3",
+    "passives": {
+      "Brace": "1",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AlloyArmor": {
+    "name": "ARMOR_ALLOYARMOR_NAME",
+    "name_resolved": "Alloy Armor",
+    "desc": "ARMOR_ALLOYARMOR_DESC",
+    "desc_resolved": "+1 Brace, +2 Thorns.\nBrittle.",
+    "kind": "neck",
+    "frame": "40",
+    "set": "Alloy",
+    "shield": "3",
+    "passives": {
+      "Brace": "1",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AdvancedAlloyHat": {
+    "name": "ARMOR_ADVANCEDHAT_NAME",
+    "name_resolved": "Advanced Alloy Hat",
+    "desc": "ARMOR_ADVANCEDHAT_DESC",
+    "desc_resolved": "+2 Brace, +2 Thorns.\nBrittle.",
+    "kind": "head",
+    "frame": "44",
+    "set": "AdvancedAlloy",
+    "shield": "4",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AdvancedAlloyMask": {
+    "name": "ARMOR_ADVANCEDMASK_NAME",
+    "name_resolved": "Advanced Alloy Mask",
+    "desc": "ARMOR_ADVANCEDMASK_DESC",
+    "desc_resolved": "+2 Brace, +2 Thorns.\nBrittle.",
+    "kind": "face",
+    "frame": "50",
+    "set": "AdvancedAlloy",
+    "shield": "4",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "AdvancedAlloyArmor": {
+    "name": "ARMOR_ADVANCEDARMOR_NAME",
+    "name_resolved": "Advanced Alloy Armor",
+    "desc": "ARMOR_ADVANCEDARMOR_DESC",
+    "desc_resolved": "+2 Brace, +2 Thorns.\nBrittle.",
+    "kind": "neck",
+    "frame": "41",
+    "set": "AdvancedAlloy",
+    "shield": "4",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "2",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "EliteAlloyHat": {
+    "name": "ARMOR_ELITEHAT_NAME",
+    "name_resolved": "Elite Alloy Hat",
+    "desc": "ARMOR_ELITEHAT_DESC",
+    "desc_resolved": "+2 Brace, +3 Thorns, All Stats Up 1.\nBrittle.",
+    "kind": "head",
+    "frame": "45",
+    "set": "EliteAlloy",
+    "shield": "5",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "3",
+      "AllStatsUp": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "EliteAlloyMask": {
+    "name": "ARMOR_ELITEMASK_NAME",
+    "name_resolved": "Elite Alloy Mask",
+    "desc": "ARMOR_ELITEMASK_DESC",
+    "desc_resolved": "+2 Brace, +3 Thorns, All Stats Up 1.\nBrittle.",
+    "kind": "face",
+    "frame": "51",
+    "set": "EliteAlloy",
+    "shield": "5",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "3",
+      "AllStatsUp": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "EliteAlloyArmor": {
+    "name": "ARMOR_ELITEARMOR_NAME",
+    "name_resolved": "Elite Alloy Armor",
+    "desc": "ARMOR_ELITEARMOR_DESC",
+    "desc_resolved": "+2 Brace, +3 Thorns, All Stats Up 1.\nBrittle.",
+    "kind": "neck",
+    "frame": "42",
+    "set": "EliteAlloy",
+    "shield": "5",
+    "passives": {
+      "Brace": "2",
+      "Thorns": "3",
+      "AllStatsUp": "1",
+      "Brittle": "1",
+      "Metal": "1"
+    }
+  },
+  "TwineHat": {
+    "name": "ARMOR_TWINEHAT_NAME",
+    "name_resolved": "Twine Hat",
+    "desc": "ARMOR_TWINEHAT_DESC",
+    "desc_resolved": "+50% chance to Grapple units that contact you.\nFlammable.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "32",
+    "set": "Twine",
+    "shield": "3",
+    "passives": {
+      "Flammable": "1",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Grappled": [
+            "1,",
+            ".50"
+          ]
+        }
+      }
+    }
+  },
+  "TwineMask": {
+    "name": "ARMOR_TWINEMASK_NAME",
+    "name_resolved": "Twine Mask",
+    "desc": "ARMOR_TWINEMASK_DESC",
+    "desc_resolved": "+50% chance to Grapple units that contact you.\nFlammable.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "39",
+    "set": "Twine",
+    "shield": "1",
+    "passives": {
+      "Flammable": "1",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Grappled": [
+            "1,",
+            ".50"
+          ]
+        }
+      }
+    }
+  },
+  "TwineArmor": {
+    "name": "ARMOR_TWINEARMOR_NAME",
+    "name_resolved": "Twine Armor",
+    "desc": "ARMOR_TWINEARMOR_DESC",
+    "desc_resolved": "+50% chance to Grapple units that contact you.\nFlammable.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "28",
+    "set": "Twine",
+    "shield": "1",
+    "passives": {
+      "Flammable": "1",
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Grappled": [
+            "1,",
+            ".50"
+          ]
+        }
+      }
+    }
+  },
+  "RockHat": {
+    "name": "ARMOR_ROCKHAT_NAME",
+    "name_resolved": "Rock Hat",
+    "desc": "ARMOR_ROCKHAT_DESC",
+    "desc_resolved": "Brittle. Your basic attack has +1 Knockback. Gain coins when this breaks.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "46",
+    "set": "Rock",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Brittle": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      },
+      "StatusOnBreak": {
+        "GainCoinsRange": {
+          "min": "1",
+          "max": "25"
+        }
+      }
+    }
+  },
+  "RockMask": {
+    "name": "ARMOR_ROCKMASK_NAME",
+    "name_resolved": "Rock Mask",
+    "desc": "ARMOR_ROCKMASK_DESC",
+    "desc_resolved": "Brittle. Your basic attack has +1 Knockback. Gain coins when this breaks.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "53",
+    "set": "Rock",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Brittle": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      },
+      "StatusOnBreak": {
+        "GainCoinsRange": {
+          "min": "1",
+          "max": "25"
+        }
+      }
+    }
+  },
+  "RockArmor": {
+    "name": "ARMOR_ROCKARMOR_NAME",
+    "name_resolved": "Rock Necklace",
+    "desc": "ARMOR_ROCKARMOR_DESC",
+    "desc_resolved": "Brittle. Your basic attack has +1 Knockback. Gain coins when this breaks.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "44",
+    "set": "Rock",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Brittle": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      },
+      "StatusOnBreak": {
+        "GainCoinsRange": {
+          "min": "1",
+          "max": "25"
+        }
+      }
+    }
+  },
+  "MinerHat": {
+    "name": "ARMOR_MINERHAT_NAME",
+    "name_resolved": "Miner Hat",
+    "desc": "ARMOR_MINERHAT_DESC",
+    "desc_resolved": "Physical attacks can't miss.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "48",
+    "set": "Miner",
+    "shield": "4",
+    "passives": {
+      "TrueShot": "1"
+    }
+  },
+  "MinerMask": {
+    "name": "ARMOR_MINERMASK_NAME",
+    "name_resolved": "Miner Mask",
+    "desc": "ARMOR_MINERMASK_DESC",
+    "desc_resolved": "Poison Immunity.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "55",
+    "set": "Miner",
+    "shield": "4",
+    "passives": {
+      "StatusImmunity": "Poison",
+      "CantCatchDiseases": "1",
+      "CantSpreadDiseases": "1"
+    }
+  },
+  "MinerArmor": {
+    "name": "ARMOR_MINERARMOR_NAME",
+    "name_resolved": "Miner Pack",
+    "desc": "ARMOR_MINERARMOR_DESC",
+    "desc_resolved": "Your basic attack has +1 Knockback.\n+1 Knockback damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "46",
+    "set": "Miner",
+    "passives": {
+      "AddKnockbackDamage": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      }
+    }
+  },
+  "GemstoneHat": {
+    "name": "ARMOR_GEMSTONEHAT_NAME",
+    "name_resolved": "Gemstone Crown",
+    "desc": "ARMOR_GEMSTONEHAT_DESC",
+    "desc_resolved": "+1 Kinetic Spikes.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "47",
+    "set": "Gemstone",
+    "shield": "1",
+    "cha": "1",
+    "passives": {
+      "KineticSpikes": "1"
+    }
+  },
+  "GemstoneMask": {
+    "name": "ARMOR_GEMSTONEMASK_NAME",
+    "name_resolved": "Gemstone Mask",
+    "desc": "ARMOR_GEMSTONEMASK_DESC",
+    "desc_resolved": "+1 Kinetic Spikes.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "54",
+    "set": "Gemstone",
+    "shield": "1",
+    "cha": "1",
+    "passives": {
+      "KineticSpikes": "1"
+    }
+  },
+  "GemstoneArmor": {
+    "name": "ARMOR_GEMSTONEARMOR_NAME",
+    "name_resolved": "Gemstone Necklace",
+    "desc": "ARMOR_GEMSTONEARMOR_DESC",
+    "desc_resolved": "+1 Kinetic Spikes.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "45",
+    "set": "Gemstone",
+    "shield": "1",
+    "cha": "1",
+    "passives": {
+      "KineticSpikes": "1"
+    }
+  },
+  "VeinyHat": {
+    "name": "ARMOR_VEINYHAT_NAME",
+    "name_resolved": "Veiny Hat",
+    "desc": "ARMOR_VEINYHAT_DESC",
+    "desc_resolved": "When you damage a Bleeding unit, gain +1 [img:spd].",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "49",
+    "set": "Veiny",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "Conditional_HasStatus": {
+          "status": "Bleed",
+          "ApplyToSource": {
+            "SpeedUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "VeinyMask": {
+    "name": "ARMOR_VEINYMASK_NAME",
+    "name_resolved": "Veiny Mask",
+    "desc": "ARMOR_VEINYMASK_DESC",
+    "desc_resolved": "When you damage a Bleeding unit, gain +1 [img:str].",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "56",
+    "set": "Veiny",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "Conditional_HasStatus": {
+          "status": "Bleed",
+          "ApplyToSource": {
+            "StrengthUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "VeinyArmor": {
+    "name": "ARMOR_VEINYARMOR_NAME",
+    "name_resolved": "Veiny Necklace",
+    "desc": "ARMOR_VEINYARMOR_DESC",
+    "desc_resolved": "When you damage a Bleeding unit, heal 3 HP.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "47",
+    "set": "Veiny",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "Conditional_HasStatus": {
+          "status": "Bleed",
+          "FlatLeech": "3"
+        }
+      }
+    }
+  },
+  "GimpHat": {
+    "name": "ARMOR_GIMPHAT_NAME",
+    "name_resolved": "Leather Hood",
+    "desc": "ARMOR_GIMPHAT_DESC",
+    "desc_resolved": "Gain +2 Charge when you take damage.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "28",
+    "set": "Gimp",
+    "passives": {
+      "StatusOnTookDamage": {
+        "Charge": "2"
+      }
+    }
+  },
+  "GimpMask": {
+    "name": "ARMOR_GIMPMASK_NAME",
+    "name_resolved": "Ball Gag",
+    "desc": "ARMOR_GIMPMASK_DESC",
+    "desc_resolved": "Gain +2 Charge when you take damage.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "37",
+    "set": "Gimp",
+    "passives": {
+      "StatusOnTookDamage": {
+        "Charge": "2"
+      }
+    }
+  },
+  "GimpArmor": {
+    "name": "ARMOR_GIMPCOLLAR_NAME",
+    "name_resolved": "Leather Collar",
+    "desc": "ARMOR_GIMPCOLLAR_DESC",
+    "desc_resolved": "Gain +2 Charge when you take damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "33",
+    "set": "Gimp",
+    "passives": {
+      "StatusOnTookDamage": {
+        "Charge": "2"
+      }
+    }
+  },
+  "BionicHat": {
+    "name": "ARMOR_BIONICHAT_NAME",
+    "name_resolved": "Bionic Skull Plating",
+    "desc": "ARMOR_BIONICHAT_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "25",
+    "set": "Bionic",
+    "spd": "3",
+    "passives": {
+      "Fragile": "1",
+      "Metal": "1"
+    }
+  },
+  "BionicMask": {
+    "name": "ARMOR_BIONICMASK_NAME",
+    "name_resolved": "Bionic Face Plating",
+    "desc": "ARMOR_BIONICMASK_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "34",
+    "set": "Bionic",
+    "spd": "3",
+    "passives": {
+      "Fragile": "1",
+      "Metal": "1"
+    }
+  },
+  "BionicArmor": {
+    "name": "ARMOR_BIONICARMOR_NAME",
+    "name_resolved": "Bionic Neck Plating",
+    "desc": "ARMOR_BIONICARMOR_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "34",
+    "set": "Bionic",
+    "spd": "3",
+    "passives": {
+      "Fragile": "1",
+      "Metal": "1"
+    }
+  },
+  "CyborgHat": {
+    "name": "ARMOR_CYBORGHAT_NAME",
+    "name_resolved": "Frontal Lobe Implant",
+    "desc": "ARMOR_CYBORGHAT_DESC",
+    "desc_resolved": "10% chance to teleport to a neighboring tile when targeted by an enemy.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "26",
+    "set": "Cyborg",
+    "int": "1",
+    "shield": "3",
+    "passives": {
+      "ChanceToBackflip": {
+        "ability": "ShadowstepDodge",
+        "chance": "10%"
+      },
+      "Metal": "1"
+    }
+  },
+  "CyborgMask": {
+    "name": "ARMOR_CYBORGMASK_NAME",
+    "name_resolved": "Optic Nerve Implant",
+    "desc": "ARMOR_CYBORGMASK_DESC",
+    "desc_resolved": "+1 range, +1 reach.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "35",
+    "set": "Cyborg",
+    "int": "1",
+    "shield": "3",
+    "passives": {
+      "AddBonusRange": "1",
+      "AddBonusMeleeRange": "1",
+      "Metal": "1"
+    }
+  },
+  "CyborgArmor": {
+    "name": "ARMOR_CYBORGARMOR_NAME",
+    "name_resolved": "Cerebellum Implant",
+    "desc": "ARMOR_CYBORGARMOR_DESC",
+    "desc_resolved": "+10% Crit Chance.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "35",
+    "set": "Cyborg",
+    "int": "1",
+    "shield": "3",
+    "passives": {
+      "CritChanceUp": "10",
+      "Metal": "1"
+    }
+  },
+  "LuckyHat": {
+    "name": "ARMOR_LUCKYHAT_NAME",
+    "name_resolved": "Lucky Hat",
+    "desc": "ARMOR_LUCKYHAT_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "27",
+    "set": "Lucky",
+    "lck": "1",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "LuckyMask": {
+    "name": "ARMOR_LUCKYMASK_NAME",
+    "name_resolved": "Lucky Clover",
+    "desc": "ARMOR_LUCKYMASK_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "36",
+    "set": [
+      "Lucky,",
+      "Leafy"
+    ],
+    "lck": "1",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "LuckyArmor": {
+    "name": "ARMOR_LUCKYARMOR_NAME",
+    "name_resolved": "Lucky Horseshoe",
+    "desc": "ARMOR_LUCKYARMOR_DESC",
+    "desc_resolved": "Fragile.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "32",
+    "set": "Lucky",
+    "lck": "1",
+    "passives": {
+      "Fragile": "1"
+    }
+  },
+  "FlyHat": {
+    "name": "ARMOR_FLYHAT_NAME",
+    "name_resolved": "Fly Hat",
+    "desc": "ARMOR_FLYHAT_DESC",
+    "desc_resolved": "+10% Dodge Chance.",
+    "kind": "head",
+    "frame": "73",
+    "set": "Fly",
+    "cursed": "true",
+    "cha": "-1",
+    "spd": "3",
+    "passives": {
+      "AddTag": "bug",
+      "ArmorDodgeChance": "10%"
+    }
+  },
+  "FlyMask": {
+    "name": "ARMOR_FLYMASK_NAME",
+    "name_resolved": "Fly Mask",
+    "desc": "ARMOR_FLYMASK_DESC",
+    "desc_resolved": "+10% Dodge Chance.",
+    "kind": "face",
+    "frame": "75",
+    "set": "Fly",
+    "cursed": "true",
+    "dex": "3",
+    "cha": "-1",
+    "passives": {
+      "AddTag": "bug",
+      "ArmorDodgeChance": "10%"
+    }
+  },
+  "FlyNeck": {
+    "name": "ARMOR_FLYARMOR_NAME",
+    "name_resolved": "Fly Carapace",
+    "desc": "ARMOR_FLYARMOR_DESC",
+    "desc_resolved": "+10% Dodge Chance.",
+    "kind": "neck",
+    "frame": "59",
+    "set": "Fly",
+    "cursed": "true",
+    "con": "3",
+    "cha": "-1",
+    "passives": {
+      "AddTag": "bug",
+      "ArmorDodgeChance": "10%"
+    }
+  },
+  "FaceGrub": {
+    "name": "ARMOR_FACEGRUB_NAME",
+    "name_resolved": "Face Grub",
+    "desc": "ARMOR_FACEGRUB_DESC",
+    "desc_resolved": "When your [img:shield] is depleted, this transforms into a Maggot familiar.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "21",
+    "set": "Grub",
+    "shield": "3",
+    "passives": {
+      "DropAsFamiliarOnArmorBreak": "FaceGrubFamiliar"
+    }
+  },
+  "HeadGrub": {
+    "name": "ARMOR_HEADGRUB_NAME",
+    "name_resolved": "Head Grub",
+    "desc": "ARMOR_HEADGRUB_DESC",
+    "desc_resolved": "When your [img:shield] is depleted, this transforms into a Maggot familiar.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "17",
+    "set": "Grub",
+    "shield": "3",
+    "passives": {
+      "DropAsFamiliarOnArmorBreak": "HeadGrubFamiliar"
+    }
+  },
+  "NeckGrub": {
+    "name": "ARMOR_NECKGRUB_NAME",
+    "name_resolved": "Neck Grub",
+    "desc": "ARMOR_NECKGRUB_DESC",
+    "desc_resolved": "When your [img:shield] is depleted, this transforms into a Maggot familiar.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "16",
+    "set": "Grub",
+    "shield": "3",
+    "passives": {
+      "DropAsFamiliarOnArmorBreak": "NeckGrubFamiliar"
+    }
+  },
+  "CrimsonMask": {
+    "name": "ARMOR_CRIMSONMASK_NAME",
+    "name_resolved": "Crimson Mask",
+    "desc": "ARMOR_CRIMSONMASK_DESC",
+    "desc_resolved": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "57",
+    "set": "Meat",
+    "passives": {
+      "DamageUp": "1",
+      "StatusOnKillEnemy": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "CrimsonMask_Cursed": {
+    "variant_of": "CrimsonMask",
+    "cursed": "true"
+  },
+  "RedCap": {
+    "name": "ARMOR_REDCAP_NAME",
+    "name_resolved": "Red Cap",
+    "desc": "ARMOR_REDCAP_DESC",
+    "desc_resolved": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "50",
+    "set": "Meat",
+    "passives": {
+      "DamageUp": "1",
+      "StatusOnKillEnemy": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "RedCap_Cursed": {
+    "variant_of": "RedCap",
+    "cursed": "true"
+  },
+  "PoundOfFlesh": {
+    "name": "ARMOR_POUNDOFFLESH_NAME",
+    "name_resolved": "Pound of Flesh",
+    "desc": "ARMOR_POUNDOFFLESH_DESC",
+    "desc_resolved": "+1 Damage.\nGain +1 Damage when you kill an enemy.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "48",
+    "set": "Meat",
+    "passives": {
+      "DamageUp": "1",
+      "StatusOnKillEnemy": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "PoundOfFlesh_Cursed": {
+    "variant_of": "PoundOfFlesh",
+    "cursed": "true"
+  },
+  "FecalMask": {
+    "name": "ARMOR_FECALMASK_NAME",
+    "name_resolved": "Fecal Mask",
+    "desc": "ARMOR_FECALMASK_DESC",
+    "desc_resolved": "Poisonous 1.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "60",
+    "set": "Fecal",
+    "cha": "-1",
+    "passives": {
+      "PoisonThorns": "1"
+    }
+  },
+  "FecalHood": {
+    "name": "ARMOR_FECALHOOD_NAME",
+    "name_resolved": "Fecal Hood",
+    "desc": "ARMOR_FECALHOOD_DESC",
+    "desc_resolved": "Poisonous 1.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "57",
+    "set": "Fecal",
+    "cha": "-1",
+    "passives": {
+      "PoisonThorns": "1"
+    }
+  },
+  "FecalNecklace": {
+    "name": "ARMOR_FECALNECKLACE_NAME",
+    "name_resolved": "Fecal Necklace",
+    "desc": "ARMOR_FECALNECKLACE_DESC",
+    "desc_resolved": "Poisonous 1.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "52",
+    "set": "Fecal",
+    "cha": "-1",
+    "passives": {
+      "PoisonThorns": "1"
+    }
+  },
+  "FecalMask_Cursed": {
+    "variant_of": "FecalMask",
+    "cursed": "true"
+  },
+  "FecalHood_Cursed": {
+    "variant_of": "FecalHood",
+    "cursed": "true"
+  },
+  "FecalNecklace_Cursed": {
+    "variant_of": "FecalNecklace",
+    "cursed": "true"
+  },
+  "LeafyMask": {
+    "name": "ARMOR_LEAFYMASK_NAME",
+    "name_resolved": "Leafy Mask",
+    "desc": "ARMOR_LEAFYMASK_DESC",
+    "desc_resolved": "While standing in tall grass, you have +40% Dodge Chance.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "70",
+    "set": "Leafy",
+    "cha": "1",
+    "passives": {
+      "PassiveWhenOnTile": {
+        "tile": [
+          "TallGrassTile",
+          "TallFlowerTile"
+        ],
+        "passives": {
+          "DodgeChance_Status": "40"
+        }
+      }
+    }
+  },
+  "LeafyHat": {
+    "name": "ARMOR_LEAFYHAT_NAME",
+    "name_resolved": "Leafy Hat",
+    "desc": "ARMOR_LEAFYHAT_DESC",
+    "desc_resolved": "While standing in tall grass, you have +3 Mana Regen and +1 Health Regen.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "68",
+    "set": "Leafy",
+    "cha": "1",
+    "passives": {
+      "PassiveWhenOnTile": {
+        "tile": [
+          "TallGrassTile",
+          "TallFlowerTile"
+        ],
+        "passives": {
+          "AddManaRegen": "3",
+          "HealthRegenUp": "1"
+        }
+      }
+    }
+  },
+  "LeafyNecklace": {
+    "name": "ARMOR_LEAFYNECKLACE_NAME",
+    "name_resolved": "Leafy Necklace",
+    "desc": "ARMOR_LEAFYNECKLACE_DESC",
+    "desc_resolved": "While standing in tall grass, you have +3 Health Regen and +1 Mana Regen.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "56",
+    "set": "Leafy",
+    "cha": "1",
+    "passives": {
+      "PassiveWhenOnTile": {
+        "tile": [
+          "TallGrassTile",
+          "TallFlowerTile"
+        ],
+        "passives": {
+          "AddManaRegen": "1",
+          "HealthRegenUp": "3"
+        }
+      }
+    }
+  },
+  "CactusMask": {
+    "name": "ARMOR_CACTUSMASK_NAME",
+    "name_resolved": "Cactus Mask",
+    "desc": "ARMOR_CACTUSMASK_DESC",
+    "desc_resolved": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "74",
+    "set": "Cactus",
+    "passives": {
+      "Thorns": "3",
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "PermanentConstitution": "2",
+        "HealthGain": "10",
+        "ChangeTilesUnder": "WaterTile"
+      }
+    }
+  },
+  "CactusHat": {
+    "name": "ARMOR_CACTUSHAT_NAME",
+    "name_resolved": "Cactus Hat",
+    "desc": "ARMOR_CACTUSHAT_DESC",
+    "desc_resolved": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "72",
+    "set": "Cactus",
+    "passives": {
+      "Thorns": "3",
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "PermanentConstitution": "2",
+        "HealthGain": "10",
+        "ChangeTilesUnder": "WaterTile"
+      }
+    }
+  },
+  "CactusNecklace": {
+    "name": "ARMOR_CACTUSNECKLACE_NAME",
+    "name_resolved": "Cactus Necklace",
+    "desc": "ARMOR_CACTUSNECKLACE_DESC",
+    "desc_resolved": "+3 Thorns, Brittle.\nGain +2 [img:con] permanently and heal 10 HP when this breaks.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "58",
+    "set": "Cactus",
+    "passives": {
+      "Thorns": "3",
+      "Brittle": "1",
+      "StatusOnBreak": {
+        "PermanentConstitution": "2",
+        "HealthGain": "10",
+        "ChangeTilesUnder": "WaterTile"
+      }
+    }
+  },
+  "FaceWrap": {
+    "name": "ARMOR_FACEWRAP_NAME",
+    "name_resolved": "Face Wrap",
+    "desc": "ARMOR_FACEWRAP_DESC",
+    "desc_resolved": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "76",
+    "set": "Mummy",
+    "passives": {
+      "HealthRegenUp": "1",
+      "DelayedAutoRevive": {
+        "rounds": "1",
+        "health": "15%"
+      }
+    }
+  },
+  "HeadWrap": {
+    "name": "ARMOR_HEADWRAP_NAME",
+    "name_resolved": "Head Wrap",
+    "desc": "ARMOR_HEADWRAP_DESC",
+    "desc_resolved": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "74",
+    "set": "Mummy",
+    "passives": {
+      "HealthRegenUp": "1",
+      "DelayedAutoRevive": {
+        "rounds": "1",
+        "health": "15%"
+      }
+    }
+  },
+  "NeckWrap": {
+    "name": "ARMOR_NECKWRAP_NAME",
+    "name_resolved": "Neck Wrap",
+    "desc": "ARMOR_NECKWRAP_DESC",
+    "desc_resolved": "+1 Health Regen.\nWhen downed, revive with 15% HP at the end of the round.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "60",
+    "set": "Mummy",
+    "passives": {
+      "HealthRegenUp": "1",
+      "DelayedAutoRevive": {
+        "rounds": "1",
+        "health": "15%"
+      }
+    }
+  },
+  "ManGlasses": {
+    "name": "ARMOR_MANGLASSES_NAME",
+    "name_resolved": "Man's Glasses",
+    "desc": "ARMOR_MANGLASSES_DESC",
+    "desc_resolved": "Physical attacks can't miss.\nSpawn 1-2 extra pickups at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "77",
+    "set": "Man",
+    "passives": {
+      "TrueShot": "1",
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "RandomPickup",
+        "number": [
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "ManHair": {
+    "name": "ARMOR_MANHAIR_NAME",
+    "name_resolved": "Man's Hairpiece",
+    "desc": "ARMOR_MANHAIR_DESC",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "75",
+    "set": "Man",
+    "cha": "2",
+    "passives": {}
+  },
+  "ManTie": {
+    "name": "ARMOR_MANTIE_NAME",
+    "name_resolved": "Man's Tie",
+    "desc": "ARMOR_MANTIE_DESC",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "61",
+    "set": "Man",
+    "lck": "2",
+    "passives": {}
+  },
+  "FlowerMask": {
+    "name": "ARMOR_FLOWERMASK_NAME",
+    "name_resolved": "Flower Mask",
+    "desc": "ARMOR_FLOWERMASK_DESC",
+    "desc_resolved": "Your basic attack has a +5% chance to inflict Entangled.\nPlants flowers on each tile you move through.\n[s:.7](Stacking this effect plants flowers in a wider area.)[/s]",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "78",
+    "set": "Flower",
+    "passives": {
+      "StackingFlowerTrail": {
+        "stacks": "1",
+        "stack_key": "FLOWER_SET"
+      },
+      "AddStatusToBasicAttack": {
+        "Tangled": [
+          "1,",
+          ".05"
+        ]
+      }
+    }
+  },
+  "FlowerHat": {
+    "name": "ARMOR_FLOWERHAT_NAME",
+    "name_resolved": "Flower Hat",
+    "desc": "ARMOR_FLOWERHAT_DESC",
+    "desc_resolved": "Your basic attack has a +5% chance to inflict Entangled.\nPlants flowers on each tile you move through.\n[s:.7](Stacking this effect plants flowers in a wider area.)[/s]",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "76",
+    "set": "Flower",
+    "passives": {
+      "StackingFlowerTrail": {
+        "stacks": "1",
+        "stack_key": "FLOWER_SET"
+      },
+      "AddStatusToBasicAttack": {
+        "Tangled": [
+          "1,",
+          ".05"
+        ]
+      }
+    }
+  },
+  "FlowerNecklace": {
+    "name": "ARMOR_FLOWERNECKLACE_NAME",
+    "name_resolved": "Flower Necklace",
+    "desc": "ARMOR_FLOWERNECKLACE_DESC",
+    "desc_resolved": "Your basic attack has a +5% chance to inflict Entangled.\nPlants flowers on each tile you move through.\n[s:.7](Stacking this effect plants flowers in a wider area.)[/s]",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "62",
+    "set": "Flower",
+    "passives": {
+      "StackingFlowerTrail": {
+        "stacks": "1",
+        "stack_key": "FLOWER_SET"
+      },
+      "AddStatusToBasicAttack": {
+        "Tangled": [
+          "1,",
+          ".05"
+        ]
+      }
+    }
+  },
+  "HumanFleshMask": {
+    "name": "ARMOR_HUMANFLESHMASK_NAME",
+    "name_resolved": "Human Face",
+    "desc": "ARMOR_HUMANFLESHMASK_DESC",
+    "desc_resolved": "Your basic attack has a +25% chance to inflict Fear.\nSpawn a food pickup at the start of each battle.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "79",
+    "set": "HumanFlesh",
+    "cha": "-1",
+    "con": "2",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Fear": [
+          "1,",
+          ".25"
+        ]
+      },
+      "SpawnOnBattleStart": {
+        "object": "Food"
+      }
+    }
+  },
+  "HumanFleshHat": {
+    "name": "ARMOR_HUMANFLESHHAT_NAME",
+    "name_resolved": "Human Scalp",
+    "desc": "ARMOR_HUMANFLESHHAT_DESC",
+    "desc_resolved": "Your crit hits inflict Fear.\nSpawn a food pickup at the start of each battle.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "77",
+    "set": "HumanFlesh",
+    "cha": "-1",
+    "str": "2",
+    "passives": {
+      "CritsApplyStatus": {
+        "Fear": "1"
+      },
+      "SpawnOnBattleStart": {
+        "object": "Food"
+      }
+    }
+  },
+  "HumanFleshArmor": {
+    "name": "ARMOR_HUMANFLESHARMOR_NAME",
+    "name_resolved": "Human Hide",
+    "desc": "ARMOR_HUMANFLESHARMOR_DESC",
+    "desc_resolved": "Units that contact or attack you have a +25% chance to be Feared.\nSpawn a food pickup at the start of each battle.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "63",
+    "set": "HumanFlesh",
+    "cha": "-1",
+    "lck": "2",
+    "passives": {
+      "RevengeDamage": {
+        "effects": {
+          "Fear": [
+            "1,",
+            ".25"
+          ]
+        }
+      },
+      "SpawnOnBattleStart": {
+        "object": "Food"
+      }
+    }
+  },
+  "TentacleMask": {
+    "name": "ARMOR_TENTACLEMASK_NAME",
+    "name_resolved": "Face Tentacle",
+    "desc": "ARMOR_TENTACLEMASK_DESC",
+    "desc_resolved": "Your basic attack has a +33% chance to inflict Entangle.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "80",
+    "set": "Tentacle",
+    "shield": "2",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Tangled": [
+          "1,",
+          ".33"
+        ]
+      }
+    }
+  },
+  "TentacleHat": {
+    "name": "ARMOR_TENTACLEHAT_NAME",
+    "name_resolved": "Head Tentacle",
+    "desc": "ARMOR_TENTACLEHAT_DESC",
+    "desc_resolved": "Your basic attack pulls you towards units or objects it hits.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "78",
+    "set": "Tentacle",
+    "shield": "2",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "PullSourceToTarget": "1"
+      }
+    }
+  },
+  "TentacleNeck": {
+    "name": "ARMOR_TENTACLENECK_NAME",
+    "name_resolved": "Back Tentacles",
+    "desc": "ARMOR_TENTACLENECK_DESC",
+    "desc_resolved": "Counterattack ranged attackers with a tentacle slap.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "64",
+    "set": "Tentacle",
+    "shield": "2",
+    "passives": {
+      "CounterAttack": {
+        "ranged_only": "true",
+        "ability": "neck_TentacleArmorCounter"
+      }
+    }
+  },
+  "ObeliskMask": {
+    "name": "ARMOR_OBELISKMASK_NAME",
+    "name_resolved": "Obelisk Jewel",
+    "desc": "ARMOR_OBELISKMASK_DESC",
+    "desc_resolved": "Gain +2 [img:int] and +2 [img:cha] when you kill a unit.\nStats obtained this way are lost when you take damage.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "81",
+    "set": "Obelisk",
+    "divine_shield": "1",
+    "passives": {
+      "StatusOnKill": {
+        "BrittleIntelligenceUp": "2",
+        "BrittleCharismaUp": "2"
+      }
+    }
+  },
+  "ObeliskHat": {
+    "name": "ARMOR_OBELISKHAT_NAME",
+    "name_resolved": "Obelisk Helmet",
+    "desc": "ARMOR_OBELISKHAT_DESC",
+    "desc_resolved": "Gain +2 [img:dex] and +2 [img:lck] when you kill a unit.\nStats obtained this way are lost when you take damage.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "79",
+    "set": "Obelisk",
+    "divine_shield": "1",
+    "passives": {
+      "StatusOnKill": {
+        "BrittleDexterityUp": "2",
+        "BrittleLuckUp": "2"
+      }
+    }
+  },
+  "ObeliskArmor": {
+    "name": "ARMOR_OBELISKARMOR_NAME",
+    "name_resolved": "Obelisk Pauldrons",
+    "desc": "ARMOR_OBELISKARMOR_DESC",
+    "desc_resolved": "Gain +2 [img:str], +2 [img:spd] and +2 [img:con] when you kill a unit.\nStats obtained this way are lost when you take damage.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "65",
+    "set": "Obelisk",
+    "divine_shield": "1",
+    "passives": {
+      "StatusOnKill": {
+        "BrittleStrengthUp": "2",
+        "BrittleSpeedUp": "2",
+        "BrittleConstitutionUp": "2"
+      }
+    }
+  },
+  "ExperimentalMask": {
+    "name": "ARMOR_EXPERIMENTALMASK_NAME",
+    "name_resolved": "Experimental Treatment",
+    "desc": "ARMOR_EXPERIMENTALMASK_DESC",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "82",
+    "set": "Experimental",
+    "str_aux_initialize": "random_seed",
+    "passives": {
+      "RandomSeededStatModifier": [
+        "2",
+        "-1"
+      ]
+    }
+  },
+  "ExperimentalHat": {
+    "name": "ARMOR_EXPERIMENTALHAT_NAME",
+    "name_resolved": "Experimental Treatment",
+    "desc": "ARMOR_EXPERIMENTALHAT_DESC",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "80",
+    "set": "Experimental",
+    "str_aux_initialize": "random_seed",
+    "passives": {
+      "RandomSeededStatModifier": [
+        "2",
+        "-1"
+      ]
+    }
+  },
+  "ExperimentalNeck": {
+    "name": "ARMOR_EXPERIMENTALNECK_NAME",
+    "name_resolved": "Experimental Treatment",
+    "desc": "ARMOR_EXPERIMENTALNECK_DESC",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "66",
+    "set": "Experimental",
+    "str_aux_initialize": "random_seed",
+    "passives": {
+      "RandomSeededStatModifier": [
+        "2",
+        "-1"
+      ]
+    }
+  },
+  "RockyMask": {
+    "name": "ARMOR_ROCKYMASK_NAME",
+    "name_resolved": "Rocky Mask",
+    "desc": "ARMOR_ROCKYMASK_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "83",
+    "set": "Rock",
+    "shield": "10",
+    "passives": {
+      "RockyArmorPassive": "1",
+      "StatusOnBreak": {
+        "Bruise": "3"
+      }
+    }
+  },
+  "RockyHat": {
+    "name": "ARMOR_ROCKYHAT_NAME",
+    "name_resolved": "Rocky Hat",
+    "desc": "ARMOR_ROCKYHAT_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "81",
+    "set": "Rock",
+    "shield": "10",
+    "passives": {
+      "RockyArmorPassive": "1",
+      "StatusOnBreak": {
+        "Bruise": "3"
+      }
+    }
+  },
+  "RockyNecklace": {
+    "name": "ARMOR_ROCKYNECKLACE_NAME",
+    "name_resolved": "Rocky Necklace",
+    "desc": "ARMOR_ROCKYNECKLACE_DESC",
+    "desc_resolved": "Breaks when [img:shield] is depleted.\nWhen this breaks, gain Bruise 3.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "67",
+    "set": "Rock",
+    "shield": "10",
+    "passives": {
+      "RockyArmorPassive": "1",
+      "StatusOnBreak": {
+        "Bruise": "3"
+      }
+    }
+  },
+  "SpaceHelmet": {
+    "name": "ARMOR_SPACEHELMET_NAME",
+    "name_resolved": "Space Helmet",
+    "desc": "ARMOR_SPACEHELMET_DESC",
+    "desc_resolved": "+1 Brace.\n30% chance to block negative status effects.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "84",
+    "set": "Space",
+    "passives": {
+      "Brace": "1",
+      "BlockNegativeStatus": "30%"
+    }
+  },
+  "SpaceAntenna": {
+    "name": "ARMOR_SPACEANTENNA_NAME",
+    "name_resolved": "Space Antenna",
+    "desc": "ARMOR_SPACEANTENNA_DESC",
+    "desc_resolved": "Gain 0-4 mana at start of each turn.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "82",
+    "set": "Space",
+    "shield": "3",
+    "passives": {
+      "Metal": "1",
+      "StatusEachTurnBegin": {
+        "ManaGainRange": {
+          "min": "0",
+          "max": "4"
+        }
+      }
+    }
+  },
+  "SpaceBoosters": {
+    "name": "ARMOR_SPACEBOOSTERS_NAME",
+    "name_resolved": "Space Boosters",
+    "desc": "ARMOR_SPACEBOOSTERS_DESC",
+    "desc_resolved": "Your movement action is Jump.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "68",
+    "set": "Space",
+    "spd": "3",
+    "passives": {
+      "Metal": "1",
+      "ReplaceBasicMove": "BasicJump"
+    }
+  },
+  "TinyPlanet": {
+    "name": "ARMOR_TINYPLANET_NAME",
+    "name_resolved": "Tiny Planet",
+    "desc": "ARMOR_TINYPLANET_DESC",
+    "desc_resolved": "Your basic attack pulls units towards you.\nInflict Bruise on units who contact you.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "85",
+    "set": "Planet",
+    "shield": "1",
+    "int": "-1",
+    "passives": {
+      "MakeBasicAttackPull": "1",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "MiniMoon": {
+    "name": "ARMOR_MINIMOON_NAME",
+    "name_resolved": "Mini Moon",
+    "desc": "ARMOR_MINIMOON_DESC",
+    "desc_resolved": "Your basic attack has a +25% chance to shoot an asteroid at what it hits.\n+10% chance to Block.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "83",
+    "set": "Planet",
+    "passives": {
+      "ChanceToBlock": "10%",
+      "AddStatusToBasicAttack": {
+        "ForceUseAbilityOnTarget": {
+          "chance": "25%",
+          "ability": "head_MiniMoonArmorAsteroid"
+        }
+      }
+    }
+  },
+  "AsteroidBelt": {
+    "name": "ARMOR_ASTEROIDBELT_NAME",
+    "name_resolved": "Asteroid Belt",
+    "desc": "ARMOR_ASTEROIDBELT_DESC",
+    "desc_resolved": "+2 Brace.\n+10% chance to block damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "69",
+    "set": "Planet",
+    "passives": {
+      "Brace": "2",
+      "ChanceToBlock": "10%"
+    }
+  },
+  "DebrisMask": {
+    "name": "ARMOR_DEBRISMASK_NAME",
+    "name_resolved": "Debris Mask",
+    "desc": "ARMOR_DEBRISMASK_DESC",
+    "desc_resolved": "+2 range, +1 Kinetic Spikes.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "86",
+    "set": "Debris",
+    "shield": "2",
+    "dex": "-1",
+    "passives": {
+      "Metal": "1",
+      "AddBonusRange": "2",
+      "KineticSpikes": "1"
+    }
+  },
+  "DebrisHat": {
+    "name": "ARMOR_DEBRISHAT_NAME",
+    "name_resolved": "Debris Hat",
+    "desc": "ARMOR_DEBRISHAT_DESC",
+    "desc_resolved": "+2 range, +1 Kinetic Spikes.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "84",
+    "set": "Debris",
+    "shield": "2",
+    "dex": "-1",
+    "passives": {
+      "Metal": "1",
+      "AddBonusRange": "2",
+      "KineticSpikes": "1"
+    }
+  },
+  "DebrisArmor": {
+    "name": "ARMOR_DEBRISARMOR_NAME",
+    "name_resolved": "Debris Armor",
+    "desc": "ARMOR_DEBRISARMOR_DESC",
+    "desc_resolved": "+2 range, +1 Kinetic Spikes.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "70",
+    "set": "Debris",
+    "shield": "2",
+    "dex": "-1",
+    "passives": {
+      "Metal": "1",
+      "AddBonusRange": "2",
+      "KineticSpikes": "1"
+    }
+  },
+  "DryBoneMask": {
+    "name": "ARMOR_DRYBONEMASK_NAME",
+    "name_resolved": "Dry Bone Mask",
+    "desc": "ARMOR_DRYBONEMASK_DESC",
+    "desc_resolved": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "87",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "Thorns": "1",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "DryBoneHat": {
+    "name": "ARMOR_DRYBONEHAT_NAME",
+    "name_resolved": "Dry Bone Helm",
+    "desc": "ARMOR_DRYBONEHAT_DESC",
+    "desc_resolved": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "85",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "Thorns": "1",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "DryBoneNecklace": {
+    "name": "ARMOR_DRYBONENECKLACE_NAME",
+    "name_resolved": "Dry Bone Necklace",
+    "desc": "ARMOR_DRYBONENECKLACE_DESC",
+    "desc_resolved": "+1 Thorns.\nInflict Bruise 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "71",
+    "set": "Bone",
+    "shield": "3",
+    "passives": {
+      "Thorns": "1",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "ProtectionTransmitter": {
+    "name": "ARMOR_PROTECTIONTRANSMITTER_NAME",
+    "name_resolved": "Protection Transmitter",
+    "desc": "ARMOR_PROTECTIONTRANSMITTER_DESC",
+    "desc_resolved": "Bruise 2.\nAll allies gain Brace 1.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "148",
+    "set": "Transmitter",
+    "passives": {
+      "Metal": "1",
+      "Bruise": "2",
+      "StatusAlliesOnBattleStart": {
+        "Brace": "1"
+      }
+    }
+  },
+  "DamageTransmitter": {
+    "name": "ARMOR_DAMAGETRANSMITTER_NAME",
+    "name_resolved": "Damage Transmitter",
+    "desc": "ARMOR_DAMAGETRANSMITTER_DESC",
+    "desc_resolved": "-2 Damage.\nAll allies gain +1 Damage.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "98",
+    "set": "Transmitter",
+    "passives": {
+      "Metal": "1",
+      "DamageUp": "-2",
+      "StatusAlliesOnBattleStart": {
+        "DamageUp": "1"
+      }
+    }
+  },
+  "EnergyTransmitter": {
+    "name": "ARMOR_ENERGYTRANSMITTER_NAME",
+    "name_resolved": "Energy Transmitter",
+    "desc": "ARMOR_ENERGYTRANSMITTER_DESC",
+    "desc_resolved": "All allies gain +2 [img:spd].",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "133",
+    "set": "Transmitter",
+    "spd": "-4",
+    "passives": {
+      "Metal": "1",
+      "StatusAlliesOnBattleStart": {
+        "SpeedUp": "2"
+      }
+    }
+  },
+  "ThrummingCirclet": {
+    "name": "ARMOR_THRUMMINGCIRCLET_NAME",
+    "name_resolved": "Thrumming Circlet",
+    "desc": "ARMOR_THRUMMINGCIRCLET_DESC",
+    "desc_resolved": "If you end your turn without using your basic attack, gain +1 Damage and +1 Thorns.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "149",
+    "set": "Thrumming",
+    "passives": {
+      "StatusOnTurnEndIfDidntCastAbilityTypes": {
+        "type": "attack",
+        "DamageUp": "1",
+        "Thorns": "1"
+      }
+    }
+  },
+  "ThrummingSpectacles": {
+    "name": "ARMOR_THRUMMINGSPECTACLES_NAME",
+    "name_resolved": "Thrumming Spectacles",
+    "desc": "ARMOR_THRUMMINGSPECTACLES_DESC",
+    "desc_resolved": "If you end your turn without using your movement action, gain +1 Health Regen and +1 [img:shield].",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "134",
+    "set": "Thrumming",
+    "passives": {
+      "StatusOnTurnEndIfDidntCastAbilityTypes": {
+        "type": "move",
+        "HealthRegenUp": "1",
+        "Shield": "1"
+      }
+    }
+  },
+  "ThrummingCharm": {
+    "name": "ARMOR_THRUMMINGCHARM_NAME",
+    "name_resolved": "Thrumming Charm",
+    "desc": "ARMOR_THRUMMINGCHARM_DESC",
+    "desc_resolved": "If you end your turn without casting any spells, gain +1 Magic Damage and +1 Charge.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "124",
+    "set": "Thrumming",
+    "passives": {
+      "StatusOnTurnEndIfDidntCastAbilityTypes": {
+        "type": "spell",
+        "SpellDamageUp": "1",
+        "Charge": "1"
+      }
+    }
+  },
+  "WitchesHat": {
+    "name": "ARMOR_WITCHESHAT_NAME",
+    "name_resolved": "Witch's Hat",
+    "desc": "ARMOR_WITCHESHAT_DESC",
+    "desc_resolved": "+1 Magic Damage.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "146",
+    "set": "Witch",
+    "passives": {
+      "SpellDamageUp": "1"
+    }
+  },
+  "WitchesNose": {
+    "name": "ARMOR_WITCHESNOSE_NAME",
+    "name_resolved": "Witch's Nose",
+    "desc": "ARMOR_WITCHESNOSE_DESC",
+    "desc_resolved": "+1 Magic Damage.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "131",
+    "set": "Witch",
+    "passives": {
+      "SpellDamageUp": "1"
+    }
+  },
+  "WitchesCape": {
+    "name": "ARMOR_WITCHESCAPE_NAME",
+    "name_resolved": "Witch's Cape",
+    "desc": "ARMOR_WITCHESCAPE_DESC",
+    "desc_resolved": "+1 Magic Damage.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "122",
+    "set": "Witch",
+    "passives": {
+      "SpellDamageUp": "1"
+    }
+  },
+  "StunningHaircut": {
+    "name": "ARMOR_STUNNINGHAIRCUT_NAME",
+    "name_resolved": "Stunning Haircut",
+    "desc": "ARMOR_STUNNINGHAIRCUT_DESC",
+    "desc_resolved": "Your face and neck item effects are doubled.",
+    "rarity": "very_rare",
+    "kind": "head",
+    "frame": "152",
+    "set": "Stunning",
+    "passives": {
+      "FaceArmorPassiveMultiplierBonus": "1",
+      "NeckArmorPassiveMultiplierBonus": "1"
+    }
+  },
+  "StunningChain": {
+    "name": "ARMOR_STUNNINGCHAIN_NAME",
+    "name_resolved": "Stunning Chain",
+    "desc": "ARMOR_STUNNINGCHAIN_DESC",
+    "desc_resolved": "Your head and face item effects are doubled.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "136",
+    "set": "Stunning",
+    "passives": {
+      "Metal": "1",
+      "FaceArmorPassiveMultiplierBonus": "1",
+      "HeadArmorPassiveMultiplierBonus": "1"
+    }
+  },
+  "StunningBeard": {
+    "name": "ARMOR_STUNNINGBEARD_NAME",
+    "name_resolved": "Stunning Beard",
+    "desc": "ARMOR_STUNNINGBEARD_DESC",
+    "desc_resolved": "Your head and neck item effects are doubled.",
+    "rarity": "very_rare",
+    "kind": "face",
+    "frame": "137",
+    "set": "Stunning",
+    "passives": {
+      "NeckArmorPassiveMultiplierBonus": "1",
+      "HeadArmorPassiveMultiplierBonus": "1"
+    }
+  },
+  "SuperheroHat": {
+    "name": "ARMOR_SUPERHEROHAT_NAME",
+    "name_resolved": "Superhero Hat",
+    "desc": "ARMOR_SUPERHEROHAT_DESC",
+    "desc_resolved": "+2 Health Regen.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "154",
+    "set": "Superhero",
+    "divine_shield": "1",
+    "passives": {
+      "HealthRegenUp": "2"
+    }
+  },
+  "SuperheroCape": {
+    "name": "ARMOR_SUPERHEROCAPE_NAME",
+    "name_resolved": "Superhero Cape",
+    "desc": "ARMOR_SUPERHEROCAPE_DESC",
+    "desc_resolved": "Flying.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "130",
+    "set": "Superhero",
+    "spd": "3",
+    "passives": {
+      "Flying": "1"
+    }
+  },
+  "SuperheroMask": {
+    "name": "ARMOR_SUPERHEROMASK_NAME",
+    "name_resolved": "Superhero Mask",
+    "desc": "ARMOR_SUPERHEROMASK_DESC",
+    "desc_resolved": "+1 Damage. Your basic attack knocks units into the air, lobbing them back 3 tiles.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "139",
+    "set": "Superhero",
+    "passives": {
+      "DamageUp": "1",
+      "AddStatusToBasicAttack": {
+        "KnockUpAndAway": {
+          "stacks": "5",
+          "distance": "3"
+        }
+      }
+    }
+  },
+  "LeadHelmet": {
+    "name": "ARMOR_LEADHELMET_NAME",
+    "name_resolved": "Lead Helmet",
+    "desc": "ARMOR_LEADHELMET_DESC",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "156",
+    "set": "Lead",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "LeadShoulderPads": {
+    "name": "ARMOR_LEADSHOULDERPADS_NAME",
+    "name_resolved": "Lead Shoulder Pads",
+    "desc": "ARMOR_LEADSHOULDERPADS_DESC",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "129",
+    "set": "Lead",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "LeadMask": {
+    "name": "ARMOR_LEADMASK_NAME",
+    "name_resolved": "Lead Mask",
+    "desc": "ARMOR_LEADMASK_DESC",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "141",
+    "set": "Lead",
+    "shield": "6",
+    "spd": "-1",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "ScaryBaby": {
+    "name": "ARMOR_SCARYBABY_NAME",
+    "name_resolved": "Scary Baby",
+    "desc": "ARMOR_SCARYBABY_DESC",
+    "desc_resolved": "Inflict Fear 2 on a random enemy at the start of each battle.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "180",
+    "set": "Baby",
+    "passives": {
+      "StatusRandomEnemiesOnBattleStart": {
+        "count": "1",
+        "Fear": "2"
+      }
+    }
+  },
+  "CharmingBaby": {
+    "name": "ARMOR_CHARMINGBABY_NAME",
+    "name_resolved": "Charming Baby",
+    "desc": "ARMOR_CHARMINGBABY_DESC",
+    "desc_resolved": "Inflict Charmed 2 on a random enemy at the start of each battle.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "188",
+    "set": "Baby",
+    "passives": {
+      "StatusRandomEnemiesOnBattleStart": {
+        "count": "1",
+        "Charmed": "2"
+      }
+    }
+  },
+  "FreezingBaby": {
+    "name": "ARMOR_FREEZINGBABY_NAME",
+    "name_resolved": "Freezing Baby",
+    "desc": "ARMOR_FREEZINGBABY_DESC",
+    "desc_resolved": "Inflict Freeze 2 on a random enemy at the start of each battle.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "166",
+    "set": "Baby",
+    "passives": {
+      "StatusRandomEnemiesOnBattleStart": {
+        "count": "1",
+        "Freeze": "2"
+      }
+    }
+  },
+  "Obi": {
+    "name": "ARMOR_OBI_NAME",
+    "name_resolved": "Obi",
+    "desc": "ARMOR_OBI_DESC",
+    "desc_resolved": "Start battle with +2 bonus moves.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "148",
+    "set": "Ninja",
+    "passives": {
+      "MoveQuivered": "2"
+    }
+  },
+  "Fukumen": {
+    "name": "ARMOR_FUKUMEN_NAME",
+    "name_resolved": "Fukumen",
+    "desc": "ARMOR_FUKUMEN_DESC",
+    "desc_resolved": "Counter the first 2 attacks you receive each battle.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "175",
+    "set": "Ninja",
+    "passives": {
+      "CounterNextAttacks": "2"
+    }
+  },
+  "Zukin": {
+    "name": "ARMOR_ZUKIN_NAME",
+    "name_resolved": "Zukin",
+    "desc": "ARMOR_ZUKIN_DESC",
+    "desc_resolved": "Start battle with +2 Backflip.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "184",
+    "set": "Ninja",
+    "passives": {
+      "BackflipWhenTargeted": {
+        "stacks": "2",
+        "ability": "BackflipDodge"
+      }
+    }
+  },
+  "ProwlersCap": {
+    "name": "ARMOR_PROWLERSCAP_NAME",
+    "name_resolved": "Prowler's Cap",
+    "desc": "ARMOR_PROWLERSCAP_DESC",
+    "desc_resolved": "Backstabs have +25% Crit Chance.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "186",
+    "set": "Prowler",
+    "passives": {
+      "BackstabCritChance": ".25"
+    }
+  },
+  "ProwlersMask": {
+    "name": "ARMOR_PROWLERSMASK_NAME",
+    "name_resolved": "Prowler's Mask",
+    "desc": "ARMOR_PROWLERSMASK_DESC",
+    "desc_resolved": "Backstabs inflict Bleed 1.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "177",
+    "set": "Prowler",
+    "passives": {
+      "AddStatusToBackstabs": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "ProwlersVial": {
+    "name": "ARMOR_PROWLERSVIAL_NAME",
+    "name_resolved": "Prowler's Vial",
+    "desc": "ARMOR_PROWLERSVIAL_DESC",
+    "desc_resolved": "Backstabs heal you by 2 HP.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "164",
+    "set": "Prowler",
+    "passives": {
+      "StatusOnBackstab": {
+        "HealthGain": "2"
+      }
+    }
+  },
+  "MageHat": {
+    "name": "ARMOR_MAGEHAT_NAME",
+    "name_resolved": "Mage's Hat",
+    "desc": "ARMOR_MAGEHAT_DESC",
+    "desc_resolved": "Gain +1 Charge each time you cast a spell.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "101",
+    "set": "Mage",
+    "int": "1",
+    "passives": {
+      "StatusOnCastSpell": {
+        "Charge": "1"
+      }
+    }
+  },
+  "MageRobe": {
+    "name": "ARMOR_MAGEROBE_NAME",
+    "name_resolved": "Mage's Robe",
+    "desc": "ARMOR_MAGEROBE_DESC",
+    "desc_resolved": "Gain +1 Charge when you deal damage with your basic attack.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "101",
+    "set": "Mage",
+    "int": "1",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "ApplyToSource": {
+          "Charge": "1"
+        }
+      }
+    }
+  },
+  "MageScarf": {
+    "name": "ARMOR_MAGESCARF_NAME",
+    "name_resolved": "Mage's Scarf",
+    "desc": "ARMOR_MAGESCARF_DESC",
+    "desc_resolved": "Gain +1 Charge each time an enemy dies.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "101",
+    "set": "Mage",
+    "int": "1",
+    "passives": {
+      "StatusOnEnemyDeath": {
+        "Charge": "1"
+      }
+    }
+  },
+  "ThiefHood": {
+    "name": "ARMOR_THIEFHOOD_NAME",
+    "name_resolved": "Thief's Hood",
+    "desc": "ARMOR_THIEFHOOD_DESC",
+    "desc_resolved": "+5% Dodge Chance and +5% Crit Chance.\nYour basic attack inflicts Bleed.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "102",
+    "set": "Thief",
+    "passives": {
+      "ArmorDodgeChance": "5%",
+      "CritChanceUp": "5",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "ThiefTattoo": {
+    "name": "ARMOR_THIEFTATTOO_NAME",
+    "name_resolved": "Thief's Tattoo",
+    "desc": "ARMOR_THIEFTATTOO_DESC",
+    "desc_resolved": "+5% Dodge Chance and +5% Crit Chance.\nYour basic attack inflicts Poison.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "102",
+    "set": "Thief",
+    "passives": {
+      "ArmorDodgeChance": "5%",
+      "CritChanceUp": "5",
+      "AddStatusToBasicAttack": {
+        "Poison": "1"
+      }
+    }
+  },
+  "ThiefCloak": {
+    "name": "ARMOR_THIEFCLOAK_NAME",
+    "name_resolved": "Thief's Cloak",
+    "desc": "ARMOR_THIEFCLOAK_DESC",
+    "desc_resolved": "+10% Dodge Chance and +10% Crit Chance.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "102",
+    "set": "Thief",
+    "passives": {
+      "ArmorDodgeChance": "10%",
+      "CritChanceUp": "10"
+    }
+  },
+  "FighterHelm": {
+    "name": "ARMOR_FIGHTERHELM_NAME",
+    "name_resolved": "Fighter's Helm",
+    "desc": "ARMOR_FIGHTERHELM_DESC",
+    "desc_resolved": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "103",
+    "set": "Fighter",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "StatusOnKill": {
+        "Conditional_GoodRoll": {
+          "odds": "15%",
+          "ForceUseAbility_NonStack": "Endeavor_Auto"
+        }
+      }
+    }
+  },
+  "FighterScar": {
+    "name": "ARMOR_FIGHTERSCAR_NAME",
+    "name_resolved": "Fighter's Scar",
+    "desc": "ARMOR_FIGHTERSCAR_DESC",
+    "desc_resolved": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "103",
+    "set": "Fighter",
+    "shield": "2",
+    "passives": {
+      "StatusOnKill": {
+        "Conditional_GoodRoll": {
+          "odds": "15%",
+          "ForceUseAbility_NonStack": "Endeavor_Auto"
+        }
+      }
+    }
+  },
+  "FighterShoulderPad": {
+    "name": "ARMOR_FIGHTERSHOULDERPAD_NAME",
+    "name_resolved": "Fighter's Shoulder Pad",
+    "desc": "ARMOR_FIGHTERSHOULDERPAD_DESC",
+    "desc_resolved": "+15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "103",
+    "set": "Fighter",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "StatusOnKill": {
+        "Conditional_GoodRoll": {
+          "odds": "15%",
+          "ForceUseAbility_NonStack": "Endeavor_Auto"
+        }
+      }
+    }
+  },
+  "ClericHat": {
+    "name": "ARMOR_CLERICHAT_NAME",
+    "name_resolved": "Cleric's Mitre",
+    "desc": "ARMOR_CLERICHAT_DESC",
+    "desc_resolved": "Your heals heal for 2 extra.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "104",
+    "set": "Cleric",
+    "shield": "2",
+    "passives": {
+      "BoostHeals": "2"
+    }
+  },
+  "ClericTears": {
+    "name": "ARMOR_CLERICTEARS_NAME",
+    "name_resolved": "Cleric's Tears",
+    "desc": "ARMOR_CLERICTEARS_DESC",
+    "desc_resolved": "Gain +1 [img:divineshield] each time an ally is downed.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "104",
+    "set": "Cleric",
+    "divine_shield": "1",
+    "passives": {
+      "StatusOnAllyCatDeath": {
+        "DivineShield": "1"
+      }
+    }
+  },
+  "ClericRelic": {
+    "name": "ARMOR_CLERICRELIC_NAME",
+    "name_resolved": "Cleric's Relic",
+    "desc": "ARMOR_CLERICRELIC_DESC",
+    "desc_resolved": "+1 Brace.\n+15% chance to inflict Fear on units that contact or attack you.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "104",
+    "set": "Cleric",
+    "passives": {
+      "Brace": "1",
+      "RevengeDamage": {
+        "effects": {
+          "Fear": [
+            "1,",
+            ".15"
+          ]
+        }
+      }
+    }
+  },
+  "TankHelmet": {
+    "name": "ARMOR_TANKHELMET_NAME",
+    "name_resolved": "Tank's Helmet",
+    "desc": "ARMOR_TANKHELMET_DESC",
+    "desc_resolved": "+1 Knockback damage.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "105",
+    "set": "Tank",
+    "shield": "1",
+    "passives": {
+      "Metal": "1",
+      "AddKnockbackDamage": "1"
+    }
+  },
+  "TankTattoo": {
+    "name": "ARMOR_TANKTATTOO_NAME",
+    "name_resolved": "Tank's Tattoo",
+    "desc": "ARMOR_TANKTATTOO_DESC",
+    "desc_resolved": "All Knockback inflicted by you is increased by 2.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "105",
+    "set": "Tank",
+    "passives": {
+      "AmplifyKnockback": "2"
+    }
+  },
+  "TankPads": {
+    "name": "ARMOR_TANKPADS_NAME",
+    "name_resolved": "Tank's Pads",
+    "desc": "ARMOR_TANKPADS_DESC",
+    "desc_resolved": "Your knockback damage has a +10% chance to inflict Stun.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "105",
+    "set": "Tank",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "AddStatusToKnockbackDamage": {
+        "Stun": [
+          "1,",
+          ".1"
+        ]
+      }
+    }
+  },
+  "HunterCap": {
+    "name": "ARMOR_HUNTERCAP_NAME",
+    "name_resolved": "Hunter's Cap",
+    "desc": "ARMOR_HUNTERCAP_DESC",
+    "desc_resolved": "Your familiars gain All Stats Up.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "106",
+    "set": "Hunter",
+    "lck": "1",
+    "passives": {
+      "AddPassivesToMinions": {
+        "AllStatsUp": "1",
+        "HealthGain": "4"
+      },
+      "AddPassivesToCharmed": {
+        "AllStatsUp": "1"
+      }
+    }
+  },
+  "HunterMonocle": {
+    "name": "ARMOR_HUNTERMONOCLE_NAME",
+    "name_resolved": "Hunter's Monocle",
+    "desc": "ARMOR_HUNTERMONOCLE_DESC",
+    "desc_resolved": "+2 range.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "106",
+    "set": "Hunter",
+    "passives": {
+      "AddBonusRange": "2"
+    }
+  },
+  "HunterQuiver": {
+    "name": "ARMOR_HUNTERQUIVER_NAME",
+    "name_resolved": "Hunter's Quiver",
+    "desc": "ARMOR_HUNTERQUIVER_DESC",
+    "desc_resolved": "Start each battle with 2 bonus attacks.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "106",
+    "set": [
+      "Hunter,",
+      "Leather"
+    ],
+    "passives": {
+      "Quivered": "2"
+    }
+  },
+  "MysticEye": {
+    "name": "ARMOR_MYSTICEYE_NAME",
+    "name_resolved": "Mystic Eye",
+    "desc": "ARMOR_MYSTICEYE_DESC",
+    "desc_resolved": "+25% chance to reflect projectiles. Your tile-targeted spells have +2 range.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "107",
+    "set": "Psychic",
+    "passives": {
+      "IncreaseSpellRange": "2",
+      "ReflectProjectiles": "25%"
+    }
+  },
+  "TinfoilHat": {
+    "name": "ARMOR_TINFOILHAT_NAME",
+    "name_resolved": "Tinfoil Hat",
+    "desc": "ARMOR_TINFOILHAT_DESC",
+    "desc_resolved": "You are immune to Charm, Madness, Fear and Confusion.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "107",
+    "set": [
+      "Psychic,",
+      "Scrap"
+    ],
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "CharmImmunity": "1",
+      "StatusImmunity": [
+        "Fear",
+        "Confusion",
+        "PermanentConfusion"
+      ]
+    }
+  },
+  "DivinersCloth": {
+    "name": "ARMOR_DIVINERSCLOTH_NAME",
+    "name_resolved": "Diviner's Cloth",
+    "desc": "ARMOR_DIVINERSCLOTH_DESC",
+    "desc_resolved": "Adjacent allies have +25% Dodge Chance.\nGive +1 Charge to all adjacent allies at the end of your turn.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "107",
+    "set": [
+      "Psychic,",
+      "Rag"
+    ],
+    "passives": {
+      "StatusAlliesEachTurn": {
+        "Conditional_Adjacent": {
+          "Conditional_PlayerCat": {
+            "Charge": "1"
+          }
+        }
+      },
+      "AllyDodgeChanceAura": {
+        "chance": "25%",
+        "range": "1"
+      }
+    }
+  },
+  "DeathMask": {
+    "name": "ARMOR_DEATHMASK_NAME",
+    "name_resolved": "Death Mask",
+    "desc": "ARMOR_DEATHMASK_DESC",
+    "desc_resolved": "Get downed at the start of each battle, then revive at the end of the first round with full HP and +2 [img:shield].",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "108",
+    "set": "Necromancer",
+    "passives": {
+      "StatusOnBattleStart": {
+        "SafeDie": "1",
+        "ReviveNextRound": {
+          "revive_health": "100%",
+          "Shield": "2"
+        }
+      }
+    }
+  },
+  "SpiderHat": {
+    "name": "ARMOR_SPIDERHAT_NAME",
+    "name_resolved": "Spider Hat",
+    "desc": "ARMOR_SPIDERHAT_DESC",
+    "desc_resolved": "When you destroy a corpse, spawn 2 Spiderlings.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "108",
+    "set": "Necromancer",
+    "passives": {
+      "SpawnObjectOnPopCorpse": {
+        "object": "CharmedTinySpider",
+        "count": "2",
+        "except_tiny": "true"
+      }
+    }
+  },
+  "LeechNecklace": {
+    "name": "ARMOR_LEECHNECKLACE_NAME",
+    "name_resolved": "Leech Necklace",
+    "desc": "ARMOR_LEECHNECKLACE_DESC",
+    "desc_resolved": "Your spells inflict Leech 1 against enemies.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "108",
+    "set": [
+      "Necromancer,",
+      "Leech"
+    ],
+    "passives": {
+      "AddStatusToSpells": {
+        "Conditional_Enemy": {
+          "Leeches": "1"
+        }
+      }
+    }
+  },
+  "FaceBrand": {
+    "name": "ARMOR_FACEBRAND_NAME",
+    "name_resolved": "Face Brand",
+    "desc": "ARMOR_FACEBRAND_DESC",
+    "desc_resolved": "Each time you use your basic attack, gain +1 [img:shield].\n[s:.7](This counts as an empty armor slot.)[/s]",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "109",
+    "set": "Monk",
+    "weightless": "true",
+    "passives": {
+      "AddSelfStatusToBasicAttack": {
+        "Shield": "1"
+      }
+    }
+  },
+  "HeadBrand": {
+    "name": "ARMOR_HEADBRAND_NAME",
+    "name_resolved": "Head Brand",
+    "desc": "ARMOR_HEADBRAND_DESC",
+    "desc_resolved": "Your movement action is Jump.\nIf you land on a unit, deal 1 damage to it and bounce to an adjacent tile.\n[s:.7](This counts as an empty armor slot.)[/s]",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "109",
+    "set": "Monk",
+    "weightless": "true",
+    "passives": {
+      "ReplaceBasicMove": "head_HeadBrandJump"
+    }
+  },
+  "PrayerBeads": {
+    "name": "ARMOR_PRAYERBEADS_NAME",
+    "name_resolved": "Prayer Beads",
+    "desc": "ARMOR_PRAYERBEADS_DESC",
+    "desc_resolved": "Each time you take damage, gain +3 Brace until your next turn.\n[s:.7](This counts as an empty armor slot.)[/s]",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "109",
+    "set": [
+      "Monk,",
+      "Twine"
+    ],
+    "weightless": "true",
+    "passives": {
+      "StatusOnTookDamage": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "3",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "ScrappersMask": {
+    "name": "ARMOR_SCRAPPERSMASK_NAME",
+    "name_resolved": "Scrapper's Mask",
+    "desc": "ARMOR_SCRAPPERSMASK_DESC",
+    "desc_resolved": "When you break an item, gain +3 [img:shield].",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "110",
+    "set": [
+      "Tinkerer,",
+      "Scrap"
+    ],
+    "shield": "3",
+    "passives": {
+      "Metal": "1",
+      "StatusOnBreakItem": {
+        "Shield": "3"
+      }
+    }
+  },
+  "ScrappersHat": {
+    "name": "ARMOR_SCRAPPERSHAT_NAME",
+    "name_resolved": "Scrapper's Hat",
+    "desc": "ARMOR_SCRAPPERSHAT_DESC",
+    "desc_resolved": "When you break an item, spawn 3 random pickups.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "110",
+    "set": [
+      "Tinkerer,",
+      "Scrap"
+    ],
+    "shield": "3",
+    "passives": {
+      "Metal": "1",
+      "StatusOnBreakItem": {
+        "DoDamage": {
+          "damage": "0",
+          "type": "spell",
+          "damage_tiles": "all",
+          "effects": {
+            "BounceObject": "RandomPickup"
+          }
+        }
+      }
+    }
+  },
+  "ScrappersBackpack": {
+    "name": "ARMOR_SCRAPPERSBACKPACK_NAME",
+    "name_resolved": "Scrapper's Backpack",
+    "desc": "ARMOR_SCRAPPERSBACKPACK_DESC",
+    "desc_resolved": "When you break an item, recover it at the end of the battle with 1 durability.\n[s:.7](Excludes temporary items)[/s]",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "110",
+    "set": [
+      "Tinkerer,",
+      "Survivalist"
+    ],
+    "passives": {
+      "ReclaimItemOnBreak": "1"
+    }
+  },
+  "IronJaw": {
+    "name": "ARMOR_IRONJAW_NAME",
+    "name_resolved": "Iron Jaw",
+    "desc": "ARMOR_IRONJAW_DESC",
+    "desc_resolved": "Counterattack melee attackers with a bite that deals 3 damage with Lifesteal.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "111",
+    "set": [
+      "Butcher,",
+      "Tinkerer"
+    ],
+    "shield": "3",
+    "passives": {
+      "Metal": "1",
+      "CounterAttack": {
+        "ability": "head_IronJaw"
+      }
+    }
+  },
+  "FleshShroud": {
+    "name": "ARMOR_FLESHSHROUD_NAME",
+    "name_resolved": "Flesh Shroud",
+    "desc": "ARMOR_FLESHSHROUD_DESC",
+    "desc_resolved": "Gain +1 [img:shield] each time you heal.\nWhen you kill a unit or destroy a corpse, it becomes meat.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "111",
+    "set": [
+      "Butcher,",
+      "HumanFlesh"
+    ],
+    "passives": {
+      "KillsToMeat": "Food",
+      "StatusOnHealed": {
+        "Shield": "1"
+      }
+    }
+  },
+  "HookedNecklace": {
+    "name": "ARMOR_HOOKEDNECKLACE_NAME",
+    "name_resolved": "Hooked Necklace",
+    "desc": "ARMOR_HOOKEDNECKLACE_DESC",
+    "desc_resolved": "+2 Thorns. Cleave units that contact you.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "111",
+    "set": "Butcher",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "Thorns": "2",
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Cleave": "1"
+        }
+      }
+    }
+  },
+  "GreenmanMask": {
+    "name": "ARMOR_GREENMANMASK_NAME",
+    "name_resolved": "Greenman Mask",
+    "desc": "ARMOR_GREENMANMASK_DESC",
+    "desc_resolved": "+3 Brace while standing in tall grass.\n+3 Mana Regen while standing in water.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "112",
+    "set": [
+      "Druid,",
+      "Leafy"
+    ],
+    "passives": {
+      "PassiveWhenOnTile": {
+        "tile": [
+          "WaterTile"
+        ],
+        "passives": {
+          "AddManaRegen": "3"
+        }
+      }
+    }
+  },
+  "MushroomHat": {
+    "name": "ARMOR_MUSHROOMHAT_NAME",
+    "name_resolved": "Mushroom Hat",
+    "desc": "ARMOR_MUSHROOMHAT_DESC",
+    "desc_resolved": "Inflict Confusion 2 on units that contact or attack you.\nFamiliars you spawn inflict Confusion.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "112",
+    "set": "Druid",
+    "passives": {
+      "RevengeDamage": {
+        "effects": {
+          "Confusion": "2"
+        }
+      },
+      "AddPassivesToMinions": {
+        "AddStatusToBasicAttack": {
+          "Confusion": "1"
+        }
+      }
+    }
+  },
+  "RingOfMushrooms": {
+    "name": "ARMOR_RINGOFMUSHROOMS_NAME",
+    "name_resolved": "Ring of Mushrooms",
+    "desc": "ARMOR_RINGOFMUSHROOMS_DESC",
+    "desc_resolved": "All of your area abilities gain +1 area.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "112",
+    "set": [
+      "Druid,",
+      "Twine"
+    ],
+    "passives": {
+      "AOEBonus": "1"
+    }
+  },
+  "CatWhiskers": {
+    "name": "ARMOR_CATWHISKERS_NAME",
+    "name_resolved": "Ordinary Whiskers",
+    "desc": "ARMOR_CATWHISKERS_DESC",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "119",
+    "set": "Collarless",
+    "str": "1",
+    "dex": "1",
+    "int": "1",
+    "con": "1",
+    "spd": "1",
+    "lck": "1",
+    "cha": "1",
+    "passives": {}
+  },
+  "CatEars": {
+    "name": "ARMOR_CATEARS_NAME",
+    "name_resolved": "Normal Ears",
+    "desc": "ARMOR_CATEARS_DESC",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "132",
+    "set": "Collarless",
+    "str": "1",
+    "dex": "1",
+    "int": "1",
+    "con": "1",
+    "spd": "1",
+    "lck": "1",
+    "cha": "1",
+    "passives": {}
+  },
+  "CatCollar": {
+    "name": "ARMOR_CATCOLLAR_NAME",
+    "name_resolved": "Mundane Collar",
+    "desc": "ARMOR_CATCOLLAR_DESC",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "87",
+    "set": [
+      "Collarless,",
+      "Leather"
+    ],
+    "str": "1",
+    "dex": "1",
+    "int": "1",
+    "con": "1",
+    "spd": "1",
+    "lck": "1",
+    "cha": "1",
+    "passives": {}
+  },
+  "ClownMakeup": {
+    "name": "ARMOR_CLOWNMAKEUP_NAME",
+    "name_resolved": "Clown Makeup",
+    "desc": "ARMOR_CLOWNMAKEUP_DESC",
+    "desc_resolved": "Triple the effects of your Head armor.",
+    "rarity": "very_rare",
+    "kind": "face",
+    "frame": "171",
+    "set": "Jester",
+    "lck": "-3",
+    "passives": {
+      "HeadArmorPassiveMultiplierBonus": "2"
+    }
+  },
+  "CapAndBells": {
+    "name": "ARMOR_CAPANDBELLS_NAME",
+    "name_resolved": "Cap and Bells",
+    "desc": "ARMOR_CAPANDBELLS_DESC",
+    "desc_resolved": "Triple the effects of your Trinket.",
+    "rarity": "very_rare",
+    "kind": "head",
+    "frame": "180",
+    "set": "Jester",
+    "lck": "-3",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "2",
+      "TrinketActiveEffectsMultiplierBonus": "2"
+    }
+  },
+  "Ruffle": {
+    "name": "ARMOR_RUFFLE_NAME",
+    "name_resolved": "Ruffle",
+    "desc": "ARMOR_RUFFLE_DESC",
+    "desc_resolved": "Triple the effects of your Face armor.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "163",
+    "set": "Jester",
+    "lck": "-3",
+    "passives": {
+      "FaceArmorPassiveMultiplierBonus": "2"
+    }
+  },
+  "FeatheredVeil": {
+    "name": "ARMOR_FEATHEREDVEIL_NAME",
+    "name_resolved": "Feathered Veil",
+    "desc": "ARMOR_FEATHEREDVEIL_DESC",
+    "desc_resolved": "Counterattack melee attackers.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "92",
+    "set": "Feathered",
+    "passives": {
+      "CounterAttack": {
+        "melee_only": "true",
+        "ability": "attack"
+      }
+    }
+  },
+  "FeatheredCap": {
+    "name": "ARMOR_FEATHEREDCAP_NAME",
+    "name_resolved": "Feathered Cap",
+    "desc": "ARMOR_FEATHEREDCAP_DESC",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "89",
+    "set": "Feathered",
+    "spd": "4",
+    "passives": {}
+  },
+  "FeatheredNecklace": {
+    "name": "ARMOR_FEATHEREDNECKLACE_NAME",
+    "name_resolved": "Feathered Necklace",
+    "desc": "ARMOR_FEATHEREDNECKLACE_DESC",
+    "desc_resolved": "+15% Dodge Chance.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "75",
+    "set": "Feathered",
+    "passives": {
+      "ArmorDodgeChance": "15%"
+    }
+  },
+  "TheMind": {
+    "name": "ARMOR_THEMIND_NAME",
+    "name_resolved": "The Mind",
+    "desc": "ARMOR_THEMIND_DESC",
+    "rarity": "very_rare",
+    "kind": "head",
+    "frame": "205",
+    "set": "Godhead",
+    "int": "7"
+  },
+  "TheBody": {
+    "name": "ARMOR_THEBODY_NAME",
+    "name_resolved": "The Body",
+    "desc": "ARMOR_THEBODY_DESC",
+    "rarity": "very_rare",
+    "kind": "face",
+    "frame": "193",
+    "set": "Godhead",
+    "con": "7"
+  },
+  "TheSoul": {
+    "name": "ARMOR_THESOUL_NAME",
+    "name_resolved": "The Soul",
+    "desc": "ARMOR_THESOUL_DESC",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "177",
+    "set": "Godhead",
+    "lck": "7"
+  },
+  "BrickHat": {
+    "name": "ARMOR_BRICKHAT_NAME",
+    "name_resolved": "Brick Hat",
+    "desc": "ARMOR_BRICKHAT_DESC",
+    "desc_resolved": "Inflict Bruise 1 on units that contact you.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "122",
+    "set": "Brick",
+    "shield": "4",
+    "spd": "-1",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "BrickMask": {
+    "name": "ARMOR_BRICKMASK_NAME",
+    "name_resolved": "Brick Mask",
+    "desc": "ARMOR_BRICKMASK_DESC",
+    "desc_resolved": "Inflict Bruise 1 on units that contact you.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "124",
+    "set": "Brick",
+    "shield": "4",
+    "spd": "-1",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "BrickNecklace": {
+    "name": "ARMOR_BRICKNECKLACE_NAME",
+    "name_resolved": "Brick Necklace",
+    "desc": "ARMOR_BRICKNECKLACE_DESC",
+    "desc_resolved": "Inflict Bruise 1 on units that contact you.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "113",
+    "set": "Brick",
+    "shield": "4",
+    "spd": "-1",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Bruise": "1"
+        }
+      }
+    }
+  },
+  "SlimyHat": {
+    "name": "ARMOR_SLIMYHAT_NAME",
+    "name_resolved": "Slimy Hat",
+    "desc": "ARMOR_SLIMYHAT_DESC",
+    "desc_resolved": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "123",
+    "set": "Slimy",
+    "cha": "-1",
+    "passives": {
+      "CatchProjectiles": {
+        "chance": "15%",
+        "ally_chance": "15%",
+        "Quivered": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "SlimyMask": {
+    "name": "ARMOR_SLIMYMASK_NAME",
+    "name_resolved": "Slimy Mask",
+    "desc": "ARMOR_SLIMYMASK_DESC",
+    "desc_resolved": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "125",
+    "set": "Slimy",
+    "cha": "-1",
+    "passives": {
+      "CatchProjectiles": {
+        "chance": "15%",
+        "ally_chance": "15%",
+        "Quivered": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "SlimyNecklace": {
+    "name": "ARMOR_SLIMYNECKLACE_NAME",
+    "name_resolved": "Slimy Necklace",
+    "desc": "ARMOR_SLIMYNECKLACE_DESC",
+    "desc_resolved": "+15% chance to catch projectiles. Inflict Immobile 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "114",
+    "set": "Slimy",
+    "cha": "-1",
+    "passives": {
+      "CatchProjectiles": {
+        "chance": "15%",
+        "ally_chance": "15%",
+        "Quivered": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Immobile": "1"
+        }
+      }
+    }
+  },
+  "RatHat": {
+    "name": "ARMOR_RATHAT_NAME",
+    "name_resolved": "Rat Hat",
+    "desc": "ARMOR_RATHAT_DESC",
+    "desc_resolved": "Start battle with a Charmed Pinky.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "124",
+    "set": "Rat",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedPinky",
+        "number": "1"
+      }
+    }
+  },
+  "RatMask": {
+    "name": "ARMOR_RATMASK_NAME",
+    "name_resolved": "Rat Mask",
+    "desc": "ARMOR_RATMASK_DESC",
+    "desc_resolved": "Start battle with a Charmed Pinky.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "126",
+    "set": "Rat",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedPinky",
+        "number": "1"
+      }
+    }
+  },
+  "RatNecklace": {
+    "name": "ARMOR_RATNECKLACE_NAME",
+    "name_resolved": "Rat Necklace",
+    "desc": "ARMOR_RATNECKLACE_DESC",
+    "desc_resolved": "Start battle with a Charmed Pinky.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "115",
+    "set": "Rat",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedPinky",
+        "number": "1"
+      }
+    }
+  },
+  "CarapaceHat": {
+    "name": "ARMOR_CARAPACEHAT_NAME",
+    "name_resolved": "Carapace Hat",
+    "desc": "ARMOR_CARAPACEHAT_DESC",
+    "desc_resolved": "Cleanse 1 stack of a random negative status effect when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "73",
+    "set": "Carapace",
+    "shield": "4",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "PartialCleanse": "1"
+      }
+    }
+  },
+  "CarapaceMask": {
+    "name": "ARMOR_CARAPACEMASK_NAME",
+    "name_resolved": "Carapace Mask",
+    "desc": "ARMOR_CARAPACEMASK_DESC",
+    "desc_resolved": "Cleanse 1 stack of a random negative status effect when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "75",
+    "set": "Carapace",
+    "shield": "4",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "PartialCleanse": "1"
+      }
+    }
+  },
+  "CarapaceNecklace": {
+    "name": "ARMOR_CARAPACENECKLACE_NAME",
+    "name_resolved": "Carapace Necklace",
+    "desc": "ARMOR_CARAPACENECKLACE_DESC",
+    "desc_resolved": "Cleanse 1 stack of a random negative status effect when you end your turn.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "59",
+    "set": "Carapace",
+    "shield": "4",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "PartialCleanse": "1"
+      }
+    }
+  },
+  "RadioactiveHat": {
+    "name": "ARMOR_RADIOACTIVEHAT_NAME",
+    "name_resolved": "Radioactive Hat",
+    "desc": "ARMOR_RADIOACTIVEHAT_DESC",
+    "desc_resolved": "Adjacent units get All Stats Down.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "86",
+    "set": "Radioactive",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "DepressionAura": "1",
+      "StatusOnBattleEnd": {
+        "Conditional_GoodRoll": {
+          "RandomMutation": "1",
+          "odds": "1%"
+        }
+      }
+    }
+  },
+  "RadioactiveMask": {
+    "name": "ARMOR_RADIOACTIVEMASK_NAME",
+    "name_resolved": "Radioactive Mask",
+    "desc": "ARMOR_RADIOACTIVEMASK_DESC",
+    "desc_resolved": "Adjacent units get All Stats Down.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "88",
+    "set": "Radioactive",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "DepressionAura": "1",
+      "StatusOnBattleEnd": {
+        "Conditional_GoodRoll": {
+          "RandomMutation": "1",
+          "odds": "1%"
+        }
+      }
+    }
+  },
+  "RadioactiveNecklace": {
+    "name": "ARMOR_RADIOACTIVENECKLACE_NAME",
+    "name_resolved": "Radioactive Necklace",
+    "desc": "ARMOR_RADIOACTIVENECKLACE_DESC",
+    "desc_resolved": "Adjacent units get All Stats Down.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "72",
+    "set": "Radioactive",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "DepressionAura": "1",
+      "StatusOnBattleEnd": {
+        "Conditional_GoodRoll": {
+          "RandomMutation": "1",
+          "odds": "1%"
+        }
+      }
+    }
+  },
+  "MoltenHat": {
+    "name": "ARMOR_MOLTENHAT_NAME",
+    "name_resolved": "Molten Hat",
+    "desc": "ARMOR_MOLTENHAT_DESC",
+    "desc_resolved": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "87",
+    "set": "Molten",
+    "passives": {
+      "Burn": "2",
+      "AddStatusToBasicAttack": {
+        "Burn": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Burn": "1"
+        }
+      }
+    }
+  },
+  "MoltenMask": {
+    "name": "ARMOR_MOLTENMASK_NAME",
+    "name_resolved": "Molten Mask",
+    "desc": "ARMOR_MOLTENMASK_DESC",
+    "desc_resolved": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "89",
+    "set": "Molten",
+    "passives": {
+      "Burn": "2",
+      "AddStatusToBasicAttack": {
+        "Burn": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Burn": "1"
+        }
+      }
+    }
+  },
+  "MoltenNecklace": {
+    "name": "ARMOR_MOLTENNECKLACE_NAME",
+    "name_resolved": "Molten Necklace",
+    "desc": "ARMOR_MOLTENNECKLACE_DESC",
+    "desc_resolved": "Start with Burn 2. Your basic attack inflicts Burn 1. Inflict Burn 1 on units that contact you.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "73",
+    "set": "Molten",
+    "passives": {
+      "Burn": "2",
+      "AddStatusToBasicAttack": {
+        "Burn": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Burn": "1"
+        }
+      }
+    }
+  },
+  "MothersHat": {
+    "name": "ARMOR_MOTHERSHAT_NAME",
+    "name_resolved": "Mother's Hat",
+    "desc": "ARMOR_MOTHERSHAT_DESC",
+    "desc_resolved": "Spawn a Charmed Tiny Tumor at the start of each battle and whenever you're downed.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "88",
+    "set": "Mother",
+    "passives": {
+      "SpawnThingOnDeath": "CharmedTinyTumor",
+      "SpawnOnBattleStart": {
+        "object": "CharmedTinyTumor",
+        "number": "1"
+      }
+    }
+  },
+  "MothersMask": {
+    "name": "ARMOR_MOTHERSMASK_NAME",
+    "name_resolved": "Mother's Mask",
+    "desc": "ARMOR_MOTHERSMASK_DESC",
+    "desc_resolved": "Spawn a Charmed Tiny Tumor at the start of each battle and whenever you're downed.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "90",
+    "set": "Mother",
+    "passives": {
+      "SpawnThingOnDeath": "CharmedTinyTumor",
+      "SpawnOnBattleStart": {
+        "object": "CharmedTinyTumor",
+        "number": "1"
+      }
+    }
+  },
+  "MothersNecklace": {
+    "name": "ARMOR_MOTHERSNECKLACE_NAME",
+    "name_resolved": "Mother's Necklace",
+    "desc": "ARMOR_MOTHERSNECKLACE_DESC",
+    "desc_resolved": "Spawn a Charmed Tiny Tumor at the start of each battle and whenever you're downed.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "74",
+    "set": "Mother",
+    "passives": {
+      "SpawnThingOnDeath": "CharmedTinyTumor",
+      "SpawnOnBattleStart": {
+        "object": "CharmedTinyTumor",
+        "number": "1"
+      }
+    }
+  },
+  "NurseHat": {
+    "name": "ARMOR_NURSEHAT_NAME",
+    "name_resolved": "Nurse Hat",
+    "desc": "ARMOR_NURSEHAT_DESC",
+    "desc_resolved": "+1 Health Regen. Your heals heal for 1 extra.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "125",
+    "set": "Nurse",
+    "con": "1",
+    "passives": {
+      "HealthRegenUp": "1",
+      "BoostHeals": "1"
+    }
+  },
+  "NurseMask": {
+    "name": "ARMOR_NURSEMASK_NAME",
+    "name_resolved": "Nurse Mask",
+    "desc": "ARMOR_NURSEMASK_DESC",
+    "desc_resolved": "+1 Health Regen. Your heals heal for 1 extra.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "127",
+    "set": "Nurse",
+    "con": "1",
+    "passives": {
+      "HealthRegenUp": "1",
+      "BoostHeals": "1"
+    }
+  },
+  "NurseNecklace": {
+    "name": "ARMOR_NURSENECKLACE_NAME",
+    "name_resolved": "Nurse Necklace",
+    "desc": "ARMOR_NURSENECKLACE_DESC",
+    "desc_resolved": "+1 Health Regen. Your heals heal for 1 extra.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "116",
+    "set": "Nurse",
+    "con": "1",
+    "passives": {
+      "HealthRegenUp": "1",
+      "BoostHeals": "1"
+    }
+  },
+  "HybridHat": {
+    "name": "ARMOR_HYBRIDHAT_NAME",
+    "name_resolved": "Hybrid Hat",
+    "desc": "ARMOR_HYBRIDHAT_DESC",
+    "desc_resolved": "Start with a bonus move and Bleed 1.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "126",
+    "set": "Hybrid",
+    "passives": {
+      "Bleed": "1",
+      "MoveQuivered": "1"
+    }
+  },
+  "HybridMask": {
+    "name": "ARMOR_HYBRIDMASK_NAME",
+    "name_resolved": "Hybrid Mask",
+    "desc": "ARMOR_HYBRIDMASK_DESC",
+    "desc_resolved": "Start with a bonus attack and Poison 1.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "128",
+    "set": [
+      "Hybrid,",
+      "Rat"
+    ],
+    "passives": {
+      "Poison": "1",
+      "Quivered": "1"
+    }
+  },
+  "HybridNecklace": {
+    "name": "ARMOR_HYBRIDNECKLACE_NAME",
+    "name_resolved": "Hybrid Necklace",
+    "desc": "ARMOR_HYBRIDNECKLACE_DESC",
+    "desc_resolved": "Start with +5 Charge and Bruise 1.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "117",
+    "set": "Hybrid",
+    "passives": {
+      "Bruise": "1",
+      "Charge": "5"
+    }
+  },
+  "FattyHat": {
+    "name": "ARMOR_FATTYHAT_NAME",
+    "name_resolved": "Fatty Hat",
+    "desc": "ARMOR_FATTYHAT_DESC",
+    "desc_resolved": "Brace 1. Your basic attack has +1 Knockback.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "116",
+    "set": "Fatty",
+    "passives": {
+      "Brace": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      }
+    }
+  },
+  "FattyMask": {
+    "name": "ARMOR_FATTYMASK_NAME",
+    "name_resolved": "Fatty Mask",
+    "desc": "ARMOR_FATTYMASK_DESC",
+    "desc_resolved": "Brace 1. Your basic attack has +1 Knockback.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "98",
+    "set": "Fatty",
+    "passives": {
+      "Brace": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      }
+    }
+  },
+  "FattyNecklace": {
+    "name": "ARMOR_FATTYNECKLACE_NAME",
+    "name_resolved": "Fatty Necklace",
+    "desc": "ARMOR_FATTYNECKLACE_DESC",
+    "desc_resolved": "Brace 1. Your basic attack has +1 Knockback.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "80",
+    "set": "Fatty",
+    "passives": {
+      "Brace": "1",
+      "AddStatusToBasicAttack": {
+        "Knockback": "1"
+      }
+    }
+  },
+  "MedicalHat": {
+    "name": "ARMOR_MEDICALHAT_NAME",
+    "name_resolved": "Medical Hat",
+    "desc": "ARMOR_MEDICALHAT_DESC",
+    "desc_resolved": "All of your stats are increased by 1 for each disorder you have.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "117",
+    "set": "Medical",
+    "passives": {
+      "AllStatsUpPerDisorder": "1"
+    }
+  },
+  "MedicalMask": {
+    "name": "ARMOR_MEDICALMASK_NAME",
+    "name_resolved": "Medical Mask",
+    "desc": "ARMOR_MEDICALMASK_DESC",
+    "desc_resolved": "All of your stats are increased by 1 for each disorder you have.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "99",
+    "set": "Medical",
+    "passives": {
+      "AllStatsUpPerDisorder": "1"
+    }
+  },
+  "MedicalNecklace": {
+    "name": "ARMOR_MEDICALNECKLACE_NAME",
+    "name_resolved": "Medical Necklace",
+    "desc": "ARMOR_MEDICALNECKLACE_DESC",
+    "desc_resolved": "All of your stats are increased by 1 for each disorder you have.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "81",
+    "set": "Medical",
+    "passives": {
+      "AllStatsUpPerDisorder": "1"
+    }
+  },
+  "OcularChip": {
+    "name": "ARMOR_OCULARCHIP_NAME",
+    "name_resolved": "Ocular Chip",
+    "desc": "ARMOR_OCULARCHIP_DESC",
+    "desc_resolved": "Your spells cost -1 mana.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "118",
+    "set": "Chip",
+    "int": "-1",
+    "cha": "-1",
+    "passives": {
+      "ManaCostReduction": "1"
+    }
+  },
+  "CerebralChip": {
+    "name": "ARMOR_CEREBRALCHIP_NAME",
+    "name_resolved": "Cerebral Chip",
+    "desc": "ARMOR_CEREBRALCHIP_DESC",
+    "desc_resolved": "Your spells cost -1 mana.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "114",
+    "set": "Chip",
+    "int": "-1",
+    "cha": "-1",
+    "passives": {
+      "ManaCostReduction": "1"
+    }
+  },
+  "SpinalChip": {
+    "name": "ARMOR_SPINALCHIP_NAME",
+    "name_resolved": "Spinal Chip",
+    "desc": "ARMOR_SPINALCHIP_DESC",
+    "desc_resolved": "Your spells cost -1 mana.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "82",
+    "set": "Chip",
+    "int": "-1",
+    "cha": "-1",
+    "passives": {
+      "ManaCostReduction": "1"
+    }
+  },
+  "DemonicHat": {
+    "name": "ARMOR_DEMONICHAT_NAME",
+    "name_resolved": "Demonic Hat",
+    "desc": "ARMOR_DEMONICHAT_DESC",
+    "desc_resolved": "+3 Thorns. Trample.\nYou can no longer heal.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "127",
+    "set": "Demonic",
+    "passives": {
+      "Thorns": "3",
+      "Trample": "3",
+      "HPGainBlock": "1"
+    }
+  },
+  "DemonicMask": {
+    "name": "ARMOR_DEMONICMASK_NAME",
+    "name_resolved": "Demonic Mask",
+    "desc": "ARMOR_DEMONICMASK_DESC",
+    "desc_resolved": "+3 Bleed Thorns.\nTrample. Bleed 3.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "129",
+    "set": "Demonic",
+    "passives": {
+      "Bleed": "3",
+      "BleedThorns": "3",
+      "Trample": "3"
+    }
+  },
+  "DemonicNecklace": {
+    "name": "ARMOR_DEMONICNECKLACE_NAME",
+    "name_resolved": "Demonic Necklace",
+    "desc": "ARMOR_DEMONICNECKLACE_DESC",
+    "desc_resolved": "Bruise 1. When you take damage, gain +2 Damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "118",
+    "set": "Demonic",
+    "passives": {
+      "Bruise": "1",
+      "StatusOnTookDamage": {
+        "DamageUp": "2"
+      }
+    }
+  },
+  "FrozenHat": {
+    "name": "ARMOR_FROZENHAT_NAME",
+    "name_resolved": "Frozen Hat",
+    "desc": "ARMOR_FROZENHAT_DESC",
+    "desc_resolved": "Your basic attack inflicts Slow and has a +10% chance to Freeze units. Units that contact you gain Slow and have a 10% chance to become Frozen.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "128",
+    "set": "Frozen",
+    "shield": "1",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Slow": "1",
+        "Conditional_GoodRoll": {
+          "Freeze": "1",
+          "odds": "10%"
+        }
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Slow": "1",
+          "Conditional_GoodRoll": {
+            "Freeze": "1",
+            "odds": "10%"
+          }
+        }
+      }
+    }
+  },
+  "FrozenMask": {
+    "name": "ARMOR_FROZENMASK_NAME",
+    "name_resolved": "Frozen Mask",
+    "desc": "ARMOR_FROZENMASK_DESC",
+    "desc_resolved": "Your basic attack inflicts Slow and has a +10% chance to Freeze units. Units that contact you gain Slow and have a 10% chance to become Frozen.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "130",
+    "set": "Frozen",
+    "shield": "1",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Slow": "1",
+        "Conditional_GoodRoll": {
+          "Freeze": "1",
+          "odds": "10%"
+        }
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Slow": "1",
+          "Conditional_GoodRoll": {
+            "Freeze": "1",
+            "odds": "10%"
+          }
+        }
+      }
+    }
+  },
+  "FrozenNecklace": {
+    "name": "ARMOR_FROZENNECKLACE_NAME",
+    "name_resolved": "Frozen Necklace",
+    "desc": "ARMOR_FROZENNECKLACE_DESC",
+    "desc_resolved": "Your basic attack inflicts Slow and has a +10% chance to Freeze units. Units that contact you gain Slow and have a 10% chance to become Frozen.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "119",
+    "set": "Frozen",
+    "shield": "1",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Slow": "1",
+        "Conditional_GoodRoll": {
+          "Freeze": "1",
+          "odds": "10%"
+        }
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Slow": "1",
+          "Conditional_GoodRoll": {
+            "Freeze": "1",
+            "odds": "10%"
+          }
+        }
+      }
+    }
+  },
+  "SaberToothedHat": {
+    "name": "ARMOR_SABERTOOTHEDHAT_NAME",
+    "name_resolved": "Sabertooth Hat",
+    "desc": "ARMOR_SABERTOOTHEDHAT_DESC",
+    "desc_resolved": "+2 Thorns. Ice immunity.",
+    "rarity": "common",
+    "kind": "head",
+    "frame": "114",
+    "set": "Wooly",
+    "shield": "3",
+    "passives": {
+      "Thorns": "2",
+      "ElementImmune": "Ice",
+      "StatusImmunity": [
+        "Freeze,",
+        "Slow"
+      ]
+    }
+  },
+  "CavemanBeard": {
+    "name": "ARMOR_CAVEMANBEARD_NAME",
+    "name_resolved": "Wooly Beard",
+    "desc": "ARMOR_CAVEMANBEARD_DESC",
+    "desc_resolved": "Brace 2. Ice immunity.",
+    "rarity": "common",
+    "kind": "face",
+    "frame": "96",
+    "set": [
+      "Wooly,",
+      "Caveman"
+    ],
+    "shield": "3",
+    "passives": {
+      "Brace": "2",
+      "ElementImmune": "Ice",
+      "StatusImmunity": [
+        "Freeze,",
+        "Slow"
+      ]
+    }
+  },
+  "SaberToothedPelt": {
+    "name": "ARMOR_SABERTOOTHEDPELT_NAME",
+    "name_resolved": "Sabertooth Pelt",
+    "desc": "ARMOR_SABERTOOTHEDPELT_DESC",
+    "desc_resolved": "+2 Health Regen. Ice immunity.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "78",
+    "set": "Wooly",
+    "shield": "3",
+    "passives": {
+      "HealthRegenUp": "2",
+      "ElementImmune": "Ice",
+      "StatusImmunity": [
+        "Freeze,",
+        "Slow"
+      ]
+    }
+  },
+  "RuneofJera": {
+    "name": "ARMOR_RUNEOFJERA_NAME",
+    "name_resolved": "Rune of Jera",
+    "desc": "ARMOR_RUNEOFJERA_DESC",
+    "desc_resolved": "Your trinket effects are doubled.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "119",
+    "set": "Rune",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "1",
+      "TrinketActiveEffectsMultiplierBonus": "1"
+    }
+  },
+  "RuneofHagalaz": {
+    "name": "ARMOR_RUNEOFHAGALAZ_NAME",
+    "name_resolved": "Rune of Hagalaz",
+    "desc": "ARMOR_RUNEOFHAGALAZ_DESC",
+    "desc_resolved": "Your Weapons hit twice.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "115",
+    "set": "Rune",
+    "passives": {
+      "DoubleCastWeapons": "1"
+    }
+  },
+  "RuneofPerthro": {
+    "name": "ARMOR_RUNEOFPERTHRO_NAME",
+    "name_resolved": "Rune of Perthro",
+    "desc": "ARMOR_RUNEOFPERTHRO_DESC",
+    "desc_resolved": "This item counts for all item sets.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "83",
+    "set": [
+      "Rune",
+      "*"
+    ],
+    "shield": "4"
+  },
+  "CavemanWig": {
+    "name": "ARMOR_CAVEMANWIG_NAME",
+    "name_resolved": "Caveman Wig",
+    "desc": "ARMOR_CAVEMANWIG_DESC",
+    "desc_resolved": "Spawn 1-3 Charmed Lice at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "115",
+    "set": "Caveman",
+    "int": "-1",
+    "str": "2",
+    "passives": {
+      "SpawnOnBattleStart": {
+        "object": "CharmedLice",
+        "number": [
+          "1,",
+          "3"
+        ]
+      }
+    }
+  },
+  "CavemanEyebrows": {
+    "name": "ARMOR_CAVEMANEYEBROWS_NAME",
+    "name_resolved": "Caveman Eyebrows",
+    "desc": "ARMOR_CAVEMANEYEBROWS_DESC",
+    "desc_resolved": "Your weapons deal double damage.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "97",
+    "set": "Caveman",
+    "int": "-1",
+    "con": "2",
+    "passives": {
+      "WeaponDamageMultiplierBonus": "1"
+    }
+  },
+  "CavemanNecklace": {
+    "name": "ARMOR_CAVEMANNECKLACE_NAME",
+    "name_resolved": "Caveman Necklace",
+    "desc": "ARMOR_CAVEMANNECKLACE_DESC",
+    "desc_resolved": "+33% crit damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "79",
+    "set": "Caveman",
+    "int": "-1",
+    "lck": "2",
+    "passives": {
+      "AddCritMultiplier": "33%"
+    }
+  },
+  "DinoHat": {
+    "name": "ARMOR_DINOHAT_NAME",
+    "name_resolved": "Dino Hat",
+    "desc": "ARMOR_DINOHAT_DESC",
+    "desc_resolved": "Allies gain +1 [img:str] at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "131",
+    "set": [
+      "Dino,",
+      "Bone"
+    ],
+    "int": "-1",
+    "shield": "5",
+    "passives": {
+      "StatusAlliesOnBattleStart": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "DinoMask": {
+    "name": "ARMOR_DINOMASK_NAME",
+    "name_resolved": "Dino Mask",
+    "desc": "ARMOR_DINOMASK_DESC",
+    "desc_resolved": "Allies gain +1 [img:con] at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "118",
+    "set": [
+      "Dino,",
+      "Bone"
+    ],
+    "int": "-1",
+    "shield": "5",
+    "passives": {
+      "StatusAlliesOnBattleStart": {
+        "ConstitutionUp": "1"
+      }
+    }
+  },
+  "DinoNecklace": {
+    "name": "ARMOR_DINONECKLACE_NAME",
+    "name_resolved": "Dino Necklace",
+    "desc": "ARMOR_DINONECKLACE_DESC",
+    "desc_resolved": "Allies gain +1 [img:spd] at the start of each battle.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "86",
+    "set": [
+      "Dino,",
+      "Bone"
+    ],
+    "int": "-1",
+    "shield": "5",
+    "passives": {
+      "StatusAlliesOnBattleStart": {
+        "SpeedUp": "1"
+      }
+    }
+  },
+  "BigRockHat": {
+    "name": "ARMOR_BIGROCKHAT_NAME",
+    "name_resolved": "Big Rock Hat",
+    "desc": "ARMOR_BIGROCKHAT_DESC",
+    "desc_resolved": "Brace 2.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "129",
+    "set": "Rock",
+    "spd": "-2",
+    "shield": "6",
+    "passives": {
+      "Brace": "2"
+    }
+  },
+  "BigRockMask": {
+    "name": "ARMOR_BIGROCKMASK_NAME",
+    "name_resolved": "Big Rock Mask",
+    "desc": "ARMOR_BIGROCKMASK_DESC",
+    "desc_resolved": "Brace 2.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "116",
+    "set": "Rock",
+    "spd": "-2",
+    "shield": "6",
+    "passives": {
+      "Brace": "2"
+    }
+  },
+  "BigRockNecklace": {
+    "name": "ARMOR_BIGROCKNECKLACE_NAME",
+    "name_resolved": "Big Rock Necklace",
+    "desc": "ARMOR_BIGROCKNECKLACE_DESC",
+    "desc_resolved": "Brace 2.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "84",
+    "set": "Rock",
+    "spd": "-2",
+    "shield": "6",
+    "passives": {
+      "Brace": "2"
+    }
+  },
+  "PhoenixHat": {
+    "name": "ARMOR_PHOENIXHAT_NAME",
+    "name_resolved": "Phoenix Hat",
+    "desc": "ARMOR_PHOENIXHAT_DESC",
+    "desc_resolved": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
+    "rarity": "uncommon",
+    "kind": "head",
+    "frame": "130",
+    "set": [
+      "Phoenix,",
+      "Feathered"
+    ],
+    "passives": {
+      "ArmorDodgeChance": "10%",
+      "StatusOnEndMove": {
+        "SpeedUp": "1",
+        "Charge": "2"
+      }
+    }
+  },
+  "PhoenixMask": {
+    "name": "ARMOR_PHOENIXMASK_NAME",
+    "name_resolved": "Phoenix Mask",
+    "desc": "ARMOR_PHOENIXMASK_DESC",
+    "desc_resolved": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
+    "rarity": "uncommon",
+    "kind": "face",
+    "frame": "117",
+    "set": [
+      "Phoenix,",
+      "Feathered"
+    ],
+    "passives": {
+      "ArmorDodgeChance": "10%",
+      "StatusOnEndMove": {
+        "SpeedUp": "1",
+        "Charge": "2"
+      }
+    }
+  },
+  "PhoenixNecklace": {
+    "name": "ARMOR_PHOENIXNECKLACE_NAME",
+    "name_resolved": "Phoenix Necklace",
+    "desc": "ARMOR_PHOENIXNECKLACE_DESC",
+    "desc_resolved": "+10% Dodge Chance. Each time you end movement, gain +1 [img:spd] and Charge 2.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "85",
+    "set": [
+      "Phoenix,",
+      "Feathered"
+    ],
+    "passives": {
+      "ArmorDodgeChance": "10%",
+      "StatusOnEndMove": {
+        "SpeedUp": "1",
+        "Charge": "2"
+      }
+    }
+  },
+  "AncestorsSkull": {
+    "name": "ARMOR_ANCESTORSSKULL_NAME",
+    "name_resolved": "Ancestor's Skull",
+    "desc": "ARMOR_ANCESTORSSKULL_DESC",
+    "desc_resolved": "- {str_aux_passive_name} -\n{str_aux_passive_desc}",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "171",
+    "set": [
+      "Ancestor,",
+      "Bone"
+    ],
+    "str_aux_initialize": "random_class_passive",
+    "str_aux_is_copy_passive": "true"
+  },
+  "AncestorsJaw": {
+    "name": "ARMOR_ANCESTORSJAW_NAME",
+    "name_resolved": "Ancestor's Jaw",
+    "desc": "ARMOR_ANCESTORSJAW_DESC",
+    "desc_resolved": "- {str_aux_passive_name} -\n{str_aux_passive_desc}",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "155",
+    "set": [
+      "Ancestor,",
+      "Bone"
+    ],
+    "str_aux_initialize": "random_class_passive",
+    "str_aux_is_copy_passive": "true"
+  },
+  "AncestorsBones": {
+    "name": "ARMOR_ANCESTORSBONES_NAME",
+    "name_resolved": "Ancestor's Bones",
+    "desc": "ARMOR_ANCESTORSBONES_DESC",
+    "desc_resolved": "- {str_aux_passive_name} -\n{str_aux_passive_desc}",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "141",
+    "set": [
+      "Ancestor,",
+      "Bone"
+    ],
+    "str_aux_initialize": "random_class_passive",
+    "str_aux_is_copy_passive": "true"
+  },
+  "CopycatHat": {
+    "name": "ARMOR_COPYCATHAT_NAME",
+    "name_resolved": "Copycat Hat",
+    "desc": "ARMOR_COPYCATHAT_DESC",
+    "desc_resolved": "Copies your trinket's passive effects.",
+    "rarity": "rare",
+    "kind": "head",
+    "frame": "90",
+    "set": "Copycat",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "1"
+    }
+  },
+  "CopycatMask": {
+    "name": "ARMOR_COPYCATMASK_NAME",
+    "name_resolved": "Copycat Mask",
+    "desc": "ARMOR_COPYCATMASK_DESC",
+    "desc_resolved": "Copies your trinket's passive effects.",
+    "rarity": "rare",
+    "kind": "face",
+    "frame": "93",
+    "set": "Copycat",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "1"
+    }
+  },
+  "CopycatScarf": {
+    "name": "ARMOR_COPYCATSCARF_NAME",
+    "name_resolved": "Copycat Scarf",
+    "desc": "ARMOR_COPYCATSCARF_DESC",
+    "desc_resolved": "Copies your trinket's passive effects.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "76",
+    "set": "Copycat",
+    "passives": {
+      "TrinketPassiveMultiplierBonus": "1"
+    }
+  }
+}

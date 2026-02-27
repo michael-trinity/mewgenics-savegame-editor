@@ -1,0 +1,57 @@
+{
+  "levels": {
+    "folder": "theinfinite",
+    "easy": [
+      "easy"
+    ],
+    "hard": [
+      "easy"
+    ],
+    "rare": [
+      "rare"
+    ],
+    "boss": [
+      "boss"
+    ],
+    "miniboss": [
+      "miniboss"
+    ],
+    "special": [
+      "special"
+    ]
+  },
+  "events": {
+    "normal": [
+      "common"
+    ]
+  },
+  "enemy_pools": {
+    "small": [],
+    "medium": [
+      "Cherubim",
+      "Seraphim",
+      "Gatekeeper",
+      "AngelicKitten",
+      "AngelicCat"
+    ],
+    "large": []
+  },
+  "item_pools": {
+    "chapter_item_pool": "theinfiniteitems"
+  },
+  "nodes": {
+    "#include": "standard_nodes.gon",
+    "boss": {
+      "tileset": "finalboss",
+      "type": "boss",
+      "boss_cutscene": "thecreator",
+      "override_music": "finalboss"
+    },
+    "quest_event": {
+      "type": "special_event",
+      "level": "Quest_DeadGod",
+      "override_art": "MapNode_DeadChild"
+    }
+  },
+  "flags": {}
+}

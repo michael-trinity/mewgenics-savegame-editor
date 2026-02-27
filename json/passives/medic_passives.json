@@ -1,0 +1,646 @@
+{
+  "HealingAura": {
+    "name": "PASSIVE_HEALINGAURA_NAME",
+    "name_resolved": "Healing Aura",
+    "desc": "PASSIVE_HEALINGAURA_DESC",
+    "desc_resolved": "+1 Health Regeneration\nYour Health Regeneration also applies to your allies.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "ShareHealthRegen": "1",
+        "HealthRegenUp": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HEALINGAURA2_DESC",
+      "desc_resolved": "+2 Health Regeneration\nYour Health Regeneration also applies to your allies.\nYou and your allies have uncapped HP.",
+      "passives": {
+        "ShareHealthRegen": "1",
+        "HealthRegenUp": "2",
+        "AllyUncappedHPAura": "1"
+      }
+    }
+  },
+  "NaturalHealer": {
+    "name": "PASSIVE_NATURALHEALER_NAME",
+    "name_resolved": "Natural Healer",
+    "desc": "PASSIVE_NATURALHEALER_DESC",
+    "desc_resolved": "Your heals heal for 2 extra.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "BoostHeals": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NATURALHEALER2_DESC",
+      "desc_resolved": "Your heals heal for 4 extra.\nStart each battle at full HP.",
+      "passives": {
+        "BoostHeals": "4",
+        "HealAtStart": "100%"
+      }
+    }
+  },
+  "Eternal": {
+    "name": "PASSIVE_ETERNAL_NAME",
+    "name_resolved": "Eternal",
+    "desc": "PASSIVE_ETERNAL_DESC",
+    "desc_resolved": "When you are downed for the 1st time each battle, take no injuries and revive with half HP.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "Eternal": {
+          "stacks": "1",
+          "health_percent": "50%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ETERNAL2_DESC",
+      "desc_resolved": "When you are downed for the 1st time each battle, take no injuries and revive with half HP, All Stats Up 2, and immediately take an extra turn.",
+      "passives": {
+        "Eternal": {
+          "stacks": "1",
+          "health_percent": "50%",
+          "AllStatsUp": "2",
+          "TakeExtraTurn": "1"
+        }
+      }
+    }
+  },
+  "Blessed": {
+    "name": "PASSIVE_BLESSED_NAME",
+    "name_resolved": "Blessed",
+    "desc": "PASSIVE_BLESSED_DESC",
+    "desc_resolved": "Gain +1 to 2 random stats at the start of each turn.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "StatusEachTurnBegin": {
+          "RandomStatUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLESSED2_DESC",
+      "desc_resolved": "+3 Health Regeneration Gain +1 to 3 random stats at the start of each turn.",
+      "passives": {
+        "StatusEachTurnBegin": {
+          "RandomStatUp": "3"
+        },
+        "HealthRegenUp": "3"
+      }
+    }
+  },
+  "EvilPatron": {
+    "name": "PASSIVE_EVILPATRON_NAME",
+    "name_resolved": "Evil Patron",
+    "desc": "PASSIVE_EVILPATRON_DESC",
+    "desc_resolved": "Your healing abilities deal damage to enemies.\nGain +2 range on tile-targeted healing spells.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "HealDamagesEnemies": "1",
+        "IncreaseHealingSpellRange": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_EVILPATRON2_DESC",
+      "desc_resolved": "Your healing abilities deal damage to enemies.\nHoly element damage you deal is doubled.\nGain +2 range on tile-targeted healing spells.",
+      "passives": {
+        "HolyDamageMultiplierBonus": "1",
+        "HealDamagesEnemies": "1",
+        "IncreaseHealingSpellRange": "2"
+      }
+    }
+  },
+  "AngelicInspiration": {
+    "name": "PASSIVE_ANGELICINSPIRATION_NAME",
+    "name_resolved": "Angelic Inspiration",
+    "desc": "PASSIVE_ANGELICINSPIRATION_DESC",
+    "desc_resolved": "When you heal an ally, they also gain +2 mana.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "HealsAlsoRegenMana": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ANGELICINSPIRATION2_DESC",
+      "desc_resolved": "When you heal an ally, they also gain mana equal to half the amount healed.",
+      "passives": {
+        "HealsAlsoRegenMana": "50%"
+      },
+      "stats": {
+        "cha": "1",
+        "int": "1"
+      }
+    }
+  },
+  "TopOff": {
+    "name": "PASSIVE_TOPOFF_NAME",
+    "name_resolved": "Top Off",
+    "desc": "PASSIVE_TOPOFF_DESC",
+    "desc_resolved": "When you heal another unit over their max HP, you both gain +1 [img:shield].",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "OverhealGainsBothShield": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TOPOFF2_DESC",
+      "desc_resolved": "When you heal another unit over their max HP, you both gain +2 [img:shield].",
+      "passives": {
+        "OverhealGainsBothShield": "2"
+      }
+    }
+  },
+  "SharingIsCaring": {
+    "name": "PASSIVE_SHARINGISCARING_NAME",
+    "name_resolved": "Sharing is Caring",
+    "desc": "PASSIVE_SHARINGISCARING_DESC",
+    "desc_resolved": "When you pick up a non-coin pickup, allies gain the same effects.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "SharePickups": "1"
+      },
+      "stats": {
+        "spd": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SHARINGISCARING2_DESC",
+      "desc_resolved": "When you pick up a non-coin pickup, allies gain the same effects.\nStart each battle with pickups nearby.",
+      "passives": {
+        "SharePickups": "1",
+        "SpawnOnBattleStart": {
+          "object": "RandomNonCoinPickup",
+          "number": [
+            "2",
+            "4"
+          ]
+        }
+      },
+      "stats": {
+        "spd": "4"
+      }
+    }
+  },
+  "Caretaker": {
+    "name": "PASSIVE_CARETAKER_NAME",
+    "name_resolved": "Caretaker",
+    "desc": "PASSIVE_CARETAKER_DESC",
+    "desc_resolved": "When you heal another unit, heal yourself for half that amount.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "Empath": "50%"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CARETAKER2_DESC",
+      "desc_resolved": "When you heal another unit, heal yourself for the same amount.",
+      "passives": {
+        "Empath": "100%"
+      }
+    }
+  },
+  "MoraleBoost": {
+    "name": "PASSIVE_MORALEBOOST_NAME",
+    "name_resolved": "Morale Boost",
+    "desc": "PASSIVE_MORALEBOOST_DESC",
+    "desc_resolved": "Allies gain All Stats Up whenever you kill something.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "StatusAlliesOnKill": {
+          "AllStatsUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MORALEBOOST2_DESC",
+      "desc_resolved": "Allies gain All Stats Up whenever you kill something.\nWhen you kill something, refresh your basic attack.",
+      "passives": {
+        "StatusAlliesOnKill": {
+          "AllStatsUp": "1"
+        },
+        "StatusOnKill": {
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "RangedMedic": {
+    "name": "PASSIVE_RANGEDMEDIC_NAME",
+    "name_resolved": "Ranged Medic",
+    "desc": "PASSIVE_RANGEDMEDIC_DESC",
+    "desc_resolved": "Your basic attack is a ranged lobbed attack that heals allies and damages enemies.",
+    "class": "Medic",
+    "1": {
+      "override_basic_attack": "BasicMedicRanged",
+      "stats": {
+        "dex": "2"
+      },
+      "passives": {
+        "ReplaceBasicAttack": "BasicMedicRanged"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_RANGEDMEDIC2_DESC",
+      "desc_resolved": "+2 Range. Your basic attack is a ranged lobbed attack that heals allies and damages enemies.",
+      "override_basic_attack": "BasicMedicRanged",
+      "stats": {
+        "dex": "4"
+      },
+      "passives": {
+        "AddBonusRange": "2",
+        "ReplaceBasicAttack": "BasicMedicRanged"
+      }
+    }
+  },
+  "Godspeed": {
+    "name": "PASSIVE_GODSPEED_NAME",
+    "name_resolved": "Godspeed",
+    "desc": "PASSIVE_GODSPEED_DESC",
+    "desc_resolved": "When you heal something, gain +2 [img:spd].",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "StatusOnHeal": {
+          "SpeedUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GODSPEED2_DESC",
+      "desc_resolved": "When you heal something, gain +4 [img:spd] and +1 to a random stat.",
+      "passives": {
+        "StatusOnHeal": {
+          "SpeedUp": "4",
+          "RandomStatUp": "1"
+        }
+      }
+    }
+  },
+  "GodWarrior": {
+    "name": "PASSIVE_GODWARRIOR_NAME",
+    "name_resolved": "God Warrior",
+    "desc": "PASSIVE_GODWARRIOR_DESC",
+    "desc_resolved": "When you kill an enemy, gain +1 [img:divineshield].",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "StatusOnKillEnemy": {
+          "DivineShield": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GODWARRIOR2_DESC",
+      "desc_resolved": "When you kill an enemy, gain +1 [img:divineshield] and refresh your movement action.",
+      "stats": {
+        "str": "2"
+      },
+      "passives": {
+        "StatusOnKillEnemy": {
+          "DivineShield": "1",
+          "RefreshMovePoints": "1"
+        }
+      }
+    }
+  },
+  "BreathOfLife": {
+    "name": "PASSIVE_BREATHOFLIFE_NAME",
+    "name_resolved": "Breath of Life",
+    "desc": "PASSIVE_BREATHOFLIFE_DESC",
+    "desc_resolved": "When you heal a downed unit, revive it.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "HealsCanRevive": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BREATHOFLIFE2_DESC",
+      "desc_resolved": "When you heal a downed unit, revive it and heal it for 3 times the number you healed.",
+      "passives": {
+        "HealsCanRevive": "3"
+      }
+    }
+  },
+  "ThouShaltNotKill": {
+    "name": "PASSIVE_THOUSHALTNOTKILL_NAME",
+    "name_resolved": "Thou Shalt Not Kill",
+    "desc": "PASSIVE_THOUSHALTNOTKILL_DESC",
+    "desc_resolved": "When an enemy downs another unit, they take 10 holy damage.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "SmiteEnemiesWhoKill": {
+          "type": "spell",
+          "damage": "10",
+          "elements": [
+            "Holy"
+          ]
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THOUSHALTNOTKILL2_DESC",
+      "desc_resolved": "When an enemy downs another unit, they take 10 holy damage and become Stunned.",
+      "passives": {
+        "SmiteEnemiesWhoKill": {
+          "type": "spell",
+          "damage": "10",
+          "effects": {
+            "Stun": "1"
+          },
+          "elements": [
+            "Holy"
+          ]
+        }
+      }
+    }
+  },
+  "ThouShaltNotCovet": {
+    "name": "PASSIVE_THOUSHALTNOTCOVET_NAME",
+    "name_resolved": "Thou Shalt Not Covet",
+    "desc": "PASSIVE_THOUSHALTNOTCOVET_DESC",
+    "desc_resolved": "When an enemy takes damage from an ability, it drops a random pickup.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "EnemiesGetPickupsKnockedOut": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THOUSHALTNOTCOVET2_DESC",
+      "desc_resolved": "When an enemy takes damage from an ability, it drops 2 random pickups.",
+      "passives": {
+        "EnemiesGetPickupsKnockedOut": "2"
+      }
+    }
+  },
+  "BlessingOfHolyFire": {
+    "name": "PASSIVE_BLESSINGOFHOLYFIRE_NAME",
+    "name_resolved": "Blessing of Holy Fire",
+    "desc": "PASSIVE_BLESSINGOFHOLYFIRE_DESC",
+    "desc_resolved": "Holy-element spells deal double damage to enemies instead of healing and inflict Burn 2. \nThis blessing is lost when you kill a unit.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "PassiveUntilGetKill": {
+          "HolyDamageBlessing": {
+            "damage_multiplier": "2",
+            "Burn": "2"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLESSINGOFHOLYFIRE2_DESC",
+      "desc_resolved": "Holy-element spells deal triple damage to enemies instead of healing and inflict Burn 3. \nThis blessing is lost when you kill a unit.",
+      "passives": {
+        "PassiveUntilGetKill": {
+          "HolyDamageBlessing": {
+            "damage_multiplier": "3",
+            "Burn": "3"
+          }
+        }
+      }
+    }
+  },
+  "AlmsForThePoor": {
+    "name": "PASSIVE_ALMSFORTHEPOOR_NAME",
+    "name_resolved": "Alms for the Poor",
+    "desc": "PASSIVE_ALMSFORTHEPOOR_DESC",
+    "desc_resolved": "When you gain coins, all allies heal +1 HP and gain +1 [img:lck].",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "StatusAlliesOnGainCoins": {
+          "LuckUp": "1",
+          "HealthGain": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ALMSFORTHEPOOR2_DESC",
+      "desc_resolved": "When you gain coins, you gain +1 [img:divineshield] and all allies heal HP and gain [img:lck] equal to the number of coins gained.",
+      "passives": {
+        "StatusAlliesOnGainCoins": {
+          "scaled": "true",
+          "LuckUp": "1",
+          "HealthGain": "1"
+        },
+        "StatusOnGainCoins": {
+          "DivineShield": "1"
+        }
+      }
+    }
+  },
+  "Purifier": {
+    "name": "PASSIVE_PURIFIER_NAME",
+    "name_resolved": "Purifier",
+    "desc": "PASSIVE_PURIFIER_DESC",
+    "desc_resolved": "Your basic attack removes debuffs from allies.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Ally": {
+            "Cleanse": "0"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PURIFIER2_DESC",
+      "desc_resolved": "Your basic attack removes debuffs from allies and gives them All Stats Up.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Ally": {
+            "Cleanse": "0",
+            "AllStatsUp": "1"
+          }
+        }
+      }
+    }
+  },
+  "VeneratedTouch": {
+    "name": "PASSIVE_VENERATEDTOUCH_NAME",
+    "name_resolved": "Venerated Touch",
+    "desc": "PASSIVE_VENERATEDTOUCH_DESC",
+    "desc_resolved": "Your basic attack inflicts Confusion 2 on enemies and gives +2 [img:shield] to allies.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Enemy": {
+            "Confusion": "2"
+          },
+          "Conditional_Ally": {
+            "Shield": "2"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_VENERATEDTOUCH2_DESC",
+      "desc_resolved": "Your basic attack inflicts Confusion 3 on enemies and has a 50% chance to Stun. It also gives +3 [img:shield] to allies and a 50% chance for All Stats Up.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Enemy": {
+            "Confusion": "3",
+            "Stun": [
+              "1",
+              ".5"
+            ]
+          },
+          "Conditional_Ally": {
+            "Shield": "3",
+            "AllStatsUp": [
+              "1",
+              ".5"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ProtectTheWeak": {
+    "name": "PASSIVE_PROTECTTHEWEAK_NAME",
+    "name_resolved": "Protect the Weak",
+    "desc": "PASSIVE_PROTECTTHEWEAK_DESC",
+    "desc_resolved": "Allies with 5 or fewer HP gain +50% dodge chance.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "LowHealthAllyDodgeChanceAura": {
+          "theshold": "5",
+          "chance": "50%"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PROTECTTHEWEAK2_DESC",
+      "desc_resolved": "Allies with 10 or fewer HP gain +50% dodge chance.",
+      "passives": {
+        "LowHealthAllyDodgeChanceAura": {
+          "theshold": "5",
+          "chance": "50%"
+        }
+      }
+    }
+  },
+  "ThouShaltObey": {
+    "name": "PASSIVE_THOUSHALTOBEY_NAME",
+    "name_resolved": "Thou Shalt Obey",
+    "desc": "PASSIVE_THOUSHALTOBEY_DESC",
+    "desc_resolved": "At the end of each round, inflict Charm on a random adjacent enemy.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "AutocastEachRound": {
+          "ability": "MedicObey",
+          "force_display_name": "true"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_THOUSHALTOBEY2_DESC",
+      "desc_resolved": "At the end of each round, inflict Charm on the closest enemy.",
+      "passives": {
+        "AutocastEachRound": {
+          "ability": "MedicObey2",
+          "force_display_name": "true"
+        }
+      }
+    }
+  },
+  "EnchantedRelic": {
+    "name": "PASSIVE_ENCHANTEDRELIC_NAME",
+    "name_resolved": "Enchanted Relic",
+    "desc": "PASSIVE_ENCHANTEDRELIC_DESC",
+    "desc_resolved": "Your trinket's passive and active effects are doubled.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "TrinketPassiveMultiplierBonus": "1",
+        "TrinketActiveEffectsMultiplierBonus": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_ENCHANTEDRELIC2_DESC",
+      "desc_resolved": "Your trinket's passive and active effects are tripled.",
+      "passives": {
+        "TrinketPassiveMultiplierBonus": "2",
+        "TrinketActiveEffectsMultiplierBonus": "2"
+      }
+    }
+  },
+  "BlessingOfSpirit": {
+    "name": "PASSIVE_BLESSINGOFSPIRIT_NAME",
+    "name_resolved": "Blessing of Spirit",
+    "desc": "PASSIVE_BLESSINGOFSPIRIT_DESC",
+    "desc_resolved": "When you end your turn, you and all allies heal 2 HP and gain 2 mana. This blessing is lost when you cast a spell.",
+    "class": "Medic",
+    "1": {
+      "passives": {
+        "PassiveUntilCastSpell": {
+          "HealAlliesEachTurn": {
+            "stacks": "2",
+            "mana": "2",
+            "exclude_self": "false"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BLESSINGOFSPIRIT2_DESC",
+      "desc_resolved": "When you end your turn, you and all allies heal 3 HP, gain 3 mana and gain +1 to 3 random stats. This blessing is lost when you cast a spell.",
+      "passives": {
+        "PassiveUntilCastSpell": {
+          "HealAlliesEachTurn": {
+            "stacks": "3",
+            "mana": "3",
+            "exclude_self": "false"
+          },
+          "StatusAlliesEachTurn": {
+            "exclude_self": "false",
+            "RandomStatUp": "3"
+          }
+        }
+      }
+    }
+  },
+  "Heathens": {
+    "name": "PASSIVE_HEATHENS_NAME",
+    "name_resolved": "Heathens!",
+    "desc": "PASSIVE_HEATHENS_DESC",
+    "desc_resolved": "At the start of the battle, inflict Weakness 3 on all enemies.",
+    "class": "Medic",
+    "1": {
+      "keyword_tooltips": {
+        "Weakness": "1"
+      },
+      "passives": {
+        "AbilityOnBattleStart": "Heathens"
+      }
+    },
+    "2": {
+      "keyword_tooltips": {
+        "Weakness": "1",
+        "MagicWeakness": "1"
+      },
+      "desc": "PASSIVE_HEATHENS2_DESC",
+      "desc_resolved": "At the start of the battle, inflict Weakness 4 and Magic Weakness 4 on all enemies.",
+      "passives": {
+        "AbilityOnBattleStart": "Heathens2"
+      }
+    }
+  }
+}

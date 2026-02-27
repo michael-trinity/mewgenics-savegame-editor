@@ -1,0 +1,2672 @@
+{
+  "Research": {
+    "id": "Research",
+    "template": "self_buff",
+    "name_key": "ABILITY_RESEARCH_NAME",
+    "name": "Research",
+    "desc_key": "ABILITY_RESEARCH_DESC",
+    "description": "Gain +1 Tech.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "idea"
+    },
+    "damage_instance": {
+      "effects": {
+        "Tech": "1"
+      }
+    }
+  },
+  "Research2": {
+    "id": "Research2",
+    "variant_of": "Research",
+    "desc_key": "ABILITY_RESEARCH2_DESC",
+    "description": "Gain +1 Tech.\nBonus Passive: Crafting subtracts 1 Tech instead of all of it.",
+    "damage_instance": {
+      "effects": {
+        "Tech": "1"
+      }
+    },
+    "bonus_passives": {
+      "CapTechSpent": "1"
+    }
+  },
+  "Discharge": {
+    "id": "Discharge",
+    "template": "spell",
+    "name_key": "ABILITY_DISCHARGE_NAME",
+    "name": "Discharge",
+    "desc_key": "ABILITY_DISCHARGE_DESC",
+    "description": "Spend all of your mana, then deal that much electric damage to an adjacent unit.",
+    "class": "Tinkerer",
+    "cost": {
+      "mana": "X",
+      "infcantrip": "true",
+      "X_cant_be_zero": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "1",
+      "min_range": "1",
+      "X_is": "current_mana"
+    },
+    "graphics": {
+      "particle": "WaterConduct",
+      "animation": "tapatk"
+    },
+    "damage_instance": {
+      "damage": "X",
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Discharge2": {
+    "id": "Discharge2",
+    "variant_of": "Discharge",
+    "desc_key": "ABILITY_DISCHARGE2_DESC",
+    "description": "Spend all of your mana, then deal that much electric damage to an adjacent unit with a 10% Stun chance for each point of mana spent.",
+    "damage_instance": {
+      "effects": {
+        "Stun": [
+          "1",
+          "X*.1"
+        ]
+      }
+    }
+  },
+  "Repair": {
+    "id": "Repair",
+    "template": "spell",
+    "name_key": "ABILITY_REPAIR_NAME",
+    "name": "Repair",
+    "desc_key": "ABILITY_REPAIR_DESC",
+    "description": "Repair 1 use to all of your or an adjacent unit's equipment.",
+    "class": "Tinkerer",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "1",
+      "min_range": "0"
+    },
+    "graphics": {
+      "animation": "tinkerAdjacent",
+      "particle": "none"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "cant_miss": "true",
+      "effects": {
+        "RepairAll": "1",
+        "RepairAllCondition": "1"
+      }
+    }
+  },
+  "Repair2": {
+    "id": "Repair2",
+    "variant_of": "Repair",
+    "desc_key": "ABILITY_REPAIR2_DESC",
+    "description": "Repair all uses to all of your or an adjacent unit's equipment.",
+    "damage_instance": {
+      "effects": {
+        "RepairAll": "10"
+      }
+    }
+  },
+  "ShoddyJetpack": {
+    "id": "ShoddyJetpack",
+    "template": "jump_attack",
+    "name_key": "ABILITY_SHODDYJETPACK_NAME",
+    "name": "Shoddy Jetpack",
+    "desc_key": "ABILITY_SHODDYJETPACK_DESC",
+    "description": "Fly to a random tile in a large area. If you land on a unit, explode dealing 5 damage in an area (including to yourself).",
+    "class": "Tinkerer",
+    "cost": {
+      "mana": "6",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20",
+      "aoe_mode": "occupied_tiles",
+      "aoe_excludes_self": "false",
+      "restrictions": "none",
+      "randomize_target_within_range": "3"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "cant_miss": "true",
+      "effects": {
+        "IgnoreSelf": "true",
+        "ExplosionIfHitSomething": "5"
+      }
+    }
+  },
+  "ShoddyJetpack2": {
+    "id": "ShoddyJetpack2",
+    "variant_of": "ShoddyJetpack",
+    "desc_key": "ABILITY_SHODDYJETPACK2_DESC",
+    "description": "Fly to any tile. If you land on a unit, explode dealing 5 damage in an area (including to yourself).",
+    "target": {
+      "randomize_target_within_range": "0"
+    }
+  },
+  "SpawnDecoy": {
+    "id": "SpawnDecoy",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_SPAWNDECOY_NAME",
+    "name": "Spawn Decoy",
+    "desc_key": "ABILITY_SPAWNDECOY_DESC",
+    "description": "Spawn a decoy that explodes when it dies.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "tinker"
+    },
+    "spawn": {
+      "object": "ExplodingDecoy"
+    }
+  },
+  "SpawnDecoy2": {
+    "id": "SpawnDecoy2",
+    "variant_of": "SpawnDecoy",
+    "desc_key": "ABILITY_SPAWNDECOY2_DESC",
+    "description": "Spawn a decoy that explodes when it dies. When an enemy targets you, swap places with the decoy.",
+    "self_damage": {
+      "effects": {
+        "DecoySwapper": "1"
+      }
+    },
+    "spawn": {
+      "object": "ExplodingDecoy"
+    }
+  },
+  "DecoySwap": {
+    "id": "DecoySwap",
+    "template": "swap",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "DecoyExplode": {
+    "id": "DecoyExplode",
+    "template": "spell",
+    "cost": {
+      "mana": "0"
+    },
+    "target": {
+      "knockback_mode": "character_to_tile",
+      "aoe_excludes_self": "true",
+      "target_mode": "none",
+      "min_range": "0",
+      "max_range": "0",
+      "min_aoe": "0",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "dont_orient": "true",
+      "particle": "Explosion"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "knockback": "1",
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "Switcheroo": {
+    "id": "Switcheroo",
+    "template": "self_buff",
+    "name_key": "ABILITY_SWITCHEROO_NAME",
+    "name": "Switcheroo",
+    "desc_key": "ABILITY_SWITCHEROO_DESC",
+    "description": "Your next attack breaks your weapon, then craft a new one.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "graphics": {
+      "animation": "idea"
+    },
+    "damage_instance": {
+      "effects": {
+        "Switcheroo": "1"
+      }
+    }
+  },
+  "Switcheroo2": {
+    "id": "Switcheroo2",
+    "variant_of": "Switcheroo",
+    "desc_key": "ABILITY_SWITCHEROO2_DESC",
+    "description": "Your next attack breaks your weapon, then gain +1 Tech and craft a weapon.",
+    "damage_instance": {
+      "effects": {
+        "Tech": "1"
+      }
+    }
+  },
+  "SpringShoes": {
+    "id": "SpringShoes",
+    "template": "jump_attack",
+    "name_key": "ABILITY_SPRINGSHOES_NAME",
+    "name": "Spring Shoes",
+    "desc_key": "ABILITY_SPRINGSHOES_DESC",
+    "description": "Jump up to 2 tiles away.",
+    "class": "Tinkerer",
+    "cost": {
+      "mana": "2",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "2",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    }
+  },
+  "SpringShoes2": {
+    "id": "SpringShoes2",
+    "variant_of": "SpringShoes",
+    "desc_key": "ABILITY_SPRINGSHOES2_DESC",
+    "description": "Jump up to 5 tiles away.",
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "Flamethrower": {
+    "id": "Flamethrower",
+    "template": "spell",
+    "name_key": "ABILITY_FLAMETHROWER_NAME",
+    "name": "Flamethrower",
+    "desc_key": "ABILITY_FLAMETHROWER_DESC",
+    "description": "Shoot a flame that inflicts Burn.",
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "max_aoe": "3",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "graphics": {
+      "animation": "attack",
+      "particle": "FireBlastSmall",
+      "delay": "10",
+      "palette": "6"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "effects": {
+        "Burn": "3"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "TurretShot": {
+    "id": "TurretShot",
+    "template": "lobbed_attack",
+    "target": {
+      "min_range": "1",
+      "max_range": "6"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_ranged_damage"
+    }
+  },
+  "RocketTurretShot": {
+    "id": "RocketTurretShot",
+    "template": "spell",
+    "target": {
+      "min_range": "1",
+      "max_range": "6",
+      "min_aoe": "0",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "animation": "shoot",
+      "use_projectile": "true",
+      "projectile": "Projectile_Rocket",
+      "rocket_swirl": {
+        "speed": [
+          "1.5,",
+          "2.5"
+        ],
+        "radius": [
+          ".5",
+          "1"
+        ]
+      },
+      "easing": "1",
+      "lob_height": "5",
+      "particle": "Explosion"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "knockback": "1",
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    }
+  },
+  "AutoPilot": {
+    "id": "AutoPilot",
+    "template": "self_buff",
+    "name_key": "ABILITY_AUTOPILOT_NAME",
+    "name": "Autopilot",
+    "desc_key": "ABILITY_AUTOPILOT_DESC",
+    "description": "Take an extra turn after this one. You are AI controlled on that turn.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "10"
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeBonusTurnWithAIControl": {
+          "include_spells": "true"
+        }
+      },
+      "ai_base_score": "-99999"
+    }
+  },
+  "AutoPilot2": {
+    "id": "AutoPilot2",
+    "variant_of": "AutoPilot",
+    "desc_key": "ABILITY_AUTOPILOT2_DESC",
+    "description": "You or another unit takes an extra turn after this one. That unit is AI controlled on that turn.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "4"
+    }
+  },
+  "Recycle": {
+    "id": "Recycle",
+    "template": "self_buff",
+    "name_key": "ABILITY_RECYCLE_NAME",
+    "name": "Recycle",
+    "desc_key": "ABILITY_RECYCLE_DESC",
+    "description": "Destroy your weapon to gain +1 Tech and refresh your basic action.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "requires_destructible_weapon": "true"
+    },
+    "graphics": {
+      "animation": "idea"
+    },
+    "damage_instance": {
+      "effects": {
+        "DestroyWeapon": "1",
+        "Tech": "1",
+        "RefreshActPoints": "1"
+      }
+    }
+  },
+  "Recycle2": {
+    "id": "Recycle2",
+    "variant_of": "Recycle",
+    "desc_key": "ABILITY_RECYCLE2_DESC",
+    "description": "Destroy your weapon to gain +1 Tech and refresh your basic action. This spell costs 1 mana if you haven't used your weapon this turn.",
+    "cost": {
+      "mana": "X"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsRecycleCostReduction": "5"
+    }
+  },
+  "BuildTurret": {
+    "id": "BuildTurret",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_BUILDTURRET_NAME",
+    "name": "Build Turret",
+    "desc_key": "ABILITY_BUILDTURRET_DESC",
+    "description": "Summon a turret.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "TinkererTurret"
+    }
+  },
+  "BuildTurret2": {
+    "id": "BuildTurret2",
+    "variant_of": "BuildTurret",
+    "desc_key": "ABILITY_BUILDTURRET2_DESC",
+    "description": "Summon a rocket turret.",
+    "spawn": {
+      "object": "RocketTurret"
+    }
+  },
+  "RocketSkates": {
+    "id": "RocketSkates",
+    "template": "dash_attack",
+    "name_key": "ABILITY_ROCKETSKATES_NAME",
+    "name": "Rocket Skates",
+    "desc_key": "ABILITY_ROCKETSKATES_DESC",
+    "description": "Dash forward in a straight line then explode dealing damage in an area (including to yourself).",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "min_aoe": "0",
+      "max_aoe": "1",
+      "knockback_mode": "character_to_tile",
+      "aoe_excludes_self": "false"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "knockback": "1",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VisualFXTile": "Explosion"
+      },
+      "elements": [
+        "Explosion",
+        "Fire"
+      ]
+    }
+  },
+  "RocketSkates2": {
+    "id": "RocketSkates2",
+    "variant_of": "RocketSkates",
+    "desc_key": "ABILITY_ROCKETSKATES2_DESC",
+    "description": "Dash forward in a straight line then explode dealing damage in an larger area (including to yourself).",
+    "target": {
+      "max_aoe": "2"
+    }
+  },
+  "RocketSkates_Bombchu": {
+    "id": "RocketSkates_Bombchu",
+    "template": "dash_attack",
+    "name_key": "ABILITY_BOMBCHUDASH_NAME",
+    "name": "Bombchu Dash",
+    "desc_key": "ABILITY_BOMBCHUDASH_DESC",
+    "description": "Dash forward in a straight line then explode.",
+    "animate_name": "false",
+    "cost": {
+      "mana": "5"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "min_aoe": "0",
+      "max_aoe": "1",
+      "knockback_mode": "character_to_tile",
+      "aoe_excludes_self": "false"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "none"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "knockback": "1",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VisualFXTile": "Explosion"
+      },
+      "elements": [
+        "Explosion",
+        "Fire"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "Vaporize": "1"
+      }
+    }
+  },
+  "DrillDown": {
+    "id": "DrillDown",
+    "template": "teleport",
+    "name_key": "ABILITY_DRILLDOWN_NAME",
+    "name": "Drill Down",
+    "desc_key": "ABILITY_DRILLDOWN_DESC",
+    "description": "Dig to an open tile in a straight line.",
+    "class": "Tinkerer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "10"
+    },
+    "graphics": {
+      "animation_out": "digDown",
+      "animation_in": "digUp"
+    }
+  },
+  "DrillDown2": {
+    "id": "DrillDown2",
+    "variant_of": "DrillDown",
+    "desc_key": "ABILITY_DRILLDOWN2_DESC",
+    "description": "Dig to a tile in a straight line. If you dig into a unit, explode dealing 5 damage in an area (including to yourself).",
+    "target": {
+      "restrictions": [
+        "aoe_must_be_displaceable"
+      ]
+    },
+    "damage_instance": {
+      "makes_contact": "true",
+      "effects": {
+        "IgnoreSelf": "1",
+        "ExplosionIfHitSomething": "5"
+      }
+    }
+  },
+  "ArmorUp": {
+    "id": "ArmorUp",
+    "template": "self_buff",
+    "name_key": "ABILITY_ARMORUP_NAME",
+    "name": "Armor Up",
+    "desc_key": "ABILITY_ARMORUP_DESC",
+    "description": "Craft a Tinkerer armor piece into one of your empty armor slots.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "graphics": {
+      "animation": "tinkerSelf"
+    },
+    "damage_instance": {
+      "effects": {
+        "Craft": {
+          "pool": "tinkerer_default",
+          "slot": "random_empty_armor"
+        }
+      }
+    }
+  },
+  "ArmorUp2": {
+    "id": "ArmorUp2",
+    "variant_of": "ArmorUp",
+    "desc_key": "ABILITY_ARMORUP2_DESC",
+    "description": "Craft a Tinkerer armor piece into one of your or an adjacent unit's empty armor slots.",
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "1"
+    }
+  },
+  "FreshOffTheForge": {
+    "id": "FreshOffTheForge",
+    "template": "self_buff",
+    "name_key": "ABILITY_FRESHOFFTHEFORGE_NAME",
+    "name": "Fresh off the Forge",
+    "desc_key": "ABILITY_FRESHOFFTHEFORGE_DESC",
+    "description": "Gain +7 [img:shield] and Burn 3.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "7",
+        "Burn": "3"
+      },
+      "elements": [
+        "Fire"
+      ]
+    }
+  },
+  "FreshOffTheForge2": {
+    "id": "FreshOffTheForge2",
+    "variant_of": "FreshOffTheForge",
+    "desc_key": "ABILITY_FRESHOFFTHEFORGE2_DESC",
+    "description": "Give +7 [img:shield] and Burn 3 to yourself or an adjacent unit.",
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "1"
+    }
+  },
+  "ElectricNail": {
+    "id": "ElectricNail",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_ELECTRICNAIL_NAME",
+    "name": "Electric Nail",
+    "desc_key": "ABILITY_ELECTRICNAIL_DESC",
+    "description": "Summon a nail that arcs electricity to neighboring tiles whenever any unit spends mana.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobotProjectile"
+    },
+    "spawn": {
+      "object": "ElectricNail"
+    }
+  },
+  "ElectricNail2": {
+    "id": "ElectricNail2",
+    "variant_of": "ElectricNail",
+    "desc_key": "ABILITY_ELECTRICNAIL2_DESC",
+    "description": "Summon a nail that arcs electricity to neighboring tiles whenever any unit spends mana.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "8"
+    },
+    "spawn": {
+      "object": "ElectricNail"
+    }
+  },
+  "Craft": {
+    "id": "Craft",
+    "template": "self_buff",
+    "name_key": "ABILITY_CRAFT_NAME",
+    "name": "Craft",
+    "desc_key": "ABILITY_CRAFT_DESC",
+    "description": "Craft and equip a random temporary weapon.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_cat_with_empty_weapon_slot"
+    },
+    "graphics": {
+      "animation": "tinker"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Craft": {
+          "pool": "tinkerer_default",
+          "slot": "weapon"
+        }
+      },
+      "ai_base_score": "9999"
+    }
+  },
+  "Craft2": {
+    "id": "Craft2",
+    "variant_of": "Craft",
+    "desc_key": "ABILITY_CRAFT2_DESC",
+    "description": "Craft and equip a random temporary weapon for yourself or an ally in range 3 (if they have an empty weapon slot).",
+    "target": {
+      "target_mode": "tile",
+      "max_range": "3",
+      "min_range": "0"
+    }
+  },
+  "Shockwave": {
+    "id": "Shockwave",
+    "template": "spell",
+    "name_key": "ABILITY_SHOCKWAVE_NAME",
+    "name": "Shockwave",
+    "desc_key": "ABILITY_SHOCKWAVE_DESC",
+    "description": "Deal damage to all units. The closer a unit is to you the more damage it takes.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "aoe_mode": "all",
+      "target_mode": "none",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "WaterConduct",
+      "animation": "shocking",
+      "delay": "3"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "effects": {
+        "DamageDistanceAOEFalloff": "1"
+      },
+      "elements": [
+        "Electric",
+        "Conducted"
+      ]
+    }
+  },
+  "Shockwave2": {
+    "id": "Shockwave2",
+    "variant_of": "Shockwave",
+    "desc_key": "ABILITY_SHOCKWAVE2_DESC",
+    "description": "Deal damage to all units. The closer a unit is to you the more damage it takes.\n[s:.7](Deals more damage to closer units and less damage to further units.)[/s]",
+    "damage_instance": {
+      "damage": "15",
+      "effects": {
+        "DamageDistanceAOEFalloff": "2"
+      }
+    }
+  },
+  "Math": {
+    "id": "Math",
+    "template": "spell",
+    "name_key": "ABILITY_MATH_NAME",
+    "name": "Math!",
+    "desc_key": "ABILITY_MATH_DESC",
+    "description": "Deal 1 damage to a unit for each unique divisor in its current HP value.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "5"
+    },
+    "graphics": {
+      "particle": "MagicMissleBlast",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "show_damage_on_0": "true",
+      "effects": {
+        "Math": "1"
+      }
+    }
+  },
+  "Math2": {
+    "id": "Math2",
+    "variant_of": "Math",
+    "desc_key": "ABILITY_MATH2_DESC",
+    "description": "Deal 1 damage to a unit for each unique divisor in its current HP value. If its HP was a prime number, gain 5 mana.",
+    "damage_instance": {
+      "effects": {
+        "Math": "2"
+      }
+    }
+  },
+  "Reprogram": {
+    "id": "Reprogram",
+    "template": "self_buff",
+    "name_key": "ABILITY_REPROGRAM_NAME",
+    "name": "Reprogram",
+    "desc_key": "ABILITY_REPROGRAM_DESC",
+    "description": "Conjure a random spell of your class as a bonus ability.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "ConjureBonusAbility": "Class"
+      }
+    }
+  },
+  "Reprogram2": {
+    "id": "Reprogram2",
+    "variant_of": "Reprogram",
+    "desc_key": "ABILITY_REPROGRAM2_DESC",
+    "description": "Conjure a random upgraded spell of your class as a bonus ability.",
+    "damage_instance": {
+      "effects": {
+        "ConjureBonusAbility": {
+          "ability": "Class",
+          "upgraded": "true"
+        }
+      }
+    }
+  },
+  "Improve": {
+    "id": "Improve",
+    "template": "self_buff",
+    "name_key": "ABILITY_IMPROVE_NAME",
+    "name": "Improve",
+    "desc_key": "ABILITY_IMPROVE_DESC",
+    "description": "Gain +1 to a random stat.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "graphics": {
+      "animation": "tinkerSelf"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatUp": "1"
+      }
+    }
+  },
+  "Improve2": {
+    "id": "Improve2",
+    "variant_of": "Improve",
+    "desc_key": "ABILITY_IMPROVE2_DESC",
+    "description": "You or an adjacent unit gain +1 to 2 random stats.",
+    "target": {
+      "target_mode": "tile",
+      "max_range": "1",
+      "min_range": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomStatUp": "2"
+      }
+    }
+  },
+  "Catbot": {
+    "id": "Catbot",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_CATBOT_NAME",
+    "name": "Catbot",
+    "desc_key": "ABILITY_CATBOT_DESC",
+    "description": "Spawn a Catbot and give it your current weapon.\n[s:.7](You will not get the weapon back)[/s]",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "tinker"
+    },
+    "spawn": {
+      "object": "Catbot"
+    }
+  },
+  "Catbot2": {
+    "id": "Catbot2",
+    "variant_of": "Catbot",
+    "desc_key": "ABILITY_CATBOT2_DESC",
+    "description": "Spawn a Catbot and give it your current weapon. Gain +1 Tech and refresh your basic action.\n[s:.7](You will not get the weapon back)[/s]",
+    "self_damage": {
+      "effects": {
+        "Tech": "1",
+        "RefreshActPoints": "1"
+      }
+    }
+  },
+  "Bombchu": {
+    "id": "Bombchu",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_BOMBCHU_NAME",
+    "name": "Bombchu",
+    "desc_key": "ABILITY_BOMBCHU_DESC",
+    "description": "Spawn a Bombchu bot.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "Bombchu"
+    }
+  },
+  "Bombchu2": {
+    "id": "Bombchu2",
+    "variant_of": "Bombchu",
+    "desc_key": "ABILITY_BOMBCHU2_DESC",
+    "description": "Spawn a Bombchu bot in range 4.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "4"
+    },
+    "graphics": {
+      "animation": "buildRobotProjectile"
+    }
+  },
+  "RemoteDetonator": {
+    "id": "RemoteDetonator",
+    "template": "targeted_status",
+    "name_key": "ABILITY_REMOTEDETONATOR_NAME",
+    "name": "Remote Detonator",
+    "desc_key": "ABILITY_REMOTEDETONATOR_DESC",
+    "description": "Explode a familiar, dealing 5 damage with knockback in an area.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_familiar"
+    },
+    "graphics": {
+      "particle": "none",
+      "animation": "pointout"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "cant_miss": "true",
+      "effects": {
+        "ExplodeCharacter": "5"
+      }
+    }
+  },
+  "RemoteDetonator2": {
+    "id": "RemoteDetonator2",
+    "variant_of": "RemoteDetonator",
+    "desc_key": "ABILITY_REMOTEDETONATOR2_DESC",
+    "description": "Explode a familiar, dealing 5 damage with knockback in an area.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "ShortCircuit": {
+    "id": "ShortCircuit",
+    "template": "spell",
+    "name_key": "ABILITY_SHORTCIRCUIT_NAME",
+    "name": "Short Circuit",
+    "desc_key": "ABILITY_SHORTCIRCUIT_DESC",
+    "description": "Deal 1 electric damage with a random amount of knockback (up to 3) to all adjacent units.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "graphics": {
+      "particle": "WaterConduct"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "0",
+      "effects": {
+        "RandomKnockback": {
+          "min": "1",
+          "max": "3"
+        }
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "ShortCircuit2": {
+    "id": "ShortCircuit2",
+    "variant_of": "ShortCircuit",
+    "desc_key": "ABILITY_SHORTCIRCUIT2_DESC",
+    "description": "Deal 2 electric damage with a random amount of knockback (up to 10) to all adjacent units.",
+    "damage_instance": {
+      "damage": "2",
+      "effects": {
+        "RandomKnockback": {
+          "min": "1",
+          "max": "10"
+        }
+      }
+    }
+  },
+  "Electrolyze": {
+    "id": "Electrolyze",
+    "template": "self_buff",
+    "name_key": "ABILITY_ELECTROLYZE_NAME",
+    "name": "Electrolyze",
+    "desc_key": "ABILITY_ELECTROLYZE_DESC",
+    "description": "Give your weapon +3 electric damage.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "effects": {
+        "CurrentWeaponDamageUp": "3",
+        "CurrentWeaponAddElectricElement": "1"
+      }
+    }
+  },
+  "Electrolyze2": {
+    "id": "Electrolyze2",
+    "variant_of": "Electrolyze",
+    "desc_key": "ABILITY_ELECTROLYZE2_DESC",
+    "description": "Give your weapon +3 electric damage.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "EjectButton": {
+    "id": "EjectButton",
+    "template": "self_buff",
+    "name_key": "ABILITY_EJECTBUTTON_NAME",
+    "name": "Eject Button",
+    "desc_key": "ABILITY_EJECTBUTTON_DESC",
+    "description": "Explode and fly to a random tile at least four tiles away. This explosion damages you.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "ExplosionIfHitSomething": "5",
+        "RandomDistanceDisplace": {
+          "stacks": "20",
+          "min_dist": "4"
+        }
+      }
+    }
+  },
+  "EjectButton2": {
+    "id": "EjectButton2",
+    "variant_of": "EjectButton",
+    "desc_key": "ABILITY_EJECTBUTTON2_DESC",
+    "description": "Explode and fly to a random tile at least four tiles away. This explosion damages you.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "1"
+    }
+  },
+  "Firecrackers": {
+    "id": "Firecrackers",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_FIRECRACKERS_NAME",
+    "name": "Firecracker",
+    "desc_key": "ABILITY_FIRECRACKERS_DESC",
+    "description": "Throw 3 small 1-damage explosives at random tiles in an area.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_aoe": "2",
+      "min_range": "1",
+      "max_range": "5+bonus_range",
+      "max_targets": "3",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "graphics": {
+      "animation": "throwobject",
+      "projectile": "Firecracker"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "ranged",
+      "effects": {
+        "SmallHitExplosion": "1"
+      }
+    }
+  },
+  "Firecrackers2": {
+    "id": "Firecrackers2",
+    "variant_of": "Firecrackers",
+    "desc_key": "ABILITY_FIRECRACKERS2_DESC",
+    "description": "Throw small 1-damage explosives at all tiles in an area.",
+    "target": {
+      "max_range": "6+bonus_range",
+      "max_targets": "-1"
+    }
+  },
+  "Upgrade": {
+    "id": "Upgrade",
+    "template": "targeted_status",
+    "name_key": "ABILITY_UPGRADE_NAME",
+    "name": "Upgrade",
+    "desc_key": "ABILITY_UPGRADE_DESC",
+    "description": "Fully heal a familiar and give it All Stats Up.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "0",
+      "max_range": "3",
+      "max_aoe": "0",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "familiars_only"
+    },
+    "graphics": {
+      "animation": "sing3"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "AllStatsUp": "1",
+        "FullHeal": "1"
+      }
+    }
+  },
+  "Upgrade2": {
+    "id": "Upgrade2",
+    "variant_of": "Upgrade",
+    "desc_key": "ABILITY_UPGRADE2_DESC",
+    "description": "Fully heal a familiar and give it All Stats Up and +1 [img:divineshield].",
+    "damage_instance": {
+      "effects": {
+        "AllStatsUp": "1",
+        "FullHeal": "1",
+        "DivineShield": "1"
+      }
+    }
+  },
+  "Eureka": {
+    "id": "Eureka",
+    "template": "self_buff",
+    "name_key": "ABILITY_EUREKA_NAME",
+    "name": "Eureka!",
+    "desc_key": "ABILITY_EUREKA_DESC",
+    "description": "Gain +3 Tech and Madness 1.\n[s:.7](This spell can only be cast once per battle.)[/s]",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "once_per_fight": "true"
+    },
+    "graphics": {
+      "animation": "idea"
+    },
+    "damage_instance": {
+      "effects": {
+        "Tech": "3",
+        "Madness": {
+          "stacks": "1",
+          "tickdown_this_turn": "true"
+        }
+      }
+    }
+  },
+  "Eureka2": {
+    "id": "Eureka2",
+    "template": "self_buff",
+    "name_key": "ABILITY_EUREKA_NAME",
+    "name": "Eureka!",
+    "desc_key": "ABILITY_EUREKA2_DESC",
+    "description": "Gain +3 Tech.\n[s:.7](This spell can only be cast once per battle.)[/s]",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5",
+      "once_per_fight": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "Tech": "3"
+      }
+    }
+  },
+  "PunchBot": {
+    "id": "PunchBot",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_PUNCHBOT_NAME",
+    "name": "Punchbot",
+    "desc_key": "ABILITY_PUNCHBOT_DESC",
+    "description": "Spawn a Rubber Fist Bot.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "2",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobotProjectile"
+    },
+    "spawn": {
+      "object": "RubberFistBot"
+    }
+  },
+  "PunchBot2": {
+    "id": "PunchBot2",
+    "variant_of": "PunchBot",
+    "desc_key": "ABILITY_PUNCHBOT2_DESC",
+    "description": "Spawn a Rubber Fist Bot within a large range.",
+    "cost": {
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "6"
+    }
+  },
+  "FastHands": {
+    "id": "FastHands",
+    "template": "self_buff",
+    "tags": [
+      "noncopyable"
+    ],
+    "name_key": "ABILITY_FASTHANDS_NAME",
+    "name": "Fast Hands",
+    "desc_key": "ABILITY_FASTHANDS_DESC",
+    "description": "Refresh your weapon and trinket actions (unless they gain you mana).",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "graphics": {
+      "animation": "thumbsup"
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshNonManaItemAbilities": "1"
+      }
+    }
+  },
+  "FastHands2": {
+    "id": "FastHands2",
+    "variant_of": "FastHands",
+    "desc_key": "ABILITY_FASTHANDS2_DESC",
+    "description": "Refresh your weapon and trinket actions (unless they gain you mana). Repair 1 use to all of your equipment.",
+    "damage_instance": {
+      "effects": {
+        "RepairAll": "1"
+      }
+    }
+  },
+  "MechSuitPunch": {
+    "id": "MechSuitPunch",
+    "template": "dash_attack",
+    "name_key": "ABILITY_MECHPUNCH_NAME",
+    "name": "Mech Punch",
+    "desc_key": "ABILITY_MECHPUNCH_DESC",
+    "description": "Dash-punch with Knockback 3.",
+    "target": {
+      "max_range": "1+bonus_range",
+      "max_aoe": "1+bonus_melee_range"
+    },
+    "graphics": {
+      "dash_start_animation": "ramStart",
+      "dash_animation": "ramLoop",
+      "dash_attack_animation": "ramEnd",
+      "always_play_animations": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "knockback": "3"
+    }
+  },
+  "MechSuitEject": {
+    "id": "MechSuitEject",
+    "template": "throw_attack",
+    "name_key": "ABILITY_MECHSUITEJECT_NAME",
+    "name": "Eject!",
+    "desc_key": "ABILITY_MECHSUITEJECT_DESC",
+    "description": "Launch yourself out of the mech. Deal damage to units you land on and yourself.",
+    "cost": {
+      "mana": "3",
+      "must_be_consuming": "true",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "5",
+      "min_range": "3",
+      "restrictions": "none",
+      "throw_consumed_character": "true"
+    },
+    "graphics": {
+      "animation": "eject"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "blocked_damage": "5+bonus_melee_ability_damage",
+      "custom_additional_ai_weight": "toss_far",
+      "effects": {
+        "EndTurn": "1"
+      },
+      "ai_base_score": "-999999"
+    }
+  },
+  "MechSuitBarrage": {
+    "id": "MechSuitBarrage",
+    "template": "straightshot_attack",
+    "name_key": "ABILITY_MECHSUITBARRAGE_NAME",
+    "name": "Barrage",
+    "desc_key": "ABILITY_MECHSUITBARRAGE_DESC",
+    "description": "Fire the machine guns!",
+    "cost": {
+      "mana": "5",
+      "must_be_consuming": "true",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "direction",
+      "max_aoe": "10",
+      "min_aoe": "1",
+      "multihit": "6",
+      "stagger_multihit_targets": "true",
+      "aoe_mode": "custom",
+      "custom_aoe": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ]
+      ],
+      "custom_aoe_util": [
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ]
+      ],
+      "custom_aoe_mirror": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "0"
+        ]
+      ],
+      "custom_aoe_util_mirror": [
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ],
+        [
+          "1,",
+          "1"
+        ],
+        [
+          "1,",
+          "0"
+        ]
+      ],
+      "mirror_custom_aoe": "true"
+    },
+    "graphics": {
+      "projectile": "Bullet",
+      "animation": "shoot",
+      "speed": "25",
+      "use_origin_offsets": "false"
+    },
+    "damage_instance": {
+      "damage": "4+bonus_ranged_damage",
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    }
+  },
+  "MechSuitDash": {
+    "id": "MechSuitDash",
+    "template": "trample_dash",
+    "name_key": "ABILITY_MECHDASH_NAME",
+    "name": "Thrusters",
+    "desc_key": "ABILITY_MECHDASH_DESC",
+    "description": "Dash forward and light fires in your path.",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "graphics": {
+      "dash_start_animation": "thrustersStart",
+      "dash_animation": "thrustersLoop",
+      "dash_end_animation": "thrustersEnd",
+      "speed": ".5"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_damage"
+    }
+  },
+  "MechExplode": {
+    "id": "MechExplode",
+    "template": "throw_attack",
+    "cost": {
+      "mana": "0",
+      "infcantrip": "true"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "5",
+      "max_range": "7",
+      "restrictions": "none",
+      "throw_consumed_character": "true",
+      "allow_any_orientation": "true"
+    },
+    "graphics": {
+      "animation": "dying",
+      "dont_orient": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "blocked_damage": "5+bonus_melee_ability_damage"
+    },
+    "self_damage": {
+      "effects": {
+        "ApplyToConsumed": {
+          "Die": "1"
+        },
+        "ExplodeCharacter_NoDie": "1"
+      }
+    }
+  },
+  "MechSuit": {
+    "id": "MechSuit",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_MECHSUIT_NAME",
+    "name": "Mech Suit",
+    "desc_key": "ABILITY_MECHSUIT_DESC",
+    "description": "Summon a mech suit that can be piloted.\n[s:.7](Castable once per battle.)[/s]",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "15",
+      "once_per_fight": "true"
+    },
+    "target": {
+      "range_mode": "custom",
+      "custom_range": [
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "-2",
+          "-1"
+        ],
+        [
+          "-1",
+          "-2"
+        ],
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      "aoe_mode": "custom",
+      "dont_orient_aoe": "true",
+      "custom_aoe": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ],
+      "range_excludes_blocking": "false",
+      "restrictions": "must_fit_2x2_character",
+      "aoe_restrictions": "none",
+      "range_display_include_aoe": "true",
+      "mouse_offset": [
+        ".5",
+        ".5"
+      ]
+    },
+    "graphics": {
+      "lob": "false",
+      "animation": "portout"
+    },
+    "spawn": {
+      "object": "MechSuit",
+      "size": "2",
+      "post_spawn_statuses": {
+        "EnterMount": "enter"
+      }
+    }
+  },
+  "MechSuit2": {
+    "id": "MechSuit2",
+    "variant_of": "MechSuit",
+    "desc_key": "ABILITY_MECHSUIT2_DESC",
+    "description": "Summon a mech suit that can be piloted.\n[s:.7](Costs 0 mana. Castable once per battle.)[/s]",
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "UnreliableShield": {
+    "id": "UnreliableShield",
+    "template": "self_buff",
+    "name_key": "ABILITY_UNRELIABLESHIELD_NAME",
+    "name": "Unreliable Shield Generator",
+    "desc_key": "ABILITY_UNRELIABLESHIELD_DESC",
+    "description": "Gain +6 [img:shield] and +1 temporary Brace. This spell has a 75% chance to be disabled on each turn.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "6",
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    },
+    "bonus_passives": {
+      "AbilityEnabledPercentEachTurn": "25%"
+    }
+  },
+  "UnreliableShield2": {
+    "id": "UnreliableShield2",
+    "variant_of": "UnreliableShield",
+    "desc_key": "ABILITY_UNRELIABLESHIELD2_DESC",
+    "description": "Get +6 [img:shield] and +1 temporary Brace. This spell has a 66% chance to be disabled on each turn.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "AbilityEnabledPercentEachTurn": "33%"
+    }
+  },
+  "UnreliableMissile": {
+    "id": "UnreliableMissile",
+    "template": "spell",
+    "name_key": "ABILITY_UNRELIABLEMISSILE_NAME",
+    "name": "Unreliable Missile Launcher",
+    "desc_key": "ABILITY_UNRELIABLEMISSILE_DESC",
+    "description": "Shoot an explosive homing missile at a random enemy. This spell has a 75% chance to be disabled on each turn.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "min_range": "1",
+      "max_range": "20",
+      "restrictions": "must_have_enemy"
+    },
+    "graphics": {
+      "use_projectile": "true",
+      "projectile": "Projectile_Rocket",
+      "particle": "Explosion",
+      "animation": "throwobject",
+      "rocket_swirl": {
+        "speed": [
+          "1.5,",
+          "2.5"
+        ],
+        "radius": [
+          ".5",
+          "1"
+        ]
+      },
+      "easing": "1",
+      "lob_height": "5"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "knockback": "1",
+      "elements": [
+        "Explosion",
+        "Fire"
+      ]
+    },
+    "bonus_passives": {
+      "AbilityEnabledPercentEachTurn": "25%"
+    }
+  },
+  "UnreliableMissile2": {
+    "id": "UnreliableMissile2",
+    "variant_of": "UnreliableMissile",
+    "desc_key": "ABILITY_UNRELIABLEMISSILE2_DESC",
+    "description": "Shoot an explosive homing missile at a random enemy. This spell has a 66% chance to be disabled on each turn.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "AbilityEnabledPercentEachTurn": "33%"
+    }
+  },
+  "SpareParts": {
+    "id": "SpareParts",
+    "template": "self_buff",
+    "name_key": "ABILITY_SPAREPARTS_NAME",
+    "name": "Spare Parts",
+    "desc_key": "ABILITY_SPAREPARTS_DESC",
+    "description": "Destroy your weapon and gain one of the following: +2 [img:shield], +4 Charge, +1 Thorns, or 1 coin.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1",
+      "requires_destructible_weapon": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "DestroyWeapon": "1",
+        "RandomStatusFromPool": {
+          "Shield": "2",
+          "Charge": "4",
+          "Thorns": "1",
+          "GainCoins": "1"
+        }
+      }
+    }
+  },
+  "SpareParts2": {
+    "id": "SpareParts2",
+    "variant_of": "SpareParts",
+    "desc_key": "ABILITY_SPAREPARTS2_DESC",
+    "description": "Destroy your weapon and gain one of the following: +4 [img:shield], +8 Charge, +2 Thorns, or 2 coins.",
+    "damage_instance": {
+      "effects": {
+        "RandomStatusFromPool": {
+          "Shield": "4",
+          "Charge": "8",
+          "Thorns": "2",
+          "GainCoins": "2"
+        }
+      }
+    }
+  },
+  "BatteryNuke": {
+    "id": "BatteryNuke",
+    "template": "spell",
+    "name_key": "ABILITY_SPLITTHEATOM_NAME",
+    "name": "Split the Atom",
+    "desc_key": "ABILITY_SPLITTHEATOM_DESC",
+    "description": "Deal 50 damage to and inflict Burn 10 on all enemies. You can pay for this spell over multiple turns.\n[s:.7](This spell's mana cost can't be modified.)[/s]",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "50",
+      "can_pay_over_multiple_turns": "true",
+      "disallow_cost_modification": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "all",
+      "aoe_considers_character_size": "false",
+      "knockback_mode": "zero",
+      "aoe_restrictions": "exclude_allies"
+    },
+    "graphics": {
+      "particle": "Explosion",
+      "delay": "3"
+    },
+    "damage_instance": {
+      "damage": "50",
+      "effects": {
+        "Burn": "10"
+      },
+      "elements": [
+        "Fire",
+        "Explosion"
+      ]
+    }
+  },
+  "BatteryNuke2": {
+    "id": "BatteryNuke2",
+    "variant_of": "BatteryNuke",
+    "desc_key": "ABILITY_SPLITTHEATOM2_DESC",
+    "description": "Deal 50 damage to and inflict Burn 10 on all enemies. You can pay for this spell over multiple turns.\nThis spell absorbs the mana you spend casting other spells.\n[s:.7](This spell's mana cost can't be modified.)[/s]",
+    "bonus_passives": {
+      "AbsorbManaFromOtherSpells": "1"
+    }
+  },
+  "ExperimentalTeleporter": {
+    "id": "ExperimentalTeleporter",
+    "template": "teleport",
+    "name_key": "ABILITY_EXPERIMENTALTELEPORTER_NAME",
+    "name": "Experimental Teleporter",
+    "desc_key": "ABILITY_EXPERIMENTALTELEPORTER_DESC",
+    "description": "Teleport to any tile. You have a 15% chance to equip a piece of Fly armor that breaks any armor pieces it replaces.",
+    "class": "Tinkerer",
+    "animate_name": "true",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "graphics": {
+      "self_damage_mid_port": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "Conditional_ActiveWeather_Any": {
+          "weather": [
+            "FlySwarm",
+            "FireflySwarm",
+            "ButterflySwarm"
+          ],
+          "DestroyEquipmentAndAttachParasite": {
+            "chance": "1",
+            "pool": [
+              "FlyHat",
+              "FlyMask",
+              "FlyNeck"
+            ]
+          }
+        },
+        "Else": {
+          "DestroyEquipmentAndAttachParasite": {
+            "chance": ".15",
+            "pool": [
+              "FlyHat",
+              "FlyMask",
+              "FlyNeck"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ExperimentalTeleporter2": {
+    "id": "ExperimentalTeleporter2",
+    "variant_of": "ExperimentalTeleporter",
+    "desc_key": "ABILITY_EXPERIMENTALTELEPORTER2_DESC",
+    "description": "Teleport to any tile. You have a 15% chance to equip a piece of Fly armor that breaks any armor pieces it replaces.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "ShockTherapy": {
+    "id": "ShockTherapy",
+    "template": "spell",
+    "name_key": "ABILITY_SHOCKTHERAPY_NAME",
+    "name": "Shock Therapy",
+    "desc_key": "ABILITY_SHOCKTHERAPY_DESC",
+    "description": "Deal 1 electric damage to yourself or an adjacent unit. Cleanse debuffs from that unit, give it a random stat up, and a 25% chance to be Stunned.",
+    "class": "Tinkerer",
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "1",
+      "min_range": "0"
+    },
+    "graphics": {
+      "particle": "WaterConduct"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Cleanse": "0",
+        "RandomStatUp": "1",
+        "Stun": [
+          "1",
+          ".25"
+        ]
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "ShockTherapy2": {
+    "id": "ShockTherapy2",
+    "variant_of": "ShockTherapy",
+    "desc_key": "ABILITY_SHOCKTHERAPY2_DESC",
+    "description": "Deal 1 electric damage to yourself or a unit in range 5. Cleanse debuffs from that unit, give it a random stat up, and a 25% chance to be Stunned.",
+    "target": {
+      "max_range": "5"
+    }
+  },
+  "BuildNuke": {
+    "id": "BuildNuke",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_BUILDNUKE_NAME",
+    "name": "Build Nuke",
+    "desc_key": "ABILITY_BUILDNUKE_DESC",
+    "description": "Spawn a mini-nuke that makes a HUGE explosion when it dies.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "MiniNuke"
+    }
+  },
+  "BuildNuke2": {
+    "id": "BuildNuke2",
+    "variant_of": "BuildNuke",
+    "desc_key": "ABILITY_BUILDNUKE2_DESC",
+    "description": "Spawn a mini-nuke in range 4 that makes a HUGE explosion when it dies.",
+    "target": {
+      "max_range": "4"
+    },
+    "graphics": {
+      "animation": "buildRobotProjectile"
+    }
+  },
+  "InstantBarrier": {
+    "id": "InstantBarrier",
+    "template": "self_buff",
+    "name_key": "ABILITY_INSTANTBARRIER_NAME",
+    "name": "Instant Barrier",
+    "desc_key": "ABILITY_INSTANTBARRIER_DESC",
+    "description": "Gain +6 [img:shield].\nCastable only if you have no [img:shield].",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1",
+      "enabled_formula": "1-X"
+    },
+    "target": {
+      "X_is": "current_shield"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "6"
+      }
+    }
+  },
+  "InstantBarrier2": {
+    "id": "InstantBarrier2",
+    "variant_of": "InstantBarrier",
+    "desc_key": "ABILITY_INSTANTBARRIER2_DESC",
+    "description": "Gain +6 [img:shield].\nThis spell's mana cost is equal to your current [img:shield].",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "X",
+      "enabled_formula": "1"
+    }
+  },
+  "VoltTackle": {
+    "id": "VoltTackle",
+    "template": "teleport",
+    "name_key": "ABILITY_VOLTTACKLE_NAME",
+    "name": "Volt Tackle",
+    "desc_key": "ABILITY_VOLTTACKLE_DESC",
+    "description": "Teleport to anything that's electrically conductive. Displace units you teleport onto and deal electric damage to them.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": [
+        "aoe_must_be_displaceable",
+        "must_move",
+        "must_be_conductive"
+      ]
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell",
+      "effects": {
+        "IgnoreSelf": "1",
+        "VisualFXTile": "WaterConduct"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "VoltTackle2": {
+    "id": "VoltTackle2",
+    "variant_of": "VoltTackle",
+    "desc_key": "ABILITY_VOLTTACKLE2_DESC",
+    "description": "Teleport to anything that's electrically conductive. Displace units you teleport onto and deal electric damage to them with a 50% chance to inflict Stun.",
+    "damage_instance": {
+      "effects": {
+        "Stun": [
+          "1",
+          ".5"
+        ]
+      }
+    }
+  },
+  "Smash": {
+    "id": "Smash",
+    "template": "melee_attack",
+    "tags": [
+      "weapon_throw"
+    ],
+    "name_key": "ABILITY_SMASHTINKERER_NAME",
+    "name": "Smash",
+    "desc_key": "ABILITY_SMASHTINKERER_DESC",
+    "description": "Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.",
+    "class": "Tinkerer",
+    "cost": {
+      "requires_destructible_weapon": "true",
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "graphics": {
+      "animation": "weaponslam"
+    },
+    "damage_instance": {
+      "damage": "0"
+    },
+    "self_damage": {
+      "effects": {
+        "DestroyWeaponThrow": "1"
+      }
+    },
+    "bonus_passives": {
+      "AbilityInheritsWeaponEffects": "2"
+    }
+  },
+  "Smash2": {
+    "id": "Smash2",
+    "variant_of": "Smash",
+    "desc_key": "ABILITY_SMASHTINKERER2_DESC",
+    "description": "Smash your weapon onto an adjacent unit, destroying it and dealing double its damage.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "2"
+    }
+  },
+  "ShedScrap": {
+    "id": "ShedScrap",
+    "template": "spawn",
+    "name_key": "ABILITY_SHEDSCRAP_NAME",
+    "name": "Shed Scrap",
+    "desc_key": "ABILITY_SHEDSCRAP_DESC",
+    "description": "Lose 1 [img:shield]. Spawn a junk pile.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1",
+      "enabled_formula": "X"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "X_is": "current_shield",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "throwobject"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "-1"
+      }
+    },
+    "spawn": {
+      "object": "Junk"
+    }
+  },
+  "ShedScrap2": {
+    "id": "ShedScrap2",
+    "variant_of": "ShedScrap",
+    "desc_key": "ABILITY_SHEDSCRAP2_DESC",
+    "description": "Lose 1 [img:shield]. Spawn a junk pile in range 2.",
+    "target": {
+      "max_range": "2"
+    }
+  },
+  "RepairArmor": {
+    "id": "RepairArmor",
+    "template": "self_buff",
+    "name_key": "ABILITY_REPAIRARMOR_NAME",
+    "name": "Repair Armor",
+    "desc_key": "ABILITY_REPAIRARMOR_DESC",
+    "description": "Lose all [img:shield], then gain [img:shield] equal to your equipment's starting [img:shield].",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "ResetArmorShield": "1",
+        "RepairArmorCondition": "1"
+      }
+    }
+  },
+  "RepairArmor2": {
+    "id": "RepairArmor2",
+    "template": "targeted_status",
+    "name_key": "ABILITY_REPAIRARMOR_NAME",
+    "name": "Repair Armor",
+    "desc_key": "ABILITY_REPAIRARMOR2_DESC",
+    "description": "Lose all [img:shield], then give [img:shield] equal to your equipment's starting [img:shield] to yourself or another ally.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "20",
+      "restrictions": "must_have_ally",
+      "min_range": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "ResetArmorShield": "1",
+        "RepairArmorCondition": "1"
+      }
+    }
+  },
+  "RocketRide": {
+    "id": "RocketRide",
+    "template": "jump_attack",
+    "name_key": "ABILITY_ROCKETRIDE_NAME",
+    "name": "Rocket Ride",
+    "desc_key": "ABILITY_ROCKETRIDE_DESC",
+    "description": "Jump to any open tile. Explode when you land. (This explosion also damages you.)",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "target": {
+      "aoe_mode": "standard",
+      "min_aoe": "0",
+      "max_aoe": "1",
+      "max_range": "20",
+      "knockback_mode": "character_to_tile",
+      "aoe_excludes_self": "false"
+    },
+    "graphics": {
+      "jump_attack_animation": "land",
+      "do_damage_immediately": "true"
+    },
+    "damage_instance": {
+      "damage": "8",
+      "knockback": "1",
+      "type": "spell",
+      "incidentally_collects_pickups": "false",
+      "effects": {
+        "VisualFXTile": "Explosion"
+      },
+      "elements": [
+        "Explosion",
+        "Fire"
+      ]
+    }
+  },
+  "RocketRide2": {
+    "id": "RocketRide2",
+    "variant_of": "RocketRide",
+    "desc_key": "ABILITY_ROCKETRIDE2_DESC",
+    "description": "Jump to any open tile. Explode when you land. (This explosion also damages you.)\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "Roomba_Bump": {
+    "id": "Roomba_Bump",
+    "template": "dash_attack",
+    "target": {
+      "max_range": "1",
+      "max_aoe": "1"
+    },
+    "graphics": {
+      "dash_start_animation": "ramStart",
+      "dash_animation": "ramLoop",
+      "dash_attack_animation": "ramEnd"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage"
+    }
+  },
+  "RoboVac": {
+    "id": "RoboVac",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_ROBOVAC_NAME",
+    "name": "Robo-Vac",
+    "desc_key": "ABILITY_ROBOVAC_DESC",
+    "description": "Spawn a vacuum bot that collects pickups and shares their effects with you.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "RoboVacuum"
+    }
+  },
+  "RoboVac2": {
+    "id": "RoboVac2",
+    "variant_of": "RoboVac",
+    "desc_key": "ABILITY_ROBOVAC2_DESC",
+    "description": "Spawn a vacuum bot that collects pickups and shares their effects with your whole team.",
+    "spawn": {
+      "object": "RoboVacuum2"
+    }
+  },
+  "NurseBotHeal": {
+    "id": "NurseBotHeal",
+    "template": "tile_targeted_melee_attack",
+    "name_key": "ABILITY_FEELGOODDRUGS_NAME",
+    "name": "Give drugs!",
+    "graphics": {
+      "animation": "heal"
+    },
+    "damage_instance": {
+      "heal": "5+bonus_melee_damage"
+    }
+  },
+  "NurseBotHealCat": {
+    "id": "NurseBotHealCat",
+    "variant_of": "NurseBotHeal",
+    "target": {
+      "restrictions": [
+        "must_not_have_tag"
+      ],
+      "target_requires_tag": "robot"
+    }
+  },
+  "NurseBot": {
+    "id": "NurseBot",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_NURSEBOT_NAME",
+    "name": "Nurse Bot",
+    "desc_key": "ABILITY_NURSEBOT_DESC",
+    "description": "Spawn a nurse bot that heals allies.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "NurseBot"
+    }
+  },
+  "NurseBot2": {
+    "id": "NurseBot2",
+    "variant_of": "NurseBot",
+    "desc_key": "ABILITY_NURSEBOT2_DESC",
+    "description": "Spawn a nurse bot that heals allies.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "6"
+    }
+  },
+  "TeslaBolt": {
+    "id": "TeslaBolt",
+    "template": "spell",
+    "target": {
+      "max_aoe": "0",
+      "max_range": "3",
+      "min_range": "1"
+    },
+    "graphics": {
+      "particle": "Bolt",
+      "animation": "none",
+      "dont_visualize_ai": "true",
+      "dont_orient": "true"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "custom_additional_ai_weight": "teslacoil_priorities",
+      "effects": {
+        "Stun": [
+          "1,",
+          ".1"
+        ]
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "TeslaCoil": {
+    "id": "TeslaCoil",
+    "template": "spawn",
+    "tags": [
+      "summon"
+    ],
+    "name_key": "ABILITY_TESLACOIL_NAME",
+    "name": "Tesla Coil",
+    "desc_key": "ABILITY_TESLACOIL_DESC",
+    "description": "Spawn a tesla coil that shoots lightning bolts at random units with a small chance to inflict Stun.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "graphics": {
+      "lob": "true",
+      "animation": "buildRobot"
+    },
+    "spawn": {
+      "object": "TeslaCoil"
+    }
+  },
+  "TeslaCoil2": {
+    "id": "TeslaCoil2",
+    "variant_of": "TeslaCoil",
+    "desc_key": "ABILITY_TESLACOIL2_DESC",
+    "description": "Spawn a tesla coil in range 7 that shoots lightning bolts at random units with a small chance to inflict Stun.",
+    "target": {
+      "max_range": "7"
+    },
+    "graphics": {
+      "animation": "buildRobotProjectile"
+    }
+  },
+  "RefineMaterials": {
+    "id": "RefineMaterials",
+    "template": "targeted_status",
+    "name_key": "ABILITY_REFINEMATERIALS_NAME",
+    "name": "Refine Materials",
+    "desc_key": "ABILITY_REFINEMATERIALS_DESC",
+    "description": "Collect a pickup in range 3. Instead of its normal effect, gain +1 Tech.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "1"
+    },
+    "target": {
+      "max_range": "3",
+      "restrictions": "must_have_tag",
+      "target_requires_tag": "pickup"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CollectsPickupsWithAltEffects": {
+          "Tech": "1"
+        }
+      }
+    }
+  },
+  "RefineMaterials2": {
+    "id": "RefineMaterials2",
+    "variant_of": "RefineMaterials",
+    "desc_key": "ABILITY_REFINEMATERIALS2_DESC",
+    "description": "Collect a pickup in range 3. Instead of its normal effect, gain +1 Tech, +1 [img:shield], and +1 to a random stat.",
+    "damage_instance": {
+      "effects": {
+        "CollectsPickupsWithAltEffects": {
+          "Tech": "1",
+          "Shield": "1",
+          "RandomStatUp": "1"
+        }
+      }
+    }
+  },
+  "Fabricate": {
+    "id": "Fabricate",
+    "template": "targeted_status",
+    "name_key": "ABILITY_FABRICATE_NAME",
+    "name": "Fabricate",
+    "desc_key": "ABILITY_FABRICATE_DESC",
+    "description": "Give an ally in range 3 a temporary copy of your weapon, if they don't have a weapon.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "3",
+      "min_range": "1",
+      "restrictions": "aoe_must_exist",
+      "aoe_restrictions": "must_have_cat_with_empty_weapon_slot"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "status_spell",
+      "effects": {
+        "CloneWeaponTemp": "1"
+      }
+    }
+  },
+  "Fabricate2": {
+    "id": "Fabricate2",
+    "variant_of": "Fabricate",
+    "desc_key": "ABILITY_FABRICATE2_DESC",
+    "description": "Give an ally in range 3 a temporary copy of your weapon, if they don't have a weapon.\n[s:.7](This spell costs less.)[/s]",
+    "cost": {
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "Sparks": {
+    "id": "Sparks",
+    "template": "lobbed_attack",
+    "name_key": "ABILITY_SPARKS_NAME",
+    "name": "Sparks",
+    "desc_key": "ABILITY_SPARKS_DESC",
+    "description": "Shoot electric bolts at up to 3 random enemies or robots.",
+    "class": "Tinkerer",
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_excludes_self": "true",
+      "max_aoe": "20",
+      "max_targets": "3",
+      "aoe_restrictions": [
+        "must_have_enemy_or_robot",
+        "must_have_living_character"
+      ]
+    },
+    "graphics": {
+      "animation": "castspell",
+      "projectile": "LightningBallProjectile",
+      "lob_height": "1",
+      "speed": "20"
+    },
+    "damage_instance": {
+      "damage": "3",
+      "type": "spell",
+      "effects": {
+        "VisualFXTile": "WaterConduct"
+      },
+      "elements": [
+        "Electric"
+      ]
+    }
+  },
+  "Sparks2": {
+    "id": "Sparks2",
+    "variant_of": "Sparks",
+    "desc_key": "ABILITY_SPARKS2_DESC",
+    "description": "Shoot electric bolts at up to 5 random enemies or robots.",
+    "target": {
+      "max_targets": "5"
+    }
+  },
+  "Hone": {
+    "id": "Hone",
+    "template": "self_buff",
+    "tags": [
+      "noncopyable"
+    ],
+    "name_key": "ABILITY_HONE_NAME",
+    "name": "Hone",
+    "desc_key": "ABILITY_HONE_DESC",
+    "description": "Repair 1 use to your weapon and give it +1 damage for the rest of the battle.",
+    "class": "Tinkerer",
+    "cost": {
+      "requires_weapon": "true"
+    },
+    "graphics": {
+      "animation": "tinkerSelf"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "RepairWeapon": "1",
+        "CurrentWeaponDamageUp": "1",
+        "RepairWeaponCondition": "1"
+      }
+    }
+  },
+  "Hone2": {
+    "id": "Hone2",
+    "variant_of": "Hone",
+    "desc_key": "ABILITY_HONE2_DESC",
+    "description": "Repair 1 use to your weapon and give it +1 damage for the rest of the battle. Refresh your weapon action.",
+    "damage_instance": {
+      "effects": {
+        "RefreshWeaponAbility": "1"
+      }
+    }
+  }
+}

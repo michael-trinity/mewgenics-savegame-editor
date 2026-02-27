@@ -1,0 +1,622 @@
+{
+  "Putrefy": {
+    "name": "PASSIVE_PUTREFY_NAME",
+    "name_resolved": "Putrefy",
+    "desc": "PASSIVE_PUTREFY_DESCRIPTION",
+    "desc_resolved": "Your basic attack inflicts Rot 1.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Rot": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PUTREFY2_DESCRIPTION",
+      "desc_resolved": "Your basic attack inflicts permanent Rot.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Rot": "-999999"
+        }
+      }
+    }
+  },
+  "NeverFull": {
+    "name": "PASSIVE_NEVERFULL_NAME",
+    "name_resolved": "Never Full",
+    "desc": "PASSIVE_NEVERFULL_DESC",
+    "desc_resolved": "You can heal over your max HP.\nExcess HP is lost between battles.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "UncappedHP": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_NEVERFULL2_DESC",
+      "desc_resolved": "You can heal over your max HP.\nExcess HP is lost between battles.\nGain +1 [img:str] for every 5 HP you have over max HP.",
+      "passives": {
+        "UncappedHP": "1",
+        "UncappedHPBonusStr": "5"
+      }
+    }
+  },
+  "MainCourse": {
+    "name": "PASSIVE_MAINCOURSE_NAME",
+    "name_resolved": "Supersize Me!",
+    "desc": "PASSIVE_MAINCOURSE_DESC",
+    "desc_resolved": "Food and scrap pickups you spawn are bigger.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "UpgradeSpawnedPickups": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MAINCOURSE2_DESC",
+      "desc_resolved": "Food and scrap pickups you spawn are max size.",
+      "passives": {
+        "UpgradeSpawnedPickups": "2"
+      }
+    }
+  },
+  "FreshMeat": {
+    "name": "PASSIVE_FRESHMEAT_NAME",
+    "name_resolved": "Fresh Meat",
+    "desc": "PASSIVE_FRESHMEAT_DESC",
+    "desc_resolved": "When you eat food, gain +1 [img:str].",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnEatFood": {
+          "StrengthUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_FRESHMEAT2_DESC",
+      "desc_resolved": "When you eat food, gain +1 [img:str] and +1 to a random stat.",
+      "passives": {
+        "StatusOnEatFood": {
+          "StrengthUp": "1",
+          "RandomStatUp": "1"
+        }
+      }
+    }
+  },
+  "Masochist": {
+    "name": "PASSIVE_MASOCHIST_NAME",
+    "name_resolved": "Masochist",
+    "desc": "PASSIVE_MASOCHIST_DESC",
+    "desc_resolved": "When you take damage, gain +1 [img:str], [img:con], or [img:spd] at random.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "RandomStatusFromPool": {
+            "StrengthUp": "1",
+            "ConstitutionUp": "1",
+            "SpeedUp": "1"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_MASOCHIST2_DESC",
+      "desc_resolved": "When you take damage, you get +1 [img:str], [img:con], and [img:spd].",
+      "passives": {
+        "StatusOnTookDamage": {
+          "StrengthUp": "1",
+          "ConstitutionUp": "1",
+          "SpeedUp": "1"
+        }
+      }
+    }
+  },
+  "Glutton": {
+    "name": "PASSIVE_GLUTTON_NAME",
+    "name_resolved": "Glutton",
+    "desc": "PASSIVE_GLUTTON_DESC",
+    "desc_resolved": "When a food pickup spawns within 2 tiles of you, move to it.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "AbilityWhenTaggedCharacterMovesNear": {
+          "ability": "move",
+          "tag": "food",
+          "range": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GLUTTON2_DESC",
+      "desc_resolved": "When a food pickup spawns within 2 tiles of you, move to it with trample.",
+      "passives": {
+        "AbilityWhenTaggedCharacterMovesNear": {
+          "ability": "move",
+          "tag": "food",
+          "range": "global"
+        },
+        "Trample": "3"
+      }
+    }
+  },
+  "Hooked": {
+    "name": "PASSIVE_HOOKED_NAME",
+    "name_resolved": "Hooked",
+    "desc": "PASSIVE_HOOKED_DESC",
+    "desc_resolved": "You can use your hook 2 additional times on your turn.",
+    "desc_multiclass": "PASSIVE_HOOKED_MULTICLASS_DESC",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "ExtraWeaponAttacks": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HOOKED2_DESC",
+      "desc_resolved": "You can use your hook 2 additional times on your turn.\nYour hook deals +1 damage and has Cleave.",
+      "desc_multiclass": "PASSIVE_HOOKED2_MULTICLASS_DESC",
+      "passives": {
+        "ExtraWeaponAttacks": "2",
+        "BoostWeaponDamage": "1",
+        "AddStatusToWeapons": {
+          "Cleave": "1"
+        }
+      }
+    }
+  },
+  "Stompy": {
+    "name": "PASSIVE_STOMPY_NAME",
+    "name_resolved": "Stompy!",
+    "desc": "PASSIVE_STOMPY_DESC",
+    "desc_resolved": "You have Trample.\nTrample damage you deal has Cleave.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "Trample": "3",
+        "AddStatusToTrampleDamage": {
+          "Cleave": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_STOMPY2_DESC",
+      "desc_resolved": "You have Trample and +2 Bonus Moves.\nTrample damage you deal has Cleave.",
+      "passives": {
+        "Trample": "3",
+        "MoveQuivered": "2",
+        "AddStatusToTrampleDamage": {
+          "Cleave": "1"
+        }
+      }
+    }
+  },
+  "Barbed": {
+    "name": "PASSIVE_BARBED_NAME",
+    "name_resolved": "Barbed",
+    "desc": "PASSIVE_BARBED_DESC",
+    "desc_resolved": "Your hook deals +1 damage and inflicts Bleed.",
+    "desc_multiclass": "PASSIVE_BARBED_MULTICLASS_DESC",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "BoostWeaponDamage": "1",
+        "AddStatusToWeapons": {
+          "Bleed": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BARBED2_DESC",
+      "desc_resolved": "Your hook deals +5 damage and inflicts Bleed.",
+      "desc_multiclass": "PASSIVE_BARBED2_MULTICLASS_DESC",
+      "passives": {
+        "BoostWeaponDamage": "5",
+        "AddStatusToWeapons": {
+          "Bleed": "1"
+        }
+      }
+    }
+  },
+  "GrapplingHook": {
+    "name": "PASSIVE_GRAPPLINGHOOK_NAME",
+    "name_resolved": "Grappling Hook",
+    "desc": "PASSIVE_GRAPPLINGHOOK_DESC",
+    "desc_resolved": "Your hook pulls you toward knockback-immune objects.",
+    "desc_multiclass": "PASSIVE_GRAPPLINGHOOK_MULTICLASS_DESC",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "AddStatusToWeapons": {
+          "PullSourceToKnockbackImmuneTarget": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GRAPPLINGHOOK2_DESC",
+      "desc_resolved": "Your hook pulls you toward knockback-immune objects. Refresh your movement action when you use your hook.",
+      "desc_multiclass": "PASSIVE_GRAPPLINGHOOK2_MULTICLASS_DESC",
+      "passives": {
+        "AddStatusToWeapons": {
+          "PullSourceToKnockbackImmuneTarget": "1"
+        },
+        "RefreshMoveOnWeaponConnect": "1"
+      }
+    }
+  },
+  "PainGain": {
+    "name": "PASSIVE_PAINGAIN_NAME",
+    "name_resolved": "Rankle",
+    "desc": "PASSIVE_PAINGAIN_DESC",
+    "desc_resolved": "When you take damage, gain +2 Temp Damage.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "TempDamageUp": "2"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_PAINGAIN2_DESC",
+      "desc_resolved": "When you take damage, gain +1 Damage and +1 Temp Damage.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "TempDamageUp": "1",
+          "DamageUp": "1"
+        }
+      }
+    }
+  },
+  "WideSwing": {
+    "name": "PASSIVE_WIDESWING_NAME",
+    "name_resolved": "Spin to Win",
+    "desc": "PASSIVE_WIDESWING_DESC",
+    "desc_resolved": "Your basic attack is a 3x3 tile spin attack with Cleave.",
+    "class": "Butcher",
+    "1": {
+      "override_basic_attack": "BasicButcherMeleeWideSpin",
+      "passives": {
+        "ReplaceBasicAttack": "BasicButcherMeleeWideSpin"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_WIDESWING2_DESC",
+      "desc_resolved": "Your basic attack is a 3x3 tile double spin attack with Cleave.",
+      "override_basic_attack": "BasicButcherMeleeWideDoubleSpin",
+      "passives": {
+        "ReplaceBasicAttack": "BasicButcherMeleeWideDoubleSpin"
+      }
+    }
+  },
+  "Confrontational": {
+    "name": "PASSIVE_CONFRONTATIONAL_NAME",
+    "name_resolved": "Confrontational",
+    "desc": "PASSIVE_CONFRONTATIONAL_DESC",
+    "desc_resolved": "When you take damage, trample one tile towards the source of damage.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "MoveTowardsDamageSource": {
+          "move_ability": "TrampleMoveOne",
+          "move_far": "false"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_CONFRONTATIONAL2_DESC",
+      "desc_resolved": "When you take damage, trample all the way to the source of damage.",
+      "passives": {
+        "MoveTowardsDamageSource": {
+          "move_ability": "TrampleMove",
+          "move_far": "false"
+        }
+      }
+    }
+  },
+  "HeaveHook": {
+    "name": "PASSIVE_HEAVEHOOK_NAME",
+    "name_resolved": "Heave Hook",
+    "desc": "PASSIVE_HEAVEHOOK_DESC",
+    "desc_resolved": "Your hook can target tiles.\nUnits pulled by your hook gain trample while being hooked.",
+    "desc_multiclass": "PASSIVE_HEAVEHOOK_MULTICLASS_DESC",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "LobbedHook": "1",
+        "EquipTemporaryItem": "ButcherHook_Temporary"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HEAVEHOOK2_DESC",
+      "desc_resolved": "Your hook can target tiles.\nUnits pulled by your hook gain trample while being hooked, this trample damage is doubled.",
+      "desc_multiclass": "PASSIVE_HEAVEHOOK2_MULTICLASS_DESC",
+      "passives": {
+        "LobbedHook": "2",
+        "EquipTemporaryItem": "ButcherHook_Temporary"
+      }
+    }
+  },
+  "Harpooner": {
+    "name": "PASSIVE_HARPOONER_NAME",
+    "name_resolved": "Harpooner",
+    "desc": "PASSIVE_HARPOONER_DESC",
+    "desc_resolved": "When an enemy moves in range, hook it.",
+    "desc_multiclass": "PASSIVE_HARPOONER_MULTICLASS_DESC",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "MovementReaction": {
+          "ability": "weapon",
+          "enemies_only": "true"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HARPOONER2_DESC",
+      "desc_resolved": "When an enemy moves in range, hook it. Your hook deals +2 Damage.",
+      "desc_multiclass": "PASSIVE_HARPOONER2_MULTICLASS_DESC",
+      "passives": {
+        "MovementReaction": {
+          "ability": "weapon",
+          "enemies_only": "true"
+        },
+        "BoostWeaponDamage": "2"
+      }
+    }
+  },
+  "LordOfTheFlies": {
+    "name": "PASSIVE_LORDOFTHEFLIES_NAME",
+    "name_resolved": "Lord of the Flies",
+    "desc": "PASSIVE_LORDOFTHEFLIES_DESC",
+    "desc_resolved": "All flies are Charmed and get +1 Damage.\nWhenever you inflict Rot, you inflict +1 Rot.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "CharmAllFlies": "1",
+        "FlyDamageIncrease": "1",
+        "AmplifyStatus": "Rot"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LORDOFTHEFLIES2_DESC",
+      "desc_resolved": "All flies are Charmed and get +4 Damage.\nWhenever you inflict Rot, you inflict +1 Rot.",
+      "passives": {
+        "CharmAllFlies": "1",
+        "FlyDamageIncrease": "4",
+        "AmplifyStatus": "Rot"
+      }
+    }
+  },
+  "Schadenfreude": {
+    "name": "PASSIVE_SCHADENFREUDE_NAME",
+    "name_resolved": "Schadenfreude",
+    "desc": "PASSIVE_SCHADENFREUDE_DESC",
+    "desc_resolved": "Your [img:str] and [img:con] are increased by 2 for each disorder your party has.",
+    "class": "Butcher",
+    "tags": [
+      "noncopyable"
+    ],
+    "1": {
+      "schadenfreude_scaled_stats": {
+        "str": "2",
+        "con": "2"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_SCHADENFREUDE2_DESC",
+      "desc_resolved": "All of your stats are increased by 2 for each disorder your party has.",
+      "schadenfreude_scaled_stats": {
+        "str": "2",
+        "dex": "2",
+        "con": "2",
+        "int": "2",
+        "cha": "2",
+        "spd": "2",
+        "lck": "2"
+      }
+    }
+  },
+  "Gurgitator": {
+    "name": "PASSIVE_GURGITATOR_NAME",
+    "name_resolved": "Gurgitator",
+    "desc": "PASSIVE_GURGITATOR_DESC",
+    "desc_resolved": "Whenever you heal over your max HP, gain +1 [img:str].",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnOverHealed": {
+          "StrengthUp": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_GURGITATOR2_DESC",
+      "desc_resolved": "Whenever you heal over your max HP, gain +1 [img:str] and +1 Weapon Damage.",
+      "passives": {
+        "StatusOnOverHealed": {
+          "StrengthUp": "1",
+          "CurrentWeaponDamageUp": "1"
+        }
+      }
+    }
+  },
+  "LooseMeat": {
+    "name": "PASSIVE_LOOSEMEAT_NAME",
+    "name_resolved": "Loose Meat",
+    "desc": "PASSIVE_LOOSEMEAT_DESC",
+    "desc_resolved": "When you take damage, spawn a food pickup.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "Food"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_LOOSEMEAT2_DESC",
+      "desc_resolved": "When you take damage or move, spawn a food pickup.",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "Food"
+        },
+        "SpawnMeatOnMove": "Food"
+      }
+    }
+  },
+  "Hack": {
+    "name": "PASSIVE_HACK_NAME",
+    "name_resolved": "Hack",
+    "desc": "PASSIVE_HACK_DESC",
+    "desc_resolved": "Your basic attack is always critical against enemies with [img:shield].\nYour basic attack's critical hits remove buffs from units.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Shielded": {
+            "BonusCritChance": "100"
+          },
+          "ApplyStatusIfCrit": {
+            "Purge": "0"
+          }
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_HACK2_DESC",
+      "desc_resolved": "Your basic attack is always critical against enemies with [img:shield].\nYour basic attack's critical hits remove buffs from units.\nYour critical hits deal +100% damage.",
+      "passives": {
+        "AddStatusToBasicAttack": {
+          "Conditional_Shielded": {
+            "BonusCritChance": "100"
+          },
+          "ApplyStatusIfCrit": {
+            "Purge": "0"
+          }
+        },
+        "AddCritMultiplier": "100%"
+      }
+    }
+  },
+  "BowlingBall": {
+    "name": "PASSIVE_BOWLINGBALL_NAME",
+    "name_resolved": "Bowling Ball",
+    "desc": "PASSIVE_BOWLINGBALL_DESC",
+    "desc_resolved": "Adjacent and diagonal allied cats get the bonus ability Bowl.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "AllyBonusAbilityAura": {
+          "ability": "Bowl",
+          "square": "true"
+        },
+        "AddHiddenTag": "bowling_ball"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_BOWLINGBALL2_DESC",
+      "desc_resolved": "Adjacent and diagonal allied cats get the bonus ability Bowl+.",
+      "passives": {
+        "AllyBonusAbilityAura": {
+          "ability": "Bowl2",
+          "square": "true"
+        },
+        "AddHiddenTag": "bowling_ball"
+      }
+    }
+  },
+  "Testy": {
+    "name": "PASSIVE_TESTY_NAME",
+    "name_resolved": "Testy",
+    "desc": "PASSIVE_TESTY_DESC",
+    "desc_resolved": "When you take damage, gain +1 movement range until the end of your turn.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnTookDamage": {
+          "TempMovement": "1"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_TESTY2_DESC",
+      "desc_resolved": "When you take damage, gain +1 movement range.",
+      "passives": {
+        "StatusOnTookDamage": {
+          "MovementUp": "1"
+        }
+      }
+    }
+  },
+  "Indigestion": {
+    "name": "PASSIVE_INDIGESTION_NAME",
+    "name_resolved": "Indigestion",
+    "desc": "PASSIVE_INDIGESTION_DESC",
+    "desc_resolved": "Whenever you heal over your max HP, fart and inflict Poison 3 on adjacent units.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnOverHealed": {
+          "ForceUseAbility_NonStack": "Indigestion_Fart"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INDIGESTION2_DESC",
+      "desc_resolved": "Whenever you heal over your max HP, fart and inflict Poison 3 and Burn 3 on adjacent units.",
+      "passives": {
+        "StatusOnOverHealed": {
+          "ForceUseAbility_NonStack": "Indigestion_Fart2"
+        }
+      }
+    }
+  },
+  "Incubator": {
+    "name": "PASSIVE_INCUBATOR_NAME",
+    "name_resolved": "Incubator",
+    "desc": "PASSIVE_INCUBATOR_DESC",
+    "desc_resolved": "Whenever you heal over your max HP, spawn a rot fly.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "StatusOnOverHealed": {
+          "SpawnScaledRotFly": "0"
+        }
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_INCUBATOR2_DESC",
+      "desc_resolved": "Whenever you heal over your max HP, spawn a rot fly with HP and damage equal to the excess healing.",
+      "passives": {
+        "ScaledStatusOnOverHealed": {
+          "SpawnScaledRotFly": "1"
+        }
+      }
+    }
+  },
+  "DukeOfFlies": {
+    "name": "PASSIVE_DUKEOFFLIES_NAME",
+    "name_resolved": "Duke of Flies",
+    "desc": "PASSIVE_DUKEOFFLIES_DESC",
+    "desc_resolved": "At the end of the battle, all food pickups become allied flies.\nAllied flies stay with you between battles.",
+    "class": "Butcher",
+    "1": {
+      "passives": {
+        "DukeOfFlies": "1"
+      }
+    },
+    "2": {
+      "desc": "PASSIVE_DUKEOFFLIES2_DESC",
+      "desc_resolved": "At the end of the battle, all food pickups become allied flies.\nAllied flies stay with you between battles.\nYour basic attack spawns flies.",
+      "passives": {
+        "DukeOfFlies": "1",
+        "AddStatusToBasicAttack": {
+          "BounceObject": "AllyRotFly"
+        }
+      }
+    }
+  }
+}

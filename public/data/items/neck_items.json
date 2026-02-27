@@ -1,0 +1,1242 @@
+{
+  "LionMane": {
+    "name": "ARMOR_LIONMANE_NAME",
+    "name_resolved": "Lion Mane",
+    "desc": "ARMOR_LIONMANE_DESC",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "1",
+    "str": "1",
+    "con": "1",
+    "cha": "1",
+    "int": "-1",
+    "spd": "-1"
+  },
+  "Gobbler": {
+    "name": "ARMOR_GOBBLER_NAME",
+    "name_resolved": "Gobbler",
+    "desc": "ARMOR_GOBBLER_DESC",
+    "desc_resolved": "Units that contact you are knocked back 2 tiles.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "22",
+    "set": "Fatty",
+    "con": "4",
+    "spd": "-2",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "2"
+      }
+    }
+  },
+  "SpikedCollar": {
+    "name": "ARMOR_SPIKEDCOLLAR_NAME",
+    "name_resolved": "Spiked Collar",
+    "desc": "ARMOR_SPIKEDCOLLAR_DESC",
+    "desc_resolved": "+2 Thorns.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "24",
+    "passives": {
+      "Thorns": "2",
+      "Metal": "1"
+    }
+  },
+  "FrankBolts": {
+    "name": "ARMOR_FRANKBOLTS_NAME",
+    "name_resolved": "Frank Bolts",
+    "desc": "ARMOR_FRANKBOLTS_DESC",
+    "desc_resolved": "Electric immunity.\nElectric damage revives you when downed.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "21",
+    "set": [
+      "Bionic,",
+      "Cyborg"
+    ],
+    "shield": "2",
+    "passives": {
+      "FrankBolts": "1",
+      "Metal": "1"
+    }
+  },
+  "FortuneNecklace": {
+    "name": "ARMOR_FORTUNENECKLACE_NAME",
+    "name_resolved": "Fortune Necklace",
+    "desc": "ARMOR_FORTUNENECKLACE_DESC",
+    "desc_resolved": "Spawn 3-6 coins at the start of each battle.\nFragile.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "23",
+    "passives": {
+      "Fragile": "1",
+      "SpawnOnBattleStartRandomEmptyTile": {
+        "object": "Coin",
+        "number": [
+          "3",
+          "6"
+        ]
+      }
+    }
+  },
+  "Scarf": {
+    "name": "ARMOR_SCARF_NAME",
+    "name_resolved": "Scarf",
+    "desc": "ARMOR_SCARF_DESC",
+    "desc_resolved": "Ice immunity.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "50",
+    "cha": "1",
+    "passives": {
+      "ElementImmune": "Ice",
+      "StatusImmunity": [
+        "Freeze,",
+        "Slow"
+      ]
+    }
+  },
+  "BulletproofVest": {
+    "name": "ARMOR_BULLETPROOFVEST_NAME",
+    "name_resolved": "Bulletproof Vest",
+    "desc": "ARMOR_BULLETPROOFVEST_DESC",
+    "desc_resolved": "Injury immunity.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "51",
+    "spd": "-1",
+    "dex": "-1",
+    "passives": {
+      "InjuryImmunity": "1"
+    }
+  },
+  "LuckyToe": {
+    "name": "ARMOR_LUCKYTOE_NAME",
+    "name_resolved": "Lucky Toe",
+    "desc": "ARMOR_LUCKYTOE_DESC",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "53",
+    "set": [
+      "HumanFlesh,",
+      "Lucky,",
+      "Twine"
+    ],
+    "lck": "2",
+    "passives": {
+      "ChanceToForceEvent": {
+        "chance": "25%",
+        "event": "Blessing"
+      }
+    }
+  },
+  "Bling": {
+    "name": "ARMOR_BLING_NAME",
+    "name_resolved": "Bling",
+    "desc": "ARMOR_BLING_DESC",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "54",
+    "shield": "4",
+    "spd": "-2",
+    "cha": "2",
+    "passives": {
+      "Metal": "1"
+    }
+  },
+  "OddMedallion": {
+    "name": "ARMOR_ODDMEDALLION_NAME",
+    "name_resolved": "Odd Medallion",
+    "desc": "ARMOR_ODDMEDALLION_DESC",
+    "desc_resolved": "Deal 1 electric damage to units that contact or attack you.\n25% chance to poop every time you take damage.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "55",
+    "set": [
+      "Used,",
+      "Twine,",
+      "Demonic"
+    ],
+    "cursed": "true",
+    "spd": "6",
+    "passives": {
+      "PoopWhenHit": {
+        "chance": "25%",
+        "object": "Poop"
+      },
+      "RevengeDamage": {
+        "damage": "1",
+        "effects": {
+          "VisualFXTile": "WaterConduct"
+        },
+        "elements": [
+          "Electric"
+        ]
+      }
+    }
+  },
+  "FishNecklace": {
+    "name": "ARMOR_FISHNECKLACE_NAME",
+    "name_resolved": "Fish Necklace",
+    "desc": "ARMOR_FISHNECKLACE_DESC",
+    "desc_resolved": "Damage you deal inflicts Rot 1.\nInflict Poison 1 on units that contact you.\nAllied flies have +2 Damage.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "57",
+    "set": [
+      "Rotten,",
+      "Twine"
+    ],
+    "cha": "-6",
+    "shield": "3",
+    "passives": {
+      "AddStatusToAllDamage": {
+        "Rot": "1"
+      },
+      "MeleeRevengeDamage": {
+        "effects": {
+          "Poison": "1"
+        }
+      },
+      "FlyDamageIncrease": "2"
+    }
+  },
+  "TwoOfSpades": {
+    "name": "ARMOR_TWOOFSPADES_NAME",
+    "name_resolved": "Two of Spades",
+    "desc": "ARMOR_TWOOFSPADES_DESC",
+    "desc_resolved": "Double cast spells that cost 1 or 2 mana.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "set": "Twine",
+    "frame": "88",
+    "passives": {
+      "DoubleCastSpellIfManaCostUnderThreshold": "3"
+    }
+  },
+  "ColostomyBag": {
+    "name": "ARMOR_COLOSTOMYBAG_NAME",
+    "name_resolved": "Colostomy Bag",
+    "desc": "ARMOR_COLOSTOMYBAG_DESC",
+    "desc_resolved": "Spawn Charmed Dips randomly when you move over tiles.\nWhile downed, spawn a Charmed Dip at the end of each round.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "89",
+    "set": [
+      "Fecal,",
+      "Used"
+    ],
+    "passives": {
+      "ObjectDetector": {
+        "object": "CharmedDip",
+        "chance": "10%"
+      },
+      "PassiveWhenDead": {
+        "StatusEachRoundEnd": {
+          "DoDamage": {
+            "damage": "0",
+            "type": "spell",
+            "damage_tiles": "all",
+            "effects": {
+              "BounceObject": "CharmedDip"
+            }
+          }
+        }
+      }
+    }
+  },
+  "SurvivalistGaiter": {
+    "name": "ARMOR_SURVIVALISTGAITER_NAME",
+    "name_resolved": "Survivalist's Gaiter",
+    "desc": "ARMOR_SURVIVALISTGAITER_DESC",
+    "desc_resolved": "+40% Dodge Chance while standing in tall grass.\nStart each battle with Stealth 1. Lose this stealth when you use your basic attack.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "90",
+    "set": "Survivalist",
+    "passives": {
+      "StatusOnBattleStart": {
+        "StealthUntilBasicAttack": "1"
+      },
+      "PassiveWhenOnTile": {
+        "tile": [
+          "TallGrassTile",
+          "TallFlowerTile"
+        ],
+        "passives": {
+          "DodgeChance_Status": "40"
+        }
+      }
+    }
+  },
+  "PeaceSymbol": {
+    "name": "ARMOR_PEACESYMBOL_NAME",
+    "name_resolved": "Peace Symbol",
+    "desc": "ARMOR_PEACESYMBOL_DESC",
+    "desc_resolved": "If you end your turn without dealing damage, gain +1 [img:divineshield].",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "91",
+    "set": [
+      "Hippie,",
+      "Twine"
+    ],
+    "keyword_tooltips": {
+      "DivineShield": "1"
+    },
+    "passives": {
+      "StatusEachTurnBegin": {
+        "BlessingOfPeace": "1"
+      }
+    }
+  },
+  "EmptyGenerator": {
+    "name": "ARMOR_EMPTYGENERATOR_NAME",
+    "name_resolved": "Empty Generator",
+    "desc": "ARMOR_EMPTYGENERATOR_DESC",
+    "desc_resolved": "When you spend 12 or more mana in a turn, refresh your basic attack.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "92",
+    "shield": "2",
+    "passives": {
+      "Metal": "1",
+      "ScaledStatusOnSpendMana": {
+        "StatusAfterXStacks": {
+          "stack_key": "EMPTY_GENERATOR",
+          "threshold": "12",
+          "expires_on_end_turn": "true",
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "DarkFriend": {
+    "name": "ARMOR_DARKFRIEND_NAME",
+    "name_resolved": "Dark Friend",
+    "desc": "ARMOR_DARKFRIEND_DESC",
+    "desc_resolved": "At the start of your turn, spawn a Shadow copy that mimics your basic attack and fades at the end of the turn.\nUnits that contact or attack you have a 15% chance to be Feared.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "93",
+    "set": "Demonic",
+    "passives": {
+      "RevengeDamage": {
+        "effects": {
+          "Fear": [
+            "1,",
+            ".15"
+          ]
+        }
+      },
+      "StatusEachTurnBegin": {
+        "UseAbility": "neck_DarkFriend"
+      }
+    }
+  },
+  "FannyPack": {
+    "name": "ARMOR_FANNYPACK_NAME",
+    "name_resolved": "Fanny Pack",
+    "desc": "ARMOR_FANNYPACK_DESC",
+    "desc_resolved": "Spawn 1-2 extra pickups at the start of each battle.\nAfter you collect your 3rd pickup, you can move an extra time each turn.",
+    "rarity": "common",
+    "kind": "neck",
+    "set": [
+      "Leather,",
+      "Survivalist"
+    ],
+    "frame": "125",
+    "passives": {
+      "SpawnExtraThingsOnBattleStart": {
+        "object": "RandomPickup",
+        "number": [
+          "1",
+          "2"
+        ]
+      },
+      "StatusOnCollectPickup": {
+        "StatusAfterXStacks": {
+          "stack_key": "FANNY_PACK",
+          "threshold": "3",
+          "ExtraBasicMoves_Status": "1"
+        }
+      }
+    }
+  },
+  "MorphineDrip": {
+    "name": "ARMOR_MORPHINEDRIP_NAME",
+    "name_resolved": "Morphine Drip",
+    "desc": "ARMOR_MORPHINEDRIP_DESC",
+    "desc_resolved": "Damage you take is reduced by 3.\nDamage prevented this way is delayed and taken at the end of your turn, all at once.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "128",
+    "set": [
+      "Medical,",
+      "Nurse"
+    ],
+    "passives": {
+      "ConvertDamageToScaledStatus": {
+        "stacks": "3",
+        "DelayedPain": "1"
+      }
+    }
+  },
+  "LeatherJacket": {
+    "name": "ARMOR_LEATHERJACKET_NAME",
+    "name_resolved": "Leather Jacket",
+    "desc": "ARMOR_LEATHERJACKET_DESC",
+    "desc_resolved": "If you would take exactly 1 damage, take 0 instead.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "132",
+    "set": [
+      "Leather,",
+      "Cool"
+    ],
+    "shield": "3",
+    "passives": {
+      "BlockDamageUnderThreshold": "1"
+    }
+  },
+  "HealingGauze": {
+    "name": "ARMOR_HEALINGGAUZE_NAME",
+    "name_resolved": "Healing Gauze",
+    "desc": "ARMOR_HEALINGGAUZE_DESC",
+    "desc_resolved": "You have +3 Health Regen as long as you have [img:shield].",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "134",
+    "set": [
+      "Mummy,",
+      "Nurse"
+    ],
+    "passives": {
+      "PassiveWhileShielded": {
+        "HealthRegenUp": "3"
+      }
+    }
+  },
+  "MarkIV": {
+    "name": "ARMOR_MARKIV_NAME",
+    "name_resolved": "Mark IV",
+    "desc": "ARMOR_MARKIV_DESC",
+    "desc_resolved": "After every fourth spell you cast, gain +2 [img:int].",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "94",
+    "passives": {
+      "Metal": "1",
+      "StatusEveryXSpellCasts": {
+        "stacks": "4",
+        "IntelligenceUp": "2"
+      }
+    }
+  },
+  "MamaLeech": {
+    "name": "ARMOR_MAMALEECH_NAME",
+    "name_resolved": "Mama Leech",
+    "desc": "ARMOR_MAMALEECH_DESC",
+    "desc_resolved": "After every third spell you cast, spawn a Leech familiar.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "95",
+    "set": [
+      "Leech,",
+      "Mother"
+    ],
+    "passives": {
+      "StatusEveryXSpellCasts": {
+        "stacks": "3",
+        "ObjectOnHitCharacter": {
+          "stacks": "1",
+          "object": "CharmedLeech"
+        }
+      }
+    }
+  },
+  "FuryDice": {
+    "name": "ARMOR_FURYDICE_NAME",
+    "name_resolved": "Furry Dice",
+    "desc": "ARMOR_FURYDICE_DESC",
+    "desc_resolved": "You can reroll your options when you level up.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "97",
+    "set": [
+      "Lucky,",
+      "Twine"
+    ],
+    "lck": "1",
+    "passives": {
+      "AddLevelUpRerolls": "1"
+    }
+  },
+  "DNAMultiplier": {
+    "name": "ARMOR_DNAMULTIPLIER_NAME",
+    "name_resolved": "DNA Multiplier",
+    "desc": "ARMOR_DNAMULTIPLIER_DESC",
+    "desc_resolved": "Double all status effects that get applied to you.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "99",
+    "passives": {
+      "Metal": "1",
+      "DoubleReceivedNegativeStatus": "1",
+      "DoubleReceivedPositiveStatus": "1"
+    }
+  },
+  "PackOfBlades": {
+    "name": "ARMOR_PACKOFBLADES_NAME",
+    "name_resolved": "Pack of Blades",
+    "desc": "ARMOR_PACKOFBLADES_DESC",
+    "desc_resolved": "Whenever you backstab, gain +1 Serrated Claws.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "121",
+    "passives": {
+      "Metal": "1",
+      "StatusOnBackstab": {
+        "SerratedClaws": "1"
+      }
+    }
+  },
+  "Backpack": {
+    "name": "ARMOR_BACKPACK_NAME",
+    "name_resolved": "Backpack",
+    "desc": "ARMOR_BACKPACK_DESC",
+    "desc_resolved": "50% chance to find an extra consumable item at the end of each battle.\nWhen you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "123",
+    "set": "Survivalist",
+    "passives": {
+      "StatusOnBattleEnd": {
+        "Conditional_GoodRoll": {
+          "odds": "50%",
+          "FindItemFromPool": "consumables"
+        }
+      },
+      "AutoEquipConsumables": "1"
+    }
+  },
+  "StoneOrbit": {
+    "name": "ARMOR_STONEORBIT_NAME",
+    "name_resolved": "Stone Orbit",
+    "desc": "ARMOR_STONEORBIT_DESC",
+    "desc_resolved": "Spawn a small rock when you take damage.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "126",
+    "set": [
+      "Rock,",
+      "Planet"
+    ],
+    "shield": "2",
+    "passives": {
+      "SpawnThingOnDamage": {
+        "object": "SmallRock"
+      }
+    }
+  },
+  "AngelicProtection": {
+    "name": "ARMOR_ANGELICPROTECTION_NAME",
+    "name_resolved": "Angelic Protection",
+    "desc": "ARMOR_ANGELICPROTECTION_DESC",
+    "desc_resolved": "33% chance to teleport to a random tile when targeted by an enemy.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "127",
+    "set": "Cleric",
+    "passives": {
+      "ChanceToBackflip": {
+        "ability": "BlinkDodge",
+        "chance": "33%"
+      }
+    }
+  },
+  "ChefsApron": {
+    "name": "ARMOR_CHEFSAPRON_NAME",
+    "name_resolved": "Chef's Apron",
+    "desc": "ARMOR_CHEFSAPRON_DESC",
+    "desc_resolved": "At the end of each turn, gain +1 [img:con] and spawn a random food pickup within 2 tiles.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "131",
+    "set": "Butcher",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "ConstitutionUp": "1",
+        "ForceUseAbility": "neck_ChefsApron"
+      }
+    }
+  },
+  "RadarDish": {
+    "name": "ARMOR_RADARDISH_NAME",
+    "name_resolved": "Radar Dish",
+    "desc": "ARMOR_RADARDISH_DESC",
+    "desc_resolved": "One random enemy becomes Marked at the start of each turn.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "133",
+    "set": [
+      "Cyborg,",
+      "Bionic,",
+      "Space"
+    ],
+    "passives": {
+      "Metal": "1",
+      "ApplyStatusesToRandomEnemiesEachTurn": {
+        "count": "1",
+        "Marked": "1"
+      }
+    }
+  },
+  "ExtraSetOfEyes": {
+    "name": "ARMOR_EXTRASETOFEYES_NAME",
+    "name_resolved": "Extra Set of Eyes",
+    "desc": "ARMOR_EXTRASETOFEYES_DESC",
+    "desc_resolved": "At the end of each turn, gain +1 Preemptive Counterattack.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "135",
+    "set": "Space",
+    "passives": {
+      "StatusEachTurnEnd": {
+        "PreEmptiveCounterNextAttacks": "1"
+      }
+    }
+  },
+  "SharkTooth": {
+    "name": "ARMOR_SHARKTOOTH_NAME",
+    "name_resolved": "Large Shark Tooth",
+    "desc": "ARMOR_SHARKTOOTH_DESC",
+    "desc_resolved": "Your basic attack inflicts +1 Bleed. Take an extra turn at the end of the round for each Bleeding enemy. You are uncontrollable during these turns.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "162",
+    "set": "Twine",
+    "passives": {
+      "SharkySmellsBlood": "1",
+      "AddStatusToBasicAttack": {
+        "Bleed": "1"
+      }
+    }
+  },
+  "SmallRune": {
+    "name": "ARMOR_SMALLRUNE_NAME",
+    "name_resolved": "Small Rune",
+    "desc": "ARMOR_SMALLRUNE_DESC",
+    "desc_resolved": "+10% Dodge Chance.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "169",
+    "set": [
+      "Rune,",
+      "Twine"
+    ],
+    "passives": {
+      "ArmorDodgeChance": "10%"
+    }
+  },
+  "QuartzNecklace": {
+    "name": "ARMOR_QUARTZNECKLACE_NAME",
+    "name_resolved": "Quartz Necklace",
+    "desc": "ARMOR_QUARTZNECKLACE_DESC",
+    "desc_resolved": "+1 Brace.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "168",
+    "set": [
+      "Gemstone,",
+      "Twine"
+    ],
+    "passives": {
+      "Brace": "1"
+    }
+  },
+  "CinderBlock": {
+    "name": "ARMOR_CINDERBLOCK_NAME",
+    "name_resolved": "Cinder Block",
+    "desc": "ARMOR_CINDERBLOCK_DESC",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "167",
+    "set": "Rock",
+    "shield": "3"
+  },
+  "BoxingCharm": {
+    "name": "ARMOR_BOXINGCHARM_NAME",
+    "name_resolved": "Boxing Charm",
+    "desc": "ARMOR_BOXINGCHARM_DESC",
+    "desc_resolved": "Start with +1 bonus attack.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "165",
+    "set": [
+      "Fighter,",
+      "Twine"
+    ],
+    "passives": {
+      "Quivered": "1"
+    }
+  },
+  "Crucifix": {
+    "name": "ARMOR_CRUCIFIX_NAME",
+    "name_resolved": "Crucifix",
+    "desc": "ARMOR_CRUCIFIX_DESC",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "173",
+    "set": "Cleric",
+    "divine_shield": "1"
+  },
+  "TatteredScrap": {
+    "name": "ARMOR_TATTEREDSCRAP_NAME",
+    "name_resolved": "Tattered Scrap",
+    "desc": "ARMOR_TATTEREDSCRAP_DESC",
+    "desc_resolved": "When you take damage, spawn a scrap pickup.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "171",
+    "set": [
+      "Tinkerer,",
+      "Scrap"
+    ],
+    "passives": {
+      "Metal": "1",
+      "SpawnThingOnDamage": {
+        "object": "Scrap",
+        "good": "false"
+      }
+    }
+  },
+  "MeekStone": {
+    "name": "ARMOR_MEEKSTONE_NAME",
+    "name_resolved": "Meek Stone",
+    "desc": "ARMOR_MEEKSTONE_DESC",
+    "desc_resolved": "You have All Stats Up while at 10 or less health.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "172",
+    "set": "Gemstone",
+    "passives": {
+      "PassiveAtHealthThreshold": {
+        "threshold": "10",
+        "mode": "less_or_equal",
+        "passives": {
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "Stomach": {
+    "name": "ARMOR_STOMACH_NAME",
+    "name_resolved": "Stomach",
+    "desc": "ARMOR_STOMACH_DESC",
+    "desc_resolved": "Consumables you use have double the effect.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "174",
+    "set": "Guts",
+    "passives": {
+      "ConsumableEffectsMultiplierBonus": "1"
+    }
+  },
+  "WaterFeeder": {
+    "name": "ARMOR_WATERFEEDER_NAME",
+    "name_resolved": "Water Feeder",
+    "desc": "ARMOR_WATERFEEDER_DESC",
+    "desc_resolved": "+1 Health Regen.\nBecome wet at the start of your turn.",
+    "rarity": "common",
+    "kind": "neck",
+    "frame": "170",
+    "passives": {
+      "HealthRegenUp": "1",
+      "StatusEachTurnBegin": {
+        "DrinkWater": "1",
+        "Wet": "1"
+      }
+    }
+  },
+  "Scrubs": {
+    "name": "ARMOR_SCRUBS_NAME",
+    "name_resolved": "Scrubs",
+    "desc": "ARMOR_SCRUBS_DESC",
+    "desc_resolved": "Heals heal you for 2 extra.",
+    "rarity": "uncommon",
+    "kind": "neck",
+    "frame": "149",
+    "set": [
+      "Nurse,",
+      "Medical"
+    ],
+    "passives": {
+      "BoostReceivedHealing": "2"
+    }
+  },
+  "Scapular": {
+    "name": "ARMOR_SCAPULAR_NAME",
+    "name_resolved": "Scapular",
+    "desc": "ARMOR_SCAPULAR_DESC",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "178",
+    "set": "Cleric",
+    "divine_shield": "1",
+    "str": "1",
+    "dex": "1",
+    "con": "1",
+    "cha": "1",
+    "int": "1",
+    "spd": "1",
+    "lck": "1"
+  },
+  "DirtyBionicArmor": {
+    "name": "ARMOR_DIRTYBIONICARMOR_NAME",
+    "name_resolved": "Dirty Bionic Armor",
+    "desc": "ARMOR_DIRTYBIONICARMOR_DESC",
+    "desc_resolved": "+2 Mana Regen, +2 Health Regen.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "175",
+    "set": [
+      "DirtClod,",
+      "Bionic"
+    ],
+    "spd": "4",
+    "passives": {
+      "AddManaRegen": "2",
+      "HealthRegenUp": "2",
+      "Metal": "1"
+    }
+  },
+  "LuckyTwine": {
+    "name": "ARMOR_LUCKYTWINE_NAME",
+    "name_resolved": "Lucky Twine",
+    "desc": "ARMOR_LUCKYTWINE_DESC",
+    "desc_resolved": "75% chance to Grapple units that make contact with you.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "176",
+    "set": [
+      "Twine,",
+      "Lucky"
+    ],
+    "shield": "2",
+    "lck": "1",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "damage": "0",
+        "effects": {
+          "Grappled": [
+            "1,",
+            ".75"
+          ]
+        }
+      }
+    }
+  },
+  "RavenFeather": {
+    "name": "ARMOR_RAVENFEATHER_NAME",
+    "name_resolved": "Raven Feather",
+    "desc": "ARMOR_RAVENFEATHER_DESC",
+    "desc_resolved": "Inflict Soul Link on 2 random enemies at the start of each battle.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "179",
+    "set": "Feathered",
+    "passives": {
+      "AbilityOnBattleStart": "RandomDualSoulLink"
+    }
+  },
+  "LostSoul": {
+    "name": "ARMOR_LOSTSOUL_NAME",
+    "name_resolved": "Lost Soul",
+    "desc": "ARMOR_LOSTSOUL_DESC",
+    "desc_resolved": "The first time you are downed each battle, revive to full HP.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "180",
+    "passives": {
+      "Eternal": {
+        "stacks": "1",
+        "health_percent": "100%"
+      }
+    }
+  },
+  "MothersTeeth": {
+    "name": "ARMOR_MOTHERSTEETH_NAME",
+    "name_resolved": "Mother's Teeth",
+    "desc": "ARMOR_MOTHERSTEETH_DESC",
+    "desc_resolved": "+6 Bleed Thorns, +6 Thorns, +6 Bleed.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "187",
+    "set": "Mother",
+    "passives": {
+      "BleedThorns": "6",
+      "Thorns": "6",
+      "Bleed": "6"
+    }
+  },
+  "MegaPoop": {
+    "name": "ARMOR_MEGAPOOP_NAME",
+    "name_resolved": "Mega Poop",
+    "desc": "ARMOR_MEGAPOOP_DESC",
+    "desc_resolved": "Leave poop behind when you move.\nSpawn 2-3 pickups whenever you destroy a poop.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "186",
+    "set": "Fecal",
+    "cha": "-1",
+    "shield": "4",
+    "passives": {
+      "LeaveBehindOnceEachMove": "Poop",
+      "SpawnRandomPickupsOnTaggedUnitKilled": {
+        "tag": "poop",
+        "count": [
+          "2",
+          "3"
+        ]
+      }
+    }
+  },
+  "ZodiacsPoncho": {
+    "name": "ARMOR_ZODIACSPONCHO_NAME",
+    "name_resolved": "Zodiacs Poncho",
+    "desc": "ARMOR_ZODIACSPONCHO_DESC",
+    "desc_resolved": "+1 Range. During your turn, one random enemy has a Bounty.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "185",
+    "set": "Rag",
+    "passives": {
+      "AddBonusRange": "1",
+      "ApplyStatusesToRandomEnemiesEachTurn": {
+        "Bounty": "1"
+      }
+    }
+  },
+  "CoffinArmor": {
+    "name": "ARMOR_COFFINARMOR_NAME",
+    "name_resolved": "Coffin Armor",
+    "desc": "ARMOR_COFFINARMOR_DESC",
+    "desc_resolved": "+1 Thorns.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "184",
+    "set": "Wood",
+    "shield": "3",
+    "divine_shield": "1",
+    "passives": {
+      "Thorns": "1"
+    }
+  },
+  "NubsCollar": {
+    "name": "ARMOR_NUBSCOLLAR_NAME",
+    "name_resolved": "Nubs Collar",
+    "desc": "ARMOR_NUBSCOLLAR_DESC",
+    "desc_resolved": "Your movement action is Belly Flop.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "183",
+    "set": "Leather",
+    "passives": {
+      "ReplaceBasicMove": "BellyFlop_BasicMove"
+    }
+  },
+  "ChubsCollar": {
+    "name": "ARMOR_CHUBSCOLLAR_NAME",
+    "name_resolved": "Chub's Collar",
+    "desc": "ARMOR_CHUBSCOLLAR_DESC",
+    "desc_resolved": "Your basic attack is Spin Attack.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "182",
+    "set": "Leather",
+    "str": "1",
+    "attack": "BasicSpin",
+    "passives": {
+      "OverrideBasicAttack": "BasicSpin"
+    }
+  },
+  "Blubber": {
+    "name": "ARMOR_BLUBBER_NAME",
+    "name_resolved": "Blubber",
+    "desc": "ARMOR_BLUBBER_DESC",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "181",
+    "set": "Fatty",
+    "con": "7",
+    "spd": "-5",
+    "cha": "-2",
+    "passives": {}
+  },
+  "EtherealRings": {
+    "name": "ARMOR_ETHEREALRINGS_NAME",
+    "name_resolved": "Ethereal Rings",
+    "desc": "ARMOR_ETHEREALRINGS_DESC",
+    "desc_resolved": "Kinetic Spikes 3. Emit 3 Sparkles when you use your basic attack.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "198",
+    "shield": "3",
+    "passives": {
+      "KineticSpikes": "3",
+      "AddSelfStatusToBasicAttack": {
+        "RandomMagicMissile": "3"
+      }
+    }
+  },
+  "WhiteRabbitPaw": {
+    "name": "ARMOR_WHITERABBITPAW_NAME",
+    "name_resolved": "White Rabbit Paw",
+    "desc": "ARMOR_WHITERABBITPAW_DESC",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "197",
+    "set": [
+      "Lucky,",
+      "Twine"
+    ],
+    "lck": "5",
+    "passives": {}
+  },
+  "GlowingPelt": {
+    "name": "ARMOR_GLOWINGPELT_NAME",
+    "name_resolved": "Glowing Pelt",
+    "desc": "ARMOR_GLOWINGPELT_DESC",
+    "desc_resolved": "+5 Health Regen.\nWhen you're downed, revive at the end of the round.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "196",
+    "passives": {
+      "HealthRegenUp": "5",
+      "ChanceToRevive": "100"
+    }
+  },
+  "Polyp": {
+    "name": "ARMOR_POLYP_NAME",
+    "name_resolved": "Glowing Pelt",
+    "desc": "ARMOR_POLYP_DESC",
+    "desc_resolved": "+1 Health Regen. 25% chance to spawn a Charmed Clot when you take damage.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "195",
+    "set": [
+      "Meat,",
+      "HumanFlesh"
+    ],
+    "passives": {
+      "HealthRegenUp": "1",
+      "SpawnThingOnDamage": {
+        "object": "CharmedClot",
+        "number": "1",
+        "chance": ".25"
+      }
+    }
+  },
+  "RoboArm": {
+    "name": "ARMOR_ROBOARM_NAME",
+    "name_resolved": "Robo Arm",
+    "desc": "ARMOR_ROBOARM_DESC",
+    "desc_resolved": "Start with +1 bonus attack. Collect all adjacent pickups when you end your turn.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "194",
+    "set": [
+      "Bionic,",
+      "Cyborg"
+    ],
+    "passives": {
+      "Metal": "1",
+      "Quivered": "1",
+      "StatusEachTurnEnd": {
+        "ForceUseAbility": "tk_RoboSucc"
+      }
+    }
+  },
+  "Brambles": {
+    "name": "ARMOR_BRAMBLES_NAME",
+    "name_resolved": "Brambles",
+    "desc": "ARMOR_BRAMBLES_DESC",
+    "desc_resolved": "+1 Thorns. Spawn brambles in adjacent tiles when you end your turn.\nYou are immune to tile effects.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "193",
+    "set": "Leafy",
+    "passives": {
+      "Thorns": "1",
+      "IgnoreTiles": "1",
+      "StatusEachTurnEnd": {
+        "ForceUseAbility": "neck_Brambles"
+      }
+    }
+  },
+  "CrustySock": {
+    "name": "ARMOR_CRUSTYSOCK_NAME",
+    "name_resolved": "Crusty Sock",
+    "desc": "ARMOR_CRUSTYSOCK_DESC",
+    "desc_resolved": "Spawn a Gamete familiar at the start of each battle.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "192",
+    "set": "Used",
+    "passives": {
+      "SpawnOnBattleStart": "CharmedGamete"
+    }
+  },
+  "Tombstone": {
+    "name": "ARMOR_TOMBSTONE_NAME",
+    "name_resolved": "Tombstone",
+    "desc": "ARMOR_TOMBSTONE_DESC",
+    "desc_resolved": "Your basic attack has +2 Knockback and a +10% chance to Stun.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "191",
+    "set": "Rock",
+    "shield": "6",
+    "spd": "-2",
+    "passives": {
+      "AddStatusToBasicAttack": {
+        "Knockback": "2",
+        "Stun": [
+          "1,",
+          ".1"
+        ]
+      }
+    }
+  },
+  "BrokenWindow": {
+    "name": "ARMOR_BROKENWINDOW_NAME",
+    "name_resolved": "Broken Window",
+    "desc": "ARMOR_BROKENWINDOW_DESC",
+    "desc_resolved": "+3 Bleed Thorns. Bleed 1.",
+    "rarity": "rare",
+    "kind": "neck",
+    "frame": "190",
+    "set": "Wood",
+    "passives": {
+      "BleedThorns": "3",
+      "Bleed": "1"
+    }
+  },
+  "PyrophinasToenail": {
+    "name": "ARMOR_PYROPHINASTOENAIL_NAME",
+    "name_resolved": "Pryophina's Toenail",
+    "desc": "ARMOR_PYROPHINASTOENAIL_DESC",
+    "desc_resolved": "Fire Immunity.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "146",
+    "shield": "8",
+    "passives": {
+      "ElementImmune": "Fire",
+      "StatusImmunity": [
+        "Burn"
+      ]
+    }
+  },
+  "ZaratanaTurd": {
+    "name": "ARMOR_ZARATANATURD_NAME",
+    "name_resolved": "Zaratana's Turd",
+    "desc": "ARMOR_ZARATANATURD_DESC",
+    "desc_resolved": "Knockback immunity.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "147",
+    "set": [
+      "Fecal,",
+      "Rock"
+    ],
+    "shield": "8",
+    "passives": {
+      "KnockbackImmunity": "1"
+    }
+  },
+  "StevensGobbler": {
+    "name": "ARMOR_STEVENSGOBBLER_NAME",
+    "name_resolved": "Steven's Gobbler",
+    "desc": "ARMOR_STEVENSGOBBLER_DESC",
+    "desc_resolved": "Units that contact you get knocked back. Knockback you deal is increased by 10 and inflicts Bruise 1.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "142",
+    "set": "Steven",
+    "con": "6",
+    "spd": "-99",
+    "passives": {
+      "MeleeRevengeDamage": {
+        "knockback": "1"
+      },
+      "AmplifyKnockback": "10",
+      "AddStatusToKnockbackDamage": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "StevensFriend": {
+    "name": "ARMOR_STEVENSFRIEND_NAME",
+    "name_resolved": "Steven's Friend",
+    "desc": "ARMOR_STEVENSFRIEND_DESC",
+    "desc_resolved": "Each time you cast a spell, spawn a Shadow copy of yourself that mimics your basic attack and fades at the end of your turn.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "143",
+    "set": "Steven",
+    "passives": {
+      "StatusAfterCastSpell": {
+        "UseAbility": "neck_DarkFriend"
+      }
+    }
+  },
+  "StevenNeck1": {
+    "name": "ARMOR_STEVENNECK1_NAME",
+    "name_resolved": "Steven",
+    "desc": "ARMOR_STEVENNECK1_DESC",
+    "desc_resolved": "Your Holy Element spells cost -1 mana.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "144",
+    "set": "Steven",
+    "passives": {
+      "ElementalManaCostReduction": {
+        "element": [
+          "Holy"
+        ],
+        "reduction": "1"
+      }
+    }
+  },
+  "StevenNeck2": {
+    "name": "ARMOR_STEVENNECK2_NAME",
+    "name_resolved": "Steven",
+    "desc": "ARMOR_STEVENNECK2_DESC",
+    "desc_resolved": "While you're downed, receiving any damage revives you.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "145",
+    "set": "Steven",
+    "passives": {
+      "StevenBolts": "1"
+    }
+  },
+  "AFriendsFoot": {
+    "name": "ARMOR_AFRIENDSFOOT_NAME",
+    "name_resolved": "A Friends Foot",
+    "desc": "ARMOR_AFRIENDSFOOT_DESC",
+    "desc_resolved": "Gain +1 [img:lck] when you get a kill.",
+    "rarity": "very_rare",
+    "kind": "neck",
+    "frame": "200",
+    "set": "HumanFlesh",
+    "lck": "1",
+    "passives": {
+      "StatusOnKillEnemy": {
+        "LuckUp": "1"
+      }
+    }
+  }
+}

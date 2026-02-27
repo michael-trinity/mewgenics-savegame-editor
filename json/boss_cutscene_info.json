@@ -1,0 +1,510 @@
+{
+  "error": {
+    "name": "BOSS_ERROR_NAME",
+    "name_resolved": "A Boss",
+    "frame_label": "error",
+    "quotes": [
+      "BOSS_ERROR_QUOTE_1"
+    ]
+  },
+  "error_miniboss": {
+    "name": "BOSS_ERROR_MINIBOSS_NAME",
+    "name_resolved": "A Miniboss",
+    "frame_label": "error",
+    "quotes": [
+      "BOSS_ERROR_MINIBOSS_QUOTE_1"
+    ]
+  },
+  "pebbles": {
+    "name": "BOSS_PEBBLES_NAME",
+    "name_resolved": "Pebbles",
+    "frame_label": "ColorlessCat_Tutorial",
+    "quotes": [
+      "BOSS_PEBBLES_QUOTE_1"
+    ]
+  },
+  "radicalrat": {
+    "name": "BOSS_RADICALRAT_NAME",
+    "name_resolved": "Radical Rat",
+    "frame_label": "radicalrat",
+    "quotes": [
+      "BOSS_RADICALRAT_QUOTE_1",
+      "BOSS_RADICALRAT_QUOTE_2",
+      "BOSS_RADICALRAT_QUOTE_3",
+      "BOSS_RADICALRAT_QUOTE_4",
+      "BOSS_RADICALRAT_QUOTE_5"
+    ]
+  },
+  "queenhippo": {
+    "name": "BOSS_QUEENHIPPO_NAME",
+    "name_resolved": "Queen Hippo",
+    "frame_label": "queenHippo",
+    "quotes": [
+      "BOSS_QUEENHIPPO_QUOTE_1",
+      "BOSS_QUEENHIPPO_QUOTE_2",
+      "BOSS_QUEENHIPPO_QUOTE_3",
+      "BOSS_QUEENHIPPO_QUOTE_4",
+      "BOSS_QUEENHIPPO_QUOTE_5"
+    ]
+  },
+  "boris": {
+    "name": "BOSS_BORIS_NAME",
+    "name_resolved": "Boris",
+    "frame_label": "boris",
+    "quotes": [
+      "BOSS_BORIS_QUOTE_1",
+      "BOSS_BORIS_QUOTE_2",
+      "BOSS_BORIS_QUOTE_3",
+      "BOSS_BORIS_QUOTE_4",
+      "BOSS_BORIS_QUOTE_5"
+    ]
+  },
+  "chubsandnubs": {
+    "name": "BOSS_CHUBSANDNUBS_NAME",
+    "name_resolved": "Chubs & Nubs",
+    "frame_label": "chubsandnubs",
+    "quotes": [
+      "BOSS_CHUBSANDNUBS_QUOTE_1",
+      "BOSS_CHUBSANDNUBS_QUOTE_2",
+      "BOSS_CHUBSANDNUBS_QUOTE_3",
+      "BOSS_CHUBSANDNUBS_QUOTE_4",
+      "BOSS_CHUBSANDNUBS_QUOTE_5"
+    ]
+  },
+  "spiderqueen": {
+    "name": "BOSS_SPIDERQUEEN_NAME",
+    "name_resolved": "Spider Queen",
+    "frame_label": "spiderqueen",
+    "quotes": [
+      "BOSS_SPIDERQUEEN_QUOTE_1",
+      "BOSS_SPIDERQUEEN_QUOTE_2",
+      "BOSS_SPIDERQUEEN_QUOTE_3",
+      "BOSS_SPIDERQUEEN_QUOTE_4",
+      "BOSS_SPIDERQUEEN_QUOTE_5",
+      "BOSS_SPIDERQUEEN_QUOTE_6"
+    ]
+  },
+  "spiderkitten": {
+    "name": "BOSS_SPIDERKITTEN_NAME",
+    "name_resolved": "One Baby Spider",
+    "frame_label": "spiderkitten",
+    "quotes": [
+      "BOSS_SPIDERKITTEN_QUOTE_1",
+      "BOSS_SPIDERKITTEN_QUOTE_2"
+    ]
+  },
+  "bumblefoot": {
+    "name": "BOSS_BUMBLEFOOT_NAME",
+    "name_resolved": "Bumblefoot",
+    "frame_label": "bumblefoot"
+  },
+  "dybbuk": {
+    "name": "BOSS_DYBBUK_NAME",
+    "name_resolved": "Dybbuk",
+    "frame_label": "dybbuk",
+    "quotes": [
+      "BOSS_DYBBUK_QUOTE_1",
+      "BOSS_DYBBUK_QUOTE_2",
+      "BOSS_DYBBUK_QUOTE_3",
+      "BOSS_DYBBUK_QUOTE_4",
+      "BOSS_DYBBUK_QUOTE_5"
+    ]
+  },
+  "dustdevil": {
+    "name": "BOSS_DUSTDEVIL_NAME",
+    "name_resolved": "Dust Devil",
+    "frame_label": "dustdevil",
+    "quotes": [
+      "BOSS_DUSTDEVIL_QUOTE_1",
+      "BOSS_DUSTDEVIL_QUOTE_2",
+      "BOSS_DUSTDEVIL_QUOTE_3",
+      "BOSS_DUSTDEVIL_QUOTE_4"
+    ]
+  },
+  "zodiac": {
+    "name": "BOSS_ZODIAC_NAME",
+    "name_resolved": "Zodiac",
+    "frame_label": "zodiac",
+    "quotes": [
+      "BOSS_ZODIAC_QUOTE_1",
+      "BOSS_ZODIAC_QUOTE_2",
+      "BOSS_ZODIAC_QUOTE_3",
+      "BOSS_ZODIAC_QUOTE_4"
+    ]
+  },
+  "gambit": {
+    "name": "BOSS_GAMBIT_NAME",
+    "name_resolved": "Gambit",
+    "frame_label": "gambit",
+    "quotes": [
+      "BOSS_GAMBIT_QUOTE_1",
+      "BOSS_GAMBIT_QUOTE_2",
+      "BOSS_GAMBIT_QUOTE_3",
+      "BOSS_GAMBIT_QUOTE_4",
+      "BOSS_GAMBIT_QUOTE_5"
+    ]
+  },
+  "johnny": {
+    "name": "BOSS_JOHNNY_NAME",
+    "name_resolved": "Johnny",
+    "frame_label": "johnny",
+    "quotes": [
+      "BOSS_JOHNNY_QUOTE_1",
+      "BOSS_JOHNNY_QUOTE_2",
+      "BOSS_JOHNNY_QUOTE_3",
+      "BOSS_JOHNNY_QUOTE_4"
+    ]
+  },
+  "alienqueen": {
+    "name": "BOSS_ALIENQUEEN_NAME",
+    "name_resolved": "Crater Maker",
+    "frame_label": "AlienBeast",
+    "quotes": [
+      "BOSS_ALIENQUEEN_QUOTE_1",
+      "BOSS_ALIENQUEEN_QUOTE_2"
+    ]
+  },
+  "moonhead": {
+    "name": "BOSS_MOONHEAD_NAME",
+    "name_resolved": "The Man in the Moon",
+    "frame_label": "MoonHead",
+    "quotes": [
+      "BOSS_MOONHEAD_QUOTE_1",
+      "BOSS_MOONHEAD_QUOTE_2",
+      "BOSS_MOONHEAD_QUOTE_3",
+      "BOSS_MOONHEAD_QUOTE_4"
+    ]
+  },
+  "coven": {
+    "name": "BOSS_COVEN_NAME",
+    "name_resolved": "The Coven",
+    "frame_label": "TheCoven",
+    "quotes": [
+      "BOSS_COVEN_QUOTE_1",
+      "BOSS_COVEN_QUOTE_2",
+      "BOSS_COVEN_QUOTE_3",
+      "BOSS_COVEN_QUOTE_4"
+    ]
+  },
+  "stacy": {
+    "name": "BOSS_STACY_NAME",
+    "name_resolved": "Stacy",
+    "frame_label": "StacyMutant",
+    "quotes": [
+      "BOSS_STACY_QUOTE_1",
+      "BOSS_STACY_QUOTE_2",
+      "BOSS_STACY_QUOTE_3"
+    ]
+  },
+  "spewer": {
+    "name": "BOSS_SPEWER_NAME",
+    "name_resolved": "Spewer",
+    "frame_label": "spewer",
+    "quotes": [
+      "BOSS_SPEWER_QUOTE_1",
+      "BOSS_SPEWER_QUOTE_2",
+      "BOSS_SPEWER_QUOTE_3",
+      "BOSS_SPEWER_QUOTE_4"
+    ]
+  },
+  "lordbunga": {
+    "name": "BOSS_LORDBUNGA_NAME",
+    "name_resolved": "Lord Bunga",
+    "frame_label": "lordbunga",
+    "quotes": [
+      "BOSS_LORDBUNGA_QUOTE_1",
+      "BOSS_LORDBUNGA_QUOTE_2"
+    ]
+  },
+  "hitler": {
+    "name": "BOSS_HITLER_NAME",
+    "name_resolved": "Hitler II",
+    "frame_label": "hitler",
+    "quotes": [
+      "BOSS_HITLER_QUOTE_1",
+      "BOSS_HITLER_QUOTE_2",
+      "BOSS_HITLER_QUOTE_3"
+    ]
+  },
+  "megadino": {
+    "name": "BOSS_MEGADINO_NAME",
+    "name_resolved": "Dreadnoughtus",
+    "frame_label": "MegaDino",
+    "quotes": [
+      "BOSS_MEGADINO_QUOTE_1"
+    ]
+  },
+  "themother": {
+    "name": "BOSS_THEMOTHER_NAME",
+    "name_resolved": "The Mother",
+    "frame_label": "TheMother",
+    "quotes": [
+      "BOSS_THEMOTHER_QUOTE_1",
+      "BOSS_THEMOTHER_QUOTE_2",
+      "BOSS_THEMOTHER_QUOTE_3"
+    ]
+  },
+  "throbbingking": {
+    "name": "BOSS_THROBBINGKING_NAME",
+    "name_resolved": "Throbbing King",
+    "frame_label": "throbbingking",
+    "quotes": [
+      "BOSS_THROBBINGKING_QUOTE_1",
+      "BOSS_THROBBINGKING_QUOTE_2",
+      "BOSS_THROBBINGKING_QUOTE_3",
+      "BOSS_THROBBINGKING_QUOTE_4"
+    ]
+  },
+  "chaos": {
+    "name": "BOSS_CHAOS_NAME",
+    "name_resolved": "Chaos!",
+    "frame_label": "OGSteven",
+    "quotes": [
+      "BOSS_CHAOS_QUOTE_1"
+    ]
+  },
+  "thecreator": {
+    "name": "BOSS_THECREATOR_NAME",
+    "name_resolved": "The Creator",
+    "frame_label": "TheCreator",
+    "quotes": [
+      "BOSS_THECREATOR_QUOTE_1",
+      "BOSS_THECREATOR_QUOTE_2",
+      "BOSS_THECREATOR_QUOTE_3"
+    ]
+  },
+  "fightercat": {
+    "name": "BOSS_FIGHTERCAT_NAME",
+    "name_resolved": "Magnus",
+    "frame_label": "fightercat"
+  },
+  "huntercat": {
+    "name": "BOSS_HUNTERCAT_NAME",
+    "name_resolved": "Fenrir",
+    "frame_label": "huntercat"
+  },
+  "magecat": {
+    "name": "BOSS_MAGECAT_NAME",
+    "name_resolved": "Lucy",
+    "frame_label": "magecat"
+  },
+  "tankcat": {
+    "name": "BOSS_TANKCAT_NAME",
+    "name_resolved": "Maisie",
+    "frame_label": "tankcat"
+  },
+  "flushmaster": {
+    "name": "BOSS_FLUSHMASTER_NAME",
+    "name_resolved": "Flushmaster",
+    "frame_label": "flushmaster"
+  },
+  "ratking": {
+    "name": "BOSS_RATKING_NAME",
+    "name_resolved": "Rat King",
+    "frame_label": "RatKing"
+  },
+  "cancreeper": {
+    "name": "BOSS_CANCREEPER_NAME",
+    "name_resolved": "Can Creeper",
+    "frame_label": "cancreeper"
+  },
+  "trampy": {
+    "name": "BOSS_TRAMPY_NAME",
+    "name_resolved": "Trampy",
+    "frame_label": "trampy"
+  },
+  "slime": {
+    "name": "BOSS_SLIME_NAME",
+    "name_resolved": "Big Slime",
+    "frame_label": "slime"
+  },
+  "mamamaggot": {
+    "name": "BOSS_MAMAMAGGOT_NAME",
+    "name_resolved": "Mama Maggot",
+    "frame_label": "mamamaggot"
+  },
+  "thiefcat": {
+    "name": "BOSS_THIEFCAT_NAME",
+    "name_resolved": "Dack",
+    "frame_label": "thiefcat"
+  },
+  "clericcat": {
+    "name": "BOSS_CLERICCAT_NAME",
+    "name_resolved": "Marshmallow",
+    "frame_label": "clericcat"
+  },
+  "butchercat": {
+    "name": "BOSS_BUTCHERCAT_NAME",
+    "name_resolved": "Gein",
+    "frame_label": "butchercat"
+  },
+  "necrocat": {
+    "name": "BOSS_NECROCAT_NAME",
+    "name_resolved": "Morana",
+    "frame_label": "necrocat"
+  },
+  "rockybobo": {
+    "name": "BOSS_ROCKYBOBO_NAME",
+    "name_resolved": "Rocky Bobo",
+    "frame_label": "rockybobo"
+  },
+  "infestedduo": {
+    "name": "BOSS_INFESTEDDUO_NAME",
+    "name_resolved": "Infested Pair",
+    "frame_label": "infestedtwins"
+  },
+  "lenny": {
+    "name": "BOSS_LENNY_NAME",
+    "name_resolved": "Lenny",
+    "frame_label": "lenny"
+  },
+  "cerberubs": {
+    "name": "BOSS_CERBERUBS_NAME",
+    "name_resolved": "Cerberubs",
+    "frame_label": "cerberubs"
+  },
+  "abandonedones": {
+    "name": "BOSS_ABANDONEDONES_NAME",
+    "name_resolved": "The Abandoned Ones",
+    "frame_label": "abandonedones"
+  },
+  "druidcat": {
+    "name": "BOSS_DRUIDCAT_NAME",
+    "name_resolved": "Draven",
+    "frame_label": "druidcat"
+  },
+  "monkcat": {
+    "name": "BOSS_MONKCAT_NAME",
+    "name_resolved": "Chan Hung",
+    "frame_label": "monkcat"
+  },
+  "psychiccat": {
+    "name": "BOSS_PSYCHICCAT_NAME",
+    "name_resolved": "Alice",
+    "frame_label": "psycat"
+  },
+  "tinkerercat": {
+    "name": "BOSS_TINKERERCAT_NAME",
+    "name_resolved": "Franklin",
+    "frame_label": "tinkerercat"
+  },
+  "jestercat": {
+    "name": "BOSS_JESTERCAT_NAME",
+    "name_resolved": "Arthur",
+    "frame_label": "jestercat"
+  },
+  "iceelemental": {
+    "name": "BOSS_ICEELEMENTAL_NAME",
+    "name_resolved": "Frostbiter",
+    "frame_label": "ice_elemental"
+  },
+  "cavecatfamily": {
+    "name": "BOSS_CAVECATFAMILY_NAME",
+    "name_resolved": "The Rocksnows",
+    "frame_label": "cave_family"
+  },
+  "dinocouple": {
+    "name": "BOSS_DINOCOUPLE_NAME",
+    "name_resolved": "Dino Lovers",
+    "frame_label": "GirlDino"
+  },
+  "lightningelemental": {
+    "name": "BOSS_LIGHTNINGELEMENTAL_NAME",
+    "name_resolved": "Zapphauser",
+    "frame_label": "LightningElemental"
+  },
+  "drmangler": {
+    "name": "BOSS_DRMANGLER_NAME",
+    "name_resolved": "Dr. Mangler",
+    "frame_label": "DrMangler"
+  },
+  "thebloat": {
+    "name": "BOSS_THEBLOAT_NAME",
+    "name_resolved": "The Bloat",
+    "frame_label": "TheBloat"
+  },
+  "guillotina_1": {
+    "name": "BOSS_GUILLOTINA_1_NAME",
+    "name_resolved": "Guillotina",
+    "frame_label": "guillotina_1",
+    "quotes": [
+      "BOSS_GUILLOTINA_1_QUOTE_1",
+      "BOSS_GUILLOTINA_1_QUOTE_2",
+      "BOSS_GUILLOTINA_1_QUOTE_3",
+      "BOSS_GUILLOTINA_1_QUOTE_4"
+    ]
+  },
+  "guillotina_2": {
+    "name": "BOSS_GUILLOTINA_2_NAME",
+    "name_resolved": "Guillotina",
+    "frame_label": "guillotina_2",
+    "quotes": [
+      "BOSS_GUILLOTINA_2_QUOTE_1",
+      "BOSS_GUILLOTINA_2_QUOTE_2",
+      "BOSS_GUILLOTINA_2_QUOTE_3"
+    ]
+  },
+  "guillotina_3": {
+    "name": "BOSS_GUILLOTINA_3_NAME",
+    "name_resolved": "Guillotina",
+    "frame_label": "guillotina_3",
+    "quotes": [
+      "BOSS_GUILLOTINA_3_QUOTE_1",
+      "BOSS_GUILLOTINA_3_QUOTE_2",
+      "BOSS_GUILLOTINA_3_QUOTE_3"
+    ]
+  },
+  "pyrophina": {
+    "name": "BOSS_PYROPHINA_NAME",
+    "name_resolved": "Pyrophina",
+    "frame_label": "pyrophina",
+    "quotes": [
+      "BOSS_PYROPHINA_QUOTE_1",
+      "BOSS_PYROPHINA_QUOTE_2"
+    ]
+  },
+  "zaratana": {
+    "name": "BOSS_ZARATANA_NAME",
+    "name_resolved": "Zaratana",
+    "frame_label": "zaratana",
+    "quotes": [
+      "BOSS_ZARATANA_QUOTE_1",
+      "BOSS_ZARATANA_QUOTE_2"
+    ]
+  },
+  "pyrophina_vs_zaratana": {
+    "name": "BOSS_PYROPHINA_VS_ZARATANA_NAME",
+    "name_resolved": "Pyrophina vs Zaratana",
+    "frame_label": "pyrophina_vs_zaratana",
+    "quotes": [
+      "BOSS_PYROPHINA_VS_ZARATANA_QUOTE_1"
+    ]
+  },
+  "terminator_1": {
+    "name": "BOSS_TERMINATOR_1_NAME",
+    "name_resolved": "C-800",
+    "frame_label": "terminator_1",
+    "quotes": [
+      "BOSS_TERMINATOR_1_QUOTE_1",
+      "BOSS_TERMINATOR_1_QUOTE_2",
+      "BOSS_TERMINATOR_1_QUOTE_3"
+    ]
+  },
+  "terminator_2": {
+    "name": "BOSS_TERMINATOR_2_NAME",
+    "name_resolved": "C-1000",
+    "frame_label": "terminator_2",
+    "quotes": [
+      "BOSS_TERMINATOR_2_QUOTE_1"
+    ]
+  },
+  "terminator_3": {
+    "name": "BOSS_TERMINATOR_3_NAME",
+    "name_resolved": "Hitler III",
+    "frame_label": "terminator_3",
+    "quotes": [
+      "BOSS_TERMINATOR_3_QUOTE_1",
+      "BOSS_TERMINATOR_3_QUOTE_2"
+    ]
+  }
+}

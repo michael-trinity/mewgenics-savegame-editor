@@ -1,0 +1,389 @@
+{
+  "body": {
+    "300": {
+      "con": "1"
+    },
+    "301": {
+      "desc": "MUTATION_BODY_301_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "302": {
+      "tag": "animal",
+      "spd": "-1",
+      "shield": "5"
+    },
+    "303": {
+      "tag": "animal",
+      "shield": "10",
+      "spd": "-2"
+    },
+    "304": {
+      "spd": "1",
+      "int": "1"
+    },
+    "305": {
+      "lck": "1"
+    },
+    "306": {
+      "shield": "12",
+      "con": "-3"
+    },
+    "307": {
+      "tag": "animal",
+      "cha": "1"
+    },
+    "308": {
+      "str": "1",
+      "con": "1",
+      "int": "-1"
+    },
+    "309": {
+      "desc": "MUTATION_BODY_309_DESC",
+      "desc_resolved": "Units that contact you get knocked back 2 tiles.",
+      "passives": {
+        "MeleeRevengeDamage": {
+          "type": "status",
+          "damage": "0",
+          "knockback": "2"
+        }
+      }
+    },
+    "310": {
+      "cha": "1"
+    },
+    "311": {
+      "con": "1"
+    },
+    "312": {
+      "desc": "MUTATION_BODY_312_DESC",
+      "desc_resolved": "Spawn a coin when you take damage.",
+      "passives": {
+        "SpawnThingOnDamage": {
+          "object": "Coin",
+          "chance": "100%"
+        }
+      }
+    },
+    "313": {
+      "desc": "MUTATION_BODY_313_DESC",
+      "desc_resolved": "+1 Kinetic Spikes.",
+      "passives": {
+        "KineticSpikes": "1"
+      }
+    },
+    "314": {
+      "desc": "MUTATION_BODY_314_DESC",
+      "desc_resolved": "+2 Thorns.",
+      "cha": "-1",
+      "passives": {
+        "Thorns": "2"
+      }
+    },
+    "315": {
+      "desc": "MUTATION_BODY_315_DESC",
+      "desc_resolved": "+1 Brace.",
+      "passives": {
+        "Brace": "1"
+      }
+    },
+    "316": {
+      "shield": "2"
+    },
+    "317": {
+      "desc": "MUTATION_BODY_317_DESC",
+      "desc_resolved": "Immune to Heat Wave weather.",
+      "con": "1",
+      "passives": {
+        "DrinkWater": "1"
+      }
+    },
+    "318": {
+      "desc": "MUTATION_BODY_318_DESC",
+      "desc_resolved": "25% chance to spawn a Charmed Fly each turn.",
+      "passives": {
+        "SpawnEachTurn": {
+          "object": "CharmedFly",
+          "chance": "25%"
+        }
+      }
+    },
+    "319": {
+      "desc": "MUTATION_BODY_319_DESC",
+      "desc_resolved": "When you take damage from an attack, gain a random buff.",
+      "passives": {
+        "StatusOnTookDamageFromAbility": {
+          "RandomStatusFromPool": {
+            "Charge": "1",
+            "Thorns": "1",
+            "KineticSpikes": "1",
+            "DiminishingHealthRegen": "1",
+            "RandomStatUp": "1",
+            "Shield": "1"
+          }
+        }
+      }
+    },
+    "320": {
+      "shield": "1"
+    },
+    "321": {
+      "desc": "MUTATION_BODY_321_DESC",
+      "desc_resolved": "Spawn a Charmed Kitten familiar when you get downed.",
+      "passives": {
+        "SpawnOnDowned": "CharmedKitten"
+      }
+    },
+    "322": {
+      "desc": "MUTATION_BODY_322_DESC",
+      "desc_resolved": "Gain an extra consumable item at the end of each battle.",
+      "passives": {
+        "StatusOnBattleEnd": {
+          "FindItemFromPool": "consumables"
+        }
+      }
+    },
+    "323": {
+      "desc": "MUTATION_BODY_323_DESC",
+      "desc_resolved": "Trample. When damaged, move 1 tile in a random direction.",
+      "spd": "-3",
+      "passives": {
+        "MoveWhenDamaged": {
+          "move_ability": "MoveOne",
+          "weights": "chaotic"
+        },
+        "Trample": "3"
+      }
+    },
+    "324": {
+      "desc": "MUTATION_BODY_324_DESC",
+      "desc_resolved": "Gain +1 range when you get a kill.",
+      "passives": {
+        "StatusOnKill": {
+          "RangeUp": "1"
+        }
+      }
+    },
+    "750": {
+      "desc": "MUTATION_BODY_750_DESC",
+      "desc_resolved": "+1 Thorns.",
+      "passives": {
+        "Thorns": "1"
+      }
+    },
+    "753": {
+      "shield": "5"
+    },
+    "758": {
+      "desc": "MUTATION_BODY_758_DESC",
+      "desc_resolved": "Start with +1 Bonus Attack.",
+      "con": "1",
+      "passives": {
+        "Quivered": "1"
+      }
+    },
+    "900": {
+      "con": "-2",
+      "spd": "1"
+    },
+    "400": {
+      "str": "2",
+      "con": "-1"
+    },
+    "401": {
+      "str": "2",
+      "dex": "-1"
+    },
+    "402": {
+      "str": "2",
+      "cha": "-1"
+    },
+    "403": {
+      "str": "2",
+      "int": "-1"
+    },
+    "404": {
+      "str": "2",
+      "spd": "-1"
+    },
+    "405": {
+      "str": "2",
+      "lck": "-1"
+    },
+    "406": {
+      "con": "2",
+      "str": "-1"
+    },
+    "407": {
+      "con": "2",
+      "dex": "-1"
+    },
+    "408": {
+      "con": "2",
+      "cha": "-1"
+    },
+    "409": {
+      "con": "2",
+      "int": "-1"
+    },
+    "410": {
+      "con": "2",
+      "spd": "-1"
+    },
+    "411": {
+      "con": "2",
+      "lck": "-1"
+    },
+    "412": {
+      "dex": "2",
+      "con": "-1"
+    },
+    "413": {
+      "dex": "2",
+      "str": "-1"
+    },
+    "414": {
+      "dex": "2",
+      "cha": "-1"
+    },
+    "415": {
+      "dex": "2",
+      "int": "-1"
+    },
+    "416": {
+      "dex": "2",
+      "spd": "-1"
+    },
+    "417": {
+      "dex": "2",
+      "lck": "-1"
+    },
+    "418": {
+      "int": "2",
+      "con": "-1"
+    },
+    "419": {
+      "int": "2",
+      "dex": "-1"
+    },
+    "420": {
+      "int": "2",
+      "cha": "-1"
+    },
+    "421": {
+      "int": "2",
+      "str": "-1"
+    },
+    "422": {
+      "int": "2",
+      "spd": "-1"
+    },
+    "423": {
+      "int": "2",
+      "lck": "-1"
+    },
+    "424": {
+      "cha": "2",
+      "con": "-1"
+    },
+    "425": {
+      "cha": "2",
+      "dex": "-1"
+    },
+    "426": {
+      "cha": "2",
+      "str": "-1"
+    },
+    "427": {
+      "cha": "2",
+      "int": "-1"
+    },
+    "428": {
+      "cha": "2",
+      "spd": "-1"
+    },
+    "429": {
+      "cha": "2",
+      "lck": "-1"
+    },
+    "430": {
+      "lck": "2",
+      "con": "-1"
+    },
+    "431": {
+      "lck": "2",
+      "dex": "-1"
+    },
+    "432": {
+      "lck": "2",
+      "cha": "-1"
+    },
+    "433": {
+      "lck": "2",
+      "int": "-1"
+    },
+    "434": {
+      "lck": "2",
+      "spd": "-1"
+    },
+    "435": {
+      "lck": "2",
+      "str": "-1"
+    },
+    "436": {
+      "spd": "2",
+      "con": "-1"
+    },
+    "437": {
+      "spd": "2",
+      "str": "-1"
+    },
+    "438": {
+      "spd": "2",
+      "cha": "-1"
+    },
+    "439": {
+      "spd": "2",
+      "int": "-1"
+    },
+    "440": {
+      "spd": "2",
+      "dex": "-1"
+    },
+    "441": {
+      "spd": "2",
+      "lck": "-1"
+    },
+    "442": {
+      "tag": "melted",
+      "cha": "-1"
+    },
+    "700": {
+      "tag": "birth_defect",
+      "con": "-2"
+    },
+    "701": {
+      "tag": "birth_defect",
+      "spd": "-2"
+    },
+    "702": {
+      "tag": "birth_defect",
+      "con": "-1"
+    },
+    "703": {
+      "desc": "MUTATION_BODY_703_DESC",
+      "desc_resolved": "Start each battle with Bruise 1.",
+      "tag": "birth_defect",
+      "passives": {
+        "Bruise": "1"
+      }
+    },
+    "704": {
+      "tag": "birth_defect",
+      "spd": "-3",
+      "con": "2"
+    }
+  }
+}

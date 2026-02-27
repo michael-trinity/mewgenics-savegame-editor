@@ -1,0 +1,2190 @@
+{
+  "Propell": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_PROPELL_NAME",
+      "name_resolved": "Propel",
+      "desc": "ABILITY_PROPELL_DESC",
+      "desc_resolved": "Dash forward one tile and attack.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "dash_start_animation": "propelStart",
+      "dash_animation": "propelLoop",
+      "dash_attack_animation": "propelEnd"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "Propell2": {
+    "variant_of": "Propell",
+    "meta": {
+      "desc": "ABILITY_PROPELL2_DESC",
+      "desc_resolved": "Dash forward one tile and attack, twice!"
+    },
+    "temporary_effects": {
+      "CastAgain": "1"
+    }
+  },
+  "Hadouken": {
+    "template": "straightshot_attack",
+    "meta": {
+      "name": "ABILITY_HADOKEN_NAME",
+      "name_resolved": "Hadouken",
+      "desc": "ABILITY_HADOKEN_DESC",
+      "desc_resolved": "Shoot an energy blast in a straight line.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "hadouken",
+      "projectile": "MagicMissileProjectile"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "target": {
+      "max_aoe": "10"
+    },
+    "damage_instance": {
+      "damage": "10",
+      "type": "spell",
+      "effects": {
+        "VisualFX": "MagicMissleBlast"
+      }
+    }
+  },
+  "Hadouken2": {
+    "variant_of": "Hadouken",
+    "meta": {
+      "desc": "ABILITY_HADOKEN2_DESC",
+      "desc_resolved": "Shoot a high damage energy blast in a straight line."
+    },
+    "damage_instance": {
+      "damage": "15"
+    }
+  },
+  "Cartwheel": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_CARTWHEEL_NAME",
+      "name_resolved": "Cartwheel",
+      "desc": "ABILITY_CARTWHEEL_DESC",
+      "desc_resolved": "Roll up to 4 tiles diagonally.",
+      "class": "Monk",
+      "animate_name": "true"
+    },
+    "graphics": {
+      "sync_speed": "30",
+      "ignore_slowtiles": "true",
+      "move_start_animation": "cartwheelStart",
+      "animation": "cartwheelLoop",
+      "move_end_animation": "cartwheelEnd"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "range_mode": "diagcross",
+      "max_range": "4",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    }
+  },
+  "Cartwheel2": {
+    "variant_of": "Cartwheel",
+    "meta": {
+      "desc": "ABILITY_CARTWHEEL2_DESC",
+      "desc_resolved": "Roll up to 4 tiles diagonally or in a straight line."
+    },
+    "target": {
+      "range_mode": "8cross"
+    }
+  },
+  "StoneFists": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_STONEFISTS_NAME",
+      "name_resolved": "Stone Fists",
+      "desc": "ABILITY_STONEFISTS_DESC",
+      "desc_resolved": "Gain [img:str] and [img:dex] equal to your [img:shield] until the end of your turn.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "stoneFists"
+    },
+    "target": {
+      "X_is": "current_shield"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempStrengthUp": "X",
+        "TempDexterityUp": "X"
+      }
+    }
+  },
+  "StoneFists2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_STONEFISTS_NAME",
+      "name_resolved": "Stone Fists",
+      "desc": "ABILITY_STONEFISTS2_DESC",
+      "desc_resolved": "Convert your [img:shield] to [img:str] and [img:dex] for the rest of the battle.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {},
+    "target": {
+      "X_is": "current_shield"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "X",
+        "DexterityUp": "X",
+        "Shield": "-X"
+      }
+    }
+  },
+  "Transcend": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_TRANSCEND_NAME",
+      "name_resolved": "Transcend",
+      "desc": "ABILITY_TRANSCEND_DESC",
+      "desc_resolved": "Cleanse your debuffs and gain +1 [img:shield].",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "damage_instance": {
+      "effects": {
+        "Cleanse": "0",
+        "Shield": "1"
+      }
+    }
+  },
+  "Transcend2": {
+    "variant_of": "Transcend",
+    "meta": {
+      "desc": "ABILITY_TRANSCEND2_DESC",
+      "desc_resolved": "Cleanse your debuffs and gain +1 [img:shield]. At the end of each round, automatically cast this spell for free."
+    },
+    "bonus_passives": {
+      "AutocastEachRound": {
+        "ability": "Transcend2",
+        "even_if_stunned": "true"
+      }
+    }
+  },
+  "HipToss": {
+    "template": "throw_attack",
+    "meta": {
+      "name": "ABILITY_HIPTOSS_NAME",
+      "name_resolved": "Hip Toss",
+      "desc": "ABILITY_HIPTOSS_DESC",
+      "desc_resolved": "Throw a random adjacent unit two tiles away, dealing damage to it.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "knockupatk"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "2",
+      "min_range": "2",
+      "restrictions": "none"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage"
+    }
+  },
+  "HipToss2": {
+    "variant_of": "HipToss",
+    "meta": {
+      "desc": "ABILITY_HIPTOSS2_DESC",
+      "desc_resolved": "Throw a random adjacent unit two tiles away, dealing damage to it. This deals double damage if it's thrown onto another unit."
+    },
+    "damage_instance": {
+      "blocked_damage": "(3+bonus_melee_ability_damage)*2"
+    }
+  },
+  "Bruise": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_BRUISE_NAME",
+      "name_resolved": "Bruise",
+      "desc": "ABILITY_BRUISE_DESC",
+      "desc_resolved": "Your basic attack inflicts Bruise until the end of the turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "bruise"
+    },
+    "cost": {
+      "mana": "6",
+      "cantrip": "true"
+    },
+    "damage_instance": {
+      "effects": {
+        "HeavyHits": "1"
+      }
+    }
+  },
+  "Bruise2": {
+    "variant_of": "Bruise",
+    "meta": {
+      "desc": "ABILITY_BRUISE2_DESC",
+      "desc_resolved": "Your basic attack inflicts Bruise until the end of the turn."
+    },
+    "cost": {
+      "infcantrip": "true"
+    }
+  },
+  "Slapback": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_SLAPBACK_NAME",
+      "name_resolved": "Slapback",
+      "desc": "ABILITY_SLAPBACK_DESC",
+      "desc_resolved": "A melee attack with a high critical hit chance.\nRELOAD: Take damage.",
+      "class": "Monk"
+    },
+    "graphics": {},
+    "cost": {
+      "requires_reload": "true",
+      "mana": "0"
+    },
+    "bonus_passives": {
+      "ReloadOnAnyDamage": "1"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "crit_chance": "50%",
+      "type": "melee"
+    }
+  },
+  "Slapback2": {
+    "variant_of": "Slapback",
+    "meta": {
+      "desc": "ABILITY_SLAPBACK2_DESC",
+      "desc_resolved": "A melee attack with a 100% critical hit chance.\nRELOAD: Take damage."
+    },
+    "damage_instance": {
+      "crit_chance": "100%"
+    }
+  },
+  "Finisher": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_FINISHER_NAME",
+      "name_resolved": "Finisher",
+      "desc": "ABILITY_FINISHER_DESC",
+      "desc_resolved": "Dash forward three tiles and attack. This deals 2 damage for each action you've taken this turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Monk",
+      "icon_shell_frame": "attack",
+      "type_icon": "attack"
+    },
+    "graphics": {
+      "dash_start_animation": "dashstart",
+      "dash_animation": "dash",
+      "dash_attack_animation": "heaviestMelee"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "3",
+      "X_is": "storm_count"
+    },
+    "damage_instance": {
+      "raw_damage": "X*2",
+      "show_damage_on_0": "true"
+    }
+  },
+  "Finisher2": {
+    "variant_of": "Finisher",
+    "meta": {
+      "desc": "ABILITY_FINISHER2_DESC",
+      "desc_resolved": "Dash forward three tiles and attack. This deals 2 damage for each action you've taken this turn.\n[s:.7](This spell costs 0 mana. Castable once per turn.)[/s]"
+    },
+    "cost": {
+      "mana": "0"
+    }
+  },
+  "Reverberate": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_REVERBERATE_NAME",
+      "name_resolved": "Reverberate",
+      "desc": "ABILITY_REVERBERATE_DESC",
+      "desc_resolved": "Gain +8 [img:shield] and knock back adjacent units two tiles. This spell costs 3 mana less for each action you've taken this turn.\n[s:.7](Castable once per turn.)[/s]",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "tags": [
+      "musical"
+    ],
+    "graphics": {
+      "animation": "block"
+    },
+    "cost": {
+      "mana": "22-X*3",
+      "cantrip": "true"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "X_is": "storm_count"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "8"
+      }
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "spell",
+      "knockback": "2",
+      "incidentally_collects_pickups": "false"
+    }
+  },
+  "Reverberate2": {
+    "variant_of": "Reverberate",
+    "meta": {
+      "desc": "ABILITY_REVERBERATE2_DESC",
+      "desc_resolved": "Gain +8 [img:shield] and knock back adjacent units two tiles. This spell costs 3 mana less and grants 1 extra [img:shield] for each action you've taken this turn.\n[s:.7](Castable once per turn.)[/s]"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "8+X"
+      }
+    }
+  },
+  "ComboThrow": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_COMBOTHROW_NAME",
+      "name_resolved": "Combo Throw",
+      "desc": "ABILITY_COMBOTHROW_DESC",
+      "desc_resolved": "A melee attack with Knockback 3. When this hits, switch into ranged stance and refresh your basic attack.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "knockswatatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage",
+      "type": "melee",
+      "knockback": "3",
+      "effects": {
+        "ApplyToSource": {
+          "StanceSwitchToRanged": "1",
+          "RefreshActPoints": "1"
+        }
+      }
+    }
+  },
+  "ComboThrow2": {
+    "variant_of": "ComboThrow",
+    "meta": {
+      "desc": "ABILITY_COMBOTHROW2_DESC",
+      "desc_resolved": "A melee attack with Knockback 3. When this hits, switch into ranged stance and refresh your basic attack.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "ComboPull": {
+    "template": "lobbed_attack",
+    "meta": {
+      "name": "ABILITY_COMBOPULL_NAME",
+      "name_resolved": "Combo Pull",
+      "desc": "ABILITY_COMBOPULL_DESC",
+      "desc_resolved": "A ranged attack that pulls the unit it hits toward you. When this hits, switch into melee stance and refresh your basic attack.",
+      "class": "Monk"
+    },
+    "target": {
+      "min_range": "2",
+      "max_range": "4+bonus_range"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_ranged_damage",
+      "effects": {
+        "ApplyToSource": {
+          "StanceSwitchToMelee": "1",
+          "RefreshActPoints": "1"
+        },
+        "DisplaceTowardsSource": "1"
+      }
+    }
+  },
+  "ComboPull2": {
+    "variant_of": "ComboPull",
+    "meta": {
+      "desc": "ABILITY_COMBOPULL2_DESC",
+      "desc_resolved": "A ranged attack that pulls the unit it hits toward you. When this hits, switch into melee stance and refresh your basic attack.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "3"
+    }
+  },
+  "OneWithTheWind": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ONEWITHTHEWIND_NAME",
+      "name_resolved": "One With the Wind",
+      "desc": "ABILITY_ONEWITHTHEWIND_DESC",
+      "desc_resolved": "Gain +20 Movement Range until the end of the turn.",
+      "class": "Monk",
+      "type_icon": "movement"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "effects": {
+        "TempMovement": "20"
+      }
+    }
+  },
+  "OneWithTheWind2": {
+    "variant_of": "OneWithTheWind",
+    "meta": {
+      "desc": "ABILITY_ONEWITHTHEWIND2_DESC",
+      "desc_resolved": "Gain +20 Movement Range until the end of the turn and refresh your movement action."
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshMovePoints": "1"
+      }
+    }
+  },
+  "Pogo": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_POGO_NAME",
+      "name_resolved": "Pogo",
+      "desc": "ABILITY_POGO_DESC",
+      "desc_resolved": "Jump to a tile. Bounce off any unit you land on, damaging that unit.",
+      "class": "Monk",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_attack_animation": "land"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "target": {
+      "max_range": "3",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_excludes_self": "false",
+      "restrictions": "none",
+      "always_bounce": "true"
+    },
+    "damage_instance": {
+      "damage": "3+bonus_melee_ability_damage",
+      "effects": {
+        "IgnoreSelf": "1"
+      }
+    }
+  },
+  "Pogo2": {
+    "variant_of": "Pogo",
+    "meta": {
+      "desc": "ABILITY_POGO2_DESC",
+      "desc_resolved": "Jump to a tile. Bounce off any unit you land on, damaging and Bruising that unit."
+    },
+    "target": {
+      "max_range": "5"
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": "1"
+      }
+    }
+  },
+  "TrainArms": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WAYOFTHEMANTIS_NAME",
+      "name_resolved": "Way of the Mantis",
+      "desc": "ABILITY_WAYOFTHEMANTIS_DESC",
+      "desc_resolved": "For the rest of the battle, you can attack an extra time each turn.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "stoneFists"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "damage_instance": {
+      "effects": {
+        "ExtraBasicAttacks_Status": "1"
+      }
+    }
+  },
+  "TrainArms2": {
+    "variant_of": "TrainArms",
+    "meta": {
+      "desc": "ABILITY_WAYOFTHEMANTIS2_DESC",
+      "desc_resolved": "For the rest of the battle, you can attack an extra time each turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "9"
+    }
+  },
+  "Porcupine": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PORCUPINE_NAME",
+      "name_resolved": "Porcupine",
+      "desc": "ABILITY_PORCUPINE_DESC",
+      "desc_resolved": "Gain +2 temporary Brace and +2 temporary Thorns until your next turn.",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "bruise"
+    },
+    "cost": {
+      "mana": "5",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "Brace",
+          "stacks": "2",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "Porcupine2": {
+    "variant_of": "Porcupine",
+    "meta": {
+      "desc": "ABILITY_PORCUPINE2_DESC",
+      "desc_resolved": "Gain +2 temporary Brace and +2 temporary Thorns until your next turn. Also reflect the next projectile you're hit by."
+    },
+    "damage_instance": {
+      "effects": {
+        "Reflect": "1"
+      }
+    }
+  },
+  "Anneal": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ANNEAL_NAME",
+      "name_resolved": "Anneal",
+      "desc": "ABILITY_ANNEAL_DESC",
+      "desc_resolved": "Gain +1 [img:shield]. This spell costs 0 mana the first time you cast it each turn.",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "block"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "1"
+      }
+    }
+  },
+  "Anneal2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_ANNEAL_NAME",
+      "name_resolved": "Anneal",
+      "desc": "ABILITY_ANNEAL2_DESC",
+      "desc_resolved": "Gain +1 [img:shield]. This spell costs 0 mana the first time you cast it each turn, and after each time you spend mana on another spell.",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "block"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "bonus_passives": {
+      "FreeFirstCastAndAfterSpendMana": "1"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "1"
+      }
+    }
+  },
+  "DeepDive": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DEEPDIVE_NAME",
+      "name_resolved": "Deep Dive",
+      "desc": "ABILITY_DEEPDIVE_DESC",
+      "desc_resolved": "Become downed. You don't get injured. At the end of the next round, you're revived with 1 HP, 15 [img:shield], and All Stats Up.",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "SafeDie": "1",
+        "ReviveNextRound": {
+          "stacks": "2",
+          "revive_health": "1",
+          "Shield": "15",
+          "AllStatsUp": "1"
+        }
+      }
+    }
+  },
+  "DeepDive2": {
+    "variant_of": "DeepDive",
+    "meta": {
+      "desc": "ABILITY_DEEPDIVE2_DESC",
+      "desc_resolved": "Become downed. You don't get injured. At the end of the next round, you're revived with 50% HP, 20 [img:shield], 2 [img:divineshield], and All Stats Up 2."
+    },
+    "damage_instance": {
+      "effects": {
+        "ReviveNextRound": {
+          "stacks": "2",
+          "revive_health": "50%",
+          "Shield": "20",
+          "DivineShield": "2",
+          "AllStatsUp": "2"
+        }
+      }
+    }
+  },
+  "HopAndBlock": {
+    "template": "jump_attack",
+    "meta": {
+      "name": "ABILITY_HOPNBLOCK_NAME",
+      "name_resolved": "Hop n' Block",
+      "desc": "ABILITY_HOPNBLOCK_DESC",
+      "desc_resolved": "Jump to a tile, then gain +2 [img:shield] for each enemy adjacent to the tile you land on.",
+      "class": "Monk",
+      "type_icon": "movement"
+    },
+    "graphics": {
+      "jump_attack_animation": "block"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "target": {
+      "max_range": "4"
+    },
+    "temporary_effects": {
+      "JustInCaseTrample": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none",
+      "cant_miss": "true",
+      "makes_contact": "false",
+      "effects": {
+        "Conditional_Enemy": {
+          "ApplyToSource": {
+            "Shield": "2"
+          }
+        }
+      }
+    }
+  },
+  "HopAndBlock2": {
+    "variant_of": "HopAndBlock",
+    "meta": {
+      "desc": "ABILITY_HOPNBLOCK2_DESC",
+      "desc_resolved": "Jump to any tile, then gain +2 [img:shield] for each enemy adjacent to the tile you land on."
+    },
+    "target": {
+      "max_range": "10"
+    }
+  },
+  "TrainMind": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WAYOFTHEOWL_NAME",
+      "name_resolved": "Way of the Owl",
+      "desc": "ABILITY_WAYOFTHEOWL_DESC",
+      "desc_resolved": "For the rest of the battle, the first spell you cast each turn is cast twice.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "meditate"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "13"
+    },
+    "damage_instance": {
+      "effects": {
+        "DoubleCastSpellsEachTurn_Status": "1"
+      }
+    }
+  },
+  "TrainMind2": {
+    "variant_of": "TrainMind",
+    "meta": {
+      "desc": "ABILITY_WAYOFTHEOWL2_DESC",
+      "desc_resolved": "For the rest of the battle, the first spell you cast each turn is cast twice.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "10"
+    }
+  },
+  "Meditate": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MEDITATE_NAME",
+      "name_resolved": "Meditate",
+      "desc": "ABILITY_MEDITATE_DESC",
+      "desc_resolved": "Heal yourself for 8 HP and gain +8 Shield, All Stats Up 2, and Sleep 8.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "meditate"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8"
+    },
+    "damage_instance": {
+      "heal": "8",
+      "effects": {
+        "Sleep": "8",
+        "Shield": "8",
+        "AllStatsUp": "2"
+      }
+    }
+  },
+  "Meditate2": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_MEDITATE_NAME",
+      "name_resolved": "Meditate",
+      "desc": "ABILITY_MEDITATE2_DESC",
+      "desc_resolved": "Heal yourself for 8 HP and gain +8 Shield, All Stats Up 2, and Drowsy 8.\n[s:.7](This spell costs less.)[/s]",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "damage_instance": {
+      "heal": "8",
+      "effects": {
+        "Drowsy": "8",
+        "Shield": "8",
+        "AllStatsUp": "2"
+      }
+    }
+  },
+  "DoomPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DOOMPUNCH_NAME",
+      "name_resolved": "Five Point Palm Exploding Heart Technique",
+      "desc": "ABILITY_DOOMPUNCH_DESC",
+      "desc_resolved": "A melee attack that causes a unit to die at the end of its next turn. Bosses fall asleep at the end of their next turn instead.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "tinyPunch"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Conditional_NotBoss": {
+          "Doomed": "1"
+        },
+        "Conditional_Boss": {
+          "Drowsy": "1"
+        }
+      }
+    }
+  },
+  "DoomPunch2": {
+    "variant_of": "DoomPunch",
+    "meta": {
+      "desc": "ABILITY_DOOMPUNCH2_DESC",
+      "desc_resolved": "A melee attack that causes a unit to die at the end of its next turn. Bosses fall asleep at the end of their next turn instead.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "KiBurst": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_KIBURST_NAME",
+      "name_resolved": "Ki Burst",
+      "desc": "ABILITY_KIBURST_DESC",
+      "desc_resolved": "Deal 1 damage and knockback adjacent units. Gain +1 [img:shield].",
+      "class": "Monk"
+    },
+    "graphics": {
+      "particle": "fx_magicSplash"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "standard",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "1"
+      }
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "1"
+    }
+  },
+  "KiBurst2": {
+    "variant_of": "KiBurst",
+    "meta": {
+      "desc": "ABILITY_KIBURST2_DESC",
+      "desc_resolved": "Deal 2 damage and knockback adjacent units 2 tiles. Gain +2 [img:shield]."
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "2"
+      }
+    },
+    "damage_instance": {
+      "damage": "2",
+      "knockback": "2"
+    }
+  },
+  "DragonPunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_DRAGONPUNCH_NAME",
+      "name_resolved": "Dragon Punch",
+      "desc": "ABILITY_DRAGONPUNCH_DESC",
+      "desc_resolved": "A magic damage melee attack with knockback 3 that inflicts Confusion.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "uppercutatk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell",
+      "knockback": "3",
+      "makes_contact": "false",
+      "effects": {
+        "Confusion": "1",
+        "VisualFX": "MagicMissleBlast"
+      }
+    }
+  },
+  "DragonPunch2": {
+    "variant_of": "DragonPunch",
+    "meta": {
+      "desc": "ABILITY_DRAGONPUNCH2_DESC",
+      "desc_resolved": "A strong magic damage melee attack with knockback 10 that inflicts Confusion."
+    },
+    "damage_instance": {
+      "damage": "8",
+      "knockback": "10",
+      "effects": {
+        "VisualFX": "BigMagicMissileBlast"
+      }
+    }
+  },
+  "TrainLegs": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WAYOFTHEHARE_NAME",
+      "name_resolved": "Way of the Hare",
+      "desc": "ABILITY_WAYOFTHEHARE_DESC",
+      "desc_resolved": "For the rest of the battle, you can move an extra time each turn.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "backflipLoop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "damage_instance": {
+      "effects": {
+        "ExtraBasicMoves_Status": "1"
+      }
+    }
+  },
+  "TrainLegs2": {
+    "variant_of": "TrainLegs",
+    "meta": {
+      "desc": "ABILITY_WAYOFTHEHARE2_DESC",
+      "desc_resolved": "For the rest of the battle, you can move an extra time each turn.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    }
+  },
+  "ReallyFastRun": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_REALLYFASTRUN_NAME",
+      "name_resolved": "Really Fast Run",
+      "desc": "ABILITY_REALLYFASTRUN_DESC",
+      "desc_resolved": "Run in a straight line up to 4 tiles, through objects. Wind blows over tiles you run through.",
+      "class": "Monk",
+      "animate_name": "true",
+      "icon_damage_display_eq": "1+bonus_spell_damage_display",
+      "icon_shell_frame": "attack",
+      "icon_damage_type": "magic"
+    },
+    "graphics": {
+      "speed": "6",
+      "ignore_slowtiles": "true",
+      "animation": "dash"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "6"
+    },
+    "temporary_effects": {
+      "DelayedWindTrail": "1"
+    },
+    "target": {
+      "range_mode": "cross",
+      "max_range": "4",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ],
+      "straight_shot": "true",
+      "allow_diagonals": "true"
+    }
+  },
+  "ReallyFastRun2": {
+    "variant_of": "ReallyFastRun",
+    "meta": {
+      "desc": "ABILITY_REALLYFASTRUN2_DESC",
+      "desc_resolved": "Run diagonally or in a straight line any distance, through objects. Wind blows over tiles you run through."
+    },
+    "target": {
+      "range_mode": "8cross",
+      "max_range": "10"
+    }
+  },
+  "DetectWeakness": {
+    "template": "targeted_status",
+    "meta": {
+      "name": "ABILITY_OCULARPATDOWN_NAME",
+      "name_resolved": "Ocular Pat Down",
+      "desc": "ABILITY_OCULARPATDOWN_DESC",
+      "desc_resolved": "Inflict Marked and Magic Weakness 1 on a unit.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "affected_particle": "TakeAim"
+    },
+    "cost": {
+      "mana": "7",
+      "infcantrip": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "4+bonus_range"
+    },
+    "damage_instance": {
+      "effects": {
+        "Marked": "1",
+        "MagicWeakness": "1"
+      }
+    }
+  },
+  "DetectWeakness2": {
+    "variant_of": "DetectWeakness",
+    "meta": {
+      "desc": "ABILITY_OCULARPATDOWN2_DESC",
+      "desc_resolved": "Inflict Marked 3 and Magic Weakness 3 on a unit."
+    },
+    "damage_instance": {
+      "effects": {
+        "Marked": "3",
+        "MagicWeakness": "3"
+      }
+    }
+  },
+  "HundredHandSlap": {
+    "template": "melee_attack",
+    "class": "PlaceholderMeleeAttackAbility",
+    "meta": {
+      "name": "ABILITY_100HANDSLAP_NAME",
+      "name_resolved": "Hundred Hand Slap",
+      "desc": "ABILITY_100HANDSLAP_DESC",
+      "desc_resolved": "A ten-hit multi-strike melee attack with Knockback 10 at the end of the combo.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "megaslap",
+      "darken_screen": "true",
+      "darken_screen_exclude_characters_on_tile": "true",
+      "darken_screen_exclude_self": "true",
+      "darken_screen_start_early": "true"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "15"
+    },
+    "target": {
+      "aoe_considers_character_size": "false",
+      "target_mode": "tile",
+      "restrictions": "must_have_character",
+      "range_mode": "standard",
+      "aoe_mode": "standard",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "multihit": "10",
+      "randomize_knockback_direction_except_for_finisher": "true"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage/5",
+      "type": "melee",
+      "knockback": "10"
+    }
+  },
+  "HundredHandSlap2": {
+    "variant_of": "HundredHandSlap",
+    "meta": {
+      "desc": "ABILITY_100HANDSLAP2_DESC",
+      "desc_resolved": "A ten-hit multi-strike melee attack with Knockback 10 at the end of the combo. Each hit has a 10% chance to inflict Bruise. The final hit deals extra damage."
+    },
+    "damage_instance": {
+      "effects": {
+        "Bruise": [
+          "1",
+          ".1"
+        ]
+      },
+      "final_hit_bonus_damage": "5+bonus_melee_ability_damage"
+    }
+  },
+  "KineticCharge": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_KINETICCHARGE_NAME",
+      "name_resolved": "Kinetic Charge",
+      "desc": "ABILITY_KINETICCHARGE_DESC",
+      "desc_resolved": "Gain +1 temporary Kinetic Spikes.",
+      "class": "Monk",
+      "type_icon": "defense"
+    },
+    "graphics": {
+      "animation": "meditate"
+    },
+    "cost": {
+      "mana": "3",
+      "infcantrip": "true"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "effects": {
+        "Temporary": {
+          "status": "KineticSpikes",
+          "stacks": "1",
+          "turns": "1",
+          "expires_on_begin_turn": "true"
+        }
+      }
+    }
+  },
+  "KineticCharge2": {
+    "variant_of": "KineticCharge",
+    "meta": {
+      "desc": "ABILITY_KINETICCHARGE2_DESC",
+      "desc_resolved": "Gain +2 temporary Kinetic Spikes."
+    },
+    "damage_instance": {
+      "effects": {
+        "Temporary": {
+          "stacks": "2"
+        }
+      }
+    }
+  },
+  "AirBurst": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_AIRBURST_NAME",
+      "name_resolved": "Air Burst",
+      "desc": "ABILITY_AIRBURST_DESC",
+      "desc_resolved": "A burst of air that knocks back units diagonally from the target.",
+      "class": "Monk",
+      "type_icon": "magic"
+    },
+    "graphics": {
+      "particle": "fx_windSpell",
+      "animation": "attack",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "max_range": "5+bonus_range",
+      "aoe_mode": "diagcross"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "AirBurst2": {
+    "variant_of": "AirBurst",
+    "meta": {
+      "desc": "ABILITY_AIRBURST2_DESC",
+      "desc_resolved": "A large burst of air that knocks back units diagonally from the target."
+    },
+    "target": {
+      "max_aoe": "3",
+      "max_range": "7+bonus_range"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "TrainBody": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WAYOFTHETURTLE_NAME",
+      "name_resolved": "Way of the Turtle",
+      "desc": "ABILITY_WAYOFTHETURTLE_DESC",
+      "desc_resolved": "Gain +1 Brace.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "block"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9"
+    },
+    "damage_instance": {
+      "effects": {
+        "Brace": "1"
+      }
+    }
+  },
+  "TrainBody2": {
+    "variant_of": "TrainBody",
+    "meta": {
+      "desc": "ABILITY_WAYOFTHETURTLE2_DESC",
+      "desc_resolved": "Gain +1 Brace.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "6"
+    }
+  },
+  "ReleaseEnergy": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_RELEASEENERGY_NAME",
+      "name_resolved": "Release Energy",
+      "desc": "ABILITY_RELEASEENERGY_DESC",
+      "desc_resolved": "Emit 10 Sparkles.",
+      "class": "Monk",
+      "type_icon": "magic",
+      "icon_damage_display_eq": "1+bonus_spell_damage_display",
+      "icon_damage_display_suffix": "x10",
+      "icon_shell_frame": "multihit_attack",
+      "icon_damage_type": "magic"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "12"
+    },
+    "damage_instance": {
+      "effects": {
+        "RandomMagicMissile": "10"
+      }
+    }
+  },
+  "ReleaseEnergy2": {
+    "variant_of": "ReleaseEnergy",
+    "meta": {
+      "desc": "ABILITY_RELEASEENERGY2_DESC",
+      "desc_resolved": "Emit 10 Sparkles.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "9"
+    }
+  },
+  "Pummel": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_PUMMEL_NAME",
+      "name_resolved": "Pummel",
+      "desc": "ABILITY_PUMMEL_DESC",
+      "desc_resolved": "A melee attack that does 3 more damage each time you use it on the same turn. This attack inflicts all status effects your basic attack does.",
+      "class": "Monk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "X_is": "this_ability_storm_count"
+    },
+    "bonus_passives": {
+      "CopyBasicAttackEffects": "1"
+    },
+    "damage_instance": {
+      "damage": "1+X*3"
+    }
+  },
+  "Pummel2": {
+    "variant_of": "Pummel",
+    "meta": {
+      "desc": "ABILITY_PUMMEL2_DESC",
+      "desc_resolved": "A melee attack that does 4 more damage each time you use it on the same turn. This attack inflicts all status effects your basic attack does.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "damage_instance": {
+      "damage": "1+X*4"
+    }
+  },
+  "QuickAttack": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_QUICKATTACK_NAME",
+      "name_resolved": "Quick Attack",
+      "desc": "ABILITY_QUICKATTACK_DESC",
+      "desc_resolved": "Teleport, then use your basic attack on an enemy within range. This spell's range is increased by 2 for each empty armor slot you have.",
+      "animate_name": "true",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "target": {
+      "max_range": "1+X*2",
+      "min_range": "1",
+      "X_is": "custom"
+    },
+    "self_damage": {
+      "effects": {
+        "ForceAttack": "1"
+      }
+    }
+  },
+  "QuickAttack2": {
+    "variant_of": "QuickAttack",
+    "meta": {
+      "desc": "ABILITY_QUICKATTACK2_DESC",
+      "desc_resolved": "Teleport, then use your basic attack on an enemy within range. This spell's range is increased by 2 for each empty armor slot you have.\n[s:.7](This spell costs less.)[/s]"
+    },
+    "cost": {
+      "mana": "5"
+    }
+  },
+  "PerfectForm": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_PERFECTFORM_NAME",
+      "name_resolved": "Perfect Form",
+      "desc": "ABILITY_PERFECTFORM_DESC",
+      "desc_resolved": "Gain +1 [img:shield] for each empty armor slot you have, then switch stances.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "cartwheelLoop"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "X",
+        "MonkStanceSwitch": "1"
+      }
+    }
+  },
+  "PerfectForm2": {
+    "variant_of": "PerfectForm",
+    "meta": {
+      "desc": "ABILITY_PERFECTFORM2_DESC",
+      "desc_resolved": "Gain +1 [img:shield] and heal 1 HP for each empty armor slot you have, then switch stances."
+    },
+    "damage_instance": {
+      "heal": "X",
+      "effects": {
+        "Shield": "X",
+        "MonkStanceSwitch": "1"
+      }
+    }
+  },
+  "WarmupStretch": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_WARMUPSTRETCH_NAME",
+      "name_resolved": "Warm Up Stretch",
+      "desc": "ABILITY_WARMUPSTRETCH_DESC",
+      "desc_resolved": "Gain +1 [img:dex], and +1 [img:spd]. This spell costs 2 mana less for each empty armor slot you have.",
+      "class": "Monk"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "8-X*2"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "target": {
+      "X_is": "custom"
+    },
+    "damage_instance": {
+      "effects": {
+        "DexterityUp": "1",
+        "SpeedUp": "1"
+      }
+    }
+  },
+  "WarmupStretch2": {
+    "variant_of": "WarmupStretch",
+    "meta": {
+      "desc": "ABILITY_WARMUPSTRETCH2_DESC",
+      "desc_resolved": "Gain +1 [img:dex], +1 [img:spd] and +1 [img:str]. This spell costs 2 mana less for each empty armor slot you have."
+    },
+    "damage_instance": {
+      "effects": {
+        "StrengthUp": "1"
+      }
+    }
+  },
+  "FlyingFist": {
+    "template": "melee_spell",
+    "meta": {
+      "name": "ABILITY_FLYINGFIST_NAME",
+      "name_resolved": "Flying Fist",
+      "desc": "ABILITY_FLYINGFIST_DESC",
+      "desc_resolved": "A melee attack with knockback that hits two tiles away from you. This spell's range is increased by 1 each time you use it on the same turn.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation": "attack",
+      "particle": "fx_windSpell"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_aoe": "2+X",
+      "max_aoe": "2+X",
+      "X_is": "this_ability_storm_count",
+      "restrictions": "aoe_must_exist"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_ability_damage",
+      "type": "physical_spell",
+      "knockback": "1",
+      "elements": [
+        "Wind"
+      ]
+    }
+  },
+  "FlyingFist2": {
+    "variant_of": "FlyingFist",
+    "meta": {
+      "desc": "ABILITY_FLYINGFIST2_DESC",
+      "desc_resolved": "A melee attack with knockback that hits two tiles away from you. This spell's range is increased by 1 and mana cost decreased by 1 each time you use it on the same turn."
+    },
+    "cost": {
+      "mana": "max(4-X, 0)"
+    }
+  },
+  "RapidFlowSpin": {
+    "template": "melee_attack",
+    "graphics": {
+      "animation": "singleSpin"
+    },
+    "target": {
+      "target_mode": "none",
+      "aoe_mode": "cross",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "damage": "1+bonus_melee_ability_damage"
+    }
+  },
+  "RapidFlowSpin2": {
+    "variant_of": "RapidFlowSpin",
+    "class": "MultiHitMeleeAttackAbility",
+    "graphics": {
+      "start": "spinattackstart",
+      "loop": "spinattackloop",
+      "end": "spinattackend"
+    },
+    "target": {
+      "multihit": "2"
+    }
+  },
+  "SpiritBomb": {
+    "template": "self_buff",
+    "keyword_tooltips": {
+      "BonusAbility": "DonateEnergy"
+    },
+    "meta": {
+      "name": "ABILITY_CHARGESPIRITBOMB_NAME",
+      "name_resolved": "Charge Spirit Bomb",
+      "desc": "ABILITY_CHARGESPIRITBOMB_DESC",
+      "desc_resolved": "Begin charging a spirit bomb. This ability becomes Throw Spirit Bomb.\nAllies gain the bonus ability Donate Energy until you throw it.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformAbility": "ThrowSpiritBomb"
+      }
+    }
+  },
+  "SpiritBomb2": {
+    "variant_of": "SpiritBomb",
+    "keyword_tooltips": {
+      "BonusAbility": "DonateEnergy2"
+    },
+    "meta": {
+      "desc": "ABILITY_CHARGESPIRITBOMB2_DESC",
+      "desc_resolved": "Begin charging a spirit bomb. This ability becomes Throw Spirit Bomb.\nAllies gain the bonus ability Donate Energy+ until you throw it."
+    },
+    "damage_instance": {
+      "effects": {
+        "TransformAbility": "ThrowSpiritBomb2"
+      }
+    }
+  },
+  "ThrowSpiritBomb": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_THROWSPIRITBOMB_NAME",
+      "name_resolved": "Throw Spirit Bomb",
+      "desc": "ABILITY_THROWSPIRITBOMB_DESC",
+      "desc_resolved": "Throw the Spirit Bomb, then this ability becomes Charge Spirit Bomb.\n[s:.7](Cannot be thrown with 0 charges.)[/s]",
+      "class": "Monk",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "area_particle": "MagicMissleBlast",
+      "center_particle": "BigMagicMissileBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "1",
+      "speed": "20",
+      "animation": "castspell",
+      "delay": "5"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "X_cant_be_zero": "true"
+    },
+    "bonus_passives": {
+      "ChargeSpiritBombAura": "DonateEnergy"
+    },
+    "target": {
+      "max_aoe": "2",
+      "max_range": "20",
+      "X_is": "custom"
+    },
+    "self_damage": {
+      "effects": {
+        "TransformAbility": "SpiritBomb"
+      }
+    },
+    "damage_instance": {
+      "raw_damage": "X",
+      "elements": [
+        "Explosion"
+      ]
+    }
+  },
+  "ThrowSpiritBomb2": {
+    "variant_of": "ThrowSpiritBomb",
+    "bonus_passives": {
+      "ChargeSpiritBombAura": "DonateEnergy2"
+    },
+    "self_damage": {
+      "effects": {
+        "TransformAbility": "SpiritBomb2"
+      }
+    }
+  },
+  "DonateEnergy": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_DONATEENERGY_NAME",
+      "name_resolved": "Donate Energy",
+      "desc": "ABILITY_DONATEENERGY_DESC",
+      "desc_resolved": "Give +1 damage to the Spirit Bomb!",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "2"
+    },
+    "damage_instance": {
+      "effects": {
+        "AddSpiritBombCharges": "1"
+      }
+    }
+  },
+  "DonateEnergy2": {
+    "variant_of": "DonateEnergy",
+    "meta": {
+      "desc": "ABILITY_DONATEENERGY2_DESC",
+      "desc_resolved": "Give +2 damage to the Spirit Bomb!"
+    },
+    "damage_instance": {
+      "effects": {
+        "AddSpiritBombCharges": "2"
+      }
+    }
+  },
+  "OnePunch": {
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_ONEPUNCH_NAME",
+      "name_resolved": "One Punch",
+      "desc": "ABILITY_ONEPUNCH_DESC",
+      "desc_resolved": "A one-hit kill punch. Gain All Stats Down on use.\nThis deals 25 damage to bosses instead of killing them.\n[s:.7](Castable once per battle.)[/s]",
+      "class": "Monk"
+    },
+    "graphics": {},
+    "cost": {
+      "infcantrip": "true",
+      "mana": "0",
+      "once_per_fight": "true"
+    },
+    "self_damage": {
+      "effects": {
+        "AllStatsUp": "-1"
+      }
+    },
+    "damage_instance": {
+      "damage": "1",
+      "effects": {
+        "Instakill": "25"
+      }
+    }
+  },
+  "OnePunch2": {
+    "variant_of": "OnePunch",
+    "meta": {
+      "name": "ABILITY_ONEPUNCH_NAME",
+      "name_resolved": "One Punch",
+      "desc": "ABILITY_ONEPUNCH2_DESC",
+      "desc_resolved": "A one-hit kill punch. It causes a cone of wind that deals 5 damage. Gain All Stats Down on use.\nThis deals 25 damage to bosses instead of killing them.\n[s:.7](Castable once per battle.)[/s]"
+    },
+    "damage_instance": {
+      "effects": {
+        "DelayedWindCone": {
+          "damage": "5",
+          "distance": "10"
+        }
+      }
+    }
+  },
+  "UnbridledHits": {
+    "class": "MultiHitMeleeAttackAbility",
+    "template": "melee_attack",
+    "meta": {
+      "name": "ABILITY_UNBRIDLEDHITS_NAME",
+      "name_resolved": "Unbridled Hits",
+      "desc": "ABILITY_UNBRIDLEDHITS_DESC",
+      "desc_resolved": "A weak melee attack that hits an extra time for each empty armor slot you have.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "start": "monkAttack",
+      "loop": "monkAttack",
+      "end": "monkAttack"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "X_is": "custom",
+      "multihit": "X+1"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "damage_instance": {
+      "damage": "2+bonus_melee_ability_damage"
+    }
+  },
+  "UnbridledHits2": {
+    "variant_of": "UnbridledHits",
+    "meta": {
+      "desc": "ABILITY_UNBRIDLEDHITS2_DESC",
+      "desc_resolved": "A weak melee attack that hits two extra times for each empty armor slot you have."
+    },
+    "target": {
+      "multihit": "X*2+1"
+    }
+  },
+  "Kamehameha": {
+    "template": "spell",
+    "meta": {
+      "name": "ABILITY_KAMEHAMEHA_NAME",
+      "name_resolved": "Kamehameha",
+      "desc": "ABILITY_KAMEHAMEHA_DESC",
+      "desc_resolved": "Fire a magic blast at a unit within 5 tiles. Requires line of sight.\n[s:.7](Castable once per battle. If all your armor slots are empty, castable once per turn.)[/s]",
+      "class": "Monk",
+      "icon_shell_frame": "attack"
+    },
+    "graphics": {
+      "particle": "BigMagicMissileBlast",
+      "use_projectile": "true",
+      "projectile": "MagicMissileProjectile",
+      "lob_height": "0",
+      "speed": "20",
+      "animation": "hadouken"
+    },
+    "cost": {
+      "cantrip": "true",
+      "mana": "0",
+      "once_per_fight": "3-X"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "target": {
+      "max_aoe": "0",
+      "max_range": "5",
+      "X_is": "custom",
+      "restrictions": "must_have_line_of_sight"
+    },
+    "damage_instance": {
+      "damage": "14"
+    }
+  },
+  "Kamehameha2": {
+    "variant_of": "Kamehameha",
+    "meta": {
+      "desc": "ABILITY_KAMEHAMEHA2_DESC",
+      "desc_resolved": "Fire a magic blast at a unit anywhere within your line of sight.\n[s:.7](Castable once per battle. If all your armor slots are empty, castable once per turn.)[/s]"
+    },
+    "target": {
+      "max_range": "20"
+    },
+    "damage_instance": {
+      "damage": "20"
+    }
+  },
+  "SideStep": {
+    "template": "move",
+    "meta": {
+      "name": "ABILITY_SIDESTEP_NAME",
+      "name_resolved": "Sidestep",
+      "desc": "ABILITY_SIDESTEP_DESC",
+      "desc_resolved": "Move one tile and gain +1 [img:shield].",
+      "animate_name": "true",
+      "class": "Monk"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4"
+    },
+    "target": {
+      "max_range": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "1"
+      }
+    }
+  },
+  "SideStep2": {
+    "variant_of": "SideStep",
+    "meta": {
+      "desc": "ABILITY_SIDESTEP2_DESC",
+      "desc_resolved": "Move one tile and gain +1 [img:shield].\nThis spell costs 0 mana the first time you cast it each turn."
+    },
+    "cost": {
+      "mana": "4"
+    },
+    "bonus_passives": {
+      "FreeFirstCast": "1"
+    }
+  },
+  "UnimpededLunge": {
+    "template": "dash_attack",
+    "meta": {
+      "name": "ABILITY_UNIMPEDEDLUNGE_NAME",
+      "name_resolved": "Unimpeded Lunge",
+      "desc": "ABILITY_UNIMPEDEDLUNGE_DESC",
+      "desc_resolved": "Dash forward X spaces, gain +X [img:shield], deal X damage, and deal X knockback.\nX is equal to the number of empty armor slots you have plus one.",
+      "class": "Monk"
+    },
+    "graphics": {
+      "dash_start_animation": "propelStart",
+      "dash_animation": "propelLoop",
+      "dash_attack_animation": "propelEnd"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "7"
+    },
+    "target": {
+      "max_range": "X+1",
+      "X_is": "custom"
+    },
+    "bonus_passives": {
+      "XIsFreeArmorSlots": "1"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "X+1"
+      }
+    },
+    "damage_instance": {
+      "damage": "X+1",
+      "knockback": "X+1"
+    }
+  },
+  "UnimpededLunge2": {
+    "variant_of": "UnimpededLunge",
+    "meta": {
+      "desc": "ABILITY_UNIMPEDEDLUNGE2_DESC",
+      "desc_resolved": "Dash forward X spaces, gain +X [img:shield], deal X damage, and deal X knockback.\nX is equal to twice the number of empty armor slots you have.",
+      "icon_shell_frame": "attack"
+    },
+    "target": {
+      "max_range": "2*X"
+    },
+    "self_damage": {
+      "effects": {
+        "Shield": "2*X"
+      }
+    },
+    "damage_instance": {
+      "raw_damage": "2*X",
+      "knockback": "2*X"
+    }
+  },
+  "DoubleDragon": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_DOUBLEDRAGON_NAME",
+      "name_resolved": "Double Dragon",
+      "desc": "ABILITY_DOUBLEDRAGON_DESC",
+      "desc_resolved": "Summon a 1 HP illusion of yourself within three tiles that mimics your basic attack, but in the opposite direction of you. It dies at the end of your turn.",
+      "class": "Monk"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "false",
+      "animation": "MonkStartTurn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "3",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "PlayerCat_MonkShade",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true"
+    }
+  },
+  "DoubleDragon2": {
+    "variant_of": "DoubleDragon",
+    "meta": {
+      "desc": "ABILITY_DOUBLEDRAGON2_DESC",
+      "desc_resolved": "Summon a 1 HP illusion of yourself on any tile that mimics your basic attack, but in the opposite direction of you. It dies at the end of your turn."
+    },
+    "target": {
+      "max_range": "20"
+    }
+  },
+  "FistOfFate": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_FISTOFFATE_NAME",
+      "name_resolved": "Fist of Fate",
+      "desc": "ABILITY_FISTOFFATE_DESC",
+      "desc_resolved": "Teleport next to a random enemy, then switch to melee stance and automatically attack it.",
+      "animate_name": "true",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "5"
+    },
+    "target": {
+      "target_mode": "random_tile",
+      "max_range": "20",
+      "min_range": "1",
+      "restrictions": [
+        "must_be_moveable",
+        "must_be_adjacent_to_enemy"
+      ]
+    },
+    "self_damage": {
+      "effects": {
+        "StanceSwitchToMelee": "1",
+        "DelayedFury": "0",
+        "ForceAttack": {
+          "immediate": "true"
+        }
+      }
+    }
+  },
+  "FistOfFate2": {
+    "variant_of": "FistOfFate",
+    "meta": {
+      "desc": "ABILITY_FISTOFFATE2_DESC",
+      "desc_resolved": "Teleport next to a random enemy, then switch to melee stance and automatically attack it. This has a chance to repeat multiple times."
+    },
+    "self_damage": {
+      "effects": {
+        "StanceSwitchToMelee": "1",
+        "DelayedFury": "75",
+        "ForceAttack": {
+          "immediate": "true"
+        }
+      }
+    }
+  },
+  "Nirvana": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_NIRVANA_NAME",
+      "name_resolved": "Nirvana",
+      "desc": "ABILITY_NIRVANA_DESC",
+      "desc_resolved": "Gain +1 [img:int] and +1 [img:shield].\nIf you have 7 or more [img:shield], this spell costs 1 mana less.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "meditate"
+    },
+    "target": {
+      "X_is": "current_shield"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "4-clamp(floor(X/7), 0, 1)"
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "1",
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "Nirvana2": {
+    "variant_of": "Nirvana",
+    "meta": {
+      "desc": "ABILITY_NIRVANA2_DESC",
+      "desc_resolved": "Gain +1 [img:int] and +2 [img:shield].\nIf you have 7 or more [img:shield], this spell costs 1 mana less."
+    },
+    "damage_instance": {
+      "effects": {
+        "Shield": "2",
+        "IntelligenceUp": "1"
+      }
+    }
+  },
+  "EmptyMind": {
+    "template": "self_buff",
+    "meta": {
+      "name": "ABILITY_EMPTYMIND_NAME",
+      "name_resolved": "Empty Mind",
+      "desc": "ABILITY_EMPTYMIND_DESC",
+      "desc_resolved": "You can't cast spells for the rest of the battle.\nFor the rest of the battle, whenever you kill an enemy, take an extra turn.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "graphics": {
+      "animation": "psyAttack1"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "once_per_fight": "true",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "effects": {
+        "EmptyMind": "1"
+      }
+    }
+  },
+  "EmptyMind2": {
+    "variant_of": "EmptyMind",
+    "meta": {
+      "desc": "ABILITY_EMPTYMIND2_DESC",
+      "desc_resolved": "You can't cast spells for the rest of the battle.\nFor the rest of the battle, whenever you kill an enemy, take an extra turn.\nGet an extra turn when you cast this."
+    },
+    "damage_instance": {
+      "effects": {
+        "TakeExtraTurn": "1"
+      }
+    }
+  },
+  "Position": {
+    "template": "teleport",
+    "meta": {
+      "name": "ABILITY_POSITION_NAME",
+      "name_resolved": "Position",
+      "desc": "ABILITY_POSITION_DESC",
+      "desc_resolved": "Teleport exactly two tiles away, then switch stances.",
+      "animate_name": "true",
+      "class": "Monk"
+    },
+    "graphics": {
+      "animation_out": "shadowStepOut",
+      "animation_in": "shadowStepIn"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "target": {
+      "max_range": "2",
+      "min_range": "2"
+    },
+    "self_damage": {
+      "effects": {
+        "MonkStanceSwitch": "1"
+      }
+    }
+  },
+  "Position2": {
+    "variant_of": "Position",
+    "meta": {
+      "desc": "ABILITY_POSITION2_DESC",
+      "desc_resolved": "Teleport two to four tiles away, then switch stances."
+    },
+    "target": {
+      "max_range": "4",
+      "min_range": "2"
+    }
+  },
+  "ChargeFists": {
+    "template": "self_buff",
+    "keyword_tooltips": {
+      "RandomMagicMissile": "1"
+    },
+    "meta": {
+      "name": "ABILITY_CHARGEFISTS_NAME",
+      "name_resolved": "Charge Fists",
+      "desc": "ABILITY_CHARGEFISTS_DESC",
+      "desc_resolved": "Until end of turn, your basic attack emits +1 Sparkle.",
+      "class": "Monk",
+      "type_icon": "buff"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "3"
+    },
+    "damage_instance": {
+      "effects": {
+        "ChargeFists": "1"
+      }
+    }
+  },
+  "ChargeFists2": {
+    "variant_of": "ChargeFists",
+    "meta": {
+      "desc": "ABILITY_CHARGEFISTS2_DESC",
+      "desc_resolved": "Until end of turn, your basic attack emits +1 Sparkle.\nRefresh your basic attack."
+    },
+    "damage_instance": {
+      "effects": {
+        "RefreshActPoints": "1"
+      }
+    }
+  },
+  "Apprentice": {
+    "template": "spawn",
+    "meta": {
+      "name": "ABILITY_SUMMONAPPRENTICE_NAME",
+      "name_resolved": "Summon Apprentice",
+      "desc": "ABILITY_SUMMONAPPRENTICE_DESC",
+      "desc_resolved": "Summon a half-sized copy of yourself with half your stats. It's AI-controlled and can't use spells.",
+      "class": "Monk"
+    },
+    "tags": [
+      "summon"
+    ],
+    "graphics": {
+      "lob": "false",
+      "animation": "shoot"
+    },
+    "cost": {
+      "infcantrip": "true",
+      "mana": "9",
+      "must_not_be_a_summon": "true"
+    },
+    "target": {
+      "min_range": "1",
+      "max_range": "1",
+      "max_aoe": "0",
+      "range_excludes_blocking": "false",
+      "restrictions": "aoe_must_exist"
+    },
+    "spawn": {
+      "object": "PlayerCat_MonkMiniMe",
+      "faction": "self",
+      "catdata": "clone",
+      "clone_items": "true"
+    }
+  },
+  "Apprentice2": {
+    "variant_of": "Apprentice",
+    "meta": {
+      "desc": "ABILITY_SUMMONAPPRENTICE2_DESC",
+      "desc_resolved": "Summon a half-sized copy of yourself with half your stats. It's AI-controlled and CAN use spells."
+    },
+    "spawn": {
+      "object": "PlayerCat_MiniMe"
+    }
+  }
+}

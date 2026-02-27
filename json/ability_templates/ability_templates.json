@@ -1,0 +1,555 @@
+{
+  "template_move": {
+    "class": "MoveAbility",
+    "meta": {
+      "type_icon": "movement",
+      "is_move": "true"
+    },
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "graphics": {
+      "use_super_armor": "false"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "ground_move",
+      "min_range": "0",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": [
+        "must_be_moveable",
+        "must_move"
+      ]
+    }
+  },
+  "template_teleport": {
+    "class": "TeleportAbility",
+    "meta": {
+      "type_icon": "movement",
+      "is_move": "auto"
+    },
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "graphics": {
+      "use_super_armor": "false"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "standard",
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    }
+  },
+  "template_swap": {
+    "class": "SwapperAbility",
+    "meta": {
+      "type_icon": "movement"
+    },
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "graphics": {
+      "use_super_armor": "false"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "standard",
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_swappable"
+    }
+  },
+  "template_melee_attack": {
+    "class": "MeleeAttackAbility",
+    "graphics": {
+      "animation": "Default"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee",
+      "incidentally_collects_pickups": "true"
+    }
+  },
+  "template_ranged_attack": {
+    "class": "RangedAttackAbility",
+    "graphics": {
+      "animation": "shoot",
+      "projectile": "Default",
+      "lob_height": "0",
+      "speed": "15"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "knockback_mode": "character_to_tile",
+      "restrictions": "must_have_line_of_sight",
+      "can_multihit": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "template_lobbed_attack": {
+    "class": "RangedAttackAbility",
+    "graphics": {
+      "animation": "shoot",
+      "projectile": "LobbedProjectile",
+      "speed": "7"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "4+bonus_range",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "knockback_mode": "character_to_tile",
+      "restrictions": "none",
+      "can_multihit": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "template_spell": {
+    "class": "AOESpellAbility",
+    "graphics": {
+      "animation": "meow",
+      "particle": "Spike",
+      "delay": "0"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "0",
+      "max_range": "4",
+      "min_aoe": "0",
+      "max_aoe": "1",
+      "knockback_mode": "target_to_tile"
+    },
+    "damage_instance": {
+      "type": "spell"
+    }
+  },
+  "template_melee_spell": {
+    "class": "AOESpellAbility",
+    "graphics": {
+      "animation": "attack",
+      "particle": "Spike",
+      "delay": "0"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "type": "spell"
+    }
+  },
+  "template_dash_attack": {
+    "class": "DashAttackAbility",
+    "graphics": {
+      "animation": "attack"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "max_range": "10",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "orientation"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee",
+      "incidentally_collects_pickups": "true"
+    }
+  },
+  "template_trample_dash": {
+    "class": "TrampleDashAbility",
+    "graphics": {},
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "aoe_mode": "line",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "max_range": "10",
+      "knockback_mode": "zero"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "trample"
+    }
+  },
+  "template_spawn": {
+    "class": "SpawnAbility",
+    "meta": {
+      "type_icon": "spawn",
+      "icon_shell_frame": "nodamage"
+    },
+    "graphics": {
+      "animation": "throwobject"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_excludes_blocking": "true",
+      "aoe_restrictions": [
+        "exclude_blocking"
+      ],
+      "hint_can_target_empty": "true"
+    },
+    "damage_instance": {
+      "type": "spawn",
+      "damage": "5",
+      "layer": "characters",
+      "faction": "auto"
+    }
+  },
+  "template_self_buff": {
+    "class": "AOESpellAbility",
+    "graphics": {
+      "animation": "meow"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "min_range": "0",
+      "max_range": "0",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "damage": "0",
+      "layer": "self",
+      "cant_miss": "true"
+    }
+  },
+  "template_targeted_status": {
+    "class": "AOESpellAbility",
+    "graphics": {
+      "animation": "meow"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "4",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "damage": "0",
+      "cant_miss": "true"
+    }
+  },
+  "template_jump_attack": {
+    "class": "JumpAttackAbility",
+    "meta": {
+      "is_move": "auto"
+    },
+    "graphics": {
+      "animation": "Default"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "aoe_mode": "cross",
+      "min_aoe": "1",
+      "max_aoe": "1",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "range_display_include_character_size": "true",
+      "restrictions": "must_be_moveable"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee"
+    }
+  },
+  "template_jump_move": {
+    "class": "JumpAttackAbility",
+    "meta": {
+      "is_move": "true"
+    },
+    "graphics": {
+      "animation": "Default"
+    },
+    "cost": {
+      "move_points": "1",
+      "act_points": "0"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_considers_character_size": "false",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile",
+      "range_display_include_character_size": "true",
+      "range_considers_character_size": "false",
+      "restrictions": "must_be_moveable"
+    },
+    "damage_instance": {
+      "type": "none",
+      "damage": "0"
+    }
+  },
+  "template_throw_attack": {
+    "class": "ThrowAbility",
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "5",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "knockback_mode": "character_to_target",
+      "restrictions": "must_be_empty"
+    },
+    "damage_instance": {
+      "damage": "1",
+      "type": "knockblock",
+      "makes_contact": "false"
+    }
+  },
+  "template_straightshot_attack": {
+    "class": "StraightShotRanged",
+    "graphics": {
+      "animation": "shoot",
+      "projectile": "SpikeProjectile",
+      "lob_height": "0",
+      "speed": "20"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "min_aoe": "0",
+      "max_aoe": "10",
+      "knockback_mode": "character_to_tile",
+      "can_multihit": "true"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_ranged_damage",
+      "type": "ranged"
+    }
+  },
+  "template_leave": {
+    "class": "GoOffMapAbility",
+    "meta": {
+      "type_icon": "movement",
+      "animate_name": "false"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "none"
+    }
+  },
+  "template_return": {
+    "class": "ReturnToMapAbility",
+    "meta": {
+      "type_icon": "movement",
+      "animate_name": "false"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1",
+      "allow_offmap_casts": "true",
+      "must_be_offmap": "true"
+    },
+    "target": {
+      "target_mode": "tile",
+      "range_mode": "standard",
+      "min_range": "0",
+      "max_range": "mov",
+      "aoe_mode": "occupied_tiles",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "range_display_include_character_size": "true",
+      "range_considers_character_size": "false",
+      "restrictions": "must_be_moveable",
+      "allow_any_orientation": "true"
+    }
+  },
+  "template_placeholder": {
+    "class": "MeleeAttackAbility",
+    "graphics": {
+      "animation": "Default"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1",
+      "mana": "0"
+    },
+    "damage_instance": {
+      "damage": "0",
+      "type": "none"
+    }
+  },
+  "template_tile_targeted_melee_attack": {
+    "class": "MeleeAttackAbility",
+    "graphics": {
+      "animation": "Default"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "tile",
+      "min_range": "1",
+      "max_range": "1",
+      "min_aoe": "0",
+      "max_aoe": "0",
+      "aoe_considers_character_size": "true",
+      "aoe_excludes_self": "true",
+      "knockback_mode": "character_to_tile"
+    },
+    "damage_instance": {
+      "damage": "5+bonus_melee_damage",
+      "type": "melee",
+      "incidentally_collects_pickups": "true"
+    }
+  },
+  "template_laser": {
+    "class": "LaserAbility",
+    "graphics": {
+      "animation": "meow",
+      "beam_clip": "thinlaser",
+      "beam_cap": "thinlasercap"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "direction",
+      "min_aoe": "1",
+      "max_aoe": "10",
+      "knockback_mode": "target_to_tile",
+      "upgrade_straight_shot_to_piercing": "true"
+    },
+    "damage_instance": {
+      "damage": "5",
+      "type": "spell"
+    }
+  },
+  "template_multihit_self_buff": {
+    "class": "MeleeAttackAbility",
+    "graphics": {
+      "animation": "meow"
+    },
+    "cost": {
+      "move_points": "0",
+      "act_points": "1"
+    },
+    "target": {
+      "target_mode": "none",
+      "min_range": "0",
+      "max_range": "0",
+      "min_aoe": "0",
+      "max_aoe": "0"
+    },
+    "damage_instance": {
+      "type": "status_spell",
+      "damage": "0",
+      "layer": "self",
+      "cant_miss": "true"
+    }
+  }
+}

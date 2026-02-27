@@ -1,0 +1,518 @@
+{
+  "Needles": {
+    "intro": {
+      "title": "EVENT_NEEDLES_NAME",
+      "title_resolved": "Needles",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "needles",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_NEEDLES_QUES",
+      "prompt_resolved": "{catname} finds several syringes full of a unknown colored liquids.\n\nWhich one should {he} take?",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "has_token": "AdventureToken_HasTakenNeedle"
+          },
+          "reward": {
+            "prompt": "EVENT_NEEDLES_AGAIN_QUES",
+            "prompt_resolved": "{catname} wants to inject another needle!"
+          }
+        }
+      },
+      "options": {
+        "red_needle": {
+          "label": "EVENT_NEEDLES_RED_ANSW",
+          "label_resolved": "Red",
+          "stat": "lck",
+          "requirements": {
+            "not_has_token": "AdventureToken_RedNeedle"
+          },
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_NEEDLES_REW1",
+                    "prompt_resolved": "{catname} injects the red syringe. The strange liquid quickly courses through {his} veins.\n\n{He} feels stronger!",
+                    "permanent_stats": {
+                      "con": "1"
+                    }
+                  },
+                  {
+                    "random_mutation": "1",
+                    "prompt": "EVENT_NEEDLES_MUTATE_REW",
+                    "prompt_resolved": "{catname} feels a strange tingling sensation as {his} body mutates!"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW2",
+                "prompt_resolved": "{catname} feels an overwhelming burst of strength, then a strange tingling feeling as {he} gains a mutation!\n\nWhat a rush!",
+                "permanent_stats": {
+                  "con": "1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NEEDLES_REW3",
+                "prompt_resolved": "{catname}'s body quivers as the liquid from within the syringe takes hold of {his} body.",
+                "permanent_stats": {
+                  "con": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW4",
+                "prompt_resolved": "{catname} shakes as the injection leaves {his} body feeling frail and disfigured...",
+                "permanent_stats": {
+                  "con": "-1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "blue_needle": {
+          "label": "EVENT_NEEDLES_BLUE_ANSW",
+          "label_resolved": "Blue",
+          "stat": "lck",
+          "requirements": {
+            "not_has_token": "AdventureToken_BlueNeedle"
+          },
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_NEEDLES_REW5",
+                    "prompt_resolved": "{catname}'s mind spins with energy. This was a great idea!",
+                    "permanent_stats": {
+                      "int": "1"
+                    }
+                  },
+                  {
+                    "prompt": "EVENT_NEEDLES_MUTATE_REW",
+                    "prompt_resolved": "{catname} feels a strange tingling sensation as {his} body mutates!",
+                    "random_mutation": "1"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW6",
+                "prompt_resolved": "{catname} plunges the needle deep into {his} skin and squeezes the syringe.\n\nWhat an incredible feeling!",
+                "permanent_stats": {
+                  "int": "1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NEEDLES_REW7",
+                "prompt_resolved": "{catname} injects the liquid from the blue syringe...\n\n{He} feels a numbness in {his} mind as if {he} just forgot something important but can't remember what it is.",
+                "permanent_stats": {
+                  "int": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW8",
+                "prompt_resolved": "{catname}'s body quivers and mutates and {he} gets a splitting head ache!",
+                "permanent_stats": {
+                  "int": "-1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "yellow_needle": {
+          "label": "EVENT_NEEDLES_YELLOW_ANSW",
+          "label_resolved": "Yellow",
+          "stat": "lck",
+          "requirements": {
+            "not_has_token": "AdventureToken_YellowNeedle"
+          },
+          "good": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "random_pool": [
+                  {
+                    "prompt": "EVENT_NEEDLES_REW9",
+                    "prompt_resolved": "{catname} feels an odd sensation. It is hard to describe, but for some reason it feels like {he} can do anything!",
+                    "permanent_stats": {
+                      "lck": "1"
+                    }
+                  },
+                  {
+                    "prompt": "EVENT_NEEDLES_MUTATE_REW",
+                    "prompt_resolved": "{catname} feels a strange tingling sensation as {his} body mutates!",
+                    "random_mutation": "1"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW10",
+                "prompt_resolved": "{catname} injects {himself} with the yellow liquid.\n\nWow! {catname} feels great!",
+                "permanent_stats": {
+                  "lck": "1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "7",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_NEEDLES_REW11",
+                "prompt_resolved": "The needle stings as {catname} presses it under {his} skin.\n\nDid it do anything?",
+                "permanent_stats": {
+                  "lck": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_NEEDLES_REW12",
+                "prompt_resolved": "{catname}'s eyes fill with tears of discomfort after injecting {himself}.\n\n{He} feels a sudden sadness and begins shaking in despair.",
+                "permanent_stats": {
+                  "lck": "-1"
+                },
+                "random_mutation": "1",
+                "set_adventure_token": "AdventureToken_HasTakenNeedle",
+                "conditional_reward": {
+                  "requirements": {
+                    "has_token": "AdventureToken_YellowNeedle"
+                  },
+                  "reward": {},
+                  "else": {
+                    "event_now_same_cat": "Needles"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousJar": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSJAR_NAME",
+      "title_resolved": "Mysterious Jar",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_jar",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSJAR_QUES",
+      "prompt_resolved": "{catname} finds a large mysterious jar.\n\nPeering through the murky liquid, {catname} sees a creature trapped within.",
+      "setup": {
+        "conditional_reward": {
+          "requirements": {
+            "not_has_token": "AdventureToken_MysteriousJarRepeat"
+          },
+          "reward": {
+            "prompt": "EVENT_MYSTERIOUSJAR_QUES",
+            "prompt_resolved": "{catname} finds a large mysterious jar.\n\nPeering through the murky liquid, {catname} sees a creature trapped within."
+          },
+          "else": {
+            "prompt": "EVENT_MYSTERIOUSJAR_QUES2",
+            "prompt_resolved": "Try as {he} might to resist, {catname} feels an irresistible urge to open the jar and free whatever is trapped inside!"
+          }
+        }
+      },
+      "options": {
+        "free": {
+          "label": "EVENT_FREE_ANSW",
+          "label_resolved": "Free",
+          "stat": "lck",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW1",
+                "prompt_resolved": "{catname} twists the lid of the jar off and tips it over, spilling the contents onto the ground...\n\nSomething tumbles out of the jar and looks up at {catname} with gratitude!",
+                "random_pool": [
+                  {
+                    "gain_familiar": "Squirrel",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_SQUIRREL",
+                    "prompt_resolved": "It's a squirrel!"
+                  },
+                  {
+                    "gain_familiar": "Crow",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_CROW",
+                    "prompt_resolved": "It's a crow!"
+                  },
+                  {
+                    "gain_familiar": "Snake",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_SNAKE",
+                    "prompt_resolved": "It's a snake!"
+                  },
+                  {
+                    "gain_familiar": "Turtle",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_TURTLE",
+                    "prompt_resolved": "It's a turtle!"
+                  },
+                  {
+                    "gain_familiar": "Toad",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_TOAD",
+                    "prompt_resolved": "It's a toad!"
+                  },
+                  {
+                    "gain_familiar": "Catepillar",
+                    "prompt": "EVENT_MYSTERIOUSJAR_REW1_CATERPILLAR",
+                    "prompt_resolved": "It's a caterpillar!"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW2",
+                "prompt_resolved": "{catname} opens the jar and pulls out the creature within...\n\nIt shivers, as if unaccustomed to the cool air within the lab.\n\n{catname} helps wipe goo from the jar off the friendly creature!",
+                "random_pool": [
+                  {
+                    "gain_familiar": "CharmedSnakeyBones"
+                  },
+                  {
+                    "gain_familiar": "CharmedHornyCat"
+                  },
+                  {
+                    "gain_familiar": "CharmedGunCat"
+                  },
+                  {
+                    "gain_familiar": "CharmedScorpionCat"
+                  },
+                  {
+                    "gain_familiar": "CharmedMangy2"
+                  },
+                  {
+                    "gain_familiar": "CharmedBabyDeathWorm"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW3",
+                "prompt_resolved": "{catname} twists the lid and it bursts open!\n\nBefore {he} can react, the monster inside attacks {catname}, then takes off!\n\n{catname} looks around in surprise, bloodied, bruised and poisoned from the encounter.",
+                "self_status_next_fight": {
+                  "Poison": "1",
+                  "Bleed": "1",
+                  "Bruise": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW4",
+                "prompt_resolved": "{catname} pops the lid off and a terrifying creature leaps out and takes off into the next room!",
+                "spawn_unit_next_fight": {
+                  "object": [
+                    "SnakeyBones",
+                    "HornyCat",
+                    "GunCat",
+                    "ScorpionCat",
+                    "Mangy2",
+                    "BabyDeathWorm"
+                  ],
+                  "count": "1",
+                  "spawn_side": "enemies"
+                }
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "requirements": {
+            "not_has_token": "AdventureToken_MysteriousJarRepeat"
+          },
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW5",
+                "prompt_resolved": "{catname} ignores the jar and moves on.",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW6",
+                "prompt_resolved": "{catname} tries to turn away but the creature in the jar moves and {catname} can't draw {his} eyes away...",
+                "set_adventure_token": "AdventureToken_MysteriousJarRepeat",
+                "next_event_bonus": "1",
+                "event_now_same_cat": "MysteriousJar"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW7",
+                "prompt_resolved": "{catname} is spooked by whatever is inside and leaves the jar alone!",
+                "play_animation": [
+                  "resultLeave",
+                  "0"
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSJAR_REW8",
+                "prompt_resolved": "{catname} feels guilty for abandoning the creature trapped inside...\n\nHow long has it been stuck in there?",
+                "gain_disorder": "Depression"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "OddDevice": {
+    "intro": {
+      "title": "EVENT_ODDDEVICE_NAME",
+      "title_resolved": "Odd Device",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "odd_device",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_ODDDEVICE_QUES",
+      "prompt_resolved": "{catname} finds an odd device with buttons and a lever controlling a robotic device.",
+      "options": {
+        "push_buttons": {
+          "label": "EVENT_ODDDEVICE_PUSHBUTTONS_ANSW",
+          "label_resolved": "Push buttons",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ODDDEVICE_REW1",
+                "prompt_resolved": "{catname} pushes some of the buttons!\n\nAn energy beam fires at {him}, mutating {his} body!",
+                "random_mutation": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_ODDDEVICE_REW2",
+                "prompt_resolved": "{catname} reaches up and presses the buttons...\n\nA blinding hot laser beams down on {him} and {his} body mutates!",
+                "random_mutation": "2"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ODDDEVICE_REW3",
+                "prompt_resolved": "{catname} presses a button on the console...\n\nThe machine emits a devastating beam that cuts into {catname}!",
+                "injury": "random"
+              },
+              "rare": {
+                "prompt": "EVENT_ODDDEVICE_REW4",
+                "prompt_resolved": "{catname} smashes buttons on the machine until something happens...\n\nA giant laser beam slices through {his} flesh!",
+                "injury": "random"
+              }
+            }
+          }
+        },
+        "pull_lever": {
+          "label": "EVENT_ODDDEVICE_PULLLEVER_ANSW",
+          "label_resolved": "Pull lever",
+          "good": {
+            "set_frame": "4",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ODDDEVICE_REW5",
+                "prompt_resolved": "{catname} yanks the lever down.\n\nA glowing beam washes over {catname} and {he} feels... different!",
+                "learn_ability_from_pool": "AnyUnlocked"
+              },
+              "rare": {
+                "prompt": "EVENT_ODDDEVICE_REW6",
+                "prompt_resolved": "{catname} bravely pulls the lever on the device.\n\nA powerful beam of light washes over {catname}, awakening new knowledge deep in {his} mind!",
+                "learn_passive_from_pool": "AnyUnlocked"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_ODDDEVICE_REW7",
+                "prompt_resolved": "{catname} pulls the lever and is immediately struck with a sickening ray, blasting from an arm of the device above {him}!",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_ODDDEVICE_REW8",
+                "prompt_resolved": "{catname} yanks down the lever...\n\nA purple cloud of toxic smoke streams down from the device, choking {catname} in foul fumes!",
+                "gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

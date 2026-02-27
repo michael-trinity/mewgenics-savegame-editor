@@ -1,0 +1,199 @@
+{
+  "states_and_transitions": {
+    "states": {
+      "idle": [
+        "idle",
+        "blocking",
+        "gone"
+      ]
+    },
+    "transitions": {}
+  },
+  "sequences": {
+    "unprompted": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_ORGANGRINDER_UNPROMPTED_1",
+      "wait_for_cancel": "1"
+    },
+    "also": {
+      "dialog": "NPC_ORGANGRINDER_ALSO_1"
+    },
+    "out_of_stock": {
+      "set_state": "blocking",
+      "dialog": "NPC_ORGANGRINDER_OUT_OF_STOCK_1"
+    },
+    "purchase_item": {
+      "cancelable": "true",
+      "dialog_and_autopass": "NPC_ORGANGRINDER_PURCHASE_ITEM_1",
+      "wait_for_cancel": "1"
+    },
+    "tooltip": {
+      "cancelable": "true",
+      "tooltip_dialog": "NPC_ORGANGRINDER_SHOP_TOOLTIP",
+      "wait_for_cancel": "1"
+    },
+    "hide_text": {
+      "cancelable": "true",
+      "dialog_and_autopass": ""
+    },
+    "unknown": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_ORGANGRINDER_UNKNOWN_1",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_intro": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_INTRO_19",
+      "set_organ_name": "Tyler",
+      "begin_accepting_cats": "organgrinder",
+      "unlock_controls": "1",
+      "dialog_and_autopass": "NPC_ORGANGRINDER_ORGAN_INTRO_20"
+    },
+    "organ_rename": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_RENAME_8",
+      "set_organ_name": "Tyler",
+      "unlock_controls": "1"
+    },
+    "collected_new_items": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_COLLECTED_NEW_ITEMS_4",
+      "get": "npc_reward",
+      "unlock_controls": "1",
+      "dialog_and_autopass": "NPC_ORGANGRINDER_COLLECTED_NEW_ITEMS_5"
+    },
+    "collected_nothing": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_COLLECTED_NOTHING_5",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_unlock": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UNLOCK_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade1": {
+      "lock_controls": "1",
+      "set_state": "idle",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE1_8",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade2": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE2_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade3": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE3_7",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade4": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE4_8",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade5": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE5_9",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_upgrade6": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_UPGRADE6_8",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max_intro": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX_INTRO_6",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max_repeating": {
+      "do_random_sequence": [
+        "organ_max1,",
+        "organ_max2,",
+        "organ_max3,",
+        "organ_max4,",
+        "organ_max5"
+      ]
+    },
+    "organ_max1": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX1_5",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max2": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX2_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max3": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX3_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max4": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX4_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "organ_max5": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_MAX5_4",
+      "get": "npc_reward",
+      "unlock_controls": "1"
+    },
+    "gone": {
+      "set_state": "gone"
+    },
+    "organ_boneyard_intro": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_BONEYARD_INTRO_12",
+      "unlock_controls": "1"
+    },
+    "organ_throbbingdomain_intro": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_THROBBINGDOMAIN_INTRO_16",
+      "unlock_controls": "1"
+    },
+    "organ_tina3": {
+      "lock_controls": "1",
+      "set_state": "idle2",
+      "dialog": "NPC_ORGANGRINDER_ORGAN_TINA3_16",
+      "unlock_controls": "1"
+    }
+  }
+}

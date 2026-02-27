@@ -1,0 +1,152 @@
+{
+  "STARTER_PLACEHOLDER_Fighter": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_FIGHTER_DESC",
+      "desc_resolved": "Becomes a random Fighter starter ability when you lock in your team's collars.",
+      "class": "Fighter"
+    }
+  },
+  "STARTER_PLACEHOLDER_Thief": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_THIEF_DESC",
+      "desc_resolved": "Becomes a random Thief starter ability when you lock in your team's collars.",
+      "class": "Thief"
+    }
+  },
+  "STARTER_PLACEHOLDER_Tank": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_TANK_DESC",
+      "desc_resolved": "Becomes a random Tank starter ability when you lock in your team's collars.",
+      "class": "Tank"
+    }
+  },
+  "STARTER_PLACEHOLDER_Mage": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_MAGE_DESC",
+      "desc_resolved": "Becomes a random Mage starter ability when you lock in your team's collars.",
+      "class": "Mage"
+    }
+  },
+  "STARTER_PLACEHOLDER_Medic": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_MEDIC_DESC",
+      "desc_resolved": "Becomes a random Cleric starter ability when you lock in your team's collars.",
+      "class": "Medic"
+    }
+  },
+  "STARTER_PLACEHOLDER_Hunter": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_HUNTER_DESC",
+      "desc_resolved": "Becomes a random Hunter starter ability when you lock in your team's collars.",
+      "class": "Hunter"
+    }
+  },
+  "STARTER_PLACEHOLDER_Necromancer": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_NECROMANCER_DESC",
+      "desc_resolved": "Becomes a random Necromancer starter ability when you lock in your team's collars.",
+      "class": "Necromancer"
+    }
+  },
+  "STARTER_PLACEHOLDER_Butcher": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_BUTCHER_DESC",
+      "desc_resolved": "Becomes a random Butcher starter ability when you lock in your team's collars.",
+      "class": "Butcher"
+    }
+  },
+  "STARTER_PLACEHOLDER_Monk": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_MONK_DESC",
+      "desc_resolved": "Becomes a random Monk starter ability when you lock in your team's collars.",
+      "class": "Monk"
+    }
+  },
+  "STARTER_PLACEHOLDER_Druid": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_DRUID_DESC",
+      "desc_resolved": "Becomes a random Druid starter ability when you lock in your team's collars.",
+      "class": "Druid"
+    }
+  },
+  "STARTER_PLACEHOLDER_Psychic": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_PSYCHIC_DESC",
+      "desc_resolved": "Becomes a random Psychic starter ability when you lock in your team's collars.",
+      "class": "Psychic"
+    }
+  },
+  "STARTER_PLACEHOLDER_Tinkerer": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_TINKERER_DESC",
+      "desc_resolved": "Becomes a random Tinkerer starter ability when you lock in your team's collars.",
+      "class": "Tinkerer"
+    }
+  },
+  "STARTER_PLACEHOLDER_Colorless": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_COLORLESS_DESC",
+      "desc_resolved": "Becomes a random Collarless starter ability when you lock in your team's collars.",
+      "class": "Colorless"
+    }
+  },
+  "STARTER_PLACEHOLDER_Jester": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_STARTER_PLACEHOLDER_JESTER_DESC",
+      "desc_resolved": "Becomes a random ability from any class when you lock in your team's collars.",
+      "class": "Colorless"
+    }
+  },
+  "ATTACK_PLACEHOLDER_JesterBasic": {
+    "template": "placeholder",
+    "meta": {
+      "name": "ABILITY_STARTER_PLACEHOLDER_NAME",
+      "name_resolved": "???",
+      "desc": "ABILITY_ATTACK_PLACEHOLDER_JESTERBASIC_DESC",
+      "desc_resolved": "Becomes a random class basic attack when you lock in your team's collars.",
+      "class": "Colorless"
+    }
+  }
+}

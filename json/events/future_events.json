@@ -1,0 +1,392 @@
+{
+  "VendingMachine": {
+    "intro": {
+      "title": "EVENT_VENDINGMACHINE_NAME",
+      "title_resolved": "Vending Machine",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "vending_machine",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_VENDINGMACHINE_QUES",
+      "prompt_resolved": "{catname} finds a large vending machine.\n\nLooking through the glass window {he} sees rows and rows of goodies inside!",
+      "options": {
+        "put_in_coins": {
+          "label": "EVENT_VENDINGMACHINE_COINS_ANSW",
+          "label_resolved": "Put in coins",
+          "stat": "coins",
+          "animation_fail": "choice_no_coins",
+          "animation": "choice_coins_ten",
+          "stat_min": "10",
+          "stat_max": "10",
+          "good": {
+            "random_pool_consider_luck": [
+              {
+                "prompt": "EVENT_VENDINGMACHINE_REW4",
+                "prompt_resolved": "{catname} pushes {his} coins into the machine...\n\nIt begins shaking violently then falls over on top of {catname}!",
+                "set_frame": "5",
+                "gain_disorder": "HeadTrauma",
+                "play_animation": "resultVeryBad"
+              },
+              {
+                "prompt": "EVENT_VENDINGMACHINE_REW3",
+                "prompt_resolved": "{catname} hears a thunk after each time {he} slides a coin into the machine...\n\nNothing happens. What a scam! The vending machine must be broken.",
+                "set_frame": "4",
+                "play_animation": "resultBad"
+              },
+              {
+                "prompt": "EVENT_VENDINGMACHINE_REW1",
+                "prompt_resolved": "{catname} pushes coins into the slot...\n\nMoments later {he} hears a loud banging sound then some items pop out!",
+                "set_frame": "2",
+                "get_item_from_pool": "consumables",
+                "play_animation": "resultGood"
+              },
+              {
+                "prompt": "EVENT_VENDINGMACHINE_REW2",
+                "prompt_resolved": "{catname} pays 10 coins and a bunch of items tumble down out of the vending machine!",
+                "set_frame": "3",
+                "get_item_from_pool": "consumables",
+                "play_animation": "resultVeryGood"
+              }
+            ]
+          },
+          "bad": {
+            "prompt": "EVENT_VENDINGMACHINE_REW0",
+            "prompt_resolved": "{catname} tries to put in the coins but foolishly did not have enough."
+          }
+        },
+        "shake": {
+          "label": "EVENT_VENDINGMACHINE_SHAKE_ANSW",
+          "label_resolved": "Shake machine",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_VENDINGMACHINE_REW5",
+                "prompt_resolved": "{catname} shakes the vending machine and several of the items inside drop out!",
+                "set_frame": "2",
+                "get_item_from_pool": "consumables"
+              },
+              "rare": {
+                "prompt": "EVENT_VENDINGMACHINE_REW6",
+                "prompt_resolved": "{catname} deftly tips the vending machine and shakes it causing items to drop out!",
+                "set_frame": "3",
+                "get_item_from_pool": "tech_items"
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_VENDINGMACHINE_REW7",
+                "prompt_resolved": "{catname} shakes the vending machine valiantly but the items inside are held fast.",
+                "set_frame": "4"
+              },
+              "rare": {
+                "prompt": "EVENT_VENDINGMACHINE_REW8",
+                "prompt_resolved": "{catname} pushes and pulls at the machine, trying to dislodge some of the contents...\n\n{He} slips and the whole machine tips over on top of {him}!",
+                "set_frame": "5",
+                "gain_disorder": "HeadTrauma"
+              }
+            }
+          }
+        },
+        "ignore": {
+          "label": "EVENT_IGNORE_ANSW",
+          "label_resolved": "Ignore",
+          "stat": "none",
+          "animation": "choice_leave",
+          "good": {
+            "prompt": "EVENT_VENDINGMACHINE_REW9",
+            "prompt_resolved": "{catname} ignores the vending machine and moves on.",
+            "play_animation": [
+              "resultLeave",
+              "0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ComputerConsole": {
+    "intro": {
+      "title": "EVENT_COMPUTERCONSOLE_NAME",
+      "title_resolved": "Computer Console",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "computer_console",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_COMPUTERCONSOLE_QUES",
+      "prompt_resolved": "{catname} finds a computer console with an array of buttons and knobs.",
+      "options": {
+        "hack": {
+          "label": "EVENT_HACK_ANSW",
+          "label_resolved": "Hack",
+          "stat": "int",
+          "good": {
+            "reward": {
+              "common": {
+                "set_frame": "2",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW1",
+                "prompt_resolved": "{catname} presses buttons until the display reads: \n\n[b]Turn off robots?[/b]\n\n{catname} presses confirm!",
+                "global_effect_next_fight": {
+                  "Fights": "1",
+                  "CharacterTypeGainsStatusAtBattleStart": {
+                    "tag": "robot",
+                    "Stun": "1"
+                  }
+                }
+              },
+              "rare": {
+                "set_frame": "3",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW2",
+                "prompt_resolved": "{catname} hacks the console and forces open a secret compartment...\n\nA friendly robot pops out!",
+                "random_pool": [
+                  {
+                    "gain_familiar": "CharmedLoveBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSecurityBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedCopBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedSoldierBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedHangerBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedDoctorBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedTallBot"
+                  },
+                  {
+                    "gain_familiar": "CharmedFutureBot"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "set_frame": "4",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW3",
+                "prompt_resolved": "{catname} tries {his} best but has no idea what {he} is doing..."
+              },
+              "rare": {
+                "set_frame": "5",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW4",
+                "prompt_resolved": "{catname} is navigating through the console's menus when suddenly an alarm begins blaring and the screen flashes angrily!\n\nOh no, what did {he} trigger!?",
+                "global_effect_next_fight": {
+                  "Fights": "1",
+                  "CharacterTypeGainsStatusAtBattleStart": {
+                    "tag": "robot",
+                    "AllStatsUp": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "smash": {
+          "label": "EVENT_SMASH_ANSW",
+          "label_resolved": "Smash",
+          "stat": "str",
+          "good": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_COMPUTERCONSOLE_REW5",
+                "prompt_resolved": "{catname} smashes the computer and it shuts off.\n\n{He} tries to reboot it but the console is dead.",
+                "set_frame": "4"
+              },
+              "rare": {
+                "set_frame": "6",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW6",
+                "prompt_resolved": "{catname} slams the console over and over until it shuts off.\n\nThe cats notice a sudden silence as the constant buzzing of nearby machines go quiet.",
+                "global_effect_next_fight": {
+                  "Fights": "3",
+                  "CharacterTypeGainsStatusAtBattleStart": {
+                    "tag": "robot",
+                    "Stun": "1"
+                  }
+                }
+              }
+            }
+          },
+          "bad": {
+            "reward": {
+              "common": {
+                "prompt": "EVENT_COMPUTERCONSOLE_REW7",
+                "prompt_resolved": "{catname} hits the console a bunch of times but nothing seems to happen.",
+                "set_frame": "1"
+              },
+              "rare": {
+                "set_frame": "7",
+                "prompt": "EVENT_COMPUTERCONSOLE_REW8",
+                "prompt_resolved": "{catname} tries to punch the computer but the hard metal case breaks {his} paw!",
+                "injury": "str"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "MysteriousChamber": {
+    "intro": {
+      "title": "EVENT_MYSTERIOUSCHAMBER_NAME",
+      "title_resolved": "Mysterious Chamber",
+      "cat_choice": "random",
+      "subject_clip": "EventSubject",
+      "subject_frame": "mysterious_chamber",
+      "event_clip": "NonWheelEvent"
+    },
+    "main": {
+      "prompt": "EVENT_MYSTERIOUSCHAMBER_QUES",
+      "prompt_resolved": "In the center of a room {catname} finds mysterious chamber with a large chair inside.\n\nWithin the enclosure, {catname} finds 3 labelled buttons.",
+      "options": {
+        "upgrade_yourself": {
+          "label": "EVENT_MYSTERIOUSCHAMBER_UPGRADE_ANSW",
+          "label_resolved": "Upgrade",
+          "stat": "lck",
+          "good": {
+            "set_frame": "2",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW1",
+                "prompt_resolved": "The chamber whirs and a metal dome descends from the ceiling...\n\nIt lights up and {catname} feels a strong burst of energy course through {him}.",
+                "permanent_stats": {
+                  "random": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW2",
+                "prompt_resolved": "The chamber beeps and clangs as the mechanical device envelops {catname} in warm energy waves.",
+                "upgrade_ability": "random"
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "5",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW3",
+                "prompt_resolved": "The chamber lights up and {catname} sees metal components whirring above {him}...\n\nSuddenly it starts emitting a loud blaring sound and {catname} is blinded by a harsh light.",
+                "permanent_stats": {
+                  "random": "-1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW4",
+                "prompt_resolved": "The chamber comes to life around {catname} and {he} feels an odd sensation in {his} body...",
+                "scramble_basic_attack": "all"
+              }
+            }
+          }
+        },
+        "purify": {
+          "label": "EVENT_MYSTERIOUSCHAMBER_PURIFY_ANSW",
+          "label_resolved": "Purify",
+          "stat": "lck",
+          "good": {
+            "set_frame": "3",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW5",
+                "prompt_resolved": "The chamber injects {catname} and {he} feels a tension deep within {him} release.",
+                "heal_disorder": "1",
+                "self_status_next_fight": {
+                  "ConstitutionUp": "1"
+                }
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW6",
+                "prompt_resolved": "{catname} feels a wave of calm wash over {him} as {his} ailments are washed away.",
+                "heal_disorder": "2",
+                "self_status_next_fight": {
+                  "AllStatsUp": "1"
+                }
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "6",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW7",
+                "prompt_resolved": "The chamber starts beeping wildly and then it stabs {catname} with a syringe!",
+                "gain_disorder_from_pool": "all_disorders"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW8",
+                "prompt_resolved": "Arms from within the chamber dig into {catname} and inject {him} with something truly terrible!",
+                "gain_disorder_from_pool": "all_disorders"
+              }
+            }
+          }
+        },
+        "teleport": {
+          "label": "EVENT_MYSTERIOUSCHAMBER_TELEPORT_ANSW",
+          "label_resolved": "Teleport",
+          "stat": "lck",
+          "good": {
+            "set_frame": "4",
+            "play_animation": "resultHole",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW9",
+                "prompt_resolved": "The chamber lights up and {catname} is teleported to a new place!",
+                "next_event_bonus": "1",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "VendingMachine"
+                  },
+                  {
+                    "event_now_same_cat": "ComputerConsole"
+                  }
+                ]
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW10",
+                "prompt_resolved": "The chamber beeps triumphantly and then in a bright flash of light it teleports {catname}!\n\nBased on how the chamber reacted, {catname} guesses that {he} has been empowered for the next event somehow...",
+                "next_event_bonus": "2",
+                "random_pool": [
+                  {
+                    "event_now_same_cat": "VendingMachine"
+                  },
+                  {
+                    "event_now_same_cat": "ComputerConsole"
+                  }
+                ]
+              }
+            }
+          },
+          "bad": {
+            "set_frame": "7",
+            "play_animation": "resultHole",
+            "reward": {
+              "common": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW11",
+                "prompt_resolved": "The doors slam shut and {catname} is whisked away to a new place...\n\nStraight into an ambush!",
+                "ambush_next_basic_fights": "1"
+              },
+              "rare": {
+                "prompt": "EVENT_MYSTERIOUSCHAMBER_REW12",
+                "prompt_resolved": "An alarm siren blares as the doors to the chamber slam shut.\n\n{catname} feels a sense of dread overwhelm {him} as the doors begin to slide open...",
+                "next_event_bonus": "-2",
+                "event_now_same_cat": "random"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
