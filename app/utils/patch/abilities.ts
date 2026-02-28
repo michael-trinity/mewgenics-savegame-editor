@@ -1,5 +1,4 @@
-import { u64LE, concatBytes, packU64 } from '../binary'
-import { writeU32LE } from '../binary'
+import { concatBytes, packU64, writeU32LE } from '../binary'
 import { parseU64Run } from '../parse/abilities'
 
 /**

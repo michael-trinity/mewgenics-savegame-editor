@@ -103,15 +103,27 @@ function applyLevel() {
 
 <template>
   <div class="h-full overflow-y-auto p-6">
-    <div v-if="!cat.stats" class="text-muted">
+    <div
+      v-if="!cat.stats"
+      class="text-muted"
+    >
       Stats not found in this cat's data.
     </div>
 
-    <div v-else class="space-y-4 max-w-md">
+    <div
+      v-else
+      class="space-y-4 max-w-md"
+    >
       <!-- HP & Status -->
-      <div v-if="cat.combat" class="rounded-lg border border-default p-4 mb-2">
+      <div
+        v-if="cat.combat"
+        class="rounded-lg border border-default p-4 mb-2"
+      >
         <div class="flex items-center gap-3 mb-3">
-          <span class="text-lg" title="HP">&#x2764;&#xFE0F;</span>
+          <span
+            class="text-lg"
+            title="HP"
+          >&#x2764;&#xFE0F;</span>
           <span class="font-medium text-sm w-12">HP</span>
           <template v-if="hpIsSentinel">
             <span class="text-emerald-400 font-bold">Full (default)</span>
@@ -125,18 +137,27 @@ function applyLevel() {
               class="w-24 px-2 py-1 rounded border border-default bg-default text-center font-bold"
               @input="applyHp"
             >
-            <span v-if="maxHp" class="text-sm text-muted">/ {{ maxHp }}</span>
+            <span
+              v-if="maxHp"
+              class="text-sm text-muted"
+            >/ {{ maxHp }}</span>
           </template>
         </div>
 
         <div class="flex items-center gap-3 mb-3">
-          <span class="text-lg" title="Status">&#x1F3AF;</span>
+          <span
+            class="text-lg"
+            title="Status"
+          >&#x1F3AF;</span>
           <span class="font-medium text-sm w-12">Status</span>
-          <span :class="statusColor(cat.combat.statusEffect)" class="font-medium capitalize">
+          <span
+            :class="statusColor(cat.combat.statusEffect)"
+            class="font-medium capitalize"
+          >
             {{ cat.combat.statusEffect }}
           </span>
           <UBadge
-            v-if="cat.combat.statusEffect !== 'none' && !['str','dex','con','int','spd','cha','lck'].includes(cat.combat.statusEffect)"
+            v-if="cat.combat.statusEffect !== 'none' && !['str', 'dex', 'con', 'int', 'spd', 'cha', 'lck'].includes(cat.combat.statusEffect)"
             color="warning"
             variant="subtle"
             size="md"
@@ -153,7 +174,10 @@ function applyLevel() {
           </UBadge>
         </div>
 
-        <div v-if="!hpIsSentinel" class="flex gap-2">
+        <div
+          v-if="!hpIsSentinel"
+          class="flex gap-2"
+        >
           <UButton
             icon="i-lucide-heart"
             label="Full Heal"
@@ -166,15 +190,24 @@ function applyLevel() {
       </div>
 
       <!-- Mana & Regen -->
-      <div v-if="cat.stats" class="rounded-lg border border-default p-4 mb-2">
+      <div
+        v-if="cat.stats"
+        class="rounded-lg border border-default p-4 mb-2"
+      >
         <div class="flex items-center gap-3 mb-3">
-          <span class="text-lg" title="Max Mana">&#x1F4A7;</span>
+          <span
+            class="text-lg"
+            title="Max Mana"
+          >&#x1F4A7;</span>
           <span class="font-medium text-sm w-12">Mana</span>
           <span class="font-bold text-sky-400">{{ maxMana }}</span>
           <span class="text-xs text-muted">CHA ({{ cat.stats.cha }}) &times; 3</span>
         </div>
         <div class="flex items-center gap-3">
-          <span class="text-lg" title="Mana Regen">&#x26A1;</span>
+          <span
+            class="text-lg"
+            title="Mana Regen"
+          >&#x26A1;</span>
           <span class="font-medium text-sm w-12">Regen</span>
           <span class="font-bold text-violet-400">{{ manaRegen }}</span>
           <span class="text-xs text-muted">INT ({{ cat.stats.int }}) per turn</span>
@@ -182,8 +215,14 @@ function applyLevel() {
       </div>
 
       <!-- Level -->
-      <div v-if="currentLevel !== null" class="flex items-center gap-3">
-        <span class="w-8 text-lg" title="Level">⭐</span>
+      <div
+        v-if="currentLevel !== null"
+        class="flex items-center gap-3"
+      >
+        <span
+          class="w-8 text-lg"
+          title="Level"
+        >⭐</span>
         <span class="w-12 font-medium text-sm">Level</span>
         <input
           v-model.number="editableLevel"
@@ -196,8 +235,15 @@ function applyLevel() {
       </div>
 
       <!-- Base Stats -->
-      <div v-for="(name, i) in STAT_NAMES" :key="name" class="flex items-center gap-3">
-        <span class="w-8 text-lg" :title="name">{{ STAT_EMOJI[i] }}</span>
+      <div
+        v-for="(name, i) in STAT_NAMES"
+        :key="name"
+        class="flex items-center gap-3"
+      >
+        <span
+          class="w-8 text-lg"
+          :title="name"
+        >{{ STAT_EMOJI[i] }}</span>
         <span class="w-12 font-medium text-sm">{{ name }}</span>
         <input
           v-model.number="editableStats[i]"

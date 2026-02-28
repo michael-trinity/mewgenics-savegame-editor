@@ -47,7 +47,7 @@ const activeOptions = computed<SearchOption[]>(() => {
       label: entry?.name ?? id,
       badge: entry?.class,
       stats: entry ? formatAbilityStats(entry) : undefined,
-      description: entry?.description,
+      description: entry?.description
     })
   }
   return opts
@@ -62,7 +62,7 @@ const passiveOptions = computed<SearchOption[]>(() => {
       id,
       label: entry.name || id,
       badge: entry.class,
-      stats: formatPassiveStats(entry.passives),
+      stats: formatPassiveStats(entry.passives)
     })
   }
   return opts
@@ -77,7 +77,7 @@ const disorderOptions = computed<SearchOption[]>(() => {
       id,
       label: entry.name || id,
       badge: entry.class,
-      stats: formatPassiveStats(entry.passives),
+      stats: formatPassiveStats(entry.passives)
     })
   }
   return opts
@@ -219,11 +219,17 @@ function canClear(slot: AbilitySlot): boolean {
 
 <template>
   <div class="h-full overflow-y-auto p-6">
-    <div v-if="cat.abilities.length === 0" class="text-muted">
+    <div
+      v-if="cat.abilities.length === 0"
+      class="text-muted"
+    >
       No ability data found for this cat.
     </div>
 
-    <div v-else class="space-y-2 max-w-xl">
+    <div
+      v-else
+      class="space-y-2 max-w-xl"
+    >
       <div
         v-for="slot in cat.abilities"
         :key="slot.label"
@@ -238,7 +244,10 @@ function canClear(slot: AbilitySlot): boolean {
 
         <div class="flex-1 min-w-0">
           <!-- Editing mode -->
-          <div v-if="editingSlot === slot" class="space-y-2">
+          <div
+            v-if="editingSlot === slot"
+            class="space-y-2"
+          >
             <EditorSearchSelect
               :model-value="editValue"
               :options="getOptions(slot.label)"
@@ -259,8 +268,19 @@ function canClear(slot: AbilitySlot): boolean {
               />
 
               <div class="ml-auto flex items-center gap-1">
-                <UButton size="md" color="primary" icon="i-lucide-check" @click="applyEdit" />
-                <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="cancelEdit" />
+                <UButton
+                  size="md"
+                  color="primary"
+                  icon="i-lucide-check"
+                  @click="applyEdit"
+                />
+                <UButton
+                  size="md"
+                  color="neutral"
+                  variant="ghost"
+                  icon="i-lucide-x"
+                  @click="cancelEdit"
+                />
               </div>
             </div>
           </div>
@@ -269,25 +289,44 @@ function canClear(slot: AbilitySlot): boolean {
           <div v-else>
             <div class="flex items-center gap-2">
               <span class="font-medium text-sm">{{ displayName(slot) }}</span>
-              <UBadge v-if="displayClass(slot)" color="primary" variant="subtle" size="md">
+              <UBadge
+                v-if="displayClass(slot)"
+                color="primary"
+                variant="subtle"
+                size="md"
+              >
                 {{ displayClass(slot) }}
               </UBadge>
-              <UBadge v-if="slot.tier" color="neutral" variant="subtle" size="md">
+              <UBadge
+                v-if="slot.tier"
+                color="neutral"
+                variant="subtle"
+                size="md"
+              >
                 T{{ slot.tier }}
               </UBadge>
               <span class="text-xs text-muted font-mono ml-auto">{{ slot.abilityId }}</span>
             </div>
-            <div v-if="displayStats(slot)" class="text-xs text-muted mt-0.5">
+            <div
+              v-if="displayStats(slot)"
+              class="text-xs text-muted mt-0.5"
+            >
               {{ displayStats(slot) }}
             </div>
-            <div v-if="displayDescription(slot)" class="text-xs text-muted mt-0.5 line-clamp-2">
+            <div
+              v-if="displayDescription(slot)"
+              class="text-xs text-muted mt-0.5 line-clamp-2"
+            >
               {{ displayDescription(slot) }}
             </div>
           </div>
         </div>
 
         <!-- Actions -->
-        <div v-if="!isFixedSlot(slot.label) && editingSlot !== slot" class="shrink-0 mt-0.5 flex items-center gap-0.5">
+        <div
+          v-if="!isFixedSlot(slot.label) && editingSlot !== slot"
+          class="shrink-0 mt-0.5 flex items-center gap-0.5"
+        >
           <UButton
             size="md"
             color="neutral"

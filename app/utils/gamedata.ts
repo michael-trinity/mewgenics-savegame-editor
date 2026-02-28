@@ -2,22 +2,22 @@ import type {
   AbilitiesDB, AbilityEntry, PassiveCatalogEntry, DisorderCatalogEntry,
   ItemsDB, ItemEntry,
   MutationsDB, MutationEntry,
-  ClassesDB, ClassEntry
+  ClassesDB
 } from '~/types/database'
 
 const IDENT_RE = /^[A-Za-z_][A-Za-z0-9_]*$/
 
-function asSet(data: any, key: string): Set<string> {
-  const v = data?.[key]
+function asSet(data: unknown, key: string): Set<string> {
+  const v = (data as Record<string, unknown>)?.[key]
   if (!Array.isArray(v)) return new Set()
-  return new Set(v.filter((x: any) => typeof x === 'string'))
+  return new Set(v.filter((x: unknown) => typeof x === 'string'))
 }
 
-function asIntMap(data: any, key: string): Map<string, number> {
-  const v = data?.[key]
+function asIntMap(data: unknown, key: string): Map<string, number> {
+  const v = (data as Record<string, unknown>)?.[key]
   const out = new Map<string, number>()
   if (v && typeof v === 'object' && !Array.isArray(v)) {
-    for (const [k, val] of Object.entries(v)) {
+    for (const [k, val] of Object.entries(v as Record<string, unknown>)) {
       if (typeof val === 'number') out.set(k, val)
       else if (typeof val === 'string' && /^\d+$/.test(val)) out.set(k, parseInt(val))
     }
@@ -33,27 +33,32 @@ const ABILITY_CLASS_FILES = [
   'butcher', 'colorless', 'jester', 'terminator'
 ]
 
-function parseAbilityEntry(id: string, raw: any): AbilityEntry | null {
+function parseAbilityEntry(id: string, raw: unknown): AbilityEntry | null {
   if (!raw || typeof raw !== 'object') return null
+  const r = raw as Record<string, unknown>
   // Skip variant entries that just override a parent — they often lack name/desc
-  if (raw.variant_of && !raw.name) return null
+  if (r.variant_of && !r.name) return null
+
+  const cost = r.cost && typeof r.cost === 'object' ? r.cost as Record<string, unknown> : null
+  const dmg = r.damage_instance && typeof r.damage_instance === 'object' ? r.damage_instance as Record<string, unknown> : null
+  const tgt = r.target && typeof r.target === 'object' ? r.target as Record<string, unknown> : null
 
   return {
     id,
-    name: raw.name || id,
-    description: raw.description || '',
-    class: raw.class || '',
-    mana: raw.cost?.mana || null,
-    damage: raw.damage_instance?.damage || null,
-    effects: raw.damage_instance?.effects && typeof raw.damage_instance.effects === 'object'
+    name: typeof r.name === 'string' ? r.name : id,
+    description: typeof r.description === 'string' ? r.description : '',
+    class: typeof r.class === 'string' ? r.class : '',
+    mana: cost && typeof cost.mana === 'string' ? cost.mana : null,
+    damage: dmg && typeof dmg.damage === 'string' ? dmg.damage : null,
+    effects: dmg?.effects && typeof dmg.effects === 'object'
       ? Object.fromEntries(
-        Object.entries(raw.damage_instance.effects)
-          .filter(([k]) => k !== 'VisualFX' && k !== 'VisualFXTile')
-          .map(([k, v]) => [k, String(v)])
-      )
+          Object.entries(dmg.effects as Record<string, unknown>)
+            .filter(([k]) => k !== 'VisualFX' && k !== 'VisualFXTile')
+            .map(([k, v]) => [k, String(v)])
+        )
       : null,
-    range: raw.target?.max_range || null,
-    template: raw.template || null
+    range: tgt && typeof tgt.max_range === 'string' ? tgt.max_range : null,
+    template: typeof r.template === 'string' ? r.template : null
   }
 }
 
@@ -80,7 +85,7 @@ export async function loadAbilitiesDB(): Promise<AbilitiesDB> {
 
   for (const classData of results) {
     if (!classData || typeof classData !== 'object') continue
-    for (const [id, raw] of Object.entries(classData as Record<string, any>)) {
+    for (const [id, raw] of Object.entries(classData as Record<string, unknown>)) {
       const entry = parseAbilityEntry(id, raw)
       if (entry) {
         allAbilities.set(id, entry)
@@ -95,21 +100,24 @@ export async function loadAbilitiesDB(): Promise<AbilitiesDB> {
   // Load passives catalog
   const passivesCatalog = new Map<string, PassiveCatalogEntry>()
   try {
-    const pData: any = await $fetch('/data/passives_catalog.json')
+    const pData = await $fetch('/data/passives_catalog.json')
     if (pData && typeof pData === 'object') {
-      for (const [id, raw] of Object.entries(pData as Record<string, any>)) {
+      for (const [id, raw] of Object.entries(pData as Record<string, unknown>)) {
         if (!raw || typeof raw !== 'object') continue
-        const tier1 = raw.tiers?.['1']
+        const r = raw as Record<string, unknown>
+        const tiers = r.tiers && typeof r.tiers === 'object' ? r.tiers as Record<string, unknown> : null
+        const tier1 = tiers?.['1'] && typeof tiers['1'] === 'object' ? tiers['1'] as Record<string, unknown> : null
+        const nameToken = typeof r.name_token === 'string' ? r.name_token : id
         passivesCatalog.set(id, {
           id,
-          name: raw.name_token?.replace(/^PASSIVE_/, '').replace(/_NAME$/, '') || id,
-          class: raw.class || '',
-          maxTier: raw.max_tier || 1,
-          passives: tier1?.passives || {}
+          name: nameToken.replace(/^PASSIVE_/, '').replace(/_NAME$/, ''),
+          class: typeof r.class === 'string' ? r.class : '',
+          maxTier: typeof r.max_tier === 'number' ? r.max_tier : 1,
+          passives: tier1?.passives && typeof tier1.passives === 'object' ? tier1.passives as Record<string, string> : {}
         })
         passives.add(id)
-        if (!passiveTiers.has(id) && raw.max_tier) {
-          passiveTiers.set(id, raw.max_tier)
+        if (!passiveTiers.has(id) && typeof r.max_tier === 'number') {
+          passiveTiers.set(id, r.max_tier)
         }
       }
     }
@@ -118,21 +126,24 @@ export async function loadAbilitiesDB(): Promise<AbilitiesDB> {
   // Load disorders catalog
   const disordersCatalog = new Map<string, DisorderCatalogEntry>()
   try {
-    const dData: any = await $fetch('/data/disorders_catalog.json')
+    const dData = await $fetch('/data/disorders_catalog.json')
     if (dData && typeof dData === 'object') {
-      for (const [id, raw] of Object.entries(dData as Record<string, any>)) {
+      for (const [id, raw] of Object.entries(dData as Record<string, unknown>)) {
         if (!raw || typeof raw !== 'object') continue
-        const tier1 = raw.tiers?.['1']
+        const r = raw as Record<string, unknown>
+        const tiers = r.tiers && typeof r.tiers === 'object' ? r.tiers as Record<string, unknown> : null
+        const tier1 = tiers?.['1'] && typeof tiers['1'] === 'object' ? tiers['1'] as Record<string, unknown> : null
+        const nameToken = typeof r.name_token === 'string' ? r.name_token : id
         disordersCatalog.set(id, {
           id,
-          name: raw.name_token?.replace(/^DISORDER_/, '').replace(/_NAME$/, '') || id,
-          class: raw.class || '',
-          maxTier: raw.max_tier || 1,
-          passives: tier1?.passives || {}
+          name: nameToken.replace(/^DISORDER_/, '').replace(/_NAME$/, ''),
+          class: typeof r.class === 'string' ? r.class : '',
+          maxTier: typeof r.max_tier === 'number' ? r.max_tier : 1,
+          passives: tier1?.passives && typeof tier1.passives === 'object' ? tier1.passives as Record<string, string> : {}
         })
         disorders.add(id)
-        if (!disorderTiers.has(id) && raw.max_tier) {
-          disorderTiers.set(id, raw.max_tier)
+        if (!disorderTiers.has(id) && typeof r.max_tier === 'number') {
+          disorderTiers.set(id, r.max_tier)
         }
       }
     }
@@ -160,25 +171,26 @@ const ITEM_FILES = [
   'cursed_items', 'parasites'
 ]
 
-function parseItemEntry(id: string, raw: any): ItemEntry | null {
+function parseItemEntry(id: string, raw: unknown): ItemEntry | null {
   if (!raw || typeof raw !== 'object') return null
-  if (raw.variant_of && !raw.name_resolved) return null
+  const r = raw as Record<string, unknown>
+  if (r.variant_of && !r.name_resolved) return null
 
   const stats: Record<string, number> = {}
   for (const s of ['str', 'dex', 'con', 'int', 'spd', 'cha', 'lck']) {
-    const v = raw[s]
-    if (v !== undefined) stats[s] = typeof v === 'number' ? v : parseInt(v) || 0
+    const v = r[s]
+    if (v !== undefined) stats[s] = typeof v === 'number' ? v : parseInt(String(v)) || 0
   }
 
   let durStr: string | null = null
-  if (raw.durability !== undefined) {
-    durStr = Array.isArray(raw.durability) ? raw.durability.join('-').replace(/,/g, '') : String(raw.durability)
+  if (r.durability !== undefined) {
+    durStr = Array.isArray(r.durability) ? r.durability.join('-').replace(/,/g, '') : String(r.durability)
   }
 
   // Resolve {aux} placeholder and strip game markup
-  let desc = raw.desc_resolved || ''
-  if (raw.aux !== undefined && raw.aux !== '-1') {
-    desc = desc.replace(/\{aux\}/g, String(raw.aux))
+  let desc = typeof r.desc_resolved === 'string' ? r.desc_resolved : ''
+  if (r.aux !== undefined && r.aux !== '-1') {
+    desc = desc.replace(/\{aux\}/g, String(r.aux))
   }
   // Strip [s:.7]...[/s] size tags, [img:...] image tags, \n → space
   desc = desc
@@ -189,24 +201,24 @@ function parseItemEntry(id: string, raw: any): ItemEntry | null {
 
   return {
     id,
-    name: raw.name_resolved || id,
+    name: typeof r.name_resolved === 'string' ? r.name_resolved : id,
     desc,
-    kind: raw.kind || 'trinket',
-    rarity: raw.rarity || 'common',
-    cursed: raw.cursed === 'true' || raw.cursed === true,
+    kind: typeof r.kind === 'string' ? r.kind : 'trinket',
+    rarity: typeof r.rarity === 'string' ? r.rarity : 'common',
+    cursed: r.cursed === 'true' || r.cursed === true,
     stats,
-    shield: raw.shield ? (typeof raw.shield === 'number' ? raw.shield : parseInt(raw.shield) || null) : null,
+    shield: r.shield ? (typeof r.shield === 'number' ? r.shield : parseInt(String(r.shield)) || null) : null,
     durability: durStr
   }
 }
 
 export async function loadItemsDB(): Promise<ItemsDB> {
-  const data: any = await $fetch('/data/items.json')
+  const data = await $fetch('/data/items.json')
 
   const items = new Set<string>()
   const consumables = new Set<string>()
 
-  function addList(dst: Set<string>, v: any) {
+  function addList(dst: Set<string>, v: unknown) {
     if (Array.isArray(v)) {
       for (const x of v) {
         if (typeof x === 'string') dst.add(x)
@@ -217,9 +229,10 @@ export async function loadItemsDB(): Promise<ItemsDB> {
   if (Array.isArray(data)) {
     addList(items, data)
   } else if (data && typeof data === 'object') {
-    addList(items, data.items)
-    addList(items, data.all)
-    for (const [k, v] of Object.entries(data)) {
+    const d = data as Record<string, unknown>
+    addList(items, d.items)
+    addList(items, d.all)
+    for (const [k, v] of Object.entries(d)) {
       if (k === 'meta') continue
       if (k === 'consumables') addList(consumables, v)
       addList(items, v)
@@ -244,7 +257,7 @@ export async function loadItemsDB(): Promise<ItemsDB> {
 
   for (const fileData of results) {
     if (!fileData || typeof fileData !== 'object') continue
-    for (const [id, raw] of Object.entries(fileData as Record<string, any>)) {
+    for (const [id, raw] of Object.entries(fileData as Record<string, unknown>)) {
       const entry = parseItemEntry(id, raw)
       if (entry) {
         allItems.set(id, entry)
@@ -267,38 +280,41 @@ export async function loadItemsDB(): Promise<ItemsDB> {
 // ── Mutations ──
 
 export async function loadMutationsDB(): Promise<MutationsDB> {
-  const data: any = await $fetch('/data/mutations.json')
+  const data = await $fetch('/data/mutations.json')
 
   const byCategory = new Map<string, Map<string, MutationEntry>>()
 
-  let source = data?.mutations ?? data?.by_category
+  const d = data && typeof data === 'object' ? data as Record<string, unknown> : null
+  const source = d?.mutations ?? d?.by_category
   if (!source || typeof source !== 'object') {
     return { byCategory }
   }
 
   const STAT_KEYS = ['str', 'dex', 'con', 'int', 'spd', 'cha', 'lck', 'shield', 'divine_shield']
 
-  for (const [cat, mp] of Object.entries(source)) {
+  for (const [cat, mp] of Object.entries(source as Record<string, unknown>)) {
     if (typeof cat !== 'string' || !mp || typeof mp !== 'object') continue
     const catMap = new Map<string, MutationEntry>()
-    for (const [k, v] of Object.entries(mp as Record<string, any>)) {
+    for (const [k, v] of Object.entries(mp as Record<string, unknown>)) {
       if (typeof v === 'object' && v !== null) {
+        const vr = v as Record<string, unknown>
         // Parse stats from the entry (may be in v.stats object or as top-level keys)
         const stats: Record<string, number> = {}
-        if (v.stats && typeof v.stats === 'object') {
+        if (vr.stats && typeof vr.stats === 'object') {
+          const vstats = vr.stats as Record<string, unknown>
           for (const s of STAT_KEYS) {
-            const sv = v.stats[s]
+            const sv = vstats[s]
             if (sv !== undefined) {
-              const n = typeof sv === 'number' ? sv : parseInt(sv)
+              const n = typeof sv === 'number' ? sv : parseInt(String(sv))
               if (!isNaN(n)) stats[s] = n
             }
           }
         }
         catMap.set(k, {
-          name: typeof v.name === 'string' ? v.name : null,
-          tag: typeof v.tag === 'string' ? v.tag : null,
-          desc: typeof v.desc === 'string' ? v.desc : null,
-          descResolved: typeof v.desc_resolved === 'string' ? v.desc_resolved : null,
+          name: typeof vr.name === 'string' ? vr.name : null,
+          tag: typeof vr.tag === 'string' ? vr.tag : null,
+          desc: typeof vr.desc === 'string' ? vr.desc : null,
+          descResolved: typeof vr.desc_resolved === 'string' ? vr.desc_resolved : null,
           stats
         })
       } else {
@@ -314,29 +330,32 @@ export async function loadMutationsDB(): Promise<MutationsDB> {
 // ── Classes ──
 
 export async function loadClassesDB(): Promise<ClassesDB> {
-  const data: any = await $fetch('/data/classes.json')
+  const data = await $fetch('/data/classes.json')
   const classes: ClassesDB = new Map()
 
-  const source = data?.classes
+  const d = data && typeof data === 'object' ? data as Record<string, unknown> : null
+  const source = d?.classes
   if (!source || typeof source !== 'object') return classes
 
   const STAT_KEYS = ['str', 'dex', 'con', 'int', 'spd', 'cha', 'lck']
 
-  for (const [classId, raw] of Object.entries(source as Record<string, any>)) {
+  for (const [classId, raw] of Object.entries(source as Record<string, unknown>)) {
     if (!raw || typeof raw !== 'object') continue
+    const r = raw as Record<string, unknown>
     const statMods: Record<string, number> = {}
-    if (raw.statMods && typeof raw.statMods === 'object') {
+    if (r.statMods && typeof r.statMods === 'object') {
+      const sm = r.statMods as Record<string, unknown>
       for (const s of STAT_KEYS) {
-        const v = raw.statMods[s]
+        const v = sm[s]
         if (v !== undefined) {
-          const n = typeof v === 'number' ? v : parseInt(v)
+          const n = typeof v === 'number' ? v : parseInt(String(v))
           if (!isNaN(n) && n !== 0) statMods[s] = n
         }
       }
     }
     classes.set(classId, {
-      name: typeof raw.name === 'string' ? raw.name : classId,
-      description: typeof raw.description === 'string' ? raw.description : '',
+      name: typeof r.name === 'string' ? r.name : classId,
+      description: typeof r.description === 'string' ? r.description : '',
       statMods
     })
   }

@@ -11,7 +11,7 @@ function readLevelBonuses(view: DataView, off: number, n: number): CatStats | nu
   const vals: number[] = []
   for (let i = 0; i < 7; i++) {
     const v = view.getInt32(off + i * 4, true)
-    if (v < -10 || v > 50) return null  // sanity bound
+    if (v < -10 || v > 50) return null // sanity bound
     vals.push(v)
   }
   return {

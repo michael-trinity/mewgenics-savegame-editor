@@ -15,11 +15,11 @@ const { itemsDB } = useGameData()
 
 // Mapping from blob slot index to item kind used in byKind
 const BLOB_SLOT_TO_KIND: Record<number, string> = {
-  0: 'head',     // Hat
-  1: 'face',     // Glasses
-  2: 'neck',     // Necklace
-  3: 'weapon',   // Weapon
-  4: 'trinket',  // Trinket/Consumable
+  0: 'head', // Hat
+  1: 'face', // Glasses
+  2: 'neck', // Necklace
+  3: 'weapon', // Weapon
+  4: 'trinket' // Trinket/Consumable
 }
 
 const SLOT_ICONS: Record<number, string> = {
@@ -27,7 +27,7 @@ const SLOT_ICONS: Record<number, string> = {
   0: 'i-lucide-hard-hat',
   2: 'i-lucide-link',
   1: 'i-lucide-glasses',
-  4: 'i-lucide-gem',
+  4: 'i-lucide-gem'
 }
 
 // Show in UI order
@@ -89,7 +89,7 @@ const filteredItems = computed(() => {
 
   // Stat filters — item must have positive value for ALL checked stats
   if (activeFilters.value.size > 0) {
-    entries = entries.filter(e => {
+    entries = entries.filter((e) => {
       for (const key of activeFilters.value) {
         if (key === 'shield') {
           if (!e.shield || e.shield <= 0) return false
@@ -164,11 +164,17 @@ function statBadge(entry: ItemEntry): string {
 
 <template>
   <div class="h-full p-6">
-    <div v-if="!cat.equipment" class="text-muted">
+    <div
+      v-if="!cat.equipment"
+      class="text-muted"
+    >
       Equipment data not found for this cat.
     </div>
 
-    <div v-else class="flex gap-4 h-full">
+    <div
+      v-else
+      class="flex gap-4 h-full"
+    >
       <!-- Left: Equipment slot cards -->
       <div class="flex-1 min-w-0 space-y-2 overflow-y-auto min-h-0">
         <div
@@ -183,20 +189,36 @@ function statBadge(entry: ItemEntry): string {
           @click="slot && startEdit(slot, blobIdx)"
         >
           <div class="flex items-center gap-2 mb-1">
-            <UIcon :name="SLOT_ICONS[blobIdx] ?? 'i-lucide-circle'" class="size-3.5 text-muted" />
+            <UIcon
+              :name="SLOT_ICONS[blobIdx] ?? 'i-lucide-circle'"
+              class="size-3.5 text-muted"
+            />
             <span class="text-xs text-muted uppercase tracking-wider">{{ uiName }}</span>
           </div>
           <template v-if="slot?.itemId">
             <div class="flex items-center gap-2">
               <span class="font-medium text-sm truncate">{{ displayName(slot) }}</span>
-              <UBadge v-if="lookupItem(slot.itemId)?.cursed" variant="subtle" size="md" class="bg-purple-500/15 text-purple-400">
+              <UBadge
+                v-if="lookupItem(slot.itemId)?.cursed"
+                variant="subtle"
+                size="md"
+                class="bg-purple-500/15 text-purple-400"
+              >
                 Cursed
               </UBadge>
-              <UBadge v-if="displayRarity(slot)" color="primary" variant="subtle" size="md">
+              <UBadge
+                v-if="displayRarity(slot)"
+                color="primary"
+                variant="subtle"
+                size="md"
+              >
                 {{ displayRarity(slot) }}
               </UBadge>
             </div>
-            <div v-if="lookupItem(slot.itemId)?.desc" class="text-xs text-muted mt-0.5 line-clamp-1">
+            <div
+              v-if="lookupItem(slot.itemId)?.desc"
+              class="text-xs text-muted mt-0.5 line-clamp-1"
+            >
               {{ lookupItem(slot.itemId)!.desc }}
             </div>
             <!-- Unequip button -->
@@ -222,14 +244,23 @@ function statBadge(entry: ItemEntry): string {
       </div>
 
       <!-- Right: Item browser -->
-      <div v-if="editingSlot" class="flex-1 min-w-0 min-h-0 flex flex-col">
+      <div
+        v-if="editingSlot"
+        class="flex-1 min-w-0 min-h-0 flex flex-col"
+      >
         <div class="border border-default rounded-lg overflow-hidden flex flex-col min-h-0 flex-1">
           <!-- Header -->
           <div class="shrink-0 flex items-center justify-between px-3 py-2 border-b border-default bg-elevated">
             <span class="text-sm font-medium">
               {{ editingSlot.itemId ? 'Replace' : 'Equip' }} — {{ BLOB_SLOT_TO_KIND[editingBlobIdx] }}
             </span>
-            <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="cancelEdit" />
+            <UButton
+              size="md"
+              color="neutral"
+              variant="ghost"
+              icon="i-lucide-x"
+              @click="cancelEdit"
+            />
           </div>
 
           <!-- Search + Filters -->
@@ -260,7 +291,10 @@ function statBadge(entry: ItemEntry): string {
 
           <!-- Item list -->
           <div class="flex-1 min-h-0 overflow-y-auto p-2 space-y-2">
-            <div v-if="filteredItems.length === 0" class="px-3 py-6 text-center text-sm text-muted">
+            <div
+              v-if="filteredItems.length === 0"
+              class="px-3 py-6 text-center text-sm text-muted"
+            >
               No items match
             </div>
             <div
@@ -271,18 +305,38 @@ function statBadge(entry: ItemEntry): string {
             >
               <div class="flex items-center gap-2">
                 <span class="font-medium text-sm">{{ entry.name }}</span>
-                <UBadge v-if="entry.cursed" variant="subtle" size="md" class="bg-purple-500/15 text-purple-400">
+                <UBadge
+                  v-if="entry.cursed"
+                  variant="subtle"
+                  size="md"
+                  class="bg-purple-500/15 text-purple-400"
+                >
                   Cursed
                 </UBadge>
-                <UBadge color="primary" variant="subtle" size="md">{{ entry.rarity }}</UBadge>
-                <span v-if="entry.shield" class="text-xs text-blue-400">
+                <UBadge
+                  color="primary"
+                  variant="subtle"
+                  size="md"
+                >
+                  {{ entry.rarity }}
+                </UBadge>
+                <span
+                  v-if="entry.shield"
+                  class="text-xs text-blue-400"
+                >
                   Shield {{ entry.shield }}
                 </span>
               </div>
-              <div v-if="statBadge(entry)" class="text-xs text-muted mt-1">
+              <div
+                v-if="statBadge(entry)"
+                class="text-xs text-muted mt-1"
+              >
                 {{ statBadge(entry) }}
               </div>
-              <div v-if="entry.desc" class="text-xs text-muted mt-1 line-clamp-2">
+              <div
+                v-if="entry.desc"
+                class="text-xs text-muted mt-1 line-clamp-2"
+              >
                 {{ entry.desc }}
               </div>
             </div>
@@ -291,7 +345,10 @@ function statBadge(entry: ItemEntry): string {
       </div>
 
       <!-- Placeholder when no slot is being edited -->
-      <div v-else class="flex-1 flex items-center justify-center text-muted text-sm">
+      <div
+        v-else
+        class="flex-1 flex items-center justify-center text-muted text-sm"
+      >
         Click a slot to browse items
       </div>
     </div>

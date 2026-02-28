@@ -23,7 +23,10 @@ const sections = [
 </script>
 
 <template>
-  <div v-if="saveState" class="max-w-7xl mx-auto h-[calc(100vh-var(--ui-header-height))] flex flex-col overflow-hidden">
+  <div
+    v-if="saveState"
+    class="max-w-7xl mx-auto h-[calc(100vh-var(--ui-header-height))] flex flex-col overflow-hidden"
+  >
     <!-- Top Section Nav -->
     <div class="shrink-0 border-b border-default bg-elevated/50">
       <div class="flex gap-1 px-4">
@@ -38,7 +41,10 @@ const sections = [
           ]"
           @click="activeSection = sec.key"
         >
-          <UIcon :name="sec.icon" class="size-4" />
+          <UIcon
+            :name="sec.icon"
+            class="size-4"
+          />
           {{ sec.label }}
         </button>
       </div>

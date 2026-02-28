@@ -1,9 +1,9 @@
-import type { Database } from 'sql.js'
+import type { Database, SqlJsStatic, SqlValue } from 'sql.js'
 import initSqlJs from 'sql.js'
 
-let sqlPromise: Promise<any> | null = null
+let sqlPromise: Promise<SqlJsStatic> | null = null
 
-async function initSQL(): Promise<any> {
+async function initSQL(): Promise<SqlJsStatic> {
   if (!sqlPromise) {
     // Fetch the WASM binary ourselves to avoid Vite dev server
     // intercepting the request and returning the SPA HTML fallback
@@ -26,7 +26,7 @@ export function exportDatabase(db: Database): Uint8Array {
   return db.export()
 }
 
-export function queryBlob(db: Database, sql: string, params: any[] = []): Uint8Array | null {
+export function queryBlob(db: Database, sql: string, params: SqlValue[] = []): Uint8Array | null {
   const stmt = db.prepare(sql)
   stmt.bind(params)
   if (stmt.step()) {
@@ -39,7 +39,7 @@ export function queryBlob(db: Database, sql: string, params: any[] = []): Uint8A
   return null
 }
 
-export function queryScalar<T = any>(db: Database, sql: string, params: any[] = []): T | null {
+export function queryScalar<T = SqlValue>(db: Database, sql: string, params: SqlValue[] = []): T | null {
   const stmt = db.prepare(sql)
   stmt.bind(params)
   if (stmt.step()) {
@@ -51,8 +51,8 @@ export function queryScalar<T = any>(db: Database, sql: string, params: any[] = 
   return null
 }
 
-export function queryAllRows(db: Database, sql: string, params: any[] = []): any[][] {
-  const results: any[][] = []
+export function queryAllRows(db: Database, sql: string, params: SqlValue[] = []): SqlValue[][] {
+  const results: SqlValue[][] = []
   const stmt = db.prepare(sql)
   stmt.bind(params)
   while (stmt.step()) {

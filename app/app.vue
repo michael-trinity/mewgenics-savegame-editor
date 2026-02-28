@@ -52,15 +52,26 @@ function dismissSaveModal() {
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/" class="flex items-center gap-2" @click="reset">
-          <UIcon name="i-lucide-cat" class="size-6 text-primary" />
+        <NuxtLink
+          to="/"
+          class="flex items-center gap-2"
+          @click="reset"
+        >
+          <UIcon
+            name="i-lucide-cat"
+            class="size-6 text-primary"
+          />
           <span class="font-bold text-lg">Mewgenics Save Editor</span>
         </NuxtLink>
       </template>
 
       <template #right>
         <template v-if="saveState">
-          <UBadge v-if="isDirty" color="warning" variant="subtle">
+          <UBadge
+            v-if="isDirty"
+            color="warning"
+            variant="subtle"
+          >
             Unsaved changes
           </UBadge>
 
@@ -91,7 +102,11 @@ function dismissSaveModal() {
       <NuxtPage />
     </UMain>
 
-    <UModal v-model:open="showSaveModal" title="Save file downloaded" icon="i-lucide-check-circle">
+    <UModal
+      v-model:open="showSaveModal"
+      title="Save file downloaded"
+      icon="i-lucide-check-circle"
+    >
       <template #body>
         <UAlert
           color="warning"
@@ -120,10 +135,19 @@ function dismissSaveModal() {
       <template #footer>
         <div class="w-full space-y-3">
           <label class="flex items-center gap-2 text-sm text-muted cursor-pointer">
-            <input v-model="dontShowAgain" type="checkbox" class="rounded">
+            <input
+              v-model="dontShowAgain"
+              type="checkbox"
+              class="rounded"
+            >
             Don't show this again
           </label>
-          <UButton label="Got it" color="primary" block @click="dismissSaveModal" />
+          <UButton
+            label="Got it"
+            color="primary"
+            block
+            @click="dismissSaveModal"
+          />
         </div>
       </template>
     </UModal>

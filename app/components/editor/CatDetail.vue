@@ -44,7 +44,7 @@ function applyName() {
 
 const hpText = computed(() => {
   if (!props.cat.combat) return null
-  if (props.cat.combat.hp === HP_SENTINEL) return null  // don't show for house cats
+  if (props.cat.combat.hp === HP_SENTINEL) return null // don't show for house cats
   const maxHp = getMaxHp(props.cat, itemsDB.value?.allItems, mutationsDB.value?.byCategory, classesDB.value ?? undefined)
   if (maxHp) return `${props.cat.combat.hp} / ${maxHp}`
   return String(props.cat.combat.hp)
@@ -93,8 +93,19 @@ function sexColor(sex: string): string {
             @keyup.enter="applyName"
             @keyup.escape="editingName = false"
           />
-          <UButton size="md" color="primary" icon="i-lucide-check" @click="applyName" />
-          <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="editingName = false" />
+          <UButton
+            size="md"
+            color="primary"
+            icon="i-lucide-check"
+            @click="applyName"
+          />
+          <UButton
+            size="md"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-x"
+            @click="editingName = false"
+          />
         </template>
         <template v-else>
           <h2 class="text-2xl font-bold">
@@ -108,26 +119,58 @@ function sexColor(sex: string): string {
             @click="startEditName"
           />
         </template>
-        <UBadge v-if="cat.className" color="primary" variant="subtle" size="lg">
+        <UBadge
+          v-if="cat.className"
+          color="primary"
+          variant="subtle"
+          size="lg"
+        >
           {{ cat.className }}
         </UBadge>
       </div>
       <div class="flex items-center gap-3 text-sm flex-wrap">
         <span :class="sexColor(cat.sex)">{{ cat.sex }}</span>
-        <span v-if="age !== null" class="text-muted">Age: {{ age }} days</span>
-        <span v-if="hpText" class="text-red-400 font-medium">HP: {{ hpText }}</span>
-        <span v-if="manaText" class="text-sky-400 font-medium">MP: {{ manaText }}</span>
-        <span v-if="cat.combat && cat.combat.statusEffect !== 'none'" class="text-amber-400 font-medium capitalize">
+        <span
+          v-if="age !== null"
+          class="text-muted"
+        >Age: {{ age }} days</span>
+        <span
+          v-if="hpText"
+          class="text-red-400 font-medium"
+        >HP: {{ hpText }}</span>
+        <span
+          v-if="manaText"
+          class="text-sky-400 font-medium"
+        >MP: {{ manaText }}</span>
+        <span
+          v-if="cat.combat && cat.combat.statusEffect !== 'none'"
+          class="text-amber-400 font-medium capitalize"
+        >
           {{ cat.combat.statusEffect }}
         </span>
         <span class="text-muted">Key: {{ cat.key }}</span>
-        <UBadge v-if="cat.flags.retired" color="warning" variant="subtle" size="lg">
+        <UBadge
+          v-if="cat.flags.retired"
+          color="warning"
+          variant="subtle"
+          size="lg"
+        >
           Retired
         </UBadge>
-        <UBadge v-if="cat.flags.dead" color="error" variant="subtle" size="lg">
+        <UBadge
+          v-if="cat.flags.dead"
+          color="error"
+          variant="subtle"
+          size="lg"
+        >
           Dead
         </UBadge>
-        <UBadge v-if="cat.flags.donated" color="info" variant="subtle" size="lg">
+        <UBadge
+          v-if="cat.flags.donated"
+          color="info"
+          variant="subtle"
+          size="lg"
+        >
           Donated
         </UBadge>
       </div>
@@ -146,18 +189,36 @@ function sexColor(sex: string): string {
         ]"
         @click="activeTab = tab.key"
       >
-        <UIcon :name="tab.icon" class="size-4" />
+        <UIcon
+          :name="tab.icon"
+          class="size-4"
+        />
         {{ tab.label }}
       </button>
     </div>
 
     <!-- Tab Content -->
     <div class="flex-1 min-h-0">
-      <EditorStatsEditor v-if="activeTab === 'stats'" :cat="cat" />
-      <EditorAbilityEditor v-if="activeTab === 'abilities'" :cat="cat" />
-      <EditorEquipmentEditor v-if="activeTab === 'equipment'" :cat="cat" />
-      <EditorMutationEditor v-if="activeTab === 'mutations'" :cat="cat" />
-      <EditorDetailsEditor v-if="activeTab === 'details'" :cat="cat" />
+      <EditorStatsEditor
+        v-if="activeTab === 'stats'"
+        :cat="cat"
+      />
+      <EditorAbilityEditor
+        v-if="activeTab === 'abilities'"
+        :cat="cat"
+      />
+      <EditorEquipmentEditor
+        v-if="activeTab === 'equipment'"
+        :cat="cat"
+      />
+      <EditorMutationEditor
+        v-if="activeTab === 'mutations'"
+        :cat="cat"
+      />
+      <EditorDetailsEditor
+        v-if="activeTab === 'details'"
+        :cat="cat"
+      />
     </div>
   </div>
 </template>

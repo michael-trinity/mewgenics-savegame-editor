@@ -35,11 +35,17 @@ function sexColor(sex: string): string {
 </script>
 
 <template>
-  <div v-if="teamCats.length === 0" class="p-6 text-muted text-center">
+  <div
+    v-if="teamCats.length === 0"
+    class="p-6 text-muted text-center"
+  >
     No cats are currently on an adventure.
   </div>
 
-  <div v-else class="flex h-full">
+  <div
+    v-else
+    class="flex h-full"
+  >
     <!-- Left: Team cat list -->
     <div class="w-64 shrink-0 border-r border-default overflow-y-auto">
       <div class="p-3">
@@ -60,7 +66,12 @@ function sexColor(sex: string): string {
           >
             <div class="flex items-center justify-between">
               <span class="font-medium truncate">{{ cat.name || '(unnamed)' }}</span>
-              <UBadge v-if="cat.className" color="primary" variant="subtle" size="lg">
+              <UBadge
+                v-if="cat.className"
+                color="primary"
+                variant="subtle"
+                size="lg"
+              >
                 {{ cat.className }}
               </UBadge>
             </div>
@@ -101,8 +112,14 @@ function sexColor(sex: string): string {
 
     <!-- Right: Cat detail -->
     <div class="flex-1 min-h-0 overflow-hidden">
-      <EditorCatDetail v-if="selectedCat" :cat="selectedCat" />
-      <div v-else class="p-6 text-muted text-center">
+      <EditorCatDetail
+        v-if="selectedCat"
+        :cat="selectedCat"
+      />
+      <div
+        v-else
+        class="p-6 text-muted text-center"
+      >
         Select a cat from the team to view details.
       </div>
     </div>

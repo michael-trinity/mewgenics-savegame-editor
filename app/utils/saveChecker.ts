@@ -1,4 +1,4 @@
-import { openDatabase, queryAllRows, queryBlob } from './sqlite'
+import { openDatabase, queryAllRows } from './sqlite'
 import { decompressCatBlob, recompressCatBlob } from './lz4'
 import { u32LE } from './binary'
 import { parseInventoryBlob } from './parse/inventory'
@@ -84,11 +84,11 @@ export async function checkSaveFile(
         const result = await decompressCatBlob(data)
         decompressed = result.data
         variant = result.variant
-      } catch (e: any) {
+      } catch (e: unknown) {
         results.push({
           table: 'cats', key: catKey, label: `Cat ${catKey}`,
           severity: 'error', message: 'LZ4 decompression failed',
-          details: e?.message
+          details: e instanceof Error ? e.message : undefined
         })
         continue
       }
@@ -151,11 +151,11 @@ export async function checkSaveFile(
           })
           continue
         }
-      } catch (e: any) {
+      } catch (e: unknown) {
         results.push({
           table: 'cats', key: catKey, label: catName,
           severity: 'error', message: 'Roundtrip recompress/decompress failed',
-          details: e?.message
+          details: e instanceof Error ? e.message : undefined
         })
         continue
       }
@@ -208,11 +208,11 @@ export async function checkSaveFile(
               severity: 'ok', message: `OK (${items.length} items, ${data.length}B)`
             })
           }
-        } catch (e: any) {
+        } catch (e: unknown) {
           results.push({
             table: 'files', key: fileKey, label: fileKey,
             severity: 'error', message: 'Failed to parse inventory blob',
-            details: e?.message
+            details: e instanceof Error ? e.message : undefined
           })
         }
         continue
@@ -232,11 +232,11 @@ export async function checkSaveFile(
               severity: 'ok', message: `OK (${cats.length} cats, ${data.length}B)`
             })
           }
-        } catch (e: any) {
+        } catch (e: unknown) {
           results.push({
             table: 'files', key: fileKey, label: fileKey,
             severity: 'error', message: 'Failed to parse house_state',
-            details: e?.message
+            details: e instanceof Error ? e.message : undefined
           })
         }
         continue
@@ -249,11 +249,11 @@ export async function checkSaveFile(
             table: 'files', key: fileKey, label: fileKey,
             severity: 'ok', message: `OK (${keys.length} adventure cats, ${data.length}B)`
           })
-        } catch (e: any) {
+        } catch (e: unknown) {
           results.push({
             table: 'files', key: fileKey, label: fileKey,
             severity: 'error', message: 'Failed to parse adventure_state',
-            details: e?.message
+            details: e instanceof Error ? e.message : undefined
           })
         }
         continue
@@ -294,11 +294,11 @@ export async function checkSaveFile(
           })
         }
         // Don't spam individual OK results for furniture — summarize at end
-      } catch (e: any) {
+      } catch (e: unknown) {
         results.push({
           table: 'furniture', key: fKey, label: `Furniture ${fKey}`,
           severity: 'error', message: 'Failed to parse furniture blob',
-          details: e?.message
+          details: e instanceof Error ? e.message : undefined
         })
         furnFail++
       }
@@ -319,7 +319,7 @@ export async function checkSaveFile(
     const propRows = queryAllRows(db, 'SELECT key, data FROM properties')
     let propCount = 0
     let propBlobCount = 0
-    for (const [key, data] of propRows) {
+    for (const [, data] of propRows) {
       propCount++
       if (data instanceof Uint8Array) propBlobCount++
     }
@@ -339,7 +339,6 @@ export async function checkSaveFile(
     } catch {
       // Table might not exist
     }
-
   } finally {
     db.close()
   }

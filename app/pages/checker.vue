@@ -73,11 +73,11 @@ async function handleFile(file: File) {
     results.value = await checkSaveFile(buffer, (p) => {
       progress.value = p
     })
-  } catch (e: any) {
+  } catch (e: unknown) {
     results.value = [{
       table: 'database', key: 'fatal', label: 'Database',
       severity: 'error', message: 'Failed to open save file',
-      details: e?.message
+      details: e instanceof Error ? e.message : undefined
     }]
   } finally {
     isRunning.value = false
@@ -104,11 +104,19 @@ function onDrop(e: DragEvent) {
   <div class="max-w-4xl mx-auto px-4 py-8">
     <!-- Header -->
     <div class="flex items-center gap-3 mb-6">
-      <NuxtLink to="/" class="text-muted hover:text-default transition-colors">
-        <UIcon name="i-lucide-arrow-left" class="size-5" />
+      <NuxtLink
+        to="/"
+        class="text-muted hover:text-default transition-colors"
+      >
+        <UIcon
+          name="i-lucide-arrow-left"
+          class="size-5"
+        />
       </NuxtLink>
       <div>
-        <h1 class="text-2xl font-bold">Save File Checker</h1>
+        <h1 class="text-2xl font-bold">
+          Save File Checker
+        </h1>
         <p class="text-sm text-muted mt-0.5">
           Validate LZ4 streams, blob integrity, and data structure of a .sav file
         </p>
@@ -127,18 +135,32 @@ function onDrop(e: DragEvent) {
       @dragleave="dragging = false"
       @drop.prevent="onDrop"
     >
-      <div v-if="isRunning" class="flex flex-col items-center gap-2">
-        <UIcon name="i-lucide-loader-2" class="size-8 text-primary animate-spin" />
+      <div
+        v-if="isRunning"
+        class="flex flex-col items-center gap-2"
+      >
+        <UIcon
+          name="i-lucide-loader-2"
+          class="size-8 text-primary animate-spin"
+        />
         <p class="text-sm text-muted">
           {{ progress ? `${progress.phase} (${progress.current}/${progress.total})` : 'Opening database...' }}
         </p>
       </div>
-      <div v-else class="flex flex-col items-center gap-2">
-        <UIcon name="i-lucide-file-search" class="size-8 text-muted" />
+      <div
+        v-else
+        class="flex flex-col items-center gap-2"
+      >
+        <UIcon
+          name="i-lucide-file-search"
+          class="size-8 text-muted"
+        />
         <p class="font-medium text-sm">
           {{ hasRun ? 'Drop another file to check' : 'Drop a .sav file to check integrity' }}
         </p>
-        <p class="text-xs text-muted">or click to browse</p>
+        <p class="text-xs text-muted">
+          or click to browse
+        </p>
       </div>
       <input
         ref="fileRef"
@@ -168,7 +190,10 @@ function onDrop(e: DragEvent) {
             :class="filterSeverity === 'error' ? 'bg-red-500/15 text-red-500' : 'text-red-500/70 hover:text-red-500'"
             @click="filterSeverity = 'error'"
           >
-            <UIcon name="i-lucide-circle-x" class="size-3.5" />
+            <UIcon
+              name="i-lucide-circle-x"
+              class="size-3.5"
+            />
             {{ stats.errors }} errors
           </button>
           <button
@@ -177,7 +202,10 @@ function onDrop(e: DragEvent) {
             :class="filterSeverity === 'warn' ? 'bg-amber-500/15 text-amber-500' : 'text-amber-500/70 hover:text-amber-500'"
             @click="filterSeverity = 'warn'"
           >
-            <UIcon name="i-lucide-triangle-alert" class="size-3.5" />
+            <UIcon
+              name="i-lucide-triangle-alert"
+              class="size-3.5"
+            />
             {{ stats.warnings }} warnings
           </button>
           <button
@@ -185,7 +213,10 @@ function onDrop(e: DragEvent) {
             :class="filterSeverity === 'ok' ? 'bg-emerald-500/15 text-emerald-500' : 'text-emerald-500/70 hover:text-emerald-500'"
             @click="filterSeverity = 'ok'"
           >
-            <UIcon name="i-lucide-circle-check" class="size-3.5" />
+            <UIcon
+              name="i-lucide-circle-check"
+              class="size-3.5"
+            />
             {{ stats.ok }} OK
           </button>
         </div>
@@ -196,9 +227,14 @@ function onDrop(e: DragEvent) {
         v-if="stats.errors === 0"
         class="mb-4 p-4 rounded-lg border border-emerald-500/30 bg-emerald-500/5 flex items-center gap-3"
       >
-        <UIcon name="i-lucide-circle-check" class="size-6 text-emerald-500 shrink-0" />
+        <UIcon
+          name="i-lucide-circle-check"
+          class="size-6 text-emerald-500 shrink-0"
+        />
         <div>
-          <p class="font-medium text-sm text-emerald-500">All checks passed</p>
+          <p class="font-medium text-sm text-emerald-500">
+            All checks passed
+          </p>
           <p class="text-xs text-muted mt-0.5">
             All LZ4 streams decompress and roundtrip correctly. No structural issues detected.
           </p>
@@ -208,9 +244,14 @@ function onDrop(e: DragEvent) {
         v-else
         class="mb-4 p-4 rounded-lg border border-red-500/30 bg-red-500/5 flex items-center gap-3"
       >
-        <UIcon name="i-lucide-circle-x" class="size-6 text-red-500 shrink-0" />
+        <UIcon
+          name="i-lucide-circle-x"
+          class="size-6 text-red-500 shrink-0"
+        />
         <div>
-          <p class="font-medium text-sm text-red-500">{{ stats.errors }} error{{ stats.errors > 1 ? 's' : '' }} found</p>
+          <p class="font-medium text-sm text-red-500">
+            {{ stats.errors }} error{{ stats.errors > 1 ? 's' : '' }} found
+          </p>
           <p class="text-xs text-muted mt-0.5">
             Some blobs have corrupted LZ4 streams or structural issues. The game may crash when loading these entries.
           </p>
@@ -219,7 +260,10 @@ function onDrop(e: DragEvent) {
 
       <!-- Grouped results -->
       <div class="space-y-4">
-        <div v-for="[table, items] in groupedResults" :key="table">
+        <div
+          v-for="[table, items] in groupedResults"
+          :key="table"
+        >
           <h3 class="text-sm font-medium text-muted uppercase tracking-wider mb-2">
             {{ TABLE_LABELS[table] || table }}
           </h3>
@@ -230,7 +274,7 @@ function onDrop(e: DragEvent) {
               class="flex items-start gap-2.5 px-3 py-2 rounded-lg border border-default text-sm"
               :class="{
                 'bg-red-500/5 border-red-500/20': r.severity === 'error',
-                'bg-amber-500/5 border-amber-500/20': r.severity === 'warn',
+                'bg-amber-500/5 border-amber-500/20': r.severity === 'warn'
               }"
             >
               <UIcon
@@ -243,8 +287,15 @@ function onDrop(e: DragEvent) {
                   <span class="font-medium">{{ r.label }}</span>
                   <span class="text-xs text-muted font-mono">[{{ r.key }}]</span>
                 </div>
-                <p class="text-muted text-xs mt-0.5">{{ r.message }}</p>
-                <p v-if="r.details" class="text-xs text-muted mt-0.5 font-mono">{{ r.details }}</p>
+                <p class="text-muted text-xs mt-0.5">
+                  {{ r.message }}
+                </p>
+                <p
+                  v-if="r.details"
+                  class="text-xs text-muted mt-0.5 font-mono"
+                >
+                  {{ r.details }}
+                </p>
               </div>
             </div>
           </div>
@@ -252,7 +303,10 @@ function onDrop(e: DragEvent) {
       </div>
 
       <!-- Empty filter -->
-      <div v-if="filteredResults.length === 0" class="text-center text-muted py-8 text-sm">
+      <div
+        v-if="filteredResults.length === 0"
+        class="text-center text-muted py-8 text-sm"
+      >
         No results match the current filter.
       </div>
     </template>

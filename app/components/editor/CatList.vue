@@ -71,10 +71,18 @@ function sexColor(sex: string): string {
 
         <div class="flex items-center gap-2 mt-1 text-xs">
           <span :class="sexColor(cat.sex)">{{ cat.sex }}</span>
-          <UBadge v-if="cat.className" color="primary" variant="subtle" size="md">
+          <UBadge
+            v-if="cat.className"
+            color="primary"
+            variant="subtle"
+            size="md"
+          >
             {{ cat.className }}
           </UBadge>
-          <span v-if="getCatLocation(cat.key)" class="text-muted truncate">
+          <span
+            v-if="getCatLocation(cat.key)"
+            class="text-muted truncate"
+          >
             {{ getCatLocation(cat.key) }}
           </span>
         </div>
@@ -105,13 +113,28 @@ function sexColor(sex: string): string {
           >
             {{ cat.combat.statusEffect }}
           </UBadge>
-          <UBadge v-if="cat.flags.retired" color="warning" variant="subtle" size="md">
+          <UBadge
+            v-if="cat.flags.retired"
+            color="warning"
+            variant="subtle"
+            size="md"
+          >
             Retired
           </UBadge>
-          <UBadge v-if="cat.flags.dead" color="error" variant="subtle" size="md">
+          <UBadge
+            v-if="cat.flags.dead"
+            color="error"
+            variant="subtle"
+            size="md"
+          >
             Dead
           </UBadge>
-          <UBadge v-if="cat.flags.donated" color="info" variant="subtle" size="md">
+          <UBadge
+            v-if="cat.flags.donated"
+            color="info"
+            variant="subtle"
+            size="md"
+          >
             Donated
           </UBadge>
           <UBadge

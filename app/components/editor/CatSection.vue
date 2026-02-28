@@ -11,10 +11,19 @@ const { selectedCat } = useSaveEditor()
 
     <!-- Main: Cat Detail -->
     <main class="flex-1 min-h-0 overflow-hidden p-2">
-      <EditorCatDetail v-if="selectedCat" :cat="selectedCat" />
-      <div v-else class="flex items-center justify-center h-full text-muted">
+      <EditorCatDetail
+        v-if="selectedCat"
+        :cat="selectedCat"
+      />
+      <div
+        v-else
+        class="flex items-center justify-center h-full text-muted"
+      >
         <div class="text-center">
-          <UIcon name="i-lucide-cat" class="size-12 mb-3 opacity-50" />
+          <UIcon
+            name="i-lucide-cat"
+            class="size-12 mb-3 opacity-50"
+          />
           <p>Select a cat to view details</p>
         </div>
       </div>

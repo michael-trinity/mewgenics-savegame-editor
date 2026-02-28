@@ -7,10 +7,16 @@ export interface SearchOption {
   stats?: string
 }
 
+export interface FilterGroup {
+  label: string
+  value: string
+}
+
 const props = withDefaults(defineProps<{
   options: SearchOption[]
   placeholder?: string
   modelValue?: string
+  filterGroups?: FilterGroup[]
 }>(), {
   placeholder: 'Search...',
   modelValue: ''
@@ -22,17 +28,24 @@ const emit = defineEmits<{
 
 const query = ref('')
 const open = ref(false)
+const activeFilter = ref<string | null>(null)
 const containerRef = ref<HTMLElement | null>(null)
 
 const filtered = computed(() => {
   const q = query.value.toLowerCase()
-  if (!q) return props.options.slice(0, 50)
-  return props.options
+  let opts = props.options
+
+  if (activeFilter.value) {
+    opts = opts.filter(o => o.badge === activeFilter.value)
+  }
+
+  if (!q) return opts.slice(0, 50)
+  return opts
     .filter(o =>
-      o.label.toLowerCase().includes(q) ||
-      o.id.toLowerCase().includes(q) ||
-      o.description?.toLowerCase().includes(q) ||
-      o.badge?.toLowerCase().includes(q)
+      o.label.toLowerCase().includes(q)
+      || o.id.toLowerCase().includes(q)
+      || o.description?.toLowerCase().includes(q)
+      || o.badge?.toLowerCase().includes(q)
     )
     .slice(0, 50)
 })
@@ -63,7 +76,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="containerRef" class="relative">
+  <div
+    ref="containerRef"
+    class="relative"
+  >
     <UInput
       v-model="query"
       icon="i-lucide-search"
@@ -78,7 +94,37 @@ onUnmounted(() => {
       v-if="open"
       class="absolute z-50 mt-1 w-full max-h-80 overflow-y-auto rounded-lg border border-default bg-default shadow-lg"
     >
-      <div v-if="filtered.length === 0" class="px-3 py-4 text-center text-sm text-muted">
+      <!-- Tag filter chips -->
+      <div
+        v-if="filterGroups?.length"
+        class="sticky top-0 flex flex-wrap gap-1 px-3 py-2 border-b border-default bg-default"
+      >
+        <button
+          class="px-2 py-0.5 text-xs rounded-full border transition-colors"
+          :class="activeFilter === null
+            ? 'bg-primary/15 border-primary/50 text-primary'
+            : 'border-default text-muted hover:text-default hover:border-muted'"
+          @click.stop="activeFilter = null"
+        >
+          All
+        </button>
+        <button
+          v-for="f in filterGroups"
+          :key="f.value"
+          class="px-2 py-0.5 text-xs rounded-full border transition-colors"
+          :class="activeFilter === f.value
+            ? 'bg-primary/15 border-primary/50 text-primary'
+            : 'border-default text-muted hover:text-default hover:border-muted'"
+          @click.stop="activeFilter = activeFilter === f.value ? null : f.value"
+        >
+          {{ f.label }}
+        </button>
+      </div>
+
+      <div
+        v-if="filtered.length === 0"
+        class="px-3 py-4 text-center text-sm text-muted"
+      >
         No matches found
       </div>
       <button
@@ -89,15 +135,26 @@ onUnmounted(() => {
       >
         <div class="flex items-center gap-2">
           <span class="font-medium text-sm">{{ opt.label }}</span>
-          <UBadge v-if="opt.badge" color="primary" variant="subtle" size="md">
+          <UBadge
+            v-if="opt.badge"
+            color="primary"
+            variant="subtle"
+            size="md"
+          >
             {{ opt.badge }}
           </UBadge>
           <span class="text-xs text-muted font-mono ml-auto">{{ opt.id }}</span>
         </div>
-        <div v-if="opt.stats" class="text-xs text-muted mt-0.5">
+        <div
+          v-if="opt.stats"
+          class="text-xs text-muted mt-0.5"
+        >
           {{ opt.stats }}
         </div>
-        <div v-if="opt.description" class="text-xs text-muted mt-0.5 line-clamp-2">
+        <div
+          v-if="opt.description"
+          class="text-xs text-muted mt-0.5 line-clamp-2"
+        >
           {{ opt.description }}
         </div>
       </button>

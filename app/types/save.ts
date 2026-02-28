@@ -113,7 +113,7 @@ export interface AbilitySlot {
 
 export type LZ4Variant = 'A' | 'B'
 
-export const HP_SENTINEL = 0x3FFFFFFF  // 1073741823 — means "full/default HP"
+export const HP_SENTINEL = 0x3FFFFFFF // 1073741823 — means "full/default HP"
 
 type StatSources = Pick<ParsedCat, 'stats' | 'levelBonuses' | 'className' | 'equipment' | 'mutations'>
 type ItemsMap = ReadonlyMap<string, { stats: Readonly<Record<string, number>> }>
@@ -133,17 +133,37 @@ export function getEffectiveStat(
   // CatStats uses 'luck' while items/mutations use 'lck'
   const statKey = stat === 'lck' ? 'luck' : stat
   const s = cat.stats
-  const base = statKey === 'str' ? s.str : statKey === 'dex' ? s.dex : statKey === 'con' ? s.con
-    : statKey === 'int' ? s.int : statKey === 'spd' ? s.spd : statKey === 'cha' ? s.cha
-    : statKey === 'luck' ? s.luck : undefined
+  const base = statKey === 'str'
+    ? s.str
+    : statKey === 'dex'
+      ? s.dex
+      : statKey === 'con'
+        ? s.con
+        : statKey === 'int'
+          ? s.int
+          : statKey === 'spd'
+            ? s.spd
+            : statKey === 'cha'
+              ? s.cha
+              : statKey === 'luck' ? s.luck : undefined
   if (base === undefined) return null
   let total = base
   // Level-up bonuses
   if (cat.levelBonuses) {
     const lb = cat.levelBonuses
-    const bonus = statKey === 'str' ? lb.str : statKey === 'dex' ? lb.dex : statKey === 'con' ? lb.con
-      : statKey === 'int' ? lb.int : statKey === 'spd' ? lb.spd : statKey === 'cha' ? lb.cha
-      : statKey === 'luck' ? lb.luck : 0
+    const bonus = statKey === 'str'
+      ? lb.str
+      : statKey === 'dex'
+        ? lb.dex
+        : statKey === 'con'
+          ? lb.con
+          : statKey === 'int'
+            ? lb.int
+            : statKey === 'spd'
+              ? lb.spd
+              : statKey === 'cha'
+                ? lb.cha
+                : statKey === 'luck' ? lb.luck : 0
     total += bonus
   }
   // Class stat modifiers
@@ -197,10 +217,10 @@ export function getManaRegen(
 }
 
 export interface CatCombatState {
-  statusEffect: string        // "none", "dex", "int", "str", "poisoned", "burned", "bleeding", etc.
-  hp: number                  // current HP (HP_SENTINEL = full/default)
-  hpOffset: number            // absolute offset of the HP u32 in the decompressed blob
-  statusOffset: number        // absolute offset of the status u64+string
+  statusEffect: string // "none", "dex", "int", "str", "poisoned", "burned", "bleeding", etc.
+  hp: number // current HP (HP_SENTINEL = full/default)
+  hpOffset: number // absolute offset of the HP u32 in the decompressed blob
+  statusOffset: number // absolute offset of the status u64+string
 }
 
 export interface ParsedCat {
@@ -245,11 +265,11 @@ export interface HouseCatEntry {
 export interface InventoryItem {
   name: string
   subName: string | null
-  charges: number     // -1 = infinite/not applicable
-  field1: number      // usage counter / food value
-  field2: number      // category type (0=consumable, 4=equipment-like)
-  seqId: number       // sequential item ID
-  tailByte: number    // trailing byte (0xFF for most items)
+  charges: number // -1 = infinite/not applicable
+  field1: number // usage counter / food value
+  field2: number // category type (0=consumable, 4=equipment-like)
+  seqId: number // sequential item ID
+  tailByte: number // trailing byte (0xFF for most items)
 }
 
 export interface Inventory {

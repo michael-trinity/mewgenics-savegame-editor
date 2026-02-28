@@ -105,7 +105,10 @@ function toggleDonated() {
       <div class="space-y-2 text-sm">
         <div class="flex items-center justify-between">
           <span class="text-muted">Name</span>
-          <div v-if="editingName" class="flex items-center gap-2">
+          <div
+            v-if="editingName"
+            class="flex items-center gap-2"
+          >
             <UInput
               v-model="newName"
               size="sm"
@@ -114,10 +117,24 @@ function toggleDonated() {
               placeholder="Cat name"
               @keyup.enter="applyName"
             />
-            <UButton size="md" color="primary" icon="i-lucide-check" @click="applyName" />
-            <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="editingName = false" />
+            <UButton
+              size="md"
+              color="primary"
+              icon="i-lucide-check"
+              @click="applyName"
+            />
+            <UButton
+              size="md"
+              color="neutral"
+              variant="ghost"
+              icon="i-lucide-x"
+              @click="editingName = false"
+            />
           </div>
-          <div v-else class="flex items-center gap-2">
+          <div
+            v-else
+            class="flex items-center gap-2"
+          >
             <span>{{ cat.name }}</span>
             <UButton
               size="md"
@@ -152,16 +169,25 @@ function toggleDonated() {
       <h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-3">
         Age
       </h3>
-      <div v-if="currentAge === null" class="text-muted text-sm">
+      <div
+        v-if="currentAge === null"
+        class="text-muted text-sm"
+      >
         Age data not available (missing birthday or current_day).
       </div>
-      <div v-else class="space-y-2">
+      <div
+        v-else
+        class="space-y-2"
+      >
         <div class="flex items-center gap-3">
           <span class="text-sm text-muted">Current age:</span>
           <span class="font-medium">{{ currentAge }} days</span>
         </div>
 
-        <div v-if="editingAge" class="flex items-center gap-2">
+        <div
+          v-if="editingAge"
+          class="flex items-center gap-2"
+        >
           <UInput
             v-model.number="targetAge"
             type="number"
@@ -171,8 +197,19 @@ function toggleDonated() {
             :max="500000"
             placeholder="Age in days"
           />
-          <UButton size="md" color="primary" icon="i-lucide-check" @click="applyAge" />
-          <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="editingAge = false" />
+          <UButton
+            size="md"
+            color="primary"
+            icon="i-lucide-check"
+            @click="applyAge"
+          />
+          <UButton
+            size="md"
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-x"
+            @click="editingAge = false"
+          />
         </div>
         <UButton
           v-else
@@ -194,24 +231,45 @@ function toggleDonated() {
       <div class="space-y-3">
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-sm font-medium">Retired</div>
-            <div class="text-xs text-muted">Remove retired status to make cat active again</div>
+            <div class="text-sm font-medium">
+              Retired
+            </div>
+            <div class="text-xs text-muted">
+              Remove retired status to make cat active again
+            </div>
           </div>
-          <USwitch :model-value="cat.flags.retired" @update:model-value="toggleRetired" />
+          <USwitch
+            :model-value="cat.flags.retired"
+            @update:model-value="toggleRetired"
+          />
         </div>
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-sm font-medium">Dead</div>
-            <div class="text-xs text-muted">Toggle dead status</div>
+            <div class="text-sm font-medium">
+              Dead
+            </div>
+            <div class="text-xs text-muted">
+              Toggle dead status
+            </div>
           </div>
-          <USwitch :model-value="cat.flags.dead" @update:model-value="toggleDead" />
+          <USwitch
+            :model-value="cat.flags.dead"
+            @update:model-value="toggleDead"
+          />
         </div>
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-sm font-medium">Donated</div>
-            <div class="text-xs text-muted">Toggle donated status</div>
+            <div class="text-sm font-medium">
+              Donated
+            </div>
+            <div class="text-xs text-muted">
+              Toggle donated status
+            </div>
           </div>
-          <USwitch :model-value="cat.flags.donated" @update:model-value="toggleDonated" />
+          <USwitch
+            :model-value="cat.flags.donated"
+            @update:model-value="toggleDonated"
+          />
         </div>
       </div>
     </div>

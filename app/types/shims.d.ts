@@ -1,16 +1,23 @@
 declare module 'sql.js' {
+  export type SqlValue = number | string | null | Uint8Array | bigint
+
+  export interface QueryExecResult {
+    columns: string[]
+    values: SqlValue[][]
+  }
+
   export interface Database {
-    run(sql: string, params?: any[]): Database
-    exec(sql: string): any[]
+    run(sql: string, params?: SqlValue[]): Database
+    exec(sql: string): QueryExecResult[]
     prepare(sql: string): Statement
     export(): Uint8Array
     close(): void
   }
 
   export interface Statement {
-    bind(params?: any[]): boolean
+    bind(params?: SqlValue[]): boolean
     step(): boolean
-    get(): any[]
+    get(): SqlValue[]
     free(): boolean
   }
 

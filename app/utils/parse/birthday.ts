@@ -17,7 +17,7 @@ interface BirthdayInfo {
  */
 export function findBirthdayInfo(dec: Uint8Array, currentDay?: number | null): BirthdayInfo {
   const n = dec.length
-  if (n < 64) return { className: '', birthdayDay: null, birthdayOffset: null }
+  if (n < 64) return { className: '', level: null, levelOffset: null, birthdayDay: null, birthdayOffset: null }
 
   const AGE_CAP = 500_000
 

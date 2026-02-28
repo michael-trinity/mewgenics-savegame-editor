@@ -45,12 +45,18 @@ function formatFurnitureName(name: string): string {
     </h2>
 
     <!-- Cat Placements -->
-    <div v-if="houseCats.length > 0" class="mb-8">
+    <div
+      v-if="houseCats.length > 0"
+      class="mb-8"
+    >
       <h3 class="text-lg font-semibold mb-3">
         Cat Placements ({{ houseCats.length }})
       </h3>
       <div class="space-y-4">
-        <div v-for="[room, entries] in catsByRoom" :key="room">
+        <div
+          v-for="[room, entries] in catsByRoom"
+          :key="room"
+        >
           <h4 class="text-sm font-medium text-muted uppercase tracking-wider mb-2">
             {{ room }}
           </h4>
@@ -76,7 +82,10 @@ function formatFurnitureName(name: string): string {
     </h3>
 
     <div class="space-y-6">
-      <div v-for="[room, items] in rooms" :key="room">
+      <div
+        v-for="[room, items] in rooms"
+        :key="room"
+      >
         <h4 class="text-sm font-medium text-muted uppercase tracking-wider mb-2">
           {{ room }} ({{ items.length }})
         </h4>
@@ -86,7 +95,9 @@ function formatFurnitureName(name: string): string {
             :key="item.key"
             class="p-3 rounded-lg border border-default text-sm"
           >
-            <div class="font-medium">{{ formatFurnitureName(item.name) }}</div>
+            <div class="font-medium">
+              {{ formatFurnitureName(item.name) }}
+            </div>
             <div class="text-xs text-muted mt-1">
               Position: ({{ item.x }}, {{ item.y }}) z={{ item.z }}
             </div>

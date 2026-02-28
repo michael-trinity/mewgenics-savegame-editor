@@ -40,8 +40,8 @@ export function useSaveEditor() {
       if (state.cats.length > 0) {
         selectedCatKey.value = state.cats[0]!.key
       }
-    } catch (e: any) {
-      error.value = e?.message ?? 'Failed to load save file'
+    } catch (e: unknown) {
+      error.value = e instanceof Error ? e.message : 'Failed to load save file'
       saveState.value = null
       throw e
     } finally {
@@ -178,7 +178,7 @@ export function useSaveEditor() {
     }
     const namedKey = keyMap[key]
     if (namedKey && typeof value === 'number') {
-      (saveState.value.properties as any)[namedKey] = value
+      (saveState.value.properties as unknown as Record<string, number>)[namedKey] = value
     }
     if (key === 'current_day' && typeof value === 'number') {
       saveState.value.currentDay = value

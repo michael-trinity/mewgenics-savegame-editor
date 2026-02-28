@@ -26,7 +26,7 @@ export function reParseCatFromBlob(key: number, dec: Uint8Array, variant: LZ4Var
   const flags = readStatusFlags(dec, nameEndRaw)
   const { stats, levelBonuses, offset: statsOffset } = findStats(dec)
   const combat = statsOffset !== null ? parseCombatState(dec, statsOffset) : null
-  const { className, birthdayDay, birthdayOffset } = findBirthdayInfo(dec, currentDay)
+  const { className, level, levelOffset, birthdayDay, birthdayOffset } = findBirthdayInfo(dec, currentDay)
   const mutations = parseMutationTable(dec)
   const equipment = parseEquipmentSlots(dec)
   const abilities = buildAbilitySlots(dec)
@@ -80,9 +80,9 @@ async function parseCatBlob(key: number, wrapped: Uint8Array, currentDay: number
 }
 
 function parseAllInventory(db: Database): Inventory {
-  const backpackBlob = queryBlob(db, "SELECT data FROM files WHERE key='inventory_backpack'")
-  const storageBlob = queryBlob(db, "SELECT data FROM files WHERE key='inventory_storage'")
-  const trashBlob = queryBlob(db, "SELECT data FROM files WHERE key='inventory_trash'")
+  const backpackBlob = queryBlob(db, 'SELECT data FROM files WHERE key=\'inventory_backpack\'')
+  const storageBlob = queryBlob(db, 'SELECT data FROM files WHERE key=\'inventory_storage\'')
+  const trashBlob = queryBlob(db, 'SELECT data FROM files WHERE key=\'inventory_trash\'')
 
   return {
     backpack: backpackBlob ? parseInventoryBlob(backpackBlob) : [],
@@ -123,14 +123,14 @@ export async function loadSaveFile(buffer: ArrayBuffer, fileName: string): Promi
 
     // Read house_state
     let houseCats: HouseCatEntry[] = []
-    const houseBlob = queryBlob(db, "SELECT data FROM files WHERE key='house_state'")
+    const houseBlob = queryBlob(db, 'SELECT data FROM files WHERE key=\'house_state\'')
     if (houseBlob) {
       houseCats = parseHouseState(houseBlob)
     }
 
     // Read adventure_state
     let adventureKeys: number[] = []
-    const advBlob = queryBlob(db, "SELECT data FROM files WHERE key='adventure_state'")
+    const advBlob = queryBlob(db, 'SELECT data FROM files WHERE key=\'adventure_state\'')
     if (advBlob) {
       adventureKeys = parseAdventureStateKeys(advBlob)
     }

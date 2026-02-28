@@ -67,7 +67,7 @@ const filteredItems = computed(() => {
 
   // Stat filters — item must have positive value for ALL checked stats
   if (activeFilters.value.size > 0) {
-    entries = entries.filter(e => {
+    entries = entries.filter((e) => {
       for (const key of activeFilters.value) {
         if (key === 'shield') {
           if (!e.shield || e.shield <= 0) return false
@@ -178,13 +178,22 @@ function chargesDisplay(charges: number): string {
         ]"
         @click="activeTab = tab.key"
       >
-        <UIcon :name="tab.icon" class="size-4" />
+        <UIcon
+          :name="tab.icon"
+          class="size-4"
+        />
         {{ tab.label }}
-        <UBadge v-if="inventory" color="neutral" variant="subtle" size="md" class="ml-1">
+        <UBadge
+          v-if="inventory"
+          color="neutral"
+          variant="subtle"
+          size="md"
+          class="ml-1"
+        >
           {{
             tab.key === 'backpack' ? inventory.backpack.length
             : tab.key === 'storage' ? inventory.storage.length
-            : inventory.trash.length
+              : inventory.trash.length
           }}
         </UBadge>
       </button>
@@ -193,11 +202,17 @@ function chargesDisplay(charges: number): string {
     <div class="flex-1 min-h-0 flex gap-4 px-6 py-4">
       <!-- Left: Current inventory items -->
       <div class="flex-1 min-h-0 min-w-0 overflow-y-auto">
-        <div v-if="currentItems.length === 0" class="text-muted py-8 text-center">
+        <div
+          v-if="currentItems.length === 0"
+          class="text-muted py-8 text-center"
+        >
           No items in {{ activeTab }}.
         </div>
 
-        <div v-else class="grid grid-cols-2 gap-3">
+        <div
+          v-else
+          class="grid grid-cols-2 gap-3"
+        >
           <div
             v-for="(item, idx) in currentItems"
             :key="idx"
@@ -209,37 +224,66 @@ function chargesDisplay(charges: number): string {
               title="Remove item"
               @click="onRemoveItem(idx)"
             >
-              <UIcon name="i-lucide-x" class="size-3.5" />
+              <UIcon
+                name="i-lucide-x"
+                class="size-3.5"
+              />
             </button>
 
             <!-- Item name + rarity + shield -->
             <div class="flex items-center gap-2 pr-5">
-              <span class="font-medium text-sm truncate" :title="item.name">
+              <span
+                class="font-medium text-sm truncate"
+                :title="item.name"
+              >
                 {{ getItemDisplayName(item.name) }}
               </span>
-              <UBadge v-if="getItemEntry(item.name)?.cursed" variant="subtle" size="md" class="bg-purple-500/15 text-purple-400">
+              <UBadge
+                v-if="getItemEntry(item.name)?.cursed"
+                variant="subtle"
+                size="md"
+                class="bg-purple-500/15 text-purple-400"
+              >
                 Cursed
               </UBadge>
-              <UBadge v-if="getItemRarity(item.name)" color="primary" variant="subtle" size="md">
+              <UBadge
+                v-if="getItemRarity(item.name)"
+                color="primary"
+                variant="subtle"
+                size="md"
+              >
                 {{ getItemRarity(item.name) }}
               </UBadge>
-              <span v-if="getItemEntry(item.name)?.shield" class="text-xs text-blue-400">
+              <span
+                v-if="getItemEntry(item.name)?.shield"
+                class="text-xs text-blue-400"
+              >
                 Shield {{ getItemEntry(item.name)!.shield }}
               </span>
             </div>
 
             <!-- Sub-name -->
-            <div v-if="item.subName" class="text-xs text-muted truncate mt-0.5" :title="item.subName">
+            <div
+              v-if="item.subName"
+              class="text-xs text-muted truncate mt-0.5"
+              :title="item.subName"
+            >
               {{ item.subName }}
             </div>
 
             <!-- Stats -->
-            <div v-if="getItemStats(item.name)" class="text-xs text-muted mt-1">
+            <div
+              v-if="getItemStats(item.name)"
+              class="text-xs text-muted mt-1"
+            >
               {{ getItemStats(item.name) }}
             </div>
 
             <!-- Description -->
-            <div v-if="getItemEntry(item.name)?.desc" class="text-xs text-muted mt-1 line-clamp-2">
+            <div
+              v-if="getItemEntry(item.name)?.desc"
+              class="text-xs text-muted mt-1 line-clamp-2"
+            >
               {{ getItemEntry(item.name)!.desc }}
             </div>
 
@@ -268,12 +312,21 @@ function chargesDisplay(charges: number): string {
       </div>
 
       <!-- Right: Item browser -->
-      <div v-if="showBrowser" class="flex-1 min-w-0 min-h-0 flex flex-col">
+      <div
+        v-if="showBrowser"
+        class="flex-1 min-w-0 min-h-0 flex flex-col"
+      >
         <div class="border border-default rounded-lg overflow-hidden flex flex-col min-h-0 flex-1">
           <!-- Header -->
           <div class="shrink-0 flex items-center justify-between px-3 py-2 border-b border-default bg-elevated">
             <span class="text-sm font-medium">Add to {{ activeTab }}</span>
-            <UButton size="md" color="neutral" variant="ghost" icon="i-lucide-x" @click="showBrowser = false" />
+            <UButton
+              size="md"
+              color="neutral"
+              variant="ghost"
+              icon="i-lucide-x"
+              @click="showBrowser = false"
+            />
           </div>
 
           <!-- Search + Filters -->
@@ -304,7 +357,10 @@ function chargesDisplay(charges: number): string {
 
           <!-- Item list -->
           <div class="flex-1 min-h-0 overflow-y-auto p-2 space-y-2">
-            <div v-if="filteredItems.length === 0" class="px-3 py-6 text-center text-sm text-muted">
+            <div
+              v-if="filteredItems.length === 0"
+              class="px-3 py-6 text-center text-sm text-muted"
+            >
               No items match
             </div>
             <div
@@ -315,18 +371,38 @@ function chargesDisplay(charges: number): string {
             >
               <div class="flex items-center gap-2">
                 <span class="font-medium text-sm">{{ entry.name }}</span>
-                <UBadge v-if="entry.cursed" variant="subtle" size="md" class="bg-purple-500/15 text-purple-400">
+                <UBadge
+                  v-if="entry.cursed"
+                  variant="subtle"
+                  size="md"
+                  class="bg-purple-500/15 text-purple-400"
+                >
                   Cursed
                 </UBadge>
-                <UBadge color="primary" variant="subtle" size="md">{{ entry.rarity }}</UBadge>
-                <span v-if="entry.shield" class="text-xs text-blue-400">
+                <UBadge
+                  color="primary"
+                  variant="subtle"
+                  size="md"
+                >
+                  {{ entry.rarity }}
+                </UBadge>
+                <span
+                  v-if="entry.shield"
+                  class="text-xs text-blue-400"
+                >
                   Shield {{ entry.shield }}
                 </span>
               </div>
-              <div v-if="formatItemStats(entry)" class="text-xs text-muted mt-1">
+              <div
+                v-if="formatItemStats(entry)"
+                class="text-xs text-muted mt-1"
+              >
                 {{ formatItemStats(entry) }}
               </div>
-              <div v-if="entry.desc" class="text-xs text-muted mt-1 line-clamp-2">
+              <div
+                v-if="entry.desc"
+                class="text-xs text-muted mt-1 line-clamp-2"
+              >
                 {{ entry.desc }}
               </div>
             </div>
@@ -335,7 +411,10 @@ function chargesDisplay(charges: number): string {
       </div>
 
       <!-- Placeholder when browser is closed -->
-      <div v-else class="flex-1 flex items-center justify-center text-muted text-sm">
+      <div
+        v-else
+        class="flex-1 flex items-center justify-center text-muted text-sm"
+      >
         Click "Add Item" to browse items
       </div>
     </div>

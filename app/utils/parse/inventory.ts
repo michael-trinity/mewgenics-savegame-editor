@@ -29,7 +29,8 @@ export function parseInventoryBlob(blob: Uint8Array): InventoryItem[] {
   if (!blob || blob.length < 4) return []
 
   let off = 0
-  const count = u32LE(blob, off); off += 4
+  const count = u32LE(blob, off)
+  off += 4
   if (count === 0) return []
 
   // skip version/unk u32
@@ -51,10 +52,14 @@ export function parseInventoryBlob(blob: Uint8Array): InventoryItem[] {
 
     const charges = new DataView(blob.buffer, blob.byteOffset, blob.byteLength).getInt32(off, true)
     off += 4
-    const field1 = u32LE(blob, off); off += 4
-    const field2 = u32LE(blob, off); off += 4
-    const seqId = u32LE(blob, off); off += 4
-    const tailByte = blob[off]!; off += 1
+    const field1 = u32LE(blob, off)
+    off += 4
+    const field2 = u32LE(blob, off)
+    off += 4
+    const seqId = u32LE(blob, off)
+    off += 4
+    const tailByte = blob[off]!
+    off += 1
 
     items.push({
       name,
