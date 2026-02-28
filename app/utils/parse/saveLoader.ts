@@ -33,7 +33,7 @@ export function reParseCatFromBlob(key: number, dec: Uint8Array, variant: LZ4Var
 
   return {
     key, id64, name, sex, nameEndRaw, flags, stats, levelBonuses, statsOffset, combat,
-    className, birthdayDay, birthdayOffset, mutations, equipment, abilities,
+    className, level, levelOffset, birthdayDay, birthdayOffset, mutations, equipment, abilities,
     decompressedBlob: dec, lz4Variant: variant
   }
 }
@@ -50,7 +50,7 @@ async function parseCatBlob(key: number, wrapped: Uint8Array, currentDay: number
   const flags = readStatusFlags(dec, nameEndRaw)
   const { stats, levelBonuses, offset: statsOffset } = findStats(dec)
   const combat = statsOffset !== null ? parseCombatState(dec, statsOffset) : null
-  const { className, birthdayDay, birthdayOffset } = findBirthdayInfo(dec, currentDay)
+  const { className, level, levelOffset, birthdayDay, birthdayOffset } = findBirthdayInfo(dec, currentDay)
   const mutations = parseMutationTable(dec)
   const equipment = parseEquipmentSlots(dec)
   const abilities = buildAbilitySlots(dec)
@@ -67,6 +67,8 @@ async function parseCatBlob(key: number, wrapped: Uint8Array, currentDay: number
     statsOffset,
     combat,
     className,
+    level,
+    levelOffset,
     birthdayDay,
     birthdayOffset,
     mutations,

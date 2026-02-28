@@ -1,7 +1,9 @@
-import { u64LE, i64LE, isAsciiIdent, readAscii } from '../binary'
+import { u64LE, u32LE, i64LE, isAsciiIdent, readAscii } from '../binary'
 
 interface BirthdayInfo {
   className: string
+  level: number | null
+  levelOffset: number | null
   birthdayDay: number | null
   birthdayOffset: number | null
 }
@@ -49,7 +51,10 @@ export function findBirthdayInfo(dec: Uint8Array, currentDay?: number | null): B
       if (!accept(bday)) continue
 
       const cls = readAscii(dec, strOff, ln)
-      const cand: BirthdayInfo = { className: cls, birthdayDay: bday, birthdayOffset: bdayOff }
+      // Level is stored as i32 right after the class name string (4 bytes before the f64 xpFraction)
+      const levelOffset = strEnd
+      const level = strEnd + 4 <= n ? u32LE(dec, levelOffset) : null
+      const cand: BirthdayInfo = { className: cls, level: level ?? null, levelOffset, birthdayDay: bday, birthdayOffset: bdayOff }
 
       // Prefer the last valid candidate (class block is very late in the blob)
       if (best === null || bdayOff > best.birthdayOffset!) {
@@ -69,5 +74,5 @@ export function findBirthdayInfo(dec: Uint8Array, currentDay?: number | null): B
   const full = scanRange(0, n)
   if (full) return full
 
-  return { className: '', birthdayDay: null, birthdayOffset: null }
+  return { className: '', level: null, levelOffset: null, birthdayDay: null, birthdayOffset: null }
 }

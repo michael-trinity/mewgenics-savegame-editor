@@ -215,6 +215,8 @@ export interface ParsedCat {
   statsOffset: number | null
   combat: CatCombatState | null
   className: string
+  level: number | null
+  levelOffset: number | null
   birthdayDay: number | null
   birthdayOffset: number | null
   mutations: {

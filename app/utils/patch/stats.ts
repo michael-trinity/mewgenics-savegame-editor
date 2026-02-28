@@ -14,3 +14,13 @@ export function patchStats(blob: Uint8Array, statsOffset: number, newStats: CatS
   }
   return out
 }
+
+/**
+ * Patch the level integer stored right after the class name string.
+ * levelOffset is returned by findBirthdayInfo as cat.levelOffset.
+ */
+export function patchLevel(blob: Uint8Array, levelOffset: number, newLevel: number): Uint8Array {
+  const out = new Uint8Array(blob)
+  writeI32LE(out, levelOffset, Math.max(1, newLevel))
+  return out
+}

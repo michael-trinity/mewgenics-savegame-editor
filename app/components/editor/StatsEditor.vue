@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ParsedCat, CatStats } from '~/types/save'
+import type { ParsedCat } from '~/types/save'
 import { STAT_NAMES, statsToArray, arrayToStats, HP_SENTINEL, getMaxHp, getMaxMana, getManaRegen } from '~/types/save'
-import { patchStats } from '~/utils/patch/stats'
+import { patchStats, patchLevel } from '~/utils/patch/stats'
 import { patchHp } from '~/utils/patch/hp'
 import { findStats } from '~/utils/parse/stats'
 import { parseCombatState } from '~/utils/parse/hp'
@@ -15,11 +15,14 @@ const { itemsDB, mutationsDB, classesDB } = useGameData()
 
 const editableStats = ref<number[]>([1, 1, 1, 1, 1, 1, 1])
 const editableHp = ref<number>(0)
+const editableLevel = ref<number>(1)
 
 const hpIsSentinel = computed(() => props.cat.combat?.hp === HP_SENTINEL)
 const maxHp = computed(() => getMaxHp(props.cat, itemsDB.value?.allItems, mutationsDB.value?.byCategory, classesDB.value ?? undefined) ?? 0)
 const maxMana = computed(() => getMaxMana(props.cat, itemsDB.value?.allItems, mutationsDB.value?.byCategory, classesDB.value ?? undefined) ?? 0)
 const manaRegen = computed(() => getManaRegen(props.cat, itemsDB.value?.allItems, mutationsDB.value?.byCategory, classesDB.value ?? undefined) ?? 0)
+
+const currentLevel = computed(() => props.cat.level)
 
 watch(() => props.cat.key, () => {
   if (props.cat.stats) {
@@ -28,6 +31,7 @@ watch(() => props.cat.key, () => {
   if (props.cat.combat) {
     editableHp.value = hpIsSentinel.value ? (maxHp.value || 100) : props.cat.combat.hp
   }
+  editableLevel.value = currentLevel.value ?? 1
 }, { immediate: true })
 
 function statColor(v: number): string {
@@ -87,6 +91,13 @@ function fullHealHp() {
 function maxAll() {
   editableStats.value = [10, 10, 10, 10, 10, 10, 10]
   applyStats()
+}
+
+function applyLevel() {
+  if (props.cat.levelOffset === null) return
+  const level = Math.max(1, Math.round(editableLevel.value))
+  const newBlob = patchLevel(props.cat.decompressedBlob, props.cat.levelOffset, level)
+  updateCat(props.cat.key, { decompressedBlob: newBlob, level })
 }
 </script>
 
@@ -168,6 +179,20 @@ function maxAll() {
           <span class="font-bold text-violet-400">{{ manaRegen }}</span>
           <span class="text-xs text-muted">INT ({{ cat.stats.int }}) per turn</span>
         </div>
+      </div>
+
+      <!-- Level -->
+      <div v-if="currentLevel !== null" class="flex items-center gap-3">
+        <span class="w-8 text-lg" title="Level">⭐</span>
+        <span class="w-12 font-medium text-sm">Level</span>
+        <input
+          v-model.number="editableLevel"
+          type="number"
+          min="1"
+          max="999"
+          class="w-24 px-2 py-1 rounded border border-default bg-default text-center font-bold"
+          @change="applyLevel"
+        >
       </div>
 
       <!-- Base Stats -->
