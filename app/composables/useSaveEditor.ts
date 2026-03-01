@@ -1,7 +1,9 @@
 import { toRaw } from 'vue'
 import { loadSaveFile } from '~/utils/parse/saveLoader'
 import { buildModifiedSave } from '~/utils/saveWriter'
-import type { SaveState, ParsedCat, GameProperties, InventoryItem } from '~/types/save'
+import { patchU64TierEntry } from '~/utils/patch/abilities'
+import { buildAbilitySlots } from '~/utils/parse/abilities'
+import type { SaveState, ParsedCat, GameProperties, InventoryItem, FurnitureItem } from '~/types/save'
 
 const saveState = ref<SaveState | null>(null)
 const isLoading = ref(false)
@@ -13,6 +15,8 @@ const isDirty = ref(false)
 const dirtyCatKeys = ref<Set<number>>(new Set())
 const dirtyPropertyKeys = ref<Set<string>>(new Set())
 const dirtyInventoryContainers = ref<Set<string>>(new Set())
+const furnitureDirty = ref(false)
+const deletedPropertyKeys = ref<string[]>([])
 
 export function useSaveEditor() {
   const cats = computed(() => saveState.value?.cats ?? [])
@@ -30,6 +34,8 @@ export function useSaveEditor() {
     dirtyCatKeys.value.clear()
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
+    furnitureDirty.value = false
+    deletedPropertyKeys.value = []
 
     try {
       const buffer = await file.arrayBuffer()
@@ -105,7 +111,9 @@ export function useSaveEditor() {
     const modified = await buildModifiedSave(raw.originalBytes, {
       cats: dirtyCats,
       properties: dirtyProps,
-      inventory: dirtyInventory
+      deletePropertyKeys: deletedPropertyKeys.value.length > 0 ? deletedPropertyKeys.value : undefined,
+      inventory: dirtyInventory,
+      furniture: furnitureDirty.value ? raw.furniture : undefined
     })
     return new Blob([modified as BlobPart], { type: 'application/octet-stream' })
   }
@@ -131,6 +139,8 @@ export function useSaveEditor() {
     dirtyCatKeys.value.clear()
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
+    furnitureDirty.value = false
+    deletedPropertyKeys.value = []
   }
 
   function downloadBackup(): void {
@@ -147,6 +157,21 @@ export function useSaveEditor() {
     dirtyCatKeys.value.clear()
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
+    furnitureDirty.value = false
+    deletedPropertyKeys.value = []
+  }
+
+  const namedToRawKey: Record<string, string> = {
+    currentDay: 'current_day',
+    houseGold: 'house_gold',
+    houseFood: 'house_food',
+    blankCollars: 'blank_collars',
+    adventureCoins: 'adventure_coins',
+    adventureFood: 'adventure_food',
+    saveFilePercent: 'save_file_percent',
+    houseStorageUpgrades: 'house_storage_upgrades',
+    adventureFurnitureBoxes: 'adventure_furniture_boxes',
+    minStraysTomorrow: 'min_strays_tomorrow'
   }
 
   function updateProperty<K extends keyof GameProperties>(key: K, value: GameProperties[K]): void {
@@ -155,6 +180,12 @@ export function useSaveEditor() {
     // Keep currentDay in sync
     if (key === 'currentDay') {
       saveState.value.currentDay = value as number
+    }
+    // Sync to raw map so save writer picks it up
+    const rawKey = namedToRawKey[key]
+    if (rawKey && (typeof value === 'number' || typeof value === 'string')) {
+      saveState.value.properties.raw.set(rawKey, value)
+      dirtyPropertyKeys.value.add(rawKey)
     }
     isDirty.value = true
   }
@@ -200,6 +231,76 @@ export function useSaveEditor() {
     isDirty.value = true
   }
 
+  function addFurniture(item: FurnitureItem): void {
+    if (!saveState.value) return
+    saveState.value.furniture.push(item)
+    furnitureDirty.value = true
+    isDirty.value = true
+  }
+
+  function removeFurniture(key: number): void {
+    if (!saveState.value) return
+    const idx = saveState.value.furniture.findIndex(f => f.key === key)
+    if (idx === -1) return
+    saveState.value.furniture.splice(idx, 1)
+    furnitureDirty.value = true
+    isDirty.value = true
+  }
+
+  function nextFurnitureKey(): number {
+    if (!saveState.value) return 1
+    const existing = saveState.value.furniture.map(f => f.key)
+    return existing.length > 0 ? Math.max(...existing) + 1 : 1
+  }
+
+  function savescumReset(): { deletedKeys: string[], clearedCats: string[] } {
+    if (!saveState.value) return { deletedKeys: [], clearedCats: [] }
+
+    // 1. Delete savescum tracker properties
+    const savescumKeys = [
+      'NPCRSTRACKER_steven_savescum_1alt1',
+      'NPCRSTRACKER_steven_savescum_1alt2',
+      'NPCRSTRACKER_steven_savescum_1alt3',
+      'NPCRSTRACKER_steven_savescum_2alt3'
+    ]
+
+    const deletedKeys: string[] = []
+    for (const key of savescumKeys) {
+      if (saveState.value.properties.raw.has(key)) {
+        saveState.value.properties.raw.delete(key)
+        deletedPropertyKeys.value.push(key)
+        deletedKeys.push(key)
+      }
+    }
+
+    // 2. Remove DejaVu disorder from adventure cats
+    const clearedCats: string[] = []
+    const adventureKeys = saveState.value.adventureKeys
+    for (const cat of saveState.value.cats) {
+      if (!adventureKeys.includes(cat.key)) continue
+
+      const dejaVuSlot = cat.abilities.find(
+        s => s.abilityId === 'DejaVu' && s.label.toLowerCase().includes('disorder')
+      )
+      if (!dejaVuSlot) continue
+
+      // Patch the blob to clear the disorder slot
+      if (dejaVuSlot.kind === 'u64tier' && dejaVuSlot.recordOffset != null && dejaVuSlot.byteLength != null) {
+        const newBlob = patchU64TierEntry(cat.decompressedBlob, dejaVuSlot.recordOffset, dejaVuSlot.byteLength, 'None', 1)
+        cat.decompressedBlob = newBlob
+        cat.abilities = buildAbilitySlots(newBlob)
+        dirtyCatKeys.value.add(cat.key)
+        clearedCats.push(cat.name || `Cat #${cat.key}`)
+      }
+    }
+
+    if (deletedKeys.length > 0 || clearedCats.length > 0) {
+      isDirty.value = true
+    }
+
+    return { deletedKeys, clearedCats }
+  }
+
   function getCatLocation(key: number): string {
     if (!saveState.value) return ''
     if (saveState.value.adventureKeys.includes(key)) return 'Adventure'
@@ -229,6 +330,10 @@ export function useSaveEditor() {
     reset,
     getCatLocation,
     addInventoryItem,
-    removeInventoryItem
+    removeInventoryItem,
+    addFurniture,
+    removeFurniture,
+    nextFurnitureKey,
+    savescumReset
   }
 }

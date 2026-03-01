@@ -16,9 +16,10 @@ const activeSection = ref('cats')
 const sections = [
   { key: 'cats', label: 'Cat Editor', icon: 'i-lucide-cat' },
   { key: 'team', label: 'Active Team', icon: 'i-lucide-swords' },
-  { key: 'inventory', label: 'Inventory', icon: 'i-lucide-backpack' },
   { key: 'housing', label: 'Housing', icon: 'i-lucide-house' },
-  { key: 'properties', label: 'Game Data', icon: 'i-lucide-settings' }
+  { key: 'inventory', label: 'Inventory', icon: 'i-lucide-backpack' },
+  { key: 'properties', label: 'Game Data', icon: 'i-lucide-settings' },
+  { key: 'grid-test', label: 'Grid Test', icon: 'i-lucide-grid-2x2' }
 ]
 </script>
 
@@ -54,9 +55,10 @@ const sections = [
     <div class="flex-1 min-h-0 overflow-hidden">
       <EditorCatSection v-if="activeSection === 'cats'" />
       <EditorActiveTeamSection v-if="activeSection === 'team'" />
-      <EditorInventorySection v-if="activeSection === 'inventory'" />
       <EditorHousingSection v-if="activeSection === 'housing'" />
+      <EditorInventorySection v-if="activeSection === 'inventory'" />
       <EditorPropertiesSection v-if="activeSection === 'properties'" />
+      <EditorGridTestSection v-if="activeSection === 'grid-test'" />
     </div>
   </div>
 </template>

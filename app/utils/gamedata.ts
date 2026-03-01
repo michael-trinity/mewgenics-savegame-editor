@@ -2,7 +2,8 @@ import type {
   AbilitiesDB, AbilityEntry, PassiveCatalogEntry, DisorderCatalogEntry,
   ItemsDB, ItemEntry,
   MutationsDB, MutationEntry,
-  ClassesDB
+  ClassesDB,
+  FurnitureDB, FurnitureEntry
 } from '~/types/database'
 
 const IDENT_RE = /^[A-Za-z_][A-Za-z0-9_]*$/
@@ -361,4 +362,42 @@ export async function loadClassesDB(): Promise<ClassesDB> {
   }
 
   return classes
+}
+
+// ── Furniture ──
+
+const EFFECT_KEYS = ['Comfort', 'Health', 'Appeal', 'Stimulation', 'FoodStorage', 'Evolution', 'FightBonusRewards', 'FightRisk', 'BreedSuppression']
+
+export async function loadFurnitureDB(): Promise<FurnitureDB> {
+  const data = await $fetch('/data/furniture_effects.json')
+  const db: FurnitureDB = new Map()
+
+  if (!data || typeof data !== 'object') return db
+
+  for (const [id, raw] of Object.entries(data as Record<string, unknown>)) {
+    if (!raw || typeof raw !== 'object') continue
+    const r = raw as Record<string, unknown>
+
+    const effects: Record<string, number> = {}
+    for (const k of EFFECT_KEYS) {
+      const v = r[k]
+      if (v !== undefined) {
+        const n = typeof v === 'number' ? v : parseInt(String(v))
+        if (!isNaN(n) && n !== 0) effects[k] = n
+      }
+    }
+
+    const entry: FurnitureEntry = {
+      id,
+      name: typeof r.name_resolved === 'string' ? r.name_resolved : id.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      desc: typeof r.desc_resolved === 'string' ? r.desc_resolved : '',
+      special: r.special === 'true',
+      removed: r.removed === 'true',
+      set: typeof r.set === 'string' ? r.set : null,
+      effects
+    }
+    db.set(id, entry)
+  }
+
+  return db
 }

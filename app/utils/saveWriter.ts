@@ -1,7 +1,8 @@
 import { openDatabase, exportDatabase } from './sqlite'
 import { recompressCatBlob } from './lz4'
 import { buildInventoryBlob } from './patch/inventory'
-import type { ParsedCat, InventoryItem } from '~/types/save'
+import { buildFurnitureBlob } from './patch/furniture'
+import type { ParsedCat, InventoryItem, FurnitureItem } from '~/types/save'
 
 /**
  * Convert a Uint8Array to a SQL hex literal: X'AABB...'
@@ -16,11 +17,13 @@ function sqlHexLiteral(data: Uint8Array): string {
 export interface DirtyChanges {
   cats?: ParsedCat[]
   properties?: Map<string, string | number>
+  deletePropertyKeys?: string[]
   inventory?: {
     backpack?: InventoryItem[]
     storage?: InventoryItem[]
     trash?: InventoryItem[]
   }
+  furniture?: FurnitureItem[]
 }
 
 /**
@@ -53,6 +56,13 @@ export async function buildModifiedSave(
       }
     }
 
+    // Delete property keys
+    if (changes.deletePropertyKeys) {
+      for (const key of changes.deletePropertyKeys) {
+        db.run('DELETE FROM properties WHERE key=?', [key])
+      }
+    }
+
     // Write only changed inventory containers
     if (changes.inventory) {
       if (changes.inventory.backpack) {
@@ -66,6 +76,15 @@ export async function buildModifiedSave(
       if (changes.inventory.trash) {
         const blob = buildInventoryBlob(changes.inventory.trash)
         db.run(`UPDATE files SET data=${sqlHexLiteral(blob)} WHERE key='inventory_trash'`)
+      }
+    }
+
+    // Rewrite all furniture (delete all + re-insert)
+    if (changes.furniture) {
+      db.run('DELETE FROM furniture')
+      for (const item of changes.furniture) {
+        const blob = buildFurnitureBlob(item)
+        db.run(`INSERT INTO furniture (key, data) VALUES (${item.key}, ${sqlHexLiteral(blob)})`)
       }
     }
 

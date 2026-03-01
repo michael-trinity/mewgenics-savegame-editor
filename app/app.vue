@@ -21,7 +21,7 @@ useSeoMeta({
   ogDescription: description
 })
 
-const { saveState, isDirty, downloadModifiedSave, downloadBackup, reset } = useSaveEditor()
+const { saveState, isDirty, downloadModifiedSave, downloadBackup, reset, savescumReset } = useSaveEditor()
 
 const saving = ref(false)
 const showSaveModal = ref(false)
@@ -45,6 +45,24 @@ function dismissSaveModal() {
     hideSaveModal.value = '1'
   }
   showSaveModal.value = false
+}
+
+const toast = useToast()
+
+function handleSavescumReset() {
+  const result = savescumReset()
+  const parts: string[] = []
+  if (result.deletedKeys.length > 0) {
+    parts.push(`Deleted ${result.deletedKeys.length} savescum tracker keys`)
+  }
+  if (result.clearedCats.length > 0) {
+    parts.push(`Removed DejaVu from: ${result.clearedCats.join(', ')}`)
+  }
+  if (parts.length === 0) {
+    toast.add({ title: 'Nothing to reset', description: 'No savescum data or DejaVu found.', color: 'neutral' })
+  } else {
+    toast.add({ title: 'Savescum Reset', description: parts.join('. '), color: 'success' })
+  }
 }
 </script>
 
@@ -74,6 +92,15 @@ function dismissSaveModal() {
           >
             Unsaved changes
           </UBadge>
+
+          <UButton
+            icon="i-lucide-rotate-ccw"
+            label="Savescum Reset"
+            color="warning"
+            variant="ghost"
+            size="sm"
+            @click="handleSavescumReset"
+          />
 
           <UButton
             icon="i-lucide-download"

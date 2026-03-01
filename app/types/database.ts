@@ -151,6 +151,28 @@ export interface ClassEntry {
 
 export type ClassesDB = Map<string, ClassEntry>
 
+// ── Furniture ──
+
+export interface FurnitureEntry {
+  id: string
+  name: string
+  desc: string
+  special: boolean
+  removed: boolean
+  set: string | null
+  effects: Record<string, number>
+}
+
+export type FurnitureDB = Map<string, FurnitureEntry>
+
+export function formatFurnitureEffects(entry: FurnitureEntry): string {
+  const parts: string[] = []
+  for (const [k, v] of Object.entries(entry.effects)) {
+    if (v !== 0) parts.push(`${v > 0 ? '+' : ''}${v} ${k}`)
+  }
+  return parts.join(', ')
+}
+
 // ── Passive/Disorder catalog (raw JSON shape) ──
 
 export interface PassiveEntry {
