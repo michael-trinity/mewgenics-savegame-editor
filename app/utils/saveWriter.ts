@@ -52,14 +52,21 @@ export async function buildModifiedSave(
     // Write only changed properties
     if (changes.properties) {
       for (const [key, value] of changes.properties.entries()) {
-        db.run('UPDATE properties SET data=? WHERE key=?', [value, key])
+        const escaped = String(key).replace(/'/g, '\'\'')
+        if (typeof value === 'number') {
+          db.run(`UPDATE properties SET data=${value} WHERE key='${escaped}'`)
+        } else {
+          const escapedVal = String(value).replace(/'/g, '\'\'')
+          db.run(`UPDATE properties SET data='${escapedVal}' WHERE key='${escaped}'`)
+        }
       }
     }
 
     // Delete property keys
     if (changes.deletePropertyKeys) {
       for (const key of changes.deletePropertyKeys) {
-        db.run('DELETE FROM properties WHERE key=?', [key])
+        const escaped = String(key).replace(/'/g, '\'\'')
+        db.run(`DELETE FROM properties WHERE key='${escaped}'`)
       }
     }
 
