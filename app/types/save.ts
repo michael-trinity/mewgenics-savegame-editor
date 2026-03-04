@@ -320,6 +320,7 @@ export interface SaveState {
   originalBytes: Uint8Array
   currentDay: number | null
   cats: ParsedCat[]
+  deadCats: ParsedCat[]
   houseCats: HouseCatEntry[]
   adventureKeys: number[]
   inventory: Inventory

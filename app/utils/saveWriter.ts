@@ -2,7 +2,8 @@ import { openDatabase, exportDatabase } from './sqlite'
 import { recompressCatBlob } from './lz4'
 import { buildInventoryBlob } from './patch/inventory'
 import { buildFurnitureBlob } from './patch/furniture'
-import type { ParsedCat, InventoryItem, FurnitureItem } from '~/types/save'
+import { buildHouseStateBlob } from './patch/houseState'
+import type { ParsedCat, InventoryItem, FurnitureItem, HouseCatEntry } from '~/types/save'
 
 /**
  * Convert a Uint8Array to a SQL hex literal: X'AABB...'
@@ -24,6 +25,7 @@ export interface DirtyChanges {
     trash?: InventoryItem[]
   }
   furniture?: FurnitureItem[]
+  houseCats?: HouseCatEntry[]
 }
 
 /**
@@ -93,6 +95,12 @@ export async function buildModifiedSave(
         const blob = buildFurnitureBlob(item)
         db.run(`INSERT INTO furniture (key, data) VALUES (${item.key}, ${sqlHexLiteral(blob)})`)
       }
+    }
+
+    // Rewrite house_state
+    if (changes.houseCats) {
+      const blob = buildHouseStateBlob(changes.houseCats)
+      db.run(`UPDATE files SET data=${sqlHexLiteral(blob)} WHERE key='house_state'`)
     }
 
     return exportDatabase(db)

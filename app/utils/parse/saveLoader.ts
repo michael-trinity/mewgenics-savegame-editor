@@ -141,29 +141,29 @@ export async function loadSaveFile(buffer: ArrayBuffer, fileName: string): Promi
     // Read furniture
     const furniture = parseAllFurniture(db)
 
-    // Determine which cat keys to load
+    // Determine active cat keys (house + adventure)
     const activeKeys = new Set<number>()
     for (const h of houseCats) activeKeys.add(h.key)
     for (const k of adventureKeys) activeKeys.add(k)
 
-    // If no active cats found, load all
-    let catKeys: number[]
-    if (activeKeys.size > 0) {
-      catKeys = [...activeKeys]
-    } else {
-      const allRows = queryAllRows(db, 'SELECT key FROM cats')
-      catKeys = allRows.map(r => r[0] as number)
-    }
+    // Load all cat keys from DB
+    const allCatRows = queryAllRows(db, 'SELECT key FROM cats')
+    const allCatKeys = allCatRows.map(r => r[0] as number)
 
-    // Parse each cat
+    // Parse each cat, separating active from dead/inactive
     const cats: ParsedCat[] = []
-    for (const key of catKeys) {
+    const deadCats: ParsedCat[] = []
+    for (const key of allCatKeys) {
       const blob = queryBlob(db, 'SELECT data FROM cats WHERE key=?', [key])
       if (!blob) continue
 
       try {
         const cat = await parseCatBlob(key, blob, currentDay)
-        cats.push(cat)
+        if (activeKeys.has(key)) {
+          cats.push(cat)
+        } else {
+          deadCats.push(cat)
+        }
       } catch (e) {
         console.warn(`Failed to parse cat ${key}:`, e)
       }
@@ -171,12 +171,14 @@ export async function loadSaveFile(buffer: ArrayBuffer, fileName: string): Promi
 
     // Sort by name
     cats.sort((a, b) => a.name.localeCompare(b.name))
+    deadCats.sort((a, b) => a.name.localeCompare(b.name))
 
     return {
       fileName,
       originalBytes: new Uint8Array(buffer),
       currentDay,
       cats,
+      deadCats,
       houseCats,
       adventureKeys,
       inventory,

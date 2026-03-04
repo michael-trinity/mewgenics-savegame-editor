@@ -18,6 +18,7 @@ const sections = [
   { key: 'team', label: 'Active Team', icon: 'i-lucide-swords' },
   { key: 'housing', label: 'Housing', icon: 'i-lucide-house' },
   { key: 'inventory', label: 'Inventory', icon: 'i-lucide-backpack' },
+  { key: 'graveyard', label: 'Graveyard', icon: 'i-lucide-cross' },
   { key: 'properties', label: 'Game Data', icon: 'i-lucide-settings' },
   { key: 'grid-test', label: 'Grid Test', icon: 'i-lucide-grid-2x2' }
 ]
@@ -57,6 +58,7 @@ const sections = [
       <EditorActiveTeamSection v-if="activeSection === 'team'" />
       <EditorHousingSection v-if="activeSection === 'housing'" />
       <EditorInventorySection v-if="activeSection === 'inventory'" />
+      <EditorGraveyardSection v-if="activeSection === 'graveyard'" />
       <EditorPropertiesSection v-if="activeSection === 'properties'" />
       <EditorGridTestSection v-if="activeSection === 'grid-test'" />
     </div>

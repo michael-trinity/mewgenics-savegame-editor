@@ -169,7 +169,7 @@ export async function loadAbilitiesDB(): Promise<AbilitiesDB> {
 const ITEM_FILES = [
   'head_items', 'face_items', 'neck_items', 'weapons', 'trinkets',
   'consumables', 'armor_sets', 'legendary_items', 'special_class_items',
-  'cursed_items', 'parasites'
+  'cursed_items', 'parasites', 'beanies_quest_items', 'legacy_quest_items'
 ]
 
 function parseItemEntry(id: string, raw: unknown): ItemEntry | null {

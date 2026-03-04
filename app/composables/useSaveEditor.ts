@@ -3,6 +3,10 @@ import { loadSaveFile } from '~/utils/parse/saveLoader'
 import { buildModifiedSave } from '~/utils/saveWriter'
 import { patchU64TierEntry } from '~/utils/patch/abilities'
 import { buildAbilitySlots } from '~/utils/parse/abilities'
+import { setFlag } from '~/utils/patch/flags'
+import { readStatusFlags } from '~/utils/parse/catMeta'
+import { patchBirthday } from '~/utils/patch/birthday'
+import { writeI32LE } from '~/utils/binary'
 import type { SaveState, ParsedCat, GameProperties, InventoryItem, FurnitureItem } from '~/types/save'
 
 const saveState = ref<SaveState | null>(null)
@@ -16,6 +20,7 @@ const dirtyCatKeys = ref<Set<number>>(new Set())
 const dirtyPropertyKeys = ref<Set<string>>(new Set())
 const dirtyInventoryContainers = ref<Set<string>>(new Set())
 const furnitureDirty = ref(false)
+const houseCatsDirty = ref(false)
 const deletedPropertyKeys = ref<string[]>([])
 
 export function useSaveEditor() {
@@ -35,6 +40,7 @@ export function useSaveEditor() {
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
     furnitureDirty.value = false
+    houseCatsDirty.value = false
     deletedPropertyKeys.value = []
 
     try {
@@ -113,7 +119,8 @@ export function useSaveEditor() {
       properties: dirtyProps,
       deletePropertyKeys: deletedPropertyKeys.value.length > 0 ? deletedPropertyKeys.value : undefined,
       inventory: dirtyInventory,
-      furniture: furnitureDirty.value ? raw.furniture : undefined
+      furniture: furnitureDirty.value ? raw.furniture : undefined,
+      houseCats: houseCatsDirty.value ? raw.houseCats : undefined
     })
     return new Blob([modified as BlobPart], { type: 'application/octet-stream' })
   }
@@ -140,6 +147,7 @@ export function useSaveEditor() {
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
     furnitureDirty.value = false
+    houseCatsDirty.value = false
     deletedPropertyKeys.value = []
   }
 
@@ -158,6 +166,7 @@ export function useSaveEditor() {
     dirtyPropertyKeys.value.clear()
     dirtyInventoryContainers.value.clear()
     furnitureDirty.value = false
+    houseCatsDirty.value = false
     deletedPropertyKeys.value = []
   }
 
@@ -247,6 +256,78 @@ export function useSaveEditor() {
     isDirty.value = true
   }
 
+  function reviveDeadCat(key: number, blob: Uint8Array, cat: ParsedCat): void {
+    if (!saveState.value) return
+    const idx = saveState.value.deadCats.findIndex(c => c.key === key)
+    if (idx === -1) return
+
+    cat.decompressedBlob = blob
+
+    // Move from deadCats to cats
+    saveState.value.deadCats.splice(idx, 1)
+    saveState.value.cats.push(cat)
+    saveState.value.cats.sort((a, b) => a.name.localeCompare(b.name))
+
+    // Add to houseCats so the game places them in the attic
+    saveState.value.houseCats.push({
+      key: cat.key,
+      room: 'Attic',
+      unkU32: 0,
+      p0: 0,
+      p1: 0,
+      p2: 0
+    })
+
+    dirtyCatKeys.value.add(key)
+    houseCatsDirty.value = true
+    isDirty.value = true
+  }
+
+  /** Resurrect: keep original stats, level, and age */
+  function resurrectCat(key: number): string | null {
+    if (!saveState.value) return null
+    const cat = saveState.value.deadCats.find(c => c.key === key)
+    if (!cat) return null
+
+    let blob: Uint8Array = new Uint8Array(cat.decompressedBlob)
+
+    // Clear the dead flag
+    blob = new Uint8Array(setFlag(blob, cat.flags.offset, 0x0020, false))
+    cat.flags = readStatusFlags(blob, cat.nameEndRaw)
+
+    reviveDeadCat(key, blob, cat)
+    return cat.name || `Cat #${key}`
+  }
+
+  /** Reborn: clear dead flag, reset age to 2, reset level to 0 */
+  function rebornCat(key: number): string | null {
+    if (!saveState.value) return null
+    const cat = saveState.value.deadCats.find(c => c.key === key)
+    if (!cat) return null
+
+    const day = saveState.value.currentDay
+    let blob: Uint8Array = new Uint8Array(cat.decompressedBlob)
+
+    // Clear the dead flag
+    blob = new Uint8Array(setFlag(blob, cat.flags.offset, 0x0020, false))
+    cat.flags = readStatusFlags(blob, cat.nameEndRaw)
+
+    // Set age to 2 (birthday = currentDay - 2)
+    if (day !== null && cat.birthdayOffset !== null) {
+      blob = new Uint8Array(patchBirthday(blob, cat.birthdayOffset, day - 2))
+      cat.birthdayDay = day - 2
+    }
+
+    // Set level to 0
+    if (cat.levelOffset !== null) {
+      writeI32LE(blob, cat.levelOffset, 0)
+      cat.level = 0
+    }
+
+    reviveDeadCat(key, blob, cat)
+    return cat.name || `Cat #${key}`
+  }
+
   function nextFurnitureKey(): number {
     if (!saveState.value) return 1
     const existing = saveState.value.furniture.map(f => f.key)
@@ -308,6 +389,8 @@ export function useSaveEditor() {
     return house?.room ?? ''
   }
 
+  const deadCats = computed(() => saveState.value?.deadCats ?? [])
+
   return {
     saveState: readonly(saveState),
     isLoading: readonly(isLoading),
@@ -315,6 +398,7 @@ export function useSaveEditor() {
     selectedCatKey: readonly(selectedCatKey),
     isDirty: readonly(isDirty),
     cats,
+    deadCats,
     selectedCat,
     currentDay,
     fileName,
@@ -334,6 +418,8 @@ export function useSaveEditor() {
     addFurniture,
     removeFurniture,
     nextFurnitureKey,
+    resurrectCat,
+    rebornCat,
     savescumReset
   }
 }

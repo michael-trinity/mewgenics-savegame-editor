@@ -1,308 +1,280 @@
 <script setup lang="ts">
 import type { FurnitureItem } from '~/types/save'
+import type { GridItem } from '~/components/GridView.vue'
 
 const { saveState } = useSaveEditor()
 
 const furniture = computed(() => saveState.value?.furniture ?? [])
 const houseCats = computed(() => saveState.value?.houseCats ?? [])
 
-// ── Load furniture piece dimensions ──
+// ── Load sprite paths from furniture.json ──
 
-interface PieceInfo {
-  width: number
-  height: number
-}
-
-const pieceDB = ref<Map<string, PieceInfo>>(new Map())
+const spriteDB = ref<Map<string, string>>(new Map())
 
 onMounted(async () => {
   try {
-    const res = await fetch('/data/furniture_info_decoded.json')
+    const res = await fetch('/data/furniture.json')
     const data = await res.json()
-    const map = new Map<string, PieceInfo>()
-    for (const p of data.pieces) {
-      map.set(p.name, { width: p.width, height: p.height })
+    const map = new Map<string, string>()
+    for (const f of data.furniture) {
+      if (f.sprite_path) {
+        map.set(f.name, f.sprite_path + '/1.png')
+      }
     }
-    pieceDB.value = map
+    spriteDB.value = map
   } catch (e) {
-    console.warn('Failed to load furniture_info_decoded.json:', e)
+    console.warn('Failed to load furniture.json:', e)
   }
 })
 
-function pieceSize(name: string): { w: number, h: number } {
-  const p = pieceDB.value.get(name)
-  return { w: p?.width ?? 1, h: p?.height ?? 1 }
-}
+// ── Room dimensions ──
 
-// ── Room dimensions from house.gon ──
-
-const ROOM_DIMS: Record<string, { w: number, h: number }> = {
-  Floor1_Large: { w: 16, h: 7 },
-  Floor1_Small: { w: 16, h: 7 },
-  Floor2_Large: { w: 16, h: 7 },
-  Floor2_Small: { w: 16, h: 7 },
-  SmallAttic: { w: 18, h: 5 },
-  LargeAttic: { w: 35, h: 9 },
-  Basement0: { w: 33, h: 5 },
-  Basement1: { w: 33, h: 5 },
-  Basement2: { w: 33, h: 5 },
-  Basement3: { w: 33, h: 5 },
-  Basement4: { w: 33, h: 5 }
-}
+const FLOOR_DIMS = { w: 16, h: 7 }
+const BASEMENT_DIMS = { w: 33, h: 5 }
+const SMALL_ATTIC_DIMS = { w: 18, h: 5 }
+const LARGE_ATTIC_DIMS = { w: 35, h: 9 }
 
 // ── Group furniture by room ──
 
 const byRoom = computed(() => {
   const map = new Map<string, FurnitureItem[]>()
   for (const item of furniture.value) {
-    const room = item.room || '(No Room)'
-    if (!map.has(room)) map.set(room, [])
-    map.get(room)!.push(item)
+    if (!item.room) continue
+    if (!map.has(item.room)) map.set(item.room, [])
+    map.get(item.room)!.push(item as FurnitureItem)
   }
   return map
 })
 
 const roomNames = computed(() => [...byRoom.value.keys()].sort())
 
-// Coordinate stats per room
-function roomStats(room: string) {
-  const items = byRoom.value.get(room) ?? []
-  if (items.length === 0) return null
+// ── House layout detection ──
+
+interface HouseLayout {
+  type: string
+  attic: string | null
+  floors: string[][]
+  basements: string[]
+}
+
+const houseLayout = computed<HouseLayout>(() => {
+  const names = roomNames.value
+
+  const hasFloor2 = names.some(n => n.startsWith('Floor2_'))
+  const hasBasement = names.some(n => n.startsWith('Basement'))
+  const floorCount = names.filter(n => n.startsWith('Floor')).length
+
+  let type = 'House 1'
+  if (hasFloor2 || floorCount >= 3 || hasBasement) type = 'House 3'
+  else if (floorCount >= 2) type = 'House 2'
+
+  const attic: string | null = 'Attic'
+  const floorRows: string[][] = []
+  const basements: string[] = []
+
+  // Floor2 = upper floor (below attic), Floor1 = lower floor
+  if (type === 'House 1') {
+    floorRows.push(['Floor1_Large'])
+  } else if (type === 'House 2') {
+    floorRows.push(['Floor1_Small', 'Floor1_Large'])
+  } else {
+    floorRows.push(['Floor2_Small', 'Floor2_Large'])
+    floorRows.push(['Floor1_Small', 'Floor1_Large'])
+    for (const n of names) {
+      if (n.startsWith('Basement')) basements.push(n)
+    }
+    basements.sort()
+  }
+
+  return { type, attic, floors: floorRows, basements }
+})
+
+function roomDims(roomName: string): { w: number, h: number } | null {
+  if (roomName === 'Attic') {
+    return houseLayout.value.type === 'House 1' ? SMALL_ATTIC_DIMS : LARGE_ATTIC_DIMS
+  }
+  if (roomName.startsWith('Floor')) return FLOOR_DIMS
+  if (roomName.startsWith('Basement')) return BASEMENT_DIMS
+  return null
+}
+
+// ── Build GridItem[] for a room ──
+
+function roomGridItems(roomName: string): { items: GridItem[], width: number, height: number } {
+  const items = byRoom.value.get(roomName) ?? []
+  const dims = roomDims(roomName)
+
+  if (items.length === 0) {
+    return {
+      items: [],
+      width: dims?.w ?? 0,
+      height: dims?.h ?? 0
+    }
+  }
+
+  // Find coordinate bounds to offset into grid space
   let minX = Infinity, maxX = -Infinity
   let minY = Infinity, maxY = -Infinity
-  let minZ = Infinity, maxZ = -Infinity
   for (const item of items) {
     if (item.x < minX) minX = item.x
     if (item.x > maxX) maxX = item.x
     if (item.y < minY) minY = item.y
     if (item.y > maxY) maxY = item.y
-    if (item.z < minZ) minZ = item.z
-    if (item.z > maxZ) maxZ = item.z
   }
-  return { minX, maxX, minY, maxY, minZ, maxZ, count: items.length }
+
+  const rangeW = maxX - minX + 1
+  const rangeH = maxY - minY + 1
+  const w = dims ? Math.max(dims.w, rangeW) : rangeW
+  const h = dims ? Math.max(dims.h, rangeH) : rangeH
+
+  const gridItems: GridItem[] = items.map((item) => {
+    const sprite = spriteDB.value.get(item.name)
+    if (!sprite && spriteDB.value.size > 0) {
+      console.warn(`[GridTest] Missing sprite for furniture: "${item.name}"`)
+    }
+    return {
+      name: item.name,
+      x: item.x - minX,
+      y: item.y - minY,
+      z: item.z,
+      sprite
+    }
+  })
+
+  return { items: gridItems, width: w, height: h }
 }
 
-// Active room
-const activeRoom = ref('')
-watch(roomNames, (names) => {
-  if (names.length > 0 && !names.includes(activeRoom.value)) {
-    activeRoom.value = names[0]!
-  }
-}, { immediate: true })
+// ── Helpers ──
 
-const activeItems = computed(() => byRoom.value.get(activeRoom.value) ?? [])
-const activeStats = computed(() => roomStats(activeRoom.value))
-const activeDims = computed(() => ROOM_DIMS[activeRoom.value] ?? null)
+function roomItemCount(room: string): number {
+  return (byRoom.value.get(room) ?? []).length
+}
 
-// Cats in active room
-const activeCats = computed(() => {
-  return houseCats.value.filter(c => c.room === activeRoom.value)
-})
-
-// Debug: how many items match piece DB
-const matchStats = computed(() => {
-  const items = activeItems.value
-  let matched = 0
-  let unmatched = 0
-  const unmatchedNames: string[] = []
-  for (const item of items) {
-    if (pieceDB.value.has(item.name)) {
-      matched++
-    } else {
-      unmatched++
-      if (!unmatchedNames.includes(item.name)) unmatchedNames.push(item.name)
-    }
-  }
-  return { matched, unmatched, unmatchedNames }
-})
+function roomCatCount(room: string): number {
+  return houseCats.value.filter(c => c.room === room).length
+}
 
 function formatRoomName(name: string): string {
   return name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
 }
 
-// ── Grid cell types ──
-
-interface AnchorCell {
-  type: 'anchor'
-  name: string
-  z: number
-  colspan: number
-  rowspan: number
-}
-
-interface CoveredCell {
-  type: 'covered'
-}
-
-type GridCell = null | AnchorCell | CoveredCell
-
-// ── Grid builder ──
-
-function gridD(items: FurnitureItem[]) {
-  if (items.length === 0) return { cells: [], width: 0, height: 0 }
-  const stats = activeStats.value!
-  const w = stats.maxX - stats.minX + 1
-  const h = stats.maxY - stats.minY + 1
-  return buildGrid(items, w, h, item => ({ col: item.x - stats.minX, row: item.y - stats.minY }))
-}
-
-function buildGrid(
-  items: FurnitureItem[],
-  width: number,
-  height: number,
-  mapFn: (item: FurnitureItem) => { col: number, row: number }
-) {
-  const cells: GridCell[][] = []
-  for (let r = 0; r < height; r++) {
-    cells[r] = []
-    for (let c = 0; c < width; c++) {
-      cells[r]![c] = null
-    }
-  }
-
-  let outOfBounds = 0
-  for (const item of items) {
-    const { col, row } = mapFn(item)
-    const size = pieceSize(item.name)
-    const colspan = size.w
-    const rowspan = size.h
-
-    const anchorRow = row
-    const anchorCol = col
-
-    // Clamp spans to grid bounds
-    const effColspan = Math.min(colspan, width - anchorCol)
-    const effRowspan = Math.min(rowspan, height - anchorRow)
-
-    if (anchorRow < 0 || anchorRow >= height || anchorCol < 0 || anchorCol >= width || effColspan <= 0 || effRowspan <= 0) {
-      outOfBounds++
-      continue
-    }
-
-    // Check if anchor cell is already occupied
-    if (cells[anchorRow]![anchorCol] !== null) {
-      // Overlap — skip this item (already placed item wins)
-      continue
-    }
-
-    // Place anchor
-    cells[anchorRow]![anchorCol] = {
-      type: 'anchor',
-      name: item.name,
-      z: item.z,
-      colspan: effColspan,
-      rowspan: effRowspan
-    }
-
-    // Mark covered cells
-    for (let dy = 0; dy < effRowspan; dy++) {
-      for (let dx = 0; dx < effColspan; dx++) {
-        if (dy === 0 && dx === 0) continue
-        const r = anchorRow + dy
-        const c = anchorCol + dx
-        if (cells[r]![c] === null) {
-          cells[r]![c] = { type: 'covered' }
-        }
-      }
-    }
-  }
-
-  return { cells, width, height, outOfBounds }
-}
+const totalItems = computed(() => furniture.value.length)
+const totalCats = computed(() => houseCats.value.length)
 </script>
 
 <template>
   <div class="h-full overflow-y-auto p-6 space-y-6">
-    <h1 class="text-2xl font-bold">
-      Grid Coordinate Test
-    </h1>
-
-    <!-- Room selector -->
-    <div class="flex flex-wrap gap-2">
-      <button
-        v-for="name in roomNames"
-        :key="name"
-        class="px-3 py-1.5 text-sm rounded-lg border transition-colors"
-        :class="activeRoom === name
-          ? 'border-primary bg-primary/15 text-primary'
-          : 'border-default text-muted hover:text-default'"
-        @click="activeRoom = name"
-      >
-        {{ formatRoomName(name) }}
-      </button>
+    <div class="flex items-center gap-4">
+      <h1 class="text-2xl font-bold">
+        House Layout
+      </h1>
+      <span class="text-sm text-muted">
+        {{ houseLayout.type }} — {{ totalItems }} items, {{ totalCats }} cats
+      </span>
     </div>
 
-    <!-- Stats -->
-    <div
-      v-if="activeStats"
-      class="text-sm space-y-1"
-    >
-      <div class="font-mono text-muted">
-        Room: <span class="text-default">{{ activeRoom }}</span>
-        | Items: <span class="text-default">{{ activeStats.count }}</span>
-        | Cats: <span class="text-default">{{ activeCats.length }}</span>
-        | Piece DB: <span class="text-default">{{ pieceDB.size }} entries</span>
-        | Matched: <span class="text-default">{{ matchStats.matched }}/{{ activeItems.length }}</span>
-      </div>
-      <div class="font-mono text-muted">
-        X: <span class="text-default">{{ activeStats.minX }} .. {{ activeStats.maxX }}</span>
-        | Y: <span class="text-default">{{ activeStats.minY }} .. {{ activeStats.maxY }}</span>
-        | Z: <span class="text-default">{{ activeStats.minZ }} .. {{ activeStats.maxZ }}</span>
-      </div>
+    <!-- House layout -->
+    <div class="space-y-1 inline-block">
+      <!-- Attic -->
       <div
-        v-if="activeDims"
-        class="font-mono text-muted"
+        v-if="houseLayout.attic"
+        class="flex justify-center"
       >
-        Room dims (house.gon): <span class="text-default">{{ activeDims.w }} × {{ activeDims.h }}</span>
-      </div>
-      <div
-        v-else
-        class="font-mono text-amber-400"
-      >
-        Room "{{ activeRoom }}" not in house.gon
-      </div>
-      <div
-        v-if="matchStats.unmatched > 0"
-        class="font-mono text-amber-400"
-      >
-        {{ matchStats.unmatched }} items not in piece DB: {{ matchStats.unmatchedNames.slice(0, 5).join(', ') }}
-      </div>
-    </div>
-
-    <!-- Cat positions -->
-    <div
-      v-if="activeCats.length > 0"
-      class="text-sm"
-    >
-      <div class="font-mono text-muted mb-1">
-        Cat positions (f64):
-      </div>
-      <div
-        v-for="cat in activeCats"
-        :key="cat.key"
-        class="font-mono text-xs text-muted"
-      >
-        Cat #{{ cat.key }}: ({{ cat.p0.toFixed(2) }}, {{ cat.p1.toFixed(2) }}, {{ cat.p2.toFixed(2) }})
-      </div>
-    </div>
-
-    <!-- Raw coordinate list -->
-    <details class="text-sm">
-      <summary class="cursor-pointer text-muted hover:text-default">
-        Raw furniture coordinates ({{ activeItems.length }} items)
-      </summary>
-      <div class="mt-2 max-h-48 overflow-y-auto font-mono text-xs space-y-0.5">
-        <div
-          v-for="item in activeItems"
-          :key="item.key"
-          class="text-muted"
-        >
-          {{ item.name }} [{{ pieceSize(item.name).w }}×{{ pieceSize(item.name).h }}]: x={{ item.x }}, y={{ item.y }}, z={{ item.z }}
+        <div>
+          <div class="text-xs text-muted mb-1 text-center">
+            {{ formatRoomName(houseLayout.attic) }}
+            <span class="text-default ml-1">{{ roomItemCount(houseLayout.attic) }} items</span>
+            <span
+              v-if="roomCatCount(houseLayout.attic) > 0"
+              class="ml-1"
+            >{{ roomCatCount(houseLayout.attic) }} cats</span>
+          </div>
+          <div class="border border-default rounded-t-xl bg-elevated/30 p-1">
+            <GridView
+              :items="roomGridItems(houseLayout.attic).items"
+              :grid-width="roomGridItems(houseLayout.attic).width"
+              :grid-height="roomGridItems(houseLayout.attic).height"
+              :cell-size="28"
+            />
+          </div>
         </div>
       </div>
-    </details>
 
-    <!-- Grid -->
-    <GridView :grid="gridD(activeItems)" />
+      <!-- Floor rows -->
+      <div
+        v-for="(floorRow, fi) in houseLayout.floors"
+        :key="fi"
+        class="flex justify-center gap-px"
+      >
+        <div
+          v-for="room in floorRow"
+          :key="room"
+        >
+          <div class="text-xs text-muted mb-1 text-center">
+            {{ formatRoomName(room) }}
+            <span class="text-default ml-1">{{ roomItemCount(room) }} items</span>
+            <span
+              v-if="roomCatCount(room) > 0"
+              class="ml-1"
+            >{{ roomCatCount(room) }} cats</span>
+          </div>
+          <div class="border border-default bg-elevated/30 p-1">
+            <GridView
+              :items="roomGridItems(room).items"
+              :grid-width="roomGridItems(room).width"
+              :grid-height="roomGridItems(room).height"
+              :cell-size="28"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Basements -->
+      <div
+        v-if="houseLayout.basements.length > 0"
+        class="space-y-px"
+      >
+        <div
+          v-for="basement in houseLayout.basements"
+          :key="basement"
+        >
+          <div class="text-xs text-muted mb-1 text-center">
+            {{ formatRoomName(basement) }}
+            <span class="text-default ml-1">{{ roomItemCount(basement) }} items</span>
+            <span
+              v-if="roomCatCount(basement) > 0"
+              class="ml-1"
+            >{{ roomCatCount(basement) }} cats</span>
+          </div>
+          <div class="border border-default rounded-b-lg bg-elevated/30 p-1">
+            <GridView
+              :items="roomGridItems(basement).items"
+              :grid-width="roomGridItems(basement).width"
+              :grid-height="roomGridItems(basement).height"
+              :cell-size="28"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Rooms not in any layout section -->
+      <div
+        v-for="room in roomNames.filter(n => n !== 'Attic' && !n.startsWith('Floor') && !n.startsWith('Basement'))"
+        :key="room"
+      >
+        <div class="text-xs text-muted mb-1 text-center">
+          {{ formatRoomName(room) }}
+          <span class="text-default ml-1">{{ roomItemCount(room) }} items</span>
+        </div>
+        <div class="border border-default rounded-lg bg-elevated/30 p-1">
+          <GridView
+            :items="roomGridItems(room).items"
+            :grid-width="roomGridItems(room).width"
+            :grid-height="roomGridItems(room).height"
+            :cell-size="28"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
