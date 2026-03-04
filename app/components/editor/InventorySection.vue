@@ -43,11 +43,24 @@ const STAT_FILTERS = [
 
 const activeFilters = ref<Set<string>>(new Set())
 
+const CATEGORY_FILTERS = [
+  { key: 'sidequest', label: 'Sidequest' },
+  { key: 'quest', label: 'Quest' },
+  { key: 'legendary', label: 'Legendary' },
+  { key: 'cursed', label: 'Cursed' }
+] as const
+
+const activeCategory = ref<string | null>(null)
+
 function toggleFilter(key: string) {
   const s = new Set(activeFilters.value)
   if (s.has(key)) s.delete(key)
   else s.add(key)
   activeFilters.value = s
+}
+
+function toggleCategory(key: string) {
+  activeCategory.value = activeCategory.value === key ? null : key
 }
 
 const filteredItems = computed(() => {
@@ -63,6 +76,16 @@ const filteredItems = computed(() => {
       || e.id.toLowerCase().includes(q)
       || e.desc.toLowerCase().includes(q)
     )
+  }
+
+  // Category filter
+  if (activeCategory.value) {
+    const cat = activeCategory.value
+    if (cat === 'cursed') {
+      entries = entries.filter(e => e.cursed)
+    } else {
+      entries = entries.filter(e => e.rarity === cat)
+    }
   }
 
   // Stat filters — item must have positive value for ALL checked stats
@@ -120,6 +143,7 @@ function openBrowser() {
   showBrowser.value = true
   searchQuery.value = ''
   activeFilters.value = new Set()
+  activeCategory.value = null
 }
 
 function getItemDisplayName(name: string): string {
@@ -339,6 +363,20 @@ function chargesDisplay(charges: number): string {
               class="w-full"
             />
             <div class="flex flex-wrap gap-1.5">
+              <button
+                v-for="f in CATEGORY_FILTERS"
+                :key="f.key"
+                class="px-2 py-0.5 text-xs rounded-md border transition-colors"
+                :class="[
+                  activeCategory === f.key
+                    ? 'border-primary bg-primary/15 text-primary'
+                    : 'border-default text-muted hover:text-default hover:border-default'
+                ]"
+                @click="toggleCategory(f.key)"
+              >
+                {{ f.label }}
+              </button>
+              <span class="text-muted text-xs px-1">|</span>
               <button
                 v-for="f in STAT_FILTERS"
                 :key="f.key"
